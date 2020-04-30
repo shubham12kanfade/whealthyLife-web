@@ -5,18 +5,13 @@
 			<div class="row">
 				<div class="col-md-8 offset-md-4 col-12">
 					<ul class="top-list right">
-						<li><a href="#"><img src="../assets/img/stethoscope.png" alt="icon">Book Appointment</a></li>
+						<li><a [routerLink]="['/bookappoiment']" routerLinkActive="router-link-active"><img src="../assets/img/stethoscope.png" alt="icon">Book Appointment</a></li>
 						<li><a href="#"><img src="../assets/img/report.png" alt="icon">View Medical Records</a></li>
 						<li><a href="#"><img src="../assets/img/syringe.png" alt="icon">Book Tests</a></li>
 						<li><a href="#"><img src="../assets/img/hospital.png" alt="icon">Help</a></li>
 						<li><a routerLink="login"><img src="../assets/img/user.png" alt="icon">Login</a></li>
 						<li><a routerLink="register"><img src="../assets/img/user2.png" alt="icon">Register</a></li>
-						<li><a [routerLink]="['/bookappoiment']" routerLinkActive="router-link-active" ><img src="../assets/img/stethoscope.png" alt="icon">Book Appointment</a></li>
-						<li><a href="#"><img src="../assets/img/report.png" alt="icon">View Medical Records</a></li>
-						<li><a href="#"><img src="../assets/img/syringe.png" alt="icon">Book Tests</a></li>
-						<li><a href="#"><img src="../assets/img/hospital.png" alt="icon">Help</a></li>
-						<li><a href="#"><img src="../assets/img/user.png" alt="icon">Login</a></li>
-						<li><a href="#"><img src="../assets/img/user2.png" alt="icon">Register</a></li>
+					
 					</ul>
 				</div>
 			</div>
@@ -74,13 +69,9 @@
                 <div class="main-menu">
                     <ul>
                         <li><a href="index-2.html"><img src="../assets/img/home.png" alt="icon">Home</a></li>
-                        <li><a href="#"><img src="../assets/img/doctor.png" alt="icon">About us</a></li>
+                        <li><a [routerLink]="['/about']" routerLinkActive="router-link-active"><img src="../assets/img/doctor.png" alt="icon">About us</a></li>
                         <li><a href="#"><img src="../assets/img/syringe2.png" alt="icon">Book Health & Checkups</a></li>
-                        <li><a href="contacts.html"><img src="../assets/img/cardiogram.png" alt="icon">Contact us</a></li>
-                        <li><a href="index-2.html"><img src="../assets/img/home.png" alt="icon">Home</a></li>
-                        <li><a [routerLink]="['/about']" routerLinkActive="router-link-active" ><img src="../assets/img/doctor.png" alt="icon">About us</a></li>
-                        <li><a href="#"><img src="../assets/img/syringe2.png" alt="icon">Book Health & Checkups</a></li>
-                        <li><a [routerLink]="['/contact']" routerLinkActive="router-link-active" ><img src="../assets/img/cardiogram.png" alt="icon">Contact us</a></li>
+                        <li><a [routerLink]="['/contact']" routerLinkActive="router-link-active"><img src="../assets/img/cardiogram.png" alt="icon">Contact us</a></li>
                     </ul>
                 </div>
                 <!-- /main-menu -->
