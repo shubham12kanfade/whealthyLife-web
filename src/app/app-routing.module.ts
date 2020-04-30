@@ -10,6 +10,9 @@ const routes: Routes = [
   {path: '',loadChildren: () => import('./modules/home/home.module').then(h => h.HomeModule)},
   {path: '',loadChildren: () => import('./modules/user-profile/user-profile.module').then(u => u.UserProfileModule)},
   
+  {path: 'contact',loadChildren: () => import('./modules/contact-us/contact-us.module').then(c => c.ContactUsModule)},
+  {path: 'about',loadChildren: () => import('./modules/about/about.module').then(a => a.AboutModule)},
+  {path: 'bookappoiment',loadChildren: () => import('./modules/bookappoiment/bookappoiment.module').then(b => b.BookappoimentModule)}
 ];
 
 @NgModule({

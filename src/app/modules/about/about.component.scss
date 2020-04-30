@@ -1,0 +1,453 @@
+/*! CSS Used from: https://www.practo.com/providers/static/bundles/css/vendor.css?v1587726658711 */
+section{display:block;}
+video{display:inline-block;vertical-align:baseline;}
+*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+*,:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+/*! CSS Used from: https://www.practo.com/providers/static/bundles/css/providers.css?v1587726658711 */
+section,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;box-sizing:border-box;}
+section{display:block;}
+:focus{outline:0;}
+.clear-all{padding:0!important;}
+section{padding:50px;height:auto;min-height:200px;margin:0 auto;}
+.video-player video{width:100%!important;cursor:pointer;}
+@media screen and (max-width:800px){
+section{padding:20px 20px;height:auto;}
+}
+
+
+/*! CSS Used from: https://www.practo.com/providers/static/bundles/css/vendor.css?v1587726658711 */
+*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+.clearfix:after,.clearfix:before{content:" ";display:table;}
+.clearfix:after{clear:both;}
+.clearfix:after,.clearfix:before{content:" ";display:table;}
+.clearfix:after{clear:both;}
+*,:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+/*! CSS Used from: https://www.practo.com/providers/static/bundles/css/providers.css?v1587726658711 */
+div{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;box-sizing:border-box;}
+:focus{outline:0;}
+.clearfix{display:block;}
+.clearfix:before{content:" ";display:table;}
+.clearfix:after{content:" ";display:table;visibility:hidden;display:block;font-size:0;content:" ";clear:both;height:0;}
+
+
+/*! CSS Used from: https://www.practo.com/providers/static/bundles/css/vendor.css?v1587726658711 */
+section{display:block;}
+h1{font-size:2em;margin:.67em 0;}
+img{border:0;}
+*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+img{vertical-align:middle;}
+.row{margin-left:-15px;margin-right:-15px;}
+.col-sm-10,.col-sm-4,.col-xs-12{position:relative;min-height:1px;padding-left:15px;padding-right:15px;}
+.col-xs-12{float:left;}
+.col-xs-12{width:100%;}
+@media (min-width:801px){
+.col-sm-10,.col-sm-4{float:left;}
+.col-sm-10{width:83.33333333%;}
+.col-sm-4{width:33.33333333%;}
+}
+.clearfix:after,.clearfix:before,.row:after,.row:before{content:" ";display:table;}
+.clearfix:after,.row:after{clear:both;}
+.center-block{display:block!important;margin-left:auto;margin-right:auto;float:none!important;}
+.clearfix:after,.clearfix:before{content:" ";display:table;}
+.clearfix:after{clear:both;}
+.center-block{display:block;margin-left:auto;margin-right:auto;}
+*,:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+/*! CSS Used from: https://www.practo.com/providers/static/bundles/css/providers.css?v1587726658711 */
+div,h1,h4,img,section{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;box-sizing:border-box;}
+section{display:block;}
+:focus{outline:0;}
+.h0{font-size:50px!important;line-height:1.39!important;font-weight:700;margin:0 0 20px 0;}
+h1{font-size:40px!important;line-height:45px!important;font-weight:700;margin:0 0 30px 0;}
+.h4,h4{font-size:16px!important;font-weight:400!important;line-height:25px!important;margin:8px 0 5px 0;}
+.para{font-size:14px;line-height:1.5!important;}
+.bg-white{background-color:#fff;color:#414146;}
+@media only screen and (max-width:800px){
+.h0{font-size:38px!important;line-height:45px!important;font-weight:700;margin:0 0 10px 0;}
+.h4{font-size:14px!important;line-height:20px!important;font-weight:400!important;}
+}
+.clear-left{padding-left:0;}
+.clearfix{display:block;}
+.clearfix:before{content:" ";display:table;}
+.clearfix:after{content:" ";display:table;visibility:hidden;display:block;font-size:0;content:" ";clear:both;height:0;}
+.margin-v{margin-top:20px!important;margin-bottom:20px!important;}
+.margin-top{margin-top:20px!important;}
+.margin-bottom{margin-bottom:50px;}
+.row{max-width:1280px;margin:0 auto;}
+.text-center{text-align:center;}
+@media screen and (max-width:800px){
+.single-block{text-align:center;}
+}
+img{width:100%;display:block;margin:0 auto;z-index:0;}
+section{padding:50px;height:auto;min-height:200px;margin:0 auto;}
+section.bannersection{padding:30px 50px;min-height:auto;}
+section.bannersection img{width:80%;}
+@media screen and (max-width:800px){
+.row .clear-left{padding:0!important;float:none!important;clear:both;}
+section{padding:20px 20px;height:auto;}
+section.bannersection{padding:20px 20px;}
+img{margin:25px auto;display:block;width:80%;}
+}
+/*! CSS Used from: https://nav.practo.com/8.0.33/consumer/css/practonav.css */
+.h0{font-size:36px;line-height:40px;}
+.h4{font-weight:bold;font-size:14px;line-height:20px;}
+.para{font-weight:400;font-size:14px;line-height:20px;}
+@media only screen and (max-width: 800px){
+.h0{font-size:18px;line-height:30px;}
+.h4{font-weight:bold;font-size:12px;line-height:15px;}
+}
+
+
+
+/*! CSS Used from: https://www.practo.com/providers/static/bundles/css/vendor.css?v1587726658711 */
+*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+.clearfix:after,.clearfix:before{content:" ";display:table;}
+.clearfix:after{clear:both;}
+.clearfix:after,.clearfix:before{content:" ";display:table;}
+.clearfix:after{clear:both;}
+*,:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+/*! CSS Used from: https://www.practo.com/providers/static/bundles/css/providers.css?v1587726658711 */
+div{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;box-sizing:border-box;}
+:focus{outline:0;}
+.clearfix{display:block;}
+.clearfix:before{content:" ";display:table;}
+.clearfix:after{content:" ";display:table;visibility:hidden;display:block;font-size:0;content:" ";clear:both;height:0;}
+
+
+/*! CSS Used from: https://www.practo.com/providers/static/bundles/css/vendor.css?v1587726658711 */
+section{display:block;}
+h1{font-size:2em;margin:.67em 0;}
+*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+.row{margin-left:-15px;margin-right:-15px;}
+.col-sm-12,.col-sm-4,.col-sm-6,.col-xs-12{position:relative;min-height:1px;padding-left:15px;padding-right:15px;}
+.col-xs-12{float:left;}
+.col-xs-12{width:100%;}
+@media (min-width:801px){
+.col-sm-12,.col-sm-4,.col-sm-6{float:left;}
+.col-sm-12{width:100%;}
+.col-sm-6{width:50%;}
+.col-sm-4{width:33.33333333%;}
+}
+.row:after,.row:before{content:" ";display:table;}
+.row:after{clear:both;}
+.center-block{display:block!important;margin-left:auto;margin-right:auto;float:none!important;}
+.center-block{display:block;margin-left:auto;margin-right:auto;}
+*,:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+/*! CSS Used from: https://www.practo.com/providers/static/bundles/css/providers.css?v1587726658711 */
+div,h1,h3,h4,section{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;box-sizing:border-box;}
+section{display:block;}
+:focus{outline:0;}
+.h1,h1{font-size:40px!important;line-height:45px!important;font-weight:700;margin:0 0 30px 0;}
+.h3,h3{font-weight:700!important;font-size:16px!important;line-height:25px!important;margin:0 0 15px 0!important;}
+.h4,h4{font-size:16px!important;font-weight:400!important;line-height:25px!important;margin:8px 0 5px 0;}
+.bg-grey{background-color:#f0f0f5;color:#414146;}
+@media only screen and (max-width:800px){
+.h1{font-size:24px!important;line-height:30px!important;margin:0 0 20px 0;}
+.h3{font-size:16px!important;line-height:25px!important;}
+.h4{font-size:14px!important;line-height:20px!important;font-weight:400!important;}
+}
+.clear-left{padding-left:0;}
+.margin-v{margin-top:20px!important;margin-bottom:20px!important;}
+.margin-bottom{margin-bottom:50px;}
+.row{max-width:1280px;margin:0 auto;}
+.text-center{text-align:center;}
+.text-left{text-align:left;}
+.text-white{color:#fff;}
+@media screen and (max-width:800px){
+.single-block{text-align:center;}
+}
+section{padding:50px;height:auto;min-height:200px;margin:0 auto;}
+@media screen and (max-width:800px){
+.row .clear-left{padding:0!important;float:none!important;clear:both;}
+section{padding:20px 20px;height:auto;}
+}
+.bg-image-about{background:url(https://www.practo.com/providers/static/images/pages/company/aboutus_pic.png) 100% 100% no-repeat;display:block;width:100%;background-size:cover;padding:90px 50px;}
+@media screen and (max-width:800px){
+.bg-image-about{text-align:left!important;}
+}
+.text-white{color:#fff;}
+/*! CSS Used from: https://nav.practo.com/8.0.33/consumer/css/practonav.css */
+.h1{font-size:24px;line-height:30px;}
+.h3{font-weight:400;font-size:18px;line-height:30px;}
+.h4{font-weight:bold;font-size:14px;line-height:20px;}
+@media only screen and (max-width: 800px){
+.h1{font-size:18px;line-height:30px;}
+.h3{font-weight:bold;font-size:14px;line-height:20px;}
+.h4{font-weight:bold;font-size:12px;line-height:15px;}
+}
+
+
+
+/*! CSS Used from: https://www.practo.com/providers/static/bundles/css/vendor.css?v1587726658711 */
+*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+.clearfix:after,.clearfix:before{content:" ";display:table;}
+.clearfix:after{clear:both;}
+.clearfix:after,.clearfix:before{content:" ";display:table;}
+.clearfix:after{clear:both;}
+*,:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+/*! CSS Used from: https://www.practo.com/providers/static/bundles/css/providers.css?v1587726658711 */
+div{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;box-sizing:border-box;}
+:focus{outline:0;}
+.clearfix{display:block;}
+.clearfix:before{content:" ";display:table;}
+.clearfix:after{content:" ";display:table;visibility:hidden;display:block;font-size:0;content:" ";clear:both;height:0;}
+
+
+
+/*! CSS Used from: https://www.practo.com/providers/static/bundles/css/vendor.css?v1587726658711 */
+section{display:block;}
+*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+.row{margin-left:-15px;margin-right:-15px;}
+.col-sm-12,.col-sm-8,.col-xs-12{position:relative;min-height:1px;padding-left:15px;padding-right:15px;}
+.col-xs-12{float:left;}
+.col-xs-12{width:100%;}
+@media (min-width:801px){
+.col-sm-12,.col-sm-8{float:left;}
+.col-sm-12{width:100%;}
+.col-sm-8{width:66.66666667%;}
+}
+.clearfix:after,.clearfix:before,.row:after,.row:before{content:" ";display:table;}
+.clearfix:after,.row:after{clear:both;}
+.center-block{display:block!important;margin-left:auto;margin-right:auto;float:none!important;}
+.clearfix:after,.clearfix:before{content:" ";display:table;}
+.clearfix:after{clear:both;}
+.center-block{display:block;margin-left:auto;margin-right:auto;}
+*,:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+/*! CSS Used from: https://www.practo.com/providers/static/bundles/css/providers.css?v1587726658711 */
+div,h2,h4,section{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;box-sizing:border-box;}
+section{display:block;}
+:focus{outline:0;}
+.h2,h2{font-weight:700;font-size:24px!important;line-height:35px!important;margin:0 0 15px 0;}
+.h4,h4{font-size:16px!important;font-weight:400!important;line-height:25px!important;margin:8px 0 5px 0;}
+@media only screen and (max-width:800px){
+.h2{font-size:16px!important;line-height:25px!important;margin:0 0 10px 0;}
+.h4{font-size:14px!important;line-height:20px!important;font-weight:400!important;}
+}
+.clearfix{display:block;}
+.clearfix:before{content:" ";display:table;}
+.clearfix:after{content:" ";display:table;visibility:hidden;display:block;font-size:0;content:" ";clear:both;height:0;}
+.margin-center{float:none;margin:0 auto!important;}
+.margin-v{margin-top:20px!important;margin-bottom:20px!important;}
+.margin-top{margin-top:20px!important;}
+.row{max-width:1280px;margin:0 auto;}
+.text-center{text-align:center;}
+.text-grey{color:#787887!important;}
+.text-bold{font-weight:700!important;}
+.badge{background:#f0f0f5;height:100px;width:100px;border-radius:50%;margin:0 auto;color:#414146;border:1px solid #414146;font-weight:700;font-size:40px;padding:28px 0;display:block;}
+.vupim-wrap{width:795px;margin:0 auto;}
+.vupim-wrap .single-blocks{width:150px;display:inline-block;}
+@media screen and (max-width:862px) and (min-width:801px){
+.vupim-wrap{width:725px;}
+.vupim-wrap .single-blocks{width:140px;}
+.vupim-wrap .badge{height:80px;width:80px;font-size:32px;padding:24px 0;}
+}
+@media screen and (max-width:800px){
+.vupim-wrap{width:100%;}
+.vupim-wrap .single-blocks{display:block;margin:0 auto;clear:both;}
+}
+section{padding:50px;height:auto;min-height:200px;margin:0 auto;}
+@media screen and (max-width:800px){
+section{padding:20px 20px;height:auto;}
+}
+/*! CSS Used from: https://nav.practo.com/8.0.33/consumer/css/practonav.css */
+.h2{font-weight:bold;font-size:18px;line-height:30px;}
+.h4{font-weight:bold;font-size:14px;line-height:20px;}
+@media only screen and (max-width: 800px){
+.h4{font-weight:bold;font-size:12px;line-height:15px;}
+}
+
+/*! CSS Used from: https://www.practo.com/providers/static/bundles/css/vendor.css?v1587726658711 */
+*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+.clearfix:after,.clearfix:before{content:" ";display:table;}
+.clearfix:after{clear:both;}
+.clearfix:after,.clearfix:before{content:" ";display:table;}
+.clearfix:after{clear:both;}
+*,:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+/*! CSS Used from: https://www.practo.com/providers/static/bundles/css/providers.css?v1587726658711 */
+div{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;box-sizing:border-box;}
+:focus{outline:0;}
+.clearfix{display:block;}
+.clearfix:before{content:" ";display:table;}
+.clearfix:after{content:" ";display:table;visibility:hidden;display:block;font-size:0;content:" ";clear:both;height:0;}
+
+
+/*! CSS Used from: https://www.practo.com/providers/static/bundles/css/vendor.css?v1587726658711 */
+section{display:block;}
+h1{font-size:2em;margin:.67em 0;}
+*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+.row{margin-left:-15px;margin-right:-15px;}
+.col-sm-10,.col-xs-12{position:relative;min-height:1px;padding-left:15px;padding-right:15px;}
+.col-xs-12{float:left;}
+.col-xs-12{width:100%;}
+@media (min-width:801px){
+.col-sm-10{float:left;}
+.col-sm-10{width:83.33333333%;}
+}
+.row:after,.row:before{content:" ";display:table;}
+.row:after{clear:both;}
+.center-block{display:block!important;margin-left:auto;margin-right:auto;float:none!important;}
+.center-block{display:block;margin-left:auto;margin-right:auto;}
+*,:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+/*! CSS Used from: https://www.practo.com/providers/static/bundles/css/providers.css?v1587726658711 */
+div,h1,h4,section{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;box-sizing:border-box;}
+section{display:block;}
+:focus{outline:0;}
+.h1,h1{font-size:40px!important;line-height:45px!important;font-weight:700;margin:0 0 30px 0;}
+.h4,h4{font-size:16px!important;font-weight:400!important;line-height:25px!important;margin:8px 0 5px 0;}
+.bg-grey{background-color:#f0f0f5;color:#414146;}
+@media only screen and (max-width:800px){
+.h1{font-size:24px!important;line-height:30px!important;margin:0 0 20px 0;}
+.h4{font-size:14px!important;line-height:20px!important;font-weight:400!important;}
+}
+.row{max-width:1280px;margin:0 auto;}
+.text-center{text-align:center;}
+section{padding:50px;height:auto;min-height:200px;margin:0 auto;}
+section.bannersection{padding:30px 50px;min-height:auto;}
+@media screen and (max-width:800px){
+section{padding:20px 20px;height:auto;}
+section.bannersection{padding:20px 20px;}
+}
+/*! CSS Used from: https://nav.practo.com/8.0.33/consumer/css/practonav.css */
+.h1{font-size:24px;line-height:30px;}
+.h4{font-weight:bold;font-size:14px;line-height:20px;}
+@media only screen and (max-width: 800px){
+.h1{font-size:18px;line-height:30px;}
+.h4{font-weight:bold;font-size:12px;line-height:15px;}
+}
+
+
+/*! CSS Used from: https://www.practo.com/providers/static/bundles/css/vendor.css?v1587726658711 */
+section{display:block;}
+video{display:inline-block;vertical-align:baseline;}
+*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+*,:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+/*! CSS Used from: https://www.practo.com/providers/static/bundles/css/providers.css?v1587726658711 */
+section,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;box-sizing:border-box;}
+section{display:block;}
+:focus{outline:0;}
+.clear-all{padding:0!important;}
+section{padding:50px;height:auto;min-height:200px;margin:0 auto;}
+.video-player video{width:100%!important;cursor:pointer;}
+@media screen and (max-width:800px){
+section{padding:20px 20px;height:auto;}
+}
+
+
+/*! CSS Used from: https://www.practo.com/providers/static/bundles/css/vendor.css?v1587726658711 */
+video{display:inline-block;vertical-align:baseline;}
+*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+*,:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+/*! CSS Used from: https://www.practo.com/providers/static/bundles/css/providers.css?v1587726658711 */
+video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;box-sizing:border-box;}
+:focus{outline:0;}
+.video-player video{width:100%!important;cursor:pointer;}
+
+
+
+/*! CSS Used from: https://www.practo.com/providers/static/bundles/css/vendor.css?v1587726658711 */
+*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+.clearfix:after,.clearfix:before{content:" ";display:table;}
+.clearfix:after{clear:both;}
+.clearfix:after,.clearfix:before{content:" ";display:table;}
+.clearfix:after{clear:both;}
+*,:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+/*! CSS Used from: https://www.practo.com/providers/static/bundles/css/providers.css?v1587726658711 */
+div{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;box-sizing:border-box;}
+:focus{outline:0;}
+.clearfix{display:block;}
+.clearfix:before{content:" ";display:table;}
+.clearfix:after{content:" ";display:table;visibility:hidden;display:block;font-size:0;content:" ";clear:both;height:0;}
+
+
+/*! CSS Used from: https://www.practo.com/providers/static/bundles/css/vendor.css?v1587726658711 */
+section{display:block;}
+*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+.row{margin-left:-15px;margin-right:-15px;}
+.col-xs-12{position:relative;min-height:1px;padding-left:15px;padding-right:15px;}
+.col-xs-12{float:left;}
+.col-xs-12{width:100%;}
+.row:after,.row:before{content:" ";display:table;}
+.row:after{clear:both;}
+.center-block{display:block!important;margin-left:auto;margin-right:auto;float:none!important;}
+.center-block{display:block;margin-left:auto;margin-right:auto;}
+*,:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+/*! CSS Used from: https://www.practo.com/providers/static/bundles/css/providers.css?v1587726658711 */
+div,h2,i,section{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;box-sizing:border-box;}
+section{display:block;}
+:focus{outline:0;}
+.h1{font-size:40px!important;line-height:45px!important;font-weight:700;margin:0 0 30px 0;}
+h2{font-weight:700;font-size:24px!important;line-height:35px!important;margin:0 0 15px 0;}
+.bg-white{background-color:#fff;color:#414146;}
+@media only screen and (max-width:800px){
+.h1{font-size:24px!important;line-height:30px!important;margin:0 0 20px 0;}
+}
+.cushion-v{padding:20px 0;}
+.margin-bottom-none{margin-bottom:0;}
+.row{max-width:1280px;margin:0 auto;}
+.text-center{text-align:center;}
+.text-grey{color:#787887!important;}
+section{padding:50px;height:auto;min-height:200px;margin:0 auto;}
+@media screen and (max-width:800px){
+section{padding:20px 20px;height:auto;}
+}
+.client_logos{display:inline-block;margin:10px 30px;vertical-align:middle;}
+.client_logos.investors{background:url(https://www.practo.com/providers/static/images/pages/company/investors.png) no-repeat;}
+.client_logos.investors.sequoia{background-position:1px 3px;width:200px;height:34px;}
+.client_logos.investors.matrix{background-position:1px -47px;width:109px;height:45px;}
+.client_logos.investors.tencent{background-position:1px -102px;width:184px;height:43px;}
+.client_logos.investors.yuri{background-position:1px -158px;width:203px;height:43px;}
+.client_logos.investors.altimeter{background-position:1px -222px;width:160px;height:47px;}
+.client_logos.investors.capitalg{background-position:1px -284px;width:204px;height:51px;}
+.client_logos.investors.sofina{background-position:1px -342px;width:204px;height:51px;}
+.client_logos.investors.thrive{background-position:1px -400px;width:120px;height:55px;}
+.client_logos.investors.runet{background-position:4px -469px;width:114px;height:55px;}
+.gray{filter:grayscale(100%);opacity:.8;}
+@media screen and (max-width:800px){
+.client_logos{margin:10px 35px;}
+}
+/*! CSS Used from: https://nav.practo.com/8.0.33/consumer/css/practonav.css */
+.h1{font-size:24px;line-height:30px;}
+@media only screen and (max-width: 800px){
+.h1{font-size:18px;line-height:30px;}
+}
+
+
+/*! CSS Used from: https://www.practo.com/providers/static/bundles/css/vendor.css?v1587726658711 */
+section{display:block;}
+video{display:inline-block;vertical-align:baseline;}
+*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+*,:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+/*! CSS Used from: https://www.practo.com/providers/static/bundles/css/providers.css?v1587726658711 */
+section,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;box-sizing:border-box;}
+section{display:block;}
+:focus{outline:0;}
+.clear-all{padding:0!important;}
+section{padding:50px;height:auto;min-height:200px;margin:0 auto;}
+.video-player video{width:100%!important;cursor:pointer;}
+@media screen and (max-width:800px){
+section{padding:20px 20px;height:auto;}
+}
+
+.mama{
+    margin-top: 490px !important;
+}
+.video2{
+
+    margin-top: 2650px !important;
+}
+.rownew{
+    margin-top: 700px;
+}
