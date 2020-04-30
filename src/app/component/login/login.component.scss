@@ -1,0 +1,306 @@
+.sidimg{
+    img{
+        height: 400px;
+        width: 400px;
+    }
+}
+.box{
+    padding-bottom: 24px;
+}
+
+.nav{
+   display: flex;
+   align-items: center;
+   justify-content: center; 
+  
+}
+.outer-space {
+    padding: 20px 25px;
+}
+.center-align {
+    width: 400px;
+    display: block;
+    margin: 0 auto;
+}
+
+.outer-box {
+    border: solid 1px rgba(216,216,216,0.5);
+    border-radius: 4px;
+    font-family: 'Camphor';
+    color: #787887;
+}
+.padding-bottom-8 {
+    padding-bottom: 8px;
+}
+
+.email-text {
+    height: 35px;
+    width: 100%;
+}
+.form-control {
+    border-radius: 2px;
+    border: solid 1px #cacad3;
+}
+
+.display-block {
+    display: block;
+}
+
+.error-block {
+    color: #E35A49;
+    font-size: 12px;
+}
+.errorText {
+    width: 100%;
+}
+.padding-top-20 {
+    padding-top: 20px;
+}
+#passwordErrorBlock {
+    padding: 5px;
+    margin-top: 5px;
+}
+.font-12 {
+    font-size: 12px;
+}
+.remember-me {
+    margin-left: 0!important;
+}
+.remember {
+    width: 16px;
+    position: absolute;
+    margin-top: 2px;
+}
+
+.display-inline-block {
+    display: inline-block;
+}
+
+.otp_flow input[type=checkbox], .remember input[type=checkbox] {
+    opacity: 0;
+}
+label[for="remember"] {
+    font-weight: normal;
+}
+.forget-pasword {
+    display: inline-block;
+    float: right;
+    margin-top: 2px;
+}
+.otp-flow {
+    display: inline-block;
+    float: left;
+}
+.remember label:after {
+    
+    opacity: 0;
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 5px;
+    background: transparent;
+    top: 4px;
+    left: 3px;
+    border: 2px solid #fcfff4;
+    border-top: none;
+    border-right: none;
+    transform: rotate(-45deg);
+}
+.remember label {
+    
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 0;
+    left: 0;
+    border-radius: 1px;
+    border: solid 1px #b4b4be;
+    background: white;
+    
+}
+
+.otp_flow input[type=checkbox]:checked+label, .remember input[type=checkbox]:checked+label {
+    background: #14bef0;
+    border: 0;
+}
+.otp_flow input[type=checkbox], .remember input[type=checkbox] {
+    opacity: 0;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    margin: 4px 0 0;
+  
+    line-height: normal;
+}
+input[type="checkbox"], input[type="radio"] {
+    
+    box-sizing: border-box;
+    padding: 0;
+}
+.remember input[type=checkbox]:checked+label:after {
+    
+    opacity: 1;
+}
+
+
+.line-height-20 {
+    line-height: 20px;
+}
+.mousePointer {
+    font-weight: normal;
+    margin-bottom: 0;
+    margin-left: 30px;
+}
+.textMuted {
+    color: #7f7f7f;
+}
+.forget-pasword a {
+    color: #14bef0;
+}
+
+a[href*="forgot_password"] {
+    text-decoration: none;
+}
+a {
+    background: transparent;
+}
+.otp-flow label, .remember-me label {
+    cursor: pointer;
+    user-select: none;
+}
+
+label[for="otp_flow"] {
+    font-weight: normal;
+}
+.otp-flow label, .remember-me label {
+    cursor: pointer;
+    user-select: none;
+}
+
+
+
+.otp_flow label {
+    
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 0;
+    left: 0;
+    border-radius: 1px;
+    border: solid 1px #b4b4be;
+    background: white;
+    
+}
+label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    
+}
+.otp_flow input[type=checkbox]:checked+label, .remember input[type=checkbox]:checked+label {
+    background: #14bef0;
+    border: 0;
+}
+.otp_flow input[type=checkbox]:checked+label:after {
+    
+    opacity: 1;
+}
+.otp_flow label:after {
+    
+    opacity: 0;
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 5px;
+    background: transparent;
+    top: 4px;
+    left: 3px;
+    border: 2px solid #fcfff4;
+    border-top: none;
+    border-right: none;
+    transform: rotate(-45deg);
+}
+.otp_flow {
+    width: 16px;
+    position: absolute;
+    margin-top: 2px;
+}
+.practo-btn {
+    background: #13bef0;
+    color: #FFF;
+}
+
+.common-btn {
+    border: 1px solid #14bef0;
+    width: 100%;
+    height: 45px;
+    font-family: 'Camphor';
+    font-size: 14px;
+    text-align: center;
+    vertical-align: middle;
+    box-sizing: border-box;
+    border-radius: 3px;
+    line-height: 24px;
+}
+// .btn-lg, .btn-group-lg>.btn {
+//     padding: 10px 16px;
+//  }
+#login {
+    width: 350px;
+    margin: 53px auto;
+    color: #fff;
+}
+.hr-container {
+    display: flex;
+    justify-content: center;
+    line-height: 0;
+    margin-top: -3.5em !important;
+    margin-bottom: 0.5em;
+}
+
+
+.hr-container {
+    width: 100%!important;
+    padding: 20px 0;
+}
+.hr-inline {
+    -webkit-box-flex: 1;
+    flex: 1;
+    height: 1px;
+    background: #D8D8D8;
+    width: initial !important;
+    border: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.hr-text {
+    color: #D4D4D4;
+    width: initial !important;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  .fa-google {
+    background: #dd4b39;
+    color: white;
+  }
+  .fa-instagram {
+    background:linear-gradient(45deg,#405DE6,#5851DB,#833AB4,#C13584,#E1306C,#FD1D1D);
+    color: white !important;
+   
+  }
+  .fa {
+    padding:10px 0px 17px 0px;
+    font-size: 25px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: auto;
+    border-radius: 3px 15px;
+  }
+  .fa:hover {
+    opacity: 0.7;
+  }

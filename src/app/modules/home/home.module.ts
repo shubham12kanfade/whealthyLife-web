@@ -4,12 +4,14 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 import { HomeRoutingModule } from './home-routing.module';
 
 
+
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
     HomeRoutingModule,
-    CarouselModule 
+    CarouselModule
+    
   ]
 })
 export class HomeModule {

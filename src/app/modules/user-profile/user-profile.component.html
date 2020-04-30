@@ -1,0 +1,302 @@
+<div class="container_16 bottompadding_1 grey_text_444">
+    <div class="grid_16 min_height_400">
+        <div class="user-profile">
+            <div class="user-profile__header">
+                Accounts
+                <button class="c-button c-button--primary c-button--md">Save
+                    changes</button>
+            </div>
+            <form id="edit-profile-form" method="POST" action="/edit_profile">
+                <input id="csrf_token" name="csrf_token" type="hidden"
+                    value="IjEyMDc2MzRiMTE3Mjc1ODJlN2Q0N2MxYmFkODU0NzVhZTczYjExZjQi.Xqq_bw.V-C9CoCZ8PGsQmDaZicMJJ3K3N8">
+                <div class="user-profile__content">
+                    <div class="user-profile__content__section">
+                        <div class="user-profile__content__section__row">
+                            <div class="user-profile__content__section__row__column">
+                                <div class="o-profile-photo">
+                                    <label>Profile photo</label>
+                                    <div class="o-profile-photo__cont">
+                                        <div class="dummy"></div>
+                                        <div class="o-profile-photo__cont__img">
+                                            <img id="profile-photo" src="../assets/img/medium_thumbnail.png">
+                                        </div>
+                                    </div>
+                                    <div class="o-profile-photo__desc">
+                                        <div class="o-profile-photo__desc__text">
+                                            Pick a photo from your computer
+                                        </div>
+                                        <div class="o-profile-photo__desc__actions">
+
+                                            <input type="button" name="add-photo" value="Add Photo"
+                                                onclick="updatePhoto()">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="user-profile__content__section__row__column">
+                                <div class="c-input c-input--text has-value">
+                                    <input id="name" name="name" tabindex="1" type="text" value="madha vyas">
+                                    <label for="name">
+                                        Name<span>*</span>
+                                    </label>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="user-profile__content__section">
+                        <div class="user-profile__content__section__row">
+                            <div class="user-profile__content__section__row__column">
+                                <div class="c-input c-input--text disabled">
+                                    <input autocomplete="off" id="mobile" name="mobile" type="text"
+                                        value="+919284565546">
+                                    <label>Phone number</label>
+
+                                    <a href="/fill_phone_number">Edit</a>
+
+                                </div>
+                            </div>
+                            <div class="user-profile__content__section__row__column">
+                                <div class="c-input c-input--text disabled">
+                                    <input type="text" value="" autocomplete="off">
+                                    <label>Email Address</label>
+
+                                    <a href="/add_email">Add</a>
+
+                                </div>
+                            </div>
+                            <div class="user-profile__content__section__row__column">
+                                <div class="c-input c-input--select">
+                                    <select id="gender" name="gender" tabindex="-1" class="selectized"
+                                        style="display: none;">
+                                        <option value="" selected="selected"></option>
+                                    </select>
+                                    <div class="selectize-control single">
+                                        <div class="selectize-input items not-full has-options"><input type="text"
+                                                autocomplete="off" tabindex="2" id="gender-selectized"
+                                                placeholder="Select an option     " style="width: 123.859px;"></div>
+                                        <div class="selectize-dropdown single"
+                                            style="display: none; width: 240px; top: 34px; left: 0px;">
+                                            <div class="selectize-dropdown-content"></div>
+                                        </div>
+                                    </div>
+                                    <label for="gender-selectized">
+                                        Gender
+                                    </label>
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="user-profile__content__section__row">
+                            <div class="user-profile__content__section__row__column">
+                                <div class="c-input c-input--text">
+                                    <input id="dob" name="dob" tabindex="3" type="text" value="" class="hasDatepicker">
+                                    <label for="dob">
+                                        Date of birth
+                                    </label>
+                                </div>
+
+                            </div>
+                            <div class="user-profile__content__section__row__column">
+                                <div class="c-input c-input--select">
+                                    <select id="blood_group" name="blood_group" tabindex="-1" class="selectized"
+                                        style="display: none;">
+                                        <option value="" selected="selected"></option>
+                                    </select>
+                                    <div class="selectize-control single">
+                                        <div class="selectize-input items not-full has-options"><input type="text"
+                                                autocomplete="off" tabindex="4" id="blood_group-selectized"
+                                                placeholder="Select an option" style="width: 123.859px;"></div>
+                                        <div class="selectize-dropdown single"
+                                            style="display: none; width: 240px; top: 34px; left: 0px;">
+                                            <div class="selectize-dropdown-content">
+                                                <div class="option selected" data-selectable="" data-value="O+">O+</div>
+                                                <div class="option" data-selectable="" data-value="A+">A+</div>
+                                                <div class="option" data-selectable="" data-value="B+">B+</div>
+                                                <div class="option" data-selectable="" data-value="O-">O-</div>
+                                                <div class="option" data-selectable="" data-value="A-">A-</div>
+                                                <div class="option" data-selectable="" data-value="B-">B-</div>
+                                                <div class="option" data-selectable="" data-value="AB+">AB+</div>
+                                                <div class="option" data-selectable="" data-value="AB-">AB-</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <label for="blood_group-selectized">
+                                        Blood group
+                                    </label>
+
+                                </div>
+
+                            </div>
+                            <div class="user-profile__content__section__row__column">
+                                <div class="c-input c-input--select has-value">
+                                    <select id="timezone" name="timezone" tabindex="-1" class="selectized"
+                                        style="display: none;">
+                                        <option value="Asia/Kolkata" selected="selected">(UTC+05:30) Asia/Kolkata
+                                        </option>
+                                    </select>
+                                    <div class="selectize-control single">
+                                        <div class="selectize-input items full has-options has-items">
+                                            <div class="item" data-value="Asia/Kolkata">(UTC+05:30) Asia/Kolkata</div>
+                                            <input type="text" autocomplete="off" tabindex="5" id="timezone-selectized"
+                                                style="width: 4px;">
+                                        </div>
+                                        <div class="selectize-dropdown single"
+                                            style="display: none; width: 240px; top: 34px; left: 0px;">
+                                            <div class="selectize-dropdown-content"></div>
+                                        </div>
+                                    </div>
+                                    <label for="timezone-selectized">
+                                        Timezone
+                                    </label>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="user-profile__content__section">
+                        <div class="user-profile__content__section__header">
+                            Address
+                        </div>
+                        <div class="user-profile__content__section__row">
+                            <div class="user-profile__content__section__row__column">
+                                <div class="c-input c-input--text">
+                                    <input id="street_address" name="street_address" tabindex="6" type="text" value="">
+                                    <label for="street_address">
+                                        House No./ Street Name/ Area
+                                    </label>
+
+                                </div>
+
+                            </div>
+                            <div class="user-profile__content__section__row__column">
+                                <div class="c-input c-input--text">
+                                    <input id="locality" name="locality" tabindex="7" type="text" value="">
+                                    <label for="locality">
+                                        Colony / Street / Locality
+                                    </label>
+
+                                </div>
+
+                            </div>
+                            <div class="user-profile__content__section__row__column">
+                                <div class="c-input c-input--text">
+                                    <input id="city" name="city" tabindex="8" type="text" value=""
+                                        class="ui-autocomplete-input" autocomplete="off">
+                                    <label for="city">
+                                        City
+                                    </label>
+
+                                </div>
+
+                            </div>
+                            <div class="user-profile__content__section__row">
+                                <div class="user-profile__content__section__row__column">
+                                    <div class="c-input c-input--text">
+                                        <input id="state" name="state" tabindex="9" type="text" value="">
+                                        <label for="state">
+                                            State
+                                        </label>
+
+                                    </div>
+
+                                </div>
+                                <div class="user-profile__content__section__row__column">
+
+                              <div class="c-input c-input--select has-value">
+                                        <select id="country" name="country" tabindex="-1" class="selectized"
+                                            style="display: none;">
+                                            <option value="IN" selected="selected">India</option>
+                                        </select>
+                                        <div class="selectize-control single">
+                                            <div class="selectize-input items full has-options has-items">
+                                                <div class="item" data-value="IN">India</div><input type="text"
+                                                    autocomplete="off" tabindex="10" id="country-selectized"
+                                                    style="width: 4px;">
+                                            </div>
+                                            <div class="selectize-dropdown single"
+                                                style="display: none; width: 240px; top: 34px; left: 0px;">
+                                                <div class="selectize-dropdown-content"></div>
+                                            </div>
+                                        </div>
+                                        <label for="country-selectized">
+                                            Country<span>*</span>
+                                        </label>
+
+                                    </div>
+
+                                </div>
+                                <div class="user-profile__content__section__row__column">
+                                    <div class="c-input c-input--text">
+                                        <input id="pincode" name="pincode" tabindex="11" type="text" value="">
+                                        <label for="pincode">
+                                            Pincode
+                                        </label>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="user-profile__content__section">
+                        <div class="user-profile__content__section__header">
+                            Other information
+                        </div>
+                        <div class="user-profile__content__section__row">
+                            <div class="user-profile__content__section__row__column">
+                                <div class="c-input c-input--text">
+                                    <input id="extra_phone_numbers" name="extra_phone_numbers" tabindex="12" type="text"
+                                        value="">
+                                    <label for="extra_phone_numbers">
+                                        Extra phone numbers
+                                    </label>
+
+                                </div>
+
+                            </div>
+                            <div class="user-profile__content__section__row__column">
+                       <div class="c-input c-input--select has-value">
+                                    <select id="language" name="language" tabindex="-1" class="selectized"
+                                        style="display: none;">
+                                        <option value="en" selected="selected">English</option>
+                                    </select>
+                                    <div class="selectize-control single direction-up">
+                                        <div class="selectize-input items full has-options has-items direction-up">
+                                            <div class="item" data-value="en">English</div><input type="text"
+                                                autocomplete="off" tabindex="13" id="language-selectized"
+                                                style="width: 4px;">
+                                        </div>
+                                        <div class="selectize-dropdown single direction-up"
+                                            style="display: none; width: 240px; top: -2px; left: 0px;">
+                                            <div class="selectize-dropdown-content"></div>
+                                        </div>
+                                    </div>
+                                    <label for="language-selectized">
+                                        Language
+                                    </label>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- <form id="remove-photo-form" method="POST" action="/remove_profile_picture">
+            <input id="csrf_token" name="csrf_token" type="hidden"
+                value="IjEyMDc2MzRiMTE3Mjc1ODJlN2Q0N2MxYmFkODU0NzVhZTczYjExZjQi.Xqq_bw.V-C9CoCZ8PGsQmDaZicMJJ3K3N8">
+        </form>
+        <form id="upload-photo-form" class="u_hidden" method="POST" action="/upload_profile_picture_iframe"
+            enctype="multipart/form-data">
+            <input id="csrf_token" name="csrf_token" type="hidden"
+                value="IjEyMDc2MzRiMTE3Mjc1ODJlN2Q0N2MxYmFkODU0NzVhZTczYjExZjQi.Xqq_bw.V-C9CoCZ8PGsQmDaZicMJJ3K3N8">
+            <input accept="image/*" id="photo" name="photo" type="file">
+        </form> -->
+    </div>
+    <div class="clear"></div>
+</div>

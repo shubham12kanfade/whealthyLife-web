@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -8,6 +9,7 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 export class HomeComponent implements OnInit {
 
   constructor() { }
+
 
   customOptions: OwlOptions = {
     loop: true,
@@ -68,6 +70,7 @@ export class HomeComponent implements OnInit {
 
 
   ngOnInit(): void {
+  
   }
 
 }

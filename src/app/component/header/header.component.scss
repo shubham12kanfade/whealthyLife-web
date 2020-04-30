@@ -1,0 +1,29 @@
+.main-menu > ul > li > a {
+    color: rgb(0, 0, 0);
+    padding: 10.5px 8px;
+    font-size: 14px !important;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.main-menu ul a, .main-menu ul li a {
+    position: relative;
+    margin: 0;
+    padding: 0 !important;
+    display: block;
+    padding: 10px !important;
+}
+a {
+    color: #337ab7 !important;
+    text-decoration: none;
+}
+.fixed-popup a {
+    color: #fff !important;
+}
+.top .top-list li a {
+    color: #000 !important;
+    font-size: 12px;
+}
+.bp-btn a:hover{
+    color:#fff !important;
+}
