@@ -1,0 +1,91 @@
+<section class="new-direct-steps ng-scope">
+    <p class="offline-message ng-binding ng-hide" >There is no internet connection</p>
+
+    
+
+    <section class="step-content clearfix">
+        <i class="icon-ic_cross" ></i>
+      <div ui-view="" class="ng-scope"><div class="problem-details-page clearfix ng-scope">
+    <div class="flow-form-left">
+        <header>
+        
+            <h2 class="heading mobile-white-header ng-binding">Chat with a Doctor</h2>
+        </header>
+
+        <div class="form-wrapper">
+           
+            <form name="problemForm" class="ng-pristine ng-isolate-scope ng-invalid ng-invalid-required ng-valid-maxlength ng-valid-minlength" style="">
+                <form full-discount="fullDiscount" form="problemForm" model="problemModel" auto-select-problem-area-id="autoSelectProblemAreaId" problem-area-to-restrict="problemAreaToRestrict" force-gp="shouldForceGPOnContextualBanners" class="ng-isolate-scope"><div ng-class="{ 'problem-form padder-bottom-mobile': isVariationSymptomsMinimal }">
+
+
+
+<div class="search-problem-area">
+
+
+<div class="restrict-width ng-scope" ng-if="!model.topProblemArea" style="">
+   
+   <div class="input-container ng-scope" ng-if="problemAreaTags" style="">
+        <label class="form-label label-spacing ng-binding">Speciality</label>
+       <div class="radio-tags ng-scope" ng-if="problemAreaTags.length > 0">
+            <div class="tag ng-scope selected">
+                <i class="icon-ic_done_solid_system selected"></i>
+                <input  type="radio"  name="problemType" id="problemArea_6" ng-value="problemArea" class="ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required" >
+                <label for="problemArea_6" class="tag-label ng-binding">
+                    Dental
+                    <span class="price">
+                       
+                       <span  class="ng-binding ng-scope">₹199</span>
+                   
+                    </span>
+                </label>
+            </div>
+        </div>
+   
+    </div>
+</div>
+</div>
+
+</div>
+</form>
+
+               
+                <div >
+                   
+                    <div class="mobile-submit-form">
+                        <div class="restrict-width">
+                            <form    class="ng-isolate-scope"><div class="patient-details-form">
+    <div ng-if="visibleFields.name" class="input-container ng-scope" ng-class="{ 'has-error': form.name.$invalid &amp;&amp; form.name.$touched &amp;&amp; form.name.$dirty }" style="">
+        <label class="form-label" for="name">Patient name</label>
+        <input name="name" type="text" ng-model="model.name" maxlength="160" required="" placeholder="Enter patient name for prescriptions" id="name" class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-maxlength">
+    </div>
+
+   <div  class="input-container clear ng-scope" >
+        <label class="form-label" for="mobile">Mobile number</label>
+        <div class="intl-tel-input allow-dropdown">
+            <div class="flag-container">
+                <div class="selected-flag" role="combobox" aria-owns="country-listbox" tabindex="0" title="India (भारत): +91"><div class="iti-flag in"></div><div class="iti-arrow"></div></div>
+                <ul class="country-list hide" id="country-listbox" aria-expanded="false" role="listbox" aria-activedescendant="iti-item-in">
+
+
+                </ul>
+            </div><input type="tel" intl-tel-input="model" ng-model="mobileInteraction" name="mobileInteraction" autocapitalize="off" autocorrect="off" ng-disabled="form.mobile.$valid &amp;&amp; config.disableMobileField" placeholder="Enter mobile number" id="mobile" class="ng-pristine ng-untouched ng-valid ng-isolate-scope ng-empty" autocomplete="off" data-intl-tel-input-id="0"></div>
+        <input name="mobile" type="text" required="" ng-model="model.mobile" minlength="4" maxlength="20" class="hidden ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-minlength ng-valid-maxlength">
+       <p class="hint-text ng-scope">A verification code will be sent to this number.</p><!-- end ngIf: !isLoggedIn -->
+    </div>
+</div>
+</form>
+                        </div>
+
+                        <div class="continue-btn-container padder-top">
+                            <button class="btn-blue continue-btn disabled" >Continue</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+  </div>
+</div>
+    </section>
+</section>
