@@ -12,6 +12,9 @@ import { RegisterComponent } from './component/register/register.component';
 import { ContactUsComponent } from './modules/contact-us/contact-us.component';
 import { AboutComponent } from './modules/about/about.component';
 import { BookappoimentComponent } from './modules/bookappoiment/bookappoiment.component';
+import { BookHealthCheckupsComponent } from './modules/book-health-checkups/book-health-checkups.component';
+import { ChatWithDoctorComponent } from './modules/chat-with-doctor/chat-with-doctor.component';
+
 
 
 @NgModule({
@@ -25,6 +28,8 @@ import { BookappoimentComponent } from './modules/bookappoiment/bookappoiment.co
     ContactUsComponent,
     AboutComponent,
     BookappoimentComponent,
+    BookHealthCheckupsComponent,
+    ChatWithDoctorComponent,
 
   ],
   imports: [
