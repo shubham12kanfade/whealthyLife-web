@@ -1,0 +1,46 @@
+
+.dropdown-item{
+    padding:10px 20px 10px 10px;
+    display: block;
+}
+
+// .nava1{
+//     background:whitesmoke;
+  
+// }
+.userphoto img{
+    height: 30px;
+    width: 30px;
+}
+.navbar-brand img{
+    width: 60px;
+    margin-top: -10px;
+    border-radius: 50%;
+}
+.driv{
+    font-size: 22px;
+    font-weight: 800;
+    margin-left: 20px;
+}
+
+.ulnaav {
+    // color: lightsteelblue;
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    flex: auto;
+    justify-content: flex-end;
+    margin-right: 85px;
+}
+
+.usrname{
+    text-align:center;
+    font-size: 14px;
+    font-weight: 600;
+}
+.dsds{
+    padding:40px auto;
+}
+.contain{
+    padding: 30px 40px 30px 40px;
+}

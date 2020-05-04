@@ -1,0 +1,41 @@
+<div class="container_16 bottompadding_1 grey_text_444">
+    <div class="grid_16 min_height_400">
+        <div class="nav-update change-email">
+            <h1 class="title">Add your Account Email</h1>
+            <p class="allmargin_20 text-center info-wrap">
+                This will allow you to login into Practo using the Email Address. You will need to verify this email
+                address, by clicking on the link sent to you.
+            </p>
+            <!-- <form method="POST" action="/add_email" class="allmargin_20">
+                <input id="csrf_token" name="csrf_token" type="hidden"
+                    value="IjU1ZTA5YjA5OTY3YmM2MWM5NmQ1YzM4NjY3MTVmYmQ3NWNhNDYyOWUi.XqwhWw.KUi7nQhl6lOn0ATsNmF3nejzyZw">
+                <ul>
+                    <li class="formFieldContainer">
+                        <label for="email">Email Address</label>
+
+                        <input autocomplete="on" id="email" name="email" placeholder="Email Address" type="email"
+                            value="">
+
+                        <span style="color:#f00;">*</span>
+                    </li>
+
+                    <li class="formFieldContainer text-center">
+                        <input type="submit" value="Add Email">
+                        <a href="/edit_profile" class="cancel">Cancel</a>
+                    </li>
+                </ul>
+            </form> -->
+            <form>
+                <div class="form-group">
+                  <!-- <label for="exampleInputEmail1" class="addyouremail">Add Your Email</label> -->
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email Address">
+                </div>
+                <div class="form-group">
+                <button type="submit" class="btn btn-primary prime">Submit</button>
+                <button type="button" class="btn btn-outline-primary" routerLink="/edit-profile" >Cancel</button>
+            </div>
+              </form>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>

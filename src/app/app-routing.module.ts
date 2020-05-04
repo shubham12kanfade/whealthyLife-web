@@ -8,11 +8,13 @@ const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path:'register',component:RegisterComponent},
   {path: '',loadChildren: () => import('./modules/home/home.module').then(h => h.HomeModule)},
-  {path: '',loadChildren: () => import('./modules/user-profile/user-profile.module').then(u => u.UserProfileModule)},
-  
+ 
+  {path: '',loadChildren: () => import('./modules/user-accounts/user-accounts.module').then(us => us.UserAccountsModule)},
+  {path: '',loadChildren: () => import('./modules/user-drive/user-drive.module').then(ud => ud.UserDriveModule )},
+
   {path: 'contact',loadChildren: () => import('./modules/contact-us/contact-us.module').then(c => c.ContactUsModule)},
   {path: 'about',loadChildren: () => import('./modules/about/about.module').then(a => a.AboutModule)},
-  {path: 'bookappoiment',loadChildren: () => import('./modules/bookappoiment/bookappoiment.module').then(b => b.BookappoimentModule)}
+  {path: 'book_appointment',loadChildren: () => import('./modules/bookappoiment/bookappoiment.module').then(b => b.BookappoimentModule)}
 ];
 
 @NgModule({

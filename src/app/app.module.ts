@@ -14,6 +14,7 @@ import { AboutComponent } from './modules/about/about.component';
 import { BookappoimentComponent } from './modules/bookappoiment/bookappoiment.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,6 +26,7 @@ import { BookappoimentComponent } from './modules/bookappoiment/bookappoiment.co
     ContactUsComponent,
     AboutComponent,
     BookappoimentComponent,
+
 
   ],
   imports: [
