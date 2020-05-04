@@ -1,12 +1,20 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './component/login/login.component';
 import { RegisterComponent } from './component/register/register.component';
+import { BookHealthCheckupsComponent } from './modules/book-health-checkups/book-health-checkups.component';
+import { ChatWithDoctorComponent } from './modules/chat-with-doctor/chat-with-doctor.component';
+
+
 
 
 const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path:'register',component:RegisterComponent},
+  {path:'Book Health Checkups',component:BookHealthCheckupsComponent},
+  {path:'consult',component:ChatWithDoctorComponent}
+
+  ,
   {path: '',loadChildren: () => import('./modules/home/home.module').then(h => h.HomeModule)},
  
   {path: '',loadChildren: () => import('./modules/user-accounts/user-accounts.module').then(us => us.UserAccountsModule)},
