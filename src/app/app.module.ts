@@ -15,6 +15,7 @@ import { BookappoimentComponent } from './modules/bookappoiment/bookappoiment.co
 import { HelpComponent } from './modules/help/help.component';
 import { BooktestsComponent } from './modules/booktests/booktests.component';
 import { HealthMedicineshealthComponent } from './modules/health-medicineshealth/health-medicineshealth.component';
+// import { DoctorsComponent } from './modules/doctors/doctors.component';
 
 
 @NgModule({
@@ -31,6 +32,7 @@ import { HealthMedicineshealthComponent } from './modules/health-medicineshealth
     HelpComponent,
     BooktestsComponent,
     HealthMedicineshealthComponent,
+    // DoctorsComponent,
    
 
 

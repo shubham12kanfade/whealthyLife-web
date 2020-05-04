@@ -1,3 +1,4 @@
+
 <div class="c-jumbo__banner">
     <div class="c-jumbo__header_container">
         <h1 data-qa-id="jumbo-heading" class="c-jumbo__header">Your home for health</h1>
@@ -18,22 +19,49 @@
                                         class="c-omni-searchbox__button__text">Detect</span></span></span></div>
                     </div>
                     <div class="c-omni__wrapper u-clearfix c-omni__wrapper--keyword">
-                        <div class="c-omni-searchbox_wrapper "><span class="c-omni-searchbox__icon"><i
-                                    class="icon-ic_search"></i></span><input data-qa-id="omni-searchbox-keyword"
-                                class="c-omni-searchbox c-omni-searchbox--large" autocomplete="off"
-                                placeholder="Search doctors, clinics, hospitals, etc." value=""></div>
+                        <div class="c-omni-searchbox_wrapper dropdown">
+                            <span class="c-omni-searchbox__icon">
+                                <i
+                                    class="icon-ic_search"></i>
+                                </span>
+                                    <input data-qa-id="omni-searchbox-keyword"
+                                class="c-omni-searchbox c-omni-searchbox--large dropdown-toggle" autocomplete="off"
+                                placeholder="Search doctors, clinics, hospitals, etc." value="" data-toggle="dropdown" >
+                                <div class="drp ">
+                                <ul class="dropdown-menu">
+                                    <li><a routerLink="/doctors">Dentist</a></li>
+                                    <li><a href="#"> Gynecologist/obstetrician</a></li>
+                                    <li><a href="#">General Physician</a></li>
+                                    <li><a href="#">General Dermatologist</a></li>
+                                    <li><a href="#">Ear-nose-throat (ent) Specialist</a></li>
+                                    <li><a href="#">Homoeopath</a></li>
+                                    <li><a href="#">Ayurveda</a></li>
+                                </ul>
+                                </div>
+                                
+                            </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="c-popular-searches"><span data-qa-id="popular-searches">Popular searches:</span><a
+        <div class="c-popular-searches"><span data-qa-id="popular-searches">Popular searches:</span>
+            <a
                 data-qa-id="popular-search-item" href="/bangalore/dermatologist"
-                class="c-popular-searches__item">Dermatologist</a><a data-qa-id="popular-search-item"
-                href="/bangalore/pediatrician" class="c-popular-searches__item">Pediatrician</a><a
+                class="c-popular-searches__item">Dermatologist</a>
+                <a data-qa-id="popular-search-item"
+                href="/bangalore/pediatrician" class="c-popular-searches__item">Pediatrician</a>
+                <a
                 data-qa-id="popular-search-item" href="/bangalore/gynecologist-obstetrician"
                 class="c-popular-searches__item">Gynecologist/Obstetrician</a>
-            <div class="u-d-inline"><span class="c-popular-searches"><span data-qa-id="others-speciality"
-                        class="c-popular-searches__item">Others</span><i class="icon-ic_down_cheveron"></i></span></div>
+            <div class="u-d-inline">
+                <span class="c-popular-searches">
+                    <span data-qa-id="others-speciality"
+                        class="c-popular-searches__item">
+                        Others
+                    </span>
+                    <i class="icon-ic_down_cheveron"></i>
+                </span>
+            </div>
         </div>
     </div>
     <div class="mydoctors-tab-new">
@@ -168,7 +196,7 @@
                                                     to consult Dr Indu Bubna. She quickly diagnosed my disease as
                                                     pulmonary embolism and I was admitted to ICU. Now its all fine. If i
                                                     would have gotten late then I wouldn't be writing this. Thanks
-                                                    Practo!</div>
+                                                    WealthyLife!</div>
                                                 <div><span class="icon-ic_user_system icon-user"></span><span
                                                         class="u-t-regular u-inline-middle u-m-l-10">Anuupam
                                                         Purohit</span></div>
@@ -207,7 +235,7 @@
                                                         class="icon-ic_star_solid icon-star"></i></div>
                                                 <div class="c-testimonial__review_text u-t-regular">Very easy to
                                                     book,maintain history. Hassle free from older versions of booking
-                                                    appointment via telephone.. Thanks Practo for making it simple.
+                                                    appointment via telephone.. Thanks WealthyLife for making it simple.
                                                 </div>
                                                 <div><span class="icon-ic_user_system icon-user"></span><span
                                                         class="u-t-regular u-inline-middle u-m-l-10">Jyothi
@@ -247,7 +275,7 @@
                                                         class="icon-ic_star_solid icon-star"></i></div>
                                                 <div class="c-testimonial__review_text u-t-regular">Boon for
                                                     patients.God bless who made this app.I would not recover so soon if
-                                                    this app would not be there. Feedback- Practo has doctor for common
+                                                    this app would not be there. Feedback- WealthyLife has doctor for common
                                                     disease or complications.It should focus on those complications
                                                     which is uncommon because it is hard to find suitable doctor in some
                                                     cases like Varicocele,Esinophill count increase</div>
@@ -289,7 +317,7 @@
                                                 <div class="c-testimonial__review_text u-t-regular">Great app..get to
                                                     know actual qualification of doctors n their alma mater n experience
                                                     to judge the background..along with peoples review...have stopped
-                                                    calling n taking appointments..just practo it</div>
+                                                    calling n taking appointments..just WealthyLife it</div>
                                                 <div><span class="icon-ic_user_system icon-user"></span><span
                                                         class="u-t-regular u-inline-middle u-m-l-10">Deepak Kumar</span>
                                                 </div>
@@ -312,7 +340,7 @@
                                                     to consult Dr Indu Bubna. She quickly diagnosed my disease as
                                                     pulmonary embolism and I was admitted to ICU. Now its all fine. If i
                                                     would have gotten late then I wouldn't be writing this. Thanks
-                                                    Practo!</div>
+                                                    WealthyLife!</div>
                                                 <div><span class="icon-ic_user_system icon-user"></span><span
                                                         class="u-t-regular u-inline-middle u-m-l-10">Anuupam
                                                         Purohit</span></div>
@@ -351,7 +379,7 @@
                                                         class="icon-ic_star_solid icon-star"></i></div>
                                                 <div class="c-testimonial__review_text u-t-regular">Very easy to
                                                     book,maintain history. Hassle free from older versions of booking
-                                                    appointment via telephone.. Thanks Practo for making it simple.
+                                                    appointment via telephone.. Thanks WealthyLife for making it simple.
                                                 </div>
                                                 <div><span class="icon-ic_user_system icon-user"></span><span
                                                         class="u-t-regular u-inline-middle u-m-l-10">Jyothi
@@ -391,7 +419,7 @@
                                                         class="icon-ic_star_solid icon-star"></i></div>
                                                 <div class="c-testimonial__review_text u-t-regular">Boon for
                                                     patients.God bless who made this app.I would not recover so soon if
-                                                    this app would not be there. Feedback- Practo has doctor for common
+                                                    this app would not be there. Feedback- WealthyLife has doctor for common
                                                     disease or complications.It should focus on those complications
                                                     which is uncommon because it is hard to find suitable doctor in some
                                                     cases like Varicocele,Esinophill count increase</div>
@@ -433,7 +461,7 @@
                                                 <div class="c-testimonial__review_text u-t-regular">Great app..get to
                                                     know actual qualification of doctors n their alma mater n experience
                                                     to judge the background..along with peoples review...have stopped
-                                                    calling n taking appointments..just practo it</div>
+                                                    calling n taking appointments..just WealthyLife it</div>
                                                 <div><span class="icon-ic_user_system icon-user"></span><span
                                                         class="u-t-regular u-inline-middle u-m-l-10">Deepak Kumar</span>
                                                 </div>
@@ -456,7 +484,7 @@
                                                     to consult Dr Indu Bubna. She quickly diagnosed my disease as
                                                     pulmonary embolism and I was admitted to ICU. Now its all fine. If i
                                                     would have gotten late then I wouldn't be writing this. Thanks
-                                                    Practo!</div>
+                                                    WealthyLife!</div>
                                                 <div><span class="icon-ic_user_system icon-user"></span><span
                                                         class="u-t-regular u-inline-middle u-m-l-10">Anuupam
                                                         Purohit</span></div>
@@ -552,10 +580,10 @@
                                                         class="icon-ic_star_solid icon-star"></i><i
                                                         class="icon-ic_star_solid icon-star"></i></div>
                                                 <div class="c-testimonial__review_text u-t-regular">Very reliable app!
-                                                    There r many such apps in the market but Practo is very reliable. I
+                                                    There r many such apps in the market but WealthyLife is very reliable. I
                                                     love the feature of free questions.This feature gives an idea of
                                                     health issue you are facing and you can accordingly consult the
-                                                    relevant doctor. Thank u team Practo for putting this together.
+                                                    relevant doctor. Thank u team WealthyLife for putting this together.
                                                 </div>
                                                 <div><span class="icon-ic_user_system icon-user"></span><span
                                                         class="u-t-regular u-inline-middle u-m-l-10">Bhawana
@@ -651,7 +679,7 @@
                                                         class="icon-ic_star_solid icon-star"></i><i
                                                         class="icon-ic_star_solid icon-star"></i><i
                                                         class="icon-ic_star_solid icon-star"></i></div>
-                                                <div class="c-testimonial__review_text u-t-regular">Private help Practo
+                                                <div class="c-testimonial__review_text u-t-regular">Private help WealthyLife
                                                     saved my life, i was in big trouble... And I used this app to
                                                     consult with doctor by paying from my card and it saved my night...
                                                     But if the chat response time gets fast, it will be helpful for the
@@ -673,10 +701,10 @@
                                                         class="icon-ic_star_solid icon-star"></i><i
                                                         class="icon-ic_star_solid icon-star"></i></div>
                                                 <div class="c-testimonial__review_text u-t-regular">Very reliable app!
-                                                    There r many such apps in the market but Practo is very reliable. I
+                                                    There r many such apps in the market but WealthyLife is very reliable. I
                                                     love the feature of free questions.This feature gives an idea of
                                                     health issue you are facing and you can accordingly consult the
-                                                    relevant doctor. Thank u team Practo for putting this together.
+                                                    relevant doctor. Thank u team WealthyLife for putting this together.
                                                 </div>
                                                 <div><span class="icon-ic_user_system icon-user"></span><span
                                                         class="u-t-regular u-inline-middle u-m-l-10">Bhawana
@@ -772,7 +800,7 @@
                                                         class="icon-ic_star_solid icon-star"></i><i
                                                         class="icon-ic_star_solid icon-star"></i><i
                                                         class="icon-ic_star_solid icon-star"></i></div>
-                                                <div class="c-testimonial__review_text u-t-regular">Private help Practo
+                                                <div class="c-testimonial__review_text u-t-regular">Private help WealthyLife
                                                     saved my life, i was in big trouble... And I used this app to
                                                     consult with doctor by paying from my card and it saved my night...
                                                     But if the chat response time gets fast, it will be helpful for the
@@ -794,10 +822,10 @@
                                                         class="icon-ic_star_solid icon-star"></i><i
                                                         class="icon-ic_star_solid icon-star"></i></div>
                                                 <div class="c-testimonial__review_text u-t-regular">Very reliable app!
-                                                    There r many such apps in the market but Practo is very reliable. I
+                                                    There r many such apps in the market but WealthyLife is very reliable. I
                                                     love the feature of free questions.This feature gives an idea of
                                                     health issue you are facing and you can accordingly consult the
-                                                    relevant doctor. Thank u team Practo for putting this together.
+                                                    relevant doctor. Thank u team WealthyLife for putting this together.
                                                 </div>
                                                 <div><span class="icon-ic_user_system icon-user"></span><span
                                                         class="u-t-regular u-inline-middle u-m-l-10">Bhawana
@@ -1270,10 +1298,10 @@
                                             <div class="u-t-grey">
                                                 <div class="c-testimonial__review_star u-m-b-10 u-t-green"></div>
                                                 <div class="c-testimonial__review_text u-t-regular">Extremely happy and
-                                                    satisfied with the service of Practo medicines delivery. Prompt
+                                                    satisfied with the service of WealthyLife medicines delivery. Prompt
                                                     response and delivery was made 1 day ahead of due date. A special
                                                     mention goes to Siddesh, the pharmacist for faster delivery. Keep up
-                                                    the good work, Practo!!</div>
+                                                    the good work, WealthyLife!!</div>
                                                 <div><span class="icon-ic_user_system icon-user"></span><span
                                                         class="u-t-regular u-inline-middle u-m-l-10">Lalitha
                                                         Gunadas</span></div>
@@ -1287,7 +1315,7 @@
                                                 <div class="c-testimonial__review_star u-m-b-10 u-t-green"></div>
                                                 <div class="c-testimonial__review_text u-t-regular">The executive who
                                                     delivered the Medicine was kind he even waited for more than 20 mins
-                                                    and was still smiling and happy.... Awesome Practo for having people
+                                                    and was still smiling and happy.... Awesome WealthyLife for having people
                                                     who like doing what they do...</div>
                                                 <div><span class="icon-ic_user_system icon-user"></span><span
                                                         class="u-t-regular u-inline-middle u-m-l-10">Kripa Shankari
@@ -1307,8 +1335,8 @@
                                                         class="icon-ic_star_solid icon-star"></i></div>
                                                 <div class="c-testimonial__review_text u-t-regular">Wonderful app.. Must
                                                     have in everyone's phone I didnt even book the appointment through
-                                                    practo. I just made a call and let the doctor know I came through
-                                                    practo and after that everything was on the app. My bills, my
+                                                    WealthyLife. I just made a call and let the doctor know I came through
+                                                    WealthyLife and after that everything was on the app. My bills, my
                                                     prescription, measures to be taken etc.. Plus it gave me reminders
                                                     with the names of my meds..</div>
                                                 <div><span class="icon-ic_user_system icon-user"></span><span
@@ -1374,10 +1402,10 @@
                                             <div class="u-t-grey">
                                                 <div class="c-testimonial__review_star u-m-b-10 u-t-green"></div>
                                                 <div class="c-testimonial__review_text u-t-regular">Extremely happy and
-                                                    satisfied with the service of Practo medicines delivery. Prompt
+                                                    satisfied with the service of WealthyLife medicines delivery. Prompt
                                                     response and delivery was made 1 day ahead of due date. A special
                                                     mention goes to Siddesh, the pharmacist for faster delivery. Keep up
-                                                    the good work, Practo!!</div>
+                                                    the good work, WealthyLife!!</div>
                                                 <div><span class="icon-ic_user_system icon-user"></span><span
                                                         class="u-t-regular u-inline-middle u-m-l-10">Lalitha
                                                         Gunadas</span></div>
@@ -1391,7 +1419,7 @@
                                                 <div class="c-testimonial__review_star u-m-b-10 u-t-green"></div>
                                                 <div class="c-testimonial__review_text u-t-regular">The executive who
                                                     delivered the Medicine was kind he even waited for more than 20 mins
-                                                    and was still smiling and happy.... Awesome Practo for having people
+                                                    and was still smiling and happy.... Awesome WealthyLife for having people
                                                     who like doing what they do...</div>
                                                 <div><span class="icon-ic_user_system icon-user"></span><span
                                                         class="u-t-regular u-inline-middle u-m-l-10">Kripa Shankari
@@ -1411,8 +1439,8 @@
                                                         class="icon-ic_star_solid icon-star"></i></div>
                                                 <div class="c-testimonial__review_text u-t-regular">Wonderful app.. Must
                                                     have in everyone's phone I didnt even book the appointment through
-                                                    practo. I just made a call and let the doctor know I came through
-                                                    practo and after that everything was on the app. My bills, my
+                                                    WealthyLife. I just made a call and let the doctor know I came through
+                                                    WealthyLife and after that everything was on the app. My bills, my
                                                     prescription, measures to be taken etc.. Plus it gave me reminders
                                                     with the names of my meds..</div>
                                                 <div><span class="icon-ic_user_system icon-user"></span><span
@@ -1506,7 +1534,7 @@
                     </div>
                     <div class="c-list-item">
                         <div><i class="c-list-item__icon icon-ic_done_open_system"></i><span>Get seen by </span><span
-                                class="u-t-bold">25M+ </span><span>patients on Practo.com</span></div>
+                                class="u-t-bold">25M+ </span><span>patients on wealthylife.com</span></div>
                     </div>
                     <div class="c-list-item">
                         <div><i class="c-list-item__icon icon-ic_done_open_system"></i><span>The most advanced software
@@ -1575,7 +1603,7 @@
             <div class="u-w-50 u-f-right">
                 <div class="c-section__highlights">
                     <div class="c-section__highlights_title">
-                        <h2 class="u-d-inline u-t-bold">Download the Practo app</h2>
+                        <h2 class="u-d-inline u-t-bold">Download the WealthyLife app</h2>
                     </div>
                     <div class="c-download__list">
                         <div class="c-list-item">
