@@ -12,7 +12,9 @@ import { RegisterComponent } from './component/register/register.component';
 import { ContactUsComponent } from './modules/contact-us/contact-us.component';
 import { AboutComponent } from './modules/about/about.component';
 import { BookappoimentComponent } from './modules/bookappoiment/bookappoiment.component';
-
+import { HelpComponent } from './modules/help/help.component';
+import { BooktestsComponent } from './modules/booktests/booktests.component';
+import { HealthMedicineshealthComponent } from './modules/health-medicineshealth/health-medicineshealth.component';
 
 
 @NgModule({
@@ -26,6 +28,10 @@ import { BookappoimentComponent } from './modules/bookappoiment/bookappoiment.co
     ContactUsComponent,
     AboutComponent,
     BookappoimentComponent,
+    HelpComponent,
+    BooktestsComponent,
+    HealthMedicineshealthComponent,
+   
 
 
   ],
