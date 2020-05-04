@@ -17,7 +17,7 @@ const routes: Routes = [
   ,
   {path: '',loadChildren: () => import('./modules/home/home.module').then(h => h.HomeModule)},
  
-  {path: '',loadChildren: () => import('./modules/user-accounts/user-accounts.module').then(us => us.UserAccountsModule)},
+  {path: 'accounts',loadChildren: () => import('./modules/user-accounts/user-accounts.module').then(us => us.UserAccountsModule)},
   {path: '',loadChildren: () => import('./modules/user-drive/user-drive.module').then(ud => ud.UserDriveModule )},
 
   {path: 'contact',loadChildren: () => import('./modules/contact-us/contact-us.module').then(c => c.ContactUsModule)},
