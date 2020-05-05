@@ -1,0 +1,40 @@
+.hbg {
+    background-color: #f0f0f5;
+}
+
+.card-img {
+    height: 120px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.padingnone {
+    padding: 0 20px 0 20px;
+}
+
+.tcolor {
+    color: #14bef0;
+    cursor: pointer;
+}
+
+.c-patient-list__item {
+    border-bottom: 1px solid #b4b4be;
+}
+
+c-appointment-page {
+    max-width: 960px;
+    margin: 30px auto 0;
+}
+
+.pure-g {
+    letter-spacing: -.31em;
+    *letter-spacing: normal;
+    *word-spacing: -.43em;
+    text-rendering: optimizespeed;
+    flex-flow: row wrap;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    -ms-align-content: flex-start;
+    align-content: flex-start;
+}
