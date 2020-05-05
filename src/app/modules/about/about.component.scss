@@ -436,7 +436,7 @@ section{display:block;}
 :focus{outline:0;}
 .clear-all{padding:0!important;}
 section{padding:50px;height:auto;min-height:200px;margin:0 auto;}
-.video-player video{width:100%!important;cursor:pointer;}
+.video-player video{width:100%!important;cursor:pointer;margin-top: 120px !important;}
 @media screen and (max-width:800px){
 section{padding:20px 20px;height:auto;}
 }
