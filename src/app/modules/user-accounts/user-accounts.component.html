@@ -1,0 +1,217 @@
+
+<div class="container_16 bottompadding_1 grey_text_444">
+    <div class="grid_16 min_height_400">
+        <div class="user-profile">
+            <div class="user-profile__header">
+                Accounts
+                <button class="c-button c-button--primary c-button--md">Save
+                    changes</button>
+            </div>
+            <form id="edit-profile-form" method="POST" action="/edit_profile">
+                <input id="csrf_token" name="csrf_token" type="hidden"
+                    value="IjEyMDc2MzRiMTE3Mjc1ODJlN2Q0N2MxYmFkODU0NzVhZTczYjExZjQi.Xqq_bw.V-C9CoCZ8PGsQmDaZicMJJ3K3N8">
+                <div class="user-profile__content">
+                    <div class="user-profile__content__section">
+                        <div class="user-profile__content__section__row">
+                            <div class="user-profile__content__section__row__column">
+                                <div class="o-profile-photo">
+                                    <label>Profile photo</label>
+                                    <div class="o-profile-photo__cont">
+                                        <div class="dummy"></div>
+                                        <div class="o-profile-photo__cont__img">
+                                            <img id="profile-photo" src="../assets/img/medium_thumbnail.png">
+                                        </div>
+                                    </div>
+                                    <div class="o-profile-photo__desc">
+                                        <div class="o-profile-photo__desc__text">
+                                            Pick a photo from your computer
+                                        </div>
+                                        <div class="o-profile-photo__desc__actions">
+
+                                            <input type="button" name="add-photo" value="Add Photo"
+                                                onclick="updatePhoto()">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="user-profile__content__section__row__column">
+                                <div class="c-input c-input--text has-value">
+                                     <div class="form-group">
+                                    <label for="name">Name</label>
+                                    <input type="text" class="form-control" id="name">
+                                  </div>
+
+                                </div>
+                              
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="coantainer">
+                        <div class="col-md-12 col-sm-12">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label for="email" style="float: right;"><a routerLink="/verify_number"> Edit</a></label>
+                                    <label for="phnumber">Phone Number</label>
+                                    <input type="text" class="form-control" id="phnumber" value="3232323232323" disabled>
+                                  </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label for="email" style="float: right;"><a routerLink="/add_email">Add</a></label>
+                                    <label for="email">Email address:</label>
+                                    <input type="email" class="form-control" id="email" disabled>
+                                  </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label for="gender">Gender</label>
+                                    <select class="form-control" id="gender">
+                                        <option>Male</option>
+                                        <option>Female</option>
+                                        <option>Other</option>
+                                      </select>
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label for="dob">Date of Birth</label>
+                                    <input type="text" class="form-control" id="datepicker">
+                                  </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label for="bloodgrp">Blood Group</label>
+                                    <select class="form-control" id="bloodgrp">
+                                        <option>O+</option>
+                                        <option>A+</option>
+                                        <option>B+</option>
+                                        <option>O-</option>
+                                        <option>A-</option>
+                                        <option>B-</option>
+                                        <option>AB+</option>
+                                        <option>AB-</option>
+
+                                      </select>
+                                    
+                                  </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label for="timezone">Timezone</label>
+                                    <select class="form-control" id="timezone">
+                                        <option>(UTC+05:30) Asia/Kolkata</option>
+                                        <option>(UTC+05:30) Asia/Kolkata</option>
+                                        <option>(UTC+05:30) Asia/Kolkata</option>
+                                        <option>(UTC+05:30) Asia/Kolkata</option>
+                                        <option>(UTC+05:30) Asia/Kolkata</option>
+                                        <option>(UTC+05:30) Asia/Kolkata</option>
+                                        <option>(UTC+05:30) Asia/Kolkata</option>
+                                        
+                                        <option>Female</option>
+                                        <option>Other</option>
+                                      </select>
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="col-md-12 col-sm-12">
+                        <div><h5 class="pb2-2">Address</h5></div>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                   
+                                    <label for="hnumber">
+                                        House No./ Street Name/ Area</label>
+                                    <input type="text" class="form-control" id="hnumber">
+                                  </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    
+                                    <label for="street">
+                                        Colony / Street / Locality</label>
+                                    <input type="text" class="form-control" id="street">
+                                  </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    
+                                    <label for="city">
+                                        City</label>
+                                    <input type="text" class="form-control" id="city">
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label for="state">State</label>
+                                    <input type="text" class="form-control" id="state">
+                                  </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label for="country">Country</label>
+                                    <select class="form-control" id="timezone">
+                                        <option>India</option>
+                                        <option>India</option>
+                                        <option>India</option>
+                                        <option>India</option>
+                                        <option>India</option>
+                                        <option>India</option>
+                                        <option>India</option>
+                                      </select>
+                                  </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label for="pin">Pin Code</label>
+                                    <input type="text" class="form-control" id="pin">
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+
+                    <div class="col-md-12 col-sm-12">
+                        <div><h5 class="pb2-2">Other Information</h5></div>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                   
+                                    <label for="extraphone">
+                                        Extra phone number</label>
+                                    <input type="text" class="form-control" id="extraphone">
+                                  </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label for="language">Language</label>
+                                    <select class="form-control" id="language">
+                                        <option>English</option>
+                                        <option>Indonesian</option>
+                                        <option>Brazilian</option>
+                                        <option>Canadian</option>
+                                      </select>
+                                  </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+      
+    </div>
+    <div class="clear"></div>
+</div>

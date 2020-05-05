@@ -1,0 +1,94 @@
+
+    <!-- <div class="mainheader" style="background: white;border:1px solid grey;height: 60px;box-sizing: border-box;  box-shadow: 5px 10px #f5f2f2;;">
+    <div class="nava1">
+        <nav class="navbar navbar-expand-sm nava">
+           
+            <a class="navbar-brand" href="#">
+                <span> <img src="../assets/img/logo.png" alt="logo"></span>
+            </a>
+            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                <li class="nav-item dropdown">
+                    <a class=" dropdown-toggle dropdown-item" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Username
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item active" href="#"><span class="usrname"
+                                >username</span><br>
+                            <span>23423423423</span></a>
+                        <a class="dropdown-item" routerLink="/drive/appointments">My Appointments</a>
+                        <a class="dropdown-item" routerLink="/drive/lab_tests">My Tests</a>
+                        <a class="dropdown-item" routerLink="/drive/orders">My Medicine Orders</a>
+                        <a class="dropdown-item" routerLink="/drive/records">My Medical Records</a>
+                        <a class="dropdown-item" routerLink="/drive/consultation">My Online Consultation</a>
+                        <a class="dropdown-item" routerLink="/drive/feedback">My Feedback</a>
+                        <a class="dropdown-item" routerLink="/drive/articles">My Articles</a>
+                        <a class="dropdown-item" routerLink="/drive/payments">My Payments</a>
+                        <a class="dropdown-item" routerLink="/edit-profile">View/Update Profile</a>
+                        <a class="dropdown-item" href="#">Settings</a>
+                        <a class="dropdown-item" href="#">Logout</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+
+                </li>
+            </ul>
+
+        </nav>
+    </div>
+</div> -->
+
+<div class="contain">
+<div class="header bg-light">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="row">
+                <div class="col-sm-2">
+                    <span class="driv"><b>Your Drive</b></span>
+                </div>
+                <div class="col-sm-2">
+                    <div class="userphoto">
+                        <img src="../assets/img/medium_thumbnail.png">
+                    </div>
+                    <div class="user">
+                        <span>User</span>
+                    </div>
+                </div>
+                <div class="col-sm-8">
+                    <div class="username">
+                        <span><strong>username</strong></span><br>
+                        <span>34234423423</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-3">
+        <div class="bg-light border-right" id="sidebar-wrapper">
+            <div class="list-group list-group-flush">
+                <a routerLink="/drive/records" class="list-group-item list-group-item-action bg-light">Medical
+                    Records</a>
+                <a routerLink="/drive/appointments" class="list-group-item list-group-item-action bg-light">
+                    Appointments</a>
+                <a routerLink="/drive/lab_tests" class="list-group-item list-group-item-action bg-light"> Tests</a>
+                <a routerLink="/drive/orders" class="list-group-item list-group-item-action bg-light"> Medicine Orders</a>
+                <a routerLink="/drive/consultation" class="list-group-item list-group-item-action bg-light"> Online
+                    Consultations</a>
+                <a routerLink="/drive/feedback" class="list-group-item list-group-item-action bg-light"> Feedback</a>
+                <a routerLink="/drive/articles" class="list-group-item list-group-item-action bg-light"> Articles</a>
+                <a routerLink="/drive/payments" class="list-group-item list-group-item-action bg-light"> Payments</a>
+                <a routerLink="/edit-profile" class="list-group-item list-group-item-action bg-light">View/Update
+                    Profile</a>
+                <a routerLink="#" class="list-group-item list-group-item-action bg-light">Logout</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-9">
+        <router-outlet></router-outlet>
+    </div>
+</div>
+</div>
+

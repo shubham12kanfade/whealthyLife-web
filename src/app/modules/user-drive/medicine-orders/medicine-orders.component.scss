@@ -1,0 +1,89 @@
+.app-container #sideBarAppContainer>div {
+    height: 100%;
+}
+.timeline-container-wrapper {
+    height: 100%;
+}
+.timeline-container {
+    background: #f0f0f5;
+    height: 100%;
+    width: 100%;
+}
+.timeline-container-header {
+    margin: 3px -15px 0 -43px;
+    background-color: #fff;
+    padding: 16px;
+    // display: -webkit-box;
+    // display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    // -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+    // -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    // -webkit-box-shadow: 0 1px 2px 0 rgba(0,0,0,.12);
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,.12);
+}
+
+.separator {
+    border-bottom: 1px solid #e0e0e5;
+    border-collapse: collapse;
+}
+.button.btn-positive {
+    color: #fff;
+    background-color: #14bef0;
+}
+.button {
+    padding: 6px 20px;
+    border-radius: 2px;
+    border: 1px solid #14bef0;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.text-center {
+    text-align: center;
+}
+.timeline-container .no-records {
+    overflow-y: scroll;
+    background: #fff;
+    // height: calc(100% - 73px);
+    height: 398px;
+    margin:  3px -15px 0 -43px;
+    // width: calc(100% - 3px);
+    // display: -webkit-box;
+    // display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    // -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    // -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+}
+.timeline-container .no-records .no-records-msg {
+    margin-top: 16px;
+}
+.heading-four, .heading-one, .heading-three, .heading-two, .heading-zero, .text, .text-small {
+    color: #414146;
+}
+
+.text, .text-small, body, p {
+    font-weight: 400;
+}
+.heading-four, .text, body, p {
+    font-size: 14px;
+    line-height: 20px;
+}   
+@media (max-width: 1199px) and (min-width: 992px){
+.hidden-md {
+    display: none !important;
+}
+}   
+.timeline-container .no-records .no-records-img img {
+    height: 110px;
+}
