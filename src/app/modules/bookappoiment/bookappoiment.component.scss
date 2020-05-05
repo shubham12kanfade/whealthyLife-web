@@ -1,3 +1,21 @@
+video{
+    opacity: 100;
+}
+.icon-set{
+    margin-left: 0px;
+    display:list-item;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+ 
+}
+.c-testimonial__review_star {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: flex-start;
+}
+
 /*! CSS Used from: Embedded */
 div,header,i,label,li,span,ul{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
 header{display:block;}
@@ -150,9 +168,9 @@ body{line-height:1;text-align:left;-webkit-font-smoothing:antialiased;-moz-osx-f
 .c-icon .tab-offer{display:flex;justify-content:center;}
 .tab-icon{font-size:20px;display:block;}
 .c-jumbo{background-color:#28328c;}
-.c-jumbo__banner{background:url(//www.wealthylifestatic.com/web-assets/home/assets/images/homepage.06859593240c3efd483fe48951cfe6ff.svg) top no-repeat;min-height:460px;background-attachment:fixed;background-position-y:60px;}
+.c-jumbo__banner{background:url(../../../assets/img/homepage.06859593240c3efd483fe48951cfe6ff.svg) top no-repeat !important;min-height:460px;background-attachment:fixed;background-position-y:60px;}
 .c-jumbo__header_container{padding-top:40px;}
-.c-jumbo__header{text-align:center;font-size:40px;color:#fff;font-weight:700;}
+.c-jumbo__header{text-align:center;font-size:40px;color:#fff;font-weight:700;}  
 .c-jumbo__subheading{font-size:24px;}
 .c-my-doctors{max-width:100%;padding:0 1em;padding-top:50px;text-align:center;}
 .c-omni-wrapper{width:785px;margin:0 auto;z-index:1;position:relative;}
