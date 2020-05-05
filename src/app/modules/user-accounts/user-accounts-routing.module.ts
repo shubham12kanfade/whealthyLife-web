@@ -7,11 +7,11 @@ import { AddEmailComponent } from './add-email/add-email.component';
 
 
 const routes: Routes = [
- 
-  {path:'edit-profile',component:UserAccountsComponent},
-  {path:'verify_number',component:NumberVerifyComponent},
-  {path:'add_email',component:AddEmailComponent},
-
+  {path:'edit-profile',component:UserAccountsComponent,
+  children:[
+              {path:'verify_number',component:NumberVerifyComponent},
+              {path:'add_email',component:AddEmailComponent},
+    ]},
 ];
   
 @NgModule({
