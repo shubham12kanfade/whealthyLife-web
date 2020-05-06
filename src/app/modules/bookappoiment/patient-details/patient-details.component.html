@@ -1,0 +1,161 @@
+<section class="hbg">
+    <div class="pt-5">
+        <div class="pure-g c-appointment-page">
+            <div class="pure-u-1-2">
+                <div>
+                    <div class="c-appointment-info u-round-corner u-b-shadow u-fill--white">
+                        <div class="c-appointment-info__row u-cushion u-title-font u-bold">In-clinic Appointment</div>
+                        <div class="u-cushion c-appointment-info__row">
+                            <div class="pure-g u-large-font u-spacer--small-bottom">
+                                <div class="pure-u-1-2"><i class="icon-ic_calendar"></i><span> On </span><span class="u-bold">May 04, 2020</span></div>
+                                <div class="pure-u-1-2 u-t-right"><i class="icon-ic_time"></i><span class="u-t-capitalize"> at </span><span class="u-bold">09:00 PM</span></div>
+                            </div>
+                            <div><a class="u-color--primary u-bold" href="https://www.practo.com/bangalore/doctor/regina-joseph-general-physician?practice_id=1267851&amp;open_slots=true">Change
+                                    Date &amp; Time</a></div>
+                        </div>
+                        <div class="c-appointment-info__doctor c-appointment-info__row u-cushion">
+                            <div class="c-doctor-info-card">
+                                <div class="u-d-inlineblock" style="height: 110px; width: 100px;"><img src="https://images1-fabric.practo.com/doctor/772828/dr-regina-joseph-5e31a041eb428.jpeg/thumbnail" data-qa-id="doctor_photo"></div>
+                                <div class="u-d-inlineblock u-valign-top u-cushion--horizontal u-grey_3-text c-doctor-info-card__right">
+                                    <div data-qa-id="doctor_name" class="u-large-font u-bold">Dr. Regina Joseph</div>
+                                    <div data-qa-id="doctor_qualifications"><span><span>MBBS</span></span><span><span>,
+                                            </span><span>MD - General Medicine</span></span>
+                                    </div>
+                                    <div data-qa-id="doctor_specializations"><span><span>General
+                                                Physician</span></span><span><span>, </span><span>General
+                                                Practitioner</span></span><span><span>, </span><span>Consultant
+                                                Physician</span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="c-appointment-info__practice c-appointment-info__row u-cushion">
+                            <div class="c-practice-info-card">
+                                <div class="u-d-inlineblock" style="height: 110px; width: 100px;"><img src="//www.practostatic.com/web-assets/appointment/images/default_clinic.60df7b39c2ae.png" data-qa-id="practice_photo"></div>
+                                <div class="u-d-inlineblock u-valign-top u-cushion--horizontal u-grey_3-text c-practice-info-card__right">
+                                    <div data-qa-id="practice_name" class="u-large-font u-bold">S R Clinic</div>
+                                    <div data-qa-id="practice_address">Basement, GRS Plaza ,Parangi Palya, HSR Layout, Sector 2, Bangalore</div>
+                                    <div data-qa-id="get_direction_link"><a class="u-color--primary u-bold" target="_blank" href="//maps.google.com/maps?f=d&amp;daddr=12.906617,77.64894(S%20R%20Clinic)&amp;hl=undefined">Get
+                                            Directions</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div><a class="u-color--primary u-bold" href="https://www.practo.com/search?results_type=doctor&amp;q=%5B%7B%22word%22%3A%22General%20Physician%22%2C%22autocompleted%22%3Atrue%2C%22category%22%3A%22subspeciality%22%7D%5D&amp;city=Bangalore">Go
+                            back to my results</a></div>
+                </div>
+            </div>
+            <div class="pure-u-1-2">
+                <div class="u-hide">
+                    <div class="u-v-h-center">
+                        <div class="dot--normal dot animate-dots"></div>
+                        <div class="dot--normal dot animate-dots"></div>
+                        <div class="dot--normal dot animate-dots"></div>
+                    </div>
+                </div>
+                <div class="">
+                    <div class="c-appointment-form-new">
+                        <div class="c-appointment-form-new__title">Patient Details</div>
+                        <div>
+                            <div class="c-patient-list__title">This appointment is for:</div>
+                            <div class="o-radio">
+                                <div class="u-spacer--vertical c-patient-list__container">
+                                    <div class="c-patient-list__item"><label class="o-radio__label">sunitdk11@gmail.com
+                                            <input type="radio"
+                                            (change)="handleChange($event)" 
+                                            [checked]="true"
+                                                name="patient_list" ><span
+                                                class="o-radio__checkmark"></span></label></div>
+                                    <div class="c-patient-list__item"><label class="o-radio__label">Someone Else
+                                        <input
+                                        (change)="handleChange2($event)" 
+                                                type="radio" name="patient_list"><span
+                                                class="o-radio__checkmark"></span></label></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="" *ngIf="email">
+                            <div class="u-spacer--medium-bottom u-bold inspectlet-sensitive">Please provide following information about sunitdk11@gmail.com:</div>
+                            <div class="u-spacer--medium-bottom">
+                                <div>
+                                    <div class="u-spacer--medium-vertical">
+                                        <div class="o-textbox ">
+                                            <div class="o-textbox__label">Full Name<span class="u-light-red-text">*</span></div><input type="text" value="sunitdk11@gmail.com" placeholder="Enter Your Full Name" class="inspectlet-sensitive">
+                                        </div>
+                                    </div>
+                                    <div class="u-spacer--medium-vertical">
+                                        <div class="o-textbox o-textbox--disabled">
+                                            <div class="o-textbox__label">Mobile<span class="u-light-red-text">*</span>
+                                            </div><input type="text" value="+918668206158" disabled="" class="inspectlet-sensitive"><i class="icon-ic_lock o-textbox__lock"></i>
+                                        </div>
+                                    </div>
+                                    <div class="u-spacer--medium-vertical">
+                                        <div class="o-textbox ">
+                                            <div class="o-textbox__label">Your Email</div><input type="text" value="" placeholder="Enter Your Email ID (Optional)" class="inspectlet-sensitive">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div *ngIf="!email">
+                            <div class="u-spacer--medium-bottom u-bold inspectlet-sensitive">Please provide following information:
+                            </div>
+                            <div class="u-spacer--medium-bottom">
+                                <div>
+                                    <div class="u-spacer--medium-vertical">
+                                        <div class="o-textbox ">
+                                            <div class="o-textbox__label">Patient's Full Name<span class="u-light-red-text">*</span></div><input type="text" value="" placeholder="Enter Patient's Full Name" class="inspectlet-sensitive">
+                                        </div>
+                                    </div>
+                                    <div class="u-spacer--medium-vertical">
+                                        <div class="o-textbox o-textbox--disabled">
+                                            <div class="o-textbox__label">Mobile<span class="u-light-red-text">*</span>
+                                            </div><input type="text" value="+918668206158" disabled="" class="inspectlet-sensitive"><i class="icon-ic_lock o-textbox__lock"></i>
+                                        </div>
+                                    </div>
+                                    <div class="u-spacer--medium-vertical">
+                                        <div class="o-textbox ">
+                                            <div class="o-textbox__label">Patient's Mobile<span class="u-light-red-text">*</span></div><input type="text" value="" placeholder="Enter Patient's Mobile Number" class="inspectlet-sensitive">
+                                        </div>
+                                    </div>
+                                    <div class="u-spacer--medium-vertical">
+                                        <div class="o-textbox ">
+                                            <div class="o-textbox__label">Patient's Email</div><input type="text" value="" placeholder="Enter Patient's Email ID (Optional)" class="inspectlet-sensitive">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="c-appointment-form-new__whatsapp">
+                            <div class="o-checkbox">
+                                <div>
+                                    <div><input type="checkbox" id="whatsapp" value="on"><label for="whatsapp"><i
+                                                class="o-checkbox__checkmark icon-ic_checkbox_selected_system o-checkbox__checkmark--checked"></i><span
+                                                class="o-checkbox__label"><span><img
+                                                        src="//www.practostatic.com/web-assets/appointment/images/whatsapp.28f67eade106.svg"
+                                                        height="24" class="c-appointment-form-new__whatsapp-logo"><span
+                                                        class="c-appointment-form-new__whatsapp-text">Get updates on
+                                                        WhatsApp number <span
+                                                            class="inspectlet-sensitive">+918668206158</span></span></span></span></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="c-appointment-form__button"><button class="c-btn--dark ">Confirm</button></div>
+                            <div class="u-smallest-font">
+                                <div class="u-spacer--medium-vertical">
+                                    <div class="pure-u-1-24">1.</div>
+                                    <div class="pure-u-23-24">Updates will be sent to <span class="inspectlet-sensitive">+918668206158</span></div>
+                                </div>
+                                <div class="u-spacer--medium-vertical"><span>By booking this appointment, you agree to
+                                        Practo’s</span><a href="/company/terms" target="_blank" class="u-t-link"> Terms
+                                        and Conditions. </a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
