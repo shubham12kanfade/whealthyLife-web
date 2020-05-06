@@ -26,7 +26,7 @@ const routes: Routes = [
 
   {path : 'bookcheckup', component:BookHealthCheckupsComponent},
 
-  {path : 'chatwithdoctor', component:ChatWithDoctorComponent}
+  {path : 'consult', loadChildren:() => import('./modules/chat-with-doctor/chat-with-doctor.module').then(ch => ch.ChatWithDoctorModule)},
 
 
 

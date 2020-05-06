@@ -5,11 +5,11 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { BookappoimentRoutingModule } from './bookappoiment-routing.module';
-import { ChatnowComponent } from './chatnow/chatnow.component';
+
 
 
 @NgModule({
-  declarations: [ChatnowComponent,BookappoimentComponent, PatientDetailsComponent],
+  declarations: [BookappoimentComponent, PatientDetailsComponent],
   imports: [
     CommonModule,
     BookappoimentRoutingModule,

@@ -16,6 +16,7 @@ import { HelpComponent } from './modules/help/help.component';
 import { BooktestsComponent } from './modules/booktests/booktests.component';
 import { HealthMedicineshealthComponent } from './modules/health-medicineshealth/health-medicineshealth.component';
 import { DoctorRegisterComponent } from './component/doctor-register/doctor-register.component';
+
 // import { DoctorsComponent } from './modules/doctors/doctors.component';
 
 
@@ -34,6 +35,7 @@ import { DoctorRegisterComponent } from './component/doctor-register/doctor-regi
     BooktestsComponent,
     HealthMedicineshealthComponent,
     DoctorRegisterComponent,
+    
     // DoctorsComponent,
    
 
