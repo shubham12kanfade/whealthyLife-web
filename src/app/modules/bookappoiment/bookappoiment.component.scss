@@ -1,6 +1,9 @@
 video{
     opacity: 100;
 }
+.person{
+display: flex;
+}
 .icon-set{
     margin-left: 0px;
     display:list-item;
@@ -12,7 +15,7 @@ video{
 .c-testimonial__review_star {
     display: flex;
     flex-direction: row;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: flex-start;
 }
 
