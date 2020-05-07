@@ -73,53 +73,53 @@
                     <div class="" *ngIf="email">
                         <div class="u-spacer--medium-bottom u-bold inspectlet-sensitive">Please provide following information about sunitdk11@gmail.com:</div>
                         <div class="u-spacer--medium-bottom">
-                            <div>
+                            <form [formGroup]="emailbook">
                                 <div class="u-spacer--medium-vertical">
                                     <div class="o-textbox ">
-                                        <div class="o-textbox__label">Full Name<span class="u-light-red-text">*</span></div><input type="text" value="sunitdk11@gmail.com" placeholder="Enter Your Full Name" class="inspectlet-sensitive">
+                                        <div class="o-textbox__label">Full Name<span class="u-light-red-text">*</span></div><input type="text" value="sunitdk11@gmail.com" placeholder="Enter Your Full Name" formControlName="fullname" class="inspectlet-sensitive">
                                     </div>
                                 </div>
                                 <div class="u-spacer--medium-vertical">
                                     <div class="o-textbox o-textbox--disabled">
                                         <div class="o-textbox__label">Mobile<span class="u-light-red-text">*</span>
-                                        </div><input type="text" value="+918668206158" disabled="" class="inspectlet-sensitive"><i class="icon-ic_lock o-textbox__lock"></i>
+                                        </div><input type="text" formControlName="mobile" class="inspectlet-sensitive"><i class="icon-ic_lock o-textbox__lock"></i>
                                     </div>
                                 </div>
                                 <div class="u-spacer--medium-vertical">
                                     <div class="o-textbox ">
-                                        <div class="o-textbox__label">Your Email</div><input type="text" value="" placeholder="Enter Your Email ID (Optional)" class="inspectlet-sensitive">
+                                        <div class="o-textbox__label">Your Email</div><input type="text" value="" formControlName="email" placeholder="Enter Your Email ID (Optional)" class="inspectlet-sensitive">
                                     </div>
                                 </div>
-                            </div>
+                            </form>
                         </div>
                     </div>
                     <div *ngIf="!email">
                         <div class="u-spacer--medium-bottom u-bold inspectlet-sensitive">Please provide following information:
                         </div>
                         <div class="u-spacer--medium-bottom">
-                            <div>
+                            <form [formGroup]="elsebook">
                                 <div class="u-spacer--medium-vertical">
                                     <div class="o-textbox ">
-                                        <div class="o-textbox__label">Patient's Full Name<span class="u-light-red-text">*</span></div><input type="text" value="" placeholder="Enter Patient's Full Name" class="inspectlet-sensitive">
+                                        <div class="o-textbox__label">Patient's Full Name<span class="u-light-red-text">*</span></div><input type="text" value="" placeholder="Enter Patient's Full Name" formControlName="fullname" class="inspectlet-sensitive">
                                     </div>
                                 </div>
                                 <div class="u-spacer--medium-vertical">
                                     <div class="o-textbox o-textbox--disabled">
                                         <div class="o-textbox__label">Mobile<span class="u-light-red-text">*</span>
-                                        </div><input type="text" value="+918668206158" disabled="" class="inspectlet-sensitive"><i class="icon-ic_lock o-textbox__lock"></i>
+                                        </div><input type="text" formControlName="mobile" class="inspectlet-sensitive"><i class="icon-ic_lock o-textbox__lock"></i>
                                     </div>
                                 </div>
                                 <div class="u-spacer--medium-vertical">
                                     <div class="o-textbox ">
-                                        <div class="o-textbox__label">Patient's Mobile<span class="u-light-red-text">*</span></div><input type="text" value="" placeholder="Enter Patient's Mobile Number" class="inspectlet-sensitive">
+                                        <div class="o-textbox__label">Patient's Mobile<span class="u-light-red-text">*</span></div><input type="text" value="" formControlName="patientmobile" placeholder="Enter Patient's Mobile Number" class="inspectlet-sensitive">
                                     </div>
                                 </div>
                                 <div class="u-spacer--medium-vertical">
                                     <div class="o-textbox ">
-                                        <div class="o-textbox__label">Patient's Email</div><input type="text" value="" placeholder="Enter Patient's Email ID (Optional)" class="inspectlet-sensitive">
+                                        <div class="o-textbox__label">Patient's Email</div><input type="text" placeholder="Enter Patient's Email ID (Optional)" formControlName="patientemail" class="inspectlet-sensitive">
                                     </div>
                                 </div>
-                            </div>
+                            </form>
                         </div>
                     </div>
                     <div class="c-appointment-form-new__whatsapp">

@@ -1,312 +1,1262 @@
 /*! CSS Used from: https://static.whealthylife.com/css/common.min.44fb84bfc38cd9fbac218e81ee987cca.css */
-img{max-width:100%;vertical-align:middle;border:0;}
-*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
-:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
-/*! CSS Used from: https://static.whealthylife.com/css/combined.min.49d225951e5c21e9660fb241a82b6cd7.css */
-img{max-width:100%;vertical-align:middle;border:0;}
-::-webkit-input-placeholder{color:#999;vertical-align:bottom;}
-:-moz-placeholder{color:#999;vertical-align:bottom;}
-::-moz-placeholder{color:#999;vertical-align:bottom;}
-:-ms-input-placeholder{color:#999;vertical-align:bottom;}
-/*! CSS Used from: Embedded */
-*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
-:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
-/*! CSS Used from: Embedded */
-.style__banner___3u_XJ{position:relative;width:100%;}
-.style__banner___3u_XJ img{width:100%;min-height:186px;}
-.style__main-heading___Zv368{position:absolute;top:30%;left:0;right:0;margin:0 auto;text-align:center;font-size:48px;font-weight:900;color:#fff;}
-@media (max-width:1028px){
-.style__main-heading___Zv368{font-size:40px;}
-}
-@media (max-width:991px){
-.style__main-heading___Zv368{font-size:32px;}
-}
-@media (max-width:767px){
-.style__main-heading___Zv368{font-size:28px;top:21%;}
-}
-@media (max-width:500px){
-.style__main-heading___Zv368{font-size:24px;}
-.style__main-heading___Zv368{top:20%;}
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+    border: 0;
 }
 
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:after,
+:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+/*! CSS Used from: https://static.whealthylife.com/css/combined.min.49d225951e5c21e9660fb241a82b6cd7.css */
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+    border: 0;
+}
+
+::-webkit-input-placeholder {
+    color: #999;
+    vertical-align: bottom;
+}
+
+:-moz-placeholder {
+    color: #999;
+    vertical-align: bottom;
+}
+
+::-moz-placeholder {
+    color: #999;
+    vertical-align: bottom;
+}
+
+:-ms-input-placeholder {
+    color: #999;
+    vertical-align: bottom;
+}
+
+
+/*! CSS Used from: Embedded */
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:after,
+:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+/*! CSS Used from: Embedded */
+
+.style__banner___3u_XJ {
+    position: relative;
+    width: 100%;
+}
+
+.style__banner___3u_XJ img {
+    width: 100%;
+    min-height: 186px;
+}
+
+.style__main-heading___Zv368 {
+    position: absolute;
+    top: 30%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 48px;
+    font-weight: 900;
+    color: #fff;
+}
+
+@media (max-width:1028px) {
+    .style__main-heading___Zv368 {
+        font-size: 40px;
+    }
+}
+
+@media (max-width:991px) {
+    .style__main-heading___Zv368 {
+        font-size: 32px;
+    }
+}
+
+@media (max-width:767px) {
+    .style__main-heading___Zv368 {
+        font-size: 28px;
+        top: 21%;
+    }
+}
+
+@media (max-width:500px) {
+    .style__main-heading___Zv368 {
+        font-size: 24px;
+    }
+    .style__main-heading___Zv368 {
+        top: 20%;
+    }
+}
 
 
 /*! CSS Used from: https://static.whealthylife.com/css/common.min.44fb84bfc38cd9fbac218e81ee987cca.css */
-a,a:visited{text-decoration:none;color:#ff6f61;}
-a:focus,a:hover{color:#ff6f61;text-decoration:underline;}
-img{max-width:100%;vertical-align:middle;border:0;}
-.text-center{text-align:center;}
-.row{margin-top:10px;}
-.row:after{display:table;content:"";clear:both;}
-a{background:0 0;}
-a:active,a:hover{outline:0;}
-*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
-:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
-.row{margin-left:-15px;margin-right:-15px;}
-.col-sm-3,.col-xs-12{position:relative;min-height:1px;padding-left:15px;padding-right:15px;}
-.col-xs-12{float:left;}
-.col-xs-12{width:100%;}
-@media (min-width:768px){
-.col-sm-3{float:left;}
-.col-sm-3{width:25%;}
+
+a,
+a:visited {
+    text-decoration: none;
+    color: #ff6f61;
 }
+
+a:focus,
+a:hover {
+    color: #ff6f61;
+    text-decoration: underline;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+    border: 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.row {
+    margin-top: 10px;
+}
+
+.row:after {
+    display: table;
+    content: "";
+    clear: both;
+}
+
+a {
+    background: 0 0;
+}
+
+a:active,
+a:hover {
+    outline: 0;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:after,
+:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.row {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.col-sm-3,
+.col-xs-12 {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.col-xs-12 {
+    float: left;
+}
+
+.col-xs-12 {
+    width: 100%;
+}
+
+@media (min-width:768px) {
+    .col-sm-3 {
+        float: left;
+    }
+    .col-sm-3 {
+        width: 25%;
+    }
+}
+
+
 /*! CSS Used from: https://static.whealthylife.com/css/combined.min.49d225951e5c21e9660fb241a82b6cd7.css */
-a,a:visited{text-decoration:none;color:#ff6f61;}
-a:focus,a:hover{color:#ff6f61;text-decoration:underline;}
-img{max-width:100%;vertical-align:middle;border:0;}
-.text-center{text-align:center;}
-.row{margin-top:10px;}
-.row:after{display:table;content:"";clear:both;}
-::-webkit-input-placeholder{color:#999;vertical-align:bottom;}
-:-moz-placeholder{color:#999;vertical-align:bottom;}
-::-moz-placeholder{color:#999;vertical-align:bottom;}
-:-ms-input-placeholder{color:#999;vertical-align:bottom;}
-a:not(.button-text){color:#ff6f61!important;}
-a:not(.button-text):hover{color:#ff6f61!important;}
-a:hover{text-decoration:none;cursor:pointer;}
-/*! CSS Used from: Embedded */
-a{background:0 0;}
-a:active,a:hover{outline:0;}
-*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
-:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
-.row{margin-left:-15px;margin-right:-15px;}
-.col-sm-3,.col-xs-12{position:relative;min-height:1px;padding-left:15px;padding-right:15px;}
-.col-xs-12{float:left;}
-.col-xs-12{width:100%;}
-@media (min-width:768px){
-.col-sm-3{float:left;}
-.col-sm-3{width:25%;}
+
+a,
+a:visited {
+    text-decoration: none;
+    color: #ff6f61;
 }
-/*! CSS Used from: Embedded */
-.style__aboutus-content___Y9zGF{background-color:rgba(2,76,104,.02);font-size:16px;color:#212121;max-width:1480px;}
-.style__about___2rZsm{margin:0 auto;max-width:1028px;padding:30px 0;}
-.style__heading___ME_M_{font-size:32px;font-weight:700;text-align:center;margin:20px 0;}
-.style__sub-title___3QnWO{font-size:16px;margin:0 20px;}
-.style__list___1M28j .style__sub-title___3QnWO{margin:0;}
-.style__list___1M28j{margin-top:30px;}
-.style__list___1M28j{text-align:center;}
-.style__item-image___2ujoa{max-width:128px;background-color:rgba(2,76,104,.02);margin:auto;border-radius:50%;width:50px;height:50px;}
-.style__item-image___2ujoa img{margin:auto;display:block;}
-.style__item-info___1vsjr{width:100%;display:block;padding-left:0;margin-top:10px;}
-.style__name___10Jjn{font-size:24px;font-weight:700;}
-.style__about___2rZsm .style__f32___1ToRb{font-size:32px;color:#212121;margin-bottom:51px;}
-.style__view-policy___PKIfz{font-size:16px;}
-.style__free-text-2___3Kmvs{margin:40px 17px;font-size:16px;font-weight:400;line-height:1.5;}
-.style__free-text-2___3Kmvs{font-style:normal;font-stretch:normal;letter-spacing:normal;text-align:center;color:#212121;}
-.style__about___2rZsm{max-width:1144px;}
-@media (max-width:1280px){
-.style__heading___ME_M_{font-size:28px;}
-.style__sub-title___3QnWO{font-size:16px;}
+
+a:focus,
+a:hover {
+    color: #ff6f61;
+    text-decoration: underline;
 }
-@media (max-width:1028px){
-.style__heading___ME_M_{font-size:26px;}
-.style__name___10Jjn{font-size:20px;}
-.style__sub-title___3QnWO{font-size:14px;}
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+    border: 0;
 }
-@media (max-width:767px){
-.style__heading___ME_M_{font-size:24px;}
-.style__name___10Jjn{font-size:16px;}
-.style__list___1M28j{margin-top:30px;}
-.style__list-item___31SDt{margin:20px 0;}
+
+.text-center {
+    text-align: center;
 }
-@media (max-width:500px){
-.style__aboutus-content___Y9zGF .style__about___2rZsm .style__f32___1ToRb{font-size:14px!important;margin-bottom:0;font-size:14px;color:#212121;margin-left:50px;margin-right:66px;}
-.style__aboutus-content___Y9zGF .style__about___2rZsm .style__heading___ME_M_{margin:0;}
-.style__item-info___1vsjr .style__name___10Jjn{font-size:20px;}
-.style__item-info___1vsjr .style__sub-title___3QnWO{font-size:14px;}
+
+.row {
+    margin-top: 10px;
 }
-@media (max-width:320px){
-.style__item-info___1vsjr .style__name___10Jjn{font-size:14px;}
+
+.row:after {
+    display: table;
+    content: "";
+    clear: both;
+}
+
+::-webkit-input-placeholder {
+    color: #999;
+    vertical-align: bottom;
+}
+
+:-moz-placeholder {
+    color: #999;
+    vertical-align: bottom;
+}
+
+::-moz-placeholder {
+    color: #999;
+    vertical-align: bottom;
+}
+
+:-ms-input-placeholder {
+    color: #999;
+    vertical-align: bottom;
+}
+
+a:not(.button-text) {
+    color: #ff6f61!important;
+}
+
+a:not(.button-text):hover {
+    color: #ff6f61!important;
+}
+
+a:hover {
+    text-decoration: none;
+    cursor: pointer;
 }
 
 
+/*! CSS Used from: Embedded */
+
+a {
+    background: 0 0;
+}
+
+a:active,
+a:hover {
+    outline: 0;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:after,
+:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.row {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.col-sm-3,
+.col-xs-12 {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.col-xs-12 {
+    float: left;
+}
+
+.col-xs-12 {
+    width: 100%;
+}
+
+@media (min-width:768px) {
+    .col-sm-3 {
+        float: left;
+    }
+    .col-sm-3 {
+        width: 25%;
+    }
+}
+
+
+/*! CSS Used from: Embedded */
+
+.style__aboutus-content___Y9zGF {
+    background-color: rgba(2, 76, 104, .02);
+    font-size: 16px;
+    color: #212121;
+    max-width: 1480px;
+}
+
+.style__about___2rZsm {
+    margin: 0 auto;
+    max-width: 1028px;
+    padding: 30px 0;
+}
+
+.style__heading___ME_M_ {
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.style__sub-title___3QnWO {
+    font-size: 16px;
+    margin: 0 20px;
+}
+
+.style__list___1M28j .style__sub-title___3QnWO {
+    margin: 0;
+}
+
+.style__list___1M28j {
+    margin-top: 30px;
+}
+
+.style__list___1M28j {
+    text-align: center;
+}
+
+.style__item-image___2ujoa {
+    max-width: 128px;
+    background-color: rgba(2, 76, 104, .02);
+    margin: auto;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.style__item-image___2ujoa img {
+    margin: auto;
+    display: block;
+}
+
+.style__item-info___1vsjr {
+    width: 100%;
+    display: block;
+    padding-left: 0;
+    margin-top: 10px;
+}
+
+.style__name___10Jjn {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.style__about___2rZsm .style__f32___1ToRb {
+    font-size: 32px;
+    color: #212121;
+    margin-bottom: 51px;
+}
+
+.style__view-policy___PKIfz {
+    font-size: 16px;
+}
+
+.style__free-text-2___3Kmvs {
+    margin: 40px 17px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    width: 100%;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #212121;
+}
+
+.style__about___2rZsm {
+    max-width: 1144px;
+}
+
+@media (max-width:1280px) {
+    .style__heading___ME_M_ {
+        font-size: 28px;
+    }
+    .style__sub-title___3QnWO {
+        font-size: 16px;
+    }
+}
+
+@media (max-width:1028px) {
+    .style__heading___ME_M_ {
+        font-size: 26px;
+    }
+    .style__name___10Jjn {
+        font-size: 20px;
+    }
+    .style__sub-title___3QnWO {
+        font-size: 14px;
+    }
+}
+
+@media (max-width:767px) {
+    .style__heading___ME_M_ {
+        font-size: 24px;
+    }
+    .style__name___10Jjn {
+        font-size: 16px;
+    }
+    .style__list___1M28j {
+        margin-top: 30px;
+    }
+    .style__list-item___31SDt {
+        margin: 20px 0;
+    }
+}
+
+@media (max-width:500px) {
+    .style__aboutus-content___Y9zGF .style__about___2rZsm .style__f32___1ToRb {
+        font-size: 14px!important;
+        margin-bottom: 0;
+        font-size: 14px;
+        color: #212121;
+        margin-left: 50px;
+        margin-right: 66px;
+    }
+    .style__aboutus-content___Y9zGF .style__about___2rZsm .style__heading___ME_M_ {
+        margin: 0;
+    }
+    .style__item-info___1vsjr .style__name___10Jjn {
+        font-size: 20px;
+    }
+    .style__item-info___1vsjr .style__sub-title___3QnWO {
+        font-size: 14px;
+    }
+}
+
+@media (max-width:320px) {
+    .style__item-info___1vsjr .style__name___10Jjn {
+        font-size: 14px;
+    }
+}
 
 
 /*! CSS Used from: https://static.whealthylife.com/css/common.min.44fb84bfc38cd9fbac218e81ee987cca.css */
-a,a:visited{text-decoration:none;color:#ff6f61;}
-a:focus,a:hover{color:#ff6f61;text-decoration:underline;}
-img{max-width:100%;vertical-align:middle;border:0;}
-.text-center{text-align:center;}
-.row{margin-top:10px;}
-.row:after{display:table;content:"";clear:both;}
-a{background:0 0;}
-a:active,a:hover{outline:0;}
-*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
-:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
-.row{margin-left:-15px;margin-right:-15px;}
-.col-md-4,.col-md-5,.col-sm-4,.col-sm-5,.col-xs-12,.col-xs-6{position:relative;min-height:1px;padding-left:15px;padding-right:15px;}
-.col-xs-12,.col-xs-6{float:left;}
-.col-xs-12{width:100%;}
-.col-xs-6{width:50%;}
-@media (min-width:768px){
-.col-sm-4,.col-sm-5{float:left;}
-.col-sm-5{width:41.66666667%;}
-.col-sm-4{width:33.33333333%;}
-}
-@media (min-width:992px){
-.col-md-4,.col-md-5{float:left;}
-.col-md-5{width:41.66666667%;}
-.col-md-4{width:33.33333333%;}
-}
-/*! CSS Used from: https://static.whealthylife.com/css/combined.min.49d225951e5c21e9660fb241a82b6cd7.css */
-a,a:visited{text-decoration:none;color:#ff6f61;}
-a:focus,a:hover{color:#ff6f61;text-decoration:underline;}
-img{max-width:100%;vertical-align:middle;border:0;}
-.text-center{text-align:center;}
-.row{margin-top:10px;}
-.row:after{display:table;content:"";clear:both;}
-::-webkit-input-placeholder{color:#999;vertical-align:bottom;}
-:-moz-placeholder{color:#999;vertical-align:bottom;}
-::-moz-placeholder{color:#999;vertical-align:bottom;}
-:-ms-input-placeholder{color:#999;vertical-align:bottom;}
-a:not(.button-text){color:#ff6f61!important;}
-a:not(.button-text):hover{color:#ff6f61!important;}
-a:hover{text-decoration:none;cursor:pointer;}
-/*! CSS Used from: Embedded */
-a{background:0 0;}
-a:active,a:hover{outline:0;}
-*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
-:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
-.row{margin-left:-15px;margin-right:-15px;}
-.col-md-4,.col-md-5,.col-sm-4,.col-sm-5,.col-xs-12,.col-xs-6{position:relative;min-height:1px;padding-left:15px;padding-right:15px;}
-.col-xs-12,.col-xs-6{float:left;}
-.col-xs-12{width:100%;}
-.col-xs-6{width:50%;}
-@media (min-width:768px){
-.col-sm-4,.col-sm-5{float:left;}
-.col-sm-5{width:41.66666667%;}
-.col-sm-4{width:33.33333333%;}
-}
-@media (min-width:992px){
-.col-md-4,.col-md-5{float:left;}
-.col-md-5{width:41.66666667%;}
-.col-md-4{width:33.33333333%;}
-}
-/*! CSS Used from: Embedded */
-div[class^="style__social"]{display:none!important;}
-/*! CSS Used from: Embedded */
-.style__leadership___MVBmF{margin:50px auto;max-width:1028px;color:#212121;}
-.style__heading___ME_M_{font-size:32px;font-weight:700;text-align:center;margin:20px 0;}
-.style__sub-title___3QnWO{font-size:16px;margin:0 20px;}
-.style__list___1M28j .style__sub-title___3QnWO{margin:0;}
-.style__list___1M28j{margin-top:30px;}
-.style__list___1M28j{text-align:center;}
-.style__item-image-2___2mb8H{max-width:128px;background-color:rgba(2,76,104,.02);margin:auto;border-radius:50%;width:128px;height:128px;}
-.style__item-image-2___2mb8H img{margin:auto;display:block;}
-.style__item-info___1vsjr{width:100%;display:block;padding-left:0;margin-top:10px;}
-.style__name___10Jjn{font-size:24px;font-weight:700;}
-.style__social-links___nAIjA div{background-repeat:no-repeat;display:inline-block;margin:5px;vertical-align:middle;}
-@media (max-width:1280px){
-.style__heading___ME_M_{font-size:28px;}
-.style__sub-title___3QnWO{font-size:16px;}
-}
-@media (max-width:1028px){
-.style__heading___ME_M_{font-size:26px;}
-.style__name___10Jjn{font-size:20px;}
-.style__sub-title___3QnWO{font-size:14px;}
-}
-@media (max-width:767px){
-.style__heading___ME_M_{font-size:24px;}
-.style__name___10Jjn{font-size:16px;}
-.style__list___1M28j{margin-top:30px;}
-.style__list-item___31SDt{margin:20px 0;}
-}
-@media (max-width:500px){
-.style__item-image-2___2mb8H{width:58px;height:58px;}
-.style__item-info___1vsjr .style__name___10Jjn{font-size:20px;}
-.style__item-info___1vsjr .style__sub-title___3QnWO{font-size:14px;}
-.style__linkedin___HM79c,.style__twitter-fade___20qbe,.style__twitter___3ooSY{height:15px;width:16px;background-size:contain;}
-}
-@media (max-width:320px){
-.style__item-info___1vsjr .style__name___10Jjn{font-size:14px;}
+
+a,
+a:visited {
+    text-decoration: none;
+    color: #ff6f61;
 }
 
-/*! CSS Used from: https://static.whealthylife.com/css/common.min.44fb84bfc38cd9fbac218e81ee987cca.css */
-a,a:visited{text-decoration:none;color:#ff6f61;}
-a:focus,a:hover{color:#ff6f61;text-decoration:underline;}
-.text-center{text-align:center;}
-.row{margin-top:10px;}
-.row:after{display:table;content:"";clear:both;}
-a{background:0 0;}
-a:active,a:hover{outline:0;}
-b{font-weight:700;}
-*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
-:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
-.row{margin-left:-15px;margin-right:-15px;}
-.col-sm-6,.col-xs-12{position:relative;min-height:1px;padding-left:15px;padding-right:15px;}
-.col-xs-12{float:left;}
-.col-xs-12{width:100%;}
-@media (min-width:768px){
-.col-sm-6{float:left;}
-.col-sm-6{width:50%;}
+a:focus,
+a:hover {
+    color: #ff6f61;
+    text-decoration: underline;
 }
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+    border: 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.row {
+    margin-top: 10px;
+}
+
+.row:after {
+    display: table;
+    content: "";
+    clear: both;
+}
+
+a {
+    background: 0 0;
+}
+
+a:active,
+a:hover {
+    outline: 0;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:after,
+:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.row {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.col-md-4,
+.col-md-5,
+.col-sm-4,
+.col-sm-5,
+.col-xs-12,
+.col-xs-6 {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.col-xs-12,
+.col-xs-6 {
+    float: left;
+}
+
+.col-xs-12 {
+    width: 100%;
+}
+
+.col-xs-6 {
+    width: 50%;
+}
+
+@media (min-width:768px) {
+    .col-sm-4,
+    .col-sm-5 {
+        float: left;
+    }
+    .col-sm-5 {
+        width: 41.66666667%;
+    }
+    .col-sm-4 {
+        width: 33.33333333%;
+    }
+}
+
+@media (min-width:992px) {
+    .col-md-4,
+    .col-md-5 {
+        float: left;
+    }
+    .col-md-5 {
+        width: 41.66666667%;
+    }
+    .col-md-4 {
+        width: 33.33333333%;
+    }
+}
+
+
 /*! CSS Used from: https://static.whealthylife.com/css/combined.min.49d225951e5c21e9660fb241a82b6cd7.css */
-a,a:visited{text-decoration:none;color:#ff6f61;}
-a:focus,a:hover{color:#ff6f61;text-decoration:underline;}
-.text-center{text-align:center;}
-.row{margin-top:10px;}
-.row:after{display:table;content:"";clear:both;}
-::-webkit-input-placeholder{color:#999;vertical-align:bottom;}
-:-moz-placeholder{color:#999;vertical-align:bottom;}
-::-moz-placeholder{color:#999;vertical-align:bottom;}
-:-ms-input-placeholder{color:#999;vertical-align:bottom;}
-a:not(.button-text){color:#ff6f61!important;}
-a:not(.button-text):hover{color:#ff6f61!important;}
-a:hover{text-decoration:none;cursor:pointer;}
+
+a,
+a:visited {
+    text-decoration: none;
+    color: #ff6f61;
+}
+
+a:focus,
+a:hover {
+    color: #ff6f61;
+    text-decoration: underline;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+    border: 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.row {
+    margin-top: 10px;
+}
+
+.row:after {
+    display: table;
+    content: "";
+    clear: both;
+}
+
+::-webkit-input-placeholder {
+    color: #999;
+    vertical-align: bottom;
+}
+
+:-moz-placeholder {
+    color: #999;
+    vertical-align: bottom;
+}
+
+::-moz-placeholder {
+    color: #999;
+    vertical-align: bottom;
+}
+
+:-ms-input-placeholder {
+    color: #999;
+    vertical-align: bottom;
+}
+
+a:not(.button-text) {
+    color: #ff6f61!important;
+}
+
+a:not(.button-text):hover {
+    color: #ff6f61!important;
+}
+
+a:hover {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
 /*! CSS Used from: Embedded */
-a{background:0 0;}
-a:active,a:hover{outline:0;}
-b{font-weight:700;}
-*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
-:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
-.row{margin-left:-15px;margin-right:-15px;}
-.col-sm-6,.col-xs-12{position:relative;min-height:1px;padding-left:15px;padding-right:15px;}
-.col-xs-12{float:left;}
-.col-xs-12{width:100%;}
-@media (min-width:768px){
-.col-sm-6{float:left;}
-.col-sm-6{width:50%;}
+
+a {
+    background: 0 0;
 }
+
+a:active,
+a:hover {
+    outline: 0;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:after,
+:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.row {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.col-md-4,
+.col-md-5,
+.col-sm-4,
+.col-sm-5,
+.col-xs-12,
+.col-xs-6 {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.col-xs-12,
+.col-xs-6 {
+    float: left;
+}
+
+.col-xs-12 {
+    width: 100%;
+}
+
+.col-xs-6 {
+    width: 50%;
+}
+
+@media (min-width:768px) {
+    .col-sm-4,
+    .col-sm-5 {
+        float: left;
+    }
+    .col-sm-5 {
+        width: 41.66666667%;
+    }
+    .col-sm-4 {
+        width: 33.33333333%;
+    }
+}
+
+@media (min-width:992px) {
+    .col-md-4,
+    .col-md-5 {
+        float: left;
+    }
+    .col-md-5 {
+        width: 41.66666667%;
+    }
+    .col-md-4 {
+        width: 33.33333333%;
+    }
+}
+
+
 /*! CSS Used from: Embedded */
-.style__contact___oVQTh{text-align:left;}
-.style__contact___oVQTh{position:absolute;top:0;left:0;right:0;margin:30px 20px;text-align:center;color:#fff;}
-.style__heading___ME_M_{font-size:32px;font-weight:700;text-align:center;margin:20px 0;}
-.style__sub-title___3QnWO{font-size:16px;margin:0 20px;}
-.style__contact___oVQTh .style__sub-title___3QnWO{font-size:24px;text-align:center;color:#fff;font-weight:700;}
-.style__contact___oVQTh .style__sub-title___3QnWO .style__mail-address___3bvJN{color:#fff!important;}
-.style__address-block___1rn1r{width:575px;height:200px;opacity:.73;border-radius:5px;background-color:#032430;padding:23px 35px;border:1px solid #fff;}
-.style__address-block___1rn1r .style__heading___ME_M_{text-align:left;margin:0 20px;}
-.style__address-block___1rn1r .style__sub-title___3QnWO{text-align:left;margin-top:12px;}
-.style__mar50___1j0lJ{margin-top:50px;}
-.style__mar50___1j0lJ .style__address-block___1rn1r:first-child{margin:0 auto;}
-@media (max-width:1280px){
-.style__heading___ME_M_{font-size:28px;}
-.style__sub-title___3QnWO{font-size:16px;}
-.style__contact___oVQTh .style__heading___ME_M_{font-size:24px;}
-.style__address-block___1rn1r{height:220px;}
+
+div[class^="style__social"] {
+    display: none!important;
 }
-@media (max-width:1028px){
-.style__heading___ME_M_{font-size:26px;}
-.style__sub-title___3QnWO{font-size:14px;}
-.style__address-block___1rn1r{width:auto;}
+
+
+/*! CSS Used from: Embedded */
+
+.style__leadership___MVBmF {
+    margin: 50px auto;
+    max-width: 1028px;
+    color: #212121;
 }
-@media (max-width:991px){
-.style__contact___oVQTh .style__heading___ME_M_{font-size:20px;}
-.style__address-block___1rn1r{width:auto;height:240px;}
+
+.style__heading___ME_M_ {
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    margin: 20px 0;
 }
-@media (max-width:767px){
-.style__heading___ME_M_{font-size:24px;}
-.style__contact___oVQTh .style__heading___ME_M_{font-size:16px;}
-.style__aboutus-content___Y9zGF .style__banner___3u_XJ .style__contact___oVQTh .style__heading___ME_M_{font-size:16px;}
+
+.style__sub-title___3QnWO {
+    font-size: 16px;
+    margin: 0 20px;
 }
-@media (max-width:500px){
-.style__contact___oVQTh{margin:10px;}
-.style__contact___oVQTh>.style__heading___ME_M_{margin:10px 0;}
-.style__aboutus-content___Y9zGF .style__contact___oVQTh .style__heading___ME_M_{font-size:32px;}
-.style__aboutus-content___Y9zGF .style__contact___oVQTh .style__sub-title___3QnWO{font-size:16px;}
-.style__aboutus-content___Y9zGF .style__banner___3u_XJ .style__contact___oVQTh .style__heading___ME_M_{font-size:16px;}
-.style__aboutus-content___Y9zGF .style__banner___3u_XJ .style__contact___oVQTh .style__sub-title___3QnWO{font-size:14px;}
-.style__aboutus-content___Y9zGF .style__banner___3u_XJ .style__contact___oVQTh .style__address-block___1rn1r{width:auto;height:auto;opacity:.73;border-radius:5px;background-color:#032430;padding:23px 35px;border:1px solid #fff;margin-bottom:8px;}
-.style__aboutus-content___Y9zGF .style__banner___3u_XJ .style__contact___oVQTh .style__address-block___1rn1r .style__heading___ME_M_{text-align:center;margin:0 20px;}
-.style__aboutus-content___Y9zGF .style__banner___3u_XJ .style__contact___oVQTh .style__address-block___1rn1r .style__sub-title___3QnWO{text-align:center;margin-top:12px;}
+
+.style__list___1M28j .style__sub-title___3QnWO {
+    margin: 0;
+}
+
+.style__list___1M28j {
+    margin-top: 30px;
+}
+
+.style__list___1M28j {
+    text-align: center;
+}
+
+.style__item-image-2___2mb8H {
+    max-width: 128px;
+    background-color: rgba(2, 76, 104, .02);
+    margin: auto;
+    border-radius: 50%;
+    width: 128px;
+    height: 128px;
+}
+
+.style__item-image-2___2mb8H img {
+    margin: auto;
+    display: block;
+}
+
+.style__item-info___1vsjr {
+    width: 100%;
+    display: block;
+    padding-left: 0;
+    margin-top: 10px;
+}
+
+.style__name___10Jjn {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.style__social-links___nAIjA div {
+    background-repeat: no-repeat;
+    display: inline-block;
+    margin: 5px;
+    vertical-align: middle;
+}
+
+@media (max-width:1280px) {
+    .style__heading___ME_M_ {
+        font-size: 28px;
+    }
+    .style__sub-title___3QnWO {
+        font-size: 16px;
+    }
+}
+
+@media (max-width:1028px) {
+    .style__heading___ME_M_ {
+        font-size: 26px;
+    }
+    .style__name___10Jjn {
+        font-size: 20px;
+    }
+    .style__sub-title___3QnWO {
+        font-size: 14px;
+    }
+}
+
+@media (max-width:767px) {
+    .style__heading___ME_M_ {
+        font-size: 24px;
+    }
+    .style__name___10Jjn {
+        font-size: 16px;
+    }
+    .style__list___1M28j {
+        margin-top: 30px;
+    }
+    .style__list-item___31SDt {
+        margin: 20px 0;
+    }
+}
+
+@media (max-width:500px) {
+    .style__item-image-2___2mb8H {
+        width: 58px;
+        height: 58px;
+    }
+    .style__item-info___1vsjr .style__name___10Jjn {
+        font-size: 20px;
+    }
+    .style__item-info___1vsjr .style__sub-title___3QnWO {
+        font-size: 14px;
+    }
+    .style__linkedin___HM79c,
+    .style__twitter-fade___20qbe,
+    .style__twitter___3ooSY {
+        height: 15px;
+        width: 16px;
+        background-size: contain;
+    }
+}
+
+@media (max-width:320px) {
+    .style__item-info___1vsjr .style__name___10Jjn {
+        font-size: 14px;
+    }
+}
+
+
+/*! CSS Used from: https://static.whealthylife.com/css/common.min.44fb84bfc38cd9fbac218e81ee987cca.css */
+
+a,
+a:visited {
+    text-decoration: none;
+    color: #ff6f61;
+}
+
+a:focus,
+a:hover {
+    color: #ff6f61;
+    text-decoration: underline;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.row {
+    margin-top: 10px;
+}
+
+.row:after {
+    display: table;
+    content: "";
+    clear: both;
+}
+
+a {
+    background: 0 0;
+}
+
+a:active,
+a:hover {
+    outline: 0;
+}
+
+b {
+    font-weight: 700;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:after,
+:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.row {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.col-sm-6,
+.col-xs-12 {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.col-xs-12 {
+    float: left;
+}
+
+.col-xs-12 {
+    width: 100%;
+}
+
+@media (min-width:768px) {
+    .col-sm-6 {
+        float: left;
+    }
+    .col-sm-6 {
+        width: 50%;
+    }
+}
+
+
+/*! CSS Used from: https://static.whealthylife.com/css/combined.min.49d225951e5c21e9660fb241a82b6cd7.css */
+
+a,
+a:visited {
+    text-decoration: none;
+    color: #ff6f61;
+}
+
+a:focus,
+a:hover {
+    color: #ff6f61;
+    text-decoration: underline;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.row {
+    margin-top: 10px;
+}
+
+.row:after {
+    display: table;
+    content: "";
+    clear: both;
+}
+
+::-webkit-input-placeholder {
+    color: #999;
+    vertical-align: bottom;
+}
+
+:-moz-placeholder {
+    color: #999;
+    vertical-align: bottom;
+}
+
+::-moz-placeholder {
+    color: #999;
+    vertical-align: bottom;
+}
+
+:-ms-input-placeholder {
+    color: #999;
+    vertical-align: bottom;
+}
+
+a:not(.button-text) {
+    color: #ff6f61!important;
+}
+
+a:not(.button-text):hover {
+    color: #ff6f61!important;
+}
+
+a:hover {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/*! CSS Used from: Embedded */
+
+a {
+    background: 0 0;
+}
+
+a:active,
+a:hover {
+    outline: 0;
+}
+
+b {
+    font-weight: 700;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:after,
+:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.row {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.col-sm-6,
+.col-xs-12 {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.col-xs-12 {
+    float: left;
+}
+
+.col-xs-12 {
+    width: 100%;
+}
+
+@media (min-width:768px) {
+    .col-sm-6 {
+        float: left;
+    }
+    .col-sm-6 {
+        width: 50%;
+    }
+}
+
+
+/*! CSS Used from: Embedded */
+
+.style__contact___oVQTh {
+    text-align: left;
+}
+
+.style__contact___oVQTh {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 30px 20px;
+    text-align: center;
+    color: #fff;
+}
+
+.style__heading___ME_M_ {
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.style__sub-title___3QnWO {
+    font-size: 16px;
+    margin: 0 20px;
+}
+
+.style__contact___oVQTh .style__sub-title___3QnWO {
+    font-size: 24px;
+    text-align: center;
+    color: #fff;
+    font-weight: 700;
+}
+
+.style__contact___oVQTh .style__sub-title___3QnWO .style__mail-address___3bvJN {
+    color: #fff!important;
+}
+
+.style__address-block___1rn1r {
+    width: 575px;
+    height: 200px;
+    opacity: .73;
+    border-radius: 5px;
+    background-color: #032430;
+    padding: 23px 35px;
+    border: 1px solid #fff;
+}
+
+.style__address-block___1rn1r .style__heading___ME_M_ {
+    text-align: left;
+    margin: 0 20px;
+}
+
+.style__address-block___1rn1r .style__sub-title___3QnWO {
+    text-align: left;
+    margin-top: 12px;
+}
+
+.style__mar50___1j0lJ {
+    margin-top: 50px;
+}
+
+.style__mar50___1j0lJ .style__address-block___1rn1r:first-child {
+    margin: 0 auto;
+}
+
+@media (max-width:1280px) {
+    .style__heading___ME_M_ {
+        font-size: 28px;
+    }
+    .style__sub-title___3QnWO {
+        font-size: 16px;
+    }
+    .style__contact___oVQTh .style__heading___ME_M_ {
+        font-size: 24px;
+    }
+    .style__address-block___1rn1r {
+        height: 220px;
+    }
+}
+
+@media (max-width:1028px) {
+    .style__heading___ME_M_ {
+        font-size: 26px;
+    }
+    .style__sub-title___3QnWO {
+        font-size: 14px;
+    }
+    .style__address-block___1rn1r {
+        width: auto;
+    }
+}
+
+@media (max-width:991px) {
+    .style__contact___oVQTh .style__heading___ME_M_ {
+        font-size: 20px;
+    }
+    .style__address-block___1rn1r {
+        width: auto;
+        height: 240px;
+    }
+}
+
+@media (max-width:767px) {
+    .style__heading___ME_M_ {
+        font-size: 24px;
+    }
+    .style__contact___oVQTh .style__heading___ME_M_ {
+        font-size: 16px;
+    }
+    .style__aboutus-content___Y9zGF .style__banner___3u_XJ .style__contact___oVQTh .style__heading___ME_M_ {
+        font-size: 16px;
+    }
+}
+
+@media (max-width:500px) {
+    .style__contact___oVQTh {
+        margin: 10px;
+    }
+    .style__contact___oVQTh>.style__heading___ME_M_ {
+        margin: 10px 0;
+    }
+    .style__aboutus-content___Y9zGF .style__contact___oVQTh .style__heading___ME_M_ {
+        font-size: 32px;
+    }
+    .style__aboutus-content___Y9zGF .style__contact___oVQTh .style__sub-title___3QnWO {
+        font-size: 16px;
+    }
+    .style__aboutus-content___Y9zGF .style__banner___3u_XJ .style__contact___oVQTh .style__heading___ME_M_ {
+        font-size: 16px;
+    }
+    .style__aboutus-content___Y9zGF .style__banner___3u_XJ .style__contact___oVQTh .style__sub-title___3QnWO {
+        font-size: 14px;
+    }
+    .style__aboutus-content___Y9zGF .style__banner___3u_XJ .style__contact___oVQTh .style__address-block___1rn1r {
+        width: auto;
+        height: auto;
+        opacity: .73;
+        border-radius: 5px;
+        background-color: #032430;
+        padding: 23px 35px;
+        border: 1px solid #fff;
+        margin-bottom: 8px;
+    }
+    .style__aboutus-content___Y9zGF .style__banner___3u_XJ .style__contact___oVQTh .style__address-block___1rn1r .style__heading___ME_M_ {
+        text-align: center;
+        margin: 0 20px;
+    }
+    .style__aboutus-content___Y9zGF .style__banner___3u_XJ .style__contact___oVQTh .style__address-block___1rn1r .style__sub-title___3QnWO {
+        text-align: center;
+        margin-top: 12px;
+    }
+}
+
+.gr {
+    background-color: #fafbfc;
+}
+
+.fondsize {
+    font-size: 24px;
+}
+
+.fontsize2 {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    width: 100%;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #212121;
 }
