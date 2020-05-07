@@ -1,44 +1,53 @@
-.pharmacyimg{
-    img{
-    height: 150px !important;
-    width: 100% !important;
-}}
+.pharmacyimg {
+    img {
+        height: 150px !important;
+        width: 100% !important;
+    }
+}
 
-.adj{
+.adj {
     display: flex;
     justify-content: center;
 }
-.adj2{
+
+.adj2 {
     height: 388px !important;
 }
 
-.labsimg{
-    img{
+.labsimg {
+    img {
         height: 150px !important;
         width: 100% !important;
-}}
-.modal-content{
+    }
+}
+
+.modal-content {
     height: 85%;
 }
-.pharmacy{
-    color:red;
+
+.pharmacy {
+    color: red;
     font-size: 22px;
 }
-.labs{
-    color:red;
-  
+
+.labs {
+    color: red;
 }
-.lb{
+
+.lb {
     font-size: 22px;
 }
-.modal-title{
+
+.modal-title {
     color: black !important;
     font-weight: 800;
 }
-hr{
-    border:1px solid;
+
+hr {
+    border: 1px solid;
 }
-.bbt{
+
+.bbt {
     width: 170px;
     margin-left: 30%;
     margin-bottom: 9px;
@@ -46,10 +55,73 @@ hr{
     height: 56px;
     font-size: 19px;
 }
+
 #custom-search-input input[type='submit'] {
-    font-size: 16px !important;  
+    font-size: 16px !important;
 }
+
 a {
     // color: #337ab7;
     text-decoration: none;
+}
+
+.lhs {
+    left: 0px;
+    z-index: 100037;
+    position: absolute;
+    right: 0;
+    font-size: 9px;
+    margin-top: -75px;
+}
+
+.rhs {
+    z-index: 100037;
+    position: absolute;
+    right: 0;
+    font-size: 9px;
+    margin-top: -75px;
+}
+
+.blhs {
+    left: 0px;
+    z-index: 100037;
+    position: absolute;
+    right: 0;
+    font-size: 9px;
+    margin-top: -25% !important;
+}
+
+.brhs {
+    z-index: 100037;
+    position: absolute;
+    right: 0;
+    font-size: 9px;
+    margin-top: -25% !important;
+}
+
+.ain {
+    padding: 10px;
+}
+
+.slidertest {
+    font-size: 18px;
+    text-align: center;
+}
+
+@media screen and (min-width: 1200px) {
+    .blhs {
+        left: 0px;
+        z-index: 100037;
+        position: absolute;
+        right: 0;
+        font-size: 9px;
+        margin-top: -14% !important;
+    }
+    .brhs {
+        z-index: 100037;
+        position: absolute;
+        right: 0;
+        font-size: 9px;
+        margin-top: -14% !important;
+    }
 }
