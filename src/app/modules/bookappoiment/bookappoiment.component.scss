@@ -18,6 +18,28 @@ display: flex;
     justify-content: flex-start;
     align-items: flex-start;
 }
+.c-omni-searchbox__icon{
+    img{
+margin-top: 20%;
+height: 56%;
+width: 95%;
+}
+}
+.c-omni-searchbox__button .c-omni-searchbox__button{
+    img{
+        margin-top: 26%;
+        height: 54%;
+        width: 95%;
+    }
+}
+.c-omni-searchbox__icon{
+img{
+    margin-top: 20%;
+    height: 56%;
+    width: 95%;
+}
+}
+
 
 /*! CSS Used from: Embedded */
 div,header,i,label,li,span,ul{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
