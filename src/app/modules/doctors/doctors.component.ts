@@ -6,10 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./doctors.component.scss']
 })
 export class DoctorsComponent implements OnInit {
+  show: boolean=false;
+  aval: boolean=false;
 
   constructor() { }
 
   ngOnInit(): void {
   }
-  
+  showtime(){
+    this.show=!this.show;
+  }
+  avaialableclick(){
+    this.aval=!this.aval;
+  }
 }

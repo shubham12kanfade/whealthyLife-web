@@ -6,10 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./chat-now.component.scss']
 })
 export class ChatNowComponent implements OnInit {
+  isExitModalVisible: any=false;
+  toggleExitModal:any=false;
 
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  exitVisible(){
+    this.isExitModalVisible=true;
+  }
+  toggleExitModal1(){
+   this.isExitModalVisible=true;
+  }
 }

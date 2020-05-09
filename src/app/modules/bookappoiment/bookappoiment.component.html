@@ -6,11 +6,11 @@
     <div class="c-jumbo__omni_container">
         <div class="c-omni-wrapper">
             <div id="c-omni-container" class="c-omni-container--desktop">
-                <div class="c-omni u-clearfix" style="position: relative; top: -2px;">
+                <div class="c-omni u-clearfix">
                     <div class="c-omni__wrapper u-clearfix c-omni__wrapper--locality dropdown" role="button">
                         <div class="c-omni-searchbox_wrapper ">
                             <span class="c-omni-searchbox__icon">
-                                <img src="../../../assets/img/place-24px.svg">
+                                <i class="icon-ic_location"></i>
                             </span>
                             <input data-qa-id="omni-searchbox-locality"
                                 class="c-omni-searchbox c-omni-searchbox--large dropdown-toggle" autocomplete="off"
@@ -19,8 +19,8 @@
                                 <span
                                     class="c-omni-searchbox__button c-omni-searchbox__button"
                                     data-qa-id="current_location">
-                                    <img
-                                        src="../../../assets/img/gps_fixed-24px.svg">
+                                   
+                                    <i class="icon-ic_gps_system"></i>
                                         <span
                                         class="c-omni-searchbox__button__text">Detect</span>
                                     </span>
@@ -41,7 +41,7 @@
                     <div class="c-omni__wrapper u-clearfix c-omni__wrapper--keyword dropdown" role="button">
                         <div class="c-omni-searchbox_wrapper dropdown">
                             <span class="c-omni-searchbox__icon">
-                                <img src="../../../assets/img/search-24px.svg">
+                                <i class="icon-ic_search"></i>
                             </span>
                             <input data-qa-id="omni-searchbox-keyword"
                                 class="c-omni-searchbox c-omni-searchbox--large dropdown-toggle" autocomplete="off"
@@ -77,60 +77,59 @@
             <div class="c-my-doctors"></div>
         </div>
     </div>
-    <div class="c-icon-list">
-        <div class="c-icon-list__list_wrapper"><a data-qa-id="consult-icon" target="_blank" class="c-icon"
-                [routerLink]="['./chatnow']" routerLinkActive="router-link-active">
-                <span class="icon-set tab-icon c-icon__img"><img src="../../../assets/img/chat-24px.svg"></span>
-                <span>Chat with a doctor</span>
-            </a>
-            <a data-qa-id="order-icon" target="_blank" class="c-icon" href="/order?utm_source=wealthylife_home">
-                <span class="icon-set tab-icon c-icon__img"><img
-                        src="../../../assets/img/add_shopping_cart-24px.svg"></span>
-                <span>Order Medicines</span>
-            </a>
-            <a data-qa-id="drive-icon" target="_blank" class="c-icon"
-                href="https://drive.wealthylife.com?utm_source=wealthylife_home">
-                <span class="icon-set tab-icon c-icon__img"><img
-                        src="../../../assets/img/library_books-24px.svg"></span>
-
-                <span>View medical records</span>
-            </a>
-            <a data-qa-id="lab-icon" target="_blank" class="c-icon" href="/tests?utm_source=wealthylife_home">
-                <div class="tab-offer"><span class="icon-set tab-icon c-icon__img"><img
-                            src="../../../assets/img/opacity-24px.svg"></span>
-                    <span class="c-offer-tag u-round-corner u-border-white u-t-bold u-t-white">New</span></div>
-                <span>Book
-                    test</span>
-            </a><a data-qa-id="healthfeed-icon" target="_blank" class="c-icon"
-                href="/healthfeed?utm_source=wealthylife_home"><span class="icon-set tab-icon c-icon__img"><img
-                        src="../../../assets/img/menu_book-24px.svg"></span>
-                <span>Read articles</span></a><a data-qa-id="providers-icon" target="_blank" class="c-icon"
-                href="/providers?utm_source=wealthylife_home">
-                <span class="icon-set tab-icon c-icon__img"><img src="../../../assets/img/local_mall-24px.svg"></span>
-                <span>For healthcare providers</span></a></div>
+    <div class="icon-list-wrapper">
+        <div class="c-icon-list">
+            <div class="c-icon-list__list_wrapper"><a data-qa-id="consult-icon" target="_blank" class="c-icon"
+                    [routerLink]="['consult/chatnow']" routerLinkActive="router-link-active">
+                    <span class="icon-set tab-icon c-icon__img"><i class="tab-icon c-icon__img icon-ic_chat"></i></span>
+                    <span>Chat with a doctor</span>
+                </a>
+                <a data-qa-id="order-icon" target="_blank" class="c-icon" href="/order?utm_source=wealthylife_home">
+                    <span class="icon-set tab-icon c-icon__img"><i class="tab-icon c-icon__img icon-ic_cart"></i></span>
+                    <span>Order Medicines</span>
+                </a>
+                <a data-qa-id="drive-icon" target="_blank" class="c-icon"
+                    href="https://drive.wealthylife.com?utm_source=wealthylife_home">
+                    <span class="icon-set tab-icon c-icon__img"><i class="tab-icon c-icon__img icon-ic_records_3"></i></span>
+    
+                    <span>View medical records</span>
+                </a>
+                <a data-qa-id="lab-icon" target="_blank" class="c-icon" href="/tests?utm_source=wealthylife_home">
+                    <div class="tab-offer"><span class="icon-set tab-icon c-icon__img"><i class="tab-icon c-icon__img icon-ic_lab_home"></i></span>
+                        <span class="c-offer-tag u-round-corner u-border-white u-t-bold u-t-white">New</span></div>
+                    <span>Book
+                        test</span>
+                </a><a data-qa-id="healthfeed-icon" target="_blank" class="c-icon"
+                    href="/healthfeed?utm_source=wealthylife_home"><span class="icon-set tab-icon c-icon__img"><i class="tab-icon c-icon__img icon-ic_read"></i></span>
+                    <span>Read articles</span></a><a data-qa-id="providers-icon" target="_blank" class="c-icon"
+                    href="/providers?utm_source=wealthylife_home">
+                    <span class="icon-set tab-icon c-icon__img"><i class="tab-icon c-icon__img icon-ic_briefcase"></i></span>
+                    <span>For healthcare providers</span></a></div>
+        </div>
     </div>
 
-    <div class="c-full-width">
-        <div class="c-section__container">
-            <div class="c-section__content">
-                <div class="u-w-50 u-f-left">
+
+    <div class="c-full-width cfw">
+        <div class="c-section__container fst">
+            <div class="c-section__content csc">
+                <div class="u-w-50 u-f-left uwu">
                     <div class="c-section__highlights">
                         <div class="c-section__highlights_title">
                             <h2 class="u-d-inline">Safety of your data is our</h2>
                             <h2 class="u-t-bold">top priority.</h2>
                         </div>
                         <div class="c-list-item">
-                            <div><span class="c-icon__img"><img src="../../../assets/img/check-24px.svg"></span>
+                            <div><span class="c-icon__img"><i class="c-list-item__icon icon-ic_done_open_system"></i></span>
                                 <span>Multi-level security
                                     checks</span></div>
                         </div>
                         <div class="c-list-item">
-                            <div><span class="c-icon__img"><img src="../../../assets/img/check-24px.svg"></span>
+                            <div><span class="c-icon__img"><i class="c-list-item__icon icon-ic_done_open_system"></i></span>
                                 <span>Multiple data
                                     backups</span></div>
                         </div>
                         <div class="c-list-item">
-                            <div><span class="c-icon__img"><img src="../../../assets/img/check-24px.svg"></span>
+                            <div><span class="c-icon__img"><i class="c-list-item__icon icon-ic_done_open_system"></i></span>
                                 <span>Stringent data privacy
                                     policies</span></div>
                         </div>
@@ -138,7 +137,7 @@
                                 href="/company/security" target="_blank">Read more</a></div>
                     </div>
                 </div>
-                <div class="u-w-50 u-f-right">
+                <div class="u-w-50 u-f-right uwu">
                     <div class="c-section__right"><img src="../../../assets/img/security_1.webp" width="250"></div>
                 </div>
             </div>
@@ -171,36 +170,32 @@
         </div>
     </div>
 
-    <div class="c-full-width">
+    <div class="c-full-width secnd">
         <div class="c-section__container u-fill-white">
-            <div class="c-section__content">
-                <div class="u-w-50 u-f-left">
+            <div class="c-section__content cscn">
+                <div class="u-w-50 u-f-left uw5">
                     <div class="c-section__highlights">
                         <div class="c-section__highlights_title">
                             <h2 class="u-d-inline">Instant appointment with doctors.</h2>
                             <h2 class="u-t-bold u-d-inline">Guaranteed.</h2>
                         </div>
                         <div class="c-list-item">
-                            <div><span class="c-list-item__icon  c-icon__img"><img
-                                        src="../../../assets/img/check-24px.svg"></span><span class="u-t-bold">100,000
+                            <div><span class="c-list-item__icon  c-icon__img"><i class="c-list-item__icon icon-ic_done_open_system"></i></span><span class="u-t-bold">100,000
                                 </span><span>Verified doctors</span></div>
                         </div>
                         <div class="c-list-item">
-                            <div><span class="c-list-item__icon  c-icon__img"><img
-                                        src="../../../assets/img/check-24px.svg"></span><span class="u-t-bold">3M+
+                            <div><span class="c-list-item__icon  c-icon__img"><i class="c-list-item__icon icon-ic_done_open_system"></i></span><span class="u-t-bold">3M+
                                 </span><span>Patient recommendations</span></div>
                         </div>
                         <div class="c-list-item">
-                            <div><span class="c-list-item__icon  c-icon__img"><img
-                                        src="../../../assets/img/check-24px.svg"></span><span class="u-t-bold">25M
+                            <div><span class="c-list-item__icon  c-icon__img"><i class="c-list-item__icon icon-ic_done_open_system"></i></span><span class="u-t-bold">25M
                                 </span><span>Patients/year</span></div>
                         </div>
                         <div data-qa-id="book-cta" class="u-m-t-25 u-d-inline-block"><a class="c-button__redirect"
                                 href="/bangalore/doctors" target="_blank">Find me the right doctor</a></div>
                         <div class="c-testimonial-list">
                             <div class="slick-slider slick-initialized" dir="ltr"><span
-                                    class="c-testimonial-list__prev_arrow c-testimonial-list__arrow c-icon__img"><img
-                                        src="../../../assets/img/arrow_back_ios-24px.svg"></span>
+                                    class="c-testimonial-list__prev_arrow c-testimonial-list__arrow c-icon__img"><i class="c-testimonial-list__prev_arrow icon-ic_back_cheveron c-testimonial-list__arrow"></i></span>
                                 <div class="slick-list">
                                     <div class="slick-track"
                                         style="width: 6300px; opacity: 1; transform: translate3d(-420px, 0px, 0px);">
@@ -249,11 +244,11 @@
                                                         easier than doing same things on computer. Allows quick and easy
                                                         search with speedy booking. Even maintains history of doctors
                                                         visited.</div>
-                                                    <div class="person"><span class="c-icon__img"><img
-                                                                src="../../../assets/img/person-24px.svg"></span><span
-                                                            class="u-t-regular u-inline-middle u-m-l-10">Amit
-                                                            Sharma</span>
-                                                    </div>
+                                                        <div>
+                                                            <span class="icon-ic_user_system icon-user"></span>
+                                                            <span class="u-t-regular u-inline-middle u-m-l-10">Amit
+                                                                Sharma</span>
+                                                            </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -302,285 +297,22 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div data-index="3" class="slick-slide" tabindex="-1" aria-hidden="true"
-                                            style="outline: currentcolor none medium; width: 420px;">
-                                            <div>
-                                                <div class="u-t-grey">
-                                                    <div class="c-testimonial__review_star u-m-b-10 u-t-green"><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i></div>
-                                                    <div class="c-testimonial__review_text u-t-regular">Boon for
-                                                        patients.God bless who made this app.I would not recover so soon
-                                                        if
-                                                        this app would not be there. Feedback- Wealthy Life has doctor
-                                                        for common
-                                                        disease or complications.It should focus on those complications
-                                                        which is uncommon because it is hard to find suitable doctor in
-                                                        some
-                                                        cases like Varicocele,Esinophill count increase</div>
-                                                    <div><span class="icon-ic_user_system icon-user"></span><span
-                                                            class="u-t-regular u-inline-middle u-m-l-10">Anoop
-                                                            Kumar</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div data-index="4" class="slick-slide" tabindex="-1" aria-hidden="true"
-                                            style="outline: currentcolor none medium; width: 420px;">
-                                            <div>
-                                                <div class="u-t-grey">
-                                                    <div class="c-testimonial__review_star u-m-b-10 u-t-green"><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i></div>
-                                                    <div class="c-testimonial__review_text u-t-regular">Very good app.
-                                                        Well
-                                                        thought out about booking/rescheduling/cancelling an
-                                                        appointment.
-                                                        Also Doctor's feedbac k mechanism is good and describes all the
-                                                        basics in good way.</div>
-                                                    <div><span class="icon-ic_user_system icon-user"></span><span
-                                                            class="u-t-regular u-inline-middle u-m-l-10">Avinash
-                                                            Kumar</span></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div data-index="5" class="slick-slide" tabindex="-1" aria-hidden="true"
-                                            style="outline: currentcolor none medium; width: 420px;">
-                                            <div>
-                                                <div class="u-t-grey">
-                                                    <div class="c-testimonial__review_star u-m-b-10 u-t-green"><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i></div>
-                                                    <div class="c-testimonial__review_text u-t-regular">Great app..get
-                                                        to
-                                                        know actual qualification of doctors n their alma mater n
-                                                        experience
-                                                        to judge the background..along with peoples review...have
-                                                        stopped
-                                                        calling n taking appointments..just Wealthy Life it</div>
-                                                    <div><span class="icon-ic_user_system icon-user"></span><span
-                                                            class="u-t-regular u-inline-middle u-m-l-10">Deepak
-                                                            Kumar</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div data-index="6" class="slick-slide" tabindex="-1" aria-hidden="true"
-                                            style="outline: currentcolor none medium; width: 420px;">
-                                            <div>
-                                                <div class="u-t-grey">
-                                                    <div class="c-testimonial__review_star u-m-b-10 u-t-green"><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i></div>
-                                                    <div class="c-testimonial__review_text u-t-regular">I had severe
-                                                        pain in
-                                                        chest as well blood in cough. I searched through a lot of
-                                                        pulmonologists based on rankings and feedbacks and finally
-                                                        settled
-                                                        to consult Dr Indu Bubna. She quickly diagnosed my disease as
-                                                        pulmonary embolism and I was admitted to ICU. Now its all fine.
-                                                        If i
-                                                        would have gotten late then I wouldn't be writing this. Thanks
-                                                        Wealthy Life!</div>
-                                                    <div><span class="icon-ic_user_system icon-user"></span><span
-                                                            class="u-t-regular u-inline-middle u-m-l-10">Anuupam
-                                                            Purohit</span></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div data-index="7" tabindex="-1" class="slick-slide slick-cloned"
-                                            aria-hidden="true" style="width: 420px;">
-                                            <div>
-                                                <div class="u-t-grey">
-                                                    <div class="c-testimonial__review_star u-m-b-10 u-t-green"><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i></div>
-                                                    <div class="c-testimonial__review_text u-t-regular">Very helpful.
-                                                        Far
-                                                        easier than doing same things on computer. Allows quick and easy
-                                                        search with speedy booking. Even maintains history of doctors
-                                                        visited.</div>
-                                                    <div><span class="icon-ic_user_system icon-user"></span><span
-                                                            class="u-t-regular u-inline-middle u-m-l-10">Amit
-                                                            Sharma</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div data-index="8" tabindex="-1" class="slick-slide slick-cloned"
-                                            aria-hidden="true" style="width: 420px;">
-                                            <div>
-                                                <div class="u-t-grey">
-                                                    <div class="c-testimonial__review_star u-m-b-10 u-t-green"><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i></div>
-                                                    <div class="c-testimonial__review_text u-t-regular">Very easy to
-                                                        book,maintain history. Hassle free from older versions of
-                                                        booking
-                                                        appointment via telephone.. Thanks Wealthy Life for making it
-                                                        simple.
-                                                    </div>
-                                                    <div><span class="icon-ic_user_system icon-user"></span><span
-                                                            class="u-t-regular u-inline-middle u-m-l-10">Jyothi
-                                                            Bhatia</span></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div data-index="9" tabindex="-1" class="slick-slide slick-cloned"
-                                            aria-hidden="true" style="width: 420px;">
-                                            <div>
-                                                <div class="u-t-grey">
-                                                    <div class="c-testimonial__review_star u-m-b-10 u-t-green"><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i></div>
-                                                    <div class="c-testimonial__review_text u-t-regular">Very easy to
-                                                        use,
-                                                        user interface is amazing. The option Where I can book a cab
-                                                        truly
-                                                        showed how much this app-makers cares about the patient's
-                                                        health👍
-                                                    </div>
-                                                    <div><span class="icon-ic_user_system icon-user"></span><span
-                                                            class="u-t-regular u-inline-middle u-m-l-10">Anjani
-                                                            Sirivella</span></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div data-index="10" tabindex="-1" class="slick-slide slick-cloned"
-                                            aria-hidden="true" style="width: 420px;">
-                                            <div>
-                                                <div class="u-t-grey">
-                                                    <div class="c-testimonial__review_star u-m-b-10 u-t-green"><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i></div>
-                                                    <div class="c-testimonial__review_text u-t-regular">Boon for
-                                                        patients.God bless who made this app.I would not recover so soon
-                                                        if
-                                                        this app would not be there. Feedback- Wealthy Life has doctor
-                                                        for common
-                                                        disease or complications.It should focus on those complications
-                                                        which is uncommon because it is hard to find suitable doctor in
-                                                        some
-                                                        cases like Varicocele,Esinophill count increase</div>
-                                                    <div><span class="icon-ic_user_system icon-user"></span><span
-                                                            class="u-t-regular u-inline-middle u-m-l-10">Anoop
-                                                            Kumar</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div data-index="11" tabindex="-1" class="slick-slide slick-cloned"
-                                            aria-hidden="true" style="width: 420px;">
-                                            <div>
-                                                <div class="u-t-grey">
-                                                    <div class="c-testimonial__review_star u-m-b-10 u-t-green"><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i></div>
-                                                    <div class="c-testimonial__review_text u-t-regular">Very good app.
-                                                        Well
-                                                        thought out about booking/rescheduling/cancelling an
-                                                        appointment.
-                                                        Also Doctor's feedbac k mechanism is good and describes all the
-                                                        basics in good way.</div>
-                                                    <div><span class="icon-ic_user_system icon-user"></span><span
-                                                            class="u-t-regular u-inline-middle u-m-l-10">Avinash
-                                                            Kumar</span></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div data-index="12" tabindex="-1" class="slick-slide slick-cloned"
-                                            aria-hidden="true" style="width: 420px;">
-                                            <div>
-                                                <div class="u-t-grey">
-                                                    <div class="c-testimonial__review_star u-m-b-10 u-t-green"><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i></div>
-                                                    <div class="c-testimonial__review_text u-t-regular">Great app..get
-                                                        to
-                                                        know actual qualification of doctors n their alma mater n
-                                                        experience
-                                                        to judge the background..along with peoples review...have
-                                                        stopped
-                                                        calling n taking appointments..just Wealthy Life it</div>
-                                                    <div><span class="icon-ic_user_system icon-user"></span><span
-                                                            class="u-t-regular u-inline-middle u-m-l-10">Deepak
-                                                            Kumar</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div data-index="13" tabindex="-1" class="slick-slide slick-cloned"
-                                            aria-hidden="true" style="width: 420px;">
-                                            <div>
-                                                <div class="u-t-grey">
-                                                    <div class="c-testimonial__review_star u-m-b-10 u-t-green"><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i></div>
-                                                    <div class="c-testimonial__review_text u-t-regular">I had severe
-                                                        pain in
-                                                        chest as well blood in cough. I searched through a lot of
-                                                        pulmonologists based on rankings and feedbacks and finally
-                                                        settled
-                                                        to consult Dr Indu Bubna. She quickly diagnosed my disease as
-                                                        pulmonary embolism and I was admitted to ICU. Now its all fine.
-                                                        If i
-                                                        would have gotten late then I wouldn't be writing this. Thanks
-                                                        Wealthy Life!</div>
-                                                    <div><span class="icon-ic_user_system icon-user"></span><span
-                                                            class="u-t-regular u-inline-middle u-m-l-10">Anuupam
-                                                            Purohit</span></div>
-                                                </div>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
-                                <span class="c-testimonial-list__next_arrow c-testimonial-list__arrow c-icon__img"><img
-                                        src="../../../assets/img/arrow_forward_ios-24px.svg"></span>
+                                <span class="c-testimonial-list__next_arrow c-testimonial-list__arrow c-icon__img"><i class="c-testimonial-list__next_arrow icon-ic_next_cheveron c-testimonial-list__arrow"></i></span>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="u-w-50 u-f-right">
+                <div class="u-w-50 u-f-right uw5">
                     <div class="c-section__right">
                         <div>
                             <div class="rh5v-DefaultPlayer_component ">
-                                <video class="rh5v-DefaultPlayer_video" style="top: 1250px;left: 390px;"
+                                <video class="rh5v-DefaultPlayer_video"
                                     poster="../../../assets/img/book.875ca26a3c4283c777660377e421e99b.png"
                                     loading="false" autoplay="" loop="" width="250" height="480">
                                     <source src="../../../assets/img/appointment.700ce682eaec91bf93b6574cb8f09cd0.webm"
                                         type="video/webm"></video>
-                                <!-- <div class="rh5v-Overlay_component "></div> -->
                             </div>
                         </div>
                     </div>
@@ -594,9 +326,9 @@
                     class="c-media-list u-f-left wall-street  india-4"></a><a href="/company/press" target="_blank"
                     class="c-media-list u-f-left times  india-5"></a></div>
         </div>
-    </div>
+    </div> 
 
-    <div class="c-full-width">
+    <div class="c-full-width cfw">
         <div class="c-section__container">
             <div class="c-section__content">
                 <div class="u-w-50 u-f-left">
@@ -609,7 +341,7 @@
                                     <source src="../../../assets/img/consult.099446892618434cc8a038d7844c4380.webm"
                                         type="video/webm">
                                 </video>
-                                <!-- <div class="rh5v-Overlay_component "></div> -->
+                               
                             </div>
                         </div>
                     </div>
@@ -621,19 +353,16 @@
                             <h2 class="u-t-bold">Chat with a doctor</h2>
                         </div>
                         <div class="c-list-item">
-                            <div><span class="c-list-item__icon c-icon__img"><img
-                                        src="../../../assets/img/check-24px.svg"></span><span>Fees starting at
+                            <div><span class="c-list-item__icon c-icon__img"><i class="c-list-item__icon icon-ic_done_open_system"></i></span><span>Fees starting at
                                 </span><span class="u-t-bold">₹99</span></div>
                         </div>
                         <div class="c-list-item">
-                            <div><span class="c-list-item__icon c-icon__img"><img
-                                        src="../../../assets/img/check-24px.svg"></span><span>Verified doctors
+                            <div><span class="c-list-item__icon c-icon__img"><i class="c-list-item__icon icon-ic_done_open_system"></i></span><span>Verified doctors
                                     respond in
                                 </span><span class="u-t-bold">5 minutes</span></div>
                         </div>
                         <div class="c-list-item">
-                            <div><span class="c-list-item__icon c-icon__img"><img
-                                        src="../../../assets/img/check-24px.svg"></span><span class="u-t-bold">100%
+                            <div><span class="c-list-item__icon c-icon__img"><i class="c-list-item__icon icon-ic_done_open_system"></i></span><span class="u-t-bold">100%
                                 </span><span>Private and confidential</span></div>
                         </div>
                         <div data-qa-id="consult-cta" class="u-m-t-25 u-d-inline-block"><a class="c-button__redirect"
@@ -644,8 +373,7 @@
                                 class="u-t-bold">41623</span><span> doctors online</span></span>
                         <div class="c-testimonial-list">
                             <div class="slick-slider slick-initialized" dir="ltr">
-                                <span class="c-testimonial-list__prev_arrow c-testimonial-list__arrow c-icon__img"><img
-                                        src="../../../assets/img/arrow_back_ios-24px.svg"></span>
+                                <span class="c-testimonial-list__prev_arrow c-testimonial-list__arrow c-icon__img"><i class="c-testimonial-list__prev_arrow icon-ic_back_cheveron c-testimonial-list__arrow"></i></span>
                                 <div class="slick-list">
                                     <div class="slick-track"
                                         style="width: 5460px; opacity: 1; transform: translate3d(-420px, 0px, 0px);">
@@ -690,8 +418,7 @@
                                                         The
                                                         doctors are responsive and provide you a brief consultation
                                                     </div>
-                                                    <div class="person"> <span class="c-icon__img"><img
-                                                        src="../../../assets/img/person-24px.svg"></span><span
+                                                    <div><span class="icon-ic_user_system icon-user"></span><span
                                                             class="u-t-regular u-inline-middle u-m-l-10">Aaron
                                                             Moitra</span>
                                                     </div>
@@ -954,8 +681,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <span class="c-testimonial-list__next_arrow c-testimonial-list__arrow c-icon__img"><img
-                                        src="../../../assets/img/arrow_forward_ios-24px.svg"></span>
+                                <span class="c-testimonial-list__next_arrow c-testimonial-list__arrow c-icon__img"><i class="c-testimonial-list__next_arrow icon-ic_next_cheveron c-testimonial-list__arrow"></i></span>
                             </div>
                         </div>
                     </div>
@@ -975,8 +701,7 @@
                 <div class="c-healthfeed__articles_wrapper">
                     <div class="slick-slider slick-initialized" dir="ltr">
                         <div class="c-article-list__prev_arrow">
-                            <span class="c-article-list__prev_arrow c-article-list__arrow c-icon__img"><img
-                                    src="../../../assets/img/arrow_forward_ios-24px.svg"></span>
+                            <span class="c-article-list__prev_arrow c-article-list__arrow c-icon__img"><i class="icon-ic_dropdown c-article-list__arrow"></i></span>
 
                         </div>
                         <div class="slick-list">
@@ -1198,8 +923,7 @@
                             </div>
                         </div>
                         <div class="c-article-list__next_arrow">
-                            <span class="c-article-list__next_arrow c-article-list__arrow c-icon__img"><img
-                                    src="../../../assets/img/arrow_back_ios-24px.svg"></span>
+                            <span class="c-article-list__next_arrow c-article-list__arrow c-icon__img"><i class="icon-ic_dropdown c-article-list__arrow"></i></span>
 
                         </div>
                     </div>
@@ -1212,7 +936,7 @@
         </div>
     </div>
 
-    <div class="c-full-width">
+    <div class="c-full-width cfw">
         <div class="c-section__container">
             <div class="c-section__content">
                 <div class="u-w-50 u-f-left">
@@ -1223,23 +947,20 @@
                         </div>
                         <div class="c-list-item">
                             <div>
-                                <span class="c-list-item__icon c-icon__img"><img
-                                        src="../../../assets/img/check-24px.svg"></span>
+                                <span class="c-list-item__icon c-icon__img"><i class="c-list-item__icon icon-ic_done_open_system"></i></span>
                                 <span>Guaranteed
                                     availability</span></div>
                         </div>
                         <div class="c-list-item">
                             <div>
-                                <span class="c-list-item__icon c-icon__img"><img
-                                        src="../../../assets/img/check-24px.svg"></span>
+                                <span class="c-list-item__icon c-icon__img"><i class="c-list-item__icon icon-ic_done_open_system"></i></span>
 
                                 <span>Over </span><span class="u-t-bold">130,000+ </span><span> genuine medicines</span>
                             </div>
                         </div>
                         <div class="c-list-item">
                             <div>
-                                <span class="c-list-item__icon c-icon__img"><img
-                                        src="../../../assets/img/check-24px.svg"></span>
+                                <span class="c-list-item__icon c-icon__img"><i class="c-list-item__icon icon-ic_done_open_system"></i></span>
                                 <span>Home delivery in
                                 </span><span class="u-t-bold">24hrs </span></div>
                         </div>
@@ -1256,8 +977,7 @@
                         </div>
                         <div class="c-testimonial-list">
                             <div class="slick-slider slick-initialized" dir="ltr">
-                                <span class="c-testimonial-list__prev_arrow c-testimonial-list__arrow c-icon__img"><img
-                                        src="../../../assets/img/arrow_back_ios-24px.svg"></span>
+                                <span class="c-testimonial-list__prev_arrow c-testimonial-list__arrow c-icon__img"><i class="c-testimonial-list__prev_arrow icon-ic_back_cheveron c-testimonial-list__arrow"></i></span>
                                 <div class="slick-list">
                                     <div class="slick-track"
                                         style="width: 5460px; opacity: 1; transform: translate3d(-420px, 0px, 0px);">
@@ -1550,8 +1270,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <span class="c-testimonial-list__next_arrow c-testimonial-list__arrow c-icon__img"><img
-                                        src="../../../assets/img/arrow_forward_ios-24px.svg"></span>
+                                <span class="c-testimonial-list__next_arrow c-testimonial-list__arrow c-icon__img"><i class="c-testimonial-list__next_arrow icon-ic_next_cheveron c-testimonial-list__arrow"></i></span>
 
 
                             </div>
@@ -1582,21 +1301,18 @@
                             <h2 class="u-t-bold">In one secure app.</h2>
                         </div>
                         <div class="c-list-item">
-                            <div> <span class="c-list-item__icon c-icon__img"><img
-                                        src="../../../assets/img/check-24px.svg"></span>
+                            <div> <span class="c-list-item__icon c-icon__img"><i class="c-list-item__icon icon-ic_done_open_system"></i></span>
                                 <span>256-bit end to end
                                     encryption</span></div>
                         </div>
                         <div class="c-list-item">
-                            <div> <span class="c-list-item__icon c-icon__img"><img
-                                        src="../../../assets/img/check-24px.svg"></span>
+                            <div> <span class="c-list-item__icon c-icon__img"><i class="c-list-item__icon icon-ic_done_open_system"></i></span>
                                 <span>Records are accessible
                                     only
                                     by you</span></div>
                         </div>
                         <div class="c-list-item">
-                            <div> <span class="c-list-item__icon c-icon__img"><img
-                                        src="../../../assets/img/check-24px.svg"></span>
+                            <div> <span class="c-list-item__icon c-icon__img"><i class="c-list-item__icon icon-ic_done_open_system"></i></span>
                                 <span>Access your records
                                     across</span><span class="u-t-bold"> 8000+ </span><span>centers</span></div>
                         </div>
@@ -1611,7 +1327,7 @@
     </div>
 
    
-    <div class="c-full-width">
+    <div class="c-full-width cfw">
         <div class="c-section__container">
             <div class="c-section__content">
                 <div class="u-w-50 u-f-left">
@@ -1621,21 +1337,18 @@
                             <h2 class="u-t-bold">Trust us for Business</h2>
                         </div>
                         <div class="c-list-item">
-                            <div> <span class="c-list-item__icon c-icon__img"><img
-                                        src="../../../assets/img/check-24px.svg"></span>
+                            <div> <span class="c-list-item__icon c-icon__img"><i class="c-list-item__icon icon-ic_done_open_system"></i></span>
                                 <span>Get seen by
                                 </span><span class="u-t-bold">25M+ </span><span>patients on wealthylife.com</span></div>
                         </div>
                         <div class="c-list-item">
-                            <div> <span class="c-list-item__icon c-icon__img"><img
-                                        src="../../../assets/img/check-24px.svg"></span>
+                            <div> <span class="c-list-item__icon c-icon__img"><i class="c-list-item__icon icon-ic_done_open_system"></i></span>
                                 <span>The most advanced
                                     software
                                     for clinics and hospitals</span></div>
                         </div>
                         <div class="c-list-item">
-                            <div> <span class="c-list-item__icon c-icon__img"><img
-                                        src="../../../assets/img/check-24px.svg"></span>
+                            <div> <span class="c-list-item__icon c-icon__img"><i class="c-list-item__icon icon-ic_done_open_system"></i></span>
                                 <span>State of the art
                                     business
                                     analytics for enterprises</span></div>
@@ -1757,21 +1470,3 @@
             </div>
         </div>
     </div>
-
-    <!-- <div class="c-country-list__wrapper">
-        <div class="c-country-list__link"><a href="/india" target="_blank"><span data-qa-id="country-flag"
-                    class="c-country-list__flag c-country-list__flag_india"></span><span data-qa-id="country-name"
-                    class="c-country-list__name">India</span></a></div>
-        <div class="c-country-list__link"><a href="/singapore" target="_blank"><span data-qa-id="country-flag"
-                    class="c-country-list__flag c-country-list__flag_singapore"></span><span data-qa-id="country-name"
-                    class="c-country-list__name">Singapore</span></a></div>
-        <div class="c-country-list__link"><a href="/philippines" target="_blank"><span data-qa-id="country-flag"
-                    class="c-country-list__flag c-country-list__flag_philippines"></span><span data-qa-id="country-name"
-                    class="c-country-list__name">Philippines</span></a></div>
-        <div class="c-country-list__link"><a href="/indonesia" target="_blank"><span data-qa-id="country-flag"
-                    class="c-country-list__flag c-country-list__flag_indonesia"></span><span data-qa-id="country-name"
-                    class="c-country-list__name">Indonesia</span></a></div>
-        <div class="c-country-list__link"><a href="/brazil" target="_blank"><span data-qa-id="country-flag"
-                    class="c-country-list__flag c-country-list__flag_brazil"></span><span data-qa-id="country-name"
-                    class="c-country-list__name">Brazil</span></a></div>
-    </div> -->
