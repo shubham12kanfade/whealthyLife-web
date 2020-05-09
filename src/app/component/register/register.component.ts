@@ -13,10 +13,11 @@ import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 export class RegisterComponent implements OnInit {
  
   register = new FormGroup({
-    mobileNumber: new FormControl("", [Validators.required, Validators.pattern("[0-9]{10}")]),
-    firstName: new FormControl("", Validators.required),
-    password: new FormControl("", Validators.required),
-
+    mobileNumber: new FormControl(""),
+    firstName: new FormControl(""),
+    password: new FormControl(""),
+    lastName: new FormControl(""),
+    email: new FormControl(""),
 
   });
   locatdata: any;
@@ -38,25 +39,23 @@ export class RegisterComponent implements OnInit {
   
   onSubmit() {
  
-    
+    console.log("RegisterComponent -> onSubmit -> register", this.register)
    
     console.log("RegisterComponent -> onSubmit -> locatdata", this.locatdata)
 
     const data = {
       ...this.register.value,
       designation: "User",
-      email:"sunit@gmail.com",
       loginType: "Password",
       location:{
         address:this.locatdata.city,
         lat:this.locatdata.lat,
         lng: this.locatdata.lon
       },
-      lastName:"deshmukh",
-      
+    
     }
 
-    console.log("RegisterComponent -> onSubmit -> register", this.register)
+   
     this.rs.registarUser(data).then(resData => {
     console.log("RegisterComponent -> onSubmit -> resData", resData)
       
