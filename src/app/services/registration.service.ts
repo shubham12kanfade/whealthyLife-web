@@ -1,3 +1,5 @@
+import { ApiCallService } from './api/apicall.service';
+
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -5,5 +7,10 @@ import { Injectable } from '@angular/core';
 })
 export class RegistrationService {
 
-  constructor() { }
+  constructor(public Ap:ApiCallService) { 
+
+  }
+  registarUser(data) {
+    return this.Ap.postData('api/v1/authentication/register/', data);
+  }
 }

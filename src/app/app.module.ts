@@ -1,3 +1,4 @@
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { CarouselModule } from 'ngx-owl-carousel-o';
@@ -16,6 +17,9 @@ import { HelpComponent } from './modules/help/help.component';
 import { BooktestsComponent } from './modules/booktests/booktests.component';
 import { HealthMedicineshealthComponent } from './modules/health-medicineshealth/health-medicineshealth.component';
 import { DoctorRegisterComponent } from './component/doctor-register/doctor-register.component';
+import { ApiCallService } from './services/api/apicall.service';
+import { HttpClientModule } from '@angular/common/http';
+
 
 // import { DoctorsComponent } from './modules/doctors/doctors.component';
 
@@ -35,7 +39,10 @@ import { DoctorRegisterComponent } from './component/doctor-register/doctor-regi
     BooktestsComponent,
     HealthMedicineshealthComponent,
     DoctorRegisterComponent,
+   
+
     
+
     // DoctorsComponent,
    
 
@@ -45,9 +52,13 @@ import { DoctorRegisterComponent } from './component/doctor-register/doctor-regi
     BrowserModule,
     AppRoutingModule,
     CarouselModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
+   
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [ApiCallService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
