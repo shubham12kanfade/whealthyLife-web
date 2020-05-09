@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CarouselModule } from 'ngx-owl-carousel-o';
+
 import { HomeRoutingModule } from './home-routing.module';
 
 
@@ -10,7 +10,7 @@ import { HomeRoutingModule } from './home-routing.module';
   imports: [
     CommonModule,
     HomeRoutingModule,
-    CarouselModule
+   
     
   ]
 })

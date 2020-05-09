@@ -7,7 +7,7 @@
             </p> -->
             <form method="post" action="#">
                 <div id="custom-search-input">
-                    <div class="adj input-group" >
+                    <div class="adj input-group">
                         <input type="text" class=" search-query" placeholder="Type test names and select from options">
                         <select class="city-select">
                             <option>Enter City</option>
@@ -79,8 +79,7 @@
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <img src="../assets/img/2451232.png" alt="wealthylife" class="img-fluid"
-                        data-aos="fade-left">
+                    <img src="../assets/img/2451232.png" alt="wealthylife" class="img-fluid" data-aos="fade-left">
                 </div>
             </div>
         </div>
@@ -243,8 +242,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="pic-middle" data-aos="fade-right">
-                        <img src="../assets/img/Healthcare-characters-vector-3-01.jpg" alt="wealthylife"
-                            class="img-fluid">
+                        <img src="../assets/img/Healthcare-characters-vector-3-01.jpg" alt="wealthylife" class="img-fluid">
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -263,65 +261,86 @@
         </div>
     </section>
 
-    <section class="category-doc">
-        <div class="container margin_60_35">
-            <h2 class="mb-3">TOP CATEGORIES</h2>
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
 
+    <section>
+        <div class="row">
+            <div class="container">
 
-                   
-                    <owl-carousel-o [options]="customOptions">
-                        <ng-template carouselSlide> 
-                            <a href="#">
-                                <div class="cat-content">
-                                    <div class="inner-cat-content">
-                                        <h2>Dietitian/Nutritionist</h2>
+                <div class="col-sm-12 pt-5 pb-5">
+                    <h2 class="mb-3">TOP CATEGORIES</h2>
+                    <owl-carousel-o [options]="customOptions" #review>
+                        <ng-template carouselSlide>
+                            <div class="pr-2 pl-2">
+                                <a>
+                                    <div class="cat-content">
+                                        <div class="inner-cat-content">
+                                            <h2>Dietitian/Nutritionist</h2>
+                                        </div>
+                                        <img src="../assets/img/Nutritionist.jpg" alt="img">
                                     </div>
-                                    <img src="../assets/img/Nutritionist.jpg" alt="img">
-                                </div>
-                            </a></ng-template>
-                        <ng-template carouselSlide><a href="#">
-                                <div class="cat-content">
-                                    <div class="inner-cat-content">
-                                        <h2>Gynaecologist</h2>
-                                    </div>
-                                    <img src="../assets/img/gynaecologist.jpg" alt="img">
-                                </div>
-                            </a></ng-template>
-                        <ng-template carouselSlide><a href="#">
-                                <div class="cat-content">
-                                    <div class="inner-cat-content">
-                                        <h2>Psychologist</h2>
-                                    </div>
-                                    <img src="../assets/img/Psychologist.jpg" alt="img">
-                                </div>
-                            </a></ng-template>
-                        <ng-template carouselSlide><a href="#">
-                            <div class="cat-content">
-                                <div class="inner-cat-content">
-                                    <h2>Dermatologist</h2>
-                                </div>
-                                <img src="../assets/img/dermatologist.jpg" alt="img">
+                                </a>
                             </div>
-                        </a></ng-template>
-                        <ng-template carouselSlide><a href="#">
-                            <div class="cat-content">
-                                <div class="inner-cat-content">
-                                    <h2>Homeopath</h2>
-                                </div>
-                                <img src="../assets/img/homeopathy.jpg" alt="img">
+
+                        </ng-template>
+                        <ng-template carouselSlide>
+                            <div class="pr-2 pl-2">
+                                <a>
+                                    <div class="cat-content">
+                                        <div class="inner-cat-content">
+                                            <h2>Gynaecologist</h2>
+                                        </div>
+                                        <img src="../assets/img/gynaecologist.jpg" alt="img">
+                                    </div>
+                                </a>
                             </div>
-                        </a></ng-template>
-                       
+                        </ng-template>
+                        <ng-template carouselSlide>
+                            <div class="pr-2 pl-2">
+                                <a>
+                                    <div class="cat-content">
+                                        <div class="inner-cat-content">
+                                            <h2>Psychologist</h2>
+                                        </div>
+                                        <img src="../assets/img/Psychologist.jpg" alt="img">
+                                    </div>
+                                </a>
+                            </div>
+                        </ng-template>
+                        <ng-template carouselSlide>
+                            <div class="pr-2 pl-2">
+                                <a>
+                                    <div class="cat-content">
+                                        <div class="inner-cat-content">
+                                            <h2>Dermatologist</h2>
+                                        </div>
+                                        <img src="../assets/img/dermatologist.jpg" alt="img">
+                                    </div>
+                                </a>
+                            </div>
+                        </ng-template>
+                        <ng-template carouselSlide>
+                            <div class="pr-2 pl-2">
+                                <a>
+                                    <div class="cat-content">
+                                        <div class="inner-cat-content">
+                                            <h2>Homeopath</h2>
+                                        </div>
+                                        <img src="../assets/img/homeopathy.jpg" alt="img">
+                                    </div>
+                                </a>
+                            </div>
+                        </ng-template>
+
                     </owl-carousel-o>
-
+                    <div class="row">
+                        <div class="lhs" (click)="review.prev()"> <i class="fa fa-chevron-circle-left fa-3x " aria-hidden="true"></i></div>
+                        <div class="rhs" (click)="review.next()"> <i class="fa fa-chevron-circle-right fa-3x " aria-hidden="true"></i></div>
+                    </div>
                 </div>
-                <div class="swiper-button-next swiper-button-white"></div>
-                <div class="swiper-button-prev swiper-button-white"></div>
             </div>
         </div>
     </section>
+
 
     <section class="clients">
         <div class="container margin_60_35">
@@ -339,8 +358,7 @@
                     </div>
                 </div>
                 <div class="col-md-5">
-                    <img src="../assets/img/Doctor-And-Patient.png" alt="wealthylife" class="img-fluid"
-                        data-aos="fade-left">
+                    <img src="../assets/img/Doctor-And-Patient.png" alt="wealthylife" class="img-fluid" data-aos="fade-left">
                 </div>
             </div>
         </div>
@@ -416,47 +434,63 @@
             <div class="swiper-container">
                 <div class="swiper-wrapper">
                     <owl-carousel-o [options]="customOptions1">
-                        <ng-template carouselSlide><div class="swiper-slide">
-                            <div class="c-logo">
-                                <img src="../assets/img/Thyrocare_Logo.png" alt="logo-client">
+                        <ng-template carouselSlide>
+                            <div class="swiper-slide">
+                                <div class="c-logo">
+                                    <img src="../assets/img/Thyrocare_Logo.png" alt="logo-client">
+                                </div>
                             </div>
-                        </div></ng-template>  
-                        <ng-template carouselSlide> <div class="swiper-slide">
-                            <div class="c-logo">
-                                <img src="../assets/img/lalpath.jpg" alt="logo-client">
+                        </ng-template>
+                        <ng-template carouselSlide>
+                            <div class="swiper-slide">
+                                <div class="c-logo">
+                                    <img src="../assets/img/lalpath.jpg" alt="logo-client">
+                                </div>
                             </div>
-                        </div></ng-template>  
-                        <ng-template carouselSlide><div class="swiper-slide">
-                            <div class="c-logo">
-                                <img src="../assets/img/pathcare.jpg" alt="logo-client">
+                        </ng-template>
+                        <ng-template carouselSlide>
+                            <div class="swiper-slide">
+                                <div class="c-logo">
+                                    <img src="../assets/img/pathcare.jpg" alt="logo-client">
+                                </div>
                             </div>
-                        </div></ng-template>
-                        <ng-template carouselSlide><div class="swiper-slide">
-                            <div class="c-logo">
-                                <img src="../assets/img/metropolis-logo.png" alt="logo-client">
+                        </ng-template>
+                        <ng-template carouselSlide>
+                            <div class="swiper-slide">
+                                <div class="c-logo">
+                                    <img src="../assets/img/metropolis-logo.png" alt="logo-client">
+                                </div>
                             </div>
-                        </div></ng-template>  
-                        <ng-template carouselSlide><div class="swiper-slide">
-                            <div class="c-logo">
-                                <img src="../assets/img/1457378413.jpg" alt="logo-client">
+                        </ng-template>
+                        <ng-template carouselSlide>
+                            <div class="swiper-slide">
+                                <div class="c-logo">
+                                    <img src="../assets/img/1457378413.jpg" alt="logo-client">
+                                </div>
                             </div>
-                        </div></ng-template>  
-                        <ng-template carouselSlide><div class="swiper-slide">
-                            <div class="c-logo">
-                                <img src="../assets/img/lalpath.jpg" alt="logo-client">
+                        </ng-template>
+                        <ng-template carouselSlide>
+                            <div class="swiper-slide">
+                                <div class="c-logo">
+                                    <img src="../assets/img/lalpath.jpg" alt="logo-client">
+                                </div>
                             </div>
-                        </div></ng-template>  
-                        <ng-template carouselSlide><div class="swiper-slide">
-                            <div class="c-logo">
-                                <img src="../assets/img/pathcare.jpg" alt="logo-client">
+                        </ng-template>
+                        <ng-template carouselSlide>
+                            <div class="swiper-slide">
+                                <div class="c-logo">
+                                    <img src="../assets/img/pathcare.jpg" alt="logo-client">
+                                </div>
                             </div>
-                        </div></ng-template>  
-                        <ng-template carouselSlide><div class="swiper-slide">
-                            <div class="c-logo">
-                                <img src="../assets/img/metropolis-logo.png" alt="logo-client">
+                        </ng-template>
+                        <ng-template carouselSlide>
+                            <div class="swiper-slide">
+                                <div class="c-logo">
+                                    <img src="../assets/img/metropolis-logo.png" alt="logo-client">
+                                </div>
                             </div>
-                        </div></ng-template>  
-                    </owl-carousel-o> 
+                        </ng-template>
+                    </owl-carousel-o>
                 </div>
             </div>
         </div>
@@ -466,59 +500,58 @@
     <section class="testimonial">
         <div class="container margin_120_95">
             <div class="row">
-                <div class="col-md-7" data-aos="fade-right">
+                <div class="col-md-7">
                     <h2 class="text-center">Our Happy Customers</h2>
-                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                        <!-- Carousel indicators -->
-                        <ol class="carousel-indicators">
-                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                            <li data-target="#myCarousel" data-slide-to="1"></li>
-                            <li data-target="#myCarousel" data-slide-to="2"></li>
-                        </ol>
-                        <!-- Wrapper for carousel items -->
-                        <div class="carousel-inner">
-                            <div class="item carousel-item active">
-                                <p class="testimonial">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu
-                                    sem tempor, varius
-                                    quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada
-                                    ante. Idac bibendum
-                                    scelerisque non non purus. Suspendisse varius nibh non aliquet.</p>
-                                <p class="overview"><b>Paula Wilson</b>, Media Analyst</p>
-                            </div>
-                            <div class="item carousel-item">
-                                <p class="testimonial">Vestibulum quis quam ut magna consequat faucibus. Pellentesque
-                                    eget nisi a mi
-                                    suscipit tincidunt. Utmtc tempus dictum risus. Pellentesque viverra sagittis quam at
-                                    mattis. Suspendisse
-                                    potenti. Aliquam sit amet gravida nibh, facilisis gravida odio.</p>
-                                <p class="overview"><b>Antonio Moreno</b>, Web Developer</p>
-                            </div>
-                            <div class="item carousel-item">
-                                <p class="testimonial">Phasellus vitae suscipit justo. Mauris pharetra feugiat ante id
-                                    lacinia. Etiam
-                                    faucibus mauris id tempor egestas. Duis luctus turpis at accumsan tincidunt.
-                                    Phasellus risus risus,
-                                    volutpat vel tellus ac, tincidunt fringilla massa. Etiam hendrerit dolor eget
-                                    rutrum.</p>
-                                <p class="overview"><b>Michael Holz</b>, Seo Analyst</p>
-                            </div>
+                    <div>
+                        <owl-carousel-o [options]="qwe" #OurHappyCustomers>
+                            <ng-template carouselSlide>
+                                <div class="slidertest">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Idac bibendum scelerisque non non purus. Suspendisse
+                                        varius nibh non aliquet.</p>
+                                    <p><b>Paula Wilson</b>, Media Analyst</p>
+                                </div>
+                            </ng-template>
+
+
+
+                            <ng-template carouselSlide>
+                                <div class="slidertest">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Idac bibendum scelerisque non non purus. Suspendisse
+                                        varius nibh non aliquet.</p>
+                                    <p><b>Paula Wilson</b>, Media Analyst</p>
+                                </div>
+                            </ng-template>
+
+
+                            <ng-template carouselSlide>
+                                <div class="slidertest">
+                                    <p>Vestibulum quis quam ut magna consequat faucibus. Pellentesque eget nisi a mi suscipit tincidunt. Utmtc tempus dictum risus. Pellentesque viverra sagittis quam at mattis. Suspendisse potenti. Aliquam sit amet gravida
+                                        nibh, facilisis gravida odio.</p>
+                                    <p><b>Antonio Moreno</b>, Web Developer</p>
+                                </div>
+                            </ng-template>
+
+
+                            <ng-template carouselSlide>
+                                <div class="slidertest">
+                                    <p>Phasellus vitae suscipit justo. Mauris pharetra feugiat ante id lacinia. Etiam faucibus mauris id tempor egestas. Duis luctus turpis at accumsan tincidunt. Phasellus risus risus, volutpat vel tellus ac, tincidunt fringilla
+                                        massa. Etiam hendrerit dolor eget rutrum.
+                                    </p>
+                                    <p><b>Michael Holz</b>, Seo Analyst</p>
+                                </div>
+                            </ng-template>
+                        </owl-carousel-o>
+                        <div class="row">
+                            <div class="blhs" (click)="OurHappyCustomers.prev()"> <i class="fa fa-chevron-circle-left fa-3x " aria-hidden="true"></i></div>
+                            <div class="brhs" (click)="OurHappyCustomers.next()"> <i class="fa fa-chevron-circle-right fa-3x " aria-hidden="true"></i></div>
                         </div>
-                        <!-- Carousel controls -->
-                        <a class="carousel-control left carousel-control-prev" href="#myCarousel" data-slide="prev">
-                            <i class="fa fa-angle-left"></i>
-                        </a>
-                        <a class="carousel-control right carousel-control-next" href="#myCarousel" data-slide="next">
-                            <i class="fa fa-angle-right"></i>
-                        </a>
                     </div>
+
                 </div>
                 <div class="col-md-5" data-aos="fade-left">
                     <h2 class="mb-3">Reliable Results. Always.</h2>
                     <div class="intrinsic">
-                        <iframe width="560" height="315"
-                            src="https://www.youtube-nocookie.com/embed/jo5gQxB0DlE?rel=0&amp;controls=0&amp;showinfo=0"
-                            frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/jo5gQxB0DlE?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
@@ -544,17 +577,16 @@
                             <li>Store health records</li>
                             <li>Read health tips</li>
                         </ul>
-                        <a href="#" class="app"><img src="../assets/img/1_EiZrcN_DIapbZaxutxbZRA.png"
-                                alt="app"></a>
+                        <a href="#" class="app"><img src="../assets/img/1_EiZrcN_DIapbZaxutxbZRA.png" alt="app"></a>
                     </div>
                 </div>
             </div>
         </div>
-    </section> 
-</main> 
+    </section>
+</main>
 
 
-    <!-- modal -->
+<!-- modal -->
 <div class="container">
     <!-- The Modal -->
     <div class="modal" id="myModal">
@@ -574,9 +606,7 @@
                             </div>
                         </div>
                         <div class="col-sm-8">
-                            <p class="lb"><span class="pharmacy">Get up to 18% off on allopathy medicines.</span> Also,
-                                earn up to ₹500 with
-                                Paytm, ₹300 Amazon Pay & more*</p>
+                            <p class="lb"><span class="pharmacy">Get up to 18% off on allopathy medicines.</span> Also, earn up to ₹500 with Paytm, ₹300 Amazon Pay & more*</p>
                             <button class="btn btn-danger btn-lg bbt">Order Medicines</button>
                         </div>
                     </div>

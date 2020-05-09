@@ -1,14 +1,20 @@
+import { RouterModule } from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DoctorRegisterComponent } from './doctor-register.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { DoctorRegisterRoutingModule } from './doctor-register-routing.module';
+
 
 
 @NgModule({
-  declarations: [],
+  declarations: [DoctorRegisterComponent],
   imports: [
     CommonModule,
-    DoctorRegisterRoutingModule
+    FormsModule,
+    ReactiveFormsModule,
+  
+    
   ]
 })
 export class DoctorRegisterModule { }
