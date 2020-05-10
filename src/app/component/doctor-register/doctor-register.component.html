@@ -1,148 +1,256 @@
 <section>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12 nma">
-                <ul class="nav nav-pills">
-                    <li class="nav-item">
-                        <a class="nav-link" data-toggle="pill" routerLink="/login">Login</a>
-                    </li>
-                    <!-- <li class="nav-item">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 nma">
+        <ul class="nav nav-pills">
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="pill" routerLink="/login">Login</a>
+          </li>
+          <!-- <li class="nav-item">
                         <a class="nav-link active" data-toggle="pill" href="#Register">Register</a>
                     </li> -->
-                </ul>
+        </ul>
 
-                <!-- Tab panes -->
-                <div class="tab-content">
-                    <div class="tab-pane container active" id="Login"></div>
-                    <div class="tab-pane container fade" id="Register"></div>
-                </div>
-            </div>
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <div class="tab-pane container active" id="Login"></div>
+          <div class="tab-pane container fade" id="Register"></div>
         </div>
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="row">
-                    <div class="col-sm-6 sidimg">
-                        <img src="../assets/img/illustration.webp">
-                    </div>
-                    <div class="col-sm-6 box">
-                        <div class="outer-box center-align">
-                            <div class="box-header">
-
-                                <div>
-                                    <p class="no-bottom-margin display-inline" id="joinwealthylife">Join 125,000+
-                                        doctors</p>
-
-                                    <a routerLink="/register" class="register font-12 black-link  align-top" id="normal-doctor-signup">
-                                    
-                                        <span class="blue-link">Not a doctor?</span>
-                                    </a>
-                                    <!-- <p class="register font-14 align-top">Not a doctor?&nbsp;</p> -->
-                                    <div style="clear:both"></div>
-                                </div>
-
-                            </div>
-                            <div class="outer-space">
-                                <p class="no-bottom-margin">Full Name</p>
-                                <div class="padding-top-8">
-                                    <input autofocus="" class="form-control email-text" id="name" name="name"
-                                        placeholder="Full Name" type="text" value="">
-                                    <span id="nameErrorBlock" class="error-block display-block">
-
-                                    </span>
-                                </div>
-                                <input type="hidden" id="is-patient-signup">
-
-                                <div class="padding-top-8">
-                                    <p class="no-bottom-margin">Mobile Number</p>
-                                    <div class="padding-top-8">
-                                        <div class="select-box"><select class="countryCode" id="country" name="country">
-                                                <option selected="" value="IN">+91(IND)</option>
-                                                <option value="SG">+65(SGP)</option>
-                                                <option value="PH">+63(PHL)</option>
-                                                <option value="MY">+60(MYS)</option>
-                                                <option value="ID">+62(IDN)</option>
-                                                <option value="BR">+55(BRA)</option>
-                                                <option value="MX">+52(MEX)</option>
-                                                <option value="AR">+54(ARG)</option>
-                                                <option value="CL">+56(CHL)</option>
-                                                <option value="VN">+84(VNM)</option>
-                                                <option value="AE">+971(UAE)</option>
-                                                <option value="TZ">+255(TZA)</option>
-                                                <option value="BH">+973(BH)</option>
-                                                <option value="SA">+966(SA)</option>
-                                                <option value="US">+1(USA)</option>
-                                            </select></div>
-                                        <div class="mobile-number">
-                                            <input class="form-control email-text " id="mobile" name="mobile"
-                                                placeholder="Mobile Number" type="tel" value="">
-                                        </div>
-                                    </div>
-                                    <span id="mobileErrorBlock" class="error-block display-block">
-
-                                    </span>
-                                </div>
-
-                                <div style="clear:both;"></div>
-                                <div class="padding-top-8">
-                                    <p class="no-bottom-margin">Create Password</p>
-                                    <div class="padding-top-8">
-                                        <input class="form-control email-text" id="password" name="password"
-                                            placeholder="Password" type="password" value="">
-                                        <div class="password-strength">
-                                            Password Strength: <span id="password-strength-indicator">&nbsp;</span>
-                                        </div>
-                                        <span id="passwordErrorBlock" class="error-block display-block">
-
-                                        </span>
-                                    </div>
-                                </div>
-
-                                <div>
-                                    <input id="csrf_token" name="csrf_token" type="hidden"
-                                        value="ImNjOWM3ODhkNWFjZTY4NGZiZDgwZTllN2MyMzAyZTQ4YWI1MTc4OWIi.Xqm0Gw.TB1NvM_3DNESu158HhBU7H2xYnk">
-                                    <input id="intent" name="intent" type="hidden" value="fabric">
-                                    <input id="source" name="source" type="hidden" value="">
-                                    <input id="view_type" name="view_type" type="hidden" value="normal">
-                                    <input id="type" name="type" type="hidden" value="patient">
-                                </div>
-
-                                <div>
-                                    <div class="padding-top-20 font-12 textMuted">
-                                        <div class="otp-flow">
-                                            <div class="otp_flow">
-                                                <input checked="checked" id="subscribe_promotion"
-                                                    name="subscribe_promotion" type="checkbox" value="y">
-                                                <label for="subscribe_promotion"></label>
-                                            </div>
-                                            <label class="mousePointerSignup font-12 textMuted line-height-20"
-                                                for="subscribe_promotion">Receive relevant offers and promotional
-                                                communication from Wealthy Life</label>
-                                            <div class="padding-top-8 textMuted font-10 sign-up-terms">
-                                                <p class="no-bottom-margin">
-
-                                                    By signing up, I agree to <a href="#" target="_blank"
-                                                        id="terms">terms</a>
-
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div style="clear:both;"></div>
-                                    <div class="padding-top-20">
-                                        <div id="recaptcha-container-register"
-                                            data-sitekey="6LcgVBgUAAAAANU9A74W9CtzZ3NeJdhbGIoUbDXG"
-                                            data-size="invisible">
-                                        </div>
-                                        <button class="btn  btn-lg common-btn wealthylife-btn" id="EmailRegister">Send
-                                            OTP</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="row">
+          <div class="col-sm-6 sidimg">
+            <img src="../assets/img/illustration.webp" />
+          </div>
+          <div class="col-sm-6 box">
+            <form [formGroup]="register" (ngSubmit)="onSubmit()">
+              <div class="outer-box center-align">
+                <div class="box-header">
+                  <div>
+                    <p
+                      class="no-bottom-margin display-inline"
+                      id="joinwealthylife"
+                    >
+                      Join Wealthy Life
+                    </p>
+
+                    <a
+                      routerLink="/doctor_signup"
+                      class="register font-12 black-link align-top"
+                      id="normal-doctor-signup"
+                    >
+                      <span class="blue-link">Register Here</span>
+                    </a>
+                    <p class="register font-14 align-top">
+                      Are you a doctor?&nbsp;
+                    </p>
+                    <div style="clear: both;"></div>
+                  </div>
+                </div>
+                <div class="outer-space">
+                  <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                      <p class="no-bottom-margin">First Name</p>
+                      <div class="padding-top-8">
+                        <input
+                          autofocus=""
+                          class="form-control email-text"
+                          id="name"
+                          name="name"
+                          formControlName="firstName"
+                          placeholder="First Name"
+                          type="text"
+                          value=""
+                        />
+                        <span
+                          id="nameErrorBlock"
+                          class="error-block display-block"
+                        >
+                        </span>
+                      </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                      <p class="no-bottom-margin">Last Name</p>
+                      <div class="padding-top-8">
+                        <input
+                          autofocus=""
+                          class="form-control email-text"
+                          name="lastName"
+                          formControlName="lastName"
+                          placeholder="Last Name"
+                          type="text"
+                          value=""
+                        />
+                        <span
+                          id="nameErrorBlock"
+                          class="error-block display-block"
+                        >
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <input type="hidden" id="is-patient-signup" />
+
+                  <div class="padding-top-8">
+                    <p class="no-bottom-margin">Mobile Number</p>
+                    <div class="padding-top-8">
+                      <div class="select-box">
+                        <select class="countryCode" id="country" name="country"
+                          ><option selected="" value="IN">+91(IND)</option
+                          ><option value="SG">+65(SGP)</option
+                          ><option value="PH">+63(PHL)</option
+                          ><option value="MY">+60(MYS)</option
+                          ><option value="ID">+62(IDN)</option
+                          ><option value="BR">+55(BRA)</option
+                          ><option value="MX">+52(MEX)</option
+                          ><option value="AR">+54(ARG)</option
+                          ><option value="CL">+56(CHL)</option
+                          ><option value="VN">+84(VNM)</option
+                          ><option value="AE">+971(UAE)</option
+                          ><option value="TZ">+255(TZA)</option
+                          ><option value="BH">+973(BH)</option
+                          ><option value="SA">+966(SA)</option
+                          ><option value="US">+1(USA)</option></select
+                        >
+                      </div>
+                      <div class="mobile-number">
+                        <input
+                          class="form-control email-text"
+                          id="mobile"
+                          name="mobile"
+                          placeholder="Mobile Number"
+                          formControlName="mobileNumber"
+                          type="tel"
+                          value=""
+                        />
+                      </div>
+                    </div>
+                    <span
+                      id="mobileErrorBlock"
+                      class="error-block display-block"
+                    >
+                    </span>
+                  </div>
+                  <div style="clear: both;"></div>
+                  <p class="no-bottom-margin padding-top-8">Email</p>
+                  <div class="padding-top-8">
+                    <input
+                      autofocus=""
+                      class="form-control email-text"
+                      formControlName="email"
+                      placeholder="Enter your Email"
+                      type="text"
+                      value=""
+                    />
+                    <span id="nameErrorBlock" class="error-block display-block">
+                    </span>
+                  </div>
+
+                  <div class="padding-top-8">
+                    <p class="no-bottom-margin">Create Password</p>
+                    <div class="padding-top-8">
+                      <input
+                        class="form-control email-text"
+                        id="password"
+                        name="password"
+                        placeholder="Password"
+                        type="password"
+                        formControlName="password"
+                        value=""
+                      />
+                      <div class="password-strength">
+                        Password Strength:
+                        <span id="password-strength-indicator">&nbsp;</span>
+                      </div>
+                      <span
+                        id="passwordErrorBlock"
+                        class="error-block display-block"
+                      >
+                      </span>
+                    </div>
+                  </div>
+
+                  <div>
+                    <input
+                      id="csrf_token"
+                      name="csrf_token"
+                      type="hidden"
+                      value="ImNjOWM3ODhkNWFjZTY4NGZiZDgwZTllN2MyMzAyZTQ4YWI1MTc4OWIi.Xqm0Gw.TB1NvM_3DNESu158HhBU7H2xYnk"
+                    />
+                    <input
+                      id="intent"
+                      name="intent"
+                      type="hidden"
+                      value="fabric"
+                    />
+                    <input id="source" name="source" type="hidden" value="" />
+                    <input
+                      id="view_type"
+                      name="view_type"
+                      type="hidden"
+                      value="normal"
+                    />
+                    <input
+                      id="type"
+                      name="type"
+                      type="hidden"
+                      value="patient"
+                    />
+                  </div>
+
+                  <div>
+                    <div class="padding-top-20 font-12 textMuted">
+                      <div class="otp-flow">
+                        <div class="otp_flow">
+                          <input
+                            checked="checked"
+                            id="subscribe_promotion"
+                            name="subscribe_promotion"
+                            type="checkbox"
+                            value="y"
+                          />
+                          <label for="subscribe_promotion"></label>
+                        </div>
+                        <label
+                          class="mousePointerSignup font-12 textMuted line-height-20"
+                          for="subscribe_promotion"
+                          >Receive relevant offers and promotional communication
+                          from Wealthy Life</label
+                        >
+                        <div
+                          class="padding-top-8 textMuted font-10 sign-up-terms"
+                        >
+                          <p class="no-bottom-margin">
+                            By signing up, I agree to
+                            <a href="#" target="_blank" id="terms">terms</a>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div style="clear: both;"></div>
+                    <div class="padding-top-20">
+                      <div
+                        id="recaptcha-container-register"
+                        data-sitekey="6LcgVBgUAAAAANU9A74W9CtzZ3NeJdhbGIoUbDXG"
+                        data-size="invisible"
+                      ></div>
+                      <button
+                        class="btn btn-lg common-btn wealthylife-btn"
+                        type="submit"
+                      >
+                        Submit
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
