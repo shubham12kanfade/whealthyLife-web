@@ -13,8 +13,8 @@ import { CommonModule } from '@angular/common';
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-  
-    
+
+
   ]
 })
 export class DoctorRegisterModule { }

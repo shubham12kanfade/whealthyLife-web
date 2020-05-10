@@ -7,8 +7,8 @@
 .nav{
     display: flex;
     align-items: center;
-    justify-content: center; 
-} 
+    justify-content: center;
+}
 .box{
     padding-bottom: 24px;
 }
@@ -212,16 +212,16 @@ p {
 
 input[type="radio"], input[type="checkbox"] {
     margin: 4px 0 0;
-  
+
     line-height: normal;
 }
 input[type="checkbox"], input[type="radio"] {
-    
+
     box-sizing: border-box;
     padding: 0;
 }
 .remember input[type=checkbox]:checked+label:after {
-    
+
     opacity: 1;
 }
 
@@ -263,7 +263,7 @@ label[for="otp_flow"] {
 
 
 .otp_flow label {
-    
+
     position: absolute;
     width: 16px;
     height: 16px;
@@ -272,24 +272,24 @@ label[for="otp_flow"] {
     border-radius: 1px;
     border: solid 1px #b4b4be;
     background: white;
-    
+
 }
 label {
     display: inline-block;
     max-width: 100%;
     margin-bottom: 5px;
-    
+
 }
 .otp_flow input[type=checkbox]:checked+label, .remember input[type=checkbox]:checked+label {
     background: #14bef0;
     border: 0;
 }
 .otp_flow input[type=checkbox]:checked+label:after {
-    
+
     opacity: 1;
 }
 .otp_flow label:after {
-    
+
     opacity: 0;
     content: '';
     position: absolute;
@@ -339,3 +339,10 @@ button, input, optgroup, select, textarea {
 //     line-height: 1.33;
 //     border-radius: 6px;
 // }
+.ng-valid[required], .ng-valid:not(form)  {
+  border: 1px solid #42A948; /* green */
+}
+
+.ng-invalid:not(form)  {
+  border: 1px solid #a94442; /* red */
+}
