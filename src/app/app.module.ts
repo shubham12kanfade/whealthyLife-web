@@ -19,7 +19,7 @@ import { HealthMedicineshealthComponent } from './modules/health-medicineshealth
 import { DoctorRegisterComponent } from './component/doctor-register/doctor-register.component';
 import { ApiCallService } from './services/api/apicall.service';
 import { HttpClientModule } from '@angular/common/http';
-
+import { CookieService } from 'ngx-cookie-service';
 
 // import { DoctorsComponent } from './modules/doctors/doctors.component';
 
@@ -58,7 +58,7 @@ import { HttpClientModule } from '@angular/common/http';
    
     HttpClientModule,
   ],
-  providers: [ApiCallService],
+  providers: [ApiCallService,CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
