@@ -1,0 +1,176 @@
+.sidimg{
+    img{
+        height: 400px;
+        width: 400px;
+    }
+}
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+} 
+.box{
+    padding-bottom: 24px;
+}
+.outer-space {
+    padding: 20px 25px;
+}
+.center-align {
+    width: 400px;
+    display: block;
+    margin: 0 auto;
+}
+
+.outer-box {
+    border: solid 1px rgba(216,216,216,0.5);
+    border-radius: 4px;
+    font-family: 'Camphor';
+    color: #787887;
+}
+.box-header {
+    font-size: 18px;
+    padding: 12.5px 25px;
+    border-bottom: solid 1px rgba(216,216,216,0.5);
+    height: 50px;
+    width: 100%;
+}
+.display-inline {
+    display: inline;
+}
+.outer-space {
+    padding: 20px 25px;
+}
+#previewMobile {
+    min-height: 50px;
+}
+.no-bottom-margin {
+    margin-bottom: 0;
+    color: rgb(47, 47, 47);
+    font-size: 15px !important;
+}
+
+p {
+    margin: 0 0 10px;
+}
+.mobile-text-preview {
+    font-family: 'Camphor';
+    font-size: 20px;
+    color: #7f7f7f;
+    padding: 10px 15px 0 0;
+    display: inline-block;
+}
+.edit-mobile {
+    height: 16px;
+    color: #7f7f7f;
+}
+.hide {
+    display: none!important;
+}
+.edit-number {
+    padding-bottom: 10px;
+}
+.mobile-field {
+    width: 230px;
+    margin-right: 18px;
+}
+.send-otp {
+    width: 100px;
+    height: 35px;
+    float: right;
+}
+#number-error {
+    width: 186px;
+    display: inline;
+    min-height: 1px;
+    float: left;
+}
+.cancel-edit {
+    cursor: pointer;
+    padding-top: 8px;
+    width: 48px;
+    color: #E35A49;
+    display: inline-block;
+}
+.otp {
+    padding: 20px 0 8px 0;
+    font-size: 14px;
+}
+.email-text {
+    height: 35px;
+    width: 100%;
+}
+
+.font-12 {
+    font-size: 12px;
+}
+.form-control {
+    border-radius: 2px;
+    border: solid 1px #cacad3;
+}
+.form-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+.error-block {
+    color: #E35A49;
+    font-size: 12px;
+}
+.callotp {
+    float: left;
+    padding: 10px 0 25px 0;
+    font-size: 12px;
+}
+.cursor-pointer {
+    cursor: pointer;
+}
+.callotp-text {
+    color: #14bef0;
+}
+.resend {
+    padding: 10px 0 25px 0;
+    font-size: 12px;
+    display: inline-block;
+    float: right;
+}
+.resend a {
+    color: #14bef0!important;
+}
+input, button, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+.hide {
+    display: none!important;
+}
+.wealthylife-btn {
+    background: #13bef0;
+    color: #FFF;
+}
+
+.common-btn {
+    border: 1px solid #14bef0;
+    width: 100%;
+    height: 45px;
+    font-family: 'Camphor';
+    font-size: 14px;
+    text-align: center;
+    vertical-align: middle;
+    box-sizing: border-box;
+    border-radius: 3px;
+    line-height: 24px;
+}

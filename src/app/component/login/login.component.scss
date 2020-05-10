@@ -14,6 +14,10 @@
    justify-content: center; 
   
 }
+.nav-pills>li+li {
+    margin-left: 2px;
+    font-size: 14px;
+}
 .outer-space {
     padding: 20px 25px;
 }
@@ -31,6 +35,7 @@
 }
 .padding-bottom-8 {
     padding-bottom: 8px;
+    font-size: 15px;
 }
 
 .email-text {

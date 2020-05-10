@@ -20,6 +20,7 @@ import { DoctorRegisterComponent } from './component/doctor-register/doctor-regi
 import { ApiCallService } from './services/api/apicall.service';
 import { HttpClientModule } from '@angular/common/http';
 import { CookieService } from 'ngx-cookie-service';
+import { VerifyOtpComponent } from './component/verify-otp/verify-otp.component';
 
 // import { DoctorsComponent } from './modules/doctors/doctors.component';
 
@@ -39,6 +40,7 @@ import { CookieService } from 'ngx-cookie-service';
     BooktestsComponent,
     HealthMedicineshealthComponent,
     DoctorRegisterComponent,
+    VerifyOtpComponent,
    
 
     
