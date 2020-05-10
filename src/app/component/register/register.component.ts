@@ -1,8 +1,10 @@
+
 import { LocationService } from './../../services/location.service';
 import { RegistrationService } from './../../services/registration.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -22,10 +24,11 @@ export class RegisterComponent implements OnInit {
   });
   locatdata: any;
 
-  constructor(public rs:RegistrationService, public LocationService:LocationService) 
+  constructor(public rs:RegistrationService, public LocationService:LocationService, private router: Router) 
   {
     this.getLocation();
     console.log("RegisterComponent -> onSubmit -> locatdata", this.locatdata)
+
 
   }
   
@@ -36,7 +39,7 @@ export class RegisterComponent implements OnInit {
       console.log("HeaderComponent -> res", res)
     });
   }
-  
+ 
   onSubmit() {
  
     console.log("RegisterComponent -> onSubmit -> register", this.register)
@@ -58,11 +61,20 @@ export class RegisterComponent implements OnInit {
    
     this.rs.registarUser(data).then(resData => {
     console.log("RegisterComponent -> onSubmit -> resData", resData)
-      
+  
+   if(resData.status=="SUCCESS"){
+   
+       this.router.navigate(['/login']);
+       
+       
+   }
+     
     }).catch(error => {
     console.log("RegisterComponent -> onSubmit -> error", error)
      
     })
+
+
     this.register.reset();
 
    }
