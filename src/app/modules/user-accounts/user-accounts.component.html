@@ -1,217 +1,319 @@
+<div class="wealthylife_account_body">
+    <div class="form">
+        <div class="container_16 bottompadding_1 grey_text_444">
+            <div class="grid_16 min_height_400">
+                <div class="user-profile">
+                    <div class="user-profile__header">
+                        Accounts
+                        <button class="c-button c-button--primary c-button--md" onclick="submitProfileForm()"
+                            tabindex="14">Save changes</button>
+                    </div>
+                    <form id="edit-profile-form" method="POST" action="/edit_profile">
+                        <input id="csrf_token" name="csrf_token" type="hidden"
+                            value="IjU0NTVkNjFiYzgyMTNhYjhmZDY5Mzc5ZDAxNTAyNjliYjgxMjY2ODEi.XrkMeA.lo8wL2SG3EobqlN3vKSktWnapeQ">
+                        <div class="user-profile__content">
+                            <div class="user-profile__content__section">
+                                <div class="user-profile__content__section__row">
+                                    <div class="user-profile__content__section__row__column">
+                                        <div class="o-profile-photo">
+                                            <label>Profile photo</label>
+                                            <div class="o-profile-photo__cont">
+                                                <div class="dummy"></div>
+                                                <div class="o-profile-photo__cont__img">
+                                                    <img id="profile-photo"
+                                                        src="../assets/img/medium_thumbnail.png">
+                                                </div>
+                                            </div>
+                                            <div class="o-profile-photo__desc">
+                                                <div class="o-profile-photo__desc__text">
+                                                    Pick a photo from your computer
+                                                </div>
+                                                <div class="o-profile-photo__desc__actions">
 
-<div class="container_16 bottompadding_1 grey_text_444">
-    <div class="grid_16 min_height_400">
-        <div class="user-profile">
-            <div class="user-profile__header">
-                Accounts
-                <button class="c-button c-button--primary c-button--md">Save
-                    changes</button>
-            </div>
-            <form id="edit-profile-form" method="POST" action="/edit_profile">
-                <input id="csrf_token" name="csrf_token" type="hidden"
-                    value="IjEyMDc2MzRiMTE3Mjc1ODJlN2Q0N2MxYmFkODU0NzVhZTczYjExZjQi.Xqq_bw.V-C9CoCZ8PGsQmDaZicMJJ3K3N8">
-                <div class="user-profile__content">
-                    <div class="user-profile__content__section">
-                        <div class="user-profile__content__section__row">
-                            <div class="user-profile__content__section__row__column">
-                                <div class="o-profile-photo">
-                                    <label>Profile photo</label>
-                                    <div class="o-profile-photo__cont">
-                                        <div class="dummy"></div>
-                                        <div class="o-profile-photo__cont__img">
-                                            <img id="profile-photo" src="../assets/img/medium_thumbnail.png">
+                                                    <input type="button" name="add-photo" value="Add Photo"
+                                                        onclick="updatePhoto()">
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="o-profile-photo__desc">
-                                        <div class="o-profile-photo__desc__text">
-                                            Pick a photo from your computer
-                                        </div>
-                                        <div class="o-profile-photo__desc__actions">
+                                    <div class="user-profile__content__section__row__column">
+                                        <div class="c-input c-input--text has-value">
+                                            <input id="name" name="name" tabindex="1" type="text" value="madha vyas">
+                                            <label for="name">
+                                                Name<span>*</span>
+                                            </label>
 
-                                            <input type="button" name="add-photo" value="Add Photo"
-                                                onclick="updatePhoto()">
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="user-profile__content__section">
+                                <div class="user-profile__content__section__row">
+                                    <div class="user-profile__content__section__row__column">
+                                        <div class="c-input c-input--text disabled">
+                                            <input autocomplete="off" id="mobile" name="mobile" type="text"
+                                                value="+919284565546">
+                                            <label>Phone number</label>
+
+                                            <a routerLink="/accounts/verify_number">Edit</a>
+
+                                        </div>
+                                    </div>
+                                    <div class="user-profile__content__section__row__column">
+                                        <div class="c-input c-input--text disabled">
+                                            <input type="text" value="" autocomplete="off">
+                                            <label>Email Address</label>
+
+                                            <a routerLink="/accounts/add_email">Add</a>
+
+                                        </div>
+                                    </div>
+                                    <div class="user-profile__content__section__row__column">
+                                        <div class="c-input c-input--select">
+                                            <select id="gender" name="gender" tabindex="-1" class="selectized"
+                                                style="display: none;">
+                                                <option value="" selected="selected"></option>
+                                            </select>
+                                            <div class="selectize-control single">
+                                                <div class="selectize-input items not-full has-options"><input
+                                                        type="text" autocomplete="off" tabindex="2"
+                                                        id="gender-selectized" placeholder="Select an option     "
+                                                        style="width: 122.031px; opacity: 1; position: relative; left: 0px;">
+                                                </div>
+                                                <div class="selectize-dropdown single"
+                                                    style="display: none; width: 240px; top: 34px; left: 0px; visibility: visible;">
+                                                    <div class="selectize-dropdown-content">
+                                                        <div class="option" data-selectable="" data-value="M">Male</div>
+                                                        <div class="option" data-selectable="" data-value="F">Female
+                                                        </div>
+                                                        <div class="option" data-selectable="" data-value="O">Other
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <label for="gender-selectized">
+                                                Gender
+                                            </label>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="user-profile__content__section__row">
+                                    <div class="user-profile__content__section__row__column">
+                                        <div class="c-input c-input--text">
+                                            <input id="dob" name="dob" tabindex="3" type="text" value=""
+                                                class="hasDatepicker">
+                                            <label for="dob">
+                                                Date of birth
+                                            </label>
+
+                                        </div>
+
+                                    </div>
+                                    <div class="user-profile__content__section__row__column">
+                                        <div class="c-input c-input--select">
+                                            <select id="blood_group" name="blood_group" tabindex="-1" class="selectized"
+                                                style="display: none;">
+                                                <option value="" selected="selected"></option>
+                                            </select>
+                                            <div class="selectize-control single">
+                                                <div class="selectize-input items not-full has-options"><input
+                                                        type="text" autocomplete="off" tabindex="4"
+                                                        id="blood_group-selectized" placeholder="Select an option     "
+                                                        style="width: 122.031px;"></div>
+                                                <div class="selectize-dropdown single"
+                                                    style="display: none; width: 240px; top: 34px; left: 0px;">
+                                                    <div class="selectize-dropdown-content"></div>
+                                                </div>
+                                            </div>
+                                            <label for="blood_group-selectized">
+                                                Blood group
+                                            </label>
+
+                                        </div>
+
+                                    </div>
+                                    <div class="user-profile__content__section__row__column">
+
+                                        <div class="c-input c-input--select has-value">
+                                            <select id="timezone" name="timezone" tabindex="-1" class="selectized"
+                                                style="display: none;">
+                                                <option value="Asia/Kolkata" selected="selected">(UTC+05:30)
+                                                    Asia/Kolkata</option>
+                                            </select>
+                                            <div class="selectize-control single">
+                                                <div class="selectize-input items full has-options has-items">
+                                                    <div class="item" data-value="Asia/Kolkata">(UTC+05:30) Asia/Kolkata
+                                                    </div><input type="text" autocomplete="off" tabindex="5"
+                                                        id="timezone-selectized" style="width: 4px;">
+                                                </div>
+                                                <div class="selectize-dropdown single"
+                                                    style="display: none; width: 240px; top: 34px; left: 0px;">
+                                                    <div class="selectize-dropdown-content"></div>
+                                                </div>
+                                            </div>
+                                            <label for="timezone-selectized">
+                                                Timezone
+                                            </label>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="user-profile__content__section">
+                                <div class="user-profile__content__section__header">
+                                    Address
+                                </div>
+                                <div class="user-profile__content__section__row">
+                                    <div class="user-profile__content__section__row__column">
+
+
+                                        <div class="c-input c-input--text">
+                                            <input id="street_address" name="street_address" tabindex="6" type="text"
+                                                value="">
+                                            <label for="street_address">
+                                                House No./ Street Name/ Area
+                                            </label>
+
+                                        </div>
+
+                                    </div>
+                                    <div class="user-profile__content__section__row__column">
+                                        <div class="c-input c-input--text">
+                                            <input id="locality" name="locality" tabindex="7" type="text" value="">
+                                            <label for="locality">
+                                                Colony / Street / Locality
+                                            </label>
+
+                                        </div>
+
+                                    </div>
+                                    <div class="user-profile__content__section__row__column">
+                                        <div class="c-input c-input--text">
+                                            <input id="city" name="city" tabindex="8" type="text" value=""
+                                                class="ui-autocomplete-input" autocomplete="off">
+                                            <label for="city">
+                                                City
+                                            </label>
+
+                                        </div>
+
+                                    </div>
+                                    <div class="user-profile__content__section__row">
+                                        <div class="user-profile__content__section__row__column">
+                                            <div class="c-input c-input--text">
+                                                <input id="state" name="state" tabindex="9" type="text" value="">
+                                                <label for="state">
+                                                    State
+                                                </label>
+
+                                            </div>
+
+                                        </div>
+                                        <div class="user-profile__content__section__row__column">
+                                            <div class="c-input c-input--select has-value">
+                                                <select id="country" name="country" tabindex="-1" class="selectized"
+                                                    style="display: none;">
+                                                    <option value="IN" selected="selected">India</option>
+                                                </select>
+                                                <div class="selectize-control single">
+                                                    <div class="selectize-input items full has-options has-items">
+                                                        <div class="item" data-value="IN">India</div><input type="text"
+                                                            autocomplete="off" tabindex="10" id="country-selectized"
+                                                            style="width: 4px;">
+                                                    </div>
+                                                    <div class="selectize-dropdown single"
+                                                        style="display: none; width: 240px; top: 34px; left: 0px;">
+                                                        <div class="selectize-dropdown-content"></div>
+                                                    </div>
+                                                </div>
+                                                <label for="country-selectized">
+                                                    Country<span>*</span>
+                                                </label>
+
+                                            </div>
+                                        </div>
+                                        <div class="user-profile__content__section__row__column">
+                                            <div class="c-input c-input--text">
+                                                <input id="pincode" name="pincode" tabindex="11" type="text" value="">
+                                                <label for="pincode">
+                                                    Pincode
+                                                </label>
+
+                                            </div>
+
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="user-profile__content__section__row__column">
-                                <div class="c-input c-input--text has-value">
-                                     <div class="form-group">
-                                    <label for="name">Name</label>
-                                    <input type="text" class="form-control" id="name">
-                                  </div>
-
+                            <div class="user-profile__content__section">
+                                <div class="user-profile__content__section__header">
+                                    Other information
                                 </div>
-                              
+                                <div class="user-profile__content__section__row">
+                                    <div class="user-profile__content__section__row__column">
+                                        <div class="c-input c-input--text">
+                                            <input id="extra_phone_numbers" name="extra_phone_numbers" tabindex="12"
+                                                type="text" value="">
+                                            <label for="extra_phone_numbers">
+                                                Extra phone numbers
+                                            </label>
 
-                            </div>
-                        </div>
-                    </div>
-                    <div class="coantainer">
-                        <div class="col-md-12 col-sm-12">
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <div class="form-group">
-                                    <label for="email" style="float: right;"><a routerLink="/verify_number"> Edit</a></label>
-                                    <label for="phnumber">Phone Number</label>
-                                    <input type="text" class="form-control" id="phnumber" value="3232323232323" disabled>
-                                  </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="form-group">
-                                    <label for="email" style="float: right;"><a routerLink="/add_email">Add</a></label>
-                                    <label for="email">Email address:</label>
-                                    <input type="email" class="form-control" id="email" disabled>
-                                  </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="form-group">
-                                    <label for="gender">Gender</label>
-                                    <select class="form-control" id="gender">
-                                        <option>Male</option>
-                                        <option>Female</option>
-                                        <option>Other</option>
-                                      </select>
-                                  </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-12 col-sm-12">
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <div class="form-group">
-                                    <label for="dob">Date of Birth</label>
-                                    <input type="text" class="form-control" id="datepicker">
-                                  </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="form-group">
-                                    <label for="bloodgrp">Blood Group</label>
-                                    <select class="form-control" id="bloodgrp">
-                                        <option>O+</option>
-                                        <option>A+</option>
-                                        <option>B+</option>
-                                        <option>O-</option>
-                                        <option>A-</option>
-                                        <option>B-</option>
-                                        <option>AB+</option>
-                                        <option>AB-</option>
+                                        </div>
 
-                                      </select>
-                                    
-                                  </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="form-group">
-                                    <label for="timezone">Timezone</label>
-                                    <select class="form-control" id="timezone">
-                                        <option>(UTC+05:30) Asia/Kolkata</option>
-                                        <option>(UTC+05:30) Asia/Kolkata</option>
-                                        <option>(UTC+05:30) Asia/Kolkata</option>
-                                        <option>(UTC+05:30) Asia/Kolkata</option>
-                                        <option>(UTC+05:30) Asia/Kolkata</option>
-                                        <option>(UTC+05:30) Asia/Kolkata</option>
-                                        <option>(UTC+05:30) Asia/Kolkata</option>
-                                        
-                                        <option>Female</option>
-                                        <option>Other</option>
-                                      </select>
-                                  </div>
-                            </div>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="col-md-12 col-sm-12">
-                        <div><h5 class="pb2-2">Address</h5></div>
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <div class="form-group">
-                                   
-                                    <label for="hnumber">
-                                        House No./ Street Name/ Area</label>
-                                    <input type="text" class="form-control" id="hnumber">
-                                  </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="form-group">
-                                    
-                                    <label for="street">
-                                        Colony / Street / Locality</label>
-                                    <input type="text" class="form-control" id="street">
-                                  </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="form-group">
-                                    
-                                    <label for="city">
-                                        City</label>
-                                    <input type="text" class="form-control" id="city">
-                                  </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-12 col-sm-12">
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <div class="form-group">
-                                    <label for="state">State</label>
-                                    <input type="text" class="form-control" id="state">
-                                  </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="form-group">
-                                    <label for="country">Country</label>
-                                    <select class="form-control" id="timezone">
-                                        <option>India</option>
-                                        <option>India</option>
-                                        <option>India</option>
-                                        <option>India</option>
-                                        <option>India</option>
-                                        <option>India</option>
-                                        <option>India</option>
-                                      </select>
-                                  </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="form-group">
-                                    <label for="pin">Pin Code</label>
-                                    <input type="text" class="form-control" id="pin">
-                                  </div>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
+                                    </div>
+                                    <div class="user-profile__content__section__row__column">
+                                        <div class="c-input c-input--select has-value">
+                                            <select id="language" name="language" tabindex="-1" class="selectized"
+                                                style="display: none;">
+                                                <option value="en" selected="selected">English</option>
+                                            </select>
+                                            <div class="selectize-control single direction-up">
+                                                <div
+                                                    class="selectize-input items full has-options has-items direction-up">
+                                                    <div class="item" data-value="en">English</div><input type="text"
+                                                        autocomplete="off" tabindex="13" id="language-selectized"
+                                                        style="width: 4px;">
+                                                </div>
+                                                <div class="selectize-dropdown single direction-up"
+                                                    style="display: none; width: 240px; top: -2px; left: 0px;">
+                                                    <div class="selectize-dropdown-content"></div>
+                                                </div>
+                                            </div>
+                                            <label for="language-selectized">
+                                                Language
+                                            </label>
 
-                    <div class="col-md-12 col-sm-12">
-                        <div><h5 class="pb2-2">Other Information</h5></div>
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <div class="form-group">
-                                   
-                                    <label for="extraphone">
-                                        Extra phone number</label>
-                                    <input type="text" class="form-control" id="extraphone">
-                                  </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="form-group">
-                                    <label for="language">Language</label>
-                                    <select class="form-control" id="language">
-                                        <option>English</option>
-                                        <option>Indonesian</option>
-                                        <option>Brazilian</option>
-                                        <option>Canadian</option>
-                                      </select>
-                                  </div>
-                            </div>
-                            
-                        </div>
-                    </div>
+                                        </div>
 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-            </form>
+                <form id="remove-photo-form" method="POST" action="/remove_profile_picture">
+                    <input id="csrf_token" name="csrf_token" type="hidden"
+                        value="IjU0NTVkNjFiYzgyMTNhYjhmZDY5Mzc5ZDAxNTAyNjliYjgxMjY2ODEi.XrkMeA.lo8wL2SG3EobqlN3vKSktWnapeQ">
+                </form>
+                <form id="upload-photo-form" class="u_hidden" method="POST" action="/upload_profile_picture_iframe"
+                    enctype="multipart/form-data">
+                    <input id="csrf_token" name="csrf_token" type="hidden"
+                        value="IjU0NTVkNjFiYzgyMTNhYjhmZDY5Mzc5ZDAxNTAyNjliYjgxMjY2ODEi.XrkMeA.lo8wL2SG3EobqlN3vKSktWnapeQ">
+                    <input accept="image/*" id="photo" name="photo" type="file">
+                </form>
+            </div>
+            <div class="clear"></div>
         </div>
-      
     </div>
-    <div class="clear"></div>
+
+
+    <div class="hidden">
+        <ul class="flashes">
+        </ul>
+    </div>
+
 </div>

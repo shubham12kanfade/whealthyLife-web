@@ -31,6 +31,7 @@
 }
 .form-control {
     width: 36% !important;  
+    font-size: 15px;
 }
 .form-group{
     display: flex;
@@ -40,7 +41,21 @@
 .prime{
     background-image: linear-gradient(to right, #314755 0%, #26a0da 51%, #314755 100%) !important;
         color: #FFF !important;
+        font-size: 15px;
 }
 .prime:hover { 
         background-position: right center !important;
     }
+.text-center {
+    text-align: center!important;
+    font-size: 17px;
+   }
+.btn-outline-primary {
+  color: #007bff;
+  border-color: #007bff;
+  font-size: 15px;
+  margin-left: 10px;
+}
+.btn-outline-primary:hover{
+    color: white;
+}
