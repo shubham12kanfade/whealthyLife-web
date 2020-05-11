@@ -262,12 +262,12 @@
     </section>
 
 
-    <section>
+    <section class="categories">
         <div class="row">
             <div class="container">
 
                 <div class="col-sm-12 pt-5 pb-5">
-                    <h2 class="mb-3">TOP CATEGORIES</h2>
+                    <h2>TOP CATEGORIES</h2>
                     <owl-carousel-o [options]="customOptions" #review>
                         <ng-template carouselSlide>
                             <div class="pr-2 pl-2">
@@ -332,7 +332,7 @@
                         </ng-template>
 
                     </owl-carousel-o>
-                    <div class="row">
+                    <div class="row prev-next">
                         <div class="lhs" (click)="review.prev()"> <i class="fa fa-chevron-circle-left fa-3x " aria-hidden="true"></i></div>
                         <div class="rhs" (click)="review.next()"> <i class="fa fa-chevron-circle-right fa-3x " aria-hidden="true"></i></div>
                     </div>

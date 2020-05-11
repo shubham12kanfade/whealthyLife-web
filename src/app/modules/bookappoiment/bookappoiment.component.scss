@@ -734,6 +734,8 @@ box-shadow: 0 50px 30px -40px #00000085;
 video {
     position: relative!important;
     width: 100%;
+    top:0;
+    left:0;
 }
 
 @media (max-width: 767px){

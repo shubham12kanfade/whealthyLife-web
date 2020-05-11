@@ -79,3 +79,29 @@ a {
     font-weight: 700;
     display: inline-block;
 }
+
+.categories h2{
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+
+
+
+.categories .prev-next{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+}
+
+.categories .prev-next i{
+    color: #0880c4;
+    margin: 0 3px;
+ }
+ .categories .prev-next i:hover{
+    color: #000;
+    margin: 0 3px;
+ }
+
