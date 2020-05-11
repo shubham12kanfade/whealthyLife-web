@@ -1,94 +1,67 @@
-
-    <div class="mainheader" style="background: white;border:1px solid grey;height: 60px;box-sizing: border-box;  box-shadow: 5px 10px #f5f2f2;;">
-    <div class="nava1">
-        <nav class="navbar navbar-expand-sm nava">
-           
-            <a class="navbar-brand" href="#">
-                <span> <img src="../assets/img/logo.png" alt="logo"></span>
-            </a>
-            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-                <li class="nav-item dropdown">
-                    <a class=" dropdown-toggle dropdown-item" href="#" id="navbarDropdown" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Username
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item active" href="#"><span class="usrname"
-                                >username</span><br>
-                            <span>23423423423</span></a>
-                        <a class="dropdown-item" routerLink="/drive/appointments">My Appointments</a>
-                        <a class="dropdown-item" routerLink="/drive/lab_tests">My Tests</a>
-                        <a class="dropdown-item" routerLink="/drive/orders">My Medicine Orders</a>
-                        <a class="dropdown-item" routerLink="/drive/records">My Medical Records</a>
-                        <a class="dropdown-item" routerLink="/drive/consultation">My Online Consultation</a>
-                        <a class="dropdown-item" routerLink="/drive/feedback">My Feedback</a>
-                        <a class="dropdown-item" routerLink="/drive/articles">My Articles</a>
-                        <a class="dropdown-item" routerLink="/drive/payments">My Payments</a>
-                        <a class="dropdown-item" routerLink="/edit-profile">View/Update Profile</a>
-                        <a class="dropdown-item" href="#">Settings</a>
-                        <a class="dropdown-item" href="#">Logout</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-
-                </li>
-            </ul>
-
-        </nav>
-    </div>
-</div>
-
-<div class="contain">
-<div class="header bg-light">
-    <div class="row">
-        <div class="col-sm-12">
-            <div class="row">
-                <div class="col-sm-2">
-                    <span class="driv"><b>Your Drive</b></span>
-                </div>
-                <div class="col-sm-2">
-                    <div class="userphoto">
-                        <img src="../assets/img/medium_thumbnail.png">
-                    </div>
-                    <div class="user">
-                        <span>User</span>
-                    </div>
-                </div>
-                <div class="col-sm-8">
-                    <div class="username">
-                        <span><strong>username</strong></span><br>
-                        <span>34234423423</span>
+<div id="mainContainer">
+    <div data-reactroot="" class="main-container bg-grey">
+        <div class="app-container">
+            <div class="practo-nav"></div>
+            <div class="row" id="userCardContainer">
+                <div class="col-sm-12 hidden-xs user-card-wrapper separator">
+                    <div class="user-card row bg-white">
+                        <div class="product-name heading-two col-sm-3 col-lg-2">Your Drive</div>
+                        <div class="user-info col-sm-9 col-lg-10"><img alt="user" class="user-image"
+                                src="../assets/img/medium_thumbnail.png">
+                            <div class="user-details">
+                                <div class="user-name heading-four">madha vyas</div>
+                                <div class="user-contact text-small subtle">
+                                   +919284565546
+                                 
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-
-        </div>
-    </div>
-</div>
-<div class="row">
-    <div class="col-sm-3">
-        <div class="bg-light border-right" id="sidebar-wrapper">
-            <div class="list-group list-group-flush">
-                <a routerLink="/drive/records" class="list-group-item list-group-item-action bg-light">Medical
-                    Records</a>
-                <a routerLink="/drive/appointments" class="list-group-item list-group-item-action bg-light">
-                    Appointments</a>
-                <a routerLink="/drive/lab_tests" class="list-group-item list-group-item-action bg-light"> Tests</a>
-                <a routerLink="/drive/orders" class="list-group-item list-group-item-action bg-light"> Medicine Orders</a>
-                <a routerLink="/drive/consultation" class="list-group-item list-group-item-action bg-light"> Online
-                    Consultations</a>
-                <a routerLink="/drive/feedback" class="list-group-item list-group-item-action bg-light"> Feedback</a>
-                <a routerLink="/drive/articles" class="list-group-item list-group-item-action bg-light"> Articles</a>
-                <a routerLink="/drive/payments" class="list-group-item list-group-item-action bg-light"> Payments</a>
-                <a routerLink="/edit-profile" class="list-group-item list-group-item-action bg-light">View/Update
-                    Profile</a>
-                <a routerLink="#" class="list-group-item list-group-item-action bg-light">Logout</a>
+            <div class="row" id="sideBarAppContainer">
+                <div class="col-sm-3 col-lg-2 hidden-xs sidebar-wrapper">
+                    <div class="sidebar bg-white"><a class="sidebar-link" routerLink="/drive/records" routerLinkActive="active heading-four">
+                            <div class="sidebar-item text separator">
+                                <!-- react-text: 24 -->Medical records
+                                <!-- /react-text --><span class="unread-count text-small hidden">0</span></div>
+                        </a><a class="sidebar-link"  routerLink="/drive/appointments">
+                            <div class="sidebar-item text separator">
+                                <!-- react-text: 28 -->Appointments
+                                <!-- /react-text --><span class="unread-count text-small hidden">0</span></div>
+                        </a><a class="sidebar-link" routerLink="/drive/lab_tests">
+                            <div class="sidebar-item text separator">
+                                <!-- react-text: 32 -->Lab Tests
+                                <!-- /react-text --><span class="unread-count text-small hidden">0</span></div>
+                        </a><a class="sidebar-link" routerLink="/drive/orders">
+                            <div class="sidebar-item text separator">
+                                <!-- react-text: 36 -->Medicine Orders
+                                <!-- /react-text --><span class="unread-count text-small hidden">0</span></div>
+                        </a><a class="sidebar-link" routerLink="/drive/consultation">
+                            <div class="sidebar-item text separator">
+                                <!-- react-text: 40 -->Online Consultations
+                                <!-- /react-text --><span class="unread-count text-small hidden">0</span></div>
+                        </a><a class="sidebar-link" routerLink="/drive/articles">
+                            <div class="sidebar-item text separator">
+                                <!-- react-text: 44 -->Articles
+                                <!-- /react-text --><span class="unread-count text-small hidden">0</span></div>
+                        </a><a class="sidebar-link" routerLink="/drive/feedback">
+                            <div class="sidebar-item text separator">
+                                <!-- react-text: 48 -->Feedback
+                                <!-- /react-text --><span class="unread-count text-small hidden">0</span></div>
+                        </a><a class="sidebar-link" routerLink="/drive/payments">
+                            <div class="sidebar-item text separator">
+                                <!-- react-text: 52 -->Payments
+                                <!-- /react-text --><span class="unread-count text-small hidden">0</span></div>
+                        </a></div>
+                </div>
+                <div class="col-sm-9 col-lg-10 col-xs-12 product-container-wrapper">
+                    <div>
+                        <router-outlet></router-outlet>
+                    </div>
+                   
+                </div>
             </div>
         </div>
     </div>
-    <div class="col-sm-9">
-        <router-outlet></router-outlet>
-    </div>
 </div>
-</div>
-

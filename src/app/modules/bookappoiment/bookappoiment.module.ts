@@ -3,7 +3,7 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { BookappoimentComponent } from './bookappoiment.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import { CarouselModule } from 'ngx-owl-carousel-o';
 import { BookappoimentRoutingModule } from './bookappoiment-routing.module';
 
 
@@ -14,7 +14,8 @@ import { BookappoimentRoutingModule } from './bookappoiment-routing.module';
     CommonModule,
     BookappoimentRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    CarouselModule,
   ]
 })
 export class BookappoimentModule { }

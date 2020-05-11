@@ -195,111 +195,99 @@
                                 href="/bangalore/doctors" target="_blank">Find me the right doctor</a></div>
                         <div class="c-testimonial-list">
                             <div class="slick-slider slick-initialized" dir="ltr"><span
-                                    class="c-testimonial-list__prev_arrow c-testimonial-list__arrow "><i class="c-testimonial-list__prev_arrow icon-ic_back_cheveron c-testimonial-list__arrow"></i></span>
+                                    class="c-testimonial-list__prev_arrow c-testimonial-list__arrow" (click)="SlickList.prev()"><i class="c-testimonial-list__prev_arrow icon-ic_back_cheveron c-testimonial-list__arrow"></i></span>
                                 <div class="slick-list">
-                                    <div class="slick-track"
-                                        style="width: 6300px; opacity: 1; transform: translate3d(-420px, 0px, 0px);">
-                                        <div data-index="-1" tabindex="-1" class="slick-slide slick-cloned"
-                                            style="width: 420px;">
-                                            <div>
-                                                <div class="u-t-grey">
-                                                    <div class="c-testimonial__review_star u-m-b-10 u-t-green">
-                                                        <i class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i>
-                                                    </div>
-                                                    <div class="c-testimonial__review_text u-t-regular">I had severe
-                                                        pain in
-                                                        chest as well blood in cough. I searched through a lot of
-                                                        pulmonologists based on rankings and feedbacks and finally
-                                                        settled
-                                                        to consult Dr Indu Bubna. She quickly diagnosed my disease as
-                                                        pulmonary embolism and I was admitted to ICU. Now its all fine.
-                                                        If i
-                                                        would have gotten late then I wouldn't be writing this. Thanks
-                                                        Wealthy Life!</div>
-                                                    <div><span class="icon-ic_user_system icon-user"></span><span
-                                                            class="u-t-regular u-inline-middle u-m-l-10">Anuupam
-                                                            Purohit</span></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div data-index="0" class="slick-slide slick-active slick-current" tabindex="-1"
-                                            aria-hidden="false"
-                                            style="outline: currentcolor none medium; width: 420px;">
-                                            <div>
-                                                <div class="u-t-grey">
-                                                    <div class="c-testimonial__review_star u-m-b-10 u-t-green">
-                                                        <span class="icon-star "><i class=""></i></span>
-                                                        <span class="icon-star "><i class=" "></i></span>
-                                                        <span class="icon-star "><i class=" "></i></span>
-                                                        <span class="icon-star "><i class=" "></i></span>
-                                                        <span class="icon-star "><i class=" "></i></span>
-
-                                                    </div>
-                                                    <div class="c-testimonial__review_text u-t-regular">Very helpful.
-                                                        Far
-                                                        easier than doing same things on computer. Allows quick and easy
-                                                        search with speedy booking. Even maintains history of doctors
-                                                        visited.</div>
-                                                        <div>
-                                                            <span class="icon-ic_user_system icon-user"></span>
-                                                            <span class="u-t-regular u-inline-middle u-m-l-10">Amit
-                                                                Sharma</span>
+                                    <div class="slick-track">
+                                        <owl-carousel-o [options]="slick" #SlickList>
+                                            <ng-template carouselSlide>
+                                           
+                                                    <div>
+                                                        <div class="u-t-grey">
+                                                            <div class="c-testimonial__review_star u-m-b-10 u-t-green">
+                                                                <i class="icon-ic_star_solid icon-star"></i>
+                                                                <i class="icon-ic_star_solid icon-star"></i>
+                                                                <i class="icon-ic_star_solid icon-star"></i>
+                                                                <i class="icon-ic_star_solid icon-star"></i>
+                                                                <i class="icon-ic_star_solid icon-star"></i>
                                                             </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div data-index="1" class="slick-slide" tabindex="-1" aria-hidden="true"
-                                            style="outline: currentcolor none medium; width: 420px;">
-                                            <div>
-                                                <div class="u-t-grey">
-                                                    <div class="c-testimonial__review_star u-m-b-10 u-t-green"><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i></div>
-                                                    <div class="c-testimonial__review_text u-t-regular">Very easy to
-                                                        book,maintain history. Hassle free from older versions of
-                                                        booking
-                                                        appointment via telephone.. Thanks Wealthy Life for making it
-                                                        simple.
+                                                            <div class="c-testimonial__review_text u-t-regular">I had severe
+                                                                pain in
+                                                                chest as well blood in cough. I searched through a lot of
+                                                                pulmonologists based on rankings and feedbacks and finally
+                                                                settled
+                                                                to consult Dr Indu Bubna. She quickly diagnosed my disease as
+                                                                pulmonary embolism and I was admitted to ICU. Now its all fine.
+                                                                If i
+                                                                would have gotten late then I wouldn't be writing this. Thanks
+                                                                Wealthy Life!</div>
+                                                            <div><span class="icon-ic_user_system icon-user"></span><span
+                                                                    class="u-t-regular u-inline-middle u-m-l-10">Anuupam
+                                                                    Purohit</span></div>
+                                                   
                                                     </div>
-                                                    <div><span class="icon-ic_user_system icon-user"></span><span
-                                                            class="u-t-regular u-inline-middle u-m-l-10">Jyothi
-                                                            Bhatia</span></div>
+                                                </div>
+                                            </ng-template>
+                                            <ng-template carouselSlide>
+                                           
+                                                <div>
+                                                    <div class="u-t-grey">
+                                                        <div class="c-testimonial__review_star u-m-b-10 u-t-green">
+                                                            <i class="icon-ic_star_solid icon-star"></i>
+                                                            <i class="icon-ic_star_solid icon-star"></i>
+                                                            <i class="icon-ic_star_solid icon-star"></i>
+                                                            <i class="icon-ic_star_solid icon-star"></i>
+                                                            <i class="icon-ic_star_solid icon-star"></i>
+                                                        </div>
+                                                        <div class="c-testimonial__review_text u-t-regular">I had severe
+                                                            pain in
+                                                            chest as well blood in cough. I searched through a lot of
+                                                            pulmonologists based on rankings and feedbacks and finally
+                                                            settled
+                                                            to consult Dr Indu Bubna. She quickly diagnosed my disease as
+                                                            pulmonary embolism and I was admitted to ICU. Now its all fine.
+                                                            If i
+                                                            would have gotten late then I wouldn't be writing this. Thanks
+                                                            Wealthy Life!</div>
+                                                        <div><span class="icon-ic_user_system icon-user"></span><span
+                                                                class="u-t-regular u-inline-middle u-m-l-10">Anuupam
+                                                                Purohit</span></div>
+                                               
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div data-index="2" class="slick-slide" tabindex="-1" aria-hidden="true"
-                                            style="outline: currentcolor none medium; width: 420px;">
-                                            <div>
-                                                <div class="u-t-grey">
-                                                    <div class="c-testimonial__review_star u-m-b-10 u-t-green"><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i></div>
-                                                    <div class="c-testimonial__review_text u-t-regular">Very easy to
-                                                        use,
-                                                        user interface is amazing. The option Where I can book a cab
-                                                        truly
-                                                        showed how much this app-makers cares about the patient's
-                                                        health👍
-                                                    </div>
-                                                    <div><span class="icon-ic_user_system icon-user"></span><span
-                                                            class="u-t-regular u-inline-middle u-m-l-10">Anjani
-                                                            Sirivella</span></div>
+                                        </ng-template>
+                                            <ng-template carouselSlide>
+                                           
+                                                <div>
+                                                    <div class="u-t-grey">
+                                                        <div class="c-testimonial__review_star u-m-b-10 u-t-green">
+                                                            <i class="icon-ic_star_solid icon-star"></i>
+                                                            <i class="icon-ic_star_solid icon-star"></i>
+                                                            <i class="icon-ic_star_solid icon-star"></i>
+                                                            <i class="icon-ic_star_solid icon-star"></i>
+                                                            <i class="icon-ic_star_solid icon-star"></i>
+                                                        </div>
+                                                        <div class="c-testimonial__review_text u-t-regular">I had severe
+                                                            pain in
+                                                            chest as well blood in cough. I searched through a lot of
+                                                            pulmonologists based on rankings and feedbacks and finally
+                                                            settled
+                                                            to consult Dr Indu Bubna. She quickly diagnosed my disease as
+                                                            pulmonary embolism and I was admitted to ICU. Now its all fine.
+                                                            If i
+                                                            would have gotten late then I wouldn't be writing this. Thanks
+                                                            Wealthy Life!</div>
+                                                        <div><span class="icon-ic_user_system icon-user"></span><span
+                                                                class="u-t-regular u-inline-middle u-m-l-10">Anuupam
+                                                                Purohit</span></div>
+                                               
                                                 </div>
                                             </div>
-                                        </div>
+                                        </ng-template>
+                                          
+                                        </owl-carousel-o>
                                     </div>
                                 </div>
-                                <span class="c-testimonial-list__next_arrow c-testimonial-list__arrow "><i class="c-testimonial-list__next_arrow icon-ic_next_cheveron c-testimonial-list__arrow"></i></span>
+                                <span class="c-testimonial-list__next_arrow c-testimonial-list__arrow" (click)="SlickList.next()"><i class="c-testimonial-list__next_arrow icon-ic_next_cheveron c-testimonial-list__arrow"></i></span>
                             </div>
                         </div>
                     </div>
@@ -373,315 +361,79 @@
                                 class="u-t-bold">41623</span><span> doctors online</span></span>
                         <div class="c-testimonial-list">
                             <div class="slick-slider slick-initialized" dir="ltr">
-                                <span class="c-testimonial-list__prev_arrow c-testimonial-list__arrow "><i class="c-testimonial-list__prev_arrow icon-ic_back_cheveron c-testimonial-list__arrow"></i></span>
+                                <span class="c-testimonial-list__prev_arrow c-testimonial-list__arrow " (click)="Slklist.prev()"><i class="c-testimonial-list__prev_arrow icon-ic_back_cheveron c-testimonial-list__arrow"></i></span>
                                 <div class="slick-list">
-                                    <div class="slick-track"
-                                        style="width: 5460px; opacity: 1; transform: translate3d(-420px, 0px, 0px);">
-                                        <div data-index="-1" tabindex="-1" class="slick-slide slick-cloned"
-                                            aria-hidden="true" style="width: 420px;">
-                                            <div>
-                                                <div class="u-t-grey">
-                                                    <div class="c-testimonial__review_star u-m-b-10 u-t-green"><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i></div>
-                                                    <div class="c-testimonial__review_text u-t-regular">Very reliable
-                                                        app!
-                                                        There r many such apps in the market but Wealthy Life is very
-                                                        reliable. I
-                                                        love the feature of free questions.This feature gives an idea of
-                                                        health issue you are facing and you can accordingly consult the
-                                                        relevant doctor. Thank u team Wealthy Life for putting this
-                                                        together.
+                                    <div class="slick-track str">
+                                        <owl-carousel-o [options]="customOptions1" #Slklist>
+                                            <ng-template carouselSlide>
+                                        
+                                                <div class="slick-slide slick-cloned" aria-hidden="true">
+                                        
+                                                    <div class="u-t-grey">
+                                                        <div class="c-testimonial__review_star u-m-b-10 u-t-green">
+                                                            <i class="icon-ic_star_solid icon-star"></i>
+                                                            <i class="icon-ic_star_solid icon-star"></i>
+                                                            <i class="icon-ic_star_solid icon-star"></i>
+                                                            <i class="icon-ic_star_solid icon-star"></i>
+                                                            <i class="icon-ic_star_solid icon-star"></i>
+                                                        </div>
+                                                        <div class="c-testimonial__review_text u-t-regular">Very reliable
+                                                            app!
+                                                            There r many such apps in the market but Wealthy Life is very
+                                                            reliable. I
+                                                            love the feature of free questions.This feature gives an idea of
+                                                            health issue you are facing and you can accordingly consult the
+                                                            relevant doctor. Thank u team Wealthy Life for putting this
+                                                            together.
+                                                        </div>
+                                                        <div>
+                                                            <span class="icon-ic_user_system icon-user"></span>
+                                                            <span class="u-t-regular u-inline-middle u-m-l-10">Bhawana
+                                                                Rastogi
+                                                            </span>
+                                                        </div>
+                                        
                                                     </div>
-                                                    <div><span class="icon-ic_user_system icon-user"></span><span
-                                                            class="u-t-regular u-inline-middle u-m-l-10">Bhawana
-                                                            Rastogi</span></div>
                                                 </div>
-                                            </div>
-                                        </div>
-                                        <div data-index="0" class="slick-slide slick-active slick-current" tabindex="-1"
-                                            aria-hidden="false"
-                                            style="outline: currentcolor none medium; width: 420px;">
-                                            <div>
-                                                <div class="u-t-grey">
-                                                    <div class="c-testimonial__review_star u-m-b-10 u-t-green">
-                                                        <span class="icon-star"><i></i></span>
-                                                        <span class="icon-star"><i></i></span>
-                                                        <span class="icon-star"><i></i></span>
-                                                        <span class="icon-star"><i></i></span>
+                                        
+                                            </ng-template>
+                                            <ng-template carouselSlide>
+                                        
+                                                <div class="slick-slide slick-cloned" aria-hidden="true">
+                                        
+                                                    <div class="u-t-grey">
+                                                        <div class="c-testimonial__review_star u-m-b-10 u-t-green">
+                                                            <i class="icon-ic_star_solid icon-star"></i>
+                                                            <i class="icon-ic_star_solid icon-star"></i>
+                                                            <i class="icon-ic_star_solid icon-star"></i>
+                                                            <i class="icon-ic_star_solid icon-star"></i>
+                                                            <i class="icon-ic_star_solid icon-star"></i>
+                                                        </div>
+                                                        <div class="c-testimonial__review_text u-t-regular">Very reliable
+                                                            app!
+                                                            There r many such apps in the market but Wealthy Life is very
+                                                            reliable. I
+                                                            love the feature of free questions.This feature gives an idea of
+                                                            health issue you are facing and you can accordingly consult the
+                                                            relevant doctor. Thank u team Wealthy Life for putting this
+                                                            together.
+                                                        </div>
+                                                        <div>
+                                                            <span class="icon-ic_user_system icon-user"></span>
+                                                            <span class="u-t-regular u-inline-middle u-m-l-10">Bhawana
+                                                                Rastogi
+                                                            </span>
+                                                        </div>
+                                        
+                                                    </div>
+                                                </div>
+                                        
+                                            </ng-template>
+                                        </owl-carousel-o>
 
-                                                    </div>
-                                                    <div class="c-testimonial__review_text u-t-regular">Good initiative.
-                                                        The
-                                                        doctors are responsive and provide you a brief consultation
-                                                    </div>
-                                                    <div><span class="icon-ic_user_system icon-user"></span><span
-                                                            class="u-t-regular u-inline-middle u-m-l-10">Aaron
-                                                            Moitra</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div data-index="1" class="slick-slide" tabindex="-1" aria-hidden="true"
-                                            style="outline: currentcolor none medium; width: 420px;">
-                                            <div>
-                                                <div class="u-t-grey">
-                                                    <div class="c-testimonial__review_star u-m-b-10 u-t-green"><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i></div>
-                                                    <div class="c-testimonial__review_text u-t-regular">It serve only
-                                                        what
-                                                        we need. Very simple and more than sufficient for getting
-                                                        solution
-                                                        for any medical queries.</div>
-                                                    <div><span class="icon-ic_user_system icon-user"></span><span
-                                                            class="u-t-regular u-inline-middle u-m-l-10">Venu
-                                                            Gowda</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div data-index="2" class="slick-slide" tabindex="-1" aria-hidden="true"
-                                            style="outline: currentcolor none medium; width: 420px;">
-                                            <div>
-                                                <div class="u-t-grey">
-                                                    <div class="c-testimonial__review_star u-m-b-10 u-t-green"><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i></div>
-                                                    <div class="c-testimonial__review_text u-t-regular">All your health
-                                                        needs in one app. Online consultation for minor health issues,
-                                                        medicines etc.</div>
-                                                    <div><span class="icon-ic_user_system icon-user"></span><span
-                                                            class="u-t-regular u-inline-middle u-m-l-10">Abhiram
-                                                            Gurijala</span></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div data-index="3" class="slick-slide" tabindex="-1" aria-hidden="true"
-                                            style="outline: currentcolor none medium; width: 420px;">
-                                            <div>
-                                                <div class="u-t-grey">
-                                                    <div class="c-testimonial__review_star u-m-b-10 u-t-green"><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i></div>
-                                                    <div class="c-testimonial__review_text u-t-regular">It has excellent
-                                                        doctors, excellent user interface, very very user friendly, has
-                                                        options for free consultations also, even the paid options have
-                                                        excellent worth. On top of everything it also gives you tips to
-                                                        live
-                                                        a healthy life for free. And these are not just some paid news,
-                                                        but
-                                                        genuine articles on tips and tricks that you can actually apply
-                                                        to
-                                                        live a healthy life.</div>
-                                                    <div><span class="icon-ic_user_system icon-user"></span><span
-                                                            class="u-t-regular u-inline-middle u-m-l-10">Anurag
-                                                            Bansal</span></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div data-index="4" class="slick-slide" tabindex="-1" aria-hidden="true"
-                                            style="outline: currentcolor none medium; width: 420px;">
-                                            <div>
-                                                <div class="u-t-grey">
-                                                    <div class="c-testimonial__review_star u-m-b-10 u-t-green"><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i></div>
-                                                    <div class="c-testimonial__review_text u-t-regular">Private help
-                                                        Wealthy Life
-                                                        saved my life, i was in big trouble... And I used this app to
-                                                        consult with doctor by paying from my card and it saved my
-                                                        night...
-                                                        But if the chat response time gets fast, it will be helpful for
-                                                        the
-                                                        patient. It took hours to reply...</div>
-                                                    <div><span class=""></span><span
-                                                            class="u-t-regular u-inline-middle u-m-l-10">Koushik
-                                                            Das</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div data-index="5" class="slick-slide" tabindex="-1" aria-hidden="true"
-                                            style="outline: currentcolor none medium; width: 420px;">
-                                            <div>
-                                                <div class="u-t-grey">
-                                                    <div class="c-testimonial__review_star u-m-b-10 u-t-green"><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i></div>
-                                                    <div class="c-testimonial__review_text u-t-regular">Very reliable
-                                                        app!
-                                                        There r many such apps in the market but Wealthy Life is very
-                                                        reliable. I
-                                                        love the feature of free questions.This feature gives an idea of
-                                                        health issue you are facing and you can accordingly consult the
-                                                        relevant doctor. Thank u team Wealthy Life for putting this
-                                                        together.
-                                                    </div>
-                                                    <div><span class="icon-ic_user_system icon-user"></span><span
-                                                            class="u-t-regular u-inline-middle u-m-l-10">Bhawana
-                                                            Rastogi</span></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div data-index="6" tabindex="-1" class="slick-slide slick-cloned"
-                                            aria-hidden="true" style="width: 420px;">
-                                            <div>
-                                                <div class="u-t-grey">
-                                                    <div class="c-testimonial__review_star u-m-b-10 u-t-green"><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i></div>
-                                                    <div class="c-testimonial__review_text u-t-regular">Good initiative.
-                                                        The
-                                                        doctors are responsive and provide you a brief consultation
-                                                    </div>
-                                                    <div><span class="icon-ic_user_system icon-user"></span><span
-                                                            class="u-t-regular u-inline-middle u-m-l-10">Aaron
-                                                            Moitra</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div data-index="7" tabindex="-1" class="slick-slide slick-cloned"
-                                            aria-hidden="true" style="width: 420px;">
-                                            <div>
-                                                <div class="u-t-grey">
-                                                    <div class="c-testimonial__review_star u-m-b-10 u-t-green"><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i></div>
-                                                    <div class="c-testimonial__review_text u-t-regular">It serve only
-                                                        what
-                                                        we need. Very simple and more than sufficient for getting
-                                                        solution
-                                                        for any medical queries.</div>
-                                                    <div><span class="icon-ic_user_system icon-user"></span><span
-                                                            class="u-t-regular u-inline-middle u-m-l-10">Venu
-                                                            Gowda</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div data-index="8" tabindex="-1" class="slick-slide slick-cloned"
-                                            aria-hidden="true" style="width: 420px;">
-                                            <div>
-                                                <div class="u-t-grey">
-                                                    <div class="c-testimonial__review_star u-m-b-10 u-t-green"><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i></div>
-                                                    <div class="c-testimonial__review_text u-t-regular">All your health
-                                                        needs in one app. Online consultation for minor health issues,
-                                                        medicines etc.</div>
-                                                    <div><span class="icon-ic_user_system icon-user"></span><span
-                                                            class="u-t-regular u-inline-middle u-m-l-10">Abhiram
-                                                            Gurijala</span></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div data-index="9" tabindex="-1" class="slick-slide slick-cloned"
-                                            aria-hidden="true" style="width: 420px;">
-                                            <div>
-                                                <div class="u-t-grey">
-                                                    <div class="c-testimonial__review_star u-m-b-10 u-t-green"><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i></div>
-                                                    <div class="c-testimonial__review_text u-t-regular">It has excellent
-                                                        doctors, excellent user interface, very very user friendly, has
-                                                        options for free consultations also, even the paid options have
-                                                        excellent worth. On top of everything it also gives you tips to
-                                                        live
-                                                        a healthy life for free. And these are not just some paid news,
-                                                        but
-                                                        genuine articles on tips and tricks that you can actually apply
-                                                        to
-                                                        live a healthy life.</div>
-                                                    <div><span class="icon-ic_user_system icon-user"></span><span
-                                                            class="u-t-regular u-inline-middle u-m-l-10">Anurag
-                                                            Bansal</span></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div data-index="10" tabindex="-1" class="slick-slide slick-cloned"
-                                            aria-hidden="true" style="width: 420px;">
-                                            <div>
-                                                <div class="u-t-grey">
-                                                    <div class="c-testimonial__review_star u-m-b-10 u-t-green"><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i></div>
-                                                    <div class="c-testimonial__review_text u-t-regular">Private help
-                                                        Wealthy Life
-                                                        saved my life, i was in big trouble... And I used this app to
-                                                        consult with doctor by paying from my card and it saved my
-                                                        night...
-                                                        But if the chat response time gets fast, it will be helpful for
-                                                        the
-                                                        patient. It took hours to reply...</div>
-                                                    <div><span class="icon-ic_user_system icon-user"></span><span
-                                                            class="u-t-regular u-inline-middle u-m-l-10">Koushik
-                                                            Das</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div data-index="11" tabindex="-1" class="slick-slide slick-cloned"
-                                            aria-hidden="true" style="width: 420px;">
-                                            <div>
-                                                <div class="u-t-grey">
-                                                    <div class="c-testimonial__review_star u-m-b-10 u-t-green"><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i></div>
-                                                    <div class="c-testimonial__review_text u-t-regular">Very reliable
-                                                        app!
-                                                        There r many such apps in the market but Wealthy Life is very
-                                                        reliable. I
-                                                        love the feature of free questions.This feature gives an idea of
-                                                        health issue you are facing and you can accordingly consult the
-                                                        relevant doctor. Thank u team Wealthy Life for putting this
-                                                        together.
-                                                    </div>
-                                                    <div><span class="icon-ic_user_system icon-user"></span><span
-                                                            class="u-t-regular u-inline-middle u-m-l-10">Bhawana
-                                                            Rastogi</span></div>
-                                                </div>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
-                                <span class="c-testimonial-list__next_arrow c-testimonial-list__arrow "><i class="c-testimonial-list__next_arrow icon-ic_next_cheveron c-testimonial-list__arrow"></i></span>
+                                <span class="c-testimonial-list__next_arrow c-testimonial-list__arrow" (click)="Slklist.next()"><i class="c-testimonial-list__next_arrow icon-ic_next_cheveron c-testimonial-list__arrow"></i></span>
                             </div>
                         </div>
                     </div>
@@ -981,7 +733,7 @@
                                 <div class="slick-list">
                                     <div class="slick-track"
                                         style="width: 5460px; opacity: 1; transform: translate3d(-420px, 0px, 0px);">
-                                        <div data-index="-1" tabindex="-1" class="slick-slide slick-cloned"
+                                        <div  class="slick-slide slick-cloned"
                                             aria-hidden="true" style="width: 420px;">
                                             <div>
                                                 <div class="u-t-grey">
