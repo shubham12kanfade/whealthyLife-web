@@ -10,18 +10,16 @@ export class HomeComponent implements OnInit {
 
   constructor() { }
 
-
   customOptions: OwlOptions = {
-    loop: true,
+    loop:true,
     mouseDrag: true,
     touchDrag: true,
-    autoplay:true,
-    // autoplayTimeout:50,
-    pullDrag: false,
-    margin: 10,
+    pullDrag: true,
     dots: false,
-    navSpeed: 5,
-    navText: ['', ''],
+    autoplay: false,
+    navSpeed: 300,
+    navText: ["", ""],
+
     responsive: {
       0: {
         items: 1
@@ -34,21 +32,25 @@ export class HomeComponent implements OnInit {
       },
       940: {
         items: 4
+      },
+      1040: {
+        items: 4
       }
     },
-    nav: true
-  }
+    nav: false
+  };
+ 
 
   customOptions1: OwlOptions = {
     loop: true,
-    mouseDrag: true,
+    mouseDrag: false,
     touchDrag: false,
     pullDrag: false,
     dots: false,
     autoplay:true,
     // autoplaySpeed:100,
     margin: 10,
-    navSpeed: 5,
+    navSpeed: 100,
     navText: ['', ''],
     responsive: {
       0: {
@@ -65,7 +67,40 @@ export class HomeComponent implements OnInit {
       }
     },
     nav: false
-  }
+  };
+
+  qwe: OwlOptions = {
+    loop:true,
+    mouseDrag: true,
+    touchDrag: true,
+    pullDrag: true,
+    dots: false,
+    autoplay: false,
+    navSpeed: 300,
+    navText: ["", ""],
+
+    responsive: {
+      0: {
+        items: 1
+      },
+      400: {
+        items: 1
+      },
+      740: {
+        items: 1
+      },
+      940: {
+        items: 1
+      },
+      1040: {
+        items: 1
+      }
+    },
+     
+      
+  
+    nav: false
+  };
 
 
 

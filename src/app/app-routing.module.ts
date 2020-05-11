@@ -5,12 +5,14 @@ import { LoginComponent } from './component/login/login.component';
 import { NgModule, Component } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { DoctorRegisterComponent } from './component/doctor-register/doctor-register.component';
+import { VerifyOtpComponent } from './component/verify-otp/verify-otp.component';
 
 
 const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path:'register',component:RegisterComponent},
   {path:'doctor_signup',component:DoctorRegisterComponent},
+  {path:'verify_otp',component:VerifyOtpComponent},
   {path: '',loadChildren: () => import('./modules/home/home.module').then(h => h.HomeModule)},
  
   {path: 'accounts',loadChildren: () => import('./modules/user-accounts/user-accounts.module').then(us => us.UserAccountsModule)},

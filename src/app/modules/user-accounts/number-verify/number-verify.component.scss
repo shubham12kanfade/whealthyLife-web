@@ -38,11 +38,13 @@
 }
 .no-bottom-margin {
     margin-bottom: 0;
+    font-size: 16px;
 }
 p {
     margin: 0 0 10px;
 }
 .select-box {
+    font-size: 14px;
     border: 1px solid #ccc;
     width: 100px;
     height: 35px;
@@ -86,6 +88,15 @@ p {
 .form-control {
     border-radius: 2px;
     border: solid 1px #cacad3;
+    font-size: 15px;
+}
+.btn-outline-primary {
+    color: #007bff;
+    border-color: #007bff;
+    font-size: 15px;
+}
+.btn-outline-primary:hover{
+    color: white;
 }
 
 

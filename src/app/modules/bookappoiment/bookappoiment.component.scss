@@ -1,45 +1,64 @@
 video{
     opacity: 100;
-}
-.person{
-display: flex;
-}
-.icon-set{
-    margin-left: 0px;
-    display:list-item;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
- 
-}
-.c-testimonial__review_star {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
-}
-.c-omni-searchbox__icon{
-    img{
-margin-top: 20%;
-height: 56%;
-width: 95%;
-}
-}
-.c-omni-searchbox__button .c-omni-searchbox__button{
-    img{
-        margin-top: 26%;
-        height: 54%;
-        width: 95%;
-    }
-}
-.c-omni-searchbox__icon{
-img{
-    margin-top: 20%;
-    height: 56%;
-    width: 95%;
-}
+    top: 1250px;
+    left: 390px;
 }
 
+.c-article-list__next_arrow {
+    cursor: pointer;
+    transform: rotate(-45deg) !important;
+}
+.c-article-list__prev_arrow {
+    cursor: pointer;
+    transform: rotate(45deg) !important;
+}
+.cfw{
+    background-color: #f0f0f5;
+}
+// .person{
+// display: flex;
+// }
+// .icon-set{
+//     margin-left: 0px;
+//     display:list-item;
+//     flex-direction: row;
+//     align-items: center;
+//     justify-content: center;
+ 
+// }
+// .c-testimonial__review_star {
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: flex-start;
+//     align-items: flex-start;
+// }
+// .c-omni-searchbox__icon{
+//     img{
+// margin-top: 20%;
+// height: 56%;
+// width: 95%;
+// }
+// }
+// .c-omni-searchbox__button{
+//     img{
+//         margin-bottom: -5px !important;
+//         height: 63% !important;
+//         width: 60% !important;
+//     }
+// }
+
+// .c-omni-searchbox__icon{
+// img{
+//     margin-top: 20%;
+//     height: 56%;
+//     width: 95%;
+// }
+// }
+
+// .c-omni, .u-clearfix{
+//     position: relative;
+//      top: -2px;
+// }
 
 /*! CSS Used from: Embedded */
 // div,header,i,label,li,span,ul{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
@@ -485,6 +504,159 @@ body{line-height:1;text-align:left;-webkit-font-smoothing:antialiased;-moz-osx-f
 .wealthylife_GlobalNavigation .mobile.navbar .nav-right a{margin-right:6px;}
 }
 }
+// @media only screen and (max-width: 600px){
+//     .c-jumbo__header{
+//     text-align: center;
+//     font-size: 2rem;
+   
+//     }
+//     .c-jumbo__subheading {
+//         font-size: 1rem;
+//         font-size: 2em;
+//         /* padding-top: 2%; */
+//         margin-top: -10%;
+
+//     }
+//     .c-jumbo__banner {
+      
+//         width: 100% !important;
+       
+//     }
+//     .c-omni-wrapper {
+//         width: 100% !important;
+//        ;
+//     }
+//     .c-omni-container--desktop .c-omni__wrapper--locality {
+//         width: 100%;
+//         padding: 3px 40px 6px 40px;;
+//     }
+//     .c-omni-container--desktop .c-omni__wrapper--keyword {
+     
+//         margin: 10px auto;
+//         width: 100%;
+//         padding: 3px 40px 6px 40px;;
+//     }
+//     .c-popular-searches {
+       
+//         width:100%;
+//         overflow-x: scroll;
+//     }
+//     .c-omni{
+      
+//         display: flex;
+//         flex-direction: column;
+        
+//     }
+//     .icon-list-wrapper{
+       
+//         width:100%;
+//     }
+//     .c-icon-list {
+//         height: auto;
+       
+//     }
+//     .c-section__container{
+       
+//         padding: 0;
+//     }
+//     .csc{
+       
+//         display: flex;
+//         flex-direction: column;
+//         width: 100%;
+//         text-align: justify;
+//     }
+//     .c-list-item{
+//         margin-left: 18%;
+//         font-size: 16px
+//     }
+//     .u-m-t-25 {
+//         margin-top: 25px;
+        
+//         margin-left: 30%;
+//     }
+    
+//     .uwu{
+//         width: 100%;
+//         padding-top: 0 !important;
+//     }
+//     .c-certificate-list {
+//         width: 100%;
+//         margin-left: 7%;
+//         padding-top: 0px !important;
+       
+//     }
+//    .u-d-inline-block{
+//         img{
+//             width: 50% !important;
+//         }
+//     }
+//     .c-section__highlights_title .u-t-bold{
+//             font-size: 14px;
+//             text-align: center;
+            
+//     }
+//     .c-section__highlights_title .u-d-inline{
+//         font-size: 18px;
+//             text-align: center;
+//             margin-left: 20%;
+//     }
+
+//     .c-button__redirect {
+//         line-height: 38px;
+//         width: 100% !important;
+//         height: 36px;
+//         font-size: 13px !important;
+//         // color: #fff;
+//         // background-color: #14bef0;
+//         // border: 1px solid #14bef0;
+//         // border-radius: 2px;
+//         // box-sizing: border-box;
+//         // text-decoration: none;
+//         // outline: 0;
+//         // font-weight: 700;
+//     }
+//     .c-section__right{
+//         img{
+//             height: 58%;
+//         width: 45% !important;
+//         }
+//     }
+
+//     .secnd{
+//         display:inline-block !important;
+//     }
+   //second div
+    // .cscn{
+    //     display: flex;
+    //     flex-direction: column;
+    // }
+    // .u-f-left .uw5{
+    //     width: 100%;
+    // }
+    // .uw5{
+    //     width:100%;
+    // }
+    // .uw5 .c-section__highlights_title{
+    //     h2{
+    //         font-size: 32px;
+    //         text-align: center;
+    //     }
+    // }
+    // .c-section__container .u-fill-white{
+    //     width:100%;
+    // }
+    // .c-full-width .secnd{
+    //     overflow: hidden;
+    // }
+//    .u-d-inline-block{
+//         // margin-top: 25px;
+//         display: inline-block;
+//         justify-content: center;
+//         align-items: center;
+//     }
+//}
+
 /*! CSS Used keyframes */
 @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(30,190,240,.4);}70%{box-shadow:0 0 0 10px rgba(30,190,240,0);}to{box-shadow:0 0 0 0 rgba(30,190,240,0);}}
 @keyframes keyframes-rotation{0%{transform:rotate(0);}to{transform:rotate(1turn);}}

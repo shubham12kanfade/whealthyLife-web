@@ -1,0 +1,107 @@
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 nma">
+                <ul class="nav nav-pills">
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="pill" routerLink="/login">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" data-toggle="pill" routerLink="/register">Register</a>
+                    </li>
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div class="tab-pane container active" id="Login"></div>
+                    <div class="tab-pane container fade" id="Register"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="row">
+                    <div class="col-sm-6 sidimg">
+                        <img src="../assets/img/illustration.webp" />
+                    </div>
+                    <div class="col-sm-6 box">
+                        <div class="rightRegisterForm">
+                            <form id="register_otp_form" class="form-horizontal">
+                              <div class="outer-box center-align">
+                                
+                                <div class="box-header">
+                                  <div class="display-inline">Verify Mobile</div>
+                                </div>
+                                
+                                <div class="outer-space">
+                                  <div id="previewMobile">
+                                    <p id="otpSentMsg" class="no-bottom-margin" >We have sent you an OTP on</p>
+                                    <div class="mobile-text-preview">+917058389912</div>
+                                    <a href="javascript:void(0)">
+                                      <span class="glyphicon glyphicon-pencil edit-mobile hide"></span>
+                                    </a>
+                                  </div>
+                                  <div class="hide" id="editMobile">
+                                    <div class="edit-number">Edit Number</div>
+                                    <div>
+                                        <input class="form-control mobile-text mobile-field" id="mobile" name="mobile" placeholder="Mobile Number" type="tel" value="+917058389912">
+                                      <button type="button" class="send-otp common-btn wealthylife-btn btn " id="sendOtp">Send OTP</button>
+                                    </div>
+                                    <div class="error-block" id="number-error"></div>
+                                    <div class="cancel-edit" id="removeEdit">Cancel</div>
+                          
+                          
+                                 </div>
+                                 <div class="clearfix"></div>
+                                 <div id="divToBlurr">
+                              <div id="otp" class="otp">OTP</div>
+                              <div>
+                                  <input autocomplete="off" autofocus="" class="form-control email-text font-12" id="mobile_token" name="mobile_token" placeholder="Please enter the 6 digit OTP here to verify" type="tel" value="">
+                             </div>
+                             <div>
+                                <span class="textMuted error-block" id="wrongOtp">
+                            
+                          </span>
+                             </div>
+                              <div class="callotp" id="callotpholder">
+                                <div id="recaptcha-container-voice-otp" data-sitekey="6LcgVBgUAAAAANU9A74W9CtzZ3NeJdhbGIoUbDXG" data-size="invisible">
+                                </div>
+                                <span>Still not received OTP?&nbsp;&nbsp;</span>
+                                <a class="cursor-pointer" id="callOtp">
+                                  <span class="callotp-text">Get via call</span>
+                                </a>
+                              </div>
+                                <div class="resend">
+                                  <div id="recaptcha-container-sms-otp" data-sitekey="6LcgVBgUAAAAANU9A74W9CtzZ3NeJdhbGIoUbDXG" data-size="invisible">
+                                  </div>
+                                  <a class="cursor-pointer" id="resendOtp">Resend OTP</a>
+                                </div>
+                              <input id="csrf_token" name="csrf_token" type="hidden" value="IjU0NTVkNjFiYzgyMTNhYjhmZDY5Mzc5ZDAxNTAyNjliYjgxMjY2ODEi.Xrg2_w.sYzt-Ahu_tK82RN8N_wRiPQQXhQ">
+                              <input id="flow" name="flow" type="hidden" value="new_patient_signup">
+                              <input id="next" name="next" type="hidden" value="">
+                              <input id="source" name="source" type="hidden" value="">
+                              <input id="intent" name="intent" type="hidden" value="fabric">
+                              <input id="view_type" name="view_type" type="hidden" value="normal">
+                              <input id="fingerprint" name="fingerprint" type="hidden" value="b5bfbc75-8c4d-44c6-b192-0ff1f87555a0">
+                              <input id="clevertap_object_id" name="clevertap_object_id" type="hidden" value="">
+                              <div class="hide">
+                                  
+                              </div>
+                              <div>
+                                <button type="submit" class="btn  btn-lg wealthylife-btn common-btn" id="patientregisterOTP">Login</button>
+                              </div>
+                          
+                          
+                          
+                          
+                          </div>
+                           </div>
+                                  </div>
+                            </form>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

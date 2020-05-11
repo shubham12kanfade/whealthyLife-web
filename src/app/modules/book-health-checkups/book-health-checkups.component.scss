@@ -16,6 +16,8 @@
   width: 1576px;
   opacity: 1;
   transform: translate3d(0px, 0px, 0px);
+  display: flex !important;
+  flex-direction: row !important;
 }
 .dis{
   display: block;
@@ -27,4 +29,14 @@
 .dia-div{
   width: 120px;
   margin: 0px auto;
+}
+.c-landingpage-card--title, .u-padtb--std, .u-text--center, .u-font-bold{
+  margin: 26px 71px !important;
+}
+
+@media only screen and (max-width: 600px) {
+  div{
+    display: flex;
+      flex-direction: column !important;
+  }
 }
