@@ -21,6 +21,7 @@ import { ApiCallService } from './services/api/apicall.service';
 import { HttpClientModule } from '@angular/common/http';
 import { CookieService } from 'ngx-cookie-service';
 import { VerifyOtpComponent } from './component/verify-otp/verify-otp.component';
+import { PublicComponent } from './modules/public/public.component';
 
 // import { DoctorsComponent } from './modules/doctors/doctors.component';
 
@@ -28,27 +29,8 @@ import { VerifyOtpComponent } from './component/verify-otp/verify-otp.component'
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    FooterComponent,
-    HomeComponent,
-    LoginComponent,
-    RegisterComponent,
-    ContactUsComponent,
-    AboutComponent,
-    // BookappoimentComponent,
-    HelpComponent,
-    BooktestsComponent,
-    HealthMedicineshealthComponent,
-    DoctorRegisterComponent,
-    VerifyOtpComponent,
-   
-
-    
 
     // DoctorsComponent,
-   
-
-
   ],
   imports: [
     BrowserModule,
