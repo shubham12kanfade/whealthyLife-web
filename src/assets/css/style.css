@@ -599,6 +599,7 @@ footer ul li a {
   display: inline-block;
   position: relative;
   color: #fff;
+  font-size: 14px;
 }
 footer ul li a:hover {
   color: #e74e84;
@@ -659,6 +660,7 @@ footer #copy {
 }
 .follow_us ul li a i {
   color: #fff;
+  font-size: 15px;
 }
 .follow_us ul li a i:hover {
   color: #e74e84;
@@ -709,7 +711,7 @@ ul#additional_links li:after {
 /*============================================================================================*/
 /*-------- 2.1 Home--------*/
 .hero_home {
-  height: 75vh;
+  height: 80vh;
   width: 100%;
   display: table;
 }
@@ -729,13 +731,22 @@ ul#additional_links li:after {
   background-size: cover;
 }
 .hero_home.version_1::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-   background: #000; opacity: 0.3;}
+   background: #000; opacity: 0.5;}
 
 @media (max-width: 767px) {
   .hero_home.version_1 {
     /* For less than 767px */
     height: 450px;
   }
+
+
+
+  .hero_home .content h3 {
+    margin: 120px 0 40px 0 !important;
+}
+
+
+
 }
 .hero_home.version_1 .content {
   background-color: #363768;
@@ -848,16 +859,26 @@ ul#additional_links li:after {
     /* For less than 767px */
     font-size: 16px;
     font-size: 1rem;
-    padding: 0 15px;
+    padding: 50px 15px;
   }
+
+  .division {
+    border-right: 0 !important;
+    overflow: hidden;
+    background-color: #1a2358;
+    padding: 5px;
+    margin: 5px 0;
+  }
+
 }
 .hero_home .content h3 {
-  margin: 0 0 40px 0 !important;
-  font-size: 60px;
-  font-size: 2.75rem;
-  font-weight: 400;
-  /* text-transform: uppercase; */
-  color: #fff;
+  margin: 70px 0 40px 0 !important;
+    font-size: 60px;
+    font-size: 2.5em;
+    font-weight: 400;
+    /* text-transform: uppercase; */
+    color: #fff;
+    font-weight: bold;
 }
 @media (max-width: 767px) {
   .hero_home .content h3 {
@@ -5257,7 +5278,7 @@ footer p { color: #fff;}
 .carousel .item .img-box {width: 135px; height: 135px;margin: 0 auto;padding: 5px;border: 1px solid #ddd;
   	border-radius: 50%;}
 .carousel .img-box img {width: 100%;height: 100%;display: block;border-radius: 50%;}
-.carousel .testimonial {	padding: 30px 0 10px;}
+.carousel .testimonial {	padding: 30px 0 10px; font-size: 15px}
 .carousel .overview {		font-style: italic;}
 .carousel .overview b {	text-transform: uppercase;	color: #7AA641;}
 .carousel .carousel-control {	width: 40px; height: 40px; margin-top: -20px; top: 50%;	background: none;}
@@ -5314,13 +5335,21 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 .checkup-visual-containers .text-info h3 strong { font-size: 20px; padding: 6px 0;display: inline-block;}
 .checkup-visual-containers:hover { transform: scale(1.1,1.1); box-shadow:0 14px 12px -14px #000;}
 .checkup-visual-containers:hover img {transform: scale(1.2,1.2);}
-.checkup-visual-containers p { margin: 3px 0;}
+.checkup-visual-containers p {     margin: 3px 0;
+  color: #d81730;
+  font-size: 14px;}
 #contact-popup { max-width: 600px; width: 100%; display: none;}
 .img-popup { max-width: 100%; width: 100%; object-fit: cover; height: 100%;}
 .inner-popup h4 { text-align: center; margin-bottom:30px;}
-.bottom-sec {background: #1d2869; padding: 12px 0; width: 100%; height: 8vh;}
+.bottom-sec {background: #1d2869; padding: 12px 0; width: 100%; }
 .division { border-right: 1px solid #ddd; overflow: hidden;}
-.division img { float: left; margin-right: 10px; max-width: 30px; width: 100%;}
+.division img { float: left;
+  margin-right: 10px;
+  max-width: 35px;
+  width: 100%;
+  border: 1px solid #fff;
+  padding: 4px;
+  border-radius: 50%;}
 .division h4 {color: #fff; font-size: 16px; margin: 0; font-weight: 300; line-height: 1.8;}
 .bottom-sec .col-md-3:last-child .division { border:0;}
 .fixed-popup img { display: none;}
@@ -5570,3 +5599,25 @@ background: #fff; border-radius: 2px !important; min-width: 155px;}
 .display-block { width: 100%;}
 .review-form .form-control {border-color:#a2a2a2;}
 .review-form label { color:#000;}
+
+
+.category-doc h1{font-size: 3.2em;
+  font-weight: bold;
+  color: #373a3c; margin-bottom: 20px !important;}
+
+.deal-offer h1{font-size: 3.2em;
+  font-weight: bold;
+  color: #373a3c;}
+
+.deal-offer h4{ margin-bottom: 20px;color: #4c4c4c;}
+
+.testimonial h1{ font-size: 3.2em;
+  font-weight: bold;
+  color: #373a3c; margin-bottom: 20px !important;}  
+
+
+  .carousel-control.left, .carousel-control.right{background-image: none !important;}
+
+
+
+
