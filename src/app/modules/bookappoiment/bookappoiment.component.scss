@@ -1,35 +1,9 @@
-.city-select {
-    width: 100%;
-    height: 50px;
-    border-top-style: initial;
-    border-right-style: initial;
-    border-bottom-style: initial;
-    border-top-color: initial;
-    border-right-color: initial;
-    border-bottom-color: initial;
-    padding-left: 10px;
-    font-weight: 500;
-    font-size: 13px;
-    color: rgb(51, 51, 51);
-    border-width: 0px 0px 0px 1px;
-    border-image: initial;
-    border-radius: 0px;
-    border-left: 1px solid rgb(204, 204, 204);
-  }
-
 video{
     opacity: 100;
     top: 1250px;
     left: 390px;
 }
- .drop{
-    padding-left: 232px;
-    padding-bottom: 32px;
-    text-align: center;
-}
-.test-drop{
-  padding-bottom: 32px;
-}
+
 .c-article-list__next_arrow {
     cursor: pointer;
     transform: rotate(-45deg) !important;
@@ -41,19 +15,6 @@ video{
 .cfw{
     background-color: #f0f0f5;
 }
-.slick-track{
-    width: 6300px; 
-    opacity: 1; 
-    transform: translate3d(-420px, 0px, 0px);
-}
-.slick-slide .slick-cloned{
-    width: 420px;
-}
-.str{
-    width: 5460px; 
-    opacity: 1;
-    transform: translate3d(-420px, 0px, 0px);
-}
 // .person{
 // display: flex;
 // }
@@ -63,7 +24,7 @@ video{
 //     flex-direction: row;
 //     align-items: center;
 //     justify-content: center;
-
+ 
 // }
 // .c-testimonial__review_star {
 //     display: flex;
@@ -265,7 +226,7 @@ body{line-height:1;text-align:left;-webkit-font-smoothing:antialiased;-moz-osx-f
 .c-jumbo{background-color:#28328c;}
 .c-jumbo__banner{background:url(../../../assets/img/homepage.06859593240c3efd483fe48951cfe6ff.svg) top no-repeat !important;min-height:460px;background-attachment:fixed;background-position-y:60px;}
 .c-jumbo__header_container{padding-top:40px;}
-.c-jumbo__header{text-align:center;font-size:40px;color:#fff;font-weight:700;}
+.c-jumbo__header{text-align:center;font-size:40px;color:#fff;font-weight:700;}  
 .c-jumbo__subheading{font-size:24px;}
 .c-my-doctors{max-width:100%;padding:0 1em;padding-top:50px;text-align:center;}
 .c-omni-wrapper{width:785px;margin:0 auto;z-index:1;position:relative;}
@@ -547,7 +508,7 @@ body{line-height:1;text-align:left;-webkit-font-smoothing:antialiased;-moz-osx-f
 //     .c-jumbo__header{
 //     text-align: center;
 //     font-size: 2rem;
-
+   
 //     }
 //     .c-jumbo__subheading {
 //         font-size: 1rem;
@@ -557,9 +518,9 @@ body{line-height:1;text-align:left;-webkit-font-smoothing:antialiased;-moz-osx-f
 
 //     }
 //     .c-jumbo__banner {
-
+      
 //         width: 100% !important;
-
+       
 //     }
 //     .c-omni-wrapper {
 //         width: 100% !important;
@@ -570,36 +531,36 @@ body{line-height:1;text-align:left;-webkit-font-smoothing:antialiased;-moz-osx-f
 //         padding: 3px 40px 6px 40px;;
 //     }
 //     .c-omni-container--desktop .c-omni__wrapper--keyword {
-
+     
 //         margin: 10px auto;
 //         width: 100%;
 //         padding: 3px 40px 6px 40px;;
 //     }
 //     .c-popular-searches {
-
+       
 //         width:100%;
 //         overflow-x: scroll;
 //     }
 //     .c-omni{
-
+      
 //         display: flex;
 //         flex-direction: column;
-
+        
 //     }
 //     .icon-list-wrapper{
-
+       
 //         width:100%;
 //     }
 //     .c-icon-list {
 //         height: auto;
-
+       
 //     }
 //     .c-section__container{
-
+       
 //         padding: 0;
 //     }
 //     .csc{
-
+       
 //         display: flex;
 //         flex-direction: column;
 //         width: 100%;
@@ -611,10 +572,10 @@ body{line-height:1;text-align:left;-webkit-font-smoothing:antialiased;-moz-osx-f
 //     }
 //     .u-m-t-25 {
 //         margin-top: 25px;
-
+        
 //         margin-left: 30%;
 //     }
-
+    
 //     .uwu{
 //         width: 100%;
 //         padding-top: 0 !important;
@@ -623,7 +584,7 @@ body{line-height:1;text-align:left;-webkit-font-smoothing:antialiased;-moz-osx-f
 //         width: 100%;
 //         margin-left: 7%;
 //         padding-top: 0px !important;
-
+       
 //     }
 //    .u-d-inline-block{
 //         img{
@@ -633,7 +594,7 @@ body{line-height:1;text-align:left;-webkit-font-smoothing:antialiased;-moz-osx-f
 //     .c-section__highlights_title .u-t-bold{
 //             font-size: 14px;
 //             text-align: center;
-
+            
 //     }
 //     .c-section__highlights_title .u-d-inline{
 //         font-size: 18px;
@@ -701,9 +662,9 @@ body{line-height:1;text-align:left;-webkit-font-smoothing:antialiased;-moz-osx-f
 @keyframes keyframes-rotation{0%{transform:rotate(0);}to{transform:rotate(1turn);}}
 @keyframes tada{0%{-webkit-transform:scale(1);transform:scale(1);color:#28328c;opacity:1;}2.5%,5%{-webkit-transform:scale(0.9) rotate(-8deg);transform:scale(0.9) rotate(-8deg);}7.5%,12.5%,17.5%{-webkit-transform:scale(1.2) rotate(8deg);transform:scale(1.2) rotate(8deg);}10%,15%{-webkit-transform:scale(1.2) rotate(-8deg);transform:scale(1.2) rotate(-8deg);}20%,25%{-webkit-transform:scale(1) rotate(0);transform:scale(1) rotate(0);}25%{color:#28328c;opacity:1;}30%{color:#626262;opacity:0.3;}}
 /*! CSS Used fontfaces */
-// @font-face{font-family:Camphor;src:url(//www.wealthylifestatic.com/fonts/camphor/79a790be-1592-4a60-84d3-d38c6ca1626b.eot#iefix);src:url(//www.wealthylifestatic.com/fonts/camphor/79a790be-1592-4a60-84d3-d38c6ca1626b.eot#iefix) format("eot"),url(//www.wealthylifestatic.com/fonts/camphor/677b110e-fe2c-4af7-b50b-3e8f00c371ce.woff2) format("woff2"),url(//www.wealthylifestatic.com/fonts/camphor/bee62776-4fd4-4e5c-b977-86dfd90c0bce.woff) format("woff"),url(//www.wealthylifestatic.com/fonts/camphor/cf1395aa-4f82-4179-9456-63193aef03ac.ttf) format("truetype");font-weight:400;}
-// @font-face{font-family:Camphor;src:url(//www.wealthylifestatic.com/fonts/camphor/ce0e3457-b63d-4c55-b2b2-4d41170d4578.eot#iefix);src:url(//www.wealthylifestatic.com/fonts/camphor/ce0e3457-b63d-4c55-b2b2-4d41170d4578.eot#iefix) format("eot"),url(//www.wealthylifestatic.com/fonts/camphor/c96be38e-ea64-418f-ae54-e757ed92b069.woff2) format("woff2"),url(//www.wealthylifestatic.com/fonts/camphor/d8f1df09-02f2-46a7-9876-5b2e79046f31.woff) format("woff"),url(//www.wealthylifestatic.com/fonts/camphor/d26b7b5b-4f11-4aca-9273-f050282fbf28.ttf) format("truetype");font-weight:700;}
-// @font-face{font-family:practicon;src:url(//www.wealthylifestatic.com/fonts/v12/practicon.eot);src:url(//www.wealthylifestatic.com/fonts/v12/practicon.eot#iefix) format("embedded-opentype"),url(//www.wealthylifestatic.com/fonts/v12/practicon.woff2) format("woff2"),url(//www.wealthylifestatic.com/fonts/v12/practicon.woff) format("woff"),url(//www.wealthylifestatic.com/fonts/v12/practicon.svg) format("svg"),url(//www.wealthylifestatic.com/fonts/v12/practicon.ttf) format("truetype");font-weight:400;font-style:normal;}
+@font-face{font-family:Camphor;src:url(//www.wealthylifestatic.com/fonts/camphor/79a790be-1592-4a60-84d3-d38c6ca1626b.eot#iefix);src:url(//www.wealthylifestatic.com/fonts/camphor/79a790be-1592-4a60-84d3-d38c6ca1626b.eot#iefix) format("eot"),url(//www.wealthylifestatic.com/fonts/camphor/677b110e-fe2c-4af7-b50b-3e8f00c371ce.woff2) format("woff2"),url(//www.wealthylifestatic.com/fonts/camphor/bee62776-4fd4-4e5c-b977-86dfd90c0bce.woff) format("woff"),url(//www.wealthylifestatic.com/fonts/camphor/cf1395aa-4f82-4179-9456-63193aef03ac.ttf) format("truetype");font-weight:400;}
+@font-face{font-family:Camphor;src:url(//www.wealthylifestatic.com/fonts/camphor/ce0e3457-b63d-4c55-b2b2-4d41170d4578.eot#iefix);src:url(//www.wealthylifestatic.com/fonts/camphor/ce0e3457-b63d-4c55-b2b2-4d41170d4578.eot#iefix) format("eot"),url(//www.wealthylifestatic.com/fonts/camphor/c96be38e-ea64-418f-ae54-e757ed92b069.woff2) format("woff2"),url(//www.wealthylifestatic.com/fonts/camphor/d8f1df09-02f2-46a7-9876-5b2e79046f31.woff) format("woff"),url(//www.wealthylifestatic.com/fonts/camphor/d26b7b5b-4f11-4aca-9273-f050282fbf28.ttf) format("truetype");font-weight:700;}
+@font-face{font-family:practicon;src:url(//www.wealthylifestatic.com/fonts/v12/practicon.eot);src:url(//www.wealthylifestatic.com/fonts/v12/practicon.eot#iefix) format("embedded-opentype"),url(//www.wealthylifestatic.com/fonts/v12/practicon.woff2) format("woff2"),url(//www.wealthylifestatic.com/fonts/v12/practicon.woff) format("woff"),url(//www.wealthylifestatic.com/fonts/v12/practicon.svg) format("svg"),url(//www.wealthylifestatic.com/fonts/v12/practicon.ttf) format("truetype");font-weight:400;font-style:normal;}
 
 
 
