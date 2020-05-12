@@ -53,6 +53,12 @@
             <img src="../../../assets/images/images-dweb_top_banner.png" alt="Free Home Sample" class="banner">
         </div>
         <div class="u-center--vertical">
+    <div  class="mainbanner" >
+    <div class=" ">
+
+        <img src="../../../assets/images/images-dweb_top_banner.png" alt="Free Home Sample" class="banner">
+    </div>
+    <div class="u-center--vertical" >
             <div class="clearfix">
                 <div class="c-home-intro u-padt--std u-padb--dbl">
                     <h1 class="u-font-bold o-font-size--30">Get lab tests and full body checkups from the comfort of
@@ -138,6 +144,7 @@
         <div class="dg-wrapper u-padtb--std--half">
 
         </div>
+<<<<<<< HEAD
         <div class="c-top-booked dg-wrapper">
             <h2 class="u-font-bold o-font-size--24 u-padt--dbl">Top booked Medical tests</h2>
             <div class="u-padt--less u-padb--std--half o-f-color--primary">Get 10% Health Cashback<span>*</span>
@@ -200,9 +207,48 @@
                             aria-hidden="true"></i></div>
                     <div class="rhs" (click)="reviewfour.next()"> <i class="fa fa-chevron-circle-right fa-3x "
                             aria-hidden="true"></i></div>
+=======
+        <div class="slick-custom-arrows ">
+
+          <owl-carousel-o [options]="customOptions3" #reviewfour>
+            <ng-template carouselSlide  *ngFor="let item of f_list">
+              <div>
+                <div class="c-top-booked__category u-border--std u-width--full u-padt--dbl u-round-corner--dbl c-slider__item">
+                    <div class="u-font-bold u-pad--dbl o-font-size--18"><img class="u-v-align" class="w-t" src="../../../assets/img/diarrhea.png">
+                        <h3 class="u-d__inline u-marginl--std"><a>Lipid Profile</a></h3>
+                    </div>
+                    <div class="c-top-booked__category__tests">
+                        <a class="c-top-booked__category__test u-padtb--std u-padrl--dbl u-d__inline u-br-rule">
+                            <div class="c-top-booked__category__test-name u-font-bold">Ldl Cholesterol Test</div>
+                            <div class="o-f-color--subtle o-font-size--12">Also known as Cholesterol Ldl Enzymatic Colorimetric Method Blood</div>
+                        </a>
+                        <a class="c-top-booked__category__test u-padtb--std u-padrl--dbl u-d__inline u-br-rule">
+                            <div class="c-top-booked__category__test-name u-font-bold">Hdl Cholesterol Test</div>
+                            <div class="o-f-color--subtle o-font-size--12">Also known as Cholesterol Hdl Enzymatic Colorimetric Method Blood</div>
+                        </a>
+                        <a class="c-top-booked__category__test u-padtb--std u-padrl--dbl u-d__inline u-br-rule">
+                            <div class="c-top-booked__category__test-name u-font-bold">Vldl Cholesterol Test</div>
+                            <div class="o-f-color--subtle o-font-size--12">Also known as Vldl Cholesterol Blood</div>
+                        </a>
+                        <a class="c-top-booked__category__test u-padtb--std u-padrl--dbl u-d__inline u-br-rule">
+                            <div class="c-top-booked__category__test-name u-font-bold">Total Cholesterol Test</div>
+                            <div class="o-f-color--subtle o-font-size--12">Also known as Cholesterol Test</div>
+                        </a>
+                        <a class="u-br-rule c-top-booked__category__test u-padtb--std u-padrl--dbl u-d__inline">
+                            <div class="c-top-booked__category__test-name u-font-bold">Triglycerides Blood Test</div>
+                            <div class="o-f-color--subtle o-font-size--12">Also known as Triglycerides Blood</div>
+                        </a><a class=" c-button c-button--bigger u-marginrl--dbl u-marginb--double">Book Now</a></div>
+>>>>>>> 5cd62aabca5bf5ce0062c769d06b18d796e093ab
                 </div>
 
             </div>
+                </ng-template>
+              </owl-carousel-o>
+              <div class="row">
+                  <div class="lhs" (click)="reviewfour.prev()"> <i class="fa fa-chevron-circle-left fa-3x " aria-hidden="true"></i></div>
+                  <div class="rhs" (click)="reviewfour.next()"> <i class="fa fa-chevron-circle-right fa-3x " aria-hidden="true"></i></div>
+              </div>
+
         </div>
         <div class="u-bg--grey u-margint--double" class="reports">
             <div class="u-font-bold o-font-size--16 u-marginb--double u-text--center o-font-size--30">Why book with us?
@@ -244,6 +290,7 @@
                 </div>
             </div>
         </div>
+<<<<<<< HEAD
         <div class=" we u-bg--white ">
             <div class="u-font-bold o-font-size--16 u-padtb--dbl o-font-size--30 u-text--center">How it works?</div>
             <div class="o-f-color--sec o-flex u-padt--dbl o-flex__justify--evenly dg-wrapper">
@@ -341,8 +388,31 @@
                 <div class="lhs" (click)="reviewfour.prev()"><span
                     class="c-testimonial-list__prev_arrow c-testimonial-list__arrow"><i class="c-testimonial-list__prev_arrow icon-ic_back_cheveron c-testimonial-list__arrow"></i></span></div>
                 <div class="rhs" (click)="reviewfour.next()"> <span class="c-testimonial-list__next_arrow c-testimonial-list__arrow"><i class="c-testimonial-list__next_arrow icon-ic_next_cheveron c-testimonial-list__arrow"></i></span></div>
+=======
+    </div>
+    <div class="c-testimonials ">
+        <h2 class="u-padb--less u-font-bold o-font-size--36">Thousands of Happy Customers</h2>
+        <owl-carousel-o [options]="customOptions4" #reviewfour>
+          <ng-template carouselSlide>
+            <div>
+              <div class=" sliderfont c-slider__item o-font-size--24">
+                  <div class="c-testimonials__content u-padb--dbl">
+                      <span class="o-font-size--36 u-font-bold">“</span>Good service, Wealthy Life is avoiding to stand in que for health checkup.</div>
+                  <div class="o-font-size--14">
+                      <div class="happycustemer">
+                          <div class="u-font-bold">Lalita Hegde</div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+              </ng-template>
+            </owl-carousel-o>
+            <div class="row">
+                <div class="lhs" (click)="reviewfour.prev()"> <i class="fa fa-chevron-circle-left fa-3x " aria-hidden="true"></i></div>
+                <div class="rhs" (click)="reviewfour.next()"> <i class="fa fa-chevron-circle-right fa-3x " aria-hidden="true"></i></div>
             </div>
-        </div>
+>>>>>>> 5cd62aabca5bf5ce0062c769d06b18d796e093ab
+            </div>
     </div>
 </div>
 <div class="u-bg--grey u-padtb--tpl">
