@@ -1,3 +1,44 @@
+.fa-chevron-circle-right:before {
+    content: "\f138";
+}
+.lhs {
+    left: 0px;
+    z-index: 100037;
+    position: absolute;
+    right: 0;
+    font-size: 9px;
+    margin-top: -75px;
+}
+
+.rhs {
+    z-index: 100037;
+    position: absolute;
+    right: 0;
+    font-size: 9px;
+    margin-top: -75px;
+}
+
+.blhs {
+    left: 0px;
+    z-index: 100037;
+    position: absolute;
+    right: 0;
+    font-size: 9px;
+    margin-top: -25% !important;
+}
+
+.brhs {
+    z-index: 100037;
+    position: absolute;
+    right: 0;
+    font-size: 9px;
+    margin-top: -25% !important;
+}
+
+.w-t{
+    width: 25px !important ;
+  }
+
 .astest{
     margin-left: 10px;
 }
