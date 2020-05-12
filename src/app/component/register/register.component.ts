@@ -13,7 +13,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent implements OnInit {
- 
+
   register = new FormGroup({
     mobileNumber: new FormControl(""),
     firstName: new FormControl(""),
@@ -24,14 +24,14 @@ export class RegisterComponent implements OnInit {
   });
   locatdata: any;
 
-  constructor(public rs:RegistrationService, public LocationService:LocationService, private router: Router) 
+  constructor(public rs:RegistrationService, public LocationService:LocationService, private router: Router)
   {
     this.getLocation();
     console.log("RegisterComponent -> onSubmit -> locatdata", this.locatdata)
 
 
   }
-  
+
   getLocation() {
     this.LocationService.getLocation().subscribe((res: any) => {
       this.locatdata = res;
@@ -39,11 +39,11 @@ export class RegisterComponent implements OnInit {
       console.log("HeaderComponent -> res", res)
     });
   }
- 
+
   onSubmit() {
- 
+
     console.log("RegisterComponent -> onSubmit -> register", this.register)
-   
+
     console.log("RegisterComponent -> onSubmit -> locatdata", this.locatdata)
 
     const data = {
@@ -55,23 +55,23 @@ export class RegisterComponent implements OnInit {
         lat:this.locatdata.lat,
         lng: this.locatdata.lon
       },
-    
+
     }
 
-   
+
     this.rs.registarUser(data).then(resData => {
     console.log("RegisterComponent -> onSubmit -> resData", resData)
-  
+
    if(resData.status=="SUCCESS"){
-   
+
        this.router.navigate(['/login']);
-       
-       
+
+
    }
-     
+
     }).catch(error => {
     console.log("RegisterComponent -> onSubmit -> error", error)
-     
+
     })
 
 
@@ -82,5 +82,5 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit(): void {
   }
- 
+
 }

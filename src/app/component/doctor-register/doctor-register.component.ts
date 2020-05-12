@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { LocationService } from './../../services/location.service';
 import { RegistrationService } from './../../services/registration.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -12,16 +13,16 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 export class DoctorRegisterComponent implements OnInit {
 
   register = new FormGroup({
-    mobileNumber: new FormControl("",[Validators.required,Validators.maxLength(10),Validators.minLength(5)]),
-    firstName: new FormControl("",[Validators.required]),
-    password: new FormControl("",[Validators.required,Validators.minLength(8)]),
-    lastName: new FormControl("",Validators.required),
-    email: new FormControl("",[Validators.required,Validators.email]),
+    mobileNumber: new FormControl(""),
+    firstName: new FormControl(""),
+    password: new FormControl(""),
+    lastName: new FormControl(""),
+    email: new FormControl(""),
 
   });
   locatdata: any;
 
-  constructor(public rs:RegistrationService, public LocationService:LocationService)
+  constructor(public rs:RegistrationService, public LocationService:LocationService, private router: Router)
   {
     this.getLocation();
     console.log("RegisterComponent -> onSubmit -> locatdata", this.locatdata)
@@ -54,19 +55,28 @@ export class DoctorRegisterComponent implements OnInit {
 
     }
 
-
     this.rs.registarUser(data).then(resData => {
-    console.log("RegisterComponent -> onSubmit -> resData", resData)
+      console.log("RegisterComponent -> onSubmit -> resData", resData)
 
-    }).catch(error => {
-    console.log("RegisterComponent -> onSubmit -> error", error)
+     if(resData.status=="SUCCESS"){
 
-    })
-    this.register.reset();
+         this.router.navigate(['/login']);
 
-   }
 
-  ngOnInit(): void {
+     }
+
+      }).catch(error => {
+      console.log("RegisterComponent -> onSubmit -> error", error)
+
+      })
+
+
+      this.register.reset();
+
+     }
+
+
+    ngOnInit(): void {
+    }
+
   }
-
-}

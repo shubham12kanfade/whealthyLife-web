@@ -3,7 +3,14 @@ video{
     top: 1250px;
     left: 390px;
 }
-
+ .drop{
+    padding-left: 232px;
+    padding-bottom: 32px;
+    text-align: center;
+}
+.test-drop{
+  padding-bottom: 32px;
+}
 .c-article-list__next_arrow {
     cursor: pointer;
     transform: rotate(-45deg) !important;
@@ -24,7 +31,7 @@ video{
 //     flex-direction: row;
 //     align-items: center;
 //     justify-content: center;
- 
+
 // }
 // .c-testimonial__review_star {
 //     display: flex;
@@ -214,7 +221,7 @@ body{line-height:1;text-align:left;-webkit-font-smoothing:antialiased;-moz-osx-f
 .c-jumbo{background-color:#28328c;}
 .c-jumbo__banner{background:url(../../../assets/img/homepage.06859593240c3efd483fe48951cfe6ff.svg) top no-repeat !important;min-height:460px;background-attachment:fixed;background-position-y:60px;}
 .c-jumbo__header_container{padding-top:40px;}
-.c-jumbo__header{text-align:center;font-size:40px;color:#fff;font-weight:700;}  
+.c-jumbo__header{text-align:center;font-size:40px;color:#fff;font-weight:700;}
 .c-jumbo__subheading{font-size:24px;}
 .c-my-doctors{max-width:100%;padding:0 1em;padding-top:50px;text-align:center;}
 .c-omni-wrapper{width:785px;margin:0 auto;z-index:1;position:relative;}
@@ -496,7 +503,7 @@ body{line-height:1;text-align:left;-webkit-font-smoothing:antialiased;-moz-osx-f
 //     .c-jumbo__header{
 //     text-align: center;
 //     font-size: 2rem;
-   
+
 //     }
 //     .c-jumbo__subheading {
 //         font-size: 1rem;
@@ -506,9 +513,9 @@ body{line-height:1;text-align:left;-webkit-font-smoothing:antialiased;-moz-osx-f
 
 //     }
 //     .c-jumbo__banner {
-      
+
 //         width: 100% !important;
-       
+
 //     }
 //     .c-omni-wrapper {
 //         width: 100% !important;
@@ -519,36 +526,36 @@ body{line-height:1;text-align:left;-webkit-font-smoothing:antialiased;-moz-osx-f
 //         padding: 3px 40px 6px 40px;;
 //     }
 //     .c-omni-container--desktop .c-omni__wrapper--keyword {
-     
+
 //         margin: 10px auto;
 //         width: 100%;
 //         padding: 3px 40px 6px 40px;;
 //     }
 //     .c-popular-searches {
-       
+
 //         width:100%;
 //         overflow-x: scroll;
 //     }
 //     .c-omni{
-      
+
 //         display: flex;
 //         flex-direction: column;
-        
+
 //     }
 //     .icon-list-wrapper{
-       
+
 //         width:100%;
 //     }
 //     .c-icon-list {
 //         height: auto;
-       
+
 //     }
 //     .c-section__container{
-       
+
 //         padding: 0;
 //     }
 //     .csc{
-       
+
 //         display: flex;
 //         flex-direction: column;
 //         width: 100%;
@@ -560,10 +567,10 @@ body{line-height:1;text-align:left;-webkit-font-smoothing:antialiased;-moz-osx-f
 //     }
 //     .u-m-t-25 {
 //         margin-top: 25px;
-        
+
 //         margin-left: 30%;
 //     }
-    
+
 //     .uwu{
 //         width: 100%;
 //         padding-top: 0 !important;
@@ -572,7 +579,7 @@ body{line-height:1;text-align:left;-webkit-font-smoothing:antialiased;-moz-osx-f
 //         width: 100%;
 //         margin-left: 7%;
 //         padding-top: 0px !important;
-       
+
 //     }
 //    .u-d-inline-block{
 //         img{
@@ -582,7 +589,7 @@ body{line-height:1;text-align:left;-webkit-font-smoothing:antialiased;-moz-osx-f
 //     .c-section__highlights_title .u-t-bold{
 //             font-size: 14px;
 //             text-align: center;
-            
+
 //     }
 //     .c-section__highlights_title .u-d-inline{
 //         font-size: 18px;

@@ -11,7 +11,14 @@
   top: 0 !important;
   height: auto;
 }
-
+.drop{
+   padding-left: 1px;
+   padding-bottom: 2px;
+   text-align: center;
+}
+.test-drop{
+ padding-bottom: 32px;
+}
 
 /*! CSS Used from: Embedded */
 .c-dropdown.open .c-dropdown__list {
@@ -34,7 +41,7 @@
   .c-dropdown__list__item:not(:last-child) {
     border-bottom: 1px solid #e0e0e5;
   }
-  
+
   .c-dropdown__list__item,
   .c-filter__box,
   .c-sort-dropdown__selected,
@@ -44,7 +51,7 @@
 
 .c-day-heading[_ngcontent-ghj-c47] {
   width: 146px !important;
- 
+
 }
 .c-sort-dropdown[_ngcontent-sip-c47], .u-pos-rel[_ngcontent-sip-c47] {
   position: relative;
@@ -124,7 +131,7 @@ div,i,span{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-alig
   .c-slots-header__prev {
     float: left;
   }
-  
+
   .c-paginator,
   .u-t-right {
     text-align: right;
@@ -468,7 +475,7 @@ button{font-family:Camphor,sans-serif;}
   // @font-face{font-family:Camphor;src:url(//www.WealthyLifestatic.com/fonts/camphor/79a790be-1592-4a60-84d3-d38c6ca1626b.eot#iefix);src:url(//www.WealthyLifestatic.com/fonts/camphor/79a790be-1592-4a60-84d3-d38c6ca1626b.eot#iefix) format("eot"),url(//www.WealthyLifestatic.com/fonts/camphor/677b110e-fe2c-4af7-b50b-3e8f00c371ce.woff2) format("woff2"),url(//www.WealthyLifestatic.com/fonts/camphor/bee62776-4fd4-4e5c-b977-86dfd90c0bce.woff) format("woff"),url(//www.WealthyLifestatic.com/fonts/camphor/cf1395aa-4f82-4179-9456-63193aef03ac.ttf) format("truetype");font-weight:400;}
   // @font-face{font-family:Camphor;src:url(//www.WealthyLifestatic.com/fonts/camphor/ce0e3457-b63d-4c55-b2b2-4d41170d4578.eot#iefix);src:url(//www.WealthyLifestatic.com/fonts/camphor/ce0e3457-b63d-4c55-b2b2-4d41170d4578.eot#iefix) format("eot"),url(//www.WealthyLifestatic.com/fonts/camphor/c96be38e-ea64-418f-ae54-e757ed92b069.woff2) format("woff2"),url(//www.WealthyLifestatic.com/fonts/camphor/d8f1df09-02f2-46a7-9876-5b2e79046f31.woff) format("woff"),url(//www.WealthyLifestatic.com/fonts/camphor/d26b7b5b-4f11-4aca-9273-f050282fbf28.ttf) format("truetype");font-weight:700;}
   // @font-face{font-family:practicon;src:url(//www.WealthyLifestatic.com/fonts/v13/practicon.eot);src:url(//www.WealthyLifestatic.com/fonts/v13/practicon.eot#iefix) format("embedded-opentype"),url(//www.WealthyLifestatic.com/fonts/v13/practicon.woff2) format("woff2"),url(//www.WealthyLifestatic.com/fonts/v13/practicon.woff) format("woff"),url(//www.WealthyLifestatic.com/fonts/v13/practicon.svg) format("svg"),url(//www.WealthyLifestatic.com/fonts/v13/practicon.ttf) format("truetype");font-weight:400;font-style:normal;}
-  
+
   a,
   div,
   footer,
@@ -2504,7 +2511,7 @@ button{font-family:Camphor,sans-serif;}
   .direct-list-desktop .cta-block img {
     float: left;
   }
-  
+
   .direct-list-web,
   .direct-list-desktop p,
   .direct-list-desktop h4,
@@ -2514,14 +2521,14 @@ button{font-family:Camphor,sans-serif;}
     margin: 0;
     padding: 0;
   }
-  
+
   .direct-list-desktop {
     background-color: #ffffff;
     display: block;
     text-decoration: none;
     padding: 0;
   }
-  
+
   .direct-list-desktop .banner-title {
     color: #14bef0;
     font-size: 18px;
@@ -2529,13 +2536,13 @@ button{font-family:Camphor,sans-serif;}
     line-height: 24px;
     font-weight: bold;
   }
-  
+
   .direct-list-desktop .banner-subtitle {
     font-size: 14px;
     color: #414146;
     line-height: 1.5;
   }
-  
+
   .direct-list-desktop .coupon-text {
     display: inline-block;
     font-size: 11px;
@@ -2547,7 +2554,7 @@ button{font-family:Camphor,sans-serif;}
     margin-top: 8px;
     line-height: 1.2;
   }
-  
+
   .direct-list-desktop .cta {
     margin-top: 53px;
     display: inline-block;
@@ -2559,25 +2566,25 @@ button{font-family:Camphor,sans-serif;}
     border-radius: 2px;
     margin-left: 5px;
     padding: 4px 7px;
-  
+
     position: absolute;
     bottom: 16px;
     right: 16px;
     width: 213px;
   }
-  
+
   .direct-list-desktop .cta .cta-text {
     font-size: 14px;
     line-height: 17px;
   }
-  
+
   .direct-list-desktop .cta .cta-subtext {
     font-size: 11px;
     font-weight: bold;
     margin-top: 2px;
     line-height: 12px;
   }
-  
+
   .direct-list-desktop .pulse {
     margin-right: 4px;
     display: inline-block;
@@ -2590,7 +2597,7 @@ button{font-family:Camphor,sans-serif;}
     background-color: #aae000;
   }
   //kamlesh_dev
-  
+
   .c-day-slot {
     -webkit-animation: blink 0.2s ease-in-out;
     animation: blink 0.2s ease-in-out;
@@ -2650,7 +2657,7 @@ button{font-family:Camphor,sans-serif;}
     position: relative !important;
     transform: translate3d(0px, 0px, 0px) !important;
   }
-  
+
   .figcaption1 {
     color: #414146;
     font-size: 13px;
@@ -2691,7 +2698,7 @@ button{font-family:Camphor,sans-serif;}
     padding: 4px;
     letter-spacing: normal;
   }
-  
+
   .ss {
     margin-left: 20%;
     margin-top: -30px;
@@ -2704,8 +2711,8 @@ button{font-family:Camphor,sans-serif;}
     margin-left: 60%;
     margin-top: -32px;
   }
-  
-  
+
+
   .direct-list-desktop .cta-block img {
     background: url("/consult/bundles/cwipage/images/direct-list-banner-icons-v3.svg")
       no-repeat;
@@ -2713,19 +2720,19 @@ button{font-family:Camphor,sans-serif;}
     height: 26px;
     margin-right: 7px;
   }
-  
+
   .direct-list-desktop .cta-block .stethoscope-icon {
     background-position: -1px -2px;
   }
-  
+
   .direct-list-desktop .cta-block .clock-icon {
     background-position: -33px -2px;
   }
-  
+
   .direct-list-desktop .cta-block .money-icon {
     background-position: -65px -2px;
   }
-  
+
   .direct-list-desktop .clearfix:after {
     content: " ";
     visibility: hidden;
@@ -2733,37 +2740,37 @@ button{font-family:Camphor,sans-serif;}
     height: 0;
     clear: both;
   }
-  
+
   .direct-list-desktop .banner-main-content {
     position: relative;
     font-size: 0;
   }
-  
+
   .direct-list-desktop .banner-main-content > .figure {
     display: inline-block;
     min-width: 107px;
     min-height: 107px;
   }
-  
+
   .direct-list-desktop .banner-description {
     width: 485px;
     padding: 16px 10px 0 0;
     padding-right: 10px;
     transform: translateX(-7px);
   }
-  
+
   .direct-list-desktop .cta-block {
     width: 227px;
     padding: 16px 0 0 25px;
   }
-  
+
   .direct-list-desktop .cta-block,
   .direct-list-desktop .banner-description,
   .direct-list-desktop .banner-main-content > .figure,
   .direct-list-desktop .cta-block img {
     float: left;
   }
-  
+
   .direct-list-desktop .cta-block .figcaption {
     color: #414146;
     font-size: 13px;
@@ -2783,11 +2790,11 @@ button{font-family:Camphor,sans-serif;}
     0% {
       box-shadow: 0 0 0 0 rgba(170, 224, 0, 0.6);
     }
-  
+
     70% {
       box-shadow: 0 0 0 10px rgba(170, 224, 0, 0);
     }
-  
+
     100% {
       box-shadow: 0 0 0 0 rgba(170, 224, 0, 0);
     }
