@@ -22,6 +22,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { CookieService } from 'ngx-cookie-service';
 import { VerifyOtpComponent } from './component/verify-otp/verify-otp.component';
 import { PublicComponent } from './modules/public/public.component';
+import { DoctorDashbordComponent } from './modules/doctor-dashbord/doctor-dashbord.component';
+
 
 // import { DoctorsComponent } from './modules/doctors/doctors.component';
 
@@ -29,6 +31,8 @@ import { PublicComponent } from './modules/public/public.component';
 @NgModule({
   declarations: [
     AppComponent,
+   
+   
 
     // DoctorsComponent,
   ],
