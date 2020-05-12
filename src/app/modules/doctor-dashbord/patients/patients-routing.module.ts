@@ -1,11 +1,12 @@
-import { PatientDetailsComponent } from './../../bookappoiment/patient-details/patient-details.component';
+import { PatientsComponent } from './patients.component';
+
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 
 const routes: Routes = [
   {
-    path:'',component:PatientDetailsComponent
+    path:'',component:PatientsComponent
   }
 ];
 

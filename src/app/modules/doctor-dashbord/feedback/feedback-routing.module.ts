@@ -1,4 +1,5 @@
-import { FeedbackComponent } from './../../user-drive/feedback/feedback.component';
+import { FeedbackComponent } from './feedback.component';
+
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
