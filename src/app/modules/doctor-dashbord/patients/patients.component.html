@@ -1,1 +1,233 @@
-<p>patients works!</p>
+<div id="tdmain_outercontainer">
+    <div class="popdownnoticewrap" style="display: block;">
+
+    <div class="popdownnotice warning undefined" id="lockdown-banner" style="display: block;"><a  target="_blank"> We have disabled appointment booking on Whealthy Life temporarily due to the national lockdown. Patients will still be able to call your establishment in case of emergencies. <span class="popunderline">Enable booking</span></a> <div class="dismisspopdown">Dismiss</div></div></div>
+    <div id="tdmain_body">
+        <div class="tdmain_center" id="tdmain_bodycontent">
+                                                        
+
+<!-- end include -->
+
+<div class="hide app container-fluid ng-scope" ng-app="patientsApp" >
+<!-- uiView:  --><div class="app-container ng-scope" ui-view=""><!-- ngIf: ssuOffers.offersContentLoaded -->
+<div class="ui grid container main-container ng-scope" ng-window-resize="" lower-limit="350" margin="42" height-variable="timelineHeight" id="container">
+
+<div class="demo-schedule-top-block" ng-show="!isRequestRecieved">
+<p class="block-header">When do you want us to call you?</p>
+<div class="demo-picker-block display-flex">
+    <div class="date-picker-block">
+        <p class="picker-label">Date</p>
+
+      <!-- Datepicker -->
+
+    </div>
+    <div class="time-text">
+        at
+    </div>
+    <div class="time-picker-block">
+        <p class="picker-label">Time</p>
+      
+<!-- time-picker-block -->
+
+    </div>
+</div>
+<div class="picker-label">
+    *Available from 9 am to 7 pm, Monday - Sunday.
+</div>
+</div>
+<div class="demo-success-view ng-hide" ng-show="isRequestRecieved">
+<p class="thanks-text">Thanks!</p>
+<img class="demo-success-icon" src="/patients/assets/src/common/images/onboarding/demo-request-success.svg">
+<p class="demo-success-text">Demo request received. </p>
+<p class="demo-success-text">We’ ll call you at the mentioned date &amp; time.</p>
+</div>
+<div class="demo-schedule-footer">
+<div class="demo-submit" ng-click="submitDemoSchedule();">OK. DONE!</div>
+</div>
+</div>
+
+<div class="left-container three wide column"  style="max-height: 615px;">
+<!-- ngInclude:  --><div ng-controller="patientsListController" ng-include="" src="'/patients/assets/src/patients/templates/patientsList/patientsList.html'" analytics-view="Patient list" class="ng-scope"><!-- Start: Clinic switcher -->
+<div class="patients-title ng-scope">
+<div class="app-title">Patients</div>
+<!-- ngIf: !isPatienTour --><button class="ui button tour-button ng-scope" ng-if="!isPatienTour" ng-mouseover="showLearnDropdown()">
+    <div class="tour-play-button"></div>
+    <span>Learn</span>
+</button><div class="learn-tour tooltip-overlay nav-overlay learn-popup" style="left:47px !important">                          <div class="info-wrap clearfix">                          <span class="image-container"><img src="/images/nav-onboarding-emr.svg"></span>                          <span class="text-container"><p class="head">Learn about Charting</p>                            <p class="para">Read benefits, take product tour or watch videos anytime.</p>                            <p class="close-overlay">OK. GOT IT!</p>                          </span>                          </div></div><!-- end ngIf: !isPatienTour -->
+<div class="learn-dropdown">
+    <div class="info-wrap">
+       <span class="image-container"><img class="dropdown-illustration" src="/images/nav-onboarding-emr.svg"></span>
+       <span class="head" ng-click="startEMRTour()">Charting</span>
+    </div>
+    <div class="info-wrap border-top-grey">
+       <span class="image-container"><img class="dropdown-illustration" src="/images/nav-onboarding-billing.svg"></span>
+       <span class="head" ng-click="startBillingTour()">Billing</span>
+    </div>
+</div>
+</div>
+<div class="ui dropdown clinic-switcher ng-isolate-scope disabled" type="dropdown" ng-class="{disabled: (clinics.length===1)}" clinics="titleList" tabindex="0">
+<a class="small-heading ng-binding" title="" ng-bind-html="toTrustedHTML(selectedClinic.label)">qweqw - Kattupakkam </a>
+<i class="angle down icon clinic-switcher-icon"></i>
+<div class="menu freq-menu hidden menu-height" tabindex="-1">
+<!-- ngRepeat: clinic in clinics --><!-- ngIf: clinic.type.toLowerCase() !== 'organisation ' && clinic.type.toLowerCase().indexOf('selected') == -1 --><!-- end ngRepeat: clinic in clinics -->
+</div>
+</div>
+<!-- End: Clinic switcher -->
+
+<!-- Patient cards -->
+<h3 class="ui patient-lists grid equal width secondary pointing small menu patient-lists-header ng-scope" analytics-component="Patient list switcher">
+<a ng-click="selectTodayTab()" ng-class="{'active': 
+($root.currentView === 'today' &amp;&amp; !search.text) ||
+($root.currentView === 'today') &amp;&amp; (search.text &amp;&amp; 
+(docAppointments.appointments | filter:{patient:{name:search.text}}).length)}" class="item column" analytics-atom="Today patients tab" analytics-element="tab" >Today</a>
+
+<a ng-click="selectRecentTab()" ng-class="{'active': $root.currentView === 'recent'}" class="item column active" analytics-atom="Recent patients tab" analytics-element="tab" >Recent</a>
+
+<a   class="item column" analytics-atom="All patients tab" analytics-element="tab">All</a>
+</h3>
+
+<div ng-if="$root.currentView === 'recent'"  class="patient-list ng-scope" infinite-scroll-patients="" when-scrolled="getMoreRecentPatients" analytics-component="Recent patients" style="height: 394.719px;">
+
+</div>
+
+<div ng-show="$root.currentView === 'today'"  class="patient-list ng-scope ng-hide" analytics-component="Today's patients" style="height: 394.719px;">
+
+
+<div analytics-molecule="Patients due">
+
+</div>
+<div analytics-molecule="Patients met">
+
+</div>
+</div>
+
+</div>
+</div>
+<!-- Right Container -->
+<div ng-controller="ChartsController" id="right-container" class="thirteen wide column ui segment ng-scope">
+<!-- ngIf: patientsList.selectedPatient -->
+<!-- ngIf: !patientsList.selectedPatient --><div ng-if="!patientsList.selectedPatient" class="ng-scope">
+    <div class="ui center aligned grid add-chart-message">
+        <h1 class="column twelve wide">
+            Select a patient to view details
+        </h1>
+    </div>
+</div><!-- end ngIf: !patientsList.selectedPatient -->
+<!-- ngInclude: '/patients/assets/src/patients/templates/files/preview.html' --><div ng-include="'/patients/assets/src/patients/templates/files/preview.html'" class="ng-scope"><div class="ui modal print-preview ng-scope" analytics-view=" preview">
+<div class="ui grid" ng-style="{'height': timelineHeight - 120}" style="height: 495px;">
+<div class="eleven wide column full-height">
+    <div class="section-heading print-header ng-binding"> Preview</div>
+    <!-- ngIf: charts.pdfSrc -->
+</div>
+<div class="five wide column print-menu" analytics-component=" selection">
+    <!-- ngIf: charts.selectedMethod==='share' -->
+    <h3 class="ng-binding">
+        Select the items you want to 
+    </h3>
+    <div class="ui master checkbox" previewcheckbox="">
+        <input id="charting" type="checkbox" ng-model="charts.print.all" ng-disabled="charts.disableChart" analytics-atom="Charting" class="ng-pristine ng-untouched ng-valid hidden" tabindex="0">
+            <label for="charting">Charting</label>
+    </div>
+    <div class="ui list child-items">
+        <!-- ngIf: charts.selectedMethod==='print' || charts.shareVia=='email' -->
+        <!-- ngIf: charts.selectedMethod==='print' || charts.shareVia=='email' -->
+        <!-- ngIf: charts.selectedMethod==='print' || charts.shareVia=='email' -->
+        <div class="item">
+            <div class="ui child checkbox">
+                <input type="checkbox" id="prescription"  class="ng-pristine ng-untouched ng-valid" disabled="disabled">
+                <label for="prescription">Prescriptions</label>
+            </div>
+        </div>
+     
+    </div>
+   
+</div>
+</div>
+<div class="actions">
+<div class="ui deny button" analytics-atom="Cancel print" ng-click="clearPrintData(charts)">Cancel
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div> 
+
+
+<div class="ui dimmer modal page ng-scope">
+<div class="ui modal confirm-modal">
+<div class="section-heading ng-binding"></div>
+<h2 class="body-normal-grey">
+    <div class="ng-binding">Abort charting &amp; exit?</div>
+</h2>
+<div class="actions floatright">
+   <div class="ui button deny ng-binding ng-scope" ng-if="!$root.disableCancel">Cancel</div>
+
+    <div class="ui primary button approve ng-binding">Exit</div>
+</div>
+</div>
+</div>
+
+<!-- Loader -->
+<div class="ui inverted dimmer modal page loader-page ng-scope">
+
+</div>
+<div ng-include="" ng-if="patientsListLoaderManager.status.isLoading === false" src="'/patients/assets/src/common/templates/ssuOffersModal.html'" onload="loadOffers()" class="ng-scope"><div class="ui modal medium ssu-offers-modal ng-scope ng-hide" ng-show="false" ng-controller="ssuOffersController">
+<img class="close-icon" src="/patients/assets/src/common/images/onboarding/close-icon.svg" ng-click="hideSsuOffersModal()">
+<div class="modal-main-block">
+<div class="side-block">
+    <img class="ssu-offers-image" ng-src="/patients/assets/src/common/images/ssuOffers.svg" src="/patients/assets/src/common/images/ssuOffers.svg">
+    <p class="avail-offer"><span class="font-weight-bold">30+</span> customers avail this offer everyday</p>
+</div>
+<div class="offer-info-block">
+    <p class="modal-header ng-binding"></p>
+    <div class="offer-block">
+   
+    </div>
+    <p class="instructions">
+        Make the payment now by clicking on the ‘Buy Now’ button. Offer would be applied automatically at the time of checkout.
+    </p>
+    <button class="ui primary button offer-buy-now" ng-click="openStore()">Buy Now</button>
+    <div class="know-more">Still want to know more about Ray ? <a ng-click="showhideRequestCallback(true)">Request Callback</a></div>
+
+   
+
+    <div class="offer-ends-block">
+        <p class="offer-expire-time">Offer ends in <span class="font-weight-bold ng-binding"></span></p>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="ui modal billing-modal">
+<div id="billingAppContainer" ng-app="billingApp" class="ng-scope">
+<!-- uiView:  --><div class="app-container ng-scope" ui-view="" ng-controller="billingController" prevent-backspace-press=""></div>
+</div>
+</div>
+<!-- end include -->
+
+
+<div ng-app="productVideoApp" ng-strict-di="" id="product-video-modal" class="ng-scope">
+<!-- ngInclude: '/patients/assets/src/productVideo/templates/product-video.html' --><div ng-include="'/patients/assets/src/productVideo/templates/product-video.html'" class="ng-scope"><div ng-controller="productVideosController" class="ng-scope">    
+<div class="ui segment product-video-loader display-none">
+<div class="ui active dimmer">
+<div class="ui text loader product-video-loader-text">Loading</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
+
+<!-- end include -->
+
+
+            <div class="clearboth"></div>
+          </div>
+    </div>
+

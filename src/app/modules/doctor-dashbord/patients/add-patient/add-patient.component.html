@@ -1,0 +1,190 @@
+<div class="container mainaddpatient">
+    <h2>New Patient Registrationb</h2>
+    <div class="row">
+
+        <div class="col-sm-4">
+            <div class="five wide column field">
+                <label>Patient Name <span class="remove-item-level">*</span></label>
+                <!-- ngIf: !editPatientMode -->
+                <div ng-if="!editPatientMode"
+                    class="ui sixteen wide field labeled dropdown no-margin-bottom ng-scope ng-isolate-scope"
+                    patientsearch="" searchtabindex="1" model="editedPatientCopy.name" field="name"
+                    validate="validateForm" search="patientList.search">
+                    <div class="ui threeline search icon input">
+                        <input type="text" ng-keyup="onKeyUp($event)" ng-model="model" autocomplete="off"
+                            ng-blur="onBlurOnDiv()" ng-change="searchPatient(model, model)"
+                            ng-model-options="{debounce: 300}" class="ng-pristine ng-valid ng-touched" tabindex="1">
+                        <i class="icon"></i>
+                    </div>
+
+                    <div class="threeline menu sixteen wide pos-absolute field transition hidden">
+                    </div>
+                </div>
+                <div class="secondary-field" ng-show="!editPatientNo">
+                    <label class="ng-binding">
+                        Patient ID: P1
+                        <a ng-click="editPatientNo = true">Edit</a>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+
+            <div class="five wide column field">
+                <label>Mobile Number</label>
+                <div class="field no-margin-bottom">
+                    <div class="ui input">
+                        <input id="primary_mobile" type="text" autocomplete="off"
+                            ng-model="editedPatientCopy.primary_mobile" tabindex="2"
+                            ng-change="resetMobileAsLandlineWarningShown(); validateForm()" ng-show="editPatientMode"
+                            class="ng-pristine ng-untouched ng-valid ng-hide">
+                        <div ng-show="!showSecondaryMobile" class="patientedit-icon app-icon">
+                            <i class="add circle icon"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ui checkbox secondary-field">
+                    <input id="smsNotification" type="checkbox" ng-model="editedPatientCopy.sms_enabled" tabindex="-1"
+                        class="ng-valid ng-dirty ng-valid-parse ng-touched">
+                    <label for="smsNotification">SMS Notifications</label>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="col-sm-4">
+
+            <div class="five wide column field">
+                <label>Email Address</label>
+                <div class="field no-margin-bottom" ng-class="{'error': errors.primary_email}">
+                    <div class="ui input">
+                        <input id="primary_email" type="text" autocomplete="off"
+                            ng-model="editedPatientCopy.primary_email" tabindex="2"
+                            ng-change="resetMobileAsLandlineWarningShown(); validateForm()" ng-show="editPatientMode"
+                            class="ng-pristine ng-untouched ng-valid ng-hide">
+
+
+                        <div class="patientedit-icon app-icon">
+                            <i class="add circle icon"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ui checkbox secondary-field">
+                    <input id="smsNotification" type="checkbox" ng-model="editedPatientCopy.sms_enabled" tabindex="-1"
+                        class="ng-valid ng-dirty ng-valid-parse ng-touched">
+                    <label for="smsNotification">Email Notifications</label>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <label>Gender</label>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input id="female" type="radio" name="gender" value="F" ng-model="editedPatientCopy.gender"
+                                tabindex="5" class="ng-valid ng-dirty ng-valid-parse ng-touched">
+                            <label for="female">Female</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input id="female" type="radio" name="gender" value="F" ng-model="editedPatientCopy.gender"
+                                tabindex="5" class="ng-valid ng-dirty ng-valid-parse ng-touched">
+                            <label for="female">Female</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="col-sm-4">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="field">
+                        <label>
+                            <a ng-click="showAge=false" ng-class="{'dual-label ui label':!showAge}"
+                                class="dual-label ui label">
+                                DOB
+                            </a>
+                            or
+                            <a ng-click="showAge=true" >
+                                Age
+                            </a>
+                        </label>
+                        <div ng-show="!showAge" class="field none"
+                            ng-class="{'error-div': errors.date_of_birth || errors.patient_dob}">
+                        
+                            <div ng-if="editPatientLoaded"
+                                class="ui fields mask-dob ng-pristine ng-untouched ng-valid ng-scope" ng-date-mask=""
+                                ng-model="editedPatientCopy.date_of_birth" masktabindex="7" errorid="patient_dob">
+                                <div class="four wide field">
+                                    <input  type="date" placeholder="DD" maxlength="2" maskfield=""   id="patient_dob" tabindex="7">
+                                </div>
+                            </div>
+                           
+                        </div>
+                       
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <label>Blood Group</label>
+                    <div class="wrapper">
+                        <select class="editableBox">        
+                            <option value="1">A+</option>
+                            <option value="2">B+</option>
+                            <option value="3">c+</option>
+                        </select>
+                      
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <label>Language Preference</label>
+            <div class="wrapper">
+                <select class="editableBox">        
+                    <option value="1">Hindi</option>
+                    <option value="2">Marathi</option>
+                    <option value="3">English</option>
+                </select>
+              
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-sm-4">
+            <label>Occupation </label>
+            
+            <div class="wrapper">
+                <select class="editableBox">        
+                    <option value="1">Account</option>
+                    <option value="2">Doctor</option>
+                    <option value="3">Mangaer</option>
+                </select>
+              
+        </div>
+        </div>
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-4">
+            <label>Occupation </label>
+            
+        </div>
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4"></div>
+    </div>
+</div>

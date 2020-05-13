@@ -1,0 +1,10 @@
+
+.popdownnotice{height:36px;line-height:5px;font-weight:500;text-align:left;padding:12px;font-size:13px;display:none;border-bottom:1px solid;}
+.popdownnotice.warning{color:#fff;background:#e96d59;border-color:#e65942;}
+.popdownnotice a{text-decoration:none;color:inherit;}
+.popdownnotice .popunderline{text-decoration:underline;vertical-align:bottom;}
+.dismisspopdown{float:right;margin-right:14px;line-height:5px;font-size:13px;cursor:pointer;}
+.popdownnoticewrap{display:none;clear:both;}
+@media print{
+.popdownnoticewrap{display:none!important;}
+}
