@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 import { SettingsRoutingModule } from './settings-routing.module';
 
 
+
 @NgModule({
   declarations: [SettingsComponent],
   imports: [
