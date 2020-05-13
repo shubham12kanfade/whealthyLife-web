@@ -25,12 +25,14 @@ import { PublicComponent } from './modules/public/public.component';
 import { DoctorDashbordComponent } from './modules/doctor-dashbord/doctor-dashbord.component';
 
 
+
 // import { DoctorsComponent } from './modules/doctors/doctors.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    
    
    
 
