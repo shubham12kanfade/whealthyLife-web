@@ -6,10 +6,29 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./practice-staff.component.scss']
 })
 export class PracticeStaffComponent implements OnInit {
+  sark: boolean=true;
+  second: boolean=false;
+  doctor: boolean=false;
+  staff:boolean=false;
 
   constructor() { }
 
   ngOnInit(): void {
   }
+  slideon() {
+    this.sark = true;
+    this.second = false;
+  
+  }
+  secondon() {
+    this.second = true;
+    this.sark = false ;
 
+  }
+  adddoctorpopup(){
+    this.doctor=!this.doctor;
+  }
+  addstaffpopup(){
+    this.staff=!this.staff;
+  }
 }
