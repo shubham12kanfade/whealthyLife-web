@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PatientsComponent implements OnInit {
 
+
+  show: boolean=false;
+
   PatientDate: string="today";
 
   activeTab = 'today';
@@ -35,6 +38,8 @@ export class PatientsComponent implements OnInit {
     this.PatientDate="all"
   }
 
-  
+  showpopup(){
+    this.show=!this.show;
+  }
 
 }

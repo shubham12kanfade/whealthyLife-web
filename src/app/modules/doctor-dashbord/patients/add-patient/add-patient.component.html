@@ -175,7 +175,7 @@
         
                     <div class="col-sm-4">
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Member Name</label>
+                            <label for="exampleInputEmail1">Relationship</label>
                             <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                            
                           </div>
@@ -208,10 +208,26 @@
     </div>
 </section>                                                                                                                                                                                                                                                                                                                                                                                          
 
+ -->
 
 
 
-<button type="button" (click)="showpopup()">click</button> -->
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+<!-- <button  style="margin-left: 78px;" type="button" (click)="showpopup()">click</button> -->
 
 
 
@@ -223,15 +239,17 @@
 
     <div class="col-sm-12">
 
-      <div class="modal" id="myModal"  style="display: block;">
+      <div class="modal" id="myModal"  *ngIf="show" style="display: block;">
         <div class="modal-xl dialog">
           <div class="modal-content">
          
+
             <div class="modal-body" style="height: 90vh; overflow-y: scroll;">
            
 
+
                 <section >
-                    <h1>New Patient Registration</h1>
+                    <h2 class="ptn">New Patient Registration</h2>
                     <div class="container addpatient">
                         <div class="row">
                             <div class="col-sm-2">
@@ -295,14 +313,14 @@
                                         </div>
                                         <div class="col-sm-4">
                                             <div class="row">
-                                                <div class="col-sm-6">
+                                                <div class="col-sm-8">
                                                     <div class="form-group">
                                                         <label for="exampleInputEmail1">DOB or Age</label>
                                                         <input style="font-size: 16px; " type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                                                         
                                                       </div>
                                                 </div>
-                                                <div class="col-sm-6">
+                                                <div class="col-sm-4">
                                                     <div class="form-group">
                                                         <label for="exampleInputEmail1">Blood Group</label>
                                                         <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" style="font-size: 16px;">
@@ -391,11 +409,11 @@
                         
                                       
                                     </div>
-                        
+                      
                         
                                 </div>
                         
-                                <div class="row">
+                                <div class="row" >
                         
                                     <div class="col-sm-4">
                                         <div class="form-group">
@@ -413,21 +431,30 @@
                                           </div>
                                     </div>
                                     
-                                    
+                                    <div class="col-sm-6">
+                                        <div class="form-group mt-4">
+                                            <label for="exampleInputEmail1">Medical Profile</label>
+    
+                                            <div class="mt-4">
+                                                <label>Personal Medical History</label>
+                                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                        </div>
+                                          </div>
+                                    </div>
                                 </div>
-                
+                              
                             </div>
                         </div>
                        
-                       
-                
+                        
                         
                     </div>
+
                 
                     <div class=" patientbtn" >
                         <div class="input-group-append"  >
-                            <button class="btnmodel btn-outline-secondary buttonaddpationent"  type="button" (click)="showpopup()">Cancel</button>
-                            <button class="btnmodel btn-outline-secondary  buttonpationetsave"     type="button">Save</button>
+                            <button class="btnmodel btn-outline-secondary buttonaddpationent"   type="button" [routerLink]="['/Doctor/Patients/']" routerLinkActive="router-link-active">Cancel</button>
+                            <button class="btnmodel btn-outline-secondary  buttonpationetsave"     type="button"  >Save</button>
                          </div>
                     </div>
                 </section>
@@ -440,5 +467,6 @@
 
     </div>
   </div>
+
 
 

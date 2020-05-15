@@ -6,14 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-patient.component.scss']
 })
 export class AddPatientComponent implements OnInit {
-  show: boolean=false;
+  show: boolean=true;
   droup: boolean=false;
 
+  
   constructor() { }
 
   ngOnInit(): void {
   }
   showpopup(){
+
     this.show=!this.show;
   }
   showDroup(){
@@ -22,5 +24,5 @@ export class AddPatientComponent implements OnInit {
 
 
 
-  
+
 }
