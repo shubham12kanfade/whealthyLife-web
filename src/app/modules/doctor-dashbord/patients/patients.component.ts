@@ -7,30 +7,44 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PatientsComponent implements OnInit {
 
-  PatientDate: string="recent";
+  PatientDate: string="today";
 
+  activeTab = 'today';
   constructor() { }
 
 
 
-  today(){
+  // today(){
 
-    this.PatientDate="today"
-  }
+  //   this.PatientDate="today"
+  // }
 
-  recent(){
+  // recent(){
 
-    this.PatientDate="recent"
-  }
+  //   this.PatientDate="recent"
+  // }
 
-  all(){
-    this.PatientDate="all"
-
-  }
+ 
   ngOnInit(): void {
   }
 
 
+  today(activeTab){
+    this.activeTab = activeTab;
+    this.PatientDate="today"
+  }
 
+
+  recent(activeTab){
+    this.activeTab = activeTab;
+    this.PatientDate="recent"
+  }
+
+  all(activeTab){
+    this.activeTab = activeTab;
+    this.PatientDate="all"
+  }
+
+  
 
 }

@@ -17,9 +17,10 @@
                 <div  class="mt-3 text-center">
                   <h3 style="color: black;">  maroti Kathoke</h3>
                 </div>
-                <div class="row mt-4 ">
-                    <div class="col-sm-4 text-center  ">
-                        <div class="pointer" (click)="today()"> Today</div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <a class="nav-link active pointer"  [ngClass]="{ 'active':activeTab==='today'}" (click)="today('today')"
+                        data-toggle="tab">Today</a>
                         <div *ngIf=" PatientDate==='today'">
                             <div class="progress">
                                 <div class="progress-bar " role="progressbar"  aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
@@ -27,27 +28,46 @@
                         
                         </div> 
                     </div>
-                    <div class="col-sm-4 text-center">
-                     <div class="pointer"  (click)="recent()">Recent</div>
-                     <div *ngIf=" PatientDate==='recent'" class="">
-                        <div class="progress">
-                            <div class="progress-bar " role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                          </div>     
+                    <div class="col-sm-4">
+                        <a class="nav-link pointer"  [ngClass]="{ 'active':activeTab==='recent'}" data-toggle="tab"
+                            (click)="recent('recent')">Recent</a>
+                            <div *ngIf=" PatientDate==='recent'">
+                                <div class="progress">
+                                    <div class="progress-bar " role="progressbar"  aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                  </div>    
+                            
+                            </div> 
                     </div>
-                    </div>
-                    <div class="col-sm-4 text-center">
-                        <div class="pointer"  (click)="all()">All</div>
+                    <div class="col-sm-4">
+                        <a class="nav-link pointer"  [ngClass]="{ 'active':activeTab==='all'}" data-toggle="tab"
+                        (click)="all('all')" >All</a>
                         <div *ngIf=" PatientDate==='all'">
                             <div class="progress">
-                                <div class="progress-bar " role="progressbar"   aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                              </div>
-                        </div>
+                                <div class="progress-bar " role="progressbar"  aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                              </div>    
+                        
+                        </div> 
                     </div>
                 </div>
+
+                
+
+
+              
                <div class="row" style="height: 100%;">
-                <div class="col-12">
-                    <h1>No appointments for today</h1>
-             
+                <div class="col-12 mt-4">
+                  
+                    <div class="tab-content">
+                        <div class="tab-pane" id="today" [ngClass]="{ 'active':activeTab==='today'}" >
+                            No appointments for today
+                        </div>
+                        <div class="tab-pane col-12" id="recent" [ngClass]="{ 'active':activeTab==='recent'}">recent screen</div>
+
+                        <div class="tab-pane col-12" id="all" [ngClass]="{ 'active':activeTab==='all'}">all screen</div>
+                      </div>
+
+                      
+                      
             </div>
                </div>
             </div>
