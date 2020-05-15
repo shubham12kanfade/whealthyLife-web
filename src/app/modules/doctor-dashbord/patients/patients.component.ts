@@ -14,16 +14,6 @@ export class PatientsComponent implements OnInit {
 
 
 
-  // today(){
-
-  //   this.PatientDate="today"
-  // }
-
-  // recent(){
-
-  //   this.PatientDate="recent"
-  // }
-
  
   ngOnInit(): void {
   }
