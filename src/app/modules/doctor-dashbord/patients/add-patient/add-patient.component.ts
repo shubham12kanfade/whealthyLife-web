@@ -19,4 +19,8 @@ export class AddPatientComponent implements OnInit {
   showDroup(){
     this.droup=!this.droup
   }
+
+
+
+  
 }
