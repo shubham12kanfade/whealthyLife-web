@@ -7,9 +7,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PatientsComponent implements OnInit {
 
+  PatientDate: string="recent";
+
   constructor() { }
 
+
+
+  today(){
+
+    this.PatientDate="today"
+  }
+
+  recent(){
+
+    this.PatientDate="recent"
+  }
+
+  all(){
+    this.PatientDate="all"
+
+  }
   ngOnInit(): void {
   }
+
+
+
 
 }
