@@ -1,0 +1,27 @@
+#accordionSidebar {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 0;
+}
+
+ul li:hover {
+    background: #f0f0f0;
+    color: white;
+}
+
+.sidebar {
+    width: 20rem !important;
+}
+ul li a span{
+    font-size: 1.5rem;
+    display: inline ;
+}
+.sidebar-heading{
+    font-size: 1.5rem;
+}
+.sidebar-brand-text{
+    font-size: 2rem;
+}
+.sidebar .nav-item .nav-link {
+    width: 19rem;
+}
