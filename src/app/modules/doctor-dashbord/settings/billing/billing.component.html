@@ -1,1 +1,102 @@
-<p>billing works!</p>
+<div class="card shadow mb-4">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="card-header">
+          <div class="col-sm-3 first">
+            <h2 class="font-weight-bold text-primary">Practice Staff</h2>
+          </div>
+          <div class="col-sm-6 second">
+            <ul class="nav nav-pills" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link" [ngClass]="{'tab-pane active': sark}" data-toggle="pill"
+                  (click)="slideon()">Tax Vatalogue</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="pill" [ngClass]="{'tab-pane active': second}" (click)="secondon()">Payment Modes</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-sm-3 third">
+            <button type="button" class="btn btn-warning btnadd"  *ngIf="sark">Add</button>
+            <button type="button" class="btn btn-warning btnadd"   *ngIf="second">Add</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tab-content">
+        <div class="row tbs" *ngIf="sark">
+            <div class="col-sm-12">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>TEMPLATE NAME</th>
+                            <th>DIAGNOSES</th>
+                            <th>CONSTITUENTS</th>
+                            <th></th>
+                           
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Service Tax</td>
+                            <td>NA</td>
+                            <td><i class="fas fa-edit"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Swachh Bharat Cess</td>
+                            <td>NA</td>
+                            <td><i class="fas fa-edit"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Krishi Kalyan Cess</td>
+                            <td>NA</td>
+                            <td><i class="fas fa-edit"></i></td>
+                           
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+  
+  
+        <div class="row tbs" *ngIf="second">
+            <div class="col-sm-12">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>MODE NAME</th>
+                            <th>TYPE</th>
+                            <th>VENDOR FEE(%)</th>
+                            <th></th>
+                           
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Cash</td>
+                            <td>Cash</td>
+                            <td>0</td>
+                            <td><i class="fas fa-edit"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Cheque</td>
+                            <td>Cheque</td>
+                            <td>0</td>
+                            <td><i class="fas fa-edit"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Card</td>
+                            <td>Card</td>
+                            <td>0</td>
+                            <td><i class="fas fa-edit"></i></td>  
+                        </tr>
+                       </tbody>
+                </table>
+            </div>
+        </div>
+  
+      </div>
+    </div>
+    </div>
