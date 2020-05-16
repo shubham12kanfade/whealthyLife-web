@@ -1,8 +1,18 @@
 <div id="wrapper">
 
 
-    <ul *ngIf="router.url !== '/Doctor/Profile/Registration' && router.url !== '/Doctor/Profile/Education' && router.url !== '/Doctor/Profile/Connect_clinic' && router.url !== '/Doctor/Profile/Clinic_details' " class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion"
-        id="accordionSidebar">
+    <ul *ngIf="
+    router.url !== '/Doctor/Profile/Registration' 
+    && router.url !== '/Doctor/Profile/Education'
+     && router.url !== '/Doctor/Profile/Connect_clinic' 
+     && router.url !== '/Doctor/Profile/Clinic_details'
+     && router.url !== '/Doctor/Profile/Identity_proof'
+     && router.url !== '/Doctor/Profile/Registration_proof'
+     && router.url !== '/Doctor/Profile/Clinic_proof'
+     && router.url !== '/Doctor/Profile/Clinic_location'
+     && router.url !== '/Doctor/Profile/Clinic_timings'
+     && router.url !== '/Doctor/Profile/Consultant_details'
+    " class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
 
         <a class="sidebar-brand d-flex align-items-center justify-content-center" href="">
