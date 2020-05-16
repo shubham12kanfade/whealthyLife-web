@@ -7,9 +7,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IntegrationsComponent implements OnInit {
 
+  activeTab = 'first';
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+
+  first(activeTab){
+    this.activeTab = activeTab;
+  }
+
+  secondon(activeTab){
+    this.activeTab = activeTab;
+  }
+
+
+  wealthylife(activeTab)
+ {
+  this.activeTab = activeTab;
+ }
 }
