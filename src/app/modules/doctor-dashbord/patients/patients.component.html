@@ -1,1 +1,95 @@
-<p>patients works!</p>
+
+<section class="" >
+    <div class="container-fluid">
+
+        <div class="row patientfont">
+            <div class="col-sm-3" style="border-right: 1px solid gray;height: 100vh;" >
+                <div class="row">
+                    <div class="col-sm-12 flex1" >
+                        <h1 style="color: black; font-weight: bold;">Patient</h1>
+                   
+                        <button class="ui button tour-button ng-scope" ng-if="!isPatienTour" ng-mouseover="showLearnDropdown()">
+                            <div class="tour-play-button"></div>
+                            <span>Learn</span>
+                        </button>
+                    </div>
+                </div>
+                <div  class="mt-3 text-center">
+                  <h3 style="color: black;">  maroti Kathoke</h3>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <a class="nav-link active pointer"  [ngClass]="{ 'active':activeTab==='today'}" (click)="today('today')"
+                        data-toggle="tab">Today</a>
+                        <div *ngIf=" PatientDate==='today'">
+                            <div class="progress">
+                                <div class="progress-bar " role="progressbar"  aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                              </div>    
+                        
+                        </div> 
+                    </div>
+                    <div class="col-sm-4">
+                        <a class="nav-link pointer"  [ngClass]="{ 'active':activeTab==='recent'}" data-toggle="tab"
+                            (click)="recent('recent')">Recent</a>
+                            <div *ngIf=" PatientDate==='recent'">
+                                <div class="progress">
+                                    <div class="progress-bar " role="progressbar"  aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                  </div>    
+                            
+                            </div> 
+                    </div>
+                    <div class="col-sm-4">
+                        <a class="nav-link pointer"  [ngClass]="{ 'active':activeTab==='all'}" data-toggle="tab"
+                        (click)="all('all')" >All</a>
+                        <div *ngIf=" PatientDate==='all'">
+                            <div class="progress">
+                                <div class="progress-bar " role="progressbar"  aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                              </div>    
+                        
+                        </div> 
+                    </div>
+                </div>
+
+                
+
+
+              
+               <div class="row" style="height: 100%;">
+                <div class="col-12 mt-4">
+                  
+                    <div class="tab-content">
+                        <div class="tab-pane" id="today" [ngClass]="{ 'active':activeTab==='today'}" >
+                            No appointments for today
+                        </div>
+                        <div class="tab-pane col-12" id="recent" [ngClass]="{ 'active':activeTab==='recent'}">recent screen</div>
+
+                        <div class="tab-pane col-12" id="all" [ngClass]="{ 'active':activeTab==='all'}">all screen</div>
+                      </div>
+
+                      
+                      
+            </div>
+               </div>
+            </div>
+            <div class="col-sm-9" style="background-color: white;">
+
+          <h1 class="ion-justify-content-center" style="margin:200px!important ;">Select a patient to view details</h1>
+        
+        </div>
+
+
+
+        </div>
+
+
+
+
+        </div>
+
+        
+</section>
+
+
+
+
+
