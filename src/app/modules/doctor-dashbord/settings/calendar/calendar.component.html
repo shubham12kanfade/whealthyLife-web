@@ -1,1 +1,205 @@
-<p>calendar works!</p>
+<div class="card shadow mb-4">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="card-header">
+                <div class="col-sm-3 first">
+                    <h2 class="font-weight-bold text-primary">Calender</h2>
+                </div>
+                <div class="col-sm-3 third">
+                    <button type="button" class="btn btn-light btnadd">Subsrcibe</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card-body">
+        <div class="row second">
+            <div class="col-sm-4">
+                <div class="form-check fchk">
+                    <label class="form-check-label fcl">
+                        <input type="checkbox" class="form-check-input fci" value="">
+                        Always show today as first day on my calendar
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="row forth">
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label for="Duration">Default Appointment Duration</label>
+                    <select class="form-control" id="Duration">
+                        <option>5 minutes</option>
+                        <option>10 minutes</option>
+                        <option>15 minutes</option>
+                        <option>20 minutes</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>
+                                <div class="tabth">RACTICE AND DOCTORS</div>
+                            </th>
+                            <th>
+                                <div class="tabth">WORK TIMINGS</div>
+                            </th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="tabtd">Practice - qweqw - Kattupakkam</div>
+                            </td>
+                            <td>
+                                <div class="tabtd"><strong>Mon to Sun:</strong>9:00am-7:00pm</div>
+                            </td>
+                            <td></td>
+                            <td>
+                                <div class="tabtd"><a class="btn" (click)="calendermodal()"><span><i class="fa fa-edit"></i></span></a></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="tabtd">Madha vyas</div>
+                            </td>
+                            <td>
+                                <div class="tabtd"><strong>Mon to Sun:</strong>9:00am-7:00pm</div>
+                            </td>
+                            <td></td>
+                            <td>
+                                <div class="tabtd"><a class="btn"><span><i class="fa fa-edit"></i></span></a></div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- modal1 add doctor -->
+<div class="modal" id="myModal" *ngIf="calender">
+    <div class="modal-lg dialog">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="header">
+                <h1 class="modal-title mtitl">Edit Practice Timings</h1>
+            </div>
+            <!-- Modal body -->
+            <div class="modal-body">
+                <div class="col-md-12 col-sm-12">
+                    <div class="row">
+                        <div class="inpt">
+                            <input type="checkbox" id="Sunday" name="Sunday" value="Bike">
+                            <label class="labl" for="Sunday"> Sunday</label><br>
+                            <input type="checkbox" id="Monday" name="Monday" value="Car">
+                            <label class="labl" for="Monday"> Monday</label><br>
+                            <input type="checkbox" id="Tuesaday" name="Tuesaday" value="Boat">
+                            <label class="labl" for="Tuesaday"> Tuesaday</label><br>
+                            <input type="checkbox" id="Wednesday" name="Wednesday" value="Bike">
+                            <label class="labl" for="Wednesday"> Wednesday</label><br>
+                            <input type="checkbox" id="Thursday" name="Thursday" value="Car">
+                            <label class="labl" for="Thursday"> Thursday</label><br>
+                            <input type="checkbox" id="Friday" name="Friday" value="Boat">
+                            <label class="labl" for="vehicle3"> Friday</label><br>
+                            <input type="checkbox" id="Saturday" name="Saturday" value="Boat">
+                            <label class="labl" for="Saturday"> Saturday</label><br>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="sess2">Session2<span class="redstar">*</span></div>
+                            <div>Session1<span class="redstar">*</span>
+
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <div class="form-group">
+                                            <label for="Starttime">Start time</label>
+                                            <select class="form-control" id="Starttime">
+                                                <option>9:00AM</option>
+                                                <option>9:00AM</option>
+                                                <option>9:00AM</option>
+                                                <option>9:00AM</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="form-group">
+                                            <label for="Endtime">End time</label>
+                                            <select class="form-control" id="Endtime">
+                                                <option>9:00AM</option>
+                                                <option>9:00AM</option>
+                                                <option>9:00AM</option>
+                                                <option>9:00AM</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-3">
+                                        <div class="form-group">
+                                            <label for="Starttime">Start time</label>
+                                            <select class="form-control" id="Starttime">
+                                                <option>9:00AM</option>
+                                                <option>9:00AM</option>
+                                                <option>9:00AM</option>
+                                                <option>9:00AM</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="form-group">
+                                            <label for="Endtime">End time</label>
+                                            <select class="form-control" id="Endtime">
+                                                <option>9:00AM</option>
+                                                <option>9:00AM</option>
+                                                <option>9:00AM</option>
+                                                <option>9:00AM</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div >
+                    <table>
+                    <tbody>
+                    <tr>
+                      <td>
+                         <input >
+                      </td>
+                      
+                      <td>
+                        <button >Remove</button>
+                      </td>
+                    </tr>
+                        </tbody>
+                    </table>
+                </div>
+              
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div div class="addtiming" >
+                                <a class="btn">Add more timings</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class=" modal-footer">
+                        <button type="button" class="btn btn-light btnm" (click)="calendermodal()">Cancel</button>
+                        <button type="button" class="btn btn-warning btnm">Save</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>

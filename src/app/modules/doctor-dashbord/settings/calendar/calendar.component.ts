@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./calendar.component.scss']
 })
 export class CalendarComponent implements OnInit {
+  calender: boolean=false;
+
 
   constructor() { }
-
+  
   ngOnInit(): void {
   }
-
+calendermodal(){
+  this.calender=!this.calender;
+}
 }
