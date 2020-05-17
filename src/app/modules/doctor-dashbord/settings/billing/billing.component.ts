@@ -10,6 +10,8 @@ export class BillingComponent implements OnInit {
   second: boolean=false;
   doctor: boolean=false;
   staff:boolean=false;
+  tax: boolean=false;
+  pay: boolean=false;
   constructor() { }
 
   ngOnInit(): void {
@@ -23,5 +25,11 @@ export class BillingComponent implements OnInit {
     this.second = true;
     this.sark = false ;
 
+  }
+  shomodal1(){
+    this.tax=!this.tax;
+  }
+  shomodal2(){
+    this.pay=!this.pay;
   }
 }

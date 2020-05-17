@@ -7,7 +7,7 @@
           </div>
           
           <div class="col-sm-9 third">
-            <button type="button" class="btn btn-warning btnadd">Add</button>
+            <button type="button" class="btn btn-warning btnadd" (click)="shomodalp()">Add</button>
           </div>
         </div>
       </div>
@@ -52,8 +52,45 @@
                 </table>
             </div>
         </div>
-  
-  
       </div>
     </div>
     </div>
+
+    <!-- modal1  -->
+<div class="modal" id="myModal" *ngIf="newg">
+  <div class="modal-lg dialog">
+    <div class="modal-content">
+      <div class="row">
+        <div class="col-sm-8">
+          <div class="header">
+            <h1 class="modal-title mtitl">Add New Group</h1>
+          </div>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="col-md-12 col-sm-12 tiop">
+          <div class="row">
+            <div class="col-sm-6">
+              <label class="diagnose" for="Diagnoses">Group Name<span class="redstar">*</span></label>
+              <!-- <div class="input-group md-form form-sm form-1 pl-0">
+                          </div> -->
+              <input class="form-control tred my-0 py-1" type="text" placeholder="Enter The Group Names" aria-label="Search">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6">
+              <label class="template" for="Template Name">Members</label>
+              <!-- <div class="input-group md-form form-sm form-1 pl-0">
+                          </div> -->
+              <input class="form-control tred my-0 py-1" type="text" placeholder="Patients" aria-label="Search">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-light btnm" (click)="shomodalp()" >Cancel</button>
+        <button type="button" class="btn btn-warning btnm">Save</button>
+      </div>
+    </div>
+  </div>
+</div>

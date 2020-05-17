@@ -6,11 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./drug-catalog.component.scss']
 })
 export class DrugCatalogComponent implements OnInit {
-  items=10;
-
+  // items=10;
+  opmod: boolean=false;
+  inp: boolean=false;
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  modalopen(){
+    this.opmod=!this.opmod;
+  }
+  inpfield(){
+    this.inp=!this.inp;
+  }
 }

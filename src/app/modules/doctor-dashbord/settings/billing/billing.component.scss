@@ -13,7 +13,7 @@
  >.nav-item{
      font-size: 1.4rem !important;  
      border:1px solid black;
-    //  border-radius: 50%;
+     cursor: pointer;
  }
 }
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
@@ -80,4 +80,57 @@ tbody{
 }
 .tbs{
     margin-top: 20px;
+}
+.mtitle{
+    font-size: 0.5rem !important;
+    // top: 10%;
+}
+// .modal{
+//     padding: 30px 70px 30px 70px;
+// }
+.cols{
+    font-size: 1.1rem;
+}
+
+.header{
+margin-top: 34px;
+margin-left: 20px;
+// height: 30%;
+z-index: 1;
+background: white;
+}
+.modal-body{
+    padding: 60px;
+    margin-top:-52px ;
+    // margin-bottom: -40px;
+    // overflow: scroll;
+    height: 80vh;
+    overflow-y: scroll;
+}
+.redstar{
+    color: red;
+}
+#myModal{
+    margin-left: 23%;
+    top: 5%;
+    // padding-bottom: -20%;
+    display: block;
+    
+}
+.btnm{
+    // float: right;
+    font-size: 16px;
+}
+.adds{
+    float: right;
+    color:#14bef0;
+    cursor: pointer;
+    font-size: 10px;
+}
+.diagnose{
+    font-size: 13px;
+}
+.template{
+    font-size: 13px;
+
 }

@@ -12,7 +12,7 @@
         <div class="row">
           <div class="col-sm-12">
             <div class="col-sm-2">
-                <input type="checkbox" id="Sunday" name="Sunday" value="Bike">     
+                <input type="checkbox" id="authenitcation" name="authenitcation" value="authenitcation" (click)="showmodal1()">     
             </div>
             <div class="col-sm-10 cdb">
               <span class="">Two Factor Authentication</span><br> 
@@ -24,7 +24,7 @@
         <div class="row">
           <div class="col-sm-12">
             <div class="col-sm-2">
-                <input type="checkbox" id="Sunday" name="Sunday" value="Bike">     
+                <input type="checkbox" id="accesszones" name="accesszones" value="accesszones"  (click)="showmodal2()">     
             </div>
             <div class="col-sm-10 cdb">
               <span class="">WealthyLife Access Zones</span> <br>
@@ -55,3 +55,96 @@
         </div>
     </div>
 </div>
+
+
+     <!-- modal1 2 way authintication -->
+     <div class="modal" id="myModal" *ngIf="mod1">
+      <div class="modal-sm dialog">
+        <div class="modal-content mc">
+          <!-- Modal Header -->
+          <div class="header">
+            <h1 class="modal-title mtitl"> 2 Factor Authentication</h1>
+          </div>
+    
+          <!-- Modal body -->
+          <div class="modal-body">
+            <div class="col-md-12 col-sm-12">  
+             <span class="chk"> All users of this practice will be notified via SMS and Email to activate 2 factor authentication for their WealthyLife user ID.</span>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-light btnm" (click)="showmodal1()" >Not Now</button>
+            <button type="button" class="btn btn-warning btnm">Enable</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+      <!-- modal2 Access Zones -->
+      <div class="modal" id="myModal" *ngIf="mod2">
+        <div class="modal-sm dialog">
+          <div class="modal-content mc">
+            <!-- Modal Header -->
+            <div class="header">
+              <h1 class="modal-title mtitl"> WealthyLife Access Zones</h1>
+            </div>
+      
+            <!-- Modal body -->
+            <div class="modal-body">
+              <div class="col-md-12 col-sm-12">
+                <div class="row">
+                  <span class="chk"> Specify the details of secured access zones for your Practo Ray users. <a href="" >Learn more</a></span>
+                </div> 
+                <div class="row">
+                  <div class="col-sm-6">
+                    <input type="radio" id="authenitcation" name="authenitcation" value="authenitcation">
+                   <span class="chk"> I have a static IP </span>
+                  </div>
+                  <div class="col-sm-6">
+                    <input type="radio" id="authenitcation" name="authenitcation" value="authenitcation">
+                   <span class="chk"> I don't have a static IP </span>
+                  </div>
+                </div> 
+                <div class="row">
+                  <span class="chk"> You can use a <a href="" >Dynamic DNS</a> service, add that domain here for restricting access. </span>
+                </div> 
+              </div>
+              <div class="col-sm-8">
+                <div class="row">
+                  <!-- <div class="col-sm-3">
+                    <div class="form-group">
+                      <input type="text" class="form-control-sm" id="usr">
+                    </div>
+                  </div>
+                  <div class="col-sm-5">
+
+                  </div> -->
+                  <table class="table">
+                    <thead>
+                      <tr>
+                      <th>
+                        <div class="" hidden>
+                        <input type="text" class="form-control" id="usr" >
+                      </div>
+                    </th>
+                    <th>
+                      <div class="form-group" hidden>
+                      <a href="remove">Remove</a>
+                      </div>
+                  </th>
+                    </tr>
+                    </thead>
+                  
+                  </table>
+                </div>
+                <span><a href="add">Add More</a></span>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-light btnm"  (click)="showmodal2()" >Cancel</button>
+              <button type="button" class="btn btn-warning btnm">Save</button>
+            </div>
+          </div>
+        </div>
+      </div>
+  

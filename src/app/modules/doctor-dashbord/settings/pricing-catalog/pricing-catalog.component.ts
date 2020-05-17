@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pricing-catalog.component.scss']
 })
 export class PricingCatalogComponent implements OnInit {
+  opmod: boolean=false;
 
   constructor() { }
 
   ngOnInit(): void {
   }
-
+modalopen(){
+  this.opmod=!this.opmod;
+}
 }

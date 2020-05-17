@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./patient-groups.component.scss']
 })
 export class PatientGroupsComponent implements OnInit {
+  newg: boolean=false;
 
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  shomodalp(){
+    this.newg=!this.newg;
+  }
 }

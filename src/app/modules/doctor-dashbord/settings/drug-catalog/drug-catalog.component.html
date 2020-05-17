@@ -7,7 +7,7 @@
                 </div>
 
                 <div class="col-sm-9 third">
-                    <button type="button" class="btn btn-warning btnadd">Add</button>
+                    <button type="button" class="btn btn-warning btnadd" (click)="modalopen()">Add</button>
                 </div>
             </div>
         </div>
@@ -40,39 +40,140 @@
                             <td>Tablet</td>
                             <td>5</td>
                             <td>-</td>
-                            <td><i class="fas fa-trash"></i></td>
+                            <td><a class="anchorbtn"><i class="fas fa-trash"></i></a></td>
                         </tr>
                         <tr>
                             <td>fol-5</td>
                             <td>Tablet</td>
                             <td>5</td>
                             <td>-</td>
-                            <td><i class="fas fa-trash"></i></td>
+                            <td><a class="anchorbtn"><i class="fas fa-trash"></i></a></td>
                         </tr>
                         <tr>
                             <td>fol-5</td>
                             <td>Tablet</td>
                             <td>5</td>
                             <td>-</td>
-                            <td><i class="fas fa-trash"></i></td>
+                            <td><a class="anchorbtn"><i class="fas fa-trash"></i></a></td>
                         </tr>
                         <tr>
                             <td>fol-5</td>
                             <td>Tablet</td>
                             <td>5</td>
                             <td>-</td>
-                            <td><i class="fas fa-trash"></i></td>
+                            <td><a class="anchorbtn"><i class="fas fa-trash"></i></a></td>
                         </tr>
                         <tr>
                             <td>fol-5</td>
                             <td>Tablet</td>
                             <td>5</td>
                             <td>dosage is 0.1 mg - 0.2 mg intravenously, incrementally.</td>
-                            <td><i class="fas fa-trash"></i></td>
+                            <td><a class="anchorbtn"><i class="fas fa-trash"></i></a></td>
                         </tr>
 
                     </tbody>
                 </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- modal1 add doctor -->
+<div class="modal" id="myModal" *ngIf="opmod">
+    <div class="modal-lg dialog">
+        <div class="modal-content">
+            <div class="row">
+                <div class="col-sm-8">
+                    <div class="header">
+                        <h1 class="modal-title mtitl">Add Drug</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="">
+                    <div class="row">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th> NAME<span class="redstar">*</span></th>
+                                    <th>TYPE<span class="redstar">*</span></th>
+                                    <th>STREANGTH</th>
+                                    <th>UNIT </th>
+                                    <th>IMSTRUCTION</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+
+                                        <div class="input-group md-form form-sm form-1 pl-0">
+
+                                            <input class="form-control fctr my-0 py-1" type="text"
+                                                placeholder="Enter Drug Name">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="">
+                                            <select class="form-control fctr" id="country">
+                                                <option>India</option>
+                                                <option>America</option>
+                                                <option>Africa</option>
+                                                <option>Norvey</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="input-group fctr md-form form-sm form-1 pl-0">
+
+                                            <input class="form-control my-0 py-1" type="text"
+                                                placeholder="Enter Drug Name">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="">
+                                            <select class="form-control fctr" id="country">
+                                                <option>India</option>
+                                                <option>America</option>
+                                                <option>Africa</option>
+                                                <option>Norvey</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="input-group fctr md-form form-sm form-1 pl-0 dis" *ngIf="inp">
+
+                                            <input class="form-control fctr my-0 py-1" type="text"
+                                                placeholder="Enter Drug Name">
+                                        </div>
+                                        <a class="anchorbtn1" (click)="inpfield()" *ngIf="!inp">Add Instruction</a>
+                                    </td>
+                                    <td><a class="closeicon"><i class="fas fa-close"></i></a></td>
+
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>
+                                <div class="addmore">
+                                    <a class="anchorbtn1" style="float: right;">Add More</a>
+                                </div>
+                            </td>
+                                </tr>
+                            </tbody>
+
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-light btnm" data-dismiss="modal"
+                    (click)="modalopen()">Cancel</button>
+                <button type="button" class="btn btn-warning btnm">Save</button>
             </div>
         </div>
     </div>
