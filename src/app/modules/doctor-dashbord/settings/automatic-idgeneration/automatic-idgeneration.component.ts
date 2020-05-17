@@ -7,9 +7,32 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AutomaticIDGenerationComponent implements OnInit {
 
+
+  show: boolean=false;
+
+  showInvoice:boolean=false;
+
+  showReceipt:boolean=false;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+
+  PatientID(){
+
+    this.show=!this.show;
+  }
+
+  InvoiceID(){
+
+    this.showInvoice=!this.showInvoice;
+  }
+
+
+  ReceiptID(){
+    this.showReceipt=!this.showReceipt;
   }
 
 }

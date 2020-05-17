@@ -1,1 +1,302 @@
-<p>import-export works!</p>
+<div  class=" container-fluid"  style="background-color: white;  height: 100%;" >
+    <div class="header">
+
+
+        <div  class="row  mt-4"  >
+
+
+            <div  class="col-sm-6 " style="display: flex;">
+                <h1 style="color: black;">Import / Export</h1>
+
+               <button class="tour-button ">
+                    <div class="tour-play-button"></div>
+                    <span>Learn</span>
+                </button>
+
+            </div>
+
+            
+           
+
+            <div  class="col-sm-6" >
+
+                <button class=" "   (click)="ImportExport()" style="float: right;  background-color: coral; padding: 10px; color: white;  font-weight: bold;" >
+                    Request Import / Export
+                </button>
+            </div>
+        </div>
+
+      
+        <div class="ui divider divider-top no-top-margin ng-scope"></div>
+
+        <div  class="row">
+          
+
+            <div  class="col-sm-12"  style="float: right;">
+
+               <div  class="">
+
+               <h3 class=" text-center">
+                No Import / Export requested
+               </h3>
+               </div>
+
+            </div>
+        </div>
+        
+          
+   
+    
+</div>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="modal  " id="myModal"  *ngIf="showImportExport"   style="display: block;  width: 50%; margin-left: 40%; font-size: 14px; ">
+  <div class="modal-xl dialog   modal-dialog-centered ">
+    <div class="modal-content">
+   
+
+      <div class="modal-header  text-center">
+      <div>
+
+        <!-- <button type="button">Import</button>
+        <button type="button">Export</button> -->
+
+
+      
+          <ul class="nav nav-pills text-center" role="tablist"  style="color: white;">
+            <li class="nav-item">
+              <a class="nav-link" [ngClass]="{'tab-pane active': importtask}" data-toggle="pill"
+                (click)="Importhide()">Import</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="pill" [ngClass]="{'tab-pane active': exporttask}" (click)="Exporthide()">
+                Export</a>
+            </li>
+          </ul>
+       
+
+
+        <!-- <div >
+          Import your data from your previous software or excel. Just fill up the form below and get started.
+      </div>
+      <div class="modal-note">
+          Note: Only 1 data Import request is allowed per subscription. Please make sure you collate all your required data before placing the request.
+      </div> -->
+
+      </div>
+        </div>
+
+      <div class="modal-body" >
+     
+
+          <div  class="container"  style="font-size: 15px;">
+
+
+
+
+
+
+
+
+
+
+<div  class="" *ngIf="importtask">
+ 
+  
+
+
+  <div  class="form-row">
+            
+    <div class="col-md-12  mt-3">
+      <label for="validationServer01"><span>1.</span> Upload *</label>
+      <input type="file" class="form-control "  placeholder="First name" value="Mark" required>
+      <div class=" explaintext">
+        Only Excel (.xls / .xlsx / .xlsb ), MySQL (.sql), Access (.mdb), CSV(.csv), Compressed(.zip,.rar) and Saral(.srl) files with a max limit of 16MB are allowed.
+      </div>
+    </div>
+
+
+
+
+    <div class="col-md-12   mt-3">
+      <label for="validationServer01"><span>2.</span> Which software is this data coming from?</label>
+      <input type="text" class="form-control "  placeholder="First name" value="" required>
+     
+    </div>
+
+
+
+    <div class="col-md-12   mt-3">
+      <label for="validationServer01"><span>3.</span> Instructions</label>
+      <textarea   class="form-control "></textarea>
+     
+    </div>
+
+
+    <div class="col-md-12   mt-3">
+      <label for="validationServer01"><span>3.</span>Correspondence Email ID *</label>
+      <input type="text" class="form-control "  placeholder="First name" value="" required>
+      
+      <div  class="explaintext">
+
+        We will be sending an email with the updates on the progress of your data
+      </div>
+    </div>
+
+    <div class="col-md-12   mt-3 sumbtm"  >
+      <button type="button" class="" (click)="ImportExport()">Cancel</button>
+      <button type="button" class=""  style="background-color: coral; color: white;">Request To import</button>
+    </div>
+
+
+</div>
+
+
+
+
+</div>
+
+
+
+<div  class=" " *ngIf="exporttask">
+
+<div>
+
+  Export your Wealthy Life Ray data to Excel.
+</div>
+
+<div  class="row">
+
+<div  class="col-sm-12 mt-3">
+
+  <div class="form-check  mt-3"  style="color: black;">
+    <span>1.</span>
+     <label class="form-check-label  " for="exampleRadios1"  >
+           Select the type(s) of data you want to export *
+     </label>
+   </div>
+ 
+
+   <div class="form-check mt-3">
+    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+    <label class="form-check-label selecttype" for="defaultCheck1">
+      Patients
+    </label>
+  </div>
+
+
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+    <label class="form-check-label  selecttype" for="defaultCheck1">
+      Appointments
+    </label>
+  </div>
+
+
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+    <label class="form-check-label  selecttype" for="defaultCheck1">
+      Treatments
+    </label>
+  </div>
+
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+    <label class="form-check-label  selecttype" for="defaultCheck1">
+      Procedure Catalog
+    </label>
+  </div>
+
+
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+    <label class="form-check-label  selecttype" for="defaultCheck1">
+      Prescriptions
+    </label>
+  </div>
+
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+    <label class="form-check-label  selecttype" for="defaultCheck1">
+      Clinical Notes
+    </label>
+  </div>
+
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+    <label class="form-check-label  selecttype" for="defaultCheck1">
+      Files
+    </label>
+  </div>
+
+
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+    <label class="form-check-label  selecttype" for="defaultCheck1">
+      Billing
+    </label>
+  </div>
+
+
+
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+    <label class="form-check-label  selecttype" for="defaultCheck1">
+      Treatment Plans
+    </label>
+  </div>
+
+
+
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+    <label class="form-check-label  selecttype" for="defaultCheck1">
+      Expenses
+    </label>
+  </div>
+
+
+  <div  class="mt-5">
+
+    This data will be exported and sent to practice owner's email address nadhavvyas@gmail.com (madhav vyas)
+  </div>
+
+
+  <div class="col-md-12   mt-3  sumbtn"  >
+    <button type="button" class="" (click)="ImportExport()">Cancel</button>
+    <button type="button" class=""  style="background-color: coral; color: white;">Request To Export</button>
+  </div>
+
+  
+</div>
+  
+</div>
+
+
+</div>
+
+          
+              </div>
+          
+          
+
+    </div>
+
+    
+
+
+  </div>
+</div>
+
+</div>
+
