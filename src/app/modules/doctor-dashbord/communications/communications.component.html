@@ -1,1 +1,102 @@
-<p>communications works!</p>
+<div class="container">
+
+  <div class="ui grid basic segment">
+    <div class="ui form middle aligned row communications-header">
+      <div class="six wide column">
+        <div class="clearfix">
+          <h1 class="communication-title no-margin">
+            Communications
+          </h1>
+          <button class="ui button tour-button">
+            <div class="tour-play-button"></div>
+            <span>Learn</span>
+          </button>
+        </div>
+        <div class="clearfix">
+          <div
+            class="ui dropdown clinic-switcher ng-isolate-scope disabled"
+            type="dropdown"
+            clinics="titleList"
+            tabindex="0"
+          >
+            <a
+              class="small-heading ng-binding"
+              title=""
+              >qweqw - Kattupakkam
+            </a>
+            <i class="angle down icon clinic-switcher-icon"></i>
+            <div class="menu freq-menu hidden menu-height" tabindex="-1">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="ui five wide centered column communcation-sms-center-tab ng-scope"
+        style="margin: 0.67em 0;"
+      >
+        <div class="ui two item buttoned menu">
+          <a
+            class="item active"
+          >
+            Treatment Communications
+          </a>
+          <a
+            class="item"
+          >
+            SMS Center
+          </a>
+        </div>
+      </div>
+      <div
+        class="ui six wide right aligned column ng-scope"
+      >
+
+      </div>
+
+    </div>
+    <div class="ui fitted divider no-margin no-bottom-border"></div>
+
+
+    <div
+      class="communication-nav-bar ng-scope"
+    >
+      <div class="nav-header">
+        PLANS
+      </div>
+      <div class="ui fitted divider nav-divider"></div>
+      <div class="nav-subheader">
+        <button class="new-template-button">
+          + Create New Communication Plan
+        </button>
+      </div>
+      <div class="ui fitted divider nav-divider"></div>
+      <div
+        class="sidebar-scroll ng-scope"
+        ng-window-resize=""
+        lower-limit="100"
+        margin="248"
+        height-variable="navBarHeight"
+        style="height: 392px; background-color: #e5e5e5;"
+      >
+        <img
+          class="template-placeholder-image"
+          ng-src="../../../../assets/images/Addtemplate.svg"
+          src="../../../../assets/images/Addtemplate.svg"
+        />
+        <div class="no-templates-text empty-template-text text-center-align">
+          Start adding<br />communication plans
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="add-communication-card"
+    ng-window-resize=""
+    lower-limit="100"
+    margin="182"
+    height-variable="emptyStateHeight"
+    style="height: 488px;"
+  ></div>
+</div>
+
+

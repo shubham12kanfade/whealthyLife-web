@@ -1,0 +1,46 @@
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid #e3e6f0;
+    width: 100%;
+    border-radius: 0.35rem;
+}
+
+.img {
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 40px;
+    margin-left: -50px;
+    margin-bottom: 40px;
+}
+
+.large {
+    font-size: 15px;
+}
+
+.stext {
+    font-size: 12px;
+}
+
+.lht {
+    line-height: normal;
+}
+
+.btn {
+    font-size: 1.50rem !important;
+}
+
+.bg {
+    background-color: #dff8f6;
+}
+
+.textcol {
+    color: #14aa9b;
+}

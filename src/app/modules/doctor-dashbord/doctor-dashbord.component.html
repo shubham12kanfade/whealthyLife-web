@@ -1,10 +1,20 @@
-
 <div id="wrapper">
 
 
-    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+    <ul *ngIf="
+    router.url !== '/Doctor/Profile/Registration' 
+    && router.url !== '/Doctor/Profile/Education'
+     && router.url !== '/Doctor/Profile/Connect_clinic' 
+     && router.url !== '/Doctor/Profile/Clinic_details'
+     && router.url !== '/Doctor/Profile/Identity_proof'
+     && router.url !== '/Doctor/Profile/Registration_proof'
+     && router.url !== '/Doctor/Profile/Clinic_proof'
+     && router.url !== '/Doctor/Profile/Clinic_location'
+     && router.url !== '/Doctor/Profile/Clinic_timings'
+     && router.url !== '/Doctor/Profile/Consultant_details'
+    " class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
-      
+
         <a class="sidebar-brand d-flex align-items-center justify-content-center" href="">
             <div class="sidebar-brand-icon rotate-n-15">
                 <i class="fas fa-laugh-wink"></i>
@@ -12,22 +22,22 @@
             <div class="sidebar-brand-text mx-3">DOCTOR PANEL</div>
         </a>
 
-       
+
         <hr class="sidebar-divider my-0">
-        
+
         <div class="sidebar-heading">
             HEALTH IS WEALTH
         </div>
 
-       
+
         <li class="nav-item active">
             <a class="nav-link" RouterLink="/Doctor/Calender">
-              
+
                 <i class="fas fa-fw fa-calendar-alt"></i>
                 <span>Calender</span    ></a>
     </li>
     <li class="nav-item active">
-        <a class="nav-link" RouterLink="/Doctor/Patients">
+        <a class="nav-link" [routerLink]="['/Doctor/Patients']" routerLinkActive="router-link-active" >
             <i class="fa fa-medkit"></i>
             <span>Patients</span></a>
         </li>
@@ -37,7 +47,7 @@
                 <span>Communications</span></a>
         </li>
         <li class="nav-item active">
-            <a class="nav-link" RouterLink="/Doctor/Reports">
+            <a class="nav-link" [routerLink]="['/Doctor/Reports']" routerLinkActive="router-link-active">
                 <i class="fas fa-fw fa-chart-area"></i>
                 <span>Reports</span></a>
         </li>
@@ -48,7 +58,7 @@
                 <span>Settings</span></a>
         </li>
         <li class="nav-item active">
-            <a class="nav-link" [routerLink]="['/Doctor/Settings']" routerLinkActive="router-link-active">
+            <a class="nav-link" [routerLink]="['/Doctor/Integrations']" routerLinkActive="router-link-active">
                 <i class="fas fa-fw fa-cog"></i>
                 <span>Integrations</span></a>
         </li>
@@ -74,10 +84,10 @@
             wealthylife.com
         </div>
 
- 
+
         <li class="nav-item active ">
-            <a class="nav-link" RouterLink="/Doctor/Profile">
-       
+            <a class="nav-link" [routerLink]="['/Doctor/Profile']" routerLinkActive="router-link-active">
+
                 <i class="fas fa-fw fa-user-alt"></i>
                 <span>Profile</span></a>
         </li>
@@ -115,6 +125,7 @@
         </div>
 
     </ul>
+
     <!-- End of Sidebar -->
 
     <!-- Content Wrapper -->

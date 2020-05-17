@@ -1,0 +1,472 @@
+<!-- <section >
+    <h1>New Patient Registration</h1>
+    <div class="container addpatient">
+        <div class="row">
+            <div class="col-sm-1"   >
+                <button class="btn" id="dropdownMenuButton"  (click)="showDroup()"><i class="fa fa-plus" aria-hidden="true"></i>
+                
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="font-size: 17px;position: absolute;top:0px" >
+                    <a class="dropdown-item" >Action</a>
+                    <a class="dropdown-item" >Another action</a>
+                    <a class="dropdown-item" >Something else here</a>
+                  </div>
+            </div>
+           
+            <div class="col-sm-11">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Patient Name</label>
+                            <input type="email" class="form-control textsizep " id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <small id="emailHelp" class="form-text text-muted"> Patient ID: P1
+                                <a style="color: blue;">Edit</a>
+                            </small>
+                          </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Mobile Number</label>
+                            <input type="email" class="form-control textsizep" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <small id="emailHelp" class="form-text text-muted">
+                                <input type="checkbox">
+                                <label for="smsNotification">SMS Notifications</label>
+                            </small>
+                          </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control textsizep" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <small id="emailHelp" class="form-text text-muted">
+                                <input type="checkbox">
+                                <label for="smsNotification">EMAIL Notifications</label>
+                            </small>
+                          </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <label>Gender</label>
+                           <div class="row">
+                    
+                                <div class="col-sm-6">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                                        <label class="form-check-label" for="gridRadios1" style="margin-left: 20px;">
+                                            Female
+                                        </label>
+                                      </div>
+        
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                                        <label class="form-check-label" for="gridRadios1" style="margin-left: 20px;">
+                                            male
+                                        </label>
+                                      </div>
+                                </div>
+        
+                           </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">DOB or Age</label>
+                                        <input style="font-size: 16px; " type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                        
+                                      </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Blood Group</label>
+                                        <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" style="font-size: 16px;">
+                                            <option selected>None</option>
+                                            <option value="1">A+</option>
+                                            <option value="2">B+</option>
+                                            <option value="3">C+</option>
+                                          </select>
+                                      </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Language Preference</label>
+                                <div class="col-auto my-1">
+                                    <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" style="font-size: 16px;">
+                                      <option selected>English (Practice Default)</option>
+                                      <option value="1">Hindi</option>
+                                      <option value="2">Marathi</option>
+                                      <option value="3">English</option>
+                                    </select>
+                                  </div>
+                              </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Occupation</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                              
+                              </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Groups</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                              
+                              </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Referred By</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                              
+                              </div>
+                        </div>
+                        <div class="col-sm-8">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Street Address</label>
+                                <textarea type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                </textarea>
+                              </div>
+                        </div>
+                        <div class="col-sm-4">
+                           <div class="row">
+                               <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Pincode</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                 
+                                  </div>
+                               </div>
+                               <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">City</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                   
+                                  </div>
+                               </div>
+                           </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="form-group ">
+                                <label for="exampleInputEmail1">Relationship</label>
+                                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                             
+                              </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Member Name</label>
+                                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                               
+                              </div>
+                        </div>
+        
+                      
+                    </div>
+        
+        
+                </div>
+        
+                <div class="row">
+        
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Relationship</label>
+                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                           
+                          </div>
+                    </div>
+        
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Member Name</label>
+                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                           
+                          </div>
+                    </div>
+                    
+                    
+                </div>
+
+            </div>
+        </div>
+       
+       
+
+        
+    </div>
+
+    <div class=" patientbtn" >
+        <div class="input-group-append"  >
+            <button class=" btn-outline-secondary buttonaddpationent"  type="button">Cancel</button>
+            <button class=" btn-outline-secondary  buttonpationetsave"     type="button">Save</button>
+         </div>
+    </div>
+</section>                                                                                                                                                                                                                                                                                                                                                                                          
+
+ -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+<!-- <button  style="margin-left: 78px;" type="button" (click)="showpopup()">click</button> -->
+
+
+
+
+
+
+
+<div class="row">
+
+    <div class="col-sm-12">
+
+      <div class="modal" id="myModal"  *ngIf="show" style="display: block;">
+        <div class="modal-xl dialog">
+          <div class="modal-content">
+         
+
+            <div class="modal-body" style="height: 90vh; overflow-y: scroll;">
+           
+
+
+                <section >
+                    <h2 class="ptn">New Patient Registration</h2>
+                    <div class="container addpatient">
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <button class="btn" ><i class="fa fa-plus" aria-hidden="true"></i></button>
+                            </div>
+                            <div class="col-sm-10">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Patient Name</label>
+                                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                            <small id="emailHelp" class="form-text text-muted"> Patient ID: P1
+                                                <a style="color: blue;">Edit</a>
+                                            </small>
+                                          </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Mobile Number</label>
+                                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                            <small id="emailHelp" class="form-text text-muted">
+                                                <input type="checkbox">
+                                                <label for="smsNotification">SMS Notifications</label>
+                                            </small>
+                                          </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Email address</label>
+                                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                            <small id="emailHelp" class="form-text text-muted">
+                                                <input type="checkbox">
+                                                <label for="smsNotification">EMAIL Notifications</label>
+                                            </small>
+                                          </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <label>Gender</label>
+                                           <div class="row">
+                                    
+                                                <div class="col-sm-6">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                                                        <label class="form-check-label" for="gridRadios1" style="margin-left: 20px;">
+                                                            Female
+                                                        </label>
+                                                      </div>
+                        
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                                                        <label class="form-check-label" for="gridRadios1" style="margin-left: 20px;">
+                                                            male
+                                                        </label>
+                                                      </div>
+                                                </div>
+                        
+                                           </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="row">
+                                                <div class="col-sm-8">
+                                                    <div class="form-group">
+                                                        <label for="exampleInputEmail1">DOB or Age</label>
+                                                        <input style="font-size: 16px; " type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                                        
+                                                      </div>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <div class="form-group">
+                                                        <label for="exampleInputEmail1">Blood Group</label>
+                                                        <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" style="font-size: 16px;">
+                                                            <option selected>None</option>
+                                                            <option value="1">A+</option>
+                                                            <option value="2">B+</option>
+                                                            <option value="3">C+</option>
+                                                          </select>
+                                                      </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1">Language Preference</label>
+                                                <div class="col-auto my-1">
+                                                    <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" style="font-size: 16px;">
+                                                      <option selected>English (Practice Default)</option>
+                                                      <option value="1">Hindi</option>
+                                                      <option value="2">Marathi</option>
+                                                      <option value="3">English</option>
+                                                    </select>
+                                                  </div>
+                                              </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1">Occupation</label>
+                                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                              
+                                              </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1">Groups</label>
+                                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                              
+                                              </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1">Referred By</label>
+                                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                              
+                                              </div>
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1">Street Address</label>
+                                                <textarea type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                                </textarea>
+                                              </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                           <div class="row">
+                                               <div class="col-sm-6">
+                                                <div class="form-group">
+                                                    <label for="exampleInputEmail1">Pincode</label>
+                                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                                 
+                                                  </div>
+                                               </div>
+                                               <div class="col-sm-6">
+                                                <div class="form-group">
+                                                    <label for="exampleInputEmail1">City</label>
+                                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                                   
+                                                  </div>
+                                               </div>
+                                           </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="form-group ">
+                                                <label for="exampleInputEmail1">Relationship</label>
+                                                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                             
+                                              </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1">Member Name</label>
+                                                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                               
+                                              </div>
+                                        </div>
+                        
+                                      
+                                    </div>
+                      
+                        
+                                </div>
+                        
+                                <div class="row" >
+                        
+                                    <div class="col-sm-4">
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Member Name</label>
+                                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                           
+                                          </div>
+                                    </div>
+                        
+                                    <div class="col-sm-4">
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Member Name</label>
+                                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                           
+                                          </div>
+                                    </div>
+                                    
+                                    <div class="col-sm-6">
+                                        <div class="form-group mt-4">
+                                            <label for="exampleInputEmail1">Medical Profile</label>
+    
+                                            <div class="mt-4">
+                                                <label>Personal Medical History</label>
+                                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                        </div>
+                                          </div>
+                                    </div>
+                                </div>
+                              
+                            </div>
+                        </div>
+                       
+                        
+                        
+                    </div>
+
+                
+                    <div class=" patientbtn" >
+                        <div class="input-group-append"  >
+                            <button class="btnmodel btn-outline-secondary buttonaddpationent"   type="button" [routerLink]="['/Doctor/Patients/']" routerLinkActive="router-link-active">Cancel</button>
+                            <button class="btnmodel btn-outline-secondary  buttonpationetsave"     type="button"  >Save</button>
+                         </div>
+                    </div>
+                </section>
+                
+                
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+

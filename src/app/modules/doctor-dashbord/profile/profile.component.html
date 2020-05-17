@@ -1,1 +1,67 @@
-<p>profile works!</p>
+<section>
+    <div class="container-fluid">
+        <div class="row">
+            <div class=" mb-4 h1 font-weight-bold text-dark ">Profile</div>
+        </div>
+
+        <div class="row">
+
+            <div class="bg-white">
+                <div class="row">
+
+                    <div class="col-sm-12 col-md-5">
+
+                        <div class="pl-5 pr-5 pt-5 pb-2">
+                            <div class="h1 font-weight-bold text-dark mt-0"> Great Progress!</div>
+                            <P class="text-dark large pt-2 pb-4">Your profile is just few steps away from going live.</P>
+                            <p class="stext mb-0"> Section A: Profile details</p>
+                            <p class="text-dark large ">
+                                Doctor’s basic details, medical registration, education qualification, establishment details etc
+                            </p>
+                            <button type="button" class="btn btn-warning px-5 h3" [routerLink]="['Registration']" routerLinkActive="router-link-active">Contnue</button>
+                            <hr>
+
+
+
+                            <p class="stext mb-0"> Section B: Profile verification</p>
+                            <p class="text-dark large ">
+                                Doctor identity proof, registration proof, establishment ownership proof etc.
+                            </p>
+                            <button type="button" class="btn btn-warning px-5 h3" [routerLink]="['Identity_proof']" routerLinkActive="router-link-active">Contnue</button>
+                            <hr>
+
+                            <p class="stext mb-0"> Step C: Start getting patients</p>
+                            <p class="text-dark large ">
+                                Location, Timings, Fees
+                            </p>
+                            <button type="button" class="btn btn-warning px-5 h3" [routerLink]="['Clinic_location']" routerLinkActive="router-link-active">Contnue</button>
+                            <hr>
+                        </div>
+                        <div class=" d-none d-sm-none d-md-block col-md-12 col-lg-8 mt-5 ml-5 pr-0 pl-0" style="border: 1px solid #14aa9b;">
+
+                            <div class=" bg p-4 textcol">
+                                <div><i class="fa fa-lightbulb-o fa-lg" aria-hidden="true"></i> </div>
+                                <p class="stext font-weight-bold">Basic details about your practice helps patients reach you easily for appointment booking and inquiries.</p>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="d-none d-sm-none d-md-block col-md-7">
+                        <div>
+                            <img src="https://www.practo.com/partners/onboarding/assets/images/doctor_details.png" class="img pl-md-5" alt="">
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+</section>

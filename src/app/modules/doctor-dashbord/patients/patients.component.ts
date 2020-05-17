@@ -7,9 +7,39 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PatientsComponent implements OnInit {
 
+
+  show: boolean=false;
+
+  PatientDate: string="today";
+
+  activeTab = 'today';
   constructor() { }
 
+
+
+ 
   ngOnInit(): void {
+  }
+
+
+  today(activeTab){
+    this.activeTab = activeTab;
+    this.PatientDate="today"
+  }
+
+
+  recent(activeTab){
+    this.activeTab = activeTab;
+    this.PatientDate="recent"
+  }
+
+  all(activeTab){
+    this.activeTab = activeTab;
+    this.PatientDate="all"
+  }
+
+  showpopup(){
+    this.show=!this.show;
   }
 
 }
