@@ -1,26 +1,25 @@
 <section class="mt-150 mb-50 login-area">
-  <div class="container">
-    <div class="row">
-      
-    </div>
+    <div class="container">
+        <div class="row">
+
+        </div>
 
 
-    <div class="row">
-      <div class="col-sm-6 sidimg">
-        <img src="../assets/img/illustration.webp" />
-      </div>
+        <div class="row">
+            <div class="col-sm-6 sidimg">
+                <img src="../assets/img/illustration.webp" />
+            </div>
 
 
-      <div class="col-sm-6 box">
-          <div class="row">
-            <div class="col-sm-12 nma">
-              <ul class="nav nav-pills">
-                <li class="nav-item">
-                  <a class="nav-link" data-toggle="pill" routerLink="/login">Login</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link active" data-toggle="pill" href="#Register"
-                    >Register</a
+            <div class="col-sm-6 box">
+                <div class="row">
+                    <div class="col-sm-12 nma">
+                        <ul class="nav nav-pills">
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="pill" routerLink="/login">Login</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" data-toggle="pill" href="#Register">Register</a
                   >
                 </li>
               </ul>
@@ -51,66 +50,45 @@
                         >
                           <span class="blue-link">Register Here</span>
                         </a>
-                        <p class="register font-14 align-top">
-                          Are you a doctor?&nbsp;
-                        </p>
-                        <div style="clear: both;"></div>
-                      </div>
+                                <p class="register font-14 align-top">
+                                    Are you a doctor?&nbsp;
+                                </p>
+                                <div style="clear: both;"></div>
                     </div>
-                    <div class="outer-space">
-                      <div class="row">
+                </div>
+                <div class="outer-space">
+                    <div class="row">
                         <div class="col-sm-12 col-md-6">
-                          <p class="no-bottom-margin">First Name</p>
-                          <div class="padding-top-8">
-                            <input
-                              autofocus=""
-                              class="form-control email-text"
-                              id="name"
-                              name="name"
-                              formControlName="firstName"
-                              placeholder="First Name"
-                              type="text"
-                              value=""
-                            />
-                            <span
-                              id="nameErrorBlock"
-                              class="error-block display-block"
-                            >
-                            </span>
-                          </div>
-                        </div>
-                        <div class="col-sm-12 col-md-6">
-                          <p class="no-bottom-margin">Last Name</p>
-                          <div class="padding-top-8">
-                            <input
-                              autofocus=""
-                              class="form-control email-text"
-                              name="lastName"
-                              formControlName="lastName"
-                              placeholder="Last Name"
-                              type="text"
-                              value=""
-                            />
-                            <span
-                              id="nameErrorBlock"
-                              class="error-block display-block"
-                            >
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-        
-                      <input type="hidden" id="is-patient-signup" />
-        
-
-                      <div class="row">
-                        <div class="col-md-12">
-                          <div class="padding-top-8">
-                            <p class="no-bottom-margin">Mobile Number</p>
+                            <p class="no-bottom-margin">First Name</p>
                             <div class="padding-top-8">
-                              <div class="select-box">
-                                <select class="countryCode" id="country" name="country"
-                                  ><option selected="" value="IN">+91(IND)</option
+                                <input autofocus="" class="form-control email-text" id="name" formControlName="firstName" placeholder="First Name" type="text" value="" />
+                                <div *ngIf="submitted && f.firstName.errors" class="error-block display-block">
+                                    <div *ngIf="f.firstName.errors.required">First Name is required</div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <p class="no-bottom-margin">Last Name</p>
+                            <div class="padding-top-8">
+                                <input autofocus="" class="form-control email-text" name="lastName" formControlName="lastName" placeholder="Last Name" type="text" value="" />
+                                <div *ngIf="submitted && f.lastName.errors" class="error-block display-block">
+                                    <div *ngIf="f.lastName.errors.required">Last Name is required</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <input type="hidden" id="is-patient-signup" />
+
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="padding-top-8">
+                                <p class="no-bottom-margin">Mobile Number</p>
+                                <div class="padding-top-8">
+                                    <div class="select-box">
+                                        <select class="countryCode" id="country" name="country"><option selected="" value="IN">+91(IND)</option
                                   ><option value="SG">+65(SGP)</option
                                   ><option value="PH">+63(PHL)</option
                                   ><option value="MY">+60(MYS)</option
@@ -139,11 +117,10 @@
                                 />
                               </div>
                             </div>
-                            <span
-                              id="mobileErrorBlock"
-                              class="error-block display-block"
-                            >
-                            </span>
+                            <div *ngIf="submitted && f.mobileNumber.errors" class="error-block display-block">
+                              <div *ngIf="f.mobileNumber.errors.required">Mobile Number is required</div>
+
+                          </div>
                           </div>
                         </div>
                       </div>
@@ -160,8 +137,10 @@
                               type="text"
                               value=""
                             />
-                            <span id="nameErrorBlock" class="error-block display-block">
-                            </span>
+                            <div *ngIf="submitted && f.email.errors" class="error-block display-block">
+                              <div *ngIf="f.email.errors.required">Email is required</div>
+                              <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+                          </div>
                           </div>
                         </div>
                       </div>
@@ -181,15 +160,15 @@
                                 formControlName="password"
                                 value=""
                               />
+                              <div *ngIf="submitted && f.password.errors" class="error-block display-block">
+                                <div *ngIf="f.password.errors.required">Password is required</div>
+                                <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+                            </div>
                               <div class="password-strength">
                                 Password Strength:
                                 <span id="password-strength-indicator">&nbsp;</span>
                               </div>
-                              <span
-                                id="passwordErrorBlock"
-                                class="error-block display-block"
-                              >
-                              </span>
+                            
                             </div>
                           </div>
                         </div>
