@@ -231,7 +231,9 @@ body{line-height:1;text-align:left;-webkit-font-smoothing:antialiased;-moz-osx-f
 .c-my-doctors{max-width:100%;padding:0 1em;padding-top:50px;text-align:center;}
 .c-omni-wrapper{width:785px;margin:0 auto;z-index:1;position:relative;}
 .c-popular-searches{color:#8d93b3;font-size:14px;padding:15px 0;position:relative;width:785px;margin:0 auto;}
-.c-popular-searches__item{margin-left:25px;cursor:pointer;color:#8d93b3;text-decoration:none;}
+
+// .c-popular-searches__item{margin-left:25px;cursor:pointer;color:#8d93b3;text-decoration:none;}
+
 .c-popular-searches__item:hover{color:#fff;text-decoration:underline;}
 .c-media-list{background:url(//www.wealthylifestatic.com/web-assets/home/assets/images/logo_india.6ae037c11f3c08c0f974ad35d22cdc55.png) top no-repeat;height:40px;background-size:200px;filter:grayscale(100%);opacity:.4;}
 .c-media-list.fortune{background-position:-45px -10px;width:116px;margin-left:0;}
@@ -738,6 +740,15 @@ video {
     left:0;
 }
 
+.c-popular-searches ul li{
+    float: left;
+    margin-right: 10px;
+}
+.c-popular-searches ul li a{
+    margin: 0 10px 0 0px;
+    color: #fff;
+}
+
 @media (max-width: 767px){
     .c-icon{width:50%;float: left;margin: 30px 0;}
     .c-icon:not(:last-child){border-right:0;}
@@ -753,4 +764,10 @@ video {
     .c-omni-container--desktop .c-omni__wrapper--keyword{width:100%;margin-bottom: 10px;}
     .c-omni-container--desktop .c-omni__wrapper--locality{width:100%;margin-bottom: 10px;}
     .c-omni-wrapper{width:90%;margin:0 auto;z-index:1;position:relative;}
+
+    .c-popular-searches__item{
+        float: left;
+    }
+
+    .c-popular-searches{ width: 100%;}
 }

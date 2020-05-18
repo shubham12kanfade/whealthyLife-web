@@ -1199,7 +1199,6 @@ dd,
 del,
 details,
 dfn,
-div,
 dl,
 dt,
 em,
@@ -1263,7 +1262,6 @@ video {
     padding       : 0;
     border        : 0;
     font-size     : 100%;
-    font          : inherit;
     vertical-align: baseline
 }
 
@@ -6019,3 +6017,131 @@ textarea {
 body {
     min-width: 1280px
 }
+
+
+
+
+
+
+.mt-150{margin-top: 150px;}
+.mt-100{margin-top: 100px;}
+.mt-80{margin-top: 80px;}
+.mt-50{margin-top: 50px;}
+.mt-57{margin-top: 57px;}
+.mt-30{margin-top: 30px;}
+.mt-20{margin-top: 20px;}
+.mb-150{margin-bottom: 150px;}
+.mb-100{margin-bottom: 100px;}
+.mb-50{margin-bottom: 50px;}
+.mb-30{margin-bottom: 30px;}
+
+
+.booktest {
+    position: relative;
+    background-color: #d6e1f4;
+}
+
+.booktest .banner-area {
+    padding: 25px 0;
+}
+
+.booktest h2{
+    font-size: 30px;
+    color: #000;
+    font-weight: bold;
+ 
+}
+
+.slider-area .prev-next {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    cursor: pointer;
+}
+
+.slider-area .prev-next i {
+    color: #0880c4;
+    margin: 0 3px;
+    font-size: 30px
+}
+
+
+.slider-area h2 {
+    font-size: 30px
+}
+
+.slider-area .o-f-color--plight{
+    color: #fff;
+    padding: 12px;
+    background-color: #14bef0;
+    font-size: 14px;
+}
+
+
+.slider-area .desies {
+    width: 95px;
+    margin: 0px auto;
+}
+
+.slider-area h4{
+    font-size: 18px;
+    font-weight: 600;
+    color: #000;
+    margin: 5px 0;
+}
+
+
+.why-book h2{
+    font-size: 30px;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.why-book h3{
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+
+.why-book p{
+    font-size: 15px;
+}
+
+.how-work{text-align: center;}
+
+.how-work h2{
+    font-size: 30px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.how-work p{
+    font-size: 15px;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.we-do h2{
+    font-size: 30px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin: 40px 0;
+}
+
+.we-do .inner-area{
+    padding: 20px;
+    background-color: #fff;
+}
+
+.we-do .inner-area h3{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 16px 0;
+    text-align: center;
+}
+
+
+

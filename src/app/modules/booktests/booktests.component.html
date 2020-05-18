@@ -37,43 +37,41 @@
             </div>
             <div class=" u-border--dark c-shopping-cart__global u-pointer u-round-corner">
                 <span class="cartsize">
-                    <!-- <i class="icon-ic_cart o-font-size--26 o-f-color--subtle u-v-align"></i> -->
                     <img src="../../../assets/img/shopping_cart-black-18dp.svg" alt="">
                 </span>
                 <span class="u-font-bold u-padr--std">Cart</span></div>
         </div>
     </div>
 </div>
-
-
-<div class="u-padb--dbl ">
-    <div class="mainbanner">
-        <div class=" ">
-
-            <img src="../../../assets/images/images-dweb_top_banner.png" alt="Free Home Sample" class="banner">
-        </div>
-        <div class="u-center--vertical">
-            <div class="clearfix">
-                <div class="c-home-intro u-padt--std u-padb--dbl">
-                    <h1 class="u-font-bold o-font-size--30">Get lab tests and full body checkups from the comfort of
-                        your home.</h1>
+<section class="booktest">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="banner-area">
+                    <h2>Get lab tests and full body checkups from the comfort of your home.</h2>
                     <div class="o-f-color--dark-green u-padt--std">
                         <span class="u-font-bold o-font-size--24">Upto 45% OFF</span>
                         <span> + </span>Get 10% Health Cashback<span>*</span>
                         <span class="u-pointer undefined"> T&amp;C</span>
                     </div>
+                    <a>
+                        <div data-aid="" class="c-button c-button--bigger mt-20">See all Packages</div>
+                    </a>
                 </div>
+            </div>
+            <div class="col-md-6">
+                <img src="../../../assets/images/images-dweb_top_banner.png" alt="Free Home Sample" class="banner">
             </div>
             <a>
                 <div data-aid="" class="c-button c-button--bigger">See all Packages</div>
             </a>
         </div>
     </div>
-    <div class="dg-wrapper">
-        <div class="dg-twelve dg-last">
-            <h2 class="u-font-bold o-font-size--24 u-padt--dbl u-margintb--std">Top Booked Diagnostic Tests</h2>
-
-            <div class="col-sm-12 pt-5 pb-5">
+</section>
+<section class="slider-area mt-30">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 pt-5 pb-5 slider-area">
                 <h2 class="mb-3">TOP CATEGORIES</h2>
                 <owl-carousel-o [options]="customOptions" #review>
                     <ng-template carouselSlide *ngFor="let item of f_list">
@@ -90,271 +88,626 @@
                                 </div>
                             </div>
                         </div>
-
                     </ng-template>
-
-
                 </owl-carousel-o>
-                <div class="row">
+                <div class="row prev-next">
                     <div class="lhs" (click)="review.prev()"> <i class="fa fa-chevron-circle-left fa-3x "
                             aria-hidden="true"></i></div>
                     <div class="rhs" (click)="review.next()"> <i class="fa fa-chevron-circle-right fa-3x "
                             aria-hidden="true"></i></div>
                 </div>
             </div>
-
-
         </div>
     </div>
-    <div id="landingpage-list" class="c-landingpage-list dg-wrapper u-padb--dbl">
-        <h2 class="u-font-bold o-font-size--24 u-padtb--dbl">Health Checkups and Screenings For</h2>
+</section>
+<section class="slider-area mt-30">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 pt-5 pb-5 slider-area">
+                <h2 class="mb-30">Health Checkups and Screenings For</h2>
+                <owl-carousel-o [options]="customOptions2" #reviews>
+                    <ng-template carouselSlide *ngFor="let item of f_list">
+                        <div>
+                            <a class="c-landingpage-card u-pointer undefined">
+                                <div class="desies ">
+                                    <img src="../../../assets/img/diarrhea.png" alt="image" class="banner ">
+                                </div>
 
-
-        <div class="col-sm-12 pt-5 pb-5">
-
-            <owl-carousel-o [options]="customOptions2" #reviews>
-                <ng-template carouselSlide *ngFor="let item of f_list">
-                    <div>
-                        <a class="c-landingpage-card u-pointer undefined">
-                            <div class="desies ">
-                                <img src="../../../assets/img/diarrhea.png" alt="image" class="banner ">
-                            </div>
-
-                            <div class="c-landingpage-card--title u-padtb--std u-text--center u-font-bold">Diabetes
-                            </div>
-                        </a>
-                    </div>
-                </ng-template>
-
-
-            </owl-carousel-o>
-            <div class="row">
-                <div class="lhs" (click)="reviews.prev()"> <i class="fa fa-chevron-circle-left fa-3x "
-                        aria-hidden="true"></i></div>
-                <div class="rhs" (click)="reviews.next()"> <i class="fa fa-chevron-circle-right fa-3x "
-                        aria-hidden="true"></i></div>
+                                <h4 class="c-landingpage-card--title u-padtb--std u-text--center u-font-bold">Diabetes
+                                </h4>
+                            </a>
+                        </div>
+                    </ng-template>
+                </owl-carousel-o>
+                <div class="row prev-next">
+                    <div class="lhs" (click)="reviews.prev()"> <i class="fa fa-chevron-circle-left fa-3x "
+                            aria-hidden="true"></i></div>
+                    <div class="rhs" (click)="reviews.next()"> <i class="fa fa-chevron-circle-right fa-3x "
+                            aria-hidden="true"></i></div>
+                </div>
             </div>
         </div>
-        <div class="dg-wrapper u-padtb--std--half">
-
+    </div>
+</section>
+<div class="u-padb--dbl ">
+    <div id="landingpage-list" class="c-landingpage-list dg-wrapper u-padb--dbl">
+        <div class="col-sm-12 pt-5 pb-5">
         </div>
+        <div class="dg-wrapper u-padtb--std--half">
+        </div>
+
         <div class="c-top-booked dg-wrapper">
             <h2 class="u-font-bold o-font-size--24 u-padt--dbl">Top booked Medical tests</h2>
             <div class="u-padt--less u-padb--std--half o-f-color--primary">Get 10% Health Cashback<span>*</span>
                 <span class="u-pointer o-f-color--plight"> T&amp;C</span>
             </div>
             <div class="slick-custom-arrows ">
+                <div class="slick-slider slider variable-width slick-initialized" dir="ltr">
+                    <div data-role="none" class="slick-arrow slick-prev slick-disabled" currentslide="0" slidecount="5">
+                    </div>
+                    <div class="slick-list">
+                        <div class="slick-track  slicktracethree">
+                            <div data-index="0" class=" medicaltest slick-slide slick-active slick-current"
+                                tabindex="-1" aria-hidden="false">
+                                <div>
+                                    <div
+                                        class="c-top-booked__category u-border--std u-width--full u-padt--dbl u-round-corner--dbl c-slider__item">
+                                        <div class="u-font-bold u-pad--dbl o-font-size--18"><img class="u-v-align"
+                                                height="36px" src="../../../assets/img/diarrhea.png">
+                                            <h3 class="u-d__inline u-marginl--std"><a>Lipid Profile</a></h3>
+                                        </div>
+                                        <div class="c-top-booked__category__tests">
+                                            <a
+                                                class="c-top-booked__category__test u-padtb--std u-padrl--dbl u-d__inline u-br-rule">
+                                                <div class="c-top-booked__category__test-name u-font-bold">Ldl
+                                                    Cholesterol Test</div>
+                                                <div class="o-f-color--subtle o-font-size--12">Also known as Cholesterol
+                                                    Ldl Enzymatic Colorimetric Method Blood</div>
+                                            </a>
+                                            <a
+                                                class="c-top-booked__category__test u-padtb--std u-padrl--dbl u-d__inline u-br-rule">
+                                                <div class="c-top-booked__category__test-name u-font-bold">Hdl
+                                                    Cholesterol Test</div>
+                                                <div class="o-f-color--subtle o-font-size--12">Also known as Cholesterol
+                                                    Hdl Enzymatic Colorimetric Method Blood</div>
+                                            </a>
+                                            <a
+                                                class="c-top-booked__category__test u-padtb--std u-padrl--dbl u-d__inline u-br-rule">
+                                                <div class="c-top-booked__category__test-name u-font-bold">Vldl
+                                                    Cholesterol Test</div>
+                                                <div class="o-f-color--subtle o-font-size--12">Also known as Vldl
+                                                    Cholesterol Blood</div>
+                                            </a>
+                                            <a
+                                                class="c-top-booked__category__test u-padtb--std u-padrl--dbl u-d__inline u-br-rule">
+                                                <div class="c-top-booked__category__test-name u-font-bold">Total
+                                                    Cholesterol Test</div>
+                                                <div class="o-f-color--subtle o-font-size--12">Also known as Cholesterol
+                                                    Test</div>
+                                            </a>
+                                            <a
+                                                class="u-br-rule c-top-booked__category__test u-padtb--std u-padrl--dbl u-d__inline">
+                                                <div class="c-top-booked__category__test-name u-font-bold">Triglycerides
+                                                    Blood Test</div>
+                                                <div class="o-f-color--subtle o-font-size--12">Also known as
+                                                    Triglycerides Blood</div>
+                                            </a><a
+                                                class=" c-button c-button--bigger u-marginrl--dbl u-marginb--double">Book
+                                                Now</a></div>
+                                    </div>
+                                </div>
+                            </div>
 
-                <owl-carousel-o [options]="customOptions3" #reviewfour>
-                    <ng-template carouselSlide *ngFor="let item of f_list">
-                        <div>
-                            <div
-                                class="c-top-booked__category u-border--std u-width--full u-padt--dbl u-round-corner--dbl c-slider__item">
-                                <div class="u-font-bold u-pad--dbl o-font-size--18"><img class="u-v-align" class="w-t"
-                                        src="../../../assets/img/diarrhea.png">
-                                    <h3 class="u-d__inline u-marginl--std"><a>Lipid Profile</a></h3>
+                            <div data-index="1" class=" medicaltest slick-slide slick-active" tabindex="-1"
+                                aria-hidden="false">
+                                <div>
+                                    <div
+                                        class="c-top-booked__category u-border--std u-width--full u-padt--dbl u-round-corner--dbl c-slider__item">
+                                        <div class="u-font-bold u-pad--dbl o-font-size--18">
+                                            <img class="u-v-align" height="36px" src="../../../assets/img/diarrhea.png">
+                                            <h3 class="u-d__inline u-marginl--std">
+                                                <a>Liver Profile</a>
+                                            </h3>
+                                        </div>
+                                        <div class="c-top-booked__category__tests">
+                                            <a
+                                                class="c-top-booked__category__test u-padtb--std u-padrl--dbl u-d__inline u-br-rule">
+                                                <div class="c-top-booked__category__test-name u-font-bold">Gamma
+                                                    Glutamyl Transferase</div>
+                                                <div class="o-f-color--subtle o-font-size--12">Also known as GGT</div>
+                                            </a>
+                                            <a
+                                                class=" astest c-top-booked__category__test u-padtb--std u-padrl--dbl u-d__inline u-br-rule">
+                                                <div class="c-top-booked__category__test-name u-font-bold">Total
+                                                    Bilirubin</div>
+                                                <div class="o-f-color--subtle o-font-size--12">Also known as Bilirubin
+                                                    Total Blood</div>
+                                            </a>
+                                            <a
+                                                class=" c-top-booked__category__test u-padtb--std u-padrl--dbl u-d__inline u-br-rule">
+                                                <div class="c-top-booked__category__test-name u-font-bold">Ast Test
+                                                </div>
+                                                <div class="o-f-color--subtle o-font-size--12">Also known as SGOT</div>
+                                            </a>
+                                            <a
+                                                class="c-top-booked__category__test u-padtb--std u-padrl--dbl u-d__inline u-br-rule">
+                                                <div class="c-top-booked__category__test-name u-font-bold">Alp Test
+                                                </div>
+                                                <div class="o-f-color--subtle o-font-size--12">Also known as Alkaline
+                                                    Phosphatase</div>
+                                            </a>
+                                            <a
+                                                class=" blod c-top-booked__category__test u-padtb--std u-padrl--dbl u-d__inline">
+                                                <div class="c-top-booked__category__test-name u-font-bold">Albumin Test
+                                                </div>
+                                                <div class="o-f-color--subtle o-font-size--12">Also known as Albumin
+                                                    Blood</div>
+                                            </a>
+                                            <a
+                                                class="bookbutton c-button c-button--bigger u-marginrl--dbl u-marginb--double">Book
+                                                Now</a>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="c-top-booked__category__tests">
-                                    <a
-                                        class="c-top-booked__category__test u-padtb--std u-padrl--dbl u-d__inline u-br-rule">
-                                        <div class="c-top-booked__category__test-name u-font-bold">Ldl Cholesterol Test
-                                        </div>
-                                        <div class="o-f-color--subtle o-font-size--12">Also known as Cholesterol Ldl
-                                            Enzymatic Colorimetric Method Blood</div>
-                                    </a>
-                                    <a
-                                        class="c-top-booked__category__test u-padtb--std u-padrl--dbl u-d__inline u-br-rule">
-                                        <div class="c-top-booked__category__test-name u-font-bold">Hdl Cholesterol Test
-                                        </div>
-                                        <div class="o-f-color--subtle o-font-size--12">Also known as Cholesterol Hdl
-                                            Enzymatic Colorimetric Method Blood</div>
-                                    </a>
-                                    <a
-                                        class="c-top-booked__category__test u-padtb--std u-padrl--dbl u-d__inline u-br-rule">
-                                        <div class="c-top-booked__category__test-name u-font-bold">Vldl Cholesterol Test
-                                        </div>
-                                        <div class="o-f-color--subtle o-font-size--12">Also known as Vldl Cholesterol
-                                            Blood</div>
-                                    </a>
-                                    <a
-                                        class="c-top-booked__category__test u-padtb--std u-padrl--dbl u-d__inline u-br-rule">
-                                        <div class="c-top-booked__category__test-name u-font-bold">Total Cholesterol
-                                            Test</div>
-                                        <div class="o-f-color--subtle o-font-size--12">Also known as Cholesterol Test
-                                        </div>
-                                    </a>
-                                    <a
-                                        class="u-br-rule c-top-booked__category__test u-padtb--std u-padrl--dbl u-d__inline">
-                                        <div class="c-top-booked__category__test-name u-font-bold">Triglycerides Blood
-                                            Test</div>
-                                        <div class="o-f-color--subtle o-font-size--12">Also known as Triglycerides Blood
-                                        </div>
-                                    </a><a class=" c-button c-button--bigger u-marginrl--dbl u-marginb--double">Book
-                                        Now</a></div>
                             </div>
-                        </div>
-                    </ng-template>
-                </owl-carousel-o>
-                <div class="row">
-                    <div class="lhs" (click)="reviewfour.prev()"> <i class="fa fa-chevron-circle-left fa-3x "
-                            aria-hidden="true"></i></div>
-                    <div class="rhs" (click)="reviewfour.next()"> <i class="fa fa-chevron-circle-right fa-3x "
-                            aria-hidden="true"></i></div>
-                </div>
 
-            </div>
-        </div>
-        <div class="u-bg--grey u-margint--double" class="reports">
-            <div class="u-font-bold o-font-size--16 u-marginb--double u-text--center o-font-size--30">Why book with us?
-            </div>
-            <div class="o-flex o-flex--wrap u-padt--dbl dg-wrapper">
-                <div class="package-page__selected-item u-marginb--double o-flex__half">
-                    <div class=" u-d__inline u-padr--std">
-                        <img src="../../../assets/img/syringe2.png" alt="image" class=" bannertwo">
-                    </div>
-                    <div class=" labone u-carousal__item">
-                        <div class="u-font-bold">Home sample collection for FREE</div>
-                        <div>A certified professional will collect your sample from a location of your preference.</div>
-                    </div>
-                </div>
-                <div class="package-page__selected-item u-marginb--double o-flex__half">
-                    <div class=" u-d__inline u-padr--std">
-                        <img src="../../../assets/img/syringe2.png" alt="image" class="bannertwo ">
-                    </div>
-                    <div class=" labone u-carousal__item">
-                        <div class="u-font-bold">wealthylife Powered Labs</div>
-                        <div>Certified labs to ensure highest accuracy of your reports.</div>
-                    </div>
-                </div>
-                <div class="package-page__selected-item u-marginb--double o-flex__half">
-                    <div class=" u-d__inline u-padr--std">
-                        <img src="../../../assets/img/syringe2.png" alt="image" class=" bannertwo"></div>
-                    <div class=" labone u-carousal__item">
-                        <div class="u-font-bold">Digital reports</div>
-                    </div>
-                    <div>Access your reports anytime on your wealthylife account. We will email you a copy.</div>
-                </div>
-                <div class="package-page__selected-item u-marginb--double o-flex__half">
-                    <div class=" u-d__inline u-padr--std">
-                        <img src="../../../assets/img/syringe2.png" alt="image" class="bannertwo "></div>
-                    <div class="labone u-carousal__item">
-                        <div class="u-font-bold">Offers and affordable prices</div>
-                        <div>Get great discounts and offers on tests and packages.</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class=" we u-bg--white ">
-            <div class="u-font-bold o-font-size--16 u-padtb--dbl o-font-size--30 u-text--center">How it works?</div>
-            <div class="o-f-color--sec o-flex u-padt--dbl o-flex__justify--evenly dg-wrapper">
-                <div class=" u-marginb--std-half u-text--center">
-                    <div>
-                        <div
-                            class=" package-page__icon package-page__icon-with-background u-marginr--std u-image__center u-padb--dbl">
-                            <div class="works ">
-                                <img src="../../../assets/img/testimonial-default-women-v1.png" alt="image"
-                                    class=" collection u-padtb--std">
-                            </div>
-                        </div>
-                        <div class="  labtwo u-carousal__item">Search for tests and packages and seamlessly book a home
-                            sample collection.</div>
-                    </div>
-                    <span class="flex o-f-color--subtle u-margint--double"></span>
-                    <div class=" howitwork u-marginb--std-half u-text--center">
-                        <div>
-                            <div
-                                class="package-page__icon package-page__icon-with-background u-marginr--std u-image__center u-padb--dbl">
-                                <div class="works ">
-                                </div>
-                                <img src="../../../assets/img/testimonial-default-women-v1.png" alt="image"
-                                    class=" collection u-padtb--std">
-                            </div>
-                        </div>
-                        <div class=" labtwo u-carousal__item">We will send a certified professional to your place to
-                            assist you with the sample collection</div>
-                    </div>
-                </div>
-                <span class=" flex o-f-color--subtle u-margint--double">
-                </span>
-                <div class="u-marginb--std-half u-text--center">
-                    <div>
-                        <div
-                            class="package-page__icon package-page__icon-with-background u-marginr--std u-image__center u-padb--dbl">
-                            <div class=" works">
-                                <img src="../../../assets/img/testimonial-default-women-v1.png" alt="image"
-                                    class=" life u-padtb--std">
-                            </div>
-                        </div>
-                        <div class=" labtwo u-carousal__item">We will email you the reports. You can also access your
-                            reports within your account on the Wealthy Life app</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class=" we u-bg--grey  ">
-            <div class="dg-wrapper">
-                <div class="u-font-bold u-marginb--double o-font-size--36 u-text--center">We do great</div>
-                <div class="o-flex o-flex__justify--around u-padt--dbl">
-                    <div class="great">
-                        <div class=" u-marginb--double">
-                            <img src="../../../assets/img/offer-specialist-v1.png" alt="image" class="wedogreat">
-                        </div>
-                        <div class="u-font-bold u-padt--std--half o-font-size--24 u-text--center">15 Million users every
-                            month</div>
-                    </div>
-                    <div class="great">
-                        <div class=" u-marginb--double">
-                            <img src="../../../assets/img/offer-specialist-v1.png" alt="image" class="wedogreat ">
-                        </div>
-                        <div class="u-font-bold u-padt--std--half o-font-size--24 u-text--center">Trusted by 2,00,000
-                            healthcare professionals</div>
-                    </div>
-                    <div class="great">
-                        <div class=" u-marginb--double">
-                            <img src="../../../assets/img/offer-specialist-v1.png" alt="image" class=" wedogreat">
-                        </div>
-                        <div class="u-font-bold u-padt--std--half o-font-size--24 u-text--center">We serve in 40+ cities
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="c-testimonials ">
-            <h2 class="u-padb--less u-font-bold o-font-size--36">Thousands of Happy Customers</h2>
-            <owl-carousel-o [options]="customOptions4" #reviewfour>
-                <ng-template carouselSlide>
-                    <div>
-                        <div class=" sliderfont c-slider__item o-font-size--24">
-                            <div class="c-testimonials__content u-padb--dbl">
-                                <span class="o-font-size--36 u-font-bold">“</span>Good service, Wealthy Life is avoiding
-                                to stand in que for health checkup.</div>
-                            <div class="o-font-size--14">
-                                <div class="happycustemer">
-                                    <div class="u-font-bold">Lalita Hegde</div>
+
+                            <div data-index="2" class="medicaltest slick-slide slick-active" tabindex="-1"
+                                aria-hidden="false">
+                                <div>
+                                    <div
+                                        class="c-top-booked__category u-border--std u-width--full u-padt--dbl u-round-corner--dbl c-slider__item">
+                                        <div class="u-font-bold u-pad--dbl o-font-size--18">
+                                            <img class="u-v-align" height="36px" src="../../../assets/img/diarrhea.png">
+                                            <h3 class="u-d__inline u-marginl--std">
+                                                <a>Blood Sugar</a>
+                                            </h3>
+                                        </div>
+                                        <div class="c-top-booked__category__tests">
+                                            <a
+                                                class="c-top-booked__category__test u-padtb--std u-padrl--dbl u-d__inline u-br-rule">
+                                                <div class="c-top-booked__category__test-name u-font-bold">Hba1C Test
+                                                </div>
+                                                <div class="o-f-color--subtle o-font-size--12">Also known as
+                                                    Glycosylated Haemoglobin Blood</div>
+                                            </a>
+                                            <a
+                                                class="c-top-booked__category__test u-padtb--std u-padrl--dbl u-d__inline u-br-rule">
+                                                <div class="c-top-booked__category__test-name u-font-bold">Fasting Blood
+                                                    Sugar Test</div>
+                                                <div class="o-f-color--subtle o-font-size--12">Also known as Glucose
+                                                    Fasting Blood</div>
+                                            </a>
+                                            <a
+                                                class="c-top-booked__category__test u-padtb--std u-padrl--dbl u-d__inline u-br-rule">
+                                                <div class="c-top-booked__category__test-name u-font-bold">Random Blood
+                                                    Sugar Test</div>
+                                                <div class="o-f-color--subtle o-font-size--12">Also known as RBS</div>
+                                            </a>
+                                            <a
+                                                class="c-top-booked__category__test u-padtb--std u-padrl--dbl u-d__inline u-br-rule">
+                                                <div class="c-top-booked__category__test-name u-font-bold">Blood Sugar
+                                                    Levels After Eating</div>
+                                                <div class="o-f-color--subtle o-font-size--12">Also known as Post
+                                                    Prandial Blood Sugar</div>
+                                            </a>
+                                            <a
+                                                class="c-top-booked__category__test u-padtb--std u-padrl--dbl u-d__inline">
+                                                <div class="c-top-booked__category__test-name u-font-bold">Creatinine
+                                                    Test</div>
+                                                <div class="o-f-color--subtle o-font-size--12">Also known as Creatinine
+                                                    Conventional Blood</div>
+                                            </a>
+                                            <a class=" c-button c-button--bigger u-marginrl--dbl u-marginb--double">Book
+                                                Now</a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
+
+                            <div data-index="3" class="medicaltest slick-slide" tabindex="-1" aria-hidden="true">
+                                <div>
+                                    <div
+                                        class="c-top-booked__category u-border--std u-width--full u-padt--dbl u-round-corner--dbl c-slider__item">
+                                        <div class="u-font-bold u-pad--dbl o-font-size--18">
+                                            <img class="u-v-align" height="36px"
+                                                src="/tests/public/icons/testprofiles/thyroid_profile.svg">
+                                            <h3 class="u-d__inline u-marginl--std">
+                                                <a>Thyroid Profile</a>
+                                            </h3>
+                                        </div>
+                                        <div class="c-top-booked__category__tests">
+                                            <a
+                                                class="c-top-booked__category__test u-padtb--std u-padrl--dbl u-d__inline u-br-rule">
+                                                <div class="c-top-booked__category__test-name u-font-bold">TSH Test
+                                                </div>
+                                                <div class="o-f-color--subtle o-font-size--12">Also known as Thyroid
+                                                    Stimulating Hormone Blood</div>
+                                            </a>
+                                            <a
+                                                class="c-top-booked__category__test u-padtb--std u-padrl--dbl u-d__inline u-br-rule">
+                                                <div class="c-top-booked__category__test-name u-font-bold">T3 Test</div>
+                                                <div class="o-f-color--subtle o-font-size--12">Also known as Total
+                                                    Triiodothyronine Blood</div>
+                                            </a>
+                                            <a
+                                                class="c-top-booked__category__test u-padtb--std u-padrl--dbl u-d__inline u-br-rule">
+                                                <div class="c-top-booked__category__test-name u-font-bold">T4 Test</div>
+                                                <div class="o-f-color--subtle o-font-size--12">Also known as Total
+                                                    Thyroxine Blood</div>
+                                            </a>
+                                            <a
+                                                class="c-top-booked__category__test u-padtb--std u-padrl--dbl u-d__inline u-br-rule">
+                                                <div class="c-top-booked__category__test-name u-font-bold">Free T3</div>
+                                                <div class="o-f-color--subtle o-font-size--12">Also known as Free
+                                                    Triiodothyronine Blood</div>
+                                            </a>
+                                            <a
+                                                class="c-top-booked__category__test u-padtb--std u-padrl--dbl u-d__inline">
+                                                <div class="c-top-booked__category__test-name u-font-bold">Free T4</div>
+                                                <div class="o-f-color--subtle o-font-size--12">Also known as Free
+                                                    Thyroxine Blood</div>
+                                            </a>
+                                            <a class="  c-button c-button--bigger u-marginrl--dbl u-marginb--double">Book
+                                                Now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div data-index="4" class="medicaltest slick-slide" tabindex="-1" aria-hidden="true">
+                                <div>
+                                    <div
+                                        class="c-top-booked__category u-border--std u-width--full u-padt--dbl u-round-corner--dbl c-slider__item">
+                                        <div class="u-font-bold u-pad--dbl o-font-size--18">
+                                            <img class="u-v-align" height="36px"
+                                                src="/tests/public/icons/testprofiles/pregnancy_test.svg">
+                                            <h3 class="u-d__inline u-marginl--std">
+                                                <a>Pregnancy Test</a>
+                                            </h3>
+                                        </div>
+                                        <div class="c-top-booked__category__tests">
+                                            <a
+                                                class="c-top-booked__category__test u-padtb--std u-padrl--dbl u-d__inline u-br-rule">
+                                                <div class="c-top-booked__category__test-name u-font-bold">Afp Test
+                                                </div>
+                                                <div class="o-f-color--subtle o-font-size--12">Also known as Alpha
+                                                    Fetoprotein Blood</div>
+                                            </a>
+                                            <a
+                                                class="c-top-booked__category__test u-padtb--std u-padrl--dbl u-d__inline u-br-rule">
+                                                <div class="c-top-booked__category__test-name u-font-bold">Glucose
+                                                    Tolerance Test</div>
+                                                <div class="o-f-color--subtle o-font-size--12">Also known as Glucose
+                                                    Tolerance Test Blood</div>
+                                            </a>
+                                            <a
+                                                class="c-top-booked__category__test u-padtb--std u-padrl--dbl u-d__inline u-br-rule">
+                                                <div class="c-top-booked__category__test-name u-font-bold">Double Marker
+                                                    Test</div>
+                                                <div class="o-f-color--subtle o-font-size--12">Also known as Double
+                                                    Marker Automated Blood</div>
+                                            </a>
+                                            <a
+                                                class="c-top-booked__category__test u-padtb--std u-padrl--dbl u-d__inline u-br-rule">
+                                                <div class="c-top-booked__category__test-name u-font-bold">Beta HCG
+                                                </div>
+                                                <div class="o-f-color--subtle o-font-size--12">Also known as Beta Hcg
+                                                    Automated Blood</div>
+                                            </a>
+                                            <a
+                                                class="c-top-booked__category__test u-padtb--std u-padrl--dbl u-d__inline u-br-rule">
+                                                <div class="c-top-booked__category__test-name u-font-bold">Free Beta HCG
+                                                </div>
+                                                <div class="o-f-color--subtle o-font-size--12">Also known as Free Beta
+                                                    Hcg Automated Blood</div>
+                                            </a>
+                                            <a class="c-button c-button--bigger u-marginrl--dbl u-marginb--double">Book
+                                                Now</a>
+                                        </div>
+                                    </div>
+                                    <div class="c-top-booked__category__tests">
+                                        <a
+                                            class="c-top-booked__category__test u-padtb--std u-padrl--dbl u-d__inline u-br-rule">
+                                            <div class="c-top-booked__category__test-name u-font-bold">Ldl Cholesterol
+                                                Test
+                                            </div>
+                                            <div class="o-f-color--subtle o-font-size--12">Also known as Cholesterol Ldl
+                                                Enzymatic Colorimetric Method Blood</div>
+                                        </a>
+                                        <a
+                                            class="c-top-booked__category__test u-padtb--std u-padrl--dbl u-d__inline u-br-rule">
+                                            <div class="c-top-booked__category__test-name u-font-bold">Hdl Cholesterol
+                                                Test
+                                            </div>
+                                            <div class="o-f-color--subtle o-font-size--12">Also known as Cholesterol Hdl
+                                                Enzymatic Colorimetric Method Blood</div>
+                                        </a>
+                                        <a
+                                            class="c-top-booked__category__test u-padtb--std u-padrl--dbl u-d__inline u-br-rule">
+                                            <div class="c-top-booked__category__test-name u-font-bold">Vldl Cholesterol
+                                                Test
+                                            </div>
+                                            <div class="o-f-color--subtle o-font-size--12">Also known as Vldl
+                                                Cholesterol
+                                                Blood</div>
+                                        </a>
+                                        <a
+                                            class="c-top-booked__category__test u-padtb--std u-padrl--dbl u-d__inline u-br-rule">
+                                            <div class="c-top-booked__category__test-name u-font-bold">Total Cholesterol
+                                                Test</div>
+                                            <div class="o-f-color--subtle o-font-size--12">Also known as Cholesterol
+                                                Test
+                                            </div>
+                                        </a>
+                                        <a
+                                            class="u-br-rule c-top-booked__category__test u-padtb--std u-padrl--dbl u-d__inline">
+                                            <div class="c-top-booked__category__test-name u-font-bold">Triglycerides
+                                                Blood
+                                                Test</div>
+                                            <div class="o-f-color--subtle o-font-size--12">Also known as Triglycerides
+                                                Blood
+                                            </div>
+                                        </a><a class=" c-button c-button--bigger u-marginrl--dbl u-marginb--double">Book
+                                            Now</a></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </ng-template>
-            </owl-carousel-o>
-            <div class="row">
-                <div class="lhs" (click)="reviewfour.prev()"> <i class="fa fa-chevron-circle-left fa-3x "
-                        aria-hidden="true"></i></div>
-                <div class="rhs" (click)="reviewfour.next()"> <i class="fa fa-chevron-circle-right fa-3x "
-                        aria-hidden="true"></i></div>
+                </div>
             </div>
         </div>
     </div>
 </div>
-<div class="u-bg--grey u-padtb--tpl">
-    <div class="dg-wrapper">
-        <div class="dg-twelve">
-            <div class="o-flex" style="justify-content: space-evenly;">
+<section class="why-book mt-30">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Why book with us?</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mb-30">
+                <div class=" u-d__inline u-padr--std">
+                    <img src="../../../assets/img/syringe2.png" alt="image" class=" bannertwo">
+                </div>
+                <div class=" labone u-carousal__item">
+                    <h3>Home sample collection for FREE</h3>
+                    <p>A certified professional will collect your sample from a location of your preference.</p>
+                </div>
+            </div>
+            <div class="col-md-6 mb-30">
+                <div class=" u-d__inline u-padr--std">
+                    <img src="../../../assets/img/syringe2.png" alt="image" class="bannertwo ">
+                </div>
+                <div class=" labone u-carousal__item">
+                    <h3>wealthylife Powered Labs</h3>
+                    <p>Certified labs to ensure highest accuracy of your reports.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-30">
+                <div class=" u-d__inline u-padr--std">
+                    <img src="../../../assets/img/syringe2.png" alt="image" class=" bannertwo"></div>
+                <div class=" labone u-carousal__item">
+                    <h3>Digital reports</h3>
+                    <p>Access your reports anytime on your wealthylife account. We will email you a copy.</p>
+                </div>
+
+            </div>
+
+            <div class="col-md-6 mb-30">
+                <div class=" u-d__inline u-padr--std">
+                    <img src="../../../assets/img/syringe2.png" alt="image" class="bannertwo "></div>
+                <div class="labone u-carousal__item">
+                    <h3>Offers and affordable prices</h3>
+                    <p>Get great discounts and offers on tests and packages.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="how-work mt-30">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>How it works?</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 mb-30">
+                <img src="../../../assets/img/testimonial-default-women-v1.png" alt="image">
+                <p class="  labtwo u-carousal__item">Search for tests and packages and seamlessly book a home sample
+                    collection.</p>
+            </div>
+            <div class="col-md-4 mb-30">
+                <img src="../../../assets/img/testimonial-default-women-v1.png" alt="image">
+                <p class=" labtwo u-carousal__item">We will send a certified professional to your place to assist you
+                    with the sample collection</p>
+            </div>
+            <div class="col-md-4 mb-30">
+                <img src="../../../assets/img/testimonial-default-women-v1.png" alt="image">
+                <p class=" labtwo u-carousal__item">We will email you the reports. You can also access your reports
+                    within your account on the Wealthy Life app</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="we-do  mt-30 u-bg--grey">
+    <div class="container mt-30">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>We do great</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 mb-30">
+                <div class="inner-area">
+                    <img src="../../../assets/img/offer-specialist-v1.png" alt="image">
+                    <h3>15 Million users every month</h3>
+                </div>
+            </div>
+            <div class="col-md-4 mb-30">
+                <div class="inner-area">
+                    <img src="../../../assets/img/offer-specialist-v1.png" alt="image" class="wedogreat ">
+                    <h3>Trusted by 2,00,000 healthcare professionals</h3>
+                </div>
+            </div>
+            <div class="col-md-4 mb-30">
+                <div class="inner-area">
+                    <img src="../../../assets/img/offer-specialist-v1.png" alt="image" class=" wedogreat">
+                    <h3>We serve in 40+ cities</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class=" mt-30">
+    <div class="container mt-30">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="c-testimonials ">
+                    <h2 class="u-padb--less u-font-bold o-font-size--36">Thousands of Happy Customers</h2>
+                    <div class="c-testimonials__carousal">
+                        <div class="slick-slider slick-initialized" dir="ltr">
+                            <div class="slick-list">
+                                <div class="slick-track  slicktracefour">
+                                    <div data-index="-1" tabindex="-1" class="slick-slide slick-cloned"
+                                        aria-hidden="true">
+                                        <div>
+                                            <div class=" sliderfont c-slider__item o-font-size--24" tabindex="-1">
+                                                <div class="c-testimonials__content u-padb--dbl">
+                                                    <span class="o-font-size--36 u-font-bold">“</span>Good service,
+                                                    Wealthy Life is avoiding to stand in que for health checkup.</div>
+                                                <div class="o-font-size--14">
+                                                    <div class="happycustemer">
+                                                        <div class="u-font-bold">Lalita Hegde</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-index="0" class=" happycustomermain slick-slide" tabindex="-1"
+                                        aria-hidden="true">
+                                        <div>
+                                            <div class="sliderfont c-slider__item o-font-size--24  slidercutomer"
+                                                tabindex="-1">
+                                                <div class="c-testimonials__content u-padb--dbl">
+                                                    <span class="o-font-size--36 u-font-bold">“</span>Very professional
+                                                    phlebo. Excellent job in collecting the sample. No pain at all. Got
+                                                    my report also within 24 hours.</div>
+                                                <div class="o-font-size--14">
+                                                    <div class="happycustemer">
+                                                        <div class="u-font-bold">Malathi Ganapathy</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-index="1" class="slick-slide" tabindex="-1" aria-hidden="true">
+                                        <div>
+                                            <div class="c-slider__item o-font-size--24 sliderfont" tabindex="-1">
+                                                <div class="c-testimonials__content u-padb--dbl">
+                                                    <span class="o-font-size--36 u-font-bold">“</span>Everything went
+                                                    very well and smoothly. Technician was right on time. Really happy
+                                                    with the service.</div>
+                                                <div class="o-font-size--14">
+                                                    <div class="happycustemer">
+                                                        <div class="u-font-bold">Ashish Garnaik</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-index="2"
+                                        class=" happycustomermain slick-slide slick-active slick-current" tabindex="-1"
+                                        aria-hidden="false">
+                                        <div>
+                                            <div class="c-slider__item o-font-size--24  sliderfont" tabindex="-1">
+                                                <div class="c-testimonials__content u-padb--dbl">
+                                                    <span class="o-font-size--36 u-font-bold">“</span>Good service,
+                                                    Wealthy Life is avoiding to stand in que for health checkup.</div>
+                                                <div class="o-font-size--14">
+                                                    <div class="happycustemer">
+                                                        <div class="u-font-bold">Lalita Hegde</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-index="3" tabindex="-1" class="slick-slide slick-cloned"
+                                        aria-hidden="true">
+                                        <div>
+                                            <div class="sliderfont c-slider__item o-font-size--24" tabindex="-1">
+                                                <div class="c-testimonials__content u-padb--dbl">
+                                                    <span class="o-font-size--36 u-font-bold">“</span>Very professional
+                                                    phlebo. Excellent job in collecting the sample. No pain at all. Got
+                                                    my report also within 24 hours.</div>
+                                                <div class="o-font-size--14">
+                                                    <div class="happycustemer">
+                                                        <div class="u-font-bold">Malathi Ganapathy</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-index="4" tabindex="-1" class="slick-slide slick-cloned"
+                                        aria-hidden="true">
+                                        <div>
+                                            <div class="sliderfont c-slider__item o-font-size--24" tabindex="-1">
+                                                <div class="c-testimonials__content u-padb--dbl">
+                                                    <span class="o-font-size--36 u-font-bold">“</span>Everything went
+                                                    very well and smoothly. Technician was right on time. Really happy
+                                                    with the service.</div>
+                                                <div class="o-font-size--14">
+                                                    <div class="happycustemer">
+                                                        <div class="u-font-bold">Ashish Garnaik</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-index="5" tabindex="-1" class="slick-slide slick-cloned"
+                                        aria-hidden="true">
+                                        <div>
+                                            <div class="sliderfont c-slider__item o-font-size--24" tabindex="-1">
+                                                <div class="c-testimonials__content u-padb--dbl">
+                                                    <span class="o-font-size--36 u-font-bold">“</span>Good service,
+                                                    Wealthy Life is avoiding to stand in que for health checkup.</div>
+                                                <div class="o-font-size--14">
+                                                    <div class="happycustemer">
+                                                        <div class="u-font-bold">Lalita Hegde</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <ul class="slick-dots">
+                                <li class=""><button>1</button></li>
+                                <li class=""><button>2</button></li>
+                                <li class="slick-active"><button>3</button></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="u-bg--grey">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mt-30 mb-30">
                 <div>
                     <div class="mobilesize ">
                         <img src="../../../assets/images/mobileapp/mobileapp.jpg" alt="image" class="mobileappimge">
                     </div>
                 </div>
+            </div>
+
+            <div class="col-md-6 mt-30 mb-30">
                 <div class="mobileapp">
                     <div class="o-font-size--36 u-font-bold">Download the Wealthy Life app</div>
                     <div class="o-font-size--16 u-font-bold u-padtb--std">Your home for health is one tap away.</div>
@@ -390,4 +743,4 @@
             </div>
         </div>
     </div>
-</div>
+</section>

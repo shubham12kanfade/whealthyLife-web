@@ -53,10 +53,12 @@ hr {
     margin-bottom: 9px;
     margin-top: 35px;
     height: 56px;
+    float: right;
+    margin-right: 10px;
     font-size: 19px;
 }
 
-#custom-search-input input[type='submit'] {
+#custom-search-input input[type="submit"] {
     font-size: 16px !important;
 }
 
@@ -64,9 +66,6 @@ a {
     // color: #337ab7;
     text-decoration: none;
 }
-
-
-
 
 .btn-main {
     border-radius: 20px;
@@ -80,28 +79,74 @@ a {
     display: inline-block;
 }
 
-.categories h2{
+.categories h2 {
     font-size: 25px;
     font-weight: bold;
     margin-bottom: 20px;
 }
 
-
-
-
-.categories .prev-next{
+.categories .prev-next {
     position: absolute;
     top: 30px;
     right: 30px;
     cursor: pointer;
 }
 
-.categories .prev-next i{
+.categories .prev-next i {
     color: #0880c4;
     margin: 0 3px;
- }
- .categories .prev-next i:hover{
+}
+.categories .prev-next i:hover {
     color: #000;
     margin: 0 3px;
- }
+}
 
+.fixed {
+    top: 13%;
+    width: 95%;
+}
+
+@media (max-width: 786px) {
+    .lb {
+        font-size: 16px;
+    }
+    .pharmacy {
+        font-size: 16px;
+    }
+    .pharmacyimg img {
+        height: 98px !important;
+        width: 76% !important;
+    }
+    .labsimg img {
+        height: 93px !important;
+        width: 76% !important;
+    }
+    .bbt {
+        width: 152px;
+        margin-bottom: 9px;
+        margin-top: 17px;
+        height: 44px;
+        font-size: 15px;
+        float: right;
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 575px) {
+    .pharmacyimg img {
+        height: 98px !important;
+        width: 48% !important;
+        margin: 0px 22%;
+    }
+    .labsimg img {
+        height: 93px !important;
+        width: 48% !important;
+        margin: 0px 22%;
+    }
+}
+
+.modal-header .close {
+    padding: 1rem 1rem;
+    margin: -1.5rem -1rem -1rem auto;
+    font-size: 29px;
+}
