@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {MatDialog} from '@angular/material/dialog';
+import {AddPracticeModelComponent} from './add-practice-model/add-practice-model.component'
 @Component({
   selector: 'app-practice-staff',
   templateUrl: './practice-staff.component.html',
@@ -11,7 +12,7 @@ export class PracticeStaffComponent implements OnInit {
   doctor: boolean=false;
   staff:boolean=false;
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
   }
@@ -30,5 +31,12 @@ export class PracticeStaffComponent implements OnInit {
   }
   addstaffpopup(){
     this.staff=!this.staff;
+  }
+  modalAdd() {
+    const dialogRef = this.dialog.open(AddPracticeModelComponent);
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
   }
 }
