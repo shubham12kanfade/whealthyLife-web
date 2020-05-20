@@ -17,7 +17,7 @@ video {
 }
 
 .u-bold {
-    font-weight: 700;
+    font-weight: 400;
 }
 /*! CSS Used from: Embedded */
 .__react_component_tooltip {
@@ -245,14 +245,14 @@ body {
 }
 
 @media (max-width: 768px) {
-    .c-list-item {
-        font-size: 18px;
-    }
+    // .c-list-item {
+    //     font-size: 18px;
+    // }
 }
 
-.c-list-item {
-    font-size: 18px;
-}
+// .c-list-item {
+//     font-size: 18px;
+// }
 .u-title-font {
     font-size: 20px;
 }
@@ -284,7 +284,7 @@ body {
     box-sizing: border-box;
     text-decoration: none;
     outline: 0;
-    font-weight: 700;
+    font-weight: 400;
 }
 // .c-full-width{overflow:hidden;display:table;width:100%;min-height:650px;height:calc(100vh - 102px);}
 // .c-list-item{line-height:1.4;color:#787887;}
@@ -369,7 +369,7 @@ body {
     text-align: center;
     font-size: 40px;
     color: #fff;
-    font-weight: 700;
+    font-weight: 400;
 }
 .c-jumbo__subheading {
     font-size: 24px;
@@ -1235,11 +1235,11 @@ body {
     }
     .wealthylife_GlobalNavigation .navbar .navlist .navlink.selected > a {
         color: #14bef0;
-        font-weight: 700;
+        font-weight: 400;
     }
     .wealthylife_GlobalNavigation .navbar .navlist .navlink.selected > a i.ic {
         color: #14bef0;
-        font-weight: 700;
+        font-weight: 400;
     }
     .wealthylife_GlobalNavigation .navbar .navlist .navlink:hover a {
         color: #14bef0;
@@ -1291,7 +1291,7 @@ body {
         border: 1px solid #14bef0;
         text-align: center;
         padding: 9px 20px;
-        font-weight: 700;
+        font-weight: 400;
         border-radius: 3px;
     }
     .wealthylife_GlobalNavigation .navbar .download .appdownload-block:hover {
@@ -1385,7 +1385,7 @@ body {
     }
     .wealthylife_GlobalNavigation .secondary-navigation__wrapper__promo-space__app-link a {
         color: #626262;
-        font-weight: bold;
+        font-weight: 400;
         font-size: 14px;
     }
     .wealthylife_GlobalNavigation .secondary-navigation__wrapper__promo-space__app-link a span {
@@ -1419,7 +1419,7 @@ body {
     }
     .wealthylife_GlobalNavigation .secondary-navigation__wrapper__product-links__link.selected a {
         color: #28328c;
-        font-weight: bold;
+        font-weight: 400;
     }
     .wealthylife_GlobalNavigation .secondary-navigation__wrapper__product-links__link a {
         color: #414146;
@@ -1490,7 +1490,7 @@ body {
     .wealthylife_GlobalNavigation .secondary-navigation__wrapper__product-tabs__tab a {
         color: #414146;
         font-size: 12px;
-        font-weight: bold;
+        font-weight: 400;
         line-height: 12px;
     }
     .wealthylife_GlobalNavigation .secondary-navigation__wrapper__product-tabs__tab a:hover,
@@ -1747,7 +1747,7 @@ body {
 
 .book-appoiment h2 {
     font-size: 23px;
-    font-weight: bold;
+    font-weight: 400;
 }
 
 .book-appoiment .c-icon__img {

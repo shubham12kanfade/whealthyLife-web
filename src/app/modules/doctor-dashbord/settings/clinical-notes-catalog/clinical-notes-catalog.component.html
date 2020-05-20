@@ -1,165 +1,121 @@
 <div class="card shadow mb-4">
-    <div class="row">
-      <div class="col-sm-12">
-        <div class="card-header">
-          <div class="col-sm-3 first">
-            <h2 class="font-weight-bold text-primary">Clinical Notes Catalog</h2>
-          </div>
-          <div class="col-sm-6 second">
-            <ul class="nav nav-pills" role="tablist">
-              <li class="nav-item">
-                <a class="nav-link" [ngClass]="{'tab-pane active': first}" data-toggle="pill"
-                  (click)="firstbtn()">Complaints</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" data-toggle="pill" [ngClass]="{'tab-pane active': second}" (click)="secondbtn()">Other
-                  Observations</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" [ngClass]="{'tab-pane active': third}" data-toggle="pill"
-                  (click)="thirdbtn()">Diagnoses</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" data-toggle="pill" [ngClass]="{'tab-pane active': fourth}" (click)="fourthbtn()">Other
-                  Notes</a>
-              </li>
-            </ul>
-          </div>
-          <div class="col-sm-3 third">
-            <button type="button" class="btn btn-warning btnadd"  *ngIf="first">Add</button>
-            <button type="button" class="btn btn-warning btnadd"  *ngIf="second">Add</button>
-            <button type="button" class="btn btn-warning btnadd"  *ngIf="third">Add</button>
-            <button type="button" class="btn btn-warning btnadd"  *ngIf="fourth">Add</button>
-          </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="card-header">
+        <div class="col-sm-3 first">
+          <h2 class="font-weight-bold text-primary">Clinical Notes Catalog</h2>
+        </div>
+        <div class="col-sm-3 third">
+          <button type="button" class="btn btn-warning btnadd">Add</button>
         </div>
       </div>
     </div>
     <div class="card-body">
-      <div class="tab-content">
-          <div class="row">
-              <div class="col-sm-6">
-                <form class="form-inline">
-                    <i class="fas fa-search" aria-hidden="true"></i>
-                    <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search"
-                      aria-label="Search">
-                  </form>
-              </div>
-          </div>
-        <div class="table-responsive table" *ngIf="first">
-          <table class="table">
-            <thead>
+      <mat-tab-group>
+        <mat-tab>
+          <ng-template mat-tab-label>
+            Complaints
+          </ng-template>
+          <div class="table-responsive table">
+            <table class="table">
+              <thead>
                 <tr>
-                    <th class="fourteen">
+                  <th class="fourteen">
                     complaints
-                </th>
-                <th class="two wide"></th>
-            </tr>
-        </thead>
-            <tbody>
-               <tr  class="ng-scope">
-                    <td colspan="2" class="cn-empty-state">
-                       <span class="cdc">
-                            No complaints added yet.
-                        </span>               
-                    </td>
-                </tr>    
-            </tbody>
-        </table>
-        </div>
-        </div>
-  
-  
-        <!-- <div class="col-sm-12" *ngIf="second">
-          <div class="row staffspan">
-            <span>No staff member added yet.<a class="href">Add staff</a></span>
-          </div>
-        </div> -->
-        <div class="table-responsive table" *ngIf="second">
-            <table class="table">
-              <thead>
-                  <tr>
-                      <th class="fourteen">
-                        Observations
                   </th>
                   <th class="two wide"></th>
-              </tr>
-          </thead>
+                </tr>
+              </thead>
               <tbody>
-                 <tr  class="ng-scope">
-                      <td colspan="2" class="cn-empty-state">
-                         <span class="cdc">
-                            No observations added yet..
-                          </span>               
-                      </td>
-                  </tr>    
+                <tr class="ng-scope">
+                  <td colspan="2" class="cn-empty-state">
+                    <span class="cdc">
+                      No complaints added yet.
+                    </span>
+                  </td>
+                </tr>
               </tbody>
-          </table>
+            </table>
           </div>
-          <div class="table-responsive table" *ngIf="third">
+        </mat-tab>
+        <mat-tab>
+          <ng-template mat-tab-label>
+            Observations
+          </ng-template>
+          <div class="table-responsive table">
             <table class="table">
               <thead>
-                  <tr>
-                      <th class="fourteen">
-                        Diagnoses
+                <tr>
+                  <th class="fourteen">
+                    Observations
                   </th>
                   <th class="two wide"></th>
-              </tr>
-          </thead>
+                </tr>
+              </thead>
               <tbody>
-                 <tr  class="ng-scope">
-                      <td colspan="2" class="cn-empty-state">
-                         <span class="cdc">
-                            No diagnoses added yet.
-                          </span>               
-                      </td>
-                  </tr>    
+                <tr class="ng-scope">
+                  <td colspan="2" class="cn-empty-state">
+                    <span class="cdc">
+                      No observations added yet..
+                    </span>
+                  </td>
+                </tr>
               </tbody>
-          </table>
+            </table>
           </div>
-          <div class="table-responsive table" *ngIf="fourth">
+        </mat-tab>
+        <mat-tab>
+          <ng-template mat-tab-label>
+            Diagnoses
+          </ng-template>
+          <div class="table-responsive table">
             <table class="table">
               <thead>
-                  <tr>
-                      <th class="fourteen">
-                        Notes
+                <tr>
+                  <th class="fourteen">
+                    Diagnoses
                   </th>
                   <th class="two wide"></th>
-              </tr>
-          </thead>
+                </tr>
+              </thead>
               <tbody>
-                 <tr  class="ng-scope">
-                      <td colspan="2" class="cn-empty-state">
-                         <span class="cdc">
-                            No notes added yet.
-                          </span>               
-                      </td>
-                      <!-- <tr ng-if="cnSettingsOptions[clinicalNotesModel.tabSelected + 'AddNew']" class="ng-scope">
-                        <td colspan="2" class="clinical-notes-add-edit">
-                            <div class="ui grid no-margin">
-                                <div class="twelve wide column">
-                                    <div class="ui form">
-                                        <textarea rows="1" class="cn-add-edit-textarea ng-pristine ng-valid ng-touched" textarea-resize="" focus-this="" ng-model="clinicalNotesModel[clinicalNotesModel.tabSelected + 'New']"></textarea>
-                                    </div>
-                                </div>
-                                <div class="one wide column cn-save-cancel-padding">
-                                    <a class="cn-cancel-link" ng-click="cancelAddOrEdit()">CANCEL</a>
-                                </div>
-                                <div class="one wide column cn-save-cancel-padding">
-                                    <a class="cn-save-link cn-disable-save-link" ng-click="clinicalNotesModel[clinicalNotesModel.tabSelected + 'New'] &amp;&amp;
-                                        !clinicalNotesModel[clinicalNotesModel.tabSelected + 'DisableNewSave'] &amp;&amp;
-                                        saveOrEditClinicalNote()" ng-class="{'cn-disable-save-link':
-                                        !clinicalNotesModel[clinicalNotesModel.tabSelected + 'New']}">
-                                        SAVE
-                                    </a>
-                                </div>
-                            </div>
-                        </td>
-                    </tr> -->
-                  </tr>    
+                <tr class="ng-scope">
+                  <td colspan="2" class="cn-empty-state">
+                    <span class="cdc">
+                      No diagnoses added yet.
+                    </span>
+                  </td>
+                </tr>
               </tbody>
-          </table>
+            </table>
           </div>
-      </div>
+        </mat-tab>
+        <mat-tab>
+          <ng-template mat-tab-label>
+            Other Notes
+          </ng-template>
+          <div class="table-responsive table">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th class="fourteen">
+                    Notes
+                  </th>
+                  <th class="two wide"></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="ng-scope">
+                  <td colspan="2" class="cn-empty-state">
+                    <span class="cdc">
+                      No notes added yet.
+                    </span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </mat-tab>
+      </mat-tab-group>
     </div>
-    
-  
+  </div>

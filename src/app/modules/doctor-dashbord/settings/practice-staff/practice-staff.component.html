@@ -5,19 +5,6 @@
         <div class="col-sm-3 first">
           <h2 class="font-weight-bold text-primary">Practice Staff</h2>
         </div>
-        <div class="col-sm-6 second">
-          <ul class="nav nav-pills" role="tablist">
-            <li class="nav-item pd">
-              <a class="nav-link" [ngClass]="{'tab-pane active active-one': sark}" data-toggle="pill"
-                (click)="slideon()">Doctors</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" data-toggle="pill" [ngClass]="{'tab-pane active active-two': second}"
-                (click)="secondon()">
-                Other Staff</a>
-            </li>
-          </ul>
-        </div>
         <div class="col-sm-3 third">
           <button type="button" class="btn btn-warning btnadd" (click)=" adddoctorpopup()" *ngIf="sark">Add</button>
           <button type="button" class="btn btn-warning btnadd" (click)=" addstaffpopup()" *ngIf="second">Add</button>
@@ -26,58 +13,69 @@
     </div>
   </div>
   <div class="card-body">
-    <div class="tab-content">
-      <div class="table-responsive table" *ngIf="sark">
-        <div id="dataTable_wrapper" class="dataTables_wrapper dt-bootstrap4">
-          <div class="row">
-            <div class="col-sm-12">
-              <table class="table table-bordered dataTable" id="dataTable" width="100%" cellspacing="0" role="grid"
-                aria-describedby="dataTable_info" style="width: 100%;">
-                <thead>
-                  <tr role="row">
-                    <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1"
-                      aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 70px;">
-                      Name
-                    </th>
-                    <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1"
-                      aria-label="Position: activate to sort column ascending" style="width: 100px;">Access Type</th>
-                    <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1"
-                      aria-label="Office: activate to sort column ascending" style="width: 54px;">This Doctors
-                      Notifications </th>
-                    <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1"
-                      aria-label="Age: activate to sort column ascending" style="width: 31px;">All Doctors Notifications
-                    </th>
-                    <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1"
-                      aria-label="Age: activate to sort column ascending" style="width: 31px;"></th>
-
-                </thead>
-
-                <tbody>
-                  <tr role="row" class="odd">
-                    <td class="sorting_1">Airi Satou</td>
-                    <td>Accountant</td>
-                    <td>Tokyo</td>
-                    <td>33</td>
-                    <td><a href="">edit</a></td>
-                  </tr>
-
-                </tbody>
-              </table>
+    <mat-tab-group class="mt-3rem">
+      <mat-tab>
+        <ng-template mat-tab-label>
+          Doctors
+        </ng-template>
+        <div class="tab-content">
+          <div class="table-responsive table">
+            <div id="dataTable_wrapper" class="dataTables_wrapper dt-bootstrap4">
+              <div class="row">
+                <div class="col-sm-12">
+                  <table class="table table-bordered dataTable" id="dataTable" width="100%" cellspacing="0" role="grid"
+                    aria-describedby="dataTable_info" style="width: 100%;">
+                    <thead>
+                      <tr role="row">
+                        <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1"
+                          aria-sort="ascending" aria-label="Name: activate to sort column descending"
+                          style="width: 70px;">
+                          Name
+                        </th>
+                        <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1"
+                          aria-label="Position: activate to sort column ascending" style="width: 100px;">Access Type
+                        </th>
+                        <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1"
+                          aria-label="Office: activate to sort column ascending" style="width: 54px;">This Doctors
+                          Notifications </th>
+                        <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1"
+                          aria-label="Age: activate to sort column ascending" style="width: 31px;">All Doctors
+                          Notifications
+                        </th>
+                        <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1"
+                          aria-label="Age: activate to sort column ascending" style="width: 31px;"></th>
+                    </thead>
+                    <tbody>
+                      <tr role="row" class="odd">
+                        <td class="sorting_1">Airi Satou</td>
+                        <td>Accountant</td>
+                        <td>Tokyo</td>
+                        <td>33</td>
+                        <td><a href="">edit</a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-
-
-      <div class="col-sm-12" *ngIf="second">
-        <div class="row staffspan">
-          <span>No staff member added yet.<a class="href" (click)="addstaffpopup()">Add staff</a></span>
+      </mat-tab>
+      <mat-tab>
+        <ng-template mat-tab-label>
+          Other Staff
+        </ng-template>
+        <div class="tab-content">
+          <div class="col-sm-12">
+            <div class="row staffspan">
+              <span>No staff member added yet.<a class="href" (click)="addstaffpopup()">Add staff</a></span>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
+      </mat-tab>
+    </mat-tab-group>
   </div>
 </div>
-
 <div class="modal" id="myModal" *ngIf="doctor">
   <div class="modal-lg dialog">
     <div class="modal-content">

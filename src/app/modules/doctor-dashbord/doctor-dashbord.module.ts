@@ -3,17 +3,17 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { DoctorDashbordRoutingModule } from './doctor-dashbord-routing.module';
-
-
+import { SharedModule } from '../../shared/shared.module';
 
 
 @NgModule({
   declarations: [DoctorDashbordComponent,
-   
-   ],
+
+  ],
   imports: [
     CommonModule,
-    DoctorDashbordRoutingModule
+    DoctorDashbordRoutingModule,
+    SharedModule
   ]
 })
 export class DoctorDashbordModule { }

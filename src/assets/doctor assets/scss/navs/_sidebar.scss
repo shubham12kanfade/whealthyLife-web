@@ -18,7 +18,7 @@
     }
     &.active {
       .nav-link {
-        font-weight: 700;
+        font-weight: 400;
       }
     }
     // Accordion
@@ -70,7 +70,7 @@
           }
           &.active {
             color: $primary;
-            font-weight: 700;
+            font-weight: 400;
           }
         }
       }

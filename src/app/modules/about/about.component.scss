@@ -76,14 +76,15 @@ img {
 
 .style__main-heading___Zv368 {
     position: absolute;
-    top: 30%;
+    top: 38%;
     left: 0;
     right: 0;
     margin: 0 auto;
     text-align: center;
     font-size: 48px;
-    font-weight: 900;
+    font-weight: 400;
     color: #fff;
+    line-height: 1.5;
 }
 
 @media (max-width: 1028px) {
@@ -335,7 +336,7 @@ a:hover {
 }
 .style__heading___ME_M_ {
     font-size: 32px;
-    font-weight: 700;
+    font-weight: 400;
     text-align: center;
     margin: 20px 0;
 }
@@ -367,7 +368,7 @@ a:hover {
 }
 .style__name___10Jjn {
     font-size: 24px;
-    font-weight: 700;
+    font-weight: 400;
 }
 .style__about___2rZsm .style__f32___1ToRb {
     font-size: 32px;
@@ -452,7 +453,7 @@ a:hover {
 
 .style__heading___ME_M_ {
     font-size: 32px;
-    font-weight: 700;
+    font-weight: 400;
     text-align: center;
     margin: 20px 0;
 }
@@ -497,7 +498,7 @@ a:hover {
 
 .style__name___10Jjn {
     font-size: 24px;
-    font-weight: 700;
+    font-weight: 400;
 }
 
 .style__about___2rZsm .style__f32___1ToRb {
@@ -862,7 +863,7 @@ div[class^="style__social"] {
 }
 .style__heading___ME_M_ {
     font-size: 32px;
-    font-weight: 700;
+    font-weight: 400;
     text-align: center;
     margin: 20px 0;
 }
@@ -898,7 +899,7 @@ div[class^="style__social"] {
 }
 .style__name___10Jjn {
     font-size: 24px;
-    font-weight: 700;
+    font-weight: 400;
 }
 .style__social-links___nAIjA div {
     background-repeat: no-repeat;
@@ -1004,7 +1005,7 @@ div[class^="style__social"] {
 
 .style__name___10Jjn {
     font-size: 24px;
-    font-weight: 700;
+    font-weight: 400;
 }
 
 .style__social-links___nAIjA div {
@@ -1114,7 +1115,7 @@ a:hover {
 }
 
 b {
-    font-weight: 700;
+    font-weight: 400;
 }
 
 * {
@@ -1233,7 +1234,7 @@ a:hover {
 }
 
 b {
-    font-weight: 700;
+    font-weight: 400;
 }
 
 * {
@@ -1294,7 +1295,7 @@ b {
 }
 .style__heading___ME_M_ {
     font-size: 32px;
-    font-weight: 700;
+    font-weight: 400;
     text-align: center;
     margin: 20px 0;
 }
@@ -1306,7 +1307,7 @@ b {
     font-size: 24px;
     text-align: center;
     color: #fff;
-    font-weight: 700;
+    font-weight: 400;
 }
 .style__contact___oVQTh .style__sub-title___3QnWO .style__mail-address___3bvJN {
     color: #fff !important;
@@ -1478,7 +1479,11 @@ b {
 .style__item-info___1vsjr{
     >h2{
         font-size: 1rem;
-        font-weight: 800;
+        font-weight: 400;
     }
 }
 
+.subHeding {
+    line-height: 1 !important;
+    font-weight: 200 !important;
+}

@@ -297,7 +297,7 @@ span {
 }
 .c-day-heading--selected {
   color: #14bef0;
-  font-weight: 700;
+  font-weight: 400;
   -webkit-transition: color 0.5s, font-weight 0.5s;
   transition: color 0.5s, font-weight 0.5s;
 }
@@ -432,7 +432,7 @@ button {
   background: url(../../../assets/img/dweb_bg.webp);
 }
 .corona-fab__bold {
-  font-weight: bold;
+  font-weight: 400;
 }
 .corona-fab__pos-fix {
   position: fixed;
@@ -546,7 +546,7 @@ span {
   font-size: 12px;
 }
 .u-bold {
-  font-weight: 700 !important;
+  font-weight: 400 !important;
 }
 .u-t-uppercase {
   text-transform: uppercase;
@@ -621,7 +621,7 @@ button {
   text-decoration: none;
   height: 40px;
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 400;
 }
 .c-apt-btn--dark-fitY {
   color: #fff;
@@ -727,7 +727,7 @@ button {
 }
 .c-day-heading--selected {
   color: #14bef0;
-  font-weight: 700;
+  font-weight: 400;
   -webkit-transition: color 0.5s, font-weight 0.5s;
   transition: color 0.5s, font-weight 0.5s;
 }
@@ -752,7 +752,7 @@ button {
 }
 /*! CSS Used from: https://www.WealthyLifestatic.com/web-assets/stylesheets/omni.8ddd7a6ea145.css */
 .u-bold {
-  font-weight: 700;
+  font-weight: 400;
 }
 /*! CSS Used keyframes */
 @-webkit-keyframes blink {
@@ -954,7 +954,7 @@ ul {
 .c-btn--dark-medium,
 .c-btn--light-medium,
 .u-bold {
-  font-weight: 700 !important;
+  font-weight: 400 !important;
 }
 .u-t-capitalize {
   text-transform: capitalize;
@@ -1546,7 +1546,7 @@ input {
   content: "\e800";
 }
 .u-bold[class*=" icon-ic_"]:before {
-  font-weight: 700;
+  font-weight: 400;
 }
 .icon--no-margin:before {
   margin: 0;
@@ -1924,7 +1924,7 @@ input {
   line-height: 30px;
 }
 .WealthyLife_GlobalNavigation .navbar .u-name .user_name {
-  font-weight: bold;
+  font-weight: 400;
   font-size: 14px;
   line-height: 20px;
 }
@@ -1947,12 +1947,12 @@ input {
 }
 @media only screen and (max-width: 800px) {
   .WealthyLife_GlobalNavigation .navbar .u-name a {
-    font-weight: bold;
+    font-weight: 400;
     font-size: 14px;
     line-height: 20px;
   }
   .WealthyLife_GlobalNavigation .navbar .u-name .user_name {
-    font-weight: bold;
+    font-weight: 400;
     font-size: 12px;
     line-height: 15px;
   }
@@ -1979,7 +1979,7 @@ input {
   position: relative;
 }
 .WealthyLife_GlobalNavigation .bold {
-  font-weight: bold;
+  font-weight: 400;
 }
 .WealthyLife_GlobalNavigation:before {
   content: " ";
@@ -2156,7 +2156,7 @@ input {
 .WealthyLife_GlobalNavigation .navbar .nav-mid .product-tab__title {
   font-size: 16px;
   line-height: 20px;
-  font-weight: bold;
+  font-weight: 400;
   color: #2d2d32;
   letter-spacing: -0.3px;
 }
@@ -2285,7 +2285,7 @@ input {
   vertical-align: middle;
 }
 .WealthyLife_GlobalNavigation .navbar .download__copy__title {
-  font-weight: bold;
+  font-weight: 400;
   font-size: 14px;
   line-height: 14px;
   color: #414146;
@@ -2389,14 +2389,14 @@ input {
   padding: 0 20px 10px 20px;
 }
 .WealthyLife_GlobalNavigation .navbar .u-d-item.product-switch a div:first-child {
-  font-weight: bold;
+  font-weight: 400;
   padding: 10px 0;
 }
 .WealthyLife_GlobalNavigation .navbar .u-d-item.product-switch:hover a div:first-child {
   color: #ff7800;
 }
 .WealthyLife_GlobalNavigation .navbar .u-d-item.product-switch .icon-ic_next_cheveron:before {
-  font-weight: bold;
+  font-weight: 400;
 }
 .WealthyLife_GlobalNavigation .navbar .u-d.nav-dropdown .u-d-item:hover {
   background-color: #f0f0f5;
@@ -2605,7 +2605,7 @@ input {
   height: 40px;
 }
 .u-bold {
-  font-weight: 700;
+  font-weight: 400;
 }
 .u-clearfix:after,
 .u-clearfix:before {
@@ -2719,7 +2719,7 @@ input {
   font-size: 18px;
   margin-bottom: 2px;
   line-height: 24px;
-  font-weight: bold;
+  font-weight: 400;
 }
 .direct-list-desktop .banner-subtitle {
   font-size: 14px;
@@ -2733,7 +2733,7 @@ input {
   color: #ffffff;
   font-size: 14px;
   text-align: center;
-  font-weight: bold;
+  font-weight: 400;
   border-radius: 2px;
   margin-left: 5px;
   padding: 4px 7px;
@@ -2748,7 +2748,7 @@ input {
 }
 .direct-list-desktop .cta .cta-subtext {
   font-size: 11px;
-  font-weight: bold;
+  font-weight: 400;
   margin-top: 2px;
   line-height: 12px;
 }
@@ -2833,7 +2833,7 @@ input {
   font-size: 18px;
   margin-bottom: 2px;
   line-height: 24px;
-  font-weight: bold;
+  font-weight: 400;
 }
 
 .direct-list-desktop .banner-subtitle {
@@ -2861,7 +2861,7 @@ input {
   color: #ffffff;
   font-size: 14px;
   text-align: center;
-  font-weight: bold;
+  font-weight: 400;
   border-radius: 2px;
   margin-left: 5px;
   padding: 4px 7px;
@@ -2879,7 +2879,7 @@ input {
 
 .direct-list-desktop .cta .cta-subtext {
   font-size: 11px;
-  font-weight: bold;
+  font-weight: 400;
   margin-top: 2px;
   line-height: 12px;
 }
