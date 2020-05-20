@@ -1,0 +1,42 @@
+<div mat-dialog-title>Add Procedure</div>
+<mat-dialog-content class="mat-typography">
+    <div class="col-md-12 col-sm-12">
+        <div class="row">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>PROCEDURE NAME<span class="redstar">*</span></th>
+                        <th>COST (₹)<span class="redstar">*</span></th>
+                        <th>TAX</th>
+                        <th>TOTAL COST (₹)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="">
+                                <div class="input-group md-form form-sm form-1 pl-0">
+                                </div>
+                                <input class="form-control my-0 py-1" type="text" placeholder="Search"
+                                    aria-label="Search">
+                            </div>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+        </div>
+    </div>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Cancel</button>
+    <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Save</button>
+</mat-dialog-actions>

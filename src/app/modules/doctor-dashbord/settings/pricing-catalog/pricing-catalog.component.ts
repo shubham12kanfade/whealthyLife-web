@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { AddProcedureModalComponent } from './add-procedure-modal/add-procedure-modal.component';
 
 @Component({
   selector: 'app-pricing-catalog',
@@ -6,13 +8,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pricing-catalog.component.scss']
 })
 export class PricingCatalogComponent implements OnInit {
-  opmod: boolean=false;
+  opmod: boolean = false;
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
   }
-modalopen(){
-  this.opmod=!this.opmod;
-}
+
+  modalopen() {
+    const dialogRef = this.dialog.open(AddProcedureModalComponent);
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
+  }
 }
