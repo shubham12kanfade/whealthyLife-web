@@ -1,3 +1,4 @@
+import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { ClinicDetailsComponent } from './clinic-details/clinic-details.component';
 import { ConnectClinicComponent } from './connect-clinic/connect-clinic.component';
 import { EducationComponent } from './education/education.component';
@@ -48,6 +49,10 @@ const routes: Routes = [
     path:'Consultant_details',component:ConsultantDetailsComponent
   },
   
+
+  {
+    path:'edit_profile',component:EditProfileComponent
+  }
 ];
 
 @NgModule({

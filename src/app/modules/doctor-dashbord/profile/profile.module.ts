@@ -13,11 +13,12 @@ import { ClinicProofComponent } from './clinic-proof/clinic-proof.component';
 import { ClinicLocationComponent } from './clinic-location/clinic-location.component';
 import { ClinicTimingsComponent } from './clinic-timings/clinic-timings.component';
 import { ConsultantDetailsComponent } from './consultant-details/consultant-details.component';
+import { EditProfileComponent } from './edit-profile/edit-profile.component';
 
 
 
 @NgModule({
-  declarations: [ProfileComponent, RegistrationComponent, EducationComponent, ConnectClinicComponent, ClinicDetailsComponent, IdentityProofComponent, RegistrationProofComponent, ClinicProofComponent, ClinicLocationComponent, ClinicTimingsComponent, ConsultantDetailsComponent, ],
+  declarations: [ProfileComponent, RegistrationComponent, EducationComponent, ConnectClinicComponent, ClinicDetailsComponent, IdentityProofComponent, RegistrationProofComponent, ClinicProofComponent, ClinicLocationComponent, ClinicTimingsComponent, ConsultantDetailsComponent, EditProfileComponent, ],
   imports: [
     CommonModule,
     ProfileRoutingModule
