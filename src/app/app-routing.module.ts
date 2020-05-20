@@ -7,9 +7,9 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
 
-  {path: '',loadChildren: () => import('./modules/public/public.module').then(ud => ud.PublicModule )},
-  {path: 'Doctor',loadChildren: () => import('./modules/doctor-dashbord/doctor-dashbord.module').then(dd => dd.DoctorDashbordModule )},
-
+  { path: '', loadChildren: () => import('./modules/public/public.module').then(ud => ud.PublicModule) },
+  { path: 'Doctor', loadChildren: () => import('./modules/doctor-dashbord/doctor-dashbord.module').then(dd => dd.DoctorDashbordModule) },
+  { path: 'video-conference', loadChildren: () => import('./modules/video-conference/video-conference.module').then(video => video.VideoConferenceModule) },
 ];
 
 @NgModule({

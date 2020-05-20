@@ -15,36 +15,36 @@ export class LoginComponent implements OnInit {
     email: new FormControl(""),
     password: new FormControl(""),
   })
-  singIn: boolean=false;
-  constructor(private router: Router, public LoginService:LoginService, private userService: UserService) { 
+  singIn: boolean = false;
+  constructor(private router: Router, public LoginService: LoginService, private userService: UserService) {
     this.userService.getUserLoginStatus().subscribe(resData => {
-      if(this.userService.getUserInfo())
-       this.router.navigate(['']);
+      if (this.userService.getUserInfo())
+        this.router.navigate(['']);
     })
   }
-  onSubmit():void{
-    this.singIn=true;
-    
+  onSubmit(): void {
+    this.singIn = true;
+
     if (this.loginForm.invalid) {
       return;
     }
-  
+
     const data = {
       ...this.loginForm.value,
-      designation : "Admin",
+      designation: "Admin",
     }
     this.LoginService.loginUser(data).then((resData: any) => {
       console.log("RegisterComponent -> onSubmit -> resData", resData)
-        if(resData.status == "SUCCESS"){
-         this.userService.addUserInfo(resData.data);
-        }
-      }).catch(error => {
+      if (resData.status == "SUCCESS") {
+        this.userService.addUserInfo(resData.data);
+      }
+    }).catch(error => {
       console.log("RegisterComponent -> onSubmit -> error", error)
-       
-      })
-    }
+
+    })
+  }
   ngOnInit(): void {
   }
- 
+
 
 }

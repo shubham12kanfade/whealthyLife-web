@@ -22,8 +22,9 @@
 		</div>
 	</div>
 </div>
-<div class="fixed-popup"><a href="#contact-popup" data-fancybox><img src="../assets/img/answer.png"
-			alt="contact"><span>Ask a Question</span></a></div>
+<div class="fixed-popup"><a href="#contact-popup" data-fancybox>
+		<img src="../assets/img/answer.png" alt="contact"><span>Ask a Question</span></a>
+</div>
 <div id="contact-popup">
 	<div class="row no-gutters">
 		<div class="col-md-5 equal-height hidden-xs">
@@ -62,46 +63,99 @@
 		<div class="row">
 			<div class="col-12">
 				<nav class="navbar navbar-expand-md navbar-light">
-				
+
 					<div id="logo_home" data-aos="fade-up">
-						<h1><a [routerLink]="['']" routerLinkActive="router-link-active"  title="wealthylife"><img src="../assets/img/tracefinallogo.png" class ="log" alt="logo"></a></h1>
-					</div>	
-					
-					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						<h1><a [routerLink]="['']" routerLinkActive="router-link-active" title="wealthylife"><img
+									src="../assets/img/tracefinallogo.png" class="log" alt="logo"></a></h1>
+					</div>
+
+					<button class="navbar-toggler" type="button" (click)="onMenu(true)">
 						<span class="navbar-toggler-icon"></span>
 					</button>
-					
+
 					<div class="collapse navbar-collapse" id="navbarSupportedContent">
 						<ul class="navbar-nav ml-auto py-4 py-md-0">
-							
+
 							<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
 								<a [routerLink]="['']" routerLinkActive="router-link-active"><img
-									src="../assets/img/home.png" alt="icon">Home</a>
+										src="../assets/img/home.png" alt="icon">Home</a>
 							</li>
 							<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
 								<a [routerLink]="['/about']"><img src="../assets/img/doctor.png" alt="icon">About us</a>
 							</li>
-							
+
 							<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-								<a [routerLink]="['/bookcheckup']" routerLinkActive="router-link-active" ><img src="../assets/img/syringe2.png" alt="icon">Book Health & Checkups</a>
+								<a [routerLink]="['/bookcheckup']" routerLinkActive="router-link-active"><img
+										src="../assets/img/syringe2.png" alt="icon">Book Health & Checkups</a>
 							</li>
 							<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-								<a [routerLink]="['/contact']"><img src="../assets/img/cardiogram.png" alt="icon">Contact
+								<a [routerLink]="['/contact']"><img src="../assets/img/cardiogram.png"
+										alt="icon">Contact
 									us</a>
+							</li>
+							<li class="nav-item dropdown open" style="position: relative; top: -5px;">
+								<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+									data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									<img src="../../../assets/img/avatar.png" alt="">
+									Shubham
+								</a>
+								<ul class="dropdown-menu dropDown" aria-labelledby="navbarDropdown">
+									<li>
+										<a class="dropdown-item" style="display: flex;" href="#">
+											<img src="../../../assets/img/avatar.png" style="width: 50px;" alt="">
+											shubham <br>
+											kanfade
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="#">My Appointment</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="#">My Test</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="#">My Medicine Orders</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="#">My Medical Records</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="#">My Online consultations</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="#">My Feedback</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="#">View / Update Profile</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="#">Settings</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="#">Logout</a>
+									</li>
+									<!-- <div class="dropdown-divider"></div>
+									<li>
+										<a class="dropdown-item" href="#">Sign Out</a>
+									</li> -->
+								</ul>
 							</li>
 						</ul>
 					</div>
-					
-				</nav>		
+				</nav>
 			</div>
 		</div>
 	</div>
 </div>
-
-<div id="mySidenav" class="sidenav">
-	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-	<a href="#">About</a>
-	<a href="#">Services</a>
-	<a href="#">Clients</a>
-	<a href="#">Contact</a>
-  </div>
+<div id="mySidenav" class="sidenav sidebar-left-nav" *ngIf="openMenu">
+	<a class="closebtn" (click)="onMenu(false)">&times;</a>
+	<a [routerLink]="['']" (click)="onMenu(false)" routerLinkActive="router-link-active" class="border">
+		<img src="../assets/img/home.png" (click)="onMenu(false)" alt="icon">Home</a>
+	<a [routerLink]="['/about']" (click)="onMenu(false)" class="border"><img src="../assets/img/doctor.png"
+			alt="icon">About us</a>
+	<a [routerLink]="['/bookcheckup']" (click)="onMenu(false)" class="border" routerLinkActive="router-link-active">
+		<img src="../assets/img/syringe2.png" (click)="onMenu(false)" alt="icon">Book Health & Checkups</a>
+	<a [routerLink]="['/contact']" (click)="onMenu(false)" class="border"><img src="../assets/img/cardiogram.png"
+			alt="icon">Contact
+		us</a>
+</div>

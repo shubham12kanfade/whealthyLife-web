@@ -1,114 +1,112 @@
-.card-header{
-    margin-top:4%;
+.card-header {
+    margin-top: 4%;
 }
-.first{
+.first {
     margin-top: -3%;
 }
-.text-primary{
-    font-size: 2.0rem;
+.text-primary {
+    font-size: 1.5rem;
     display: flex;
     font-weight: 400;
-    
 }
 // .second{
 //     margin-top: -3%;
 // }
-.third{
+.third {
     margin-top: -3%;
     float: right;
 }
-.btnadd{
+.btnadd {
     float: right;
     font-size: 13px;
 }
-.cdb{
+.cdb {
     font-size: 17px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 thead {
-    th{
+    th {
         font-size: 14px;
     }
 }
-tbody{
-    td{
+tbody {
+    td {
         font-size: 12px;
     }
 }
-.tbs{
+.tbs {
     margin-top: 20px;
 }
-.mtitle{
+.mtitle {
     font-size: 0.5rem !important;
     // top: 10%;
 }
 // .modal{
 //     padding: 30px 70px 30px 70px;
 // }
-.cols{
+.cols {
     font-size: 1.1rem;
 }
 
-.header{
-margin-top: 34px;
-margin-left: 20px;
-// height: 30%;
-z-index: 1;
-background: white;
+.header {
+    margin-top: 34px;
+    margin-left: 20px;
+    // height: 30%;
+    z-index: 1;
+    background: white;
 }
-.modal-body{
+.modal-body {
     padding: 60px;
-    margin-top:-52px ;
+    margin-top: -52px;
     // margin-bottom: -40px;
     // overflow: scroll;
     height: 80vh;
     overflow-y: scroll;
 }
-.redstar{
+.redstar {
     color: red;
 }
-#myModal{
+#myModal {
     margin-left: 23%;
     top: 5%;
     // padding-bottom: -20%;
     display: block;
-    
 }
-.btnm{
+.btnm {
     // float: right;
     font-size: 16px;
 }
-.btntop{
+.btntop {
     margin-top: 10%;
 }
-.ads{
+.ads {
     font-size: 12px;
 }
-.edi{
+.edi {
     cursor: pointer;
     text-decoration: none;
 }
-.edi:hover{
+.edi:hover {
     color: blue;
 }
-.btn-icon-split{
+.btn-icon-split {
     border: 0.5px solid black;
 }
-.thirdrow{
+.thirdrow {
     margin-top: 14%;
 }
-.redremove{
+.redremove {
     float: right;
     color: red;
     cursor: pointer;
     font-size: 10px;
 }
-.diagnose{
+.diagnose {
     font-size: 13px;
 }
-.template{
+.template {
     font-size: 13px;
+}
 
-}

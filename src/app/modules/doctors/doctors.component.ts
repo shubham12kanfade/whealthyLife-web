@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-doctors',
@@ -6,17 +7,29 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./doctors.component.scss']
 })
 export class DoctorsComponent implements OnInit {
-  show: boolean=false;
-  aval: boolean=false;
+  show: boolean = false;
+  aval: boolean = false;
 
-  constructor() { }
+
+
+  constructor() {
+    $(window).scroll(function () {
+      console.log("DoctorsComponent -> constructor -> $(window).scrollTop()", $(window).scrollTop())
+      if ($(window).scrollTop() >= 112) {
+        $('.sticky-outer-wrapper').addClass('fixed-sticky-outer');
+      } else {
+        $('.sticky-outer-wrapper').removeClass('fixed-sticky-outer');
+      }
+    });
+
+  }
 
   ngOnInit(): void {
   }
-  showtime(){
-    this.show=!this.show;
+  showtime() {
+    this.show = !this.show;
   }
-  avaialableclick(){
-    this.aval=!this.aval;
+  avaialableclick() {
+    this.aval = !this.aval;
   }
 }

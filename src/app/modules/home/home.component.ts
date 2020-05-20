@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild, NgZone } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 
 @Component({
@@ -11,7 +11,7 @@ export class HomeComponent implements OnInit {
   constructor() { }
 
   customOptions: OwlOptions = {
-    loop:true,
+    loop: true,
     mouseDrag: true,
     touchDrag: true,
     pullDrag: true,
@@ -39,7 +39,7 @@ export class HomeComponent implements OnInit {
     },
     nav: false
   };
- 
+
 
   customOptions1: OwlOptions = {
     loop: true,
@@ -47,7 +47,7 @@ export class HomeComponent implements OnInit {
     touchDrag: false,
     pullDrag: false,
     dots: false,
-    autoplay:true,
+    autoplay: true,
     // autoplaySpeed:100,
     margin: 10,
     navSpeed: 100,
@@ -70,7 +70,7 @@ export class HomeComponent implements OnInit {
   };
 
   qwe: OwlOptions = {
-    loop:true,
+    loop: true,
     mouseDrag: true,
     touchDrag: true,
     pullDrag: true,
@@ -96,16 +96,15 @@ export class HomeComponent implements OnInit {
         items: 1
       }
     },
-     
-      
-  
+
+
+
     nav: false
   };
 
 
 
   ngOnInit(): void {
-  
   }
 
 }

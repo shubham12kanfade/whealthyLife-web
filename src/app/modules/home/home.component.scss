@@ -55,7 +55,7 @@ hr {
     height: 56px;
     float: right;
     margin-right: 10px;
-    font-size: 19px;
+    font-size: 18px;
 }
 
 #custom-search-input input[type="submit"] {
@@ -86,10 +86,10 @@ a {
 }
 
 .categories .prev-next {
-    position: absolute;
-    top: 30px;
-    right: 30px;
-    cursor: pointer;
+    // position: absolute;
+    // top: 30px;
+    // right: 30px;
+    // cursor: pointer;
 }
 
 .categories .prev-next i {
@@ -149,4 +149,71 @@ a {
     padding: 1rem 1rem;
     margin: -1.5rem -1rem -1rem auto;
     font-size: 29px;
+}
+
+.lhs {
+    position: absolute;
+    top: 54%;
+    z-index: 999;
+    left: 16px;
+    font-size: 10px;
+}
+
+.rhs {
+    position: absolute;
+    top: 54%;
+    z-index: 999;
+    right: 16px;
+    font-size: 10px;
+}
+
+.categories .prev-next i {
+    color: #f1f3ff;
+    margin: 0 3px;
+}
+
+@media (max-width: 768px) {
+    .lab-slide .main_title h2 {
+        text-align: left;
+        margin-bottom: 5px;
+        font-size: 22px;
+    }
+}
+
+.app-download-sec .pic-middle img {
+    max-width: 211px;
+}
+
+.app-download-sec .info h2 {
+    font-size: 29px;
+}
+
+.testimonial h1 {
+    font-size: 1.8em;
+}
+
+.h2-size {
+    font-size: 1.5rem;
+}
+
+.container.margin_120_95 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.deal-offer h1 {
+    font-size: 1.8em;
+}
+
+.deal-offer h4 {
+    font-size: 1rem;
+}
+
+.element:before {
+    content: "\f000";
+    font-family: FontAwesome;
+}
+
+div#myCarousel{
+    padding: 0px !important;
 }

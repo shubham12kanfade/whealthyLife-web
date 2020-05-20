@@ -1,44 +1,23 @@
 <div id="wrapper">
-
-
-    <ul *ngIf="
-    router.url !== '/Doctor/Profile/Registration' 
-    && router.url !== '/Doctor/Profile/Education'
-     && router.url !== '/Doctor/Profile/Connect_clinic' 
-     && router.url !== '/Doctor/Profile/Clinic_details'
-     && router.url !== '/Doctor/Profile/Identity_proof'
-     && router.url !== '/Doctor/Profile/Registration_proof'
-     && router.url !== '/Doctor/Profile/Clinic_proof'
-     && router.url !== '/Doctor/Profile/Clinic_location'
-     && router.url !== '/Doctor/Profile/Clinic_timings'
-     && router.url !== '/Doctor/Profile/Consultant_details'
-    " class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-
-
-        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="">
-            <div class="sidebar-brand-icon rotate-n-15">
-                <i class="fas fa-laugh-wink"></i>
-            </div>
-            <div class="sidebar-brand-text mx-3">DOCTOR PANEL</div>
+    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+        <a class="sidebar-brand d-flex align-items-center justify-content-center h" [routerLink]="['/Doctor']">
+            <div class="sidebar-brand-text h">Wealthy Life</div>
         </a>
-
-
+        <a class="sidebar-brand d-flex align-items-center justify-content-center d" [routerLink]="['/Doctor']">
+            <div class="sidebar-brand-text ">W</div>
+        </a>
         <hr class="sidebar-divider my-0">
-
-        <div class="sidebar-heading">
+        <div class="sidebar-heading h">
             HEALTH IS WEALTH
         </div>
-
-
         <li class="nav-item active">
             <a class="nav-link" RouterLink="/Doctor/Calender">
-
                 <i class="fas fa-fw fa-calendar-alt"></i>
                 <span>Calender</span></a>
         </li>
         <li class="nav-item active">
-            <a class="nav-link" [routerLink]="['/Doctor/Patients']" routerLinkActive="router-link-active">
-                <i class="fa fa-medkit"></i>
+            <a class="nav-link" [routerLink]="['/Doctor/Patients']">
+                <i class="fa fa-fw  fa-medkit"></i>
                 <span>Patients</span></a>
         </li>
         <li class="nav-item active">
@@ -47,46 +26,29 @@
                 <span>Communications</span></a>
         </li>
         <li class="nav-item active">
-            <a class="nav-link" [routerLink]="['/Doctor/Reports']" routerLinkActive="router-link-active">
+            <a class="nav-link" [routerLink]="['/Doctor/Reports']">
                 <i class="fas fa-fw fa-chart-area"></i>
                 <span>Reports</span></a>
         </li>
 
         <li class="nav-item active">
-            <a class="nav-link" [routerLink]="['/Doctor/Settings']" routerLinkActive="router-link-active">
+            <a class="nav-link" [routerLink]="['/Doctor/Settings']">
                 <i class="fas fa-fw fa-cog"></i>
                 <span>Settings</span></a>
         </li>
         <li class="nav-item active">
-            <a class="nav-link" [routerLink]="['/Doctor/Integrations']" routerLinkActive="router-link-active">
+            <a class="nav-link" [routerLink]="['/Doctor/Integrations']">
                 <i class="fas fa-fw fa-cog"></i>
                 <span>Integrations</span></a>
         </li>
-        <!-- <li class="nav-item">
-            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
-              <i class="fas fa-fw fa-folder"></i>
-              <span>Back Office</span>
-            </a>
-            <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-              <div class="bg-white py-2 collapse-inner rounded">
-                
-                <a class="collapse-item" href="#">Inventory</a>
-                <a class="collapse-item" href="#">Expenses</a>
-                <a class="collapse-item" href="#">Activities</a> 
-                
-              </div>
-            </div>
-        </li> -->
-
         <hr class="sidebar-divider">
 
-        <div class="sidebar-heading">
+        <div class="sidebar-heading h">
             wealthylife.com
         </div>
 
-
         <li class="nav-item active ">
-            <a class="nav-link" [routerLink]="['/Doctor/Profile']" routerLinkActive="router-link-active">
+            <a class="nav-link" [routerLink]="['/Doctor/Profile']">
 
                 <i class="fas fa-fw fa-user-alt"></i>
                 <span>Profile</span></a>
@@ -118,53 +80,19 @@
                 <span>HealthFeed</span></a>
         </li>
         <hr class="sidebar-divider d-none d-md-block">
-
-        <!-- Sidebar Toggler (Sidebar) -->
-        <div class="text-center d-none d-md-inline">
-            <button class="rounded-circle border-0" id="sidebarToggle"></button>
-        </div>
-
     </ul>
-
-    <!-- End of Sidebar -->
-
-    <!-- Content Wrapper -->
     <div id="content-wrapper" class="d-flex flex-column">
-
-        <!-- Main Content -->
         <div id="content">
-
-            <!-- Topbar -->
             <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-
-                <!-- Sidebar Toggle (Topbar) -->
                 <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
                     <i class="fa fa-bars"></i>
                 </button>
-
-                <!-- Topbar Search -->
-                <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-                    <div class="input-group">
-                        <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
-                            aria-label="Search" aria-describedby="basic-addon2">
-                        <div class="input-group-append">
-                            <button class="btn btn-primary" type="button">
-                                <i class="fas fa-search fa-sm"></i>
-                            </button>
-                        </div>
-                    </div>
-                </form>
-
-                <!-- Topbar Navbar -->
                 <ul class="navbar-nav ml-auto">
-
-                    <!-- Nav Item - Search Dropdown (Visible Only XS) -->
                     <li class="nav-item dropdown no-arrow d-sm-none">
                         <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fas fa-search fa-fw"></i>
                         </a>
-                        <!-- Dropdown - Messages -->
                         <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
                             aria-labelledby="searchDropdown">
                             <form class="form-inline mr-auto w-100 navbar-search">
@@ -180,16 +108,12 @@
                             </form>
                         </div>
                     </li>
-
-                    <!-- Nav Item - Alerts -->
                     <li class="nav-item dropdown no-arrow mx-1">
                         <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fas fa-bell fa-fw"></i>
-                            <!-- Counter - Alerts -->
                             <span class="badge badge-danger badge-counter">3+</span>
                         </a>
-                        <!-- Dropdown - Alerts -->
                         <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
                             aria-labelledby="alertsDropdown">
                             <h6 class="dropdown-header">
@@ -231,16 +155,12 @@
                             <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
                         </div>
                     </li>
-
-                    <!-- Nav Item - Messages -->
                     <li class="nav-item dropdown no-arrow mx-1">
                         <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fas fa-envelope fa-fw"></i>
-                            <!-- Counter - Messages -->
                             <span class="badge badge-danger badge-counter">7</span>
                         </a>
-                        <!-- Dropdown - Messages -->
                         <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
                             aria-labelledby="messagesDropdown">
                             <h6 class="dropdown-header">
@@ -297,17 +217,13 @@
                             <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
                         </div>
                     </li>
-
                     <div class="topbar-divider d-none d-sm-block"></div>
-
-                    <!-- Nav Item - User Information -->
                     <li class="nav-item dropdown no-arrow">
                         <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <span class="mr-2 d-none d-lg-inline text-gray-600 small">Valerie Luna</span>
                             <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
                         </a>
-                        <!-- Dropdown - User Information -->
                         <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                             aria-labelledby="userDropdown">
                             <a class="dropdown-item" href="#">
@@ -325,44 +241,17 @@
                             </a>
                         </div>
                     </li>
-
                 </ul>
-
             </nav>
-            <!-- End of Topbar -->
-
-            <!-- Begin Page Content -->
-            <div class="container-fluid">
-
+            <div class="container-fluid container-fixed">
                 <router-outlet></router-outlet>
             </div>
-            <!-- /.container-fluid -->
-
         </div>
-        <!-- End of Main Content -->
-
-        <!-- Footer -->
-        <footer class="sticky-footer bg-white">
-            <div class="container my-auto">
-                <div class="copyright text-center my-auto">
-                    <span>Copyright &copy; Your Website 2019</span>
-                </div>
-            </div>
-        </footer>
-        <!-- End of Footer -->
-
     </div>
-    <!-- End of Content Wrapper -->
-
 </div>
-<!-- End of Page Wrapper -->
-
-<!-- Scroll to Top Button-->
 <a class="scroll-to-top rounded" href="#page-top">
     <i class="fas fa-angle-up"></i>
 </a>
-
-<!-- Logout Modal-->
 <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
     aria-hidden="true">
     <div class="modal-dialog" role="document">

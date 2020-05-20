@@ -11,11 +11,11 @@ const routes: Routes = [
   {
     path: '', component: PublicComponent, children: [
       { path: '', loadChildren: () => import('../../modules/home/home.module').then(h => h.HomeModule) },
-      {path:'login',component:LoginComponent},
-      {path:'register',component:RegisterComponent},
-      {path:'doctor_signup',component:DoctorRegisterComponent},
-      {path:'verify_otp',component:VerifyOtpComponent},
-     {path:'doctors',loadChildren:() => import('../../modules/doctors/doctors.module').then(dd => dd.DoctorsModule)},
+      { path: 'login', component: LoginComponent },
+      { path: 'register', component: RegisterComponent },
+      { path: 'doctor_signup', component: DoctorRegisterComponent },
+      { path: 'verify_otp', component: VerifyOtpComponent },
+      { path: 'doctors', loadChildren: () => import('../../modules/doctors/doctors.module').then(dd => dd.DoctorsModule) },
       { path: 'accounts', loadChildren: () => import('../../modules/user-accounts/user-accounts.module').then(us => us.UserAccountsModule) },
       // { path: '', loadChildren: () => import('../../modules/user-drive/user-drive.module').then(ud => ud.UserDriveModule) },
       { path: 'contact', loadChildren: () => import('../../modules/contact-us/contact-us.module').then(c => c.ContactUsModule) },

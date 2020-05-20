@@ -2,48 +2,19 @@
     display: flex;
 }
 
-.input-group {
-    input {
-        font-size: 1.2rem;
-    }
-}
-
-// #accordionSidebar{
-//     width: 20% !important;
-// }
 .sidebar .nav-item .nav-link {
     display: flex;
 }
 
-.sidebar .nav-item .nav-link span {
-    font-size: 1.35rem;
-    // display: flex;
-    color: white;
-    padding: 10px 25px;
-}
-
-.sidebar .nav-item .nav-link i {
-    font-size: 22px;
-    padding: 10px 20px auto;
-    margin-left: 25%;
-}
-
-.sidebar-brand-text {
-    font-size: 1.60rem;
-}
-
-.sidebar-heading {
-    font-size: 1.2rem;
-}
-
 .topbar {
-    height: 6.375rem;
+    height: 4.375rem;
     font-size: 2.2rem;
-    ;
-}
-
-.my-0 {
-    margin-top: 7% !important;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 9999;
 }
 
 .topbar .navbar-search {
@@ -51,26 +22,84 @@
 }
 
 #accordionSidebar {
-    width: 6% !important;
+    position: fixed;
+    z-index: 99999;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    width: 72px !important;
     transition-property: width;
-    transition-duration: 1000ms;
+    transition-duration: 500ms;
     transition-timing-function: linear;
-    transition-delay: 10ms;
+    transition-delay: 1ms;
+    > .h {
+        display: none !important;
+    }
+    > .d {
+        display: block !important;
+    }
+    > li {
+        > a {
+            cursor: pointer !important;
+            > span {
+                font-family: "camphor,Helvetica Neue,Arial,Helvetica,sans-serif";
+                white-space: normal;
+                display: none;
+                padding-top: 0.7rem;
+                font-weight: 500;
+            }
+        }
+    }
 }
 
 #accordionSidebar:hover {
-    // transform: translateX(20%);
-    width: 20% !important;
-    // z-index: 1;
-    // position: relative;
+    width: 16% !important;
+    > .h {
+        display: block !important;
+    }
+    > .d {
+        display: none !important;
+    }
+    > li {
+        > a {
+            > span {
+                font-family: "camphor,Helvetica Neue,Arial,Helvetica,sans-serif";
+                white-space: normal;
+                display: block;
+                padding-top: 0.7rem;
+                font-weight: 500;
+            }
+        }
+    }
 }
 
-// footer.sticky-footer {
-//     padding: 2rem 0;
-//     flex-shrink: 0;
-//     position: fixed;
-//     left: 0;
-//     bottom: 0;
-//     width: 100%;
-//     text-align: center;
-// }
+.sidebar .nav-item {
+    position: relative;
+    font-size: 1rem;
+    padding: 0px 1.5rem;
+}
+
+.sidebar-dark .nav-item.active .nav-link {
+    color: #ffffff !important;
+}
+
+.container-fixed {
+    margin-top: 5.4rem;
+    margin-left: 4.2rem;
+    width: 96%;
+}
+
+.sidebar-dark .nav-item.active .nav-link i {
+    color: #fff;
+    padding-right: 2rem;
+    font-size: 1.3rem;
+    padding-top: 10px;
+}
+
+.fa-bell {
+    font-size: 2rem !important;
+}
+
+.fa-envelope {
+    font-size: 2rem !important;
+}

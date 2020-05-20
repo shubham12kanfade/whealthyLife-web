@@ -1,2897 +1,3165 @@
-
-.pure-g, .g-card, .u-round-corner--large, .c-current-location-gp{
+.pure-g,
+.g-card,
+.u-round-corner--large,
+.c-current-location-gp {
   position: -webkit-sticky !important;
   position: sticky !important;
   top: 0 !important;
   z-index: 1;
 }
-.pure-u-7-24, .c-listing__right{
+.pure-u-7-24,
+.c-listing__right {
   position: -webkit-sticky !important;
   position: sticky !important;
   top: 0 !important;
   height: auto;
 }
-.drop{
-   padding-left: 1px;
-   padding-bottom: 2px;
-   text-align: center;
+.drop {
+  padding-left: 1px;
+  padding-bottom: 2px;
+  text-align: center;
 }
-.test-drop{
- padding-bottom: 32px;
+.test-drop {
+  padding-bottom: 32px;
 }
 
 /*! CSS Used from: Embedded */
 .c-dropdown.open .c-dropdown__list {
-    opacity: 1;
-    max-height: 400px;
-  }
-  .c-dropdown__list {
-    list-style: none;
-    min-width: 180px;
-    width: 140px;
-    left: 0;
-    max-height: 0;
-    overflow: hidden;
-    opacity: 0;
-    top: 32px;
-    -webkit-transition: opacity 0.1s linear, max-height 0.3s linear;
-    transition: opacity 0.1s linear, max-height 0.3s linear;
-    z-index: 3;
-  }
-  .c-dropdown__list__item:not(:last-child) {
-    border-bottom: 1px solid #e0e0e5;
-  }
+  opacity: 1;
+  max-height: 400px;
+}
+.c-dropdown__list {
+  list-style: none;
+  min-width: 180px;
+  width: 140px;
+  left: 0;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  top: 32px;
+  -webkit-transition: opacity 0.1s linear, max-height 0.3s linear;
+  transition: opacity 0.1s linear, max-height 0.3s linear;
+  z-index: 3;
+}
+.c-dropdown__list__item:not(:last-child) {
+  border-bottom: 1px solid #e0e0e5;
+}
 
-  .c-dropdown__list__item,
-  .c-filter__box,
-  .c-sort-dropdown__selected,
-  .u-cushion--rectangle-less {
-    padding: 4px 8px;
-  }
+.c-dropdown__list__item,
+.c-filter__box,
+.c-sort-dropdown__selected,
+.u-cushion--rectangle-less {
+  padding: 4px 8px;
+}
 
 .c-day-heading[_ngcontent-ghj-c47] {
   width: 146px !important;
-
 }
-.c-sort-dropdown[_ngcontent-sip-c47], .u-pos-rel[_ngcontent-sip-c47] {
+.c-sort-dropdown[_ngcontent-sip-c47],
+.u-pos-rel[_ngcontent-sip-c47] {
   position: relative;
   padding: 0px 66px 0px 76px !important;
 }
-.pure-g{
+.pure-g {
   margin-left: 52px !important;
   display: inline-flex !important ;
   width: -webkit-fill-available !important;
 }
-.availabclass{
+.availabclass {
   font-size: 13px !important;
 }
 
 /*! CSS Used from: Embedded */
-div,i,span{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
-.pure-g{letter-spacing:-.31em;*letter-spacing:normal;*word-spacing:-.43em;text-rendering:optimizespeed;-webkit-box-orient:horizontal;-webkit-box-direction:normal;flex-flow:row wrap;display:-webkit-flex;display:-ms-flexbox;-ms-flex-flow:row wrap;-ms-align-content:flex-start;-ms-flex-line-pack:start;align-content:flex-start;}
-.pure-g{word-spacing:-.43em;}
-.pure-u-1-3{display:inline-block;*display:inline;zoom:1;letter-spacing:normal;word-spacing:normal;vertical-align:top;text-rendering:auto;}
-.pure-u-1-3{width:33.3333%;*width:33.3023%;}
-.u-t-center{text-align:center;}
-.u-t-right{text-align:right;}
-.u-smallest-font{font-size:12px;}
-.u-t-capitalize{text-transform:capitalize;}
-.u-grey_3-text{color:#787887;}
-.u-cushion--vertical{padding:16px 0;}
-.u-cushion--small-left{padding-left:4px;}
-.u-spacer--vertical{margin:16px 0;}
-.c-list-card__cta-block>div>div{margin-top:16px;}
-.u-pos-rel{position:relative;}
-*,:after,:before{-webkit-box-sizing:inherit;box-sizing:inherit;}
-[class*=" icon-"]:before,[class^=icon-]:before{font-family:practicon;font-style:normal;font-weight:400;speak:none;display:inline-block;text-decoration:inherit;width:1em;margin-right:.2em;text-align:center;font-variant:normal;text-transform:none;line-height:1em;margin-left:.2em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
-.icon-ic_next_cheveron:before{content:"\e93c";}
-.icon-ic_back_cheveron:before{content:"\e94e";}
-.icon-ic_night:before{content:"\e97c";}
-.icon-ic_evening:before{content:"\e998";}
-.c-day-session{border-bottom:1px solid #f0f0f5;}
-.c-day-session__header{width:14%;padding:6px 10px;letter-spacing:normal;text-transform:capitalize;}
-.c-day-session__header-icon{margin-right:5px;font-size:20px;}
-.c-day-session__header__slots-count{display:none;}
-.c-day-session__body{width:86%;}
-.c-day-session__slot{width:14.285%;padding:4px;letter-spacing:normal;}
-.c-day-session__slot span{width:84px;border-radius:3px;border:1px solid #e0e0e4;padding:5px 0;display:inline-block;text-align:center;color:#2d2d32;cursor:pointer;}
-.c-day-session__slot span:hover{background-color:#f0f0f5;color:#28328c;border:1px solid #28328c;}
-.c-day-session:last-of-type{border-bottom:none;padding-bottom:0;}
-.c-day-slot{-webkit-animation:blink .2s ease-in-out;animation:blink .2s ease-in-out;}
-.c-slots{background-color:#fff;border-top:1px solid #f0f0f5;position:relative;min-height:300px;}
-.c-slots--fadein{overflow-y:auto;-webkit-animation:slotsFadeIn .3s ease-in;animation:slotsFadeIn .3s ease-in;-webkit-animation-fill-mode:forwards;animation-fill-mode:forwards;}
-.sm-hide{display:none;}
-.c-slots-header__next,.c-slots-header__prev{width:14%;padding:0 20px;}
-.c-slots-header__next-btn,.c-slots-header__prev-btn{display:inline-block;height:48px;width:48px;border:1px solid #e0e0e4;border-radius:50%;text-align:center;color:#14bef0;font-size:24px;cursor:pointer;}
-.c-slots-header__prev-btn.disabled{color:#b4b4be;cursor:default;}
-.c-slots-header__next-btn:before,.c-slots-header__prev-btn:before{position:relative;top:50%;-webkit-transform:translateY(-50%);transform:translateY(-50%);vertical-align:top;}
-.c-slots-header__daybar{width:71.4285%;}
-.c-slots-header__slider{display:inline-block;position:absolute;bottom:0;left:0;border-bottom:4px solid #14bef0;-webkit-transition:-webkit-transform .5s;transition:-webkit-transform .5s;transition:transform .5s;transition:transform .5s,-webkit-transform .5s;width:33.3333%;}
-.c-day-heading:first-child.c-day-heading--selected~.c-slots-header__slider{-webkit-transform:translateX(0);transform:translateX(0);}
-.c-day-heading{padding:10px 0 5px;border-bottom:4px solid #f0f0f5;text-align:center;font-size:16px;cursor:pointer;}
-.c-day-heading--selected{color:#14bef0;font-weight:700;-webkit-transition:color .5s,font-weight .5s;transition:color .5s,font-weight .5s;}
-.c-day-heading__slot-count{font-size:12px;color:#787887;font-weight:400;}
-.c-day-heading__slot-count--available{color:#01a400;}
-.c-apt-alert{border-radius:3px;padding:10px 15px;margin:10px;border:1px solid transparent;}
-.c-apt-alert-warning{color:#8a6d3b;background-color:#fcf8e3;border-color:#faebcc;}
+div,
+i,
+span {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+.pure-g {
+  letter-spacing: -0.31em;
+  *letter-spacing: normal;
+  *word-spacing: -0.43em;
+  text-rendering: optimizespeed;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  flex-flow: row wrap;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  -ms-flex-flow: row wrap;
+  -ms-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+}
+.pure-g {
+  word-spacing: -0.43em;
+}
+.pure-u-1-3 {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  letter-spacing: normal;
+  word-spacing: normal;
+  vertical-align: top;
+  text-rendering: auto;
+}
+.pure-u-1-3 {
+  width: 33.3333%;
+  *width: 33.3023%;
+}
+.u-t-center {
+  text-align: center;
+}
+.u-t-right {
+  text-align: right;
+}
+.u-smallest-font {
+  font-size: 12px;
+}
+.u-t-capitalize {
+  text-transform: capitalize;
+}
+.u-grey_3-text {
+  color: #787887;
+}
+.u-cushion--vertical {
+  padding: 16px 0;
+}
+.u-cushion--small-left {
+  padding-left: 4px;
+}
+.u-spacer--vertical {
+  margin: 16px 0;
+}
+.c-list-card__cta-block > div > div {
+  margin-top: 16px;
+}
+.u-pos-rel {
+  position: relative;
+}
+*,
+:after,
+:before {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+[class*=" icon-"]:before,
+[class^="icon-"]:before {
+  font-family: practicon;
+  font-style: normal;
+  font-weight: 400;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: 0.2em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  margin-left: 0.2em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-ic_next_cheveron:before {
+  content: "\e93c";
+}
+.icon-ic_back_cheveron:before {
+  content: "\e94e";
+}
+.icon-ic_night:before {
+  content: "\e97c";
+}
+.icon-ic_evening:before {
+  content: "\e998";
+}
+.c-day-session {
+  border-bottom: 1px solid #f0f0f5;
+}
+.c-day-session__header {
+  width: 14%;
+  padding: 6px 10px;
+  letter-spacing: normal;
+  text-transform: capitalize;
+}
+.c-day-session__header-icon {
+  margin-right: 5px;
+  font-size: 20px;
+}
+.c-day-session__header__slots-count {
+  display: none;
+}
+.c-day-session__body {
+  width: 86%;
+}
+.c-day-session__slot {
+  width: 14.285%;
+  padding: 4px;
+  letter-spacing: normal;
+}
+.c-day-session__slot span {
+  width: 84px;
+  border-radius: 3px;
+  border: 1px solid #e0e0e4;
+  padding: 5px 0;
+  display: inline-block;
+  text-align: center;
+  color: #2d2d32;
+  cursor: pointer;
+}
+.c-day-session__slot span:hover {
+  background-color: #f0f0f5;
+  color: #28328c;
+  border: 1px solid #28328c;
+}
+.c-day-session:last-of-type {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+.c-day-slot {
+  -webkit-animation: blink 0.2s ease-in-out;
+  animation: blink 0.2s ease-in-out;
+}
+.c-slots {
+  background-color: #fff;
+  border-top: 1px solid #f0f0f5;
+  position: relative;
+  min-height: 300px;
+}
+.c-slots--fadein {
+  overflow-y: auto;
+  -webkit-animation: slotsFadeIn 0.3s ease-in;
+  animation: slotsFadeIn 0.3s ease-in;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.sm-hide {
+  display: none;
+}
+.c-slots-header__next,
+.c-slots-header__prev {
+  width: 14%;
+  padding: 0 20px;
+}
+.c-slots-header__next-btn,
+.c-slots-header__prev-btn {
+  display: inline-block;
+  height: 48px;
+  width: 48px;
+  border: 1px solid #e0e0e4;
+  border-radius: 50%;
+  text-align: center;
+  color: #14bef0;
+  font-size: 24px;
+  cursor: pointer;
+}
+.c-slots-header__prev-btn.disabled {
+  color: #b4b4be;
+  cursor: default;
+}
+.c-slots-header__next-btn:before,
+.c-slots-header__prev-btn:before {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  vertical-align: top;
+}
+.c-slots-header__daybar {
+  width: 71.4285%;
+}
+.c-slots-header__slider {
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-bottom: 4px solid #14bef0;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  width: 33.3333%;
+}
+.c-day-heading:first-child.c-day-heading--selected ~ .c-slots-header__slider {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+.c-day-heading {
+  padding: 10px 0 5px;
+  border-bottom: 4px solid #f0f0f5;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+.c-day-heading--selected {
+  color: #14bef0;
+  font-weight: 700;
+  -webkit-transition: color 0.5s, font-weight 0.5s;
+  transition: color 0.5s, font-weight 0.5s;
+}
+.c-day-heading__slot-count {
+  font-size: 12px;
+  color: #787887;
+  font-weight: 400;
+}
+.c-day-heading__slot-count--available {
+  color: #01a400;
+}
+.c-apt-alert {
+  border-radius: 3px;
+  padding: 10px 15px;
+  margin: 10px;
+  border: 1px solid transparent;
+}
+.c-apt-alert-warning {
+  color: #8a6d3b;
+  background-color: #fcf8e3;
+  border-color: #faebcc;
+}
 /*! CSS Used keyframes */
-@-webkit-keyframes blink{0%{opacity:0;}to{opacity:1;}}
-@keyframes blink{0%{opacity:0;}to{opacity:1;}}
-@-webkit-keyframes slotsFadeIn{0%{max-height:0;opacity:0;}to{max-height:1000px;opacity:1;}}
-@keyframes slotsFadeIn{0%{max-height:0;opacity:0;}to{max-height:1000px;opacity:1;}}
-/*! CSS Used fontfaces */
-@font-face{font-family:practicon;src:url(//www.practostatic.com/fonts/v13/practicon.eot);src:url(//www.practostatic.com/fonts/v13/practicon.eot#iefix) format("embedded-opentype"),url(//www.practostatic.com/fonts/v13/practicon.woff2) format("woff2"),url(//www.practostatic.com/fonts/v13/practicon.woff) format("woff"),url(//www.practostatic.com/fonts/v13/practicon.svg) format("svg"),url(//www.practostatic.com/fonts/v13/practicon.ttf) format("truetype");font-weight:400;font-style:normal;}
-
-
-  .c-slots-header__next,
-  .c-slots-header__prev {
-    width: 14%;
-    padding: 0 20px;
+@-webkit-keyframes blink {
+  0% {
+    opacity: 0;
   }
-  .c-slots-header__prev {
-    float: left;
+  to {
+    opacity: 1;
   }
+}
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes slotsFadeIn {
+  0% {
+    max-height: 0;
+    opacity: 0;
+  }
+  to {
+    max-height: 1000px;
+    opacity: 1;
+  }
+}
+@keyframes slotsFadeIn {
+  0% {
+    max-height: 0;
+    opacity: 0;
+  }
+  to {
+    max-height: 1000px;
+    opacity: 1;
+  }
+}
 
-  .c-paginator,
-  .u-t-right {
-    text-align: right;
-    float: right;
-  }
-  .uv2-spacer--xs-top {
-    margin-top: 4px;
-    font-size: 15px !important;
+.c-slots-header__next,
+.c-slots-header__prev {
+  width: 14%;
+  padding: 0 20px;
+}
+.c-slots-header__prev {
+  float: left;
+}
+
+.c-paginator,
+.u-t-right {
+  text-align: right;
+  float: right;
+}
+.uv2-spacer--xs-top {
+  margin-top: 4px;
+  font-size: 15px !important;
 }
 .u-d-inline {
   display: inline;
   font-size: 13px !important;
 }
 
-
 /*! CSS Used from: Embedded */
-div,i,span{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
-*,:after,:before{-webkit-box-sizing:inherit;box-sizing:inherit;}
-button{font-family:Camphor,sans-serif;}
-[class^=icon-]:before{font-family:practicon;font-style:normal;font-weight:400;speak:none;display:inline-block;text-decoration:inherit;width:1em;margin-right:.2em;text-align:center;font-variant:normal;text-transform:none;line-height:1em;margin-left:.2em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
-.icon-ic_next_cheveron:before{content:"\e93c";}
+div,
+i,
+span {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+*,
+:after,
+:before {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+button {
+  font-family: Camphor, sans-serif;
+}
+[class^="icon-"]:before {
+  font-family: practicon;
+  font-style: normal;
+  font-weight: 400;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: 0.2em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  margin-left: 0.2em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-ic_next_cheveron:before {
+  content: "\e93c";
+}
 /*! CSS Used from: Embedded */
-.corona-fab__text-white{color:#fff;}
-.corona-fab__bg-light-blue{background:#14bef0;}
-.corona-fab__bg-ihh-image{background:url(../../../assets/img/dweb_bg.webp);}
-.corona-fab__bold{font-weight:bold;}
-.corona-fab__pos-fix{position:fixed;}
-.corona-fab__margin-v-10{margin:10px 0;}
-.corona-fab__wrapper{font-family:Camphor,Helvetica,Arial,sans-serif;z-index:5;position:relative;box-sizing:content-box;}
-.corona-fab__font--20{font-size:20px;}
-.corona-fab__font--14{font-size:14px;}
-.corona-fab__box-shadow{box-shadow:0 -2px 10px 0 rgba(45,45,50,0.5);}
-.corona-fab__flex-center{display:flex;align-items:center;}
-.corona-fab__button{border:none;outline:none;}
-.corona-fab__dweb{border-top-left-radius:16px;border-top-right-radius:16px;box-shadow:0 -2px 10px 0 rgba(45,45,50,0.07);padding:20px;width:285px;height:124px;bottom:5vh;background-repeat:no-repeat;background-size:100%;box-sizing:content-box;}
-.corona-fab__dweb-header_text{font-size:20px;font-stretch:normal;font-style:normal;line-height:1.2;letter-spacing:normal;width:50%;}
-.corona-fab__dweb-cta{padding:10px;border-radius:4px;cursor:pointer;margin-top:10px;padding-right:0px;display:flex;align-items:center;}
+.corona-fab__text-white {
+  color: #fff;
+}
+.corona-fab__bg-light-blue {
+  background: #14bef0;
+}
+.corona-fab__bg-ihh-image {
+  background: url(../../../assets/img/dweb_bg.webp);
+}
+.corona-fab__bold {
+  font-weight: bold;
+}
+.corona-fab__pos-fix {
+  position: fixed;
+}
+.corona-fab__margin-v-10 {
+  margin: 10px 0;
+}
+.corona-fab__wrapper {
+  font-family: Camphor, Helvetica, Arial, sans-serif;
+  z-index: 5;
+  position: relative;
+  box-sizing: content-box;
+}
+.corona-fab__font--20 {
+  font-size: 20px;
+}
+.corona-fab__font--14 {
+  font-size: 14px;
+}
+.corona-fab__box-shadow {
+  box-shadow: 0 -2px 10px 0 rgba(45, 45, 50, 0.5);
+}
+.corona-fab__flex-center {
+  display: flex;
+  align-items: center;
+}
+.corona-fab__button {
+  border: none;
+  outline: none;
+}
+.corona-fab__dweb {
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  box-shadow: 0 -2px 10px 0 rgba(45, 45, 50, 0.07);
+  padding: 20px;
+  width: 285px;
+  height: 124px;
+  bottom: 5vh;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  box-sizing: content-box;
+}
+.corona-fab__dweb-header_text {
+  font-size: 20px;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  width: 50%;
+}
+.corona-fab__dweb-cta {
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+  padding-right: 0px;
+  display: flex;
+  align-items: center;
+}
 /*! CSS Used fontfaces */
-@font-face{font-family:Camphor;src:url(//www.practostatic.com/fonts/camphor/79a790be-1592-4a60-84d3-d38c6ca1626b.eot#iefix);src:url(//www.practostatic.com/fonts/camphor/79a790be-1592-4a60-84d3-d38c6ca1626b.eot#iefix) format("eot"),url(//www.practostatic.com/fonts/camphor/677b110e-fe2c-4af7-b50b-3e8f00c371ce.woff2) format("woff2"),url(//www.practostatic.com/fonts/camphor/bee62776-4fd4-4e5c-b977-86dfd90c0bce.woff) format("woff"),url(//www.practostatic.com/fonts/camphor/cf1395aa-4f82-4179-9456-63193aef03ac.ttf) format("truetype");font-weight:400;}
-@font-face{font-family:Camphor;src:url(//www.practostatic.com/fonts/camphor/ce0e3457-b63d-4c55-b2b2-4d41170d4578.eot#iefix);src:url(//www.practostatic.com/fonts/camphor/ce0e3457-b63d-4c55-b2b2-4d41170d4578.eot#iefix) format("eot"),url(//www.practostatic.com/fonts/camphor/c96be38e-ea64-418f-ae54-e757ed92b069.woff2) format("woff2"),url(//www.practostatic.com/fonts/camphor/d8f1df09-02f2-46a7-9876-5b2e79046f31.woff) format("woff"),url(//www.practostatic.com/fonts/camphor/d26b7b5b-4f11-4aca-9273-f050282fbf28.ttf) format("truetype");font-weight:700;}
-@font-face{font-family:practicon;src:url(//www.practostatic.com/fonts/v13/practicon.eot);src:url(//www.practostatic.com/fonts/v13/practicon.eot#iefix) format("embedded-opentype"),url(//www.practostatic.com/fonts/v13/practicon.woff2) format("woff2"),url(//www.practostatic.com/fonts/v13/practicon.woff) format("woff"),url(//www.practostatic.com/fonts/v13/practicon.svg) format("svg"),url(//www.practostatic.com/fonts/v13/practicon.ttf) format("truetype");font-weight:400;font-style:normal;}
 
-  /*! CSS Used from: Embedded */
-  div,
-  i,
-  span {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
+/*! CSS Used from: Embedded */
+div,
+i,
+span {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+.pure-g {
+  letter-spacing: -0.31em;
+  *letter-spacing: normal;
+  *word-spacing: -0.43em;
+  text-rendering: optimizespeed;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  flex-flow: row wrap;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  -ms-flex-flow: row wrap;
+  -ms-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+}
+.pure-g {
+  word-spacing: -0.43em;
+}
+.pure-u-1-3 {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  letter-spacing: normal;
+  word-spacing: normal;
+  vertical-align: top;
+  text-rendering: auto;
+}
+.pure-u-1-3 {
+  width: 33.3333%;
+  *width: 33.3023%;
+}
+.u-t-center {
+  text-align: center;
+}
+.u-t-right {
+  text-align: right;
+}
+.u-smallest-font {
+  font-size: 12px;
+}
+.u-bold {
+  font-weight: 700 !important;
+}
+.u-t-uppercase {
+  text-transform: uppercase;
+}
+.u-t-capitalize {
+  text-transform: capitalize;
+}
+.u-grey_3-text {
+  color: #787887;
+}
+.u-spacer--vertical {
+  margin: 16px 0;
+}
+.c-list-card__cta-block > div > div {
+  margin-top: 16px;
+}
+.u-spacer--bottom {
+  margin-bottom: 16px;
+}
+.u-spacer--medium-top {
+  margin-top: 28px;
+}
+.u-spacer--medium-bottom {
+  margin-bottom: 28px;
+}
+.u-light-grey {
+  color: #b4b4be;
+}
+.u-pos-rel {
+  position: relative;
+}
+.u-valign--middle {
+  vertical-align: middle;
+}
+*,
+:after,
+:before {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+button {
+  font-family: Camphor, sans-serif;
+}
+[class^="icon-"]:before {
+  font-family: practicon;
+  font-style: normal;
+  font-weight: 400;
+  // speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: 0.2em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  margin-left: 0.2em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-ic_next_cheveron:before {
+  content: "\e93c";
+}
+.icon-ic_back_cheveron:before {
+  content: "\e94e";
+}
+.c-apt-btn--dark-fitY,
+.c-apt-btn--light {
+  border-radius: 2px;
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+  height: 40px;
+  font-size: 14px;
+  font-weight: 700;
+}
+.c-apt-btn--dark-fitY {
+  color: #fff;
+  padding: 4px 0;
+  width: 100%;
+  background-color: #14bef0;
+  border: 1px solid #14bef0;
+}
+.c-apt-btn--dark-fitY {
+  height: auto;
+}
+.c-apt-btn--dark-fitY:focus,
+.c-apt-btn--dark-fitY:hover {
+  background-color: #0eaedc;
+  border: 1px solid #0eaedc;
+}
+.c-apt-btn--light {
+  color: #14bef0;
+  padding: 4px 0;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #14bef0;
+}
+.c-apt-btn--light:focus,
+.c-apt-btn--light:hover {
+  color: #fff;
+  background-color: #0eaedc;
+}
+.c-day-slot {
+  -webkit-animation: blink 0.2s ease-in-out;
+  animation: blink 0.2s ease-in-out;
+}
+.c-slots {
+  background-color: #fff;
+  border-top: 1px solid #f0f0f5;
+  position: relative;
+  min-height: 300px;
+}
+.c-slots--fadein {
+  overflow-y: auto;
+  -webkit-animation: slotsFadeIn 0.3s ease-in;
+  animation: slotsFadeIn 0.3s ease-in;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.sm-hide {
+  display: none;
+}
+.c-slots-header__next,
+.c-slots-header__prev {
+  width: 14%;
+  padding: 0 20px;
+}
+.c-slots-header__next-btn,
+.c-slots-header__prev-btn {
+  display: inline-block;
+  height: 48px;
+  width: 48px;
+  border: 1px solid #e0e0e4;
+  border-radius: 50%;
+  text-align: center;
+  color: #14bef0;
+  font-size: 24px;
+  cursor: pointer;
+}
+.c-slots-header__prev-btn.disabled {
+  color: #b4b4be;
+  cursor: default;
+}
+.c-slots-header__next-btn:before,
+.c-slots-header__prev-btn:before {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  vertical-align: top;
+}
+.c-slots-header__daybar {
+  width: 71.4285%;
+}
+.c-slots-header__slider {
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-bottom: 4px solid #14bef0;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  width: 33.3333%;
+}
+.c-day-heading:first-child.c-day-heading--selected ~ .c-slots-header__slider {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+.c-day-heading {
+  padding: 10px 0 5px;
+  border-bottom: 4px solid #f0f0f5;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+.c-day-heading--selected {
+  color: #14bef0;
+  font-weight: 700;
+  -webkit-transition: color 0.5s, font-weight 0.5s;
+  transition: color 0.5s, font-weight 0.5s;
+}
+.c-day-heading__slot-count {
+  font-size: 12px;
+  color: #787887;
+  font-weight: 400;
+}
+.c-day-heading__slot-count--available {
+  color: #01a400;
+}
+.c-apt-alert {
+  border-radius: 3px;
+  padding: 10px 15px;
+  margin: 10px;
+  border: 1px solid transparent;
+}
+.c-apt-alert-warning {
+  color: #8a6d3b;
+  background-color: #fcf8e3;
+  border-color: #faebcc;
+}
+/*! CSS Used from: https://www.WealthyLifestatic.com/web-assets/stylesheets/omni.8ddd7a6ea145.css */
+.u-bold {
+  font-weight: 700;
+}
+/*! CSS Used keyframes */
+@-webkit-keyframes blink {
+  0% {
+    opacity: 0;
   }
-  .pure-g {
-    letter-spacing: -0.31em;
-    *letter-spacing: normal;
-    *word-spacing: -0.43em;
-    text-rendering: optimizespeed;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    flex-flow: row wrap;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    -ms-flex-flow: row wrap;
-    -ms-align-content: flex-start;
-    -ms-flex-line-pack: start;
-    align-content: flex-start;
+  to {
+    opacity: 1;
   }
-  .pure-g {
-    word-spacing: -0.43em;
+}
+@keyframes blink {
+  0% {
+    opacity: 0;
   }
-  .pure-u-1-3 {
-    display: inline-block;
-    *display: inline;
-    zoom: 1;
-    letter-spacing: normal;
-    word-spacing: normal;
-    vertical-align: top;
-    text-rendering: auto;
+  to {
+    opacity: 1;
   }
-  .pure-u-1-3 {
-    width: 33.3333%;
-    *width: 33.3023%;
+}
+@-webkit-keyframes slotsFadeIn {
+  0% {
+    max-height: 0;
+    opacity: 0;
   }
-  .u-t-center {
-    text-align: center;
+  to {
+    max-height: 1000px;
+    opacity: 1;
   }
-  .u-t-right {
-    text-align: right;
+}
+@keyframes slotsFadeIn {
+  0% {
+    max-height: 0;
+    opacity: 0;
   }
-  .u-smallest-font {
-    font-size: 12px;
+  to {
+    max-height: 1000px;
+    opacity: 1;
   }
-  .u-bold {
-    font-weight: 700 !important;
+}
+/*! CSS Used fontfaces */
+// @font-face{font-family:Camphor;src:url(//www.WealthyLifestatic.com/fonts/camphor/79a790be-1592-4a60-84d3-d38c6ca1626b.eot#iefix);src:url(//www.WealthyLifestatic.com/fonts/camphor/79a790be-1592-4a60-84d3-d38c6ca1626b.eot#iefix) format("eot"),url(//www.WealthyLifestatic.com/fonts/camphor/677b110e-fe2c-4af7-b50b-3e8f00c371ce.woff2) format("woff2"),url(//www.WealthyLifestatic.com/fonts/camphor/bee62776-4fd4-4e5c-b977-86dfd90c0bce.woff) format("woff"),url(//www.WealthyLifestatic.com/fonts/camphor/cf1395aa-4f82-4179-9456-63193aef03ac.ttf) format("truetype");font-weight:400;}
+// @font-face{font-family:Camphor;src:url(//www.WealthyLifestatic.com/fonts/camphor/ce0e3457-b63d-4c55-b2b2-4d41170d4578.eot#iefix);src:url(//www.WealthyLifestatic.com/fonts/camphor/ce0e3457-b63d-4c55-b2b2-4d41170d4578.eot#iefix) format("eot"),url(//www.WealthyLifestatic.com/fonts/camphor/c96be38e-ea64-418f-ae54-e757ed92b069.woff2) format("woff2"),url(//www.WealthyLifestatic.com/fonts/camphor/d8f1df09-02f2-46a7-9876-5b2e79046f31.woff) format("woff"),url(//www.WealthyLifestatic.com/fonts/camphor/d26b7b5b-4f11-4aca-9273-f050282fbf28.ttf) format("truetype");font-weight:700;}
+// @font-face{font-family:practicon;src:url(//www.WealthyLifestatic.com/fonts/v13/practicon.eot);src:url(//www.WealthyLifestatic.com/fonts/v13/practicon.eot#iefix) format("embedded-opentype"),url(//www.WealthyLifestatic.com/fonts/v13/practicon.woff2) format("woff2"),url(//www.WealthyLifestatic.com/fonts/v13/practicon.woff) format("woff"),url(//www.WealthyLifestatic.com/fonts/v13/practicon.svg) format("svg"),url(//www.WealthyLifestatic.com/fonts/v13/practicon.ttf) format("truetype");font-weight:400;font-style:normal;}
+
+a,
+div,
+footer,
+h2,
+h3,
+h4,
+header,
+i,
+img,
+label,
+li,
+p,
+span,
+ul {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+footer,
+header {
+  display: block;
+}
+ul {
+  list-style: none;
+}
+.pure-g {
+  letter-spacing: -0.31em;
+  *letter-spacing: normal;
+  *word-spacing: -0.43em;
+  text-rendering: optimizespeed;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  flex-flow: row wrap;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  -ms-flex-flow: row wrap;
+  -ms-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+}
+.pure-g {
+  word-spacing: -0.43em;
+}
+.pure-u-1,
+.pure-u-1-1,
+.pure-u-1-2,
+.pure-u-4-24,
+.pure-u-6-24,
+.pure-u-7-24,
+.pure-u-10-24,
+.pure-u-14-24,
+.pure-u-17-24,
+.pure-u-18-24 {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  letter-spacing: normal;
+  word-spacing: normal;
+  vertical-align: top;
+  text-rendering: auto;
+}
+.pure-u-4-24 {
+  width: 16.6667%;
+  *width: 16.6357%;
+}
+.pure-u-6-24 {
+  width: 25%;
+  *width: 24.969%;
+}
+.pure-u-7-24 {
+  width: 29.1667%;
+  *width: 29.1357%;
+}
+.pure-u-10-24 {
+  width: 41.6667%;
+  *width: 41.6357%;
+}
+.pure-u-1-2 {
+  width: 50%;
+  *width: 49.969%;
+}
+.pure-u-14-24 {
+  width: 58.3333%;
+  *width: 58.3023%;
+}
+.pure-u-17-24 {
+  width: 70.8333%;
+  *width: 70.8023%;
+}
+.pure-u-18-24 {
+  width: 75%;
+  *width: 74.969%;
+}
+.pure-u-1,
+.pure-u-1-1 {
+  width: 100%;
+}
+.c-btn--light-medium,
+.c-guided-filter,
+.u-t-center {
+  text-align: center;
+}
+.c-paginator,
+.u-t-right {
+  text-align: right;
+}
+.c-sort,
+.u-f-right {
+  float: right;
+}
+.c-card__left,
+.u-f-left {
+  float: left;
+}
+.c-btn--dark-md,
+.c-btn--dark-medium,
+.c-btn--light-medium,
+.c-btn--link,
+.listing-doctor-card .view-profile,
+.u-base-font {
+  font-size: 14px;
+}
+.u-title-font {
+  font-size: 18px;
+}
+.listing-doctor-card .doctor-name,
+.u-jumbo-font {
+  font-size: 20px;
+}
+.u-img-thumbnail {
+  width: 32px;
+  height: 32px;
+}
+.listing-doctor-card .view-profile,
+.u-subtext-font {
+  font-size: 14px;
+}
+.u-smallest-font {
+  font-size: 12px;
+}
+.c-card__icon,
+.u-large-font {
+  font-size: 16px;
+}
+.c-card-reach--plus__sponsored,
+.u-xx-small-font {
+  font-size: 11px;
+}
+.u-xx-large-font {
+  font-size: 24px;
+}
+.c-btn--dark-md,
+.c-btn--dark-medium,
+.c-btn--light-medium,
+.u-bold {
+  font-weight: 700 !important;
+}
+.u-t-capitalize {
+  text-transform: capitalize;
+}
+.u-primary-text {
+  color: #14bef0;
+}
+.u-normal-text {
+  color: #414146;
+}
+.u-grey_3-text {
+  color: #787887;
+}
+.u-green-text {
+  color: #01a400;
+}
+.u-purple-text {
+  color: #8a45e6;
+}
+.u-white-background {
+  background-color: #fff;
+}
+.c-dropdown__list,
+.listing-doctor-card .prime-badge {
+  position: absolute;
+}
+.c-accordion__group,
+.u-cushion {
+  padding: 16px;
+}
+.c-guided-filter {
+  padding: 8px;
+}
+.u-cushion--vertical {
+  padding: 16px 0;
+}
+.c-filter__top__wrapper {
+  padding: 8px 0;
+}
+.c-btn--link,
+.listing-doctor-card .view-profile {
+  padding: 0 16px;
+}
+.c-dropdown__list__item,
+.c-filter__box,
+.c-sort-dropdown__selected {
+  padding: 4px 8px;
+}
+.u-cushion--top-less {
+  padding-top: 8px;
+}
+.u-cushion--right {
+  padding-right: 16px;
+}
+.c-grid-list--left,
+.c-grid-list--right,
+.u-cushion--bottom-less {
+  padding-bottom: 8px;
+}
+.c-filter__box {
+  padding-left: 8px;
+}
+.u-cushion--medium-top {
+  padding-top: 28px;
+}
+.u-cushion--large-vertical {
+  padding: 48px 0;
+}
+.c-dropdown__list {
+  padding: 0;
+}
+.u-spacer--vertical {
+  margin: 16px 0;
+}
+.listing-doctor-card .view-profile {
+  margin-top: 16px;
+}
+.c-card-info + .c-card-info {
+  margin-top: 8px;
+}
+.u-spacer--top-thin {
+  margin-top: 4px;
+}
+.c-filter__box,
+.u-spacer--right {
+  margin-right: 16px;
+}
+.u-spacer--right-less {
+  margin-right: 8px;
+}
+.c-card__icon,
+.u-spacer--right-thin {
+  margin-right: 4px;
+}
+.u-spacer--bottom {
+  margin-bottom: 16px;
+}
+.u-spacer--bottom-less {
+  margin-bottom: 8px;
+}
+.u-spacer--bottom-thin {
+  margin-bottom: 4px;
+}
+.u-spacer--left {
+  margin-left: 16px;
+}
+.u-spacer--left-less {
+  margin-left: 8px;
+}
+.c-paginator li:not(:first-child),
+.u-spacer--left-thin {
+  margin-left: 4px;
+}
+.u-spacer--small-horizontal {
+  margin: 0 2px;
+}
+.c-filter__select__text,
+.u-spacer--small-top {
+  margin-top: 2px;
+}
+.u-spacer--medium-vertical {
+  margin: 28px 0;
+}
+.u-spacer--medium-bottom {
+  margin-bottom: 28px;
+}
+.u-spacer--thin {
+  margin: 4px;
+}
+.u-hide {
+  display: none !important;
+}
+.u-d-block {
+  display: block;
+}
+.c-accordion__heading__text,
+.c-breadcrumb__title,
+.c-btn--light-medium,
+.c-card__left,
+.c-filter__box,
+.c-footer__column,
+.c-paginator li,
+.c-sort,
+.c-sort-dropdown,
+.c-sort-dropdown__selected,
+.u-d-inlineblock {
+  display: inline-block;
+}
+.u-d-inline {
+  display: inline;
+}
+.listing-doctor-card,
+.listing-doctor-card .appointment-section,
+.u-d-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.listing-doctor-card {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.listing-doctor-card .appointment-section {
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+.listing-doctor-card .appointment-section {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.c-sort-dropdown,
+.u-pos-rel {
+  position: relative;
+}
+.u-clearfix {
+  *zoom: 1;
+}
+.u-clearfix:after {
+  clear: both;
+}
+.u-clearfix:after,
+.u-clearfix:before {
+  content: " ";
+  display: table;
+}
+.c-breadcrumb__title,
+.c-card__locality,
+.u-t-ellipsis {
+  width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.u-dot-separator {
+  border-radius: 50%;
+  border: 2px solid #7f7f7f;
+  display: inline-block;
+  margin: 2px 3px;
+}
+.u-t-grey5 {
+  color: #2d2d32;
+}
+.u-full-height {
+  height: 100%;
+}
+.u-t-underline,
+a:hover {
+  text-decoration: underline;
+}
+.u-t-hover-underline:hover {
+  text-decoration: underline;
+}
+.c-dropdown__list,
+.c-list-card {
+  -webkit-box-shadow: 0 1px 2px 1px hsla(0, 0%, 42.7%, 0.14);
+  box-shadow: 0 1px 2px 1px hsla(0, 0%, 42.7%, 0.14);
+}
+.c-paginator li.active a,
+.c-paginator li:hover a,
+.u-round-corner {
+  border-radius: 3px;
+}
+.c-btn--dark-md,
+.c-btn--dark-medium,
+.c-btn--light-medium,
+.c-dropdown__list,
+.c-filter__box,
+.c-filter__select--checkbox,
+.c-sort-dropdown__selected {
+  border-radius: 2px;
+}
+.u-round-corner--large {
+  border-radius: 4px;
+}
+.c-dropdown__list,
+.c-list-card:hover {
+  border: 1px solid #cacad3;
+}
+.c-list-card {
+  border: 1px solid #fff;
+}
+.c-btn--dark-md,
+.c-btn--dark-medium,
+.c-btn--light-medium,
+.c-guided-filter {
+  border: 1px solid #14bef0;
+}
+.c-accordion__group,
+.c-accordion__group:first-child,
+.u-border-general--top {
+  border-top: 1px solid #f0f0f5;
+}
+.u-border-general--bottom {
+  border-bottom: 1px solid #e8e8f0;
+}
+.u-border-general-dashed-top--gray-10 {
+  border-top: 1px dashed #e8e8f0;
+}
+.u-light-border {
+  border: 1px solid #dcdcdc;
+}
+.c-btn--light-medium,
+.c-dropdown__list,
+.o-card {
+  background-color: #fff;
+}
+.c-btn--dark-md,
+.c-btn--dark-medium,
+.c-btn--light-medium:active,
+.c-paginator li.active a,
+.c-paginator li:hover a {
+  background-color: #14bef0;
+}
+.c-filter,
+.c-filter__bottom,
+.u-fill--dark-blue {
+  background-color: #28328c;
+}
+.c-guided-filter {
+  background-color: #e8faff;
+}
+.c-dropdown__list__item:hover {
+  background-color: #f0f0f5;
+}
+.c-dropdown__list {
+  color: #414146;
+}
+.c-btn--dark-md,
+.c-btn--dark-medium,
+.c-filter__box,
+.c-paginator li.active a,
+.c-paginator li:hover a,
+.u-color--white {
+  color: #fff;
+}
+.c-btn--light-medium,
+.c-btn--link,
+.listing-doctor-card .view-profile,
+.u-color--primary {
+  color: #14bef0;
+}
+.c-card-reach--plus__sponsored {
+  color: #787887;
+}
+.u-color--green {
+  color: #01a400;
+}
+.u-color--lavender-gray {
+  color: #b8bbd9;
+}
+.c-guided-filter {
+  color: #14bef0;
+}
+.c-btn--dark-medium,
+.c-btn--light-medium,
+.c-filter__box,
+.u-valign--middle {
+  vertical-align: middle;
+}
+.c-footer__column,
+.u-valign--top {
+  vertical-align: top;
+  vertical-align: -webkit-baseline-top;
+}
+.u-valign--small {
+  vertical-align: -1px;
+}
+.c-dropdown__list,
+.c-paginator {
+  margin: 0;
+}
+.u-no-margin--top {
+  margin-top: 0;
+}
+.c-btn--dark-md,
+.c-btn--dark-medium,
+.c-btn--light-medium,
+.c-btn--link,
+.c-card-reach--plus__sponsored,
+.c-dropdown,
+.c-dropdown__list,
+.c-guided-filter,
+.c-paginator li,
+.listing-doctor-card .view-profile,
+.u-c-pointer {
+  cursor: pointer;
+}
+.c-paginator li.active a:hover,
+.c-paginator li:hover a:hover {
+  text-decoration: none;
+}
+.u-no-appearance {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+}
+.c-filter__select--radio,
+.u-circle {
+  border-radius: 50%;
+}
+.u-transition--transform {
+  -webkit-transition: transform 0.2s linear;
+  -webkit-transition: -webkit-transform 0.2s linear;
+  transition: -webkit-transform 0.2s linear;
+  transition: transform 0.2s linear;
+  transition: transform 0.2s linear, -webkit-transform 0.2s linear;
+}
+.u-border--thick {
+  border-width: 2px;
+}
+.u-pos-has {
+  position: relative;
+}
+.u-pulse {
+  margin: 4px 20px 0 4px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #14bef0;
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 0 rgba(40, 190, 240, 0.4);
+  box-shadow: 0 0 0 rgba(40, 190, 240, 0.4);
+  -webkit-animation: pulse 1.2s infinite;
+  animation: pulse 1.2s infinite;
+  display: inline-block;
+}
+.u-pulse-white {
+  background: #fff;
+  -webkit-animation: pulse-white 1.2s infinite;
+  animation: pulse-white 1.2s infinite;
+}
+.u-white-bg {
+  background: #fff;
+}
+.uv2-spacer--xs-top {
+  margin-top: 4px;
+}
+.uv2-spacer--xs-bottom {
+  margin-bottom: 4px;
+}
+.uv2-spacer--sm-vt {
+  margin: 8px 0;
+}
+.uv2-spacer--sm-top {
+  margin-top: 8px;
+}
+.uv2-spacer--sm-bottom {
+  margin-bottom: 8px;
+}
+.uv2-spacer--md-top {
+  margin-top: 12px;
+}
+.uv2-spacer--md-bottom {
+  margin-bottom: 12px;
+}
+.uv2-spacer--md-right {
+  margin-right: 12px;
+}
+.listing-doctor-card .appointment-section {
+  margin: 0 16px;
+}
+.uv2-spacer--lg-top {
+  margin-top: 16px;
+}
+.uv2-spacer--jumbo-xl-hz {
+  margin: 0 60px;
+}
+.uv2-cushion--sm-hz {
+  padding: 0 8px;
+}
+.listing-doctor-card .info-section {
+  padding: 0 16px;
+}
+.uv2-cushion--lg-vt {
+  padding: 16px 0;
+}
+.uv2-cushion--lg-top {
+  padding-top: 16px;
+}
+.uv2-cushion--lg-bottom {
+  padding-bottom: 16px;
+}
+.uv2-no-shadow {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+*,
+:after,
+:before {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+a {
+  color: #414146;
+}
+a {
+  text-decoration: none;
+  outline: none;
+}
+h2,
+h3,
+h4 {
+  margin: 0;
+  font-weight: 400;
+}
+input {
+  outline: none;
+  border: none;
+}
+button,
+input {
+  font-family: Camphor, sans-serif;
+}
+[class*=" icon-"]:before,
+[class^="icon-"]:before {
+  font-family: practicon;
+  font-style: normal;
+  font-weight: 400;
+  // speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: 0.2em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  margin-left: 0.2em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-ic_like_filled:before {
+  content: "\e8bc";
+}
+.icon-ic_call_filled:before {
+  content: "\e8e7";
+}
+.icon-ic_phone:before {
+  content: "\e8ee";
+}
+.icon-ic_instant_filled:before {
+  content: "\e90b";
+}
+.icon-ic_calendar:before {
+  content: "\e918";
+}
+.icon-ic_cart:before {
+  content: "\e920";
+}
+.icon-ic_chat:before {
+  content: "\e921";
+}
+.icon-ic_clinic:before {
+  content: "\e922";
+}
+.icon-ic_currency:before {
+  content: "\e924";
+}
+.icon-ic_star_solid:before {
+  content: "\e934";
+}
+.icon-ic_star_half:before {
+  content: "\e935";
+}
+.icon-ic_search_system:before {
+  content: "\e938";
+}
+.icon-ic_next_cheveron:before {
+  content: "\e93c";
+}
+.icon-ic_location_system:before {
+  content: "\e93e";
+}
+.icon-ic_filter_system:before {
+  content: "\e943";
+}
+.icon-ic_drawer_system:before {
+  content: "\e946";
+}
+.icon-ic_down_cheveron:before {
+  content: "\e947";
+}
+.icon-ic_cross:before {
+  content: "\e94c";
+}
+.icon-ic_time:before {
+  content: "\e95d";
+}
+.icon-ic_search:before {
+  content: "\e966";
+}
+.icon-ic_records_3:before {
+  content: "\e96f";
+}
+.icon-ic_read:before {
+  content: "\e971";
+}
+.icon-ic_message:before {
+  content: "\e980";
+}
+.icon-ic_location:before {
+  content: "\e984";
+}
+.icon-ic_like:before {
+  content: "\e986";
+}
+.icon-ic_info:before {
+  content: "\e98b";
+}
+.icon-ic_dropdown:before {
+  content: "\e99c";
+}
+.icon-ic_lab_home:before {
+  content: "\e9b4";
+}
+.icon-ic_gps_system:before {
+  content: "\e9ba";
+}
+.icon-ic_medicine_info:before {
+  content: "\e9d6";
+}
+.icon-ic_done_badge:before {
+  content: "\e800";
+}
+.u-bold[class*=" icon-ic_"]:before {
+  font-weight: 700;
+}
+.icon--no-margin:before {
+  margin: 0;
+}
+.icon--top-push {
+  top: 2px;
+}
+.o-page {
+  min-width: 1200px;
+}
+.c-filter__top__wrapper,
+.c-omni__placeholder__wrapper,
+.o-page-container {
+  width: 1180px;
+  margin: auto;
+}
+.o-card {
+  width: 100%;
+}
+.c-guided-filter,
+.o-card--separated {
+  margin-top: 0;
+}
+.c-btn--dark-md,
+.c-btn--dark-medium,
+.c-btn--light-medium {
+  height: 30px;
+  width: 100%;
+  outline: none;
+  padding: 4px 0 8px;
+}
+.c-btn--dark-md:hover,
+.c-btn--dark-medium:hover {
+  background-color: #14addb;
+  border: 1px solid #14addb;
+}
+.c-btn--dark-medium {
+  width: 212px;
+  height: 40px;
+  padding: 4px 0;
+}
+.c-btn--dark-md {
+  padding: 12px 0;
+  height: unset;
+}
+.c-btn--white-small {
+  background: #fff;
+  height: 40px;
+  width: auto;
+  padding: 4px;
+  margin: 4px 2px;
+  font-size: 14px;
+}
+.c-btn--white-small:hover {
+  background-color: #14addb;
+  border-color: #14addb;
+  color: #fff;
+  cursor: pointer;
+}
+.c-btn--light-medium {
+  height: 30px;
+  border-radius: 3px;
+}
+.c-btn--light-medium:hover {
+  color: #fff;
+  background-color: #14bef0;
+}
+.c-btn--light-medium {
+  width: 212px;
+  height: 40px;
+  padding: 4px 0;
+}
+.c-btn--light-medium:hover .u-pulse {
+  background: #fff;
+  -webkit-animation: pulse-white 1.2s infinite !important;
+  animation: pulse-white 1.2s infinite !important;
+}
+.c-btn--dark-md:active,
+.c-btn--dark-medium:active,
+.c-btn--light-medium:active {
+  background-color: #168db3;
+  border: 1px solid #168db3;
+}
+.c-btn--link,
+.listing-doctor-card .view-profile {
+  border: none;
+  outline: none;
+  background: transparent;
+}
+.o-media {
+  display: table;
+}
+.o-media,
+.o-media__body {
+  overflow: hidden;
+  zoom: 1;
+}
+.o-media__body {
+  width: 10000px;
+}
+.o-media__body {
+  display: table-cell;
+  vertical-align: top;
+}
+.o-media--middle {
+  vertical-align: middle;
+}
+.o-media__object.img-thumbnail {
+  max-width: none;
+}
+.o-label--default,
+.o-label--success {
+  display: inline-block;
+  padding: 4px 8px;
+  font-size: 12px;
+  line-height: 1;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25em;
+  max-width: 100%;
+}
+.o-label--default {
+  background: #f0f0f5;
+}
+.o-label--success {
+  font-size: inherit;
+  background: #00a500;
+  color: #fff;
+}
+.c-navbar__container {
+  height: 74px;
+  position: relative;
+  background: #fff;
+}
+.c-navbar__placeholder {
+  position: absolute;
+  width: 100%;
+  top: 0;
+}
+@media (max-width: 800px) {
+  .c-navbar__container {
+    height: 60px;
   }
-  .u-t-uppercase {
-    text-transform: uppercase;
-  }
-  .u-t-capitalize {
-    text-transform: capitalize;
-  }
-  .u-grey_3-text {
-    color: #787887;
-  }
-  .u-spacer--vertical {
-    margin: 16px 0;
-  }
-  .c-list-card__cta-block > div > div {
-    margin-top: 16px;
-  }
-  .u-spacer--bottom {
-    margin-bottom: 16px;
-  }
-  .u-spacer--medium-top {
-    margin-top: 28px;
-  }
-  .u-spacer--medium-bottom {
-    margin-bottom: 28px;
-  }
-  .u-light-grey {
-    color: #b4b4be;
-  }
-  .u-pos-rel {
-    position: relative;
-  }
-  .u-valign--middle {
-    vertical-align: middle;
-  }
-  *,
-  :after,
-  :before {
-    -webkit-box-sizing: inherit;
-    box-sizing: inherit;
-  }
-  button {
-    font-family: Camphor, sans-serif;
-  }
-  [class^="icon-"]:before {
-    font-family: practicon;
-    font-style: normal;
-    font-weight: 400;
-    // speak: none;
-    display: inline-block;
-    text-decoration: inherit;
-    width: 1em;
-    margin-right: 0.2em;
-    text-align: center;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1em;
-    margin-left: 0.2em;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  .icon-ic_next_cheveron:before {
-    content: "\e93c";
-  }
-  .icon-ic_back_cheveron:before {
-    content: "\e94e";
-  }
-  .c-apt-btn--dark-fitY,
-  .c-apt-btn--light {
-    border-radius: 2px;
-    cursor: pointer;
-    outline: none;
-    text-decoration: none;
-    height: 40px;
-    font-size: 14px;
-    font-weight: 700;
-  }
-  .c-apt-btn--dark-fitY {
-    color: #fff;
-    padding: 4px 0;
-    width: 100%;
-    background-color: #14bef0;
-    border: 1px solid #14bef0;
-  }
-  .c-apt-btn--dark-fitY {
-    height: auto;
-  }
-  .c-apt-btn--dark-fitY:focus,
-  .c-apt-btn--dark-fitY:hover {
-    background-color: #0eaedc;
-    border: 1px solid #0eaedc;
-  }
-  .c-apt-btn--light {
-    color: #14bef0;
-    padding: 4px 0;
-    width: 100%;
-    background-color: #fff;
-    border: 1px solid #14bef0;
-  }
-  .c-apt-btn--light:focus,
-  .c-apt-btn--light:hover {
-    color: #fff;
-    background-color: #0eaedc;
-  }
-  .c-day-slot {
-    -webkit-animation: blink 0.2s ease-in-out;
-    animation: blink 0.2s ease-in-out;
-  }
-  .c-slots {
-    background-color: #fff;
-    border-top: 1px solid #f0f0f5;
-    position: relative;
-    min-height: 300px;
-  }
-  .c-slots--fadein {
-    overflow-y: auto;
-    -webkit-animation: slotsFadeIn 0.3s ease-in;
-    animation: slotsFadeIn 0.3s ease-in;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-  }
-  .sm-hide {
+}
+.c-omni__placeholder {
+  background: #fff;
+  position: relative;
+}
+.c-omni__placeholder__wrapper {
+  padding-top: 15px;
+  padding-bottom: 12px;
+}
+.c-list-card {
+  min-width: 760px;
+}
+.c-card__icon {
+  vertical-align: -1px;
+}
+.c-card__locality {
+  max-width: 210px;
+}
+.c-card-info__item {
+  max-width: 440px;
+}
+.c-grid-list--left {
+  padding-right: 20px;
+}
+.c-grid-list--right {
+  padding-left: 20px;
+}
+.c-grid-list__item {
+  max-width: 120px;
+  width: auto;
+}
+.g-card {
+  background-color: #fff;
+  padding: 20px;
+}
+.c-listing__right {
+  padding-left: 20px;
+}
+.c-filter {
+  width: 100%;
+}
+.c-filter__top__wrapper {
+  border-bottom: 1px solid #434ea2;
+}
+.c-filter__box {
+  background-color: #434ea2;
+  min-width: 160px;
+}
+.c-filter__bottom {
+  position: absolute;
+  max-height: 0;
+  overflow: hidden;
+  z-index: 2;
+  width: 100%;
+  -webkit-transition: max-height 0.2s ease;
+  transition: max-height 0.2s ease;
+}
+.c-filter__select--checkbox,
+.c-filter__select--radio {
+  height: 14px;
+  width: 14px;
+  border: 1px solid #b8bbd9;
+}
+.c-filter__select__text {
+  max-width: 170px;
+}
+.c-filter__label {
+  line-height: 1.7;
+}
+.c-filter__input:checked ~ .c-filter__select--radio {
+  border: 1px solid #fff;
+}
+.c-filter__input:checked ~ .c-filter__select--radio:before {
+  background-color: #fff;
+  content: "";
+  border-radius: 100%;
+  margin: 1px;
+  height: 10px;
+  width: 10px;
+  position: absolute;
+}
+.c-filter__input:checked ~ .c-filter__select--checkbox {
+  border: 1px solid #fff;
+}
+.c-filter__input:checked ~ .c-filter__select--checkbox:before {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  height: 5px;
+  width: 10px;
+  height: 4px;
+  width: 9px;
+  margin-top: 1px;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.c-guided-filter {
+  min-width: 760px;
+}
+.c-sort {
+  margin: 2px 30px;
+}
+.c-dropdown__list {
+  list-style: none;
+  min-width: 180px;
+  width: 140px;
+  left: 0;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  top: 32px;
+  -webkit-transition: opacity 0.1s linear, max-height 0.3s linear;
+  transition: opacity 0.1s linear, max-height 0.3s linear;
+  z-index: 3;
+}
+.c-dropdown__list__item:not(:last-child) {
+  border-bottom: 1px solid #e0e0e5;
+}
+.c-sort-dropdown__selected {
+  background-color: #434ea2;
+  min-width: 180px;
+}
+.sticky-inner-wrapper {
+  z-index: 1;
+}
+.figcaption[_ngcontent-ika-c47] {
+  color: #414146;
+  font-size: 13px;
+  line-height: 21px;
+  vertical-align: bottom;
+  padding-top: 2px;
+  margin-left: 70px;
+}
+.c-paginator li a {
+  padding: 4px 6px;
+  line-height: 13px;
+}
+.c-footer__column {
+  width: 18.9%;
+}
+.c-footer__column:last-child {
+  width: auto;
+}
+@media (max-width: 800px) {
+  .c-footer {
     display: none;
   }
-  .c-slots-header__next,
-  .c-slots-header__prev {
-    width: 14%;
-    padding: 0 20px;
-  }
-  .c-slots-header__next-btn,
-  .c-slots-header__prev-btn {
-    display: inline-block;
-    height: 48px;
-    width: 48px;
-    border: 1px solid #e0e0e4;
-    border-radius: 50%;
-    text-align: center;
-    color: #14bef0;
-    font-size: 24px;
-    cursor: pointer;
-  }
-  .c-slots-header__prev-btn.disabled {
-    color: #b4b4be;
-    cursor: default;
-  }
-  .c-slots-header__next-btn:before,
-  .c-slots-header__prev-btn:before {
-    position: relative;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
-    vertical-align: top;
-  }
-  .c-slots-header__daybar {
-    width: 71.4285%;
-  }
-  .c-slots-header__slider {
-    display: inline-block;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    border-bottom: 4px solid #14bef0;
-    -webkit-transition: -webkit-transform 0.5s;
-    transition: -webkit-transform 0.5s;
-    transition: transform 0.5s;
-    transition: transform 0.5s, -webkit-transform 0.5s;
-    width: 33.3333%;
-  }
-  .c-day-heading:first-child.c-day-heading--selected ~ .c-slots-header__slider {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-  }
-  .c-day-heading {
-    padding: 10px 0 5px;
-    border-bottom: 4px solid #f0f0f5;
-    text-align: center;
-    font-size: 16px;
-    cursor: pointer;
-  }
-  .c-day-heading--selected {
-    color: #14bef0;
-    font-weight: 700;
-    -webkit-transition: color 0.5s, font-weight 0.5s;
-    transition: color 0.5s, font-weight 0.5s;
-  }
-  .c-day-heading__slot-count {
-    font-size: 12px;
-    color: #787887;
-    font-weight: 400;
-  }
-  .c-day-heading__slot-count--available {
-    color: #01a400;
-  }
-  .c-apt-alert {
-    border-radius: 3px;
-    padding: 10px 15px;
-    margin: 10px;
-    border: 1px solid transparent;
-  }
-  .c-apt-alert-warning {
-    color: #8a6d3b;
-    background-color: #fcf8e3;
-    border-color: #faebcc;
-  }
-  /*! CSS Used from: https://www.WealthyLifestatic.com/web-assets/stylesheets/omni.8ddd7a6ea145.css */
-  .u-bold {
-    font-weight: 700;
-  }
-  /*! CSS Used keyframes */
-  @-webkit-keyframes blink {
-    0% {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  @keyframes blink {
-    0% {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  @-webkit-keyframes slotsFadeIn {
-    0% {
-      max-height: 0;
-      opacity: 0;
-    }
-    to {
-      max-height: 1000px;
-      opacity: 1;
-    }
-  }
-  @keyframes slotsFadeIn {
-    0% {
-      max-height: 0;
-      opacity: 0;
-    }
-    to {
-      max-height: 1000px;
-      opacity: 1;
-    }
-  }
-  /*! CSS Used fontfaces */
-  // @font-face{font-family:Camphor;src:url(//www.WealthyLifestatic.com/fonts/camphor/79a790be-1592-4a60-84d3-d38c6ca1626b.eot#iefix);src:url(//www.WealthyLifestatic.com/fonts/camphor/79a790be-1592-4a60-84d3-d38c6ca1626b.eot#iefix) format("eot"),url(//www.WealthyLifestatic.com/fonts/camphor/677b110e-fe2c-4af7-b50b-3e8f00c371ce.woff2) format("woff2"),url(//www.WealthyLifestatic.com/fonts/camphor/bee62776-4fd4-4e5c-b977-86dfd90c0bce.woff) format("woff"),url(//www.WealthyLifestatic.com/fonts/camphor/cf1395aa-4f82-4179-9456-63193aef03ac.ttf) format("truetype");font-weight:400;}
-  // @font-face{font-family:Camphor;src:url(//www.WealthyLifestatic.com/fonts/camphor/ce0e3457-b63d-4c55-b2b2-4d41170d4578.eot#iefix);src:url(//www.WealthyLifestatic.com/fonts/camphor/ce0e3457-b63d-4c55-b2b2-4d41170d4578.eot#iefix) format("eot"),url(//www.WealthyLifestatic.com/fonts/camphor/c96be38e-ea64-418f-ae54-e757ed92b069.woff2) format("woff2"),url(//www.WealthyLifestatic.com/fonts/camphor/d8f1df09-02f2-46a7-9876-5b2e79046f31.woff) format("woff"),url(//www.WealthyLifestatic.com/fonts/camphor/d26b7b5b-4f11-4aca-9273-f050282fbf28.ttf) format("truetype");font-weight:700;}
-  // @font-face{font-family:practicon;src:url(//www.WealthyLifestatic.com/fonts/v13/practicon.eot);src:url(//www.WealthyLifestatic.com/fonts/v13/practicon.eot#iefix) format("embedded-opentype"),url(//www.WealthyLifestatic.com/fonts/v13/practicon.woff2) format("woff2"),url(//www.WealthyLifestatic.com/fonts/v13/practicon.woff) format("woff"),url(//www.WealthyLifestatic.com/fonts/v13/practicon.svg) format("svg"),url(//www.WealthyLifestatic.com/fonts/v13/practicon.ttf) format("truetype");font-weight:400;font-style:normal;}
-
-  a,
-  div,
-  footer,
-  h2,
-  h3,
-  h4,
-  header,
-  i,
-  img,
-  label,
-  li,
-  p,
-  span,
-  ul {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-  }
-  footer,
-  header {
-    display: block;
-  }
-  ul {
-    list-style: none;
-  }
-  .pure-g {
-    letter-spacing: -0.31em;
-    *letter-spacing: normal;
-    *word-spacing: -0.43em;
-    text-rendering: optimizespeed;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    flex-flow: row wrap;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    -ms-flex-flow: row wrap;
-    -ms-align-content: flex-start;
-    -ms-flex-line-pack: start;
-    align-content: flex-start;
-  }
-  .pure-g {
-    word-spacing: -0.43em;
-  }
-  .pure-u-1,
-  .pure-u-1-1,
-  .pure-u-1-2,
-  .pure-u-4-24,
-  .pure-u-6-24,
-  .pure-u-7-24,
-  .pure-u-10-24,
-  .pure-u-14-24,
-  .pure-u-17-24,
-  .pure-u-18-24 {
-    display: inline-block;
-    *display: inline;
-    zoom: 1;
-    letter-spacing: normal;
-    word-spacing: normal;
-    vertical-align: top;
-    text-rendering: auto;
-  }
-  .pure-u-4-24 {
-    width: 16.6667%;
-    *width: 16.6357%;
-  }
-  .pure-u-6-24 {
-    width: 25%;
-    *width: 24.969%;
-  }
-  .pure-u-7-24 {
-    width: 29.1667%;
-    *width: 29.1357%;
-  }
-  .pure-u-10-24 {
-    width: 41.6667%;
-    *width: 41.6357%;
-  }
-  .pure-u-1-2 {
-    width: 50%;
-    *width: 49.969%;
-  }
-  .pure-u-14-24 {
-    width: 58.3333%;
-    *width: 58.3023%;
-  }
-  .pure-u-17-24 {
-    width: 70.8333%;
-    *width: 70.8023%;
-  }
-  .pure-u-18-24 {
-    width: 75%;
-    *width: 74.969%;
-  }
-  .pure-u-1,
-  .pure-u-1-1 {
-    width: 100%;
-  }
-  .c-btn--light-medium,
-  .c-guided-filter,
-  .u-t-center {
-    text-align: center;
-  }
-  .c-paginator,
-  .u-t-right {
-    text-align: right;
-  }
-  .c-sort,
-  .u-f-right {
-    float: right;
-  }
-  .c-card__left,
-  .u-f-left {
-    float: left;
-  }
-  .c-btn--dark-md,
-  .c-btn--dark-medium,
-  .c-btn--light-medium,
-  .c-btn--link,
-  .listing-doctor-card .view-profile,
-  .u-base-font {
-    font-size: 14px;
-  }
-  .u-title-font {
-    font-size: 18px;
-  }
-  .listing-doctor-card .doctor-name,
-  .u-jumbo-font {
-    font-size: 20px;
-  }
-  .u-img-thumbnail {
-    width: 32px;
-    height: 32px;
-  }
-  .listing-doctor-card .view-profile,
-  .u-subtext-font {
-    font-size: 14px;
-  }
-  .u-smallest-font {
-    font-size: 12px;
-  }
-  .c-card__icon,
-  .u-large-font {
-    font-size: 16px;
-  }
-  .c-card-reach--plus__sponsored,
-  .u-xx-small-font {
-    font-size: 11px;
-  }
-  .u-xx-large-font {
-    font-size: 24px;
-  }
-  .c-btn--dark-md,
-  .c-btn--dark-medium,
-  .c-btn--light-medium,
-  .u-bold {
-    font-weight: 700 !important;
-  }
-  .u-t-capitalize {
-    text-transform: capitalize;
-  }
-  .u-primary-text {
-    color: #14bef0;
-  }
-  .u-normal-text {
-    color: #414146;
-  }
-  .u-grey_3-text {
-    color: #787887;
-  }
-  .u-green-text {
-    color: #01a400;
-  }
-  .u-purple-text {
-    color: #8a45e6;
-  }
-  .u-white-background {
-    background-color: #fff;
-  }
-  .c-dropdown__list,
-  .listing-doctor-card .prime-badge {
-    position: absolute;
-  }
-  .c-accordion__group,
-  .u-cushion {
-    padding: 16px;
-  }
-  .c-guided-filter {
-    padding: 8px;
-  }
-  .u-cushion--vertical {
-    padding: 16px 0;
-  }
-  .c-filter__top__wrapper {
-    padding: 8px 0;
-  }
-  .c-btn--link,
-  .listing-doctor-card .view-profile {
-    padding: 0 16px;
-  }
-  .c-dropdown__list__item,
-  .c-filter__box,
-  .c-sort-dropdown__selected {
-    padding: 4px 8px;
-  }
-  .u-cushion--top-less {
-    padding-top: 8px;
-  }
-  .u-cushion--right {
-    padding-right: 16px;
-  }
-  .c-grid-list--left,
-  .c-grid-list--right,
-  .u-cushion--bottom-less {
-    padding-bottom: 8px;
-  }
-  .c-filter__box {
-    padding-left: 8px;
-  }
-  .u-cushion--medium-top {
-    padding-top: 28px;
-  }
-  .u-cushion--large-vertical {
-    padding: 48px 0;
-  }
-  .c-dropdown__list {
-    padding: 0;
-  }
-  .u-spacer--vertical {
-    margin: 16px 0;
-  }
-  .listing-doctor-card .view-profile {
-    margin-top: 16px;
-  }
-  .c-card-info + .c-card-info {
-    margin-top: 8px;
-  }
-  .u-spacer--top-thin {
-    margin-top: 4px;
-  }
-  .c-filter__box,
-  .u-spacer--right {
-    margin-right: 16px;
-  }
-  .u-spacer--right-less {
-    margin-right: 8px;
-  }
-  .c-card__icon,
-  .u-spacer--right-thin {
-    margin-right: 4px;
-  }
-  .u-spacer--bottom {
-    margin-bottom: 16px;
-  }
-  .u-spacer--bottom-less {
-    margin-bottom: 8px;
-  }
-  .u-spacer--bottom-thin {
-    margin-bottom: 4px;
-  }
-  .u-spacer--left {
-    margin-left: 16px;
-  }
-  .u-spacer--left-less {
-    margin-left: 8px;
-  }
-  .c-paginator li:not(:first-child),
-  .u-spacer--left-thin {
-    margin-left: 4px;
-  }
-  .u-spacer--small-horizontal {
-    margin: 0 2px;
-  }
-  .c-filter__select__text,
-  .u-spacer--small-top {
-    margin-top: 2px;
-  }
-  .u-spacer--medium-vertical {
-    margin: 28px 0;
-  }
-  .u-spacer--medium-bottom {
-    margin-bottom: 28px;
-  }
-  .u-spacer--thin {
-    margin: 4px;
-  }
-  .u-hide {
-    display: none !important;
-  }
-  .u-d-block {
-    display: block;
-  }
-  .c-accordion__heading__text,
-  .c-breadcrumb__title,
-  .c-btn--light-medium,
-  .c-card__left,
-  .c-filter__box,
-  .c-footer__column,
-  .c-paginator li,
-  .c-sort,
-  .c-sort-dropdown,
-  .c-sort-dropdown__selected,
-  .u-d-inlineblock {
-    display: inline-block;
-  }
-  .u-d-inline {
-    display: inline;
-  }
-  .listing-doctor-card,
-  .listing-doctor-card .appointment-section,
-  .u-d-flex {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .listing-doctor-card {
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-  }
-  .listing-doctor-card .appointment-section {
-    -webkit-box-pack: end;
-    -ms-flex-pack: end;
-    justify-content: flex-end;
-  }
-  .listing-doctor-card .appointment-section {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
-  .c-sort-dropdown,
-  .u-pos-rel {
-    position: relative;
-  }
-  .u-clearfix {
-    *zoom: 1;
-  }
-  .u-clearfix:after {
-    clear: both;
-  }
-  .u-clearfix:after,
-  .u-clearfix:before {
-    content: " ";
-    display: table;
-  }
-  .c-breadcrumb__title,
-  .c-card__locality,
-  .u-t-ellipsis {
-    width: 100%;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-  }
-  .u-dot-separator {
-    border-radius: 50%;
-    border: 2px solid #7f7f7f;
-    display: inline-block;
-    margin: 2px 3px;
-  }
-  .u-t-grey5 {
-    color: #2d2d32;
-  }
-  .u-full-height {
-    height: 100%;
-  }
-  .u-t-underline,
-  a:hover {
-    text-decoration: underline;
-  }
-  .u-t-hover-underline:hover {
-    text-decoration: underline;
-  }
-  .c-dropdown__list,
-  .c-list-card {
-    -webkit-box-shadow: 0 1px 2px 1px hsla(0, 0%, 42.7%, 0.14);
-    box-shadow: 0 1px 2px 1px hsla(0, 0%, 42.7%, 0.14);
-  }
-  .c-paginator li.active a,
-  .c-paginator li:hover a,
-  .u-round-corner {
-    border-radius: 3px;
-  }
-  .c-btn--dark-md,
-  .c-btn--dark-medium,
-  .c-btn--light-medium,
-  .c-dropdown__list,
-  .c-filter__box,
-  .c-filter__select--checkbox,
-  .c-sort-dropdown__selected {
-    border-radius: 2px;
-  }
-  .u-round-corner--large {
-    border-radius: 4px;
-  }
-  .c-dropdown__list,
-  .c-list-card:hover {
-    border: 1px solid #cacad3;
-  }
-  .c-list-card {
-    border: 1px solid #fff;
-  }
-  .c-btn--dark-md,
-  .c-btn--dark-medium,
-  .c-btn--light-medium,
-  .c-guided-filter {
-    border: 1px solid #14bef0;
-  }
-  .c-accordion__group,
-  .c-accordion__group:first-child,
-  .u-border-general--top {
-    border-top: 1px solid #f0f0f5;
-  }
-  .u-border-general--bottom {
-    border-bottom: 1px solid #e8e8f0;
-  }
-  .u-border-general-dashed-top--gray-10 {
-    border-top: 1px dashed #e8e8f0;
-  }
-  .u-light-border {
-    border: 1px solid #dcdcdc;
-  }
-  .c-btn--light-medium,
-  .c-dropdown__list,
-  .o-card {
-    background-color: #fff;
-  }
-  .c-btn--dark-md,
-  .c-btn--dark-medium,
-  .c-btn--light-medium:active,
-  .c-paginator li.active a,
-  .c-paginator li:hover a {
-    background-color: #14bef0;
-  }
-  .c-filter,
-  .c-filter__bottom,
-  .u-fill--dark-blue {
-    background-color: #28328c;
-  }
-  .c-guided-filter {
-    background-color: #e8faff;
-  }
-  .c-dropdown__list__item:hover {
-    background-color: #f0f0f5;
-  }
-  .c-dropdown__list {
-    color: #414146;
-  }
-  .c-btn--dark-md,
-  .c-btn--dark-medium,
-  .c-filter__box,
-  .c-paginator li.active a,
-  .c-paginator li:hover a,
-  .u-color--white {
-    color: #fff;
-  }
-  .c-btn--light-medium,
-  .c-btn--link,
-  .listing-doctor-card .view-profile,
-  .u-color--primary {
-    color: #14bef0;
-  }
-  .c-card-reach--plus__sponsored {
-    color: #787887;
-  }
-  .u-color--green {
-    color: #01a400;
-  }
-  .u-color--lavender-gray {
-    color: #b8bbd9;
-  }
-  .c-guided-filter {
-    color: #14bef0;
-  }
-  .c-btn--dark-medium,
-  .c-btn--light-medium,
-  .c-filter__box,
-  .u-valign--middle {
-    vertical-align: middle;
-  }
-  .c-footer__column,
-  .u-valign--top {
-    vertical-align: top;
-    vertical-align: -webkit-baseline-top;
-  }
-  .u-valign--small {
-    vertical-align: -1px;
-  }
-  .c-dropdown__list,
-  .c-paginator {
-    margin: 0;
-  }
-  .u-no-margin--top {
-    margin-top: 0;
-  }
-  .c-btn--dark-md,
-  .c-btn--dark-medium,
-  .c-btn--light-medium,
-  .c-btn--link,
-  .c-card-reach--plus__sponsored,
-  .c-dropdown,
-  .c-dropdown__list,
-  .c-guided-filter,
-  .c-paginator li,
-  .listing-doctor-card .view-profile,
-  .u-c-pointer {
-    cursor: pointer;
-  }
-  .c-paginator li.active a:hover,
-  .c-paginator li:hover a:hover {
-    text-decoration: none;
-  }
-  .u-no-appearance {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    -ms-appearance: none;
-    -o-appearance: none;
-    appearance: none;
-  }
-  .c-filter__select--radio,
-  .u-circle {
-    border-radius: 50%;
-  }
-  .u-transition--transform {
-    -webkit-transition: transform 0.2s linear;
-    -webkit-transition: -webkit-transform 0.2s linear;
-    transition: -webkit-transform 0.2s linear;
-    transition: transform 0.2s linear;
-    transition: transform 0.2s linear, -webkit-transform 0.2s linear;
-  }
-  .u-border--thick {
-    border-width: 2px;
-  }
-  .u-pos-has {
-    position: relative;
-  }
-  .u-pulse {
-    margin: 4px 20px 0 4px;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: #14bef0;
-    cursor: pointer;
-    -webkit-box-shadow: 0 0 0 rgba(40, 190, 240, 0.4);
-    box-shadow: 0 0 0 rgba(40, 190, 240, 0.4);
-    -webkit-animation: pulse 1.2s infinite;
-    animation: pulse 1.2s infinite;
-    display: inline-block;
-  }
-  .u-pulse-white {
-    background: #fff;
-    -webkit-animation: pulse-white 1.2s infinite;
-    animation: pulse-white 1.2s infinite;
-  }
-  .u-white-bg {
-    background: #fff;
-  }
-  .uv2-spacer--xs-top {
-    margin-top: 4px;
-  }
-  .uv2-spacer--xs-bottom {
-    margin-bottom: 4px;
-  }
-  .uv2-spacer--sm-vt {
-    margin: 8px 0;
-  }
-  .uv2-spacer--sm-top {
-    margin-top: 8px;
-  }
-  .uv2-spacer--sm-bottom {
-    margin-bottom: 8px;
-  }
-  .uv2-spacer--md-top {
-    margin-top: 12px;
-  }
-  .uv2-spacer--md-bottom {
-    margin-bottom: 12px;
-  }
-  .uv2-spacer--md-right {
-    margin-right: 12px;
-  }
-  .listing-doctor-card .appointment-section {
-    margin: 0 16px;
-  }
-  .uv2-spacer--lg-top {
-    margin-top: 16px;
-  }
-  .uv2-spacer--jumbo-xl-hz {
-    margin: 0 60px;
-  }
-  .uv2-cushion--sm-hz {
-    padding: 0 8px;
-  }
-  .listing-doctor-card .info-section {
-    padding: 0 16px;
-  }
-  .uv2-cushion--lg-vt {
-    padding: 16px 0;
-  }
-  .uv2-cushion--lg-top {
-    padding-top: 16px;
-  }
-  .uv2-cushion--lg-bottom {
-    padding-bottom: 16px;
-  }
-  .uv2-no-shadow {
-    -webkit-box-shadow: none;
-    box-shadow: none;
-  }
-  *,
-  :after,
-  :before {
-    -webkit-box-sizing: inherit;
-    box-sizing: inherit;
-  }
-  a {
-    color: #414146;
-  }
-  a {
-    text-decoration: none;
-    outline: none;
-  }
-  h2,
-  h3,
-  h4 {
-    margin: 0;
-    font-weight: 400;
-  }
-  input {
-    outline: none;
-    border: none;
-  }
-  button,
-  input {
-    font-family: Camphor, sans-serif;
-  }
-  [class*=" icon-"]:before,
-  [class^="icon-"]:before {
-    font-family: practicon;
-    font-style: normal;
-    font-weight: 400;
-    // speak: none;
-    display: inline-block;
-    text-decoration: inherit;
-    width: 1em;
-    margin-right: 0.2em;
-    text-align: center;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1em;
-    margin-left: 0.2em;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  .icon-ic_like_filled:before {
-    content: "\e8bc";
-  }
-  .icon-ic_call_filled:before {
-    content: "\e8e7";
-  }
-  .icon-ic_phone:before {
-    content: "\e8ee";
-  }
-  .icon-ic_instant_filled:before {
-    content: "\e90b";
-  }
-  .icon-ic_calendar:before {
-    content: "\e918";
-  }
-  .icon-ic_cart:before {
-    content: "\e920";
-  }
-  .icon-ic_chat:before {
-    content: "\e921";
-  }
-  .icon-ic_clinic:before {
-    content: "\e922";
-  }
-  .icon-ic_currency:before {
-    content: "\e924";
-  }
-  .icon-ic_star_solid:before {
-    content: "\e934";
-  }
-  .icon-ic_star_half:before {
-    content: "\e935";
-  }
-  .icon-ic_search_system:before {
-    content: "\e938";
-  }
-  .icon-ic_next_cheveron:before {
-    content: "\e93c";
-  }
-  .icon-ic_location_system:before {
-    content: "\e93e";
-  }
-  .icon-ic_filter_system:before {
-    content: "\e943";
-  }
-  .icon-ic_drawer_system:before {
-    content: "\e946";
-  }
-  .icon-ic_down_cheveron:before {
-    content: "\e947";
-  }
-  .icon-ic_cross:before {
-    content: "\e94c";
-  }
-  .icon-ic_time:before {
-    content: "\e95d";
-  }
-  .icon-ic_search:before {
-    content: "\e966";
-  }
-  .icon-ic_records_3:before {
-    content: "\e96f";
-  }
-  .icon-ic_read:before {
-    content: "\e971";
-  }
-  .icon-ic_message:before {
-    content: "\e980";
-  }
-  .icon-ic_location:before {
-    content: "\e984";
-  }
-  .icon-ic_like:before {
-    content: "\e986";
-  }
-  .icon-ic_info:before {
-    content: "\e98b";
-  }
-  .icon-ic_dropdown:before {
-    content: "\e99c";
-  }
-  .icon-ic_lab_home:before {
-    content: "\e9b4";
-  }
-  .icon-ic_gps_system:before {
-    content: "\e9ba";
-  }
-  .icon-ic_medicine_info:before {
-    content: "\e9d6";
-  }
-  .icon-ic_done_badge:before {
-    content: "\e800";
-  }
-  .u-bold[class*=" icon-ic_"]:before {
-    font-weight: 700;
-  }
-  .icon--no-margin:before {
-    margin: 0;
-  }
-  .icon--top-push {
-    top: 2px;
-  }
-  .o-page {
-    min-width: 1200px;
-  }
-  .c-filter__top__wrapper,
-  .c-omni__placeholder__wrapper,
-  .o-page-container {
-    width: 1180px;
-    margin: auto;
-  }
-  .o-card {
-    width: 100%;
-  }
-  .c-guided-filter,
-  .o-card--separated {
-    margin-top: 0;
-  }
-  .c-btn--dark-md,
-  .c-btn--dark-medium,
-  .c-btn--light-medium {
-    height: 30px;
-    width: 100%;
-    outline: none;
-    padding: 4px 0 8px;
-  }
-  .c-btn--dark-md:hover,
-  .c-btn--dark-medium:hover {
-    background-color: #14addb;
-    border: 1px solid #14addb;
-  }
-  .c-btn--dark-medium {
-    width: 212px;
-    height: 40px;
-    padding: 4px 0;
-  }
-  .c-btn--dark-md {
-    padding: 12px 0;
-    height: unset;
-  }
-  .c-btn--white-small {
-    background: #fff;
-    height: 40px;
-    width: auto;
-    padding: 4px;
-    margin: 4px 2px;
-    font-size: 14px;
-  }
-  .c-btn--white-small:hover {
-    background-color: #14addb;
-    border-color: #14addb;
-    color: #fff;
-    cursor: pointer;
-  }
-  .c-btn--light-medium {
-    height: 30px;
-    border-radius: 3px;
-  }
-  .c-btn--light-medium:hover {
-    color: #fff;
-    background-color: #14bef0;
-  }
-  .c-btn--light-medium {
-    width: 212px;
-    height: 40px;
-    padding: 4px 0;
-  }
-  .c-btn--light-medium:hover .u-pulse {
-    background: #fff;
-    -webkit-animation: pulse-white 1.2s infinite !important;
-    animation: pulse-white 1.2s infinite !important;
-  }
-  .c-btn--dark-md:active,
-  .c-btn--dark-medium:active,
-  .c-btn--light-medium:active {
-    background-color: #168db3;
-    border: 1px solid #168db3;
-  }
-  .c-btn--link,
-  .listing-doctor-card .view-profile {
-    border: none;
-    outline: none;
-    background: transparent;
-  }
-  .o-media {
-    display: table;
-  }
-  .o-media,
-  .o-media__body {
-    overflow: hidden;
-    zoom: 1;
-  }
-  .o-media__body {
-    width: 10000px;
-  }
-  .o-media__body {
-    display: table-cell;
-    vertical-align: top;
-  }
-  .o-media--middle {
-    vertical-align: middle;
-  }
-  .o-media__object.img-thumbnail {
-    max-width: none;
-  }
-  .o-label--default,
-  .o-label--success {
-    display: inline-block;
-    padding: 4px 8px;
-    font-size: 12px;
-    line-height: 1;
-    white-space: nowrap;
-    vertical-align: baseline;
-    border-radius: 0.25em;
-    max-width: 100%;
-  }
-  .o-label--default {
-    background: #f0f0f5;
-  }
-  .o-label--success {
-    font-size: inherit;
-    background: #00a500;
-    color: #fff;
-  }
-  .c-navbar__container {
-    height: 74px;
-    position: relative;
-    background: #fff;
-  }
-  .c-navbar__placeholder {
-    position: absolute;
-    width: 100%;
-    top: 0;
-  }
-  @media (max-width: 800px) {
-    .c-navbar__container {
-      height: 60px;
-    }
-  }
-  .c-omni__placeholder {
-    background: #fff;
-    position: relative;
-  }
-  .c-omni__placeholder__wrapper {
-    padding-top: 15px;
-    padding-bottom: 12px;
-  }
-  .c-list-card {
-    min-width: 760px;
-  }
-  .c-card__icon {
-    vertical-align: -1px;
-  }
-  .c-card__locality {
-    max-width: 210px;
-  }
-  .c-card-info__item {
-    max-width: 440px;
-  }
-  .c-grid-list--left {
-    padding-right: 20px;
-  }
-  .c-grid-list--right {
-    padding-left: 20px;
-  }
-  .c-grid-list__item {
-    max-width: 120px;
-    width: auto;
-  }
-  .g-card {
-    background-color: #fff;
-    padding: 20px;
-  }
-  .c-listing__right {
-    padding-left: 20px;
-  }
-  .c-filter {
-    width: 100%;
-  }
-  .c-filter__top__wrapper {
-    border-bottom: 1px solid #434ea2;
-  }
-  .c-filter__box {
-    background-color: #434ea2;
-    min-width: 160px;
-  }
-  .c-filter__bottom {
-    position: absolute;
-    max-height: 0;
-    overflow: hidden;
-    z-index: 2;
-    width: 100%;
-    -webkit-transition: max-height 0.2s ease;
-    transition: max-height 0.2s ease;
-  }
-  .c-filter__select--checkbox,
-  .c-filter__select--radio {
-    height: 14px;
-    width: 14px;
-    border: 1px solid #b8bbd9;
-  }
-  .c-filter__select__text {
-    max-width: 170px;
-  }
-  .c-filter__label {
-    line-height: 1.7;
-  }
-  .c-filter__input:checked ~ .c-filter__select--radio {
-    border: 1px solid #fff;
-  }
-  .c-filter__input:checked ~ .c-filter__select--radio:before {
-    background-color: #fff;
-    content: "";
-    border-radius: 100%;
-    margin: 1px;
-    height: 10px;
-    width: 10px;
-    position: absolute;
-  }
-  .c-filter__input:checked ~ .c-filter__select--checkbox {
-    border: 1px solid #fff;
-  }
-  .c-filter__input:checked ~ .c-filter__select--checkbox:before {
-    content: "";
-    position: absolute;
-    top: 1px;
-    left: 1px;
-    height: 5px;
-    width: 10px;
-    height: 4px;
-    width: 9px;
-    margin-top: 1px;
-    border-left: 1px solid #fff;
-    border-bottom: 1px solid #fff;
-    -webkit-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-  }
-  .c-guided-filter {
-    min-width: 760px;
-  }
-  .c-sort {
-    margin: 2px 30px;
-  }
-  .c-dropdown__list {
-    list-style: none;
-    min-width: 180px;
-    width: 140px;
-    left: 0;
-    max-height: 0;
-    overflow: hidden;
-    opacity: 0;
-    top: 32px;
-    -webkit-transition: opacity 0.1s linear, max-height 0.3s linear;
-    transition: opacity 0.1s linear, max-height 0.3s linear;
-    z-index: 3;
-  }
-  .c-dropdown__list__item:not(:last-child) {
-    border-bottom: 1px solid #e0e0e5;
-  }
-  .c-sort-dropdown__selected {
-    background-color: #434ea2;
-    min-width: 180px;
-  }
-  .sticky-inner-wrapper {
-    z-index: 1;
-  }
-  .figcaption[_ngcontent-ika-c47] {
-    color: #414146;
-    font-size: 13px;
-    line-height: 21px;
-    vertical-align: bottom;
-    padding-top: 2px;
-    margin-left: 70px;
-  }
-  .c-paginator li a {
-    padding: 4px 6px;
-    line-height: 13px;
-  }
-  .c-footer__column {
-    width: 18.9%;
-  }
-  .c-footer__column:last-child {
-    width: auto;
-  }
-  @media (max-width: 800px) {
-    .c-footer {
-      display: none;
-    }
-  }
-  .c-card-reach--plus__sponsored {
-    left: 0;
-    bottom: 10px;
-  }
-  .c-card-reach__photo img {
-    max-height: 100px;
-    max-width: 100px;
-    width: auto;
-  }
-  .c-breadcrumb__title {
-    max-width: 110px;
-  }
-  .c-breadcrumb__title span:hover {
-    color: #14bef0;
-    text-decoration: underline;
-  }
-  .c-accordion__group:first-child {
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
-  }
-  .c-accordion__group:last-child {
-    border-bottom-left-radius: 3px;
-    border-bottom-right-radius: 3px;
-  }
-  .c-accordion__heading__text {
-    width: 90%;
-  }
-  .c-accordion__heading i {
-    -webkit-transition: -webkit-transform 0.3s ease-in-out;
-    transition: -webkit-transform 0.3s ease-in-out;
-    transition: transform 0.3s ease-in-out;
-    transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
-  }
-  .c-accordion__body {
-    height: auto;
-    overflow: hidden;
-    max-height: 50em;
-    -webkit-transition: max-height 0.43s;
-    transition: max-height 0.43s;
-  }
-  .c-accordion__body.is-collapsed {
-    max-height: 0;
-  }
-  .c-faq__answer {
-    width: calc(100% - 20px);
-  }
-  .c-sidebar--overlay {
-    width: 100%;
-    height: 100vh;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .c-current-location-gp {
-    margin: 0 22px auto;
-  }
-  .listing-doctor-card {
-    padding: 24px 0;
-  }
-  .listing-doctor-card .profile-photo {
-    width: 140px;
-    height: 140px;
-  }
-  .listing-doctor-card .prime-badge {
-    right: 2px;
-    bottom: 16px;
-  }
-  .listing-doctor-card .view-profile {
-    visibility: hidden;
-  }
-  .listing-doctor-card:hover .view-profile {
-    visibility: visible;
-  }
-  .listing-doctor-card .doctor-name:hover {
-    text-decoration: underline;
-  }
-  /*! CSS Used from: https://www.WealthyLifestatic.com/nav/9.1.1/consumer/css/WealthyLifenav.css */
+}
+.c-card-reach--plus__sponsored {
+  left: 0;
+  bottom: 10px;
+}
+.c-card-reach__photo img {
+  max-height: 100px;
+  max-width: 100px;
+  width: auto;
+}
+.c-breadcrumb__title {
+  max-width: 110px;
+}
+.c-breadcrumb__title span:hover {
+  color: #14bef0;
+  text-decoration: underline;
+}
+.c-accordion__group:first-child {
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+.c-accordion__group:last-child {
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+.c-accordion__heading__text {
+  width: 90%;
+}
+.c-accordion__heading i {
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+.c-accordion__body {
+  height: auto;
+  overflow: hidden;
+  max-height: 50em;
+  -webkit-transition: max-height 0.43s;
+  transition: max-height 0.43s;
+}
+.c-accordion__body.is-collapsed {
+  max-height: 0;
+}
+.c-faq__answer {
+  width: calc(100% - 20px);
+}
+.c-sidebar--overlay {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.c-current-location-gp {
+  margin: 0 22px auto;
+}
+.listing-doctor-card {
+  padding: 24px 0;
+}
+.listing-doctor-card .profile-photo {
+  width: 140px;
+  height: 140px;
+}
+.listing-doctor-card .prime-badge {
+  right: 2px;
+  bottom: 16px;
+}
+.listing-doctor-card .view-profile {
+  visibility: hidden;
+}
+.listing-doctor-card:hover .view-profile {
+  visibility: visible;
+}
+.listing-doctor-card .doctor-name:hover {
+  text-decoration: underline;
+}
+/*! CSS Used from: https://www.WealthyLifestatic.com/nav/9.1.1/consumer/css/WealthyLifenav.css */
+.WealthyLife_GlobalNavigation .navbar .u-name a {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+}
+.WealthyLife_GlobalNavigation .navbar .u-name .user_name {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 20px;
+}
+.WealthyLife_GlobalNavigation .navbar a,
+.WealthyLife_GlobalNavigation .navbar .nav-items.hover-dark a,
+.WealthyLife_GlobalNavigation .navbar .navlist,
+.WealthyLife_GlobalNavigation .navbar .u-name,
+.WealthyLife_GlobalNavigation .navbar .u-d-item,
+.WealthyLife_GlobalNavigation .navbar .u-d-item a,
+.WealthyLife_GlobalNavigation .navbar .user_info_top {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+.WealthyLife_GlobalNavigation .navbar .u-name .number,
+.WealthyLife_GlobalNavigation .navbar .u-d-item.product-switch a {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+}
+@media only screen and (max-width: 800px) {
   .WealthyLife_GlobalNavigation .navbar .u-name a {
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 30px;
-  }
-  .WealthyLife_GlobalNavigation .navbar .u-name .user_name {
     font-weight: bold;
     font-size: 14px;
     line-height: 20px;
   }
-  .WealthyLife_GlobalNavigation .navbar a,
-  .WealthyLife_GlobalNavigation .navbar .nav-items.hover-dark a,
-  .WealthyLife_GlobalNavigation .navbar .navlist,
-  .WealthyLife_GlobalNavigation .navbar .u-name,
-  .WealthyLife_GlobalNavigation .navbar .u-d-item,
-  .WealthyLife_GlobalNavigation .navbar .u-d-item a,
-  .WealthyLife_GlobalNavigation .navbar .user_info_top {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 20px;
-  }
-  .WealthyLife_GlobalNavigation .navbar .u-name .number,
-  .WealthyLife_GlobalNavigation .navbar .u-d-item.product-switch a {
-    font-weight: 400;
+  .WealthyLife_GlobalNavigation .navbar .u-name .user_name {
+    font-weight: bold;
     font-size: 12px;
     line-height: 15px;
   }
-  @media only screen and (max-width: 800px) {
-    .WealthyLife_GlobalNavigation .navbar .u-name a {
-      font-weight: bold;
-      font-size: 14px;
-      line-height: 20px;
-    }
-    .WealthyLife_GlobalNavigation .navbar .u-name .user_name {
-      font-weight: bold;
-      font-size: 12px;
-      line-height: 15px;
-    }
-  }
-  .WealthyLife_GlobalNavigation {
-    width: 100%;
-    z-index: 2000;
-    top: 0;
-  }
-  .WealthyLife_GlobalNavigation .navbar .nav-left,
-  .WealthyLife_GlobalNavigation .navbar .nav-mid,
-  .WealthyLife_GlobalNavigation .navbar .nav-right {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-  }
-  .WealthyLife_GlobalNavigation .text-left {
-    text-align: left;
-  }
-  .WealthyLife_GlobalNavigation .text-right {
-    text-align: right;
-  }
-  .WealthyLife_GlobalNavigation .relative {
-    position: relative;
-  }
-  .WealthyLife_GlobalNavigation .bold {
-    font-weight: bold;
-  }
-  .WealthyLife_GlobalNavigation:before {
-    content: " ";
-    display: table;
-  }
-  .WealthyLife_GlobalNavigation:after {
-    content: " ";
-    display: table;
-    visibility: hidden;
-    display: block;
-    font-size: 0;
-    content: " ";
-    clear: both;
-    height: 0;
-  }
-  .WealthyLife_GlobalNavigation [class^="icon-"],
-  .WealthyLife_GlobalNavigation [class*=" icon-"] {
-    font-family: "practicon" !important;
-    // speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    width: auto;
-    height: auto;
-    background: none;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  .WealthyLife_GlobalNavigation .navbar {
-    height: 60px;
-    background-color: #fff;
-    font-family: "Camphor", "Open Sans", sans-serif;
-    padding: 0;
-    color: #414146;
-    box-sizing: border-box;
-    border-bottom: 1px solid #f0f0f5;
-    border-radius: 0;
-  }
-  .WealthyLife_GlobalNavigation .navbar * {
-    box-sizing: border-box;
-  }
-  .WealthyLife_GlobalNavigation .navbar .wrapper {
-    cursor: auto;
-    display: block;
-    width: 100%;
-    height: 100%;
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 0 50px;
-  }
-  .WealthyLife_GlobalNavigation .navbar a {
-    text-decoration: none;
-  }
-  .WealthyLife_GlobalNavigation .navbar .overlay_layer {
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    background-color: #787887;
-    z-index: 100;
-    visibility: hidden;
-    opacity: 0;
-    transition: all 0.3s ease-out;
-    -webkit-transition: all 0.3s ease-out;
-    -moz-transition: all 0.3s ease-out;
-    -o-transition: all 0.3s ease-out;
-    -ms-transition: all 0.3s ease-out;
+}
+.WealthyLife_GlobalNavigation {
+  width: 100%;
+  z-index: 2000;
+  top: 0;
+}
+.WealthyLife_GlobalNavigation .navbar .nav-left,
+.WealthyLife_GlobalNavigation .navbar .nav-mid,
+.WealthyLife_GlobalNavigation .navbar .nav-right {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.WealthyLife_GlobalNavigation .text-left {
+  text-align: left;
+}
+.WealthyLife_GlobalNavigation .text-right {
+  text-align: right;
+}
+.WealthyLife_GlobalNavigation .relative {
+  position: relative;
+}
+.WealthyLife_GlobalNavigation .bold {
+  font-weight: bold;
+}
+.WealthyLife_GlobalNavigation:before {
+  content: " ";
+  display: table;
+}
+.WealthyLife_GlobalNavigation:after {
+  content: " ";
+  display: table;
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.WealthyLife_GlobalNavigation [class^="icon-"],
+.WealthyLife_GlobalNavigation [class*=" icon-"] {
+  font-family: "practicon" !important;
+  // speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  width: auto;
+  height: auto;
+  background: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.WealthyLife_GlobalNavigation .navbar {
+  height: 60px;
+  background-color: #fff;
+  font-family: "Camphor", "Open Sans", sans-serif;
+  padding: 0;
+  color: #414146;
+  box-sizing: border-box;
+  border-bottom: 1px solid #f0f0f5;
+  border-radius: 0;
+}
+.WealthyLife_GlobalNavigation .navbar * {
+  box-sizing: border-box;
+}
+.WealthyLife_GlobalNavigation .navbar .wrapper {
+  cursor: auto;
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+.WealthyLife_GlobalNavigation .navbar a {
+  text-decoration: none;
+}
+.WealthyLife_GlobalNavigation .navbar .overlay_layer {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: #787887;
+  z-index: 100;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+}
+.WealthyLife_GlobalNavigation .navbar.desktop {
+  height: 74px;
+}
+.WealthyLife_GlobalNavigation .navbar.desktop .WealthyLife_logo_new {
+  transform: scale(1.08);
+  -ms-transform: scale(1.08);
+  -webkit-transform: scale(1.08);
+  -ms-transform: scale(1.08);
+  -o-transform: scale(1.08);
+}
+.WealthyLife_GlobalNavigation .navbar.mobile {
+  padding: 0;
+  line-height: 60px;
+}
+.WealthyLife_GlobalNavigation .navbar.mobile .overlay {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 90%;
+  z-index: 1000;
+  background: #fff;
+  overflow-x: hidden;
+  overflow-y: auto;
+  transform: translateX(-100%);
+  transition: transform 0.3s cubic-bezier(0, 0, 0.3, 1);
+  -webkit-transition: transform 0.3s cubic-bezier(0, 0, 0.3, 1);
+  -moz-transition: transform 0.3s cubic-bezier(0, 0, 0.3, 1);
+  -o-transition: transform 0.3s cubic-bezier(0, 0, 0.3, 1);
+  -ms-transition: transform 0.3s cubic-bezier(0, 0, 0.3, 1);
+}
+.WealthyLife_GlobalNavigation .navbar.mobile .overlay .navlist .header {
+  padding: 18px 10px 17px;
+  background-color: #fafafa;
+  height: 60px;
+  margin-bottom: 12px;
+}
+.WealthyLife_GlobalNavigation .navbar.mobile .overlay .navlist .header .WealthyLife_logo_new {
+  margin-left: 12px;
+}
+.WealthyLife_GlobalNavigation {
+  font-family: "Camphor";
+  font-weight: 400;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.WealthyLife_GlobalNavigation .navbar {
+  margin: 0;
+}
+.WealthyLife_GlobalNavigation .navbar a:focus,
+.WealthyLife_GlobalNavigation .navbar i:focus,
+.WealthyLife_GlobalNavigation .navbar div:focus,
+.WealthyLife_GlobalNavigation .navbar span:focus {
+  outline: none !important;
+}
+.WealthyLife_GlobalNavigation .navbar a::-moz-selection,
+.WealthyLife_GlobalNavigation .navbar a::selection,
+.WealthyLife_GlobalNavigation .navbar a::-webkit-selection,
+.WealthyLife_GlobalNavigation .navbar i::-moz-selection,
+.WealthyLife_GlobalNavigation .navbar i::selection,
+.WealthyLife_GlobalNavigation .navbar i::-webkit-selection,
+.WealthyLife_GlobalNavigation .navbar div::-moz-selection,
+.WealthyLife_GlobalNavigation .navbar div::selection,
+.WealthyLife_GlobalNavigation .navbar div::-webkit-selection,
+.WealthyLife_GlobalNavigation .navbar span::-moz-selection,
+.WealthyLife_GlobalNavigation .navbar span::selection,
+.WealthyLife_GlobalNavigation .navbar span::-webkit-selection {
+  color: transparent;
+}
+.WealthyLife_GlobalNavigation .navbar .nav-left,
+.WealthyLife_GlobalNavigation .navbar .nav-mid,
+.WealthyLife_GlobalNavigation .navbar .nav-right {
+  display: inline-block;
+  height: 100%;
+  vertical-align: top;
+}
+.WealthyLife_GlobalNavigation .navbar .nav-left {
+  vertical-align: middle;
+  width: 158px;
+  box-sizing: border-box;
+  padding: 24px 0 23px;
+}
+.WealthyLife_GlobalNavigation .navbar .nav-left .ic::before {
+  line-height: 36px;
+}
+.WealthyLife_GlobalNavigation .navbar .nav-left .WealthyLife-logo {
+  line-height: 27px;
+}
+.WealthyLife_GlobalNavigation .navbar .nav-mid {
+  display: inline-block;
+}
+.WealthyLife_GlobalNavigation .navbar .nav-mid .product-tab {
+  display: inline-block;
+  min-width: 112px;
+  margin-right: 20px;
+  padding: 22px 0 9px;
+}
+.WealthyLife_GlobalNavigation .navbar .nav-mid .product-tab:last-of-type {
+  margin-right: 0;
+}
+.WealthyLife_GlobalNavigation .navbar .nav-mid .product-tab__title {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: bold;
+  color: #2d2d32;
+  letter-spacing: -0.3px;
+}
+.WealthyLife_GlobalNavigation .navbar .nav-mid .product-tab__subtitle {
+  font-size: 12px;
+  line-height: 18px;
+  color: #787887;
+  letter-spacing: -0.1px;
+}
+.WealthyLife_GlobalNavigation .navbar .nav-right {
+  float: right;
+  padding: 20px 0 19px;
+}
+.WealthyLife_GlobalNavigation .navbar .nav-items {
+  display: inline-block;
+  margin-right: 15px;
+}
+.WealthyLife_GlobalNavigation .navbar .nav-items.hover-dark a {
+  color: #414146;
+  line-height: 35px;
+}
+.WealthyLife_GlobalNavigation .navbar .nav-items:last-child {
+  margin-right: 0px;
+}
+.WealthyLife_GlobalNavigation .navbar .navlist {
+  position: relative;
+  height: 100%;
+  background-color: #fff;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  min-height: auto;
+  width: 100%;
+}
+.WealthyLife_GlobalNavigation .navbar .navlist a {
+  color: #414146;
+  display: block;
+  padding: 8px 0;
+  clear: both;
+  position: relative;
+  cursor: pointer;
+}
+.WealthyLife_GlobalNavigation .navbar .navlist .top-bar .navlink:last-of-type {
+  margin-bottom: 0;
+}
+.WealthyLife_GlobalNavigation .navbar .navlist .navlink {
+  margin: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+  vertical-align: top;
+  display: block;
+  clear: both;
+  padding: 0 0 0 24px;
+}
+.WealthyLife_GlobalNavigation .navbar .navlist .navlink a i {
+  margin: 0 10px 0 0;
+}
+.WealthyLife_GlobalNavigation .navbar .navlist .navlink:last-of-type {
+  margin-bottom: 18px;
+}
+.WealthyLife_GlobalNavigation .navbar .navlist .navlink .icon-ic_next_cheveron {
+  float: right;
+  color: #b4b4be;
+  font-size: 14px;
+  margin-top: 1px;
+}
+.WealthyLife_GlobalNavigation .navbar .navlist .separator {
+  height: 3px;
+  border: 1.5px solid #f0f0f5;
+  border-radius: 2px;
+  margin: 12px auto;
+  width: calc(100% - 34px);
+}
+.WealthyLife_GlobalNavigation .navbar .WealthyLife_logo_new,
+.WealthyLife_GlobalNavigation .navbar .ic,
+.WealthyLife_GlobalNavigation .navbar .hamburger,
+.WealthyLife_GlobalNavigation .navbar .downarrow {
+  vertical-align: middle;
+  display: inline-block;
+}
+.WealthyLife_GlobalNavigation .navbar .WealthyLife_logo_new {
+  background: url(https://www.WealthyLifestatic.com/nav/9.1.1/consumer/images/WealthyLife.svg) no-repeat;
+  height: 23px;
+  width: 100px;
+  margin: -3px 0 0 0;
+}
+.WealthyLife_GlobalNavigation .navbar .ic {
+  font-size: 24px;
+  line-height: 30px;
+  color: #414146;
+}
+.WealthyLife_GlobalNavigation .navbar .ic.icon-ic_done_badge {
+  color: #9f3bff;
+}
+.WealthyLife_GlobalNavigation .navbar .hamburger {
+  margin: 0 !important;
+}
+.WealthyLife_GlobalNavigation .navbar .hamburger:hover {
+  cursor: pointer;
+}
+.WealthyLife_GlobalNavigation .navbar .downarrow {
+  font-size: 15px;
+  line-height: 30px;
+  padding: 0 1px;
+  cursor: pointer;
+}
+.WealthyLife_GlobalNavigation .navbar .download {
+  padding: 0 16px 6px;
+  margin-top: 6px;
+}
+.WealthyLife_GlobalNavigation .navbar .download .appdownload-block {
+  height: 72px;
+  background-color: #f0f0f5;
+  border-radius: 4px;
+  padding: 16px 0;
+}
+.WealthyLife_GlobalNavigation .navbar .download i.ic {
+  font-size: 39px;
+  margin: 0px -3px;
+  display: inline-block;
+  opacity: 0.3;
+}
+.WealthyLife_GlobalNavigation .navbar .download__copy {
+  display: inline-block;
+  width: calc(100% - 50px);
+  vertical-align: middle;
+}
+.WealthyLife_GlobalNavigation .navbar .download__copy__title {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 14px;
+  color: #414146;
+}
+.WealthyLife_GlobalNavigation .navbar .download__copy__subtitle {
+  font-size: 12px;
+  line-height: 12px;
+  color: #787887;
+  margin-top: 5px;
+}
+.WealthyLife_GlobalNavigation .new {
+  float: right;
+  background: #ff7800;
+  padding: 2px 5px;
+  font-size: 10px;
+  box-sizing: content-box;
+  color: white;
+  vertical-align: middle;
+  display: inline;
+  line-height: 12px;
+  border-radius: 2px;
+  margin-top: 10px;
+  text-transform: uppercase;
+}
+.WealthyLife_GlobalNavigation .navbar .dropdown-toggle {
+  position: relative;
+  cursor: pointer;
+  line-height: 35px;
+}
+.WealthyLife_GlobalNavigation .navbar .dropdown-toggle.push-droparrow .nav-dropdown {
+  margin-top: 7px;
+}
+.WealthyLife_GlobalNavigation .navbar .nav-dropdown {
+  cursor: auto;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  z-index: -1;
+  opacity: 0;
+  visibility: hidden;
+  background-color: #fff;
+  color: #414146;
+  padding: 5px 0;
+  margin-top: 4px;
+  width: 223px;
+  border-radius: 2px;
+  border: solid 1px #f0f0f5;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.11);
+  -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.11);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.11);
+  -webkit-transition: all 0.1s ease-out;
+  -moz-transition: all 0.1s ease-out;
+  -ms-transition: all 0.1s ease-out;
+  -o-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+}
+.WealthyLife_GlobalNavigation .navbar .nav-dropdown a {
+  text-decoration: none;
+  color: inherit;
+}
+.WealthyLife_GlobalNavigation .navbar .u-info .profile-img {
+  height: 40px;
+  width: 40px;
+  vertical-align: middle;
+}
+.WealthyLife_GlobalNavigation .navbar .u-user-head {
+  padding: 10px 20px;
+}
+.WealthyLife_GlobalNavigation .navbar .u-name {
+  display: inline-block;
+  width: 115px;
+  margin: 0 0 0 10px;
+  vertical-align: top;
+  text-transform: capitalize;
+}
+.WealthyLife_GlobalNavigation .navbar .u-name a {
+  color: #414146;
+  word-wrap: break-word;
+  width: 100px;
+  display: block;
+}
+.WealthyLife_GlobalNavigation .navbar .u-name .user_name {
+  padding: 0;
+}
+.WealthyLife_GlobalNavigation .navbar .u-name .number {
+  padding: 10px 0;
+  color: #787887;
+}
+.WealthyLife_GlobalNavigation .navbar .u-d-item {
+  cursor: pointer;
+  padding: 0;
+}
+.WealthyLife_GlobalNavigation .navbar .u-d-item a {
+  padding: 10px 20px;
+  display: block;
+}
+.WealthyLife_GlobalNavigation .navbar .u-d-item.product-switch {
+  border-top: 2px solid #f0f0f5;
+}
+.WealthyLife_GlobalNavigation .navbar .u-d-item.product-switch a {
+  padding: 0 20px 10px 20px;
+}
+.WealthyLife_GlobalNavigation .navbar .u-d-item.product-switch a div:first-child {
+  font-weight: bold;
+  padding: 10px 0;
+}
+.WealthyLife_GlobalNavigation .navbar .u-d-item.product-switch:hover a div:first-child {
+  color: #ff7800;
+}
+.WealthyLife_GlobalNavigation .navbar .u-d-item.product-switch .icon-ic_next_cheveron:before {
+  font-weight: bold;
+}
+.WealthyLife_GlobalNavigation .navbar .u-d.nav-dropdown .u-d-item:hover {
+  background-color: #f0f0f5;
+}
+.WealthyLife_GlobalNavigation .navbar .user_info_top {
+  max-width: 69px;
+  display: inline-block;
+  margin: 0 auto;
+  padding: 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  vertical-align: middle;
+  color: #414146;
+  cursor: pointer;
+  white-space: nowrap;
+  text-transform: capitalize;
+}
+.WealthyLife_GlobalNavigation .navbar.mobile {
+  display: none;
+}
+.WealthyLife_GlobalNavigation .navbar.mobile .wrapper {
+  box-sizing: border-box;
+  padding: 0 10px;
+}
+.WealthyLife_GlobalNavigation .navbar.mobile .u-d.nav-dropdown {
+  border: none;
+  box-shadow: none;
+  z-index: 100;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  right: 0;
+  top: 60px;
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  background: #ffffff;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: 0.2s;
+}
+.WealthyLife_GlobalNavigation .navbar.mobile .u-d-item.product-switch a {
+  padding: 10px 20px 20px 20px;
+}
+@media only screen and (min-width: 801px) {
+  .WealthyLife_GlobalNavigation .navbar.mobile {
+    display: none !important;
   }
   .WealthyLife_GlobalNavigation .navbar.desktop {
-    height: 74px;
+    display: block !important;
   }
-  .WealthyLife_GlobalNavigation .navbar.desktop .WealthyLife_logo_new {
-    transform: scale(1.08);
-    -ms-transform: scale(1.08);
-    -webkit-transform: scale(1.08);
-    -ms-transform: scale(1.08);
-    -o-transform: scale(1.08);
+}
+@media only screen and (max-width: 800px) {
+  .WealthyLife_GlobalNavigation .navbar {
+    position: relative;
+  }
+  .WealthyLife_GlobalNavigation .navbar.desktop {
+    display: none !important;
   }
   .WealthyLife_GlobalNavigation .navbar.mobile {
-    padding: 0;
-    line-height: 60px;
-  }
-  .WealthyLife_GlobalNavigation .navbar.mobile .overlay {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 90%;
-    z-index: 1000;
-    background: #fff;
-    overflow-x: hidden;
-    overflow-y: auto;
-    transform: translateX(-100%);
-    transition: transform 0.3s cubic-bezier(0, 0, 0.3, 1);
-    -webkit-transition: transform 0.3s cubic-bezier(0, 0, 0.3, 1);
-    -moz-transition: transform 0.3s cubic-bezier(0, 0, 0.3, 1);
-    -o-transition: transform 0.3s cubic-bezier(0, 0, 0.3, 1);
-    -ms-transition: transform 0.3s cubic-bezier(0, 0, 0.3, 1);
-  }
-  .WealthyLife_GlobalNavigation .navbar.mobile .overlay .navlist .header {
-    padding: 18px 10px 17px;
     background-color: #fafafa;
-    height: 60px;
-    margin-bottom: 12px;
-  }
-  .WealthyLife_GlobalNavigation
-    .navbar.mobile
-    .overlay
-    .navlist
-    .header
-    .WealthyLife_logo_new {
-    margin-left: 12px;
-  }
-  .WealthyLife_GlobalNavigation {
-    font-family: "Camphor";
-    font-weight: 400;
-    -webkit-tap-highlight-color: transparent;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
-  .WealthyLife_GlobalNavigation .navbar {
-    margin: 0;
-  }
-  .WealthyLife_GlobalNavigation .navbar a:focus,
-  .WealthyLife_GlobalNavigation .navbar i:focus,
-  .WealthyLife_GlobalNavigation .navbar div:focus,
-  .WealthyLife_GlobalNavigation .navbar span:focus {
-    outline: none !important;
-  }
-  .WealthyLife_GlobalNavigation .navbar a::-moz-selection,
-  .WealthyLife_GlobalNavigation .navbar a::selection,
-  .WealthyLife_GlobalNavigation .navbar a::-webkit-selection,
-  .WealthyLife_GlobalNavigation .navbar i::-moz-selection,
-  .WealthyLife_GlobalNavigation .navbar i::selection,
-  .WealthyLife_GlobalNavigation .navbar i::-webkit-selection,
-  .WealthyLife_GlobalNavigation .navbar div::-moz-selection,
-  .WealthyLife_GlobalNavigation .navbar div::selection,
-  .WealthyLife_GlobalNavigation .navbar div::-webkit-selection,
-  .WealthyLife_GlobalNavigation .navbar span::-moz-selection,
-  .WealthyLife_GlobalNavigation .navbar span::selection,
-  .WealthyLife_GlobalNavigation .navbar span::-webkit-selection {
-    color: transparent;
-  }
-  .WealthyLife_GlobalNavigation .navbar .nav-left,
-  .WealthyLife_GlobalNavigation .navbar .nav-mid,
-  .WealthyLife_GlobalNavigation .navbar .nav-right {
-    display: inline-block;
-    height: 100%;
-    vertical-align: top;
+    display: block !important;
   }
   .WealthyLife_GlobalNavigation .navbar .nav-left {
-    vertical-align: middle;
-    width: 158px;
-    box-sizing: border-box;
-    padding: 24px 0 23px;
+    padding: 0;
+    margin: 0;
+    width: auto;
   }
-  .WealthyLife_GlobalNavigation .navbar .nav-left .ic::before {
-    line-height: 36px;
+  .WealthyLife_GlobalNavigation .navbar .nav-left .ic {
+    margin-top: -4px;
   }
-  .WealthyLife_GlobalNavigation .navbar .nav-left .WealthyLife-logo {
-    line-height: 27px;
+  .WealthyLife_GlobalNavigation .navbar .nav-left .hamburger {
+    font-size: 22px;
+    line-height: 24px;
+    margin-top: 0;
   }
   .WealthyLife_GlobalNavigation .navbar .nav-mid {
     display: inline-block;
+    vertical-align: middle;
+    width: 100px;
+    z-index: 30;
+    margin: auto;
+    margin-left: 10px;
   }
-  .WealthyLife_GlobalNavigation .navbar .nav-mid .product-tab {
-    display: inline-block;
-    min-width: 112px;
-    margin-right: 20px;
-    padding: 22px 0 9px;
+  .WealthyLife_GlobalNavigation .navbar .nav-mid a {
+    display: block;
+    width: 100%;
   }
-  .WealthyLife_GlobalNavigation .navbar .nav-mid .product-tab:last-of-type {
-    margin-right: 0;
+  .WealthyLife_GlobalNavigation .navbar .nav-mid a .WealthyLife_logo_new {
+    display: block;
+    margin: 0 auto;
   }
-  .WealthyLife_GlobalNavigation .navbar .nav-mid .product-tab__title {
-    font-size: 16px;
-    line-height: 20px;
-    font-weight: bold;
-    color: #2d2d32;
-    letter-spacing: -0.3px;
-  }
-  .WealthyLife_GlobalNavigation .navbar .nav-mid .product-tab__subtitle {
-    font-size: 12px;
-    line-height: 18px;
-    color: #787887;
-    letter-spacing: -0.1px;
+  .WealthyLife_GlobalNavigation .navbar .nav-mid.new_logo_wrap {
+    height: 23px !important;
   }
   .WealthyLife_GlobalNavigation .navbar .nav-right {
-    float: right;
-    padding: 20px 0 19px;
+    padding: 0;
   }
-  .WealthyLife_GlobalNavigation .navbar .nav-items {
+  .WealthyLife_GlobalNavigation .navbar .nav-right .nav-items.dropdown-toggle {
     display: inline-block;
-    margin-right: 15px;
+    margin: 0 0 0 15px;
   }
-  .WealthyLife_GlobalNavigation .navbar .nav-items.hover-dark a {
-    color: #414146;
-    line-height: 35px;
+  .WealthyLife_GlobalNavigation .navbar .nav-right .user_info_top {
+    max-width: 62px;
+    margin-top: -1px;
   }
-  .WealthyLife_GlobalNavigation .navbar .nav-items:last-child {
-    margin-right: 0px;
-  }
-  .WealthyLife_GlobalNavigation .navbar .navlist {
-    position: relative;
-    height: 100%;
-    background-color: #fff;
-    display: inline-block;
-    position: absolute;
-    left: 0;
-    min-height: auto;
-    width: 100%;
-  }
-  .WealthyLife_GlobalNavigation .navbar .navlist a {
-    color: #414146;
-    display: block;
-    padding: 8px 0;
-    clear: both;
-    position: relative;
-    cursor: pointer;
-  }
-  .WealthyLife_GlobalNavigation .navbar .navlist .top-bar .navlink:last-of-type {
-    margin-bottom: 0;
-  }
-  .WealthyLife_GlobalNavigation .navbar .navlist .navlink {
-    margin: 0;
-    max-width: 100%;
-    box-sizing: border-box;
-    vertical-align: top;
-    display: block;
-    clear: both;
-    padding: 0 0 0 24px;
-  }
-  .WealthyLife_GlobalNavigation .navbar .navlist .navlink a i {
-    margin: 0 10px 0 0;
-  }
-  .WealthyLife_GlobalNavigation .navbar .navlist .navlink:last-of-type {
-    margin-bottom: 18px;
-  }
-  .WealthyLife_GlobalNavigation .navbar .navlist .navlink .icon-ic_next_cheveron {
-    float: right;
-    color: #b4b4be;
-    font-size: 14px;
-    margin-top: 1px;
-  }
-  .WealthyLife_GlobalNavigation .navbar .navlist .separator {
-    height: 3px;
-    border: 1.5px solid #f0f0f5;
-    border-radius: 2px;
-    margin: 12px auto;
-    width: calc(100% - 34px);
-  }
-  .WealthyLife_GlobalNavigation .navbar .WealthyLife_logo_new,
-  .WealthyLife_GlobalNavigation .navbar .ic,
-  .WealthyLife_GlobalNavigation .navbar .hamburger,
-  .WealthyLife_GlobalNavigation .navbar .downarrow {
-    vertical-align: middle;
-    display: inline-block;
-  }
-  .WealthyLife_GlobalNavigation .navbar .WealthyLife_logo_new {
-    background: url(https://www.WealthyLifestatic.com/nav/9.1.1/consumer/images/WealthyLife.svg)
-      no-repeat;
-    height: 23px;
-    width: 100px;
-    margin: -3px 0 0 0;
-  }
-  .WealthyLife_GlobalNavigation .navbar .ic {
-    font-size: 24px;
-    line-height: 30px;
-    color: #414146;
-  }
-  .WealthyLife_GlobalNavigation .navbar .ic.icon-ic_done_badge {
-    color: #9f3bff;
-  }
-  .WealthyLife_GlobalNavigation .navbar .hamburger {
-    margin: 0 !important;
-  }
-  .WealthyLife_GlobalNavigation .navbar .hamburger:hover {
-    cursor: pointer;
-  }
-  .WealthyLife_GlobalNavigation .navbar .downarrow {
-    font-size: 15px;
-    line-height: 30px;
-    padding: 0 1px;
-    cursor: pointer;
-  }
-  .WealthyLife_GlobalNavigation .navbar .download {
-    padding: 0 16px 6px;
-    margin-top: 6px;
-  }
-  .WealthyLife_GlobalNavigation .navbar .download .appdownload-block {
-    height: 72px;
-    background-color: #f0f0f5;
-    border-radius: 4px;
-    padding: 16px 0;
-  }
-  .WealthyLife_GlobalNavigation .navbar .download i.ic {
-    font-size: 39px;
-    margin: 0px -3px;
-    display: inline-block;
-    opacity: 0.3;
-  }
-  .WealthyLife_GlobalNavigation .navbar .download__copy {
-    display: inline-block;
-    width: calc(100% - 50px);
-    vertical-align: middle;
-  }
-  .WealthyLife_GlobalNavigation .navbar .download__copy__title {
-    font-weight: bold;
-    font-size: 14px;
-    line-height: 14px;
-    color: #414146;
-  }
-  .WealthyLife_GlobalNavigation .navbar .download__copy__subtitle {
-    font-size: 12px;
-    line-height: 12px;
-    color: #787887;
-    margin-top: 5px;
-  }
-  .WealthyLife_GlobalNavigation .new {
-    float: right;
-    background: #ff7800;
-    padding: 2px 5px;
-    font-size: 10px;
-    box-sizing: content-box;
-    color: white;
-    vertical-align: middle;
-    display: inline;
-    line-height: 12px;
-    border-radius: 2px;
-    margin-top: 10px;
-    text-transform: uppercase;
-  }
-  .WealthyLife_GlobalNavigation .navbar .dropdown-toggle {
-    position: relative;
-    cursor: pointer;
-    line-height: 35px;
-  }
-  .WealthyLife_GlobalNavigation
-    .navbar
-    .dropdown-toggle.push-droparrow
-    .nav-dropdown {
-    margin-top: 7px;
-  }
-  .WealthyLife_GlobalNavigation .navbar .nav-dropdown {
-    cursor: auto;
-    overflow: hidden;
-    position: absolute;
-    right: 0;
-    z-index: -1;
-    opacity: 0;
-    visibility: hidden;
-    background-color: #fff;
-    color: #414146;
-    padding: 5px 0;
-    margin-top: 4px;
-    width: 223px;
-    border-radius: 2px;
-    border: solid 1px #f0f0f5;
-    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.11);
-    -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.11);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.11);
-    -webkit-transition: all 0.1s ease-out;
-    -moz-transition: all 0.1s ease-out;
-    -ms-transition: all 0.1s ease-out;
-    -o-transition: all 0.1s ease-out;
-    transition: all 0.1s ease-out;
-  }
-  .WealthyLife_GlobalNavigation .navbar .nav-dropdown a {
-    text-decoration: none;
-    color: inherit;
-  }
-  .WealthyLife_GlobalNavigation .navbar .u-info .profile-img {
-    height: 40px;
-    width: 40px;
-    vertical-align: middle;
-  }
-  .WealthyLife_GlobalNavigation .navbar .u-user-head {
-    padding: 10px 20px;
+  .WealthyLife_GlobalNavigation .navbar .overlay {
+    top: 0px;
   }
   .WealthyLife_GlobalNavigation .navbar .u-name {
-    display: inline-block;
-    width: 115px;
-    margin: 0 0 0 10px;
-    vertical-align: top;
-    text-transform: capitalize;
+    width: 50%;
   }
   .WealthyLife_GlobalNavigation .navbar .u-name a {
-    color: #414146;
-    word-wrap: break-word;
-    width: 100px;
-    display: block;
+    width: 100%;
   }
-  .WealthyLife_GlobalNavigation .navbar .u-name .user_name {
-    padding: 0;
+  .WealthyLife_GlobalNavigation .navbar .u-info {
+    margin: 12px 0;
   }
-  .WealthyLife_GlobalNavigation .navbar .u-name .number {
-    padding: 10px 0;
-    color: #787887;
+  .WealthyLife_GlobalNavigation .navbar .navlist .top-bar .navlink {
+    padding-left: 10px;
   }
-  .WealthyLife_GlobalNavigation .navbar .u-d-item {
-    cursor: pointer;
-    padding: 0;
+  .WealthyLife_GlobalNavigation .navbar .navlist .navlink {
+    padding: 0 0 0 16px;
   }
-  .WealthyLife_GlobalNavigation .navbar .u-d-item a {
-    padding: 10px 20px;
-    display: block;
+  .WealthyLife_GlobalNavigation .navbar .navlist .navlink a {
+    font-size: 14px;
+    line-height: 25px;
+    padding: 12px 0;
   }
-  .WealthyLife_GlobalNavigation .navbar .u-d-item.product-switch {
-    border-top: 2px solid #f0f0f5;
-  }
-  .WealthyLife_GlobalNavigation .navbar .u-d-item.product-switch a {
-    padding: 0 20px 10px 20px;
-  }
-  .WealthyLife_GlobalNavigation
-    .navbar
-    .u-d-item.product-switch
-    a
-    div:first-child {
-    font-weight: bold;
-    padding: 10px 0;
-  }
-  .WealthyLife_GlobalNavigation
-    .navbar
-    .u-d-item.product-switch:hover
-    a
-    div:first-child {
-    color: #ff7800;
-  }
-  .WealthyLife_GlobalNavigation
-    .navbar
-    .u-d-item.product-switch
-    .icon-ic_next_cheveron:before {
-    font-weight: bold;
-  }
-  .WealthyLife_GlobalNavigation .navbar .u-d.nav-dropdown .u-d-item:hover {
-    background-color: #f0f0f5;
-  }
-  .WealthyLife_GlobalNavigation .navbar .user_info_top {
-    max-width: 69px;
-    display: inline-block;
-    margin: 0 auto;
-    padding: 0;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    vertical-align: middle;
-    color: #414146;
-    cursor: pointer;
-    white-space: nowrap;
-    text-transform: capitalize;
-  }
-  .WealthyLife_GlobalNavigation .navbar.mobile {
-    display: none;
-  }
-  .WealthyLife_GlobalNavigation .navbar.mobile .wrapper {
-    box-sizing: border-box;
-    padding: 0 10px;
-  }
-  .WealthyLife_GlobalNavigation .navbar.mobile .u-d.nav-dropdown {
+  .WealthyLife_GlobalNavigation .navbar .navlist .navlink:focus {
+    background: #f4f4f4;
+    outline: none;
     border: none;
-    box-shadow: none;
-    z-index: 100;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: auto;
-    right: 0;
-    top: 60px;
-    margin: 0;
-    box-sizing: border-box;
-    padding: 0;
-    background: #ffffff;
-    overflow-y: auto;
-    overflow-x: hidden;
-    transition: 0.2s;
   }
-  .WealthyLife_GlobalNavigation .navbar.mobile .u-d-item.product-switch a {
-    padding: 10px 20px 20px 20px;
+  .WealthyLife_GlobalNavigation .navbar .navlist .navlink:focus a {
+    background: #f4f4f4;
+    outline: none;
+    border: none;
   }
-  @media only screen and (min-width: 801px) {
-    .WealthyLife_GlobalNavigation .navbar.mobile {
-      display: none !important;
-    }
-    .WealthyLife_GlobalNavigation .navbar.desktop {
-      display: block !important;
-    }
-  }
-  @media only screen and (max-width: 800px) {
-    .WealthyLife_GlobalNavigation .navbar {
-      position: relative;
-    }
-    .WealthyLife_GlobalNavigation .navbar.desktop {
-      display: none !important;
-    }
-    .WealthyLife_GlobalNavigation .navbar.mobile {
-      background-color: #fafafa;
-      display: block !important;
-    }
-    .WealthyLife_GlobalNavigation .navbar .nav-left {
-      padding: 0;
-      margin: 0;
-      width: auto;
-    }
-    .WealthyLife_GlobalNavigation .navbar .nav-left .ic {
-      margin-top: -4px;
-    }
-    .WealthyLife_GlobalNavigation .navbar .nav-left .hamburger {
-      font-size: 22px;
-      line-height: 24px;
-      margin-top: 0;
-    }
-    .WealthyLife_GlobalNavigation .navbar .nav-mid {
-      display: inline-block;
-      vertical-align: middle;
-      width: 100px;
-      z-index: 30;
-      margin: auto;
-      margin-left: 10px;
-    }
-    .WealthyLife_GlobalNavigation .navbar .nav-mid a {
-      display: block;
-      width: 100%;
-    }
-    .WealthyLife_GlobalNavigation .navbar .nav-mid a .WealthyLife_logo_new {
-      display: block;
-      margin: 0 auto;
-    }
-    .WealthyLife_GlobalNavigation .navbar .nav-mid.new_logo_wrap {
-      height: 23px !important;
-    }
-    .WealthyLife_GlobalNavigation .navbar .nav-right {
-      padding: 0;
-    }
-    .WealthyLife_GlobalNavigation .navbar .nav-right .nav-items.dropdown-toggle {
-      display: inline-block;
-      margin: 0 0 0 15px;
-    }
-    .WealthyLife_GlobalNavigation .navbar .nav-right .user_info_top {
-      max-width: 62px;
-      margin-top: -1px;
-    }
-    .WealthyLife_GlobalNavigation .navbar .overlay {
-      top: 0px;
-    }
-    .WealthyLife_GlobalNavigation .navbar .u-name {
-      width: 50%;
-    }
-    .WealthyLife_GlobalNavigation .navbar .u-name a {
-      width: 100%;
-    }
-    .WealthyLife_GlobalNavigation .navbar .u-info {
-      margin: 12px 0;
-    }
-    .WealthyLife_GlobalNavigation .navbar .navlist .top-bar .navlink {
-      padding-left: 10px;
-    }
-    .WealthyLife_GlobalNavigation .navbar .navlist .navlink {
-      padding: 0 0 0 16px;
-    }
-    .WealthyLife_GlobalNavigation .navbar .navlist .navlink a {
-      font-size: 14px;
-      line-height: 25px;
-      padding: 12px 0;
-    }
-    .WealthyLife_GlobalNavigation .navbar .navlist .navlink:focus {
-      background: #f4f4f4;
-      outline: none;
-      border: none;
-    }
-    .WealthyLife_GlobalNavigation .navbar .navlist .navlink:focus a {
-      background: #f4f4f4;
-      outline: none;
-      border: none;
-    }
-    .WealthyLife_GlobalNavigation .navbar .ic {
-      font-size: 20px;
-      line-height: 25px;
-    }
-    .WealthyLife_GlobalNavigation .navbar .downarrow {
-      padding: 0;
-    }
-  }
-  @media only screen and (max-width: 364px) {
-    .WealthyLife_GlobalNavigation .mobile.navbar .navlink .icon-ic_next_cheveron {
-      display: none;
-    }
-  }
-  @media only screen and (max-width: 320px) {
-    .WealthyLife_GlobalNavigation .mobile.navbar .overlay {
-      width: 100%;
-    }
-  }
-  @media only screen and (min-width: 801px) and (max-width: 1110px) {
-    .WealthyLife_GlobalNavigation .navbar .nav-mid {
-      display: none;
-    }
-    .WealthyLife_GlobalNavigation .navbar .providers-marketing {
-      display: inline-block;
-    }
-  }
-  @media only screen and (min-width: 1111px) and (max-width: 1240px) {
-    .WealthyLife_GlobalNavigation .navbar .providers-marketing {
-      display: none;
-    }
-  }
-  /*! CSS Used from: https://www.WealthyLifestatic.com/web-assets/stylesheets/omni.8ddd7a6ea145.css */
-  .c-omni-searchbox_wrapper {
-    position: relative;
-  }
-  .c-omni-searchbox__icon {
-    font-size: 16px;
-    position: absolute;
-    top: 50%;
-    left: 5px;
-    width: 30px;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
-  }
-  .c-omni-searchbox {
-    width: 100%;
-    font-family: inherit;
-    font-size: inherit;
-    line-height: 1.4;
-    padding: 6px 20px 5px 30px;
-    color: inherit;
-    border-radius: 2px;
-    border: 1px solid #b4b4be;
-    cursor: pointer;
-    outline: 0;
-    -moz-appearance: none;
-    appearance: none;
-    -webkit-appearance: none;
-    background: #fff;
-  }
-  .c-omni-searchbox:active,
-  .c-omni-searchbox:focus {
-    border-color: #787887;
-  }
-  .c-omni-searchbox--small {
-    height: 40px;
-  }
-  .u-bold {
-    font-weight: 700;
-  }
-  .u-clearfix:after,
-  .u-clearfix:before {
-    content: "";
-    display: table;
-  }
-  .u-clearfix:after {
-    clear: both;
-  }
-  .u-clearfix {
-    zoom: 1;
-  }
-  .c-omni {
-    width: 100%;
-    color: #414146;
-    font-size: 14px;
-    line-height: 1.4;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-text-size-adjust: 100%;
-    -moz-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
-    text-size-adjust: 100%;
-  }
-  .c-omni__wrapper {
-    position: relative;
-  }
-  .c-omni-container--desktop .c-omni__wrapper {
-    display: inline-block;
-    float: left;
-    margin: 0;
-  }
-  .c-omni-container--desktop .c-omni__wrapper--locality {
-    width: 40%;
-  }
-  .c-omni-container--desktop .c-omni__wrapper--locality .c-omni-searchbox {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-  }
-  .c-omni-container--desktop .c-omni__wrapper--keyword {
-    width: 60%;
-  }
-  .c-omni-container--desktop .c-omni__wrapper--keyword .c-omni-searchbox {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    border-left: 0;
-  }
-  /*! CSS Used from: Embedded */
-  .__react_component_tooltip {
-    border-radius: 3px;
-    display: inline-block;
-    font-size: 13px;
-    left: -999em;
-    opacity: 0;
-    padding: 8px 21px;
-    position: fixed;
-    pointer-events: none;
-    transition: opacity 0.3s ease-out;
-    top: -999em;
-    visibility: hidden;
-    z-index: 999;
-  }
-  .__react_component_tooltip:before,
-  .__react_component_tooltip:after {
-    content: "";
-    width: 0;
-    height: 0;
-    position: absolute;
-  }
-  .__react_component_tooltip.type-dark {
-    color: #fff;
-    background-color: #222;
-  }
-  .__react_component_tooltip.type-dark.place-top:after {
-    border-top-color: #222;
-    border-top-style: solid;
-    border-top-width: 6px;
-  }
-  .__react_component_tooltip.place-top {
-    margin-top: -10px;
-  }
-  .__react_component_tooltip.place-top:before {
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    bottom: -8px;
-    left: 50%;
-    margin-left: -10px;
-  }
-  .__react_component_tooltip.place-top:after {
-    border-left: 8px solid transparent;
-    border-right: 8px solid transparent;
-    bottom: -6px;
-    left: 50%;
-    margin-left: -8px;
-  }
-  /*! CSS Used from: Embedded */
-  .direct-list-desktop p,
-  .direct-list-desktop h4,
-  .direct-list-desktop span {
-    margin: 0;
-    padding: 0;
-  }
-  .direct-list-desktop {
-    background-color: #ffffff;
-    display: block;
-    text-decoration: none;
-    padding: 0;
-  }
-  .direct-list-desktop .banner-title {
-    color: #14bef0;
-    font-size: 18px;
-    margin-bottom: 2px;
-    line-height: 24px;
-    font-weight: bold;
-  }
-  .direct-list-desktop .banner-subtitle {
-    font-size: 14px;
-    color: #414146;
-    line-height: 1.5;
-  }
-  .direct-list-desktop .cta {
-    margin-top: 53px;
-    display: inline-block;
-    background-color: #14bef0;
-    color: #ffffff;
-    font-size: 14px;
-    text-align: center;
-    font-weight: bold;
-    border-radius: 2px;
-    margin-left: 5px;
-    padding: 4px 7px;
-    position: absolute;
-    bottom: 16px;
-    right: 16px;
-    width: 213px;
-  }
-  .direct-list-desktop .cta .cta-text {
-    font-size: 14px;
-    line-height: 17px;
-  }
-  .direct-list-desktop .cta .cta-subtext {
-    font-size: 11px;
-    font-weight: bold;
-    margin-top: 2px;
-    line-height: 12px;
-  }
-  .direct-list-desktop .pulse {
-    margin-right: 4px;
-    display: inline-block;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    cursor: pointer;
-    animation: directListDesktopPulse 1.2s infinite;
-    box-shadow: 0 0 0 0 rgba(170, 224, 0, 0.6);
-    background-color: #aae000;
-  }
-  .direct-list-desktop .cta-block img {
-    background: url(https://www.WealthyLife.com/consult/bundles/cwipage/images/direct-list-banner-icons-v3.svg)
-      no-repeat;
-    width: 26px;
-    height: 26px;
-    margin-right: 7px;
-  }
-  .direct-list-desktop .cta-block .stethoscope-icon {
-    background-position: -1px -2px;
-  }
-  .direct-list-desktop .cta-block .clock-icon {
-    background-position: -33px -2px;
-  }
-  .direct-list-desktop .cta-block .money-icon {
-    background-position: -65px -2px;
-  }
-  .direct-list-desktop .clearfix:after {
-    content: " ";
-    visibility: hidden;
-    display: block;
-    height: 0;
-    clear: both;
-  }
-  .direct-list-desktop .banner-main-content {
-    position: relative;
-    font-size: 0;
-  }
-  .direct-list-desktop .banner-main-content > .figure {
-    display: inline-block;
-    min-width: 107px;
-    min-height: 107px;
-  }
-  .direct-list-desktop .banner-description {
-    width: 485px;
-    padding: 16px 10px 0 0;
-    padding-right: 10px;
-    transform: translateX(-7px);
-  }
-  .direct-list-desktop .cta-block {
-    width: 227px;
-    padding: 16px 0 0 25px;
-  }
-  .direct-list-desktop .cta-block,
-  .direct-list-desktop .banner-description,
-  .direct-list-desktop .banner-main-content > .figure,
-  .direct-list-desktop .cta-block img {
-    float: left;
-  }
-
-  .direct-list-web,
-  .direct-list-desktop p,
-  .direct-list-desktop h4,
-  .direct-list-desktop figure,
-  .direct-list-desktop a,
-  .direct-list-desktop span {
-    margin: 0;
-    padding: 0;
-  }
-
-  .direct-list-desktop {
-    background-color: #ffffff;
-    display: block;
-    text-decoration: none;
-    padding: 0;
-  }
-
-  .direct-list-desktop .banner-title {
-    color: #14bef0;
-    font-size: 18px;
-    margin-bottom: 2px;
-    line-height: 24px;
-    font-weight: bold;
-  }
-
-  .direct-list-desktop .banner-subtitle {
-    font-size: 14px;
-    color: #414146;
-    line-height: 1.5;
-  }
-
-  .direct-list-desktop .coupon-text {
-    display: inline-block;
-    font-size: 11px;
-    color: #98a1a5;
-    border: 1px dashed #cdcdcd;
-    padding: 6px 4px;
-    text-align: center;
-    width: 179px;
-    margin-top: 8px;
-    line-height: 1.2;
-  }
-
-  .direct-list-desktop .cta {
-    margin-top: 53px;
-    display: inline-block;
-    background-color: #14bef0;
-    color: #ffffff;
-    font-size: 14px;
-    text-align: center;
-    font-weight: bold;
-    border-radius: 2px;
-    margin-left: 5px;
-    padding: 4px 7px;
-
-    position: absolute;
-    bottom: 16px;
-    right: 16px;
-    width: 213px;
-  }
-
-  .direct-list-desktop .cta .cta-text {
-    font-size: 14px;
-    line-height: 17px;
-  }
-
-  .direct-list-desktop .cta .cta-subtext {
-    font-size: 11px;
-    font-weight: bold;
-    margin-top: 2px;
-    line-height: 12px;
-  }
-
-  .direct-list-desktop .pulse {
-    margin-right: 4px;
-    display: inline-block;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    cursor: pointer;
-    animation: directListDesktopPulse 1.2s infinite;
-    box-shadow: 0 0 0 0 rgba(170, 224, 0, 0.6);
-    background-color: #aae000;
-  }
-  //kamlesh_dev
-
-  .c-day-slot {
-    -webkit-animation: blink 0.2s ease-in-out;
-    animation: blink 0.2s ease-in-out;
-  }
-  .c-day-session {
-    border-bottom: 1px solid #f0f0f5;
-  }
-  .c-day-session__header {
-    width: 14%;
-    padding: 6px 10px;
-    letter-spacing: normal;
-    text-transform: capitalize;
-  }
-  .c-day-session__header-icon {
-    margin-right: 5px;
+  .WealthyLife_GlobalNavigation .navbar .ic {
     font-size: 20px;
+    line-height: 25px;
   }
-  .c-day-session__header__slots-count {
+  .WealthyLife_GlobalNavigation .navbar .downarrow {
+    padding: 0;
+  }
+}
+@media only screen and (max-width: 364px) {
+  .WealthyLife_GlobalNavigation .mobile.navbar .navlink .icon-ic_next_cheveron {
     display: none;
   }
-  .c-day-session__body {
-    width: 86%;
+}
+@media only screen and (max-width: 320px) {
+  .WealthyLife_GlobalNavigation .mobile.navbar .overlay {
+    width: 100%;
   }
-  .icon-size{
-    width: 5%;
+}
+@media only screen and (min-width: 801px) and (max-width: 1110px) {
+  .WealthyLife_GlobalNavigation .navbar .nav-mid {
+    display: none;
   }
-  .icon-width{
-    width: 40%;
-  }
-  .box{
-    border: 2px solid;
-    text-align: center;
-  }
-  .cen{
-    margin-right: 50%;
-  }
-  .den{
-    margin-left: 35%;
-  }
-  .w-i{
-    width: 5%;
-    margin-left: 80%;
-    margin-top: -100px;
-  }
-  .icon-width-3{
-    width: 10%;
-  }
-  .icon-width-4{
-    width: 25%;
-    margin-right: 10px;
-  }
-  .icon-w{
-    width: 10%;
-    margin-right: 10px;
-  }
-  .tra-aa{
-    position: relative !important;
-    transform: translate3d(0px, 0px, 0px) !important;
-  }
-
-  .figcaption1 {
-    color: #414146;
-    font-size: 13px;
-    margin-top: 0px;
-    margin-left: 70px !important;
-    line-height: 21px;
-    vertical-align: bottom;
-    padding-top: 2px;
-    margin-left: 1%;
-  }
-  .figcaption2 {
-    color: #414146;
-    font-size: 13px;
-    margin-top: 0px;
-    margin-left: 70px !important;
-    line-height: 21px;
-    vertical-align: bottom;
-    padding-top: 2px;
-    margin-left: 1%;
-  }
-  .pure-g {
-    letter-spacing: -0.31em;
-    *letter-spacing: normal;
-    *word-spacing: -0.43em;
-    text-rendering: optimizespeed;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    flex-flow: row wrap;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    -ms-flex-flow: row wrap;
-    -ms-align-content: flex-start;
-    -ms-flex-line-pack: start;
-    align-content: flex-start;
-  }
-  .c-day-session__slot {
-    width: 14.285%;
-    padding: 4px;
-    letter-spacing: normal;
-  }
-
-  .ss {
-    margin-left: 20%;
-    margin-top: -30px;
-  }
-  .ss1 {
-    margin-left: 40%;
-    margin-top: -31px;
-  }
-  .ss2 {
-    margin-left: 60%;
-    margin-top: -32px;
-  }
-
-
-  .direct-list-desktop .cta-block img {
-    background: url("/consult/bundles/cwipage/images/direct-list-banner-icons-v3.svg")
-      no-repeat;
-    width: 26px;
-    height: 26px;
-    margin-right: 7px;
-  }
-
-  .direct-list-desktop .cta-block .stethoscope-icon {
-    background-position: -1px -2px;
-  }
-
-  .direct-list-desktop .cta-block .clock-icon {
-    background-position: -33px -2px;
-  }
-
-  .direct-list-desktop .cta-block .money-icon {
-    background-position: -65px -2px;
-  }
-
-  .direct-list-desktop .clearfix:after {
-    content: " ";
-    visibility: hidden;
-    display: block;
-    height: 0;
-    clear: both;
-  }
-
-  .direct-list-desktop .banner-main-content {
-    position: relative;
-    font-size: 0;
-  }
-
-  .direct-list-desktop .banner-main-content > .figure {
+  .WealthyLife_GlobalNavigation .navbar .providers-marketing {
     display: inline-block;
-    min-width: 107px;
-    min-height: 107px;
+  }
+}
+@media only screen and (min-width: 1111px) and (max-width: 1240px) {
+  .WealthyLife_GlobalNavigation .navbar .providers-marketing {
+    display: none;
+  }
+}
+/*! CSS Used from: https://www.WealthyLifestatic.com/web-assets/stylesheets/omni.8ddd7a6ea145.css */
+.c-omni-searchbox_wrapper {
+  position: relative;
+}
+.c-omni-searchbox__icon {
+  font-size: 16px;
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  width: 30px;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.c-omni-searchbox {
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: 1.4;
+  padding: 6px 20px 5px 30px;
+  color: inherit;
+  border-radius: 2px;
+  border: 1px solid #b4b4be;
+  cursor: pointer;
+  outline: 0;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-appearance: none;
+  background: #fff;
+}
+.c-omni-searchbox:active,
+.c-omni-searchbox:focus {
+  border-color: #787887;
+}
+.c-omni-searchbox--small {
+  height: 40px;
+}
+.u-bold {
+  font-weight: 700;
+}
+.u-clearfix:after,
+.u-clearfix:before {
+  content: "";
+  display: table;
+}
+.u-clearfix:after {
+  clear: both;
+}
+.u-clearfix {
+  zoom: 1;
+}
+.c-omni {
+  width: 100%;
+  color: #414146;
+  font-size: 14px;
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+.c-omni__wrapper {
+  position: relative;
+}
+.c-omni-container--desktop .c-omni__wrapper {
+  display: inline-block;
+  float: left;
+  margin: 0;
+}
+.c-omni-container--desktop .c-omni__wrapper--locality {
+  width: 40%;
+}
+.c-omni-container--desktop .c-omni__wrapper--locality .c-omni-searchbox {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.c-omni-container--desktop .c-omni__wrapper--keyword {
+  width: 60%;
+}
+.c-omni-container--desktop .c-omni__wrapper--keyword .c-omni-searchbox {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-left: 0;
+}
+/*! CSS Used from: Embedded */
+.__react_component_tooltip {
+  border-radius: 3px;
+  display: inline-block;
+  font-size: 13px;
+  left: -999em;
+  opacity: 0;
+  padding: 8px 21px;
+  position: fixed;
+  pointer-events: none;
+  transition: opacity 0.3s ease-out;
+  top: -999em;
+  visibility: hidden;
+  z-index: 999;
+}
+.__react_component_tooltip:before,
+.__react_component_tooltip:after {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+.__react_component_tooltip.type-dark {
+  color: #fff;
+  background-color: #222;
+}
+.__react_component_tooltip.type-dark.place-top:after {
+  border-top-color: #222;
+  border-top-style: solid;
+  border-top-width: 6px;
+}
+.__react_component_tooltip.place-top {
+  margin-top: -10px;
+}
+.__react_component_tooltip.place-top:before {
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  bottom: -8px;
+  left: 50%;
+  margin-left: -10px;
+}
+.__react_component_tooltip.place-top:after {
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  bottom: -6px;
+  left: 50%;
+  margin-left: -8px;
+}
+/*! CSS Used from: Embedded */
+.direct-list-desktop p,
+.direct-list-desktop h4,
+.direct-list-desktop span {
+  margin: 0;
+  padding: 0;
+}
+.direct-list-desktop {
+  background-color: #ffffff;
+  display: block;
+  text-decoration: none;
+  padding: 0;
+}
+.direct-list-desktop .banner-title {
+  color: #14bef0;
+  font-size: 18px;
+  margin-bottom: 2px;
+  line-height: 24px;
+  font-weight: bold;
+}
+.direct-list-desktop .banner-subtitle {
+  font-size: 14px;
+  color: #414146;
+  line-height: 1.5;
+}
+.direct-list-desktop .cta {
+  margin-top: 53px;
+  display: inline-block;
+  background-color: #14bef0;
+  color: #ffffff;
+  font-size: 14px;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 2px;
+  margin-left: 5px;
+  padding: 4px 7px;
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  width: 213px;
+}
+.direct-list-desktop .cta .cta-text {
+  font-size: 14px;
+  line-height: 17px;
+}
+.direct-list-desktop .cta .cta-subtext {
+  font-size: 11px;
+  font-weight: bold;
+  margin-top: 2px;
+  line-height: 12px;
+}
+.direct-list-desktop .pulse {
+  margin-right: 4px;
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  animation: directListDesktopPulse 1.2s infinite;
+  box-shadow: 0 0 0 0 rgba(170, 224, 0, 0.6);
+  background-color: #aae000;
+}
+.direct-list-desktop .cta-block img {
+  background: url(https://www.WealthyLife.com/consult/bundles/cwipage/images/direct-list-banner-icons-v3.svg) no-repeat;
+  width: 26px;
+  height: 26px;
+  margin-right: 7px;
+}
+.direct-list-desktop .cta-block .stethoscope-icon {
+  background-position: -1px -2px;
+}
+.direct-list-desktop .cta-block .clock-icon {
+  background-position: -33px -2px;
+}
+.direct-list-desktop .cta-block .money-icon {
+  background-position: -65px -2px;
+}
+.direct-list-desktop .clearfix:after {
+  content: " ";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}
+.direct-list-desktop .banner-main-content {
+  position: relative;
+  font-size: 0;
+}
+.direct-list-desktop .banner-main-content > .figure {
+  display: inline-block;
+  min-width: 107px;
+  min-height: 107px;
+}
+.direct-list-desktop .banner-description {
+  width: 485px;
+  padding: 16px 10px 0 0;
+  padding-right: 10px;
+  transform: translateX(-7px);
+}
+.direct-list-desktop .cta-block {
+  width: 227px;
+  padding: 16px 0 0 25px;
+}
+.direct-list-desktop .cta-block,
+.direct-list-desktop .banner-description,
+.direct-list-desktop .banner-main-content > .figure,
+.direct-list-desktop .cta-block img {
+  float: left;
+}
+
+.direct-list-web,
+.direct-list-desktop p,
+.direct-list-desktop h4,
+.direct-list-desktop figure,
+.direct-list-desktop a,
+.direct-list-desktop span {
+  margin: 0;
+  padding: 0;
+}
+
+.direct-list-desktop {
+  background-color: #ffffff;
+  display: block;
+  text-decoration: none;
+  padding: 0;
+}
+
+.direct-list-desktop .banner-title {
+  color: #14bef0;
+  font-size: 18px;
+  margin-bottom: 2px;
+  line-height: 24px;
+  font-weight: bold;
+}
+
+.direct-list-desktop .banner-subtitle {
+  font-size: 14px;
+  color: #414146;
+  line-height: 1.5;
+}
+
+.direct-list-desktop .coupon-text {
+  display: inline-block;
+  font-size: 11px;
+  color: #98a1a5;
+  border: 1px dashed #cdcdcd;
+  padding: 6px 4px;
+  text-align: center;
+  width: 179px;
+  margin-top: 8px;
+  line-height: 1.2;
+}
+
+.direct-list-desktop .cta {
+  margin-top: 53px;
+  display: inline-block;
+  background-color: #14bef0;
+  color: #ffffff;
+  font-size: 14px;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 2px;
+  margin-left: 5px;
+  padding: 4px 7px;
+
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  width: 213px;
+}
+
+.direct-list-desktop .cta .cta-text {
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.direct-list-desktop .cta .cta-subtext {
+  font-size: 11px;
+  font-weight: bold;
+  margin-top: 2px;
+  line-height: 12px;
+}
+
+.direct-list-desktop .pulse {
+  margin-right: 4px;
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  animation: directListDesktopPulse 1.2s infinite;
+  box-shadow: 0 0 0 0 rgba(170, 224, 0, 0.6);
+  background-color: #aae000;
+}
+//kamlesh_dev
+
+.c-day-slot {
+  -webkit-animation: blink 0.2s ease-in-out;
+  animation: blink 0.2s ease-in-out;
+}
+.c-day-session {
+  border-bottom: 1px solid #f0f0f5;
+}
+.c-day-session__header {
+  width: 14%;
+  padding: 6px 10px;
+  letter-spacing: normal;
+  text-transform: capitalize;
+}
+.c-day-session__header-icon {
+  margin-right: 5px;
+  font-size: 20px;
+}
+.c-day-session__header__slots-count {
+  display: none;
+}
+.c-day-session__body {
+  width: 86%;
+}
+.icon-size {
+  width: 5%;
+}
+.icon-width {
+  width: 40%;
+}
+.box {
+  border: 2px solid;
+  text-align: center;
+}
+.cen {
+  margin-right: 50%;
+}
+.den {
+  margin-left: 35%;
+}
+.w-i {
+  width: 5%;
+  margin-left: 80%;
+  margin-top: -100px;
+}
+.icon-width-3 {
+  width: 10%;
+}
+.icon-width-4 {
+  width: 25%;
+  margin-right: 10px;
+}
+.icon-w {
+  width: 10%;
+  margin-right: 10px;
+}
+.tra-aa {
+  position: relative !important;
+  transform: translate3d(0px, 0px, 0px) !important;
+}
+
+.figcaption1 {
+  color: #414146;
+  font-size: 13px;
+  margin-top: 0px;
+  margin-left: 70px !important;
+  line-height: 21px;
+  vertical-align: bottom;
+  padding-top: 2px;
+  margin-left: 1%;
+}
+.figcaption2 {
+  color: #414146;
+  font-size: 13px;
+  margin-top: 0px;
+  margin-left: 70px !important;
+  line-height: 21px;
+  vertical-align: bottom;
+  padding-top: 2px;
+  margin-left: 1%;
+}
+.pure-g {
+  letter-spacing: -0.31em;
+  *letter-spacing: normal;
+  *word-spacing: -0.43em;
+  text-rendering: optimizespeed;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  flex-flow: row wrap;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  -ms-flex-flow: row wrap;
+  -ms-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+}
+.c-day-session__slot {
+  width: 14.285%;
+  padding: 4px;
+  letter-spacing: normal;
+}
+
+.ss {
+  margin-left: 20%;
+  margin-top: -30px;
+}
+.ss1 {
+  margin-left: 40%;
+  margin-top: -31px;
+}
+.ss2 {
+  margin-left: 60%;
+  margin-top: -32px;
+}
+
+.direct-list-desktop .cta-block img {
+  background: url("/consult/bundles/cwipage/images/direct-list-banner-icons-v3.svg") no-repeat;
+  width: 26px;
+  height: 26px;
+  margin-right: 7px;
+}
+
+.direct-list-desktop .cta-block .stethoscope-icon {
+  background-position: -1px -2px;
+}
+
+.direct-list-desktop .cta-block .clock-icon {
+  background-position: -33px -2px;
+}
+
+.direct-list-desktop .cta-block .money-icon {
+  background-position: -65px -2px;
+}
+
+.direct-list-desktop .clearfix:after {
+  content: " ";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+.direct-list-desktop .banner-main-content {
+  position: relative;
+  font-size: 0;
+}
+
+.direct-list-desktop .banner-main-content > .figure {
+  display: inline-block;
+  min-width: 107px;
+  min-height: 107px;
+}
+
+.direct-list-desktop .banner-description {
+  width: 485px;
+  padding: 16px 10px 0 0;
+  padding-right: 10px;
+  transform: translateX(-7px);
+}
+
+.direct-list-desktop .cta-block {
+  width: 227px;
+  padding: 16px 0 0 25px;
+}
+
+.direct-list-desktop .cta-block,
+.direct-list-desktop .banner-description,
+.direct-list-desktop .banner-main-content > .figure,
+.direct-list-desktop .cta-block img {
+  float: left;
+}
+
+.direct-list-desktop .cta-block .figcaption {
+  color: #414146;
+  font-size: 13px;
+  line-height: 21px;
+  vertical-align: bottom;
+  padding-top: 2px;
+}
+.direct-list-desktop .cta-block .figcaption {
+  color: #414146;
+  font-size: 13px;
+  line-height: 21px;
+  vertical-align: bottom;
+  padding-top: 2px;
+}
+/*! CSS Used keyframes */
+@keyframes directListDesktopPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(170, 224, 0, 0.6);
   }
 
-  .direct-list-desktop .banner-description {
-    width: 485px;
-    padding: 16px 10px 0 0;
-    padding-right: 10px;
-    transform: translateX(-7px);
+  70% {
+    box-shadow: 0 0 0 10px rgba(170, 224, 0, 0);
   }
 
-  .direct-list-desktop .cta-block {
-    width: 227px;
-    padding: 16px 0 0 25px;
+  100% {
+    box-shadow: 0 0 0 0 rgba(170, 224, 0, 0);
   }
+}
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(30, 190, 240, 0.4);
+    box-shadow: 0 0 0 0 rgba(30, 190, 240, 0.4);
+  }
+  70% {
+    -webkit-box-shadow: 0 0 0 10px rgba(30, 190, 240, 0);
+    box-shadow: 0 0 0 10px rgba(30, 190, 240, 0);
+  }
+  to {
+    -webkit-box-shadow: 0 0 0 0 rgba(30, 190, 240, 0);
+    box-shadow: 0 0 0 0 rgba(30, 190, 240, 0);
+  }
+}
+@keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(30, 190, 240, 0.4);
+    box-shadow: 0 0 0 0 rgba(30, 190, 240, 0.4);
+  }
+  70% {
+    -webkit-box-shadow: 0 0 0 10px rgba(30, 190, 240, 0);
+    box-shadow: 0 0 0 10px rgba(30, 190, 240, 0);
+  }
+  to {
+    -webkit-box-shadow: 0 0 0 0 rgba(30, 190, 240, 0);
+    box-shadow: 0 0 0 0 rgba(30, 190, 240, 0);
+  }
+}
+@-webkit-keyframes pulse-white {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 hsla(0, 0%, 100%, 0.4);
+    box-shadow: 0 0 0 0 hsla(0, 0%, 100%, 0.4);
+  }
+  70% {
+    -webkit-box-shadow: 0 0 0 10px rgba(30, 190, 240, 0);
+    box-shadow: 0 0 0 10px rgba(30, 190, 240, 0);
+  }
+  to {
+    -webkit-box-shadow: 0 0 0 0 rgba(30, 190, 240, 0);
+    box-shadow: 0 0 0 0 rgba(30, 190, 240, 0);
+  }
+}
+@keyframes pulse-white {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 hsla(0, 0%, 100%, 0.4);
+    box-shadow: 0 0 0 0 hsla(0, 0%, 100%, 0.4);
+  }
+  70% {
+    -webkit-box-shadow: 0 0 0 10px rgba(30, 190, 240, 0);
+    box-shadow: 0 0 0 10px rgba(30, 190, 240, 0);
+  }
+  to {
+    -webkit-box-shadow: 0 0 0 0 rgba(30, 190, 240, 0);
+    box-shadow: 0 0 0 0 rgba(30, 190, 240, 0);
+  }
+}
 
-  .direct-list-desktop .cta-block,
-  .direct-list-desktop .banner-description,
-  .direct-list-desktop .banner-main-content > .figure,
-  .direct-list-desktop .cta-block img {
-    float: left;
-  }
+.fixed-sticky-outer {
+  position: fixed;
+  top: 80px;
+  z-index: 99999;
+  width: 100%;
+}
 
-  .direct-list-desktop .cta-block .figcaption {
-    color: #414146;
-    font-size: 13px;
-    line-height: 21px;
-    vertical-align: bottom;
-    padding-top: 2px;
-  }
-  .direct-list-desktop .cta-block .figcaption {
-    color: #414146;
-    font-size: 13px;
-    line-height: 21px;
-    vertical-align: bottom;
-    padding-top: 2px;
-  }
-  /*! CSS Used keyframes */
-  @keyframes directListDesktopPulse {
-    0% {
-      box-shadow: 0 0 0 0 rgba(170, 224, 0, 0.6);
-    }
-
-    70% {
-      box-shadow: 0 0 0 10px rgba(170, 224, 0, 0);
-    }
-
-    100% {
-      box-shadow: 0 0 0 0 rgba(170, 224, 0, 0);
-    }
-  }
-  @-webkit-keyframes pulse {
-    0% {
-      -webkit-box-shadow: 0 0 0 0 rgba(30, 190, 240, 0.4);
-      box-shadow: 0 0 0 0 rgba(30, 190, 240, 0.4);
-    }
-    70% {
-      -webkit-box-shadow: 0 0 0 10px rgba(30, 190, 240, 0);
-      box-shadow: 0 0 0 10px rgba(30, 190, 240, 0);
-    }
-    to {
-      -webkit-box-shadow: 0 0 0 0 rgba(30, 190, 240, 0);
-      box-shadow: 0 0 0 0 rgba(30, 190, 240, 0);
-    }
-  }
-  @keyframes pulse {
-    0% {
-      -webkit-box-shadow: 0 0 0 0 rgba(30, 190, 240, 0.4);
-      box-shadow: 0 0 0 0 rgba(30, 190, 240, 0.4);
-    }
-    70% {
-      -webkit-box-shadow: 0 0 0 10px rgba(30, 190, 240, 0);
-      box-shadow: 0 0 0 10px rgba(30, 190, 240, 0);
-    }
-    to {
-      -webkit-box-shadow: 0 0 0 0 rgba(30, 190, 240, 0);
-      box-shadow: 0 0 0 0 rgba(30, 190, 240, 0);
-    }
-  }
-  @-webkit-keyframes pulse-white {
-    0% {
-      -webkit-box-shadow: 0 0 0 0 hsla(0, 0%, 100%, 0.4);
-      box-shadow: 0 0 0 0 hsla(0, 0%, 100%, 0.4);
-    }
-    70% {
-      -webkit-box-shadow: 0 0 0 10px rgba(30, 190, 240, 0);
-      box-shadow: 0 0 0 10px rgba(30, 190, 240, 0);
-    }
-    to {
-      -webkit-box-shadow: 0 0 0 0 rgba(30, 190, 240, 0);
-      box-shadow: 0 0 0 0 rgba(30, 190, 240, 0);
-    }
-  }
-  @keyframes pulse-white {
-    0% {
-      -webkit-box-shadow: 0 0 0 0 hsla(0, 0%, 100%, 0.4);
-      box-shadow: 0 0 0 0 hsla(0, 0%, 100%, 0.4);
-    }
-    70% {
-      -webkit-box-shadow: 0 0 0 10px rgba(30, 190, 240, 0);
-      box-shadow: 0 0 0 10px rgba(30, 190, 240, 0);
-    }
-    to {
-      -webkit-box-shadow: 0 0 0 0 rgba(30, 190, 240, 0);
-      box-shadow: 0 0 0 0 rgba(30, 190, 240, 0);
-    }
-  }
-  // @keyframes directListDesktopPulse{0{box-shadow:0 0 0 0 rgba(170, 224, 0, 0.6);}70%{box-shadow:0 0 0 10px rgba(170, 224, 0, 0);}100%{box-shadow:0 0 0 0 rgba(170, 224, 0, 0);}}
-  /*! CSS Used fontfaces */
-  @font-face {
-    font-family: Camphor;
-    src: url(//www.WealthyLifestatic.com/fonts/camphor/79a790be-1592-4a60-84d3-d38c6ca1626b.eot#iefix);
-    src: url(//www.WealthyLifestatic.com/fonts/camphor/79a790be-1592-4a60-84d3-d38c6ca1626b.eot#iefix)
-        format("eot"),
-      url(//www.WealthyLifestatic.com/fonts/camphor/677b110e-fe2c-4af7-b50b-3e8f00c371ce.woff2)
-        format("woff2"),
-      url(//www.WealthyLifestatic.com/fonts/camphor/bee62776-4fd4-4e5c-b977-86dfd90c0bce.woff)
-        format("woff"),
-      url(//www.WealthyLifestatic.com/fonts/camphor/cf1395aa-4f82-4179-9456-63193aef03ac.ttf)
-        format("truetype");
-    font-weight: 400;
-  }
-  @font-face {
-    font-family: Camphor;
-    src: url(//www.WealthyLifestatic.com/fonts/camphor/ce0e3457-b63d-4c55-b2b2-4d41170d4578.eot#iefix);
-    src: url(//www.WealthyLifestatic.com/fonts/camphor/ce0e3457-b63d-4c55-b2b2-4d41170d4578.eot#iefix)
-        format("eot"),
-      url(//www.WealthyLifestatic.com/fonts/camphor/c96be38e-ea64-418f-ae54-e757ed92b069.woff2)
-        format("woff2"),
-      url(//www.WealthyLifestatic.com/fonts/camphor/d8f1df09-02f2-46a7-9876-5b2e79046f31.woff)
-        format("woff"),
-      url(//www.WealthyLifestatic.com/fonts/camphor/d26b7b5b-4f11-4aca-9273-f050282fbf28.ttf)
-        format("truetype");
-    font-weight: 700;
-  }
-  @font-face {
-    font-family: practicon;
-    src: url(//www.WealthyLifestatic.com/fonts/v13/practicon.eot);
-    src: url(//www.WealthyLifestatic.com/fonts/v13/practicon.eot#iefix)
-        format("embedded-opentype"),
-      url(//www.WealthyLifestatic.com/fonts/v13/practicon.woff2) format("woff2"),
-      url(//www.WealthyLifestatic.com/fonts/v13/practicon.woff) format("woff"),
-      url(//www.WealthyLifestatic.com/fonts/v13/practicon.svg) format("svg"),
-      url(//www.WealthyLifestatic.com/fonts/v13/practicon.ttf) format("truetype");
-    font-weight: 400;
-    font-style: normal;
-  }
+.padding-top {
+  padding-top: 5rem !important;
+}

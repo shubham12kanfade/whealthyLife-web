@@ -160,4 +160,96 @@
 	font-style: normal;
 }
 
+.autocomplete-container .input-container input {
+	height: 50px !important;
+}
 
+.autocomplete-container .input-container .x {
+	top: 63% !important;
+}
+
+#videos {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#subscriber {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+}
+
+#publisher {
+	position: absolute;
+	width: 360px;
+	height: 240px;
+	bottom: 10px;
+	left: 10px;
+	z-index: 99999999;
+	border: 3px solid white;
+	border-radius: 3px;
+}
+
+.OT_mirrored {
+	height: 100vh !important;
+}
+
+.shadow {
+	box-shadow: 0 0rem 0rem 0 rgba(58, 59, 69, 0.15) !important;
+}
+
+.card {
+	border: 1px solid #ffffff !important;
+	border-radius: 0px !important;
+}
+
+small,
+.small {
+	font-size: 57% !important;
+}
+
+.badge {
+	font-size: 47% !important;
+}
+
+.modal-content {
+	border: none !important;
+	border-radius: 0.3rem !important;
+	top: 3rem !important;
+	left: 18% !important;
+	overflow: hidden !important;
+	box-shadow: 0px 0px 47px 0px #d6d6d67d !important;
+}
+
+.text-primary {
+	font-size: 1.5rem !important;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+	outline: 0 !important;
+}
+
+#wrapper #content-wrapper {
+	background-color: #f0f0f5 !important;
+}
+
+#scrollbar::-webkit-scrollbar {
+	width: 5px;
+}
+
+#scrollbar::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+#scrollbar::-webkit-scrollbar-thumb {
+	background-color: darkgrey;
+	outline: 1px solid slategrey;
+}

@@ -4,8 +4,6 @@
             <div class="col-sm-6 sidimg d-none d-sm-block">
                 <img src="../assets/img/illustration.webp">
             </div>
-
-
             <div class="col-md-6">
                 <div class="row">
                     <div class="col-sm-12 nma">
@@ -17,8 +15,6 @@
                                 <a class="nav-link" data-toggle="pill" routerLink="/register">Register</a>
                             </li>
                         </ul>
-        
-                        <!-- Tab panes -->
                         <div class="tab-content">
                             <div class="tab-pane container active" id="Login"></div>
                             <div class="tab-pane container fade" id="Register"></div>
@@ -29,30 +25,31 @@
                         <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
                             <div class="box">
                                 <div class="outer-box  outer-space">
-
-
-
                                     <div class="row">
                                         <div class="col-md-12">
-                                                <div class="padding-bottom-8">
-                                                    Mobile Number / Email ID
-                                                </div>
-                                                <input autofocus="" class="form-control email-text" id="username" formControlName="email" placeholder="Mobile Number / Email ID" type="text">
-                                                <span id="usernameErrorBlock" class="errorText textMuted error-block display-block">
-                                                </span>
+                                            <div class="padding-bottom-8">
+                                                Mobile Number / Email ID
+                                            </div>
+                                            <input autofocus="" class="form-control email-text" id="username"
+                                                formControlName="email" placeholder="Mobile Number / Email ID"
+                                                type="text">
+                                            <span id="usernameErrorBlock"
+                                                class="errorText textMuted error-block display-block">
+                                            </span>
                                         </div>
                                     </div>
-
 
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div id="passwordContainer" style="pointer-events: auto; opacity: 1;">
                                                 <div class="padding-bottom-8 padding-top-20">Password</div>
-                
-                                                <input class="form-control email-text" id="password" formControlName="password" placeholder="Password" type="password">
-                
+
+                                                <input class="form-control email-text" id="password"
+                                                    formControlName="password" placeholder="Password" type="password">
+
                                             </div>
-                                            <span id="passwordErrorBlock" class=" errorText textMuted error-block display-block"></span>
+                                            <span id="passwordErrorBlock"
+                                                class=" errorText textMuted error-block display-block"></span>
                                         </div>
                                     </div>
 
@@ -63,17 +60,18 @@
                                                     <div id="rememberMeBlock" class="display-inline-block">
                                                         <div class="remember-me">
                                                             <div class="remember">
-                                                                <input checked="" id="remember" name="remember" type="checkbox" value="y">
+                                                                <input checked="" id="remember" name="remember"
+                                                                    type="checkbox" value="y">
                                                                 <label for="remember"></label>
                                                             </div>
-                                                            <label class="mousePointer textMuted line-height-20" for="remember">Remember me for 30 days</label>
+                                                            <label class="mousePointer textMuted line-height-20"
+                                                                for="remember">Remember me for 30 days</label>
                                                         </div>
-                
+
                                                     </div>
                                                     <div class="forget-pasword">
-                                                        <a href="
-                                       /forgot_password?intent=fabric
-                                     " id="forgotPassword">Forgot password?</a>
+                                                        <a href="/forgot_password?intent=fabric"
+                                                            id="forgotPassword">Forgot password?</a>
                                                     </div>
                                                     <div style="clear:both"></div>
                                                 </div>
@@ -89,7 +87,8 @@
                                                         <input id="otp_flow" name="otp_flow" type="checkbox" value="y">
                                                         <label for="otp_flow"></label>
                                                     </div>
-                                                    <label class="mousePointer font-12 textMuted line-height-20" for="otp_flow">Login with OTP instead of password</label>
+                                                    <label class="mousePointer font-12 textMuted line-height-20"
+                                                        for="otp_flow">Login with OTP instead of password</label>
                                                 </div>
                                             </div>
                                         </div>
@@ -98,9 +97,10 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="">
-                                                <button type="submit" class="btn  btn-lg common-btn wealthylife-btn" id="login">
-                                              Login
-                                            </button>
+                                                <button type="submit" class="btn  btn-lg common-btn wealthylife-btn"
+                                                    id="login">
+                                                    Login
+                                                </button>
                                             </div>
                                             <div id="fbContainer" style="pointer-events: auto; opacity: 1;">
                                                 <div class="hr-container">
@@ -118,17 +118,13 @@
                                             <a href="#" class="fa fa-google"></a>
                                             <a href="#" class="fa fa-instagram"></a>
                                         </div>
-                                      </div>
-
-
+                                    </div>
                                 </div>
-        
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 </section>

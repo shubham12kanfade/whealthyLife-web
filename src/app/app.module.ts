@@ -10,21 +10,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ApiCallService } from './services/api/apicall.service';
 import { HttpClientModule } from '@angular/common/http';
 import { CookieService } from 'ngx-cookie-service';
-
-
-
-
-// import { DoctorsComponent } from './modules/doctors/doctors.component';
-
+import { AutocompleteLibModule } from 'angular-ng-autocomplete';
+import { AgmCoreModule } from '@agm/core';
+import {OpentokModule} from "ng2-opentok/dist/opentok.module"
 
 @NgModule({
   declarations: [
-    AppComponent,
-    
-   
-   
-
-    // DoctorsComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -33,10 +25,11 @@ import { CookieService } from 'ngx-cookie-service';
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
-   
+    AutocompleteLibModule,
     HttpClientModule,
+    AgmCoreModule.forRoot()
   ],
-  providers: [ApiCallService,CookieService],
+  providers: [ApiCallService, CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
