@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {MatDialog} from '@angular/material/dialog';
 @Component({
   selector: 'app-practice-staff',
   templateUrl: './practice-staff.component.html',
@@ -18,7 +18,7 @@ export class PracticeStaffComponent implements OnInit {
   slideon() {
     this.sark = true;
     this.second = false;
-  
+
   }
   secondon() {
     this.second = true;
