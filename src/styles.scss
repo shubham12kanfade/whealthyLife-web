@@ -291,3 +291,16 @@ strong {
 .hero_home .content h3 {
 	font-weight: 300 !important;
 }
+
+.mat-typography {
+	// border: 1px solid lightgray;
+}
+
+mat-dialog-actions {
+	> button {
+		background: transparent;
+		border: 1px solid #676767;
+		padding: 4px 11px;
+		margin: 0px 5px;
+	}
+}

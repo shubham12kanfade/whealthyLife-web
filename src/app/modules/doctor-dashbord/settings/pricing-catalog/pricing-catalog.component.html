@@ -1,78 +1,22 @@
 <div class="card shadow mb-4">
-    <div class="row">
-      <div class="col-sm-12">
-        <div class="card-header">
-          <div class="col-sm-3 first">
-            <h2 class="font-weight-bold text-primary">Pricing Catalogue</h2>
-          </div>
-          
-          <div class="col-sm-9 third">
-            <button type="button" class="btn btn-warning btnadd" (click)="modalopen()" >Add</button>
-          </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="card-header">
+        <div class="col-sm-3 first">
+          <h2 class="font-weight-bold text-primary">Pricing Catalogue</h2>
         </div>
-      </div>
-    </div>
-    <div class="card-body">
-        <div class="row">
-            <div class="col-sm-12">
-                <span class="cdb">No procedure added yet. <a class="anchorbtn" (click)="modalopen()">Add procedure</a></span>   
-            </div>
-        </div>
-    </div>
-</div>
 
-  <!-- modal1 add doctor -->
-  <div class="modal" id="myModal" *ngIf="opmod">
-    <div class="modal-lg dialog">
-      <div class="modal-content">
-        <div class="row">
-          <div class="col-sm-8">
-            <div class="header">
-              <h1 class="modal-title mtitl">Add Procedure</h1>
-            </div>
-          </div> 
-      </div>
-        <div class="modal-body">
-          <div class="col-md-12 col-sm-12">
-            <div class="row">
-              <table class="table">
-                <thead>
-                <tr>
-                  <th>PROCEDURE NAME<span class="redstar">*</span></th>
-                  <th>COST (₹)<span class="redstar">*</span></th>
-                  <th>TAX</th>
-                  <th>TOTAL COST (₹)</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>
-                    <div class="">
-                    <div class="input-group md-form form-sm form-1 pl-0"> 
-                      </div>
-                      <input class="form-control my-0 py-1" type="text" placeholder="Search" aria-label="Search">
-                    </div>
-                  
-                </td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-              </tbody>
-
-              </table>
-   
-            </div>   
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-light btnm" data-dismiss="modal" (click)="modalopen()">Cancel</button>
-          <button type="button" class="btn btn-warning btnm">Save</button>
+        <div class="col-sm-9 third">
+          <button type="button" class="btn btn-warning btnadd" (click)="modalopen()">Add</button>
         </div>
       </div>
     </div>
   </div>
+  <div class="card-body">
+    <div class="row">
+      <div class="col-sm-12">
+        <span class="cdb">No procedure added yet. <a class="anchorbtn" (click)="modalopen()">Add procedure</a></span>
+      </div>
+    </div>
+  </div>
+</div>
