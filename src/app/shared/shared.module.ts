@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { MatTabsModule } from '@angular/material/tabs';
 import {MatIconModule} from '@angular/material/icon';
 import {MatDialogModule} from '@angular/material/dialog';
-
+import {FullCalendarModule} from 'primeng/fullcalendar';
 
 @NgModule({
   declarations: [],
@@ -11,12 +11,14 @@ import {MatDialogModule} from '@angular/material/dialog';
     CommonModule,
     MatTabsModule,
     MatIconModule,
-    MatDialogModule
+    MatDialogModule,
+    FullCalendarModule
   ],
   exports: [
     MatTabsModule,
     MatIconModule,
-    MatDialogModule
+    MatDialogModule,
+    FullCalendarModule
   ]
 })
 export class SharedModule { }

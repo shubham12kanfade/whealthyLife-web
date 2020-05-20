@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import dayGridPlugin from '@fullcalendar/daygrid';
+import timeGridPlugin from '@fullcalendar/timegrid';
+import interactionPlugin from '@fullcalendar/interaction';
+import { FullCalendar } from 'primeng/fullcalendar/fullcalendar';
 
 @Component({
   selector: 'app-calendar',
@@ -6,10 +10,26 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./calendar.component.scss']
 })
 export class CalendarComponent implements OnInit {
+  options: any;
+  events: any;
 
+  @ViewChild('fc') fc: FullCalendar;
   constructor() { }
 
+
+  gotoDate(date: Date) {
+    this.fc.getCalendar().gotoDate(date);
+  }
+
   ngOnInit(): void {
+    this.options = {
+      plugins: [timeGridPlugin, dayGridPlugin, interactionPlugin],
+      header: {
+        left: 'prev,next',
+        center: 'title',
+        right: 'month,agendaWeek,agendaDay'
+      }
+    }
   }
 
 }
