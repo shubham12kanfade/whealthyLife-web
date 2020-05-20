@@ -15,10 +15,21 @@ import { ClinicTimingsComponent } from './clinic-timings/clinic-timings.componen
 import { ConsultantDetailsComponent } from './consultant-details/consultant-details.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
 
-
-
 @NgModule({
-  declarations: [ProfileComponent, RegistrationComponent, EducationComponent, ConnectClinicComponent, ClinicDetailsComponent, IdentityProofComponent, RegistrationProofComponent, ClinicProofComponent, ClinicLocationComponent, ClinicTimingsComponent, ConsultantDetailsComponent, EditProfileComponent, ],
+  declarations: [
+    ProfileComponent,
+    RegistrationComponent,
+    EducationComponent,
+    ConnectClinicComponent,
+    ClinicDetailsComponent,
+    IdentityProofComponent,
+    RegistrationProofComponent,
+    ClinicProofComponent,
+    ClinicLocationComponent,
+    ClinicTimingsComponent,
+    ConsultantDetailsComponent,
+    EditProfileComponent
+  ],
   imports: [
     CommonModule,
     ProfileRoutingModule

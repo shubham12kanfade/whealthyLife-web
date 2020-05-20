@@ -23,7 +23,7 @@ export class CalendarComponent implements OnInit {
 
   ngOnInit(): void {
     this.options = {
-      plugins: [timeGridPlugin, dayGridPlugin, interactionPlugin],
+      plugins: [interactionPlugin, timeGridPlugin, dayGridPlugin],
       header: {
         left: 'prev,next',
         center: 'title',

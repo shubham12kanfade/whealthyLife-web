@@ -304,3 +304,13 @@ mat-dialog-actions {
 		margin: 0px 5px;
 	}
 }
+
+.fc-unthemed .fc-divider,
+.fc-unthemed .fc-popover,
+.fc-unthemed .fc-row,
+.fc-unthemed tbody,
+.fc-unthemed td,
+.fc-unthemed th,
+.fc-unthemed thead {
+	border-color: #e7e7e7 !important;
+}
