@@ -6,8 +6,9 @@
           <h2 class="font-weight-bold text-primary">Practice Staff</h2>
         </div>
         <div class="col-sm-3 third">
-          <button type="button" class="btn btn-warning btnadd" (click)=" adddoctorpopup()" *ngIf="sark">Add</button>
-          <button type="button" class="btn btn-warning btnadd" (click)=" addstaffpopup()" *ngIf="second">Add</button>
+          <button mat-raised-button class="btnadd" matTooltipPosition="left" (click)="addDoctor()">
+            Add
+          </button>
         </div>
       </div>
     </div>
@@ -33,17 +34,20 @@
                           Name
                         </th>
                         <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1"
-                          aria-label="Position: activate to sort column ascending" style="width: 100px;">Access Type
+                          aria-label="Position: activate to sort column ascending" style="width: 100px;">
+                          Access Type
                         </th>
                         <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1"
-                          aria-label="Office: activate to sort column ascending" style="width: 54px;">This Doctors
-                          Notifications </th>
+                          aria-label="Office: activate to sort column ascending" style="width: 54px;">
+                          This Doctors Notifications
+                        </th>
                         <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1"
-                          aria-label="Age: activate to sort column ascending" style="width: 31px;">All Doctors
-                          Notifications
+                          aria-label="Age: activate to sort column ascending" style="width: 31px;">
+                          All Doctors Notifications
                         </th>
                         <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1"
                           aria-label="Age: activate to sort column ascending" style="width: 31px;"></th>
+                      </tr>
                     </thead>
                     <tbody>
                       <tr role="row" class="odd">
@@ -68,284 +72,11 @@
         <div class="tab-content">
           <div class="col-sm-12">
             <div class="row staffspan">
-              <span>No staff member added yet.<a class="href" (click)="addstaffpopup()">Add staff</a></span>
+              <span>No staff member added yet.<a class="href" (click)="addPractice()">Add staff</a></span>
             </div>
           </div>
         </div>
       </mat-tab>
     </mat-tab-group>
-  </div>
-</div>
-<div class="modal" id="myModal" *ngIf="doctor">
-  <div class="modal-lg dialog">
-    <div class="modal-content">
-      <div class="header">
-        <h1 class="modal-title mtitl">Add Doctor</h1>
-      </div>
-      <div class="modal-body" id="scrollbar">
-        <div class="col-md-12 col-sm-12">
-          <div class="row">
-            <div class="col-sm-6">
-              <div class="form-group">
-                <label class="cols" for="Name">Name<span class="redstar">*</span></label>
-                <input type="text" class="form-control" id="Name">
-              </div>
-            </div>
-            <div class="col-sm-6">
-              <div class="form-group">
-                <label class="cols" for="Mobile">Mobile Number</label>
-                <input type="text" class="form-control" id="Mobile">
-              </div>
-            </div>
-            <div class="col-sm-6">
-              <div class="form-group">
-                <label class="cols" for="email">Email ID</label>
-                <input type="email" class="form-control" id="email">
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <span class="head">WealthyLife Access
-            </span>
-          </div>
-          <div class="row">
-            <div class="col-sm-6 rad">
-              <div class="form-check">
-                <label class="form-label chk">
-                  <input type="radio" class="form-input" name="optradio"> Administrator (Complete access)
-                </label>
-              </div>
-              <div class="form-check">
-                <label class="form-label chk">
-                  <input type="radio" class="form-input" name="optradio">Consultant (No access to Billing and
-                  Reports, limited access to Appointments, EMR)
-                </label>
-              </div>
-              <div class="form-check">
-                <label class="form-label chk">
-                  <input type="radio" class="form-input" name="optradio">None
-                </label>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <span class="head">Notifications
-            </span>
-          </div>
-          <div class="row">
-            <table class="table">
-              <thead>
-                <tr>
-                  <th class="six wide body-normal-grey ng-scope">Type</th>
-                  <th class="two wide body-normal-grey ng-scope">SMS</th>
-                  <th class="two wide body-normal-grey ng-scope">EMAIL</th>
-                  <th></th>
-                </tr>
-                <tr></tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="simp">This doctor</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td class="simp">Daily Schedule</td>
-                  <td>
-                    <div class="form-check fchk">
-                      <label class="form-check-label">
-                        <input type="checkbox" class="form-check-input" value="">
-                      </label>
-                    </div>
-                  </td>
-                  <td>
-                    <div class="form-check fchk">
-                      <label class="form-label">
-                        <input type="checkbox" class="form-input" value="">
-                      </label>
-                    </div>
-                  </td>
-                  <td>
-                    <div class="form-check fchk">
-                      <label class="form-label">
-                        <input type="checkbox" class="form-input" value="" disabled>Enable Whatsapp Notification
-                      </label>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="simp">Appointments Confirmation</td>
-                  <td>
-                    <div class="form-check fchk">
-                      <label class="form-check-label">
-                        <input type="checkbox" class="form-check-input" value="">
-                      </label>
-                    </div>
-                  </td>
-                  <td>
-                    <div class="form-check fchk">
-                      <label class="form-label">
-                        <input type="checkbox" class="form-input" value="">
-                      </label>
-                    </div>
-                  </td>
-                  <td>
-
-                  </td>
-                </tr>
-                <tr>
-                  <td class="simp">All doctors</td>
-                  <td> </td>
-                  <td>
-
-                  </td>
-                  <td>
-
-                  </td>
-                </tr>
-                <tr>
-                  <td class="simp"> Daily Schedule</td>
-                  <td>
-                    <div class="form-check fchk">
-                      <label class="form-check-label">
-                        <input type="checkbox" class="form-check-input" value="">
-                      </label>
-                    </div>
-                  </td>
-                  <td>
-                    <div class="form-check fchk">
-                      <label class="form-label">
-                        <input type="checkbox" class="form-input" value="">
-                      </label>
-                    </div>
-                  </td>
-                  <td>
-
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        <div class="row btnmodal">
-          <button type="button" class="btn btn-light btnm" data-dismiss="modal"
-            (click)=" adddoctorpopup()">Cancel</button>
-          <button type="button" class="btn btn-warning btnm">Save</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<!-- modal2 add Staff -->
-<div class="modal" id="myModal" *ngIf="staff">
-  <div class="modal-lg dialog">
-    <div class="modal-content">
-      <!-- Modal Header -->
-      <div class="header">
-        <h1 class="modal-title mtitl">Add Staff</h1>
-      </div>
-
-      <!-- Modal body -->
-      <div class="modal-body">
-        <div class="col-md-12 col-sm-12">
-          <div class="row">
-            <div class="col-sm-6">
-              <div class="form-group">
-                <label class="cols" for="Name">Name<span class="redstar">*</span></label>
-                <input type="text" class="form-control" id="Name">
-              </div>
-            </div>
-            <div class="col-sm-6">
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-sm-6">
-              <div class="form-group">
-                <label class="cols" for="Mobile">Mobile Number<span class="redstar">*</span></label>
-                <input type="text" class="form-control" id="Mobile">
-              </div>
-            </div>
-            <div class="col-sm-6">
-              <div class="form-group">
-                <label class="cols" for="email">Email ID<span class="redstar">*</span></label>
-                <input type="email" class="form-control" id="email">
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <span class="head">WealthyLife Access
-            </span>
-          </div>
-          <div class="row">
-            <div class="col-sm-6 rad">
-              <div class="form-check">
-                <label class="form-label chk">
-                  <input type="radio" class="form-input" name="optradio"> Administrator (Complete access)
-                </label>
-              </div>
-              <div class="form-check">
-                <label class="form-label chk">
-                  <input type="radio" class="form-input" name="optradio">Consultant (No access to Billing and
-                  Reports, limited access to Appointments, EMR)
-                </label>
-              </div>
-              <div class="form-check">
-                <label class="form-label chk">
-                  <input type="radio" class="form-input" name="optradio">None
-                </label>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <span class="head">Notifications
-            </span>
-          </div>
-          <div class="row">
-            <table class="table">
-              <thead>
-                <tr>
-                  <th class="six">Type</th>
-                  <th class="two">SMS</th>
-                  <th class="two">EMAIL</th>
-                  <th></th>
-                </tr>
-                <tr></tr>
-              </thead>
-              <tbody>
-
-                <tr>
-                  <td class="simp">Daily Schedule</td>
-                  <td>
-                    <div class="form-check fchk">
-                      <label class="form-check-label">
-                        <input type="checkbox" class="form-check-input" value="">
-                      </label>
-                    </div>
-                  </td>
-                  <td>
-                    <div class="form-check fchk">
-                      <label class="form-label">
-                        <input type="checkbox" class="form-input" value="">
-                      </label>
-                    </div>
-                  </td>
-
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        <div class="row btnmodal">
-          <button type="button" class="btn btn-light btnm" data-dismiss="modal"
-            (click)=" addstaffpopup()">Cancel</button>
-          <button type="button" class="btn btn-warning btnm">Save</button>
-        </div>
-      </div>
-    </div>
   </div>
 </div>
