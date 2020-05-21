@@ -11,6 +11,7 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
+import {CdkTableModule} from '@angular/cdk/table';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     MatCheckboxModule,
     MatFormFieldModule,
     MatTableModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    CdkTableModule
   ],
   exports: [
     MatTabsModule,
@@ -40,7 +42,8 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     MatCheckboxModule,
     MatFormFieldModule,
     MatTableModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    CdkTableModule
   ]
 })
 export class SharedModule { }
