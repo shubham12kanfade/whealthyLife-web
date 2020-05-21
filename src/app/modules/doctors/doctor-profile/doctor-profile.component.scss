@@ -97,6 +97,13 @@ li .a:hover:not(.selectActive) {
 
 .buttonlineh {
     line-height: 14px;
+    right: 37px;
+    position: absolute;
+    margin: -39px 0 0 0;
+}
+
+.font-sizex-smalll {
+    font-size: small
 }
 
 .font-sizex-small {
@@ -105,4 +112,74 @@ li .a:hover:not(.selectActive) {
 
 .font-sizexx-small {
     font-size: xx-small;
+}
+
+.feebbackpro {
+    text-align: center;
+    background-color: #7575cd82;
+    width: 36px;
+}
+
+.feedback__context {
+    margin: 5px 2px;
+    padding: 2px 4px;
+    background-color: #d8f2fc;
+    border: 1px solid #b3e2f4;
+}
+
+.line-height {
+    line-height: 200%;
+}
+
+n,
+.dentist-icon {
+    background: url(//www.practo.com/consult/bundles/cwipage/images/specialities-v4.svg) no-repeat;
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+}
+
+.dentist-icon {
+    background-position: 0 0;
+}
+
+ul.b {
+    list-style-position: inside;
+    list-style: inside!important;
+    background-color: white;
+}
+
+ul.c {
+    list-style-position: inside;
+    list-style: inside !important;
+    background-color: #f0f0f5;
+}
+
+::ng-deep.mat-tab-label,
+ ::ng-deep.mat-tab-label-active {
+    min-width: 0!important;
+    padding: 3px!important;
+    margin: 3px!important;
+}
+
+.btn-outline-light {
+    color: #666c7d;
+    border-color: #c8c9cc;
+}
+
+.heightover {
+    overflow: initial;
+    min-height: 160px;
+    max-height: 170px;
+}
+
+.line-height-normal {
+    line-height: normal;
+}
+
+.bgcolor {
+    color: #8a6d3b;
+    background-color: #fcf8e3;
+    border-color: #faebcc;
 }
