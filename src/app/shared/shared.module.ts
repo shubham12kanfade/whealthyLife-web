@@ -9,7 +9,8 @@ import {MatIconModule} from '@angular/material/icon';
   imports: [
     CommonModule,
     MatTabsModule,
-    MatIconModule
+    MatIconModule,
+
   ],
   exports: [
     MatTabsModule,
