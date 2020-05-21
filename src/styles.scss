@@ -314,3 +314,24 @@ mat-dialog-actions {
 .fc-unthemed thead {
 	border-color: #e7e7e7 !important;
 }
+
+.mat-dialog-content {
+	padding: 24px 24px !important;
+	margin: 0px 0px !important;
+	border: 1px solid lightgrey !important;
+}
+
+button:focus {
+	outline: none !important;
+}
+
+.mat-dialog-title {
+	margin: 0px !important;
+}
+
+.mat-elevation-z8 {
+	// border: 1px solid lightgrey !important;
+	width: 100% !important;
+	box-shadow: none !important;
+	margin-top: -1rem;
+}

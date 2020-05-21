@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { AddPracticeModelComponent } from './add-practice-model/add-practice-model.component'
+import { AddDoctorModelComponent } from './add-doctor-model/add-doctor-model.component';
 @Component({
   selector: 'app-practice-staff',
   templateUrl: './practice-staff.component.html',
@@ -42,8 +43,7 @@ export class PracticeStaffComponent implements OnInit {
   }
 
   addDoctor() {
-    console.log("djjudghdh")
-    const dialogRef = this.dialog.open(AddPracticeModelComponent);
+    const dialogRef = this.dialog.open(AddDoctorModelComponent);
     dialogRef.afterClosed().subscribe(result => {
       console.log(`Dialog result: ${result}`);
     });

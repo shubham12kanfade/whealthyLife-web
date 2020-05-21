@@ -1,10 +1,11 @@
-<div mat-dialog-title class="border-bottom">Add Practice</div>
+<div mat-dialog-title >Add Practice</div>
 <mat-dialog-content class="mat-typography" id="scrollbar">
   <div class="col-md-12 col-sm-12">
     <div class="row">
       <div class="col-sm-6">
         <div class="form-group">
-          <label class="cols" for="Name">Name<span class="redstar">*</span></label>
+          <label class="cols" for="Name"
+            >Name<span class="redstar">*</span></label>
           <input type="text" class="form-control" id="Name" />
         </div>
       </div>
@@ -26,20 +27,18 @@
       <div class="col-sm-6 rad">
         <div class="form-check">
           <label class="form-label chk">
-            <input type="radio" class="form-input" name="optradio" />
-            Administrator (Complete access)
+            <mat-radio-button>  Administrator (Complete access)</mat-radio-button>
           </label>
         </div>
         <div class="form-check">
           <label class="form-label chk">
-            <input type="radio" class="form-input" name="optradio" />Consultant (No access to Billing and Reports,
-            limited access
-            to Appointments, EMR)
+            <mat-radio-button>  Consultant (No access to Billing and Reports, limited access
+              to Appointments, EMR)</mat-radio-button>
           </label>
         </div>
         <div class="form-check">
           <label class="form-label chk">
-            <input type="radio" class="form-input" name="optradio" />None
+            <mat-radio-button> None</mat-radio-button>
           </label>
         </div>
       </div>
@@ -70,21 +69,21 @@
             <td>
               <div class="form-check fchk">
                 <label class="form-check-label">
-                  <input type="checkbox" class="form-check-input" value="" />
+                  <mat-checkbox class=""></mat-checkbox>
                 </label>
               </div>
             </td>
             <td>
               <div class="form-check fchk">
                 <label class="form-label">
-                  <input type="checkbox" class="form-input" value="" />
+                  <mat-checkbox class=""></mat-checkbox>
                 </label>
               </div>
             </td>
             <td>
               <div class="form-check fchk">
                 <label class="form-label">
-                  <input type="checkbox" class="form-input" value="" disabled />Enable Whatsapp Notification
+                  <mat-checkbox class="" [disabled]="true">Enable Whatsapp Notification</mat-checkbox>
                 </label>
               </div>
             </td>
@@ -94,14 +93,14 @@
             <td>
               <div class="form-check fchk">
                 <label class="form-check-label">
-                  <input type="checkbox" class="form-check-input" value="" />
+                  <mat-checkbox class=""></mat-checkbox>
                 </label>
               </div>
             </td>
             <td>
               <div class="form-check fchk">
                 <label class="form-label">
-                  <input type="checkbox" class="form-input" value="" />
+                  <mat-checkbox class=""></mat-checkbox>
                 </label>
               </div>
             </td>
@@ -118,14 +117,14 @@
             <td>
               <div class="form-check fchk">
                 <label class="form-check-label">
-                  <input type="checkbox" class="form-check-input" value="" />
+                  <mat-checkbox class=""></mat-checkbox>
                 </label>
               </div>
             </td>
             <td>
               <div class="form-check fchk">
                 <label class="form-label">
-                  <input type="checkbox" class="form-input" value="" />
+                  <mat-checkbox class=""></mat-checkbox>
                 </label>
               </div>
             </td>
@@ -133,11 +132,12 @@
           </tr>
         </tbody>
       </table>
+      
     </div>
 
   </div>
 </mat-dialog-content>
-<mat-dialog-actions align="end" class="border-top">
-  <button mat-button mat-raised-button mat-dialog-close>Cancel</button>
-  <button mat-button mat-raised-button [mat-dialog-close]="true" cdkFocusInitial>Save</button>
+<mat-dialog-actions align="end">
+  <button mat-button mat-flat-button mat-dialog-close>Cancel</button>
+  <button mat-button mat-flat-button [mat-dialog-close]="true" cdkFocusInitial>Save</button>
 </mat-dialog-actions>
