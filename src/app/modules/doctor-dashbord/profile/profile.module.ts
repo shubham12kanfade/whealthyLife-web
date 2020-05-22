@@ -14,6 +14,7 @@ import { ClinicLocationComponent } from './clinic-location/clinic-location.compo
 import { ClinicTimingsComponent } from './clinic-timings/clinic-timings.component';
 import { ConsultantDetailsComponent } from './consultant-details/consultant-details.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
+import { SharedModule } from '../../../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { EditProfileComponent } from './edit-profile/edit-profile.component';
   ],
   imports: [
     CommonModule,
-    ProfileRoutingModule
+    ProfileRoutingModule,
+    SharedModule
   ]
 })
 export class ProfileModule { }

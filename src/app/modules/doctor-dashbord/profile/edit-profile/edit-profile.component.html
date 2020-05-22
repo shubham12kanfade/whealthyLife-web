@@ -3,11 +3,11 @@
         <div class="col-sm-12">
             <div class="card-header">
                 <div class="row">
-                    <div class="col-sm-3 first">
+                    <div class="col-sm-10 first">
                         <h2 class="font-weight-bold text-primary">Profile</h2>
                     </div>
-                    <div class="col-sm-9">
-                        <button class="c-button--primary  btn-primary">Save Changes</button>
+                    <div class="col-sm-2">
+                        <button mat-stroked-button class="float-right">Save Changes</button>
                     </div>
                 </div>
             </div>
@@ -45,7 +45,7 @@
                             <div class="col-sm-6  mt-4">
                                 <div class="form-group">
                                     <label for="Specialization">Phone number</label>
-                                    <a style="float: right;color:blue">Edit</a>
+                                    <a style="float: right ;color:blue">Edit</a>
                                     <input type="text" class="form-control" id="Contact">
                                 </div>
                             </div>
@@ -67,8 +67,9 @@
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group">
-                                    <label for="website">Date of birth</label>
-                                    <input type="text" class="form-control" id="website">
+                                    <label for="website">Date of birth</label><br />
+                                    <p-calendar></p-calendar>
+                                    <!-- <input type="text" class="form-control" id="website"> -->
                                 </div>
                             </div>
                             <hr style="border-top: 1px solid lightgray;">

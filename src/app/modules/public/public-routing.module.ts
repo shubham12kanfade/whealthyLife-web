@@ -1,3 +1,4 @@
+import { ForgotPasswordComponent } from './../../component/forgot-password/forgot-password.component';
 import { PublicComponent } from './public.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -17,7 +18,6 @@ const routes: Routes = [
       { path: 'verify_otp', component: VerifyOtpComponent },
       { path: 'doctors', loadChildren: () => import('../../modules/doctors/doctors.module').then(dd => dd.DoctorsModule) },
       { path: 'accounts', loadChildren: () => import('../../modules/user-accounts/user-accounts.module').then(us => us.UserAccountsModule) },
-      { path: '', loadChildren: () => import('../../modules/user-drive/user-drive.module').then(ud => ud.UserDriveModule) },
       { path: 'contact', loadChildren: () => import('../../modules/contact-us/contact-us.module').then(c => c.ContactUsModule) },
       { path: 'about', loadChildren: () => import('../../modules/about/about.module').then(a => a.AboutModule) },
       { path: 'bookappointment', loadChildren: () => import('../../modules/bookappoiment/bookappoiment.module').then(b => b.BookappoimentModule) },
@@ -26,6 +26,8 @@ const routes: Routes = [
       { path: 'medicines', loadChildren: () => import('../../modules/health-medicineshealth/health-medicineshealth.module').then(m => m.HealthMedicineshealthModule) },
       { path: 'bookcheckup', component: BookHealthCheckupsComponent },
       { path: 'consult', loadChildren: () => import('../../modules/chat-with-doctor/chat-with-doctor.module').then(ch => ch.ChatWithDoctorModule) },
+
+      { path: 'forgot_password', component: ForgotPasswordComponent },
     ]
   }
 ];
