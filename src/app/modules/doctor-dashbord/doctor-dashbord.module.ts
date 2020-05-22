@@ -4,10 +4,11 @@ import { CommonModule } from '@angular/common';
 
 import { DoctorDashbordRoutingModule } from './doctor-dashbord-routing.module';
 import { SharedModule } from '../../shared/shared.module';
+import { ChangePasswordComponent } from './change-password/change-password.component';
 
 
 @NgModule({
-  declarations: [DoctorDashbordComponent,
+  declarations: [DoctorDashbordComponent, ChangePasswordComponent,
 
   ],
   imports: [
