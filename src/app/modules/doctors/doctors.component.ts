@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
 
+
 @Component({
   selector: 'app-doctors',
   templateUrl: './doctors.component.html',
@@ -22,8 +23,10 @@ export class DoctorsComponent implements OnInit {
       }
     });
 
+  
   }
 
+  
   ngOnInit(): void {
   }
   showtime() {

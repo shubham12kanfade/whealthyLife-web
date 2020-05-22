@@ -6,6 +6,8 @@ import { DoctorsComponent } from './doctors.component';
 import { DoctorProfileComponent } from './doctor-profile/doctor-profile.component';
 
 
+
+
 @NgModule({
   declarations: [
     DoctorsComponent,
@@ -13,7 +15,7 @@ import { DoctorProfileComponent } from './doctor-profile/doctor-profile.componen
   ],
   imports: [
     CommonModule,
-    DoctorsRoutingModule
+    DoctorsRoutingModule,
   ]
 })
 export class DoctorsModule { }

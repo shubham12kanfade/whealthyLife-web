@@ -4,16 +4,19 @@ import { MatTabsModule } from '@angular/material/tabs';
 import {MatIconModule} from '@angular/material/icon';
 
 
+
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
     MatTabsModule,
-    MatIconModule
+    MatIconModule,
+   
   ],
   exports: [
     MatTabsModule,
-    MatIconModule
+    MatIconModule,
+   
   ]
 })
 export class SharedModule { }
