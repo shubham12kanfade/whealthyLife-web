@@ -1,3 +1,4 @@
+import { ForgotPasswordComponent } from './../../component/forgot-password/forgot-password.component';
 import { PublicComponent } from './public.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -25,6 +26,8 @@ const routes: Routes = [
       { path: 'medicines', loadChildren: () => import('../../modules/health-medicineshealth/health-medicineshealth.module').then(m => m.HealthMedicineshealthModule) },
       { path: 'bookcheckup', component: BookHealthCheckupsComponent },
       { path: 'consult', loadChildren: () => import('../../modules/chat-with-doctor/chat-with-doctor.module').then(ch => ch.ChatWithDoctorModule) },
+
+      { path: 'forgot_password', component: ForgotPasswordComponent },
     ]
   }
 ];
