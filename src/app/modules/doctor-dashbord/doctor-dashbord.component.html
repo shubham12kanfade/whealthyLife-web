@@ -1,5 +1,5 @@
 <div id="wrapper">
-    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebars">
         <a class="sidebar-brand d-flex align-items-center justify-content-center h" [routerLink]="['/Doctor']">
             <div class="sidebar-brand-text h">Wealthy Life</div>
         </a>
@@ -11,7 +11,7 @@
             HEALTH IS WEALTH
         </div>
         <li class="nav-item active">
-            <a class="nav-link" RouterLink="/Doctor/Calender">
+            <a class="nav-link" [routerLink]="['/Doctor/Calendar']">
                 <i class="fas fa-fw fa-calendar-alt"></i>
                 <span>Calender</span></a>
         </li>

@@ -21,7 +21,7 @@
     width: 33rem;
 }
 
-#accordionSidebar {
+#accordionSidebars {
     position: fixed;
     z-index: 99999;
     top: 0px;
@@ -40,6 +40,7 @@
     }
     > li {
         > a {
+            width: 9px !important;
             cursor: pointer !important;
             > span {
                 font-family: "camphor,Helvetica Neue,Arial,Helvetica,sans-serif";
@@ -52,7 +53,7 @@
     }
 }
 
-#accordionSidebar:hover {
+#accordionSidebars:hover {
     width: 16% !important;
     > .h {
         display: block !important;
@@ -62,6 +63,7 @@
     }
     > li {
         > a {
+            width: 100% !important;
             > span {
                 font-family: "camphor,Helvetica Neue,Arial,Helvetica,sans-serif";
                 white-space: normal;
