@@ -1,24 +1,22 @@
 body {
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-
-.sidimg{
-    img{
+.sidimg {
+    img {
         height: 400px;
         width: 400px;
     }
 }
-.box{
+.box {
     padding-bottom: 24px;
 }
 
-.nav{
-   display: flex;
-   justify-content: left; 
-  
+.nav {
+    display: flex;
+    justify-content: left;
 }
-.nav-pills>li+li {
+.nav-pills > li + li {
     margin-left: 2px;
     font-size: 14px;
 }
@@ -32,9 +30,9 @@ body {
 }
 
 .outer-box {
-    border: solid 3px rgba(216,216,216,0.5);
+    border: solid 3px rgba(216, 216, 216, 0.5);
     border-radius: 0px;
-    font-family: 'Camphor';
+    font-family: "Camphor";
     color: #787887;
 }
 .padding-bottom-8 {
@@ -56,7 +54,7 @@ body {
 }
 
 .error-block {
-    color: #E35A49;
+    color: #e35a49;
     font-size: 12px;
 }
 .errorText {
@@ -73,7 +71,7 @@ body {
     font-size: 12px;
 }
 .remember-me {
-    margin-left: 0!important;
+    margin-left: 0 !important;
 }
 .remember {
     width: 16px;
@@ -85,7 +83,8 @@ body {
     display: inline-block;
 }
 
-.otp_flow input[type=checkbox], .remember input[type=checkbox] {
+.otp_flow input[type="checkbox"],
+.remember input[type="checkbox"] {
     opacity: 0;
 }
 label[for="remember"] {
@@ -101,9 +100,8 @@ label[for="remember"] {
     float: left;
 }
 .remember label:after {
-    
     opacity: 0;
-    content: '';
+    content: "";
     position: absolute;
     width: 10px;
     height: 5px;
@@ -116,7 +114,6 @@ label[for="remember"] {
     transform: rotate(-45deg);
 }
 .remember label {
-    
     position: absolute;
     width: 16px;
     height: 16px;
@@ -125,32 +122,32 @@ label[for="remember"] {
     border-radius: 1px;
     border: solid 1px #b4b4be;
     background: white;
-    
 }
 
-.otp_flow input[type=checkbox]:checked+label, .remember input[type=checkbox]:checked+label {
+.otp_flow input[type="checkbox"]:checked + label,
+.remember input[type="checkbox"]:checked + label {
     background: #14bef0;
     border: 0;
 }
-.otp_flow input[type=checkbox], .remember input[type=checkbox] {
+.otp_flow input[type="checkbox"],
+.remember input[type="checkbox"] {
     opacity: 0;
 }
 
-input[type="radio"], input[type="checkbox"] {
+input[type="radio"],
+input[type="checkbox"] {
     margin: 4px 0 0;
-  
+
     line-height: normal;
 }
-input[type="checkbox"], input[type="radio"] {
-    
+input[type="checkbox"],
+input[type="radio"] {
     box-sizing: border-box;
     padding: 0;
 }
-.remember input[type=checkbox]:checked+label:after {
-    
+.remember input[type="checkbox"]:checked + label:after {
     opacity: 1;
 }
-
 
 .line-height-20 {
     line-height: 20px;
@@ -173,7 +170,8 @@ a[href*="forgot_password"] {
 a {
     background: transparent;
 }
-.otp-flow label, .remember-me label {
+.otp-flow label,
+.remember-me label {
     cursor: pointer;
     user-select: none;
 }
@@ -181,15 +179,13 @@ a {
 label[for="otp_flow"] {
     font-weight: normal;
 }
-.otp-flow label, .remember-me label {
+.otp-flow label,
+.remember-me label {
     cursor: pointer;
     user-select: none;
 }
 
-
-
 .otp_flow label {
-    
     position: absolute;
     width: 16px;
     height: 16px;
@@ -198,26 +194,23 @@ label[for="otp_flow"] {
     border-radius: 1px;
     border: solid 1px #b4b4be;
     background: white;
-    
 }
 label {
     display: inline-block;
     max-width: 100%;
     margin-bottom: 5px;
-    
 }
-.otp_flow input[type=checkbox]:checked+label, .remember input[type=checkbox]:checked+label {
+.otp_flow input[type="checkbox"]:checked + label,
+.remember input[type="checkbox"]:checked + label {
     background: #14bef0;
     border: 0;
 }
-.otp_flow input[type=checkbox]:checked+label:after {
-    
+.otp_flow input[type="checkbox"]:checked + label:after {
     opacity: 1;
 }
 .otp_flow label:after {
-    
     opacity: 0;
-    content: '';
+    content: "";
     position: absolute;
     width: 10px;
     height: 5px;
@@ -236,7 +229,7 @@ label {
 }
 .wealthylife-btn {
     background: #13bef0;
-    color: #FFF;
+    color: #fff;
 }
 
 .common-btn {
@@ -271,41 +264,39 @@ label {
     margin-bottom: 0.5em;
 }
 
-
 .hr-container {
-    width: 100%!important;
+    width: 100% !important;
     padding: 20px 0;
 }
 .hr-inline {
     -webkit-box-flex: 1;
     flex: 1;
     height: 1px;
-    background: #D8D8D8;
+    background: #d8d8d8;
     width: initial !important;
     border: 0;
     margin-top: auto;
     margin-bottom: auto;
 }
 .hr-text {
-    color: #D4D4D4;
+    color: #d4d4d4;
     width: initial !important;
     padding-left: 5px;
     padding-right: 5px;
 }
 .fa-facebook {
-    background: #3B5998;
+    background: #3b5998;
     color: white;
-  }
-  .fa-google {
+}
+.fa-google {
     background: #dd4b39;
     color: white;
-  }
-  .fa-instagram {
-    background:linear-gradient(45deg,#405DE6,#5851DB,#833AB4,#C13584,#E1306C,#FD1D1D);
+}
+.fa-instagram {
+    background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
     color: white !important;
-   
-  }
-  .fa {
+}
+.fa {
     padding: 10px 10px;
     font-size: 25px;
     width: 50px;
@@ -314,31 +305,43 @@ label {
     margin: auto;
     border-radius: 3px 15px;
     margin: 0 5px;
-  }
-  .fa:hover {
+}
+.fa:hover {
     opacity: 0.7;
-  }
+}
 
+.mt-150 {
+    margin-top: 150px;
+}
+.mt-100 {
+    margin-top: 100px;
+}
+.mt-80 {
+    margin-top: 80px;
+}
+.mt-50 {
+    margin-top: 50px;
+}
+.mt-57 {
+    margin-top: 57px;
+}
+.mt-30 {
+    margin-top: 30px;
+}
+.mb-150 {
+    margin-bottom: 150px;
+}
+.mb-100 {
+    margin-bottom: 100px;
+}
+.mb-50 {
+    margin-bottom: 50px;
+}
+.mb-30 {
+    margin-bottom: 30px;
+}
 
-
-
-
-
-
-.mt-150{margin-top: 150px;}
-.mt-100{margin-top: 100px;}
-.mt-80{margin-top: 80px;}
-.mt-50{margin-top: 50px;}
-.mt-57{margin-top: 57px;}
-.mt-30{margin-top: 30px;}
-.mb-150{margin-bottom: 150px;}
-.mb-100{margin-bottom: 100px;}
-.mb-50{margin-bottom: 50px;}
-.mb-30{margin-bottom: 30px;}
-
-
-
-.login-area .nav{
+.login-area .nav {
     display: flex;
     align-items: center;
     justify-content: left;
@@ -346,7 +349,7 @@ label {
 
 .login-area .nav-pills .nav-link {
     color: #000 !important;
-    padding: 10px 15px!important;
+    padding: 10px 15px !important;
     border-radius: 0;
     font-size: 15px;
 }
@@ -354,20 +357,21 @@ label {
 .login-area .nav-pills .nav-link.active {
     color: #000 !important;
     background-color: #ebebeb;
-    padding: 10px 15px!important;
+    padding: 10px 15px !important;
     border-radius: 0;
     font-size: 15px;
 }
 
-.login-area .nav>li>a:focus, .nav>li>a:hover {
+.login-area .nav > li > a:focus,
+.nav > li > a:hover {
     color: #fff !important;
     background-color: #13bef0;
-    padding: 10px 15px!important;
+    padding: 10px 15px !important;
     border-radius: 0;
     font-size: 15px;
 }
 
-.login-area  .outer-space{
+.login-area .outer-space {
     padding: 30px;
 }
 
@@ -378,10 +382,17 @@ label {
     color: #585858;
 }
 
-.login-area label{
+.login-area label {
     font-family: sans-serif;
 }
 .login-area .forget-pasword {
     font-family: sans-serif;
 }
 
+.fb {
+    color: #4267b2 !important;
+}
+
+.google {
+    color: #e14d43 !important;
+}

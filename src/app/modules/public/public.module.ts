@@ -19,6 +19,7 @@ import { BooktestsComponent } from '../booktests/booktests.component';
 import { HealthMedicineshealthComponent } from '../health-medicineshealth/health-medicineshealth.component';
 import { DoctorRegisterComponent } from 'src/app/component/doctor-register/doctor-register.component';
 import { VerifyOtpComponent } from 'src/app/component/verify-otp/verify-otp.component';
+import { SharedModule } from '../../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -30,13 +31,11 @@ import { VerifyOtpComponent } from 'src/app/component/verify-otp/verify-otp.comp
     RegisterComponent,
     ContactUsComponent,
     AboutComponent,
-    // BookappoimentComponent,
     HelpComponent,
     BooktestsComponent,
     HealthMedicineshealthComponent,
     DoctorRegisterComponent,
-    VerifyOtpComponent,
-
+    VerifyOtpComponent
   ],
   imports: [
     CommonModule,
@@ -44,6 +43,7 @@ import { VerifyOtpComponent } from 'src/app/component/verify-otp/verify-otp.comp
     CarouselModule,
     FormsModule,
     ReactiveFormsModule,
+    SharedModule
   ]
 })
 export class PublicModule { }

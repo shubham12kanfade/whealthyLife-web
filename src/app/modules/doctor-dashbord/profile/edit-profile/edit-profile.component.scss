@@ -1,29 +1,30 @@
-.avatar-wrapper{
+.avatar-wrapper {
 	position: relative;
 	height: 104px;
-    width: 105px;
+	width: 105px;
 	margin: 50px auto;
 	border-radius: 50%;
 	overflow: hidden;
 	box-shadow: 1px 1px 15px -5px black;
-	transition: all .3s ease;
-	&:hover{
+	transition: all 0.3s ease;
+	&:hover {
 		transform: scale(1.05);
 		cursor: pointer;
 	}
-	&:hover .profile-pic{
-		opacity: .5;
+	&:hover .profile-pic {
+		opacity: 0.5;
 	}
 	.profile-pic {
-    height: 100%;
+		height: 100%;
 		width: 100%;
-		transition: all .3s ease;
-		&:after{
+		transition: all 0.3s ease;
+		&:after {
 			font-family: FontAwesome;
 			content: "\f007";
-			top: 0; left: 0;
+			top: 0;
+			left: 0;
 			height: 10%;
-            width: 100%;
+			width: 100%;
 			position: absolute;
 			font-size: 72px;
 			background: #ecf0f1;
@@ -33,77 +34,56 @@
 	}
 	.upload-button {
 		position: absolute;
-		top: 0; left: 0;
+		top: 0;
+		left: 0;
 		height: 100%;
 		width: 100%;
-		.fa-arrow-circle-up{
+		.fa-arrow-circle-up {
 			position: absolute;
-			// font-size: 80px;
 			top: 15px;
 			left: 12px;
 			text-align: center;
 			opacity: 0;
-			transition: all .3s ease;
+			transition: all 0.3s ease;
 			color: #34495e;
 		}
-		&:hover .fa-arrow-circle-up{
-			opacity: .9;
+		&:hover .fa-arrow-circle-up {
+			opacity: 0.9;
 		}
 	}
 }
-.jumbotron{
-    // height: 40%;
+.jumbotron {
 	margin-bottom: -21px;
 	background: white;
 	padding: 18px;
 }
-.ccla{
-    // margin-top: 10%;
-}
-// label{
-// 	font-size: 1.23rem;
-// }
-// input{
-// 	font-size: 1.20rem;
-// }
-// #Specialization{
-// 	font-size: 1.20rem;
-// }
-// #country{
-// 	font-size: 1.20rem;
-// }
-// #state{
-// 	font-size: 1.20rem;
-// }
-.btnwarn{
+
+.btnwarn {
 	float: right !important;
 	margin-right: 7%;
 	margin-top: 3%;
-} 
-// .text{
-// 	font-size: 1.60rem;
-// }
-
+}
 
 .c-button--primary {
-    background-color: #14BEF0;
-    color: white;
- 
-    float: right;
-    height: 40px;
+	background-color: #14bef0;
+	color: white;
+
+	float: right;
+	height: 40px;
 }
 
-.maincol{
-    margin-left: 5%; margin-right: 5%;
+.maincol {
+	margin-left: 5%;
+	margin-right: 5%;
 }
 
-.bodhr{
-    border-top: 1px solid lightgray;
+.bodhr {
+	border-top: 1px solid lightgray;
 }
 
-
-.mainhed{
-    font-size: 16px;
-    padding-top: 10px; padding-bottom: 10px;
+.mainhed {
+	font-size: 16px;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 

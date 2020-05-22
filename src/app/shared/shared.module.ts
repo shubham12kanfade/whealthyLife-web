@@ -11,7 +11,8 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
-
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {CalendarModule} from 'primeng/calendar';
 
 @NgModule({
   declarations: [],
@@ -27,7 +28,9 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     MatCheckboxModule,
     MatFormFieldModule,
     MatTableModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatDatepickerModule,
+    CalendarModule
   ],
   exports: [
     MatTabsModule,
@@ -40,7 +43,9 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     MatCheckboxModule,
     MatFormFieldModule,
     MatTableModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatDatepickerModule,
+    CalendarModule
   ]
 })
 export class SharedModule { }
