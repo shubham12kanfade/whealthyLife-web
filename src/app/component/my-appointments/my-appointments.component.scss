@@ -1,3 +1,15 @@
+.container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+
+
+
+
+
 .center-align {
     width: 400px;
     display: block;
@@ -17,7 +29,7 @@
 .center {
    
     width: 100%;
-    border: 1px solid lightgray;
+   
     padding: 10px;
   }
 
@@ -27,7 +39,6 @@
 
   .fortitle{
       font-size: 19px;
-      font-weight: bold;
       color: black;
   }
 
@@ -54,4 +65,8 @@
 
   .sect-top{
    margin-top: 100px;
+  }
+
+  .card{
+      background-color: white;
   }
