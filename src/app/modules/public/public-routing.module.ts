@@ -1,3 +1,4 @@
+import { MyAppointmentsComponent } from './../../component/my-appointments/my-appointments.component';
 import { ForgotPasswordComponent } from './../../component/forgot-password/forgot-password.component';
 import { PublicComponent } from './public.component';
 import { NgModule } from '@angular/core';
@@ -27,6 +28,7 @@ const routes: Routes = [
       { path: 'bookcheckup', component: BookHealthCheckupsComponent },
       { path: 'consult', loadChildren: () => import('../../modules/chat-with-doctor/chat-with-doctor.module').then(ch => ch.ChatWithDoctorModule) },
       { path: 'forgot_password', component: ForgotPasswordComponent },
+      { path: 'appointments', component: MyAppointmentsComponent },
     ]
   }
 ];
