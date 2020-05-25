@@ -16,8 +16,7 @@
             <div class="col-sm-4">
                 <div class="form-check fchk">
                     <label class="form-check-label fcl">
-                        <input type="checkbox" class="form-check-input fci" value="">
-                        Always show today as first day on my calendar
+                        <mat-checkbox> Always show today as first day on my calendar</mat-checkbox>
                     </label>
                 </div>
             </div>
@@ -38,46 +37,24 @@
 
         <div class="row">
             <div class="col-sm-12">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>
-                                <div class="tabth">RACTICE AND DOCTORS</div>
-                            </th>
-                            <th>
-                                <div class="tabth">WORK TIMINGS</div>
-                            </th>
-                            <th></th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <div class="tabtd">Practice - qweqw - Kattupakkam</div>
-                            </td>
-                            <td>
-                                <div class="tabtd"><strong>Mon to Sun:</strong>9:00am-7:00pm</div>
-                            </td>
-                            <td></td>
-                            <td>
-                                <div class="tabtd"><a class="btn" (click)="calendermodal()"><span><i class="fa fa-edit"></i></span></a></div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="tabtd">Madha vyas</div>
-                            </td>
-                            <td>
-                                <div class="tabtd"><strong>Mon to Sun:</strong>9:00am-7:00pm</div>
-                            </td>
-                            <td></td>
-                            <td>
-                                <div class="tabtd"><a class="btn"><span><i class="fa fa-edit"></i></span></a></div>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+                <table mat-table [dataSource]="dataSource">
+                    <ng-container matColumnDef="NAME">
+                      <th mat-header-cell *matHeaderCellDef> RACTICE AND DOCTORS </th>
+                      <td mat-cell *matCellDef="let element"> {{element.NAME}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="TYPE">
+                      <th mat-header-cell *matHeaderCellDef> WORK TIMINGS </th>
+                      <td mat-cell *matCellDef="let element"> {{element.TYPE}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="STREANGTH">
+                      <th mat-header-cell *matHeaderCellDef></th>
+                      <td mat-cell *matCellDef="let element"> <button  mat-stroked-button (click)="calendermodal()" >{{element.STREANGTH}}</button>  </td>
+                     
+                    </ng-container>
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                  </table>
+                  <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
             </div>
         </div>
     </div>
@@ -96,20 +73,13 @@
                 <div class="col-md-12 col-sm-12">
                     <div class="row">
                         <div class="inpt">
-                            <input type="checkbox" id="Sunday" name="Sunday" value="Bike">
-                            <label class="labl" for="Sunday"> Sunday</label><br>
-                            <input type="checkbox" id="Monday" name="Monday" value="Car">
-                            <label class="labl" for="Monday"> Monday</label><br>
-                            <input type="checkbox" id="Tuesaday" name="Tuesaday" value="Boat">
-                            <label class="labl" for="Tuesaday"> Tuesaday</label><br>
-                            <input type="checkbox" id="Wednesday" name="Wednesday" value="Bike">
-                            <label class="labl" for="Wednesday"> Wednesday</label><br>
-                            <input type="checkbox" id="Thursday" name="Thursday" value="Car">
-                            <label class="labl" for="Thursday"> Thursday</label><br>
-                            <input type="checkbox" id="Friday" name="Friday" value="Boat">
-                            <label class="labl" for="vehicle3"> Friday</label><br>
-                            <input type="checkbox" id="Saturday" name="Saturday" value="Boat">
-                            <label class="labl" for="Saturday"> Saturday</label><br>
+                            <mat-checkbox  id="Sunday" name="Sunday" > Sunday</mat-checkbox>
+                            <mat-checkbox id="Monday" name="Monday" class="ml-1"> Monday</mat-checkbox>
+                            <mat-checkbox id="Tuesaday" name="Tuesaday" class="ml-1" > Tuesaday</mat-checkbox>
+                            <mat-checkbox id="Wednesday" name="Wednesday" class="ml-1"> Wednesday</mat-checkbox>
+                            <mat-checkbox id="Thursday" name="Thursday" class="ml-1"> Thursday</mat-checkbox>
+                            <mat-checkbox id="Friday" name="Friday" class="ml-1"> Friday</mat-checkbox>
+                            <mat-checkbox  id="Saturday" name="Saturday" class="ml-1"> Saturday</mat-checkbox>
                         </div>
                     </div>
                 </div>

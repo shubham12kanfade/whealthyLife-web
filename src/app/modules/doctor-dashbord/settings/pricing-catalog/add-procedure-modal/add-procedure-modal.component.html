@@ -2,37 +2,28 @@
 <mat-dialog-content class="mat-typography">
     <div class="col-md-12 col-sm-12">
         <div class="row">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>PROCEDURE NAME<span class="redstar">*</span></th>
-                        <th>COST (₹)<span class="redstar">*</span></th>
-                        <th>TAX</th>
-                        <th>TOTAL COST (₹)</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            <div class="">
-                                <div class="input-group md-form form-sm form-1 pl-0">
-                                </div>
-                                <input class="form-control my-0 py-1" type="text" placeholder="Search"
-                                    aria-label="Search">
-                            </div>
-                        </td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                </tbody>
-
-            </table>
-
+            <table mat-table [dataSource]="dataSource">
+                <ng-container matColumnDef="position">
+                    <th mat-header-cell *matHeaderCellDef> PROCEDURE NAME </th>
+                    <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+                </ng-container>
+                <ng-container matColumnDef="NAME">
+                    <th mat-header-cell *matHeaderCellDef>COST (₹)</th>
+                    <td mat-cell *matCellDef="let element">{{element.NAME}} </td>
+                </ng-container>
+                <ng-container matColumnDef="TYPE">
+                    <th mat-header-cell *matHeaderCellDef> TAX </th>
+                    <td mat-cell *matCellDef="let element">{{element.TYPE}} </td>
+                </ng-container>
+                <ng-container matColumnDef="STREANGTH">
+                    <th mat-header-cell *matHeaderCellDef> TOTAL COST (₹)</th>
+                    <td mat-cell *matCellDef="let element">
+                     {{element.STREANGTH}} </td>
+                </ng-container>
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table> 
+            <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator> 
         </div>
     </div>
 </mat-dialog-content>
