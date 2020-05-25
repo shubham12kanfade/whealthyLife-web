@@ -15,7 +15,7 @@ const routes: Routes = [
       { path: 'login', component: LoginComponent },
       { path: 'register', component: RegisterComponent },
       { path: 'doctor_signup', component: DoctorRegisterComponent },
-      { path: 'verify_otp', component: VerifyOtpComponent },
+      { path: 'verify_otp/:mobile', component: VerifyOtpComponent },
       { path: 'doctors', loadChildren: () => import('../../modules/doctors/doctors.module').then(dd => dd.DoctorsModule) },
       { path: 'accounts', loadChildren: () => import('../../modules/user-accounts/user-accounts.module').then(us => us.UserAccountsModule) },
       { path: 'contact', loadChildren: () => import('../../modules/contact-us/contact-us.module').then(c => c.ContactUsModule) },
@@ -26,7 +26,6 @@ const routes: Routes = [
       { path: 'medicines', loadChildren: () => import('../../modules/health-medicineshealth/health-medicineshealth.module').then(m => m.HealthMedicineshealthModule) },
       { path: 'bookcheckup', component: BookHealthCheckupsComponent },
       { path: 'consult', loadChildren: () => import('../../modules/chat-with-doctor/chat-with-doctor.module').then(ch => ch.ChatWithDoctorModule) },
-
       { path: 'forgot_password', component: ForgotPasswordComponent },
     ]
   }

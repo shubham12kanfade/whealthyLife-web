@@ -361,3 +361,76 @@ body .ui-inputtext:enabled:focus:not(.ui-state-error) {
 	outline: 0 !important;
 	box-shadow: 0 0 0 0.2em #ffffff00 !important;
 }
+
+.ui-toast .ui-toast-message.ui-toast-message-success {
+	background-color: #00f800 !important;
+	border: 0 none !important;
+	color: #000000 !important;
+}
+
+.ui-toast .ui-toast-message.ui-toast-message-error {
+	background-color: #ff0606 !important;
+	border: 0 none !important;
+	color: #ffffff !important;
+}
+
+.ui-toast .ui-toast-message.ui-toast-message-error .ui-toast-close-icon {
+	color: #ffffff !important;
+}
+
+.ui-messages.ui-messages-success .ui-messages-close {
+	color: #212121 !important;
+	font-size: 12px !important;
+	padding: 4px !important;
+}
+
+.ui-messages.ui-messages-warn .ui-messages-close {
+	color: #212121 !important;
+	font-size: 12px !important;
+	padding: 4px !important;
+}
+
+.ui-messages.ui-messages-error .ui-messages-close {
+	color: #212121 !important;
+	font-size: 12px !important;
+	padding: 4px !important;
+}
+
+.ui-messages.ui-messages-success .ui-messages-icon {
+	display: none !important;
+}
+
+.ui-messages.ui-messages-warn .ui-messages-icon {
+	display: none !important;
+}
+
+.ui-messages.ui-messages-error .ui-messages-icon {
+	display: none !important;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+input[type="number"] {
+	-moz-appearance: textfield;
+}
+
+@keyframes ui-progress-spinner-color {
+    100%,
+    0% {
+        stroke: #d62d20;
+    }
+    40% {
+        stroke: #0057e7;
+    }
+    66% {
+        stroke: #008744;
+    }
+    80%,
+    90% {
+        stroke: #ffa700;
+    }
+}

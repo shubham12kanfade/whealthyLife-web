@@ -1,3 +1,4 @@
+<p-toast class="custom-error" [showTransformOptions]="'translateX(100%)'"></p-toast>
 <section class="mt-150 mb-50 login-area">
   <div class="container">
     <div class="row">
@@ -17,14 +18,11 @@
                 <a class="nav-link active" data-toggle="pill" href="#Register">Register</a>
               </li>
             </ul>
-
-            <!-- Tab panes -->
             <div class="tab-content">
               <div class="tab-pane container active" id="Login"></div>
               <div class="tab-pane container fade" id="Register"></div>
             </div>
           </div>
-
           <div class="col-md-12">
             <form [formGroup]="register" (ngSubmit)="onSubmit()">
               <div class="outer-box">
@@ -33,7 +31,6 @@
                     <p class="no-bottom-margin display-inline" id="joinwealthylife">
                       Join Wealthy Life
                     </p>
-
                     <a routerLink="/doctor_signup" class="register font-12 black-link align-top"
                       id="normal-doctor-signup">
                       <span class="blue-link">Register Here</span>
@@ -54,7 +51,6 @@
                         <div *ngIf="submitted && f.firstName.errors" class="error-block display-block">
                           <div *ngIf="f.firstName.errors.required">First Name is required</div>
                         </div>
-
                       </div>
                     </div>
                     <div class="col-sm-12 col-md-6">
@@ -68,10 +64,7 @@
                       </div>
                     </div>
                   </div>
-
                   <input type="hidden" id="is-patient-signup" />
-
-
                   <div class="row">
                     <div class="col-md-12">
                       <div class="padding-top-8">
@@ -103,12 +96,10 @@
                         </div>
                         <div *ngIf="submitted && f.mobileNumber.errors" class="error-block display-block">
                           <div *ngIf="f.mobileNumber.errors.required">Mobile Number is required</div>
-
                         </div>
                       </div>
                     </div>
                   </div>
-
                   <div class="row">
                     <div class="col-md-12">
                       <p class="no-bottom-margin padding-top-8">Email</p>
@@ -122,8 +113,6 @@
                       </div>
                     </div>
                   </div>
-
-
                   <div class="row">
                     <div class="col-md-12">
                       <div class="padding-top-8">
@@ -139,12 +128,10 @@
                             Password Strength:
                             <span id="password-strength-indicator">&nbsp;</span>
                           </div>
-
                         </div>
                       </div>
                     </div>
                   </div>
-
                   <div class="row">
                     <div class="col-md-12">
                       <div>
@@ -166,47 +153,23 @@
                             </div>
                           </div>
                         </div>
-
                       </div>
                     </div>
                   </div>
-
-
                   <div class="row">
                     <div class="col-md-12">
                       <div class="padding-top-20">
                         <div id="recaptcha-container-register" data-sitekey="6LcgVBgUAAAAANU9A74W9CtzZ3NeJdhbGIoUbDXG"
                           data-size="invisible"></div>
                         <button class="btn btn-lg common-btn wealthylife-btn" type="submit">
-                          Send OTP
+                          Send OTP <p-progressSpinner *ngIf="sending" class="progress-bar12"
+                            [style]="{width: '23px', height: '23px'}" strokeWidth="3" animationDuration="1.5s">
+                          </p-progressSpinner>
                         </button>
                       </div>
                     </div>
                   </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                  <div style="clear: both;"></div>
-
-
-
-
+                  <!-- <div style="clear: both;"></div>
                   <div>
                     <input id="csrf_token" name="csrf_token" type="hidden"
                       value="ImNjOWM3ODhkNWFjZTY4NGZiZDgwZTllN2MyMzAyZTQ4YWI1MTc4OWIi.Xqm0Gw.TB1NvM_3DNESu158HhBU7H2xYnk" />
@@ -214,26 +177,13 @@
                     <input id="source" name="source" type="hidden" value="" />
                     <input id="view_type" name="view_type" type="hidden" value="normal" />
                     <input id="type" name="type" type="hidden" value="patient" />
-                  </div>
-
-
-
-
-
-
+                  </div> -->
                 </div>
               </div>
             </form>
           </div>
         </div>
       </div>
-
-
-
-
-
-
-
     </div>
   </div>
 </section>

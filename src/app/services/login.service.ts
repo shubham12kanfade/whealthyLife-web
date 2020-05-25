@@ -8,7 +8,12 @@ export class LoginService {
 
   constructor(public ApiCallService: ApiCallService) { }
 
-  loginUser(data){
-    return this.ApiCallService.postData('api/v1/authentication/login/',data);
+  loginUser(data) {
+    return this.ApiCallService.postData('api/v1/authentication/login/', data);
+  }
+
+  verifyOtp(data) {
+    return this.ApiCallService.getData('api/v1/authentication/verify/mobile/' + data.mobile + '/' + data.otp);
   }
 }
+  
