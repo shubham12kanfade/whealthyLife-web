@@ -12,11 +12,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { CookieService } from 'ngx-cookie-service';
 import { AutocompleteLibModule } from 'angular-ng-autocomplete';
 import { AgmCoreModule } from '@agm/core';
-import {OpentokModule} from "ng2-opentok/dist/opentok.module"
+import {OpentokModule} from "ng2-opentok/dist/opentok.module";
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+  
+ 
   ],
   imports: [
     BrowserModule,

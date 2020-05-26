@@ -1,0 +1,29 @@
+<div class="row">
+    <div class="col-12 border ">
+     <div class="row">
+         <div class="px-3 py-2 border-bottom2 mx-1 font-weight-bold " (click)="option('PaymentOptions')" >Payment Options</div>
+         <div class="px-3 py-2 border-bottom2 mx-1 font-weight-bold " (click)="option('HealthCashHistory')" >HealthCash History</div>
+     </div>
+    </div>
+  </div>
+  <div class="row" *ngIf="firstoption =='PaymentOptions'" style="height: -webkit-fill-available;">
+    <div class="col-12 ">
+    <div class="row border">
+      <div class="p-4 "> <img src="https://drive.practo.com/images/practo-wallet-icon.png" width="65px" alt=""></div>
+     <div class="marginsettop text-dark"><p>Practo HealthCash0.0</p></div>
+    </div>
+    </div>
+  </div>
+  <div class="row" *ngIf="firstoption =='HealthCashHistory'" style="height: -webkit-fill-available;">
+    <div class="col-12 m-auto">
+      <div class="row m-auto">
+          <img src="https://drive.practo.com/images/no_record_logo.svg" width="200" alt="" class="m-auto">
+      </div>
+      <div class="col-12 text-center ">
+          <p class="text-center">Sorry, no records shared yet</p>
+      </div>
+
+  </div>
+
+  </div>
+  

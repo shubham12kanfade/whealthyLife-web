@@ -1,0 +1,45 @@
+<div class="row">
+    <div class="col-12 border ">
+     <div class="row">
+         <div class="px-3 py-2 border-bottom2 mx-1 font-weight-bold " (click)="option('free')" >Free</div>
+         <div class="px-3 py-2 border-bottom2 mx-1 font-weight-bold " (click)="option('paid')" >Paid</div>
+     </div>
+    </div>
+  </div>
+  <div class="row" *ngIf="firstoption =='free'" style="height: -webkit-fill-available;">
+    <div class="col-12 m-auto">
+      <div class="row m-auto">
+        <img
+          src="https://drive.practo.com/images/consult-illustration.svg"
+          width="200"
+          alt=""
+          class="m-auto"
+        />
+      </div>
+      <div class="col-12 text-center">
+        <p class="text-center">Sorry, no records shared yet</p>
+      </div>
+      <div class="col-12 text-center">
+<button type="button" class="btn btn-info">Ask a doctor</button>
+    </div>
+    </div>
+  </div>
+  <div class="row" *ngIf="firstoption =='paid'" style="height: -webkit-fill-available;">
+    <div class="col-12 m-auto">
+      <div class="row m-auto">
+        <img
+          src="https://drive.practo.com/images/consult-illustration.svg"
+          width="200"
+          alt=""
+          class="m-auto"
+        />
+      </div>
+      <div class="col-12 text-center">
+        <p class="text-center">Sorry, no records shared yet</p>
+      </div>
+      <div class="col-12 text-center">
+<button type="button" class="btn btn-info">Ask a doctor</button>
+    </div>
+    </div>
+  </div>
+  

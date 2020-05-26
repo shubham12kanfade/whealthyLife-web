@@ -1,3 +1,4 @@
+import { DriveModule } from './../drive/drive.module';
 import { PublicComponent } from './public.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -11,6 +12,7 @@ const routes: Routes = [
   {
     path: '', component: PublicComponent, children: [
       { path: '', loadChildren: () => import('../../modules/home/home.module').then(h => h.HomeModule) },
+      { path: '', loadChildren: () => import('../../modules/drive/drive.module').then(h => h.DriveModule) },
       { path: 'login', component: LoginComponent },
       { path: 'register', component: RegisterComponent },
       { path: 'doctor_signup', component: DoctorRegisterComponent },
