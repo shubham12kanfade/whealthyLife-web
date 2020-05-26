@@ -19,7 +19,6 @@ const routes: Routes = [
       { path: 'Feedback', loadChildren: () => import('./feedback/feedback.module').then(dhm => dhm.FeedbackModule) },
       { path: 'Reach', loadChildren: () => import('./reach/reach.module').then(dhm => dhm.ReachModule) },
       { path: 'HealthFeed', loadChildren: () => import('./health-feed/health-feed.module').then(dhm => dhm.HealthFeedModule) },
-
       { path: 'change_password', component: ChangePasswordComponent },
     ]
   }

@@ -27,12 +27,9 @@
         </div>
     </div>
 </section>
-
-
 <section>
     <div class="col-md-12 headerc sticky">
         <button class="btn btnbar" (click)="avaialableclick()"><i class="fa fa-bars"></i></button>
-
         <div class="asd row ">
             <ul class="ullist">
                 <div class="inlflx">
@@ -43,7 +40,6 @@
                                 <option>Available Today</option>
                                 <option>Available Tomorrow</option>
                                 <option>Available in next 7 days</option>
-
                             </select>
                         </div>
                     </li>
@@ -95,8 +91,6 @@
                             </select>
                         </div>
                     </li>
-
-
                     <li>
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
@@ -116,11 +110,9 @@
                             </select>
                         </div>
                     </li>
-
                     <li>
                         <span class="sortby">Sort By</span>
                         <div class="form-group-sm">
-
                             <select class="form-control" id="exampleFormControlSelect1">
                                 <option> Relevance</option>
                                 <option>2</option>
@@ -131,7 +123,6 @@
                         </div>
                     </li>
                 </div>
-
             </ul>
         </div>
     </div>
@@ -152,11 +143,11 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-12 profcard">
+                            <div class="col-md-12 profcard" *ngFor="let doctor of doctorList">
                                 <div class="row">
                                     <div class="col-md-3">
                                         <div class="profimage">
-                                            <img src="../assets/img/user.jpeg" alt="Avatar" width="200px" class="">
+                                            <img [src]="doctor?.avatar" onerror="this.src='../assets/img/user.jpeg'" alt="Avatar" width="200px" class="">
                                         </div>
                                         <div class="vprofile">
                                             <a href="">View Profile</a>
@@ -164,7 +155,7 @@
                                     </div>
                                     <div class="col-md-6">
                                         <div>
-                                            <h2><a href="">Dr.M.R.Pujari</a></h2>
+                                            <h2><a href="">Dr. {{doctor?.firstName}} {{doctor?.lastName}}</a></h2>
                                             <p>Dentist</p>
                                             <p>14 years experience overall</p>
                                             <p><strong><a href="">Marathahalli,Bangalore.</a> </strong></p>
@@ -186,28 +177,29 @@
                                     </div>
                                     <div class="col-md-3">
                                         <div class="bookingside">
-                                            <p><span class="availableicon"><i
-                                                        class="fa fa-calendar"></i></span>Available Today</p>
+                                            <p>
+                                                <span class="availableicon">
+                                                    <i class="fa fa-calendar"></i>
+                                                </span>
+                                                Available Today
+                                            </p>
                                         </div>
                                         <div class="">
                                             <button class="btn btn-primary btnbooking" (click)=" showtime()">Book
                                                 Appointment
-                                                <br> <span class="nobooktext">No booking fee</span>
+                                                <br><span class="nobooktext">No booking fee</span>
                                             </button>
-
                                         </div>
                                         <br><br>
                                         <div>
-
-                                            <button type="button"
+                                            <button type="button" (click)="onConsultation(doctor?._id)"
                                                 class="btn btn-outline-primary btnvideoconultation">Video
                                                 Consultation</button>
-
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-12 profcard">
+                            <!-- <div class="col-md-12 profcard">
                                 <div class="row">
                                     <div class="col-md-3">
                                         <div class="profimage">
@@ -253,7 +245,6 @@
                                         </div>
                                         <br><br>
                                         <div>
-
                                             <button type="button"
                                                 class="btn btn-outline-primary btnvideoconultation">Video
                                                 Consultation</button>
@@ -536,7 +527,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                     <div class=" showtime" *ngIf="show">
@@ -552,243 +543,244 @@
                         <div class="col-md-12 col-sm-12 slidetime">
                             <div class="row">
                                 <div class="col-sm-12">
-                                <mat-tab-group>
-                                    <mat-tab>
-                                        <ng-template mat-tab-label>
-                                            <div class="grp">
-                                                <h4>Today</h4>
-                                                <p>No Slots Available</p>
-                                            </div>
-                                        </ng-template>
+                                    <mat-tab-group>
+                                        <mat-tab>
+                                            <ng-template mat-tab-label>
+                                                <div class="grp">
+                                                    <h4>Today</h4>
+                                                    <p>No Slots Available</p>
+                                                </div>
+                                            </ng-template>
 
 
-                                        <div class="noslot">
-                                            <p>No slots available for this day</p>
-                                            <div><button class="btn btn-primary">Next availability on Sat, 23
-                                                    May</button></div>
-                                            <p class="or">OR</p>
-                                            <div><button type="button" class="btn btn-outline-primary">Call Now</button>
-                                            </div>
-                                        </div>
-                                    </mat-tab>
-                                    <mat-tab>
-                                        <ng-template mat-tab-label>
-                                            <div class="grp">
-                                                <h4>Tomorrow</h4>
-                                                <p>29 Slots Available</p>
-                                            </div>
-                                        </ng-template>
-                                        <div class="slotsavailable">
-                                            <div class="row">
-                                                <div class="col-sm-2">
-                                                    <div>
-                                                        <span><i class="fa fa-sun"></i></span>
-                                                        Morning
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-10 driven">
-                                                    <div class="morningslot">
-                                                        <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                            <span>09:00 AM</span></div>
-                                                        <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                            <span>09:00 AM</span></div>
-                                                        <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                            <span>09:00 AM</span></div>
-                                                        <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                            <span>09:00 AM</span></div>
-                                                        <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                            <span>09:00 AM</span></div>
-                                                        <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                            <span>09:00 AM</span></div>
-                                                    </div>
+                                            <div class="noslot">
+                                                <p>No slots available for this day</p>
+                                                <div><button class="btn btn-primary">Next availability on Sat, 23
+                                                        May</button></div>
+                                                <p class="or">OR</p>
+                                                <div><button type="button" class="btn btn-outline-primary">Call
+                                                        Now</button>
                                                 </div>
                                             </div>
-                                            <hr>
-                                            <div class="row">
-                                                <div class="col-sm-2">
-                                                    <div>
-                                                        <span><i class="fa fa-sun"></i></span>
-                                                        Afternoon
+                                        </mat-tab>
+                                        <mat-tab>
+                                            <ng-template mat-tab-label>
+                                                <div class="grp">
+                                                    <h4>Tomorrow</h4>
+                                                    <p>29 Slots Available</p>
+                                                </div>
+                                            </ng-template>
+                                            <div class="slotsavailable">
+                                                <div class="row">
+                                                    <div class="col-sm-2">
+                                                        <div>
+                                                            <span><i class="fa fa-sun"></i></span>
+                                                            Morning
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-10 driven">
+                                                        <div class="morningslot">
+                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
+                                                                <span>09:00 AM</span></div>
+                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
+                                                                <span>09:00 AM</span></div>
+                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
+                                                                <span>09:00 AM</span></div>
+                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
+                                                                <span>09:00 AM</span></div>
+                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
+                                                                <span>09:00 AM</span></div>
+                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
+                                                                <span>09:00 AM</span></div>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-sm-10 driven">
-                                                    <div class="morningslot">
-                                                        <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                            <span>09:00 AM</span></div>
-                                                        <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                            <span>09:00 AM</span></div>
-                                                        <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                            <span>09:00 AM</span></div>
-                                                        <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                            <span>09:00 AM</span></div>
-                                                        <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                            <span>09:00 AM</span></div>
-                                                        <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                            <span>09:00 AM</span></div>
+                                                <hr>
+                                                <div class="row">
+                                                    <div class="col-sm-2">
+                                                        <div>
+                                                            <span><i class="fa fa-sun"></i></span>
+                                                            Afternoon
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-10 driven">
+                                                        <div class="morningslot">
+                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
+                                                                <span>09:00 AM</span></div>
+                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
+                                                                <span>09:00 AM</span></div>
+                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
+                                                                <span>09:00 AM</span></div>
+                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
+                                                                <span>09:00 AM</span></div>
+                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
+                                                                <span>09:00 AM</span></div>
+                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
+                                                                <span>09:00 AM</span></div>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <hr>
-                                            <div class="row">
-                                                <div class="col-sm-2">
-                                                    <div>
-                                                        <span><i class="fa fa-sun"></i></span>
-                                                        Evening
+                                                <hr>
+                                                <div class="row">
+                                                    <div class="col-sm-2">
+                                                        <div>
+                                                            <span><i class="fa fa-sun"></i></span>
+                                                            Evening
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-10 driven">
+                                                        <div class="morningslot">
+                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
+                                                                <span>09:00 AM</span></div>
+                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
+                                                                <span>09:00 AM</span></div>
+                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
+                                                                <span>09:00 AM</span></div>
+                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
+                                                                <span>09:00 AM</span></div>
+                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
+                                                                <span>09:00 AM</span></div>
+                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
+                                                                <span>09:00 AM</span></div>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-sm-10 driven">
-                                                    <div class="morningslot">
-                                                        <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                            <span>09:00 AM</span></div>
-                                                        <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                            <span>09:00 AM</span></div>
-                                                        <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                            <span>09:00 AM</span></div>
-                                                        <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                            <span>09:00 AM</span></div>
-                                                        <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                            <span>09:00 AM</span></div>
-                                                        <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                            <span>09:00 AM</span></div>
+                                                <div class="row">
+                                                    <div class="col-sm-2">
+                                                        <div>
+                                                            <span><i class="fa fa-moon"></i></span>
+                                                            Night
+                                                        </div>
                                                     </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-sm-2">
-                                                    <div>
-                                                        <span><i class="fa fa-moon"></i></span>
-                                                        Night
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-10 driven">
-                                                    <div class="morningslot">
-                                                        <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                            <span>09:00 AM</span></div>
-                                                        <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                            <span>09:00 AM</span></div>
-                                                        <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                            <span>09:00 AM</span></div>
-                                                        <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                            <span>09:00 AM</span></div>
-                                                        <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                            <span>09:00 AM</span></div>
-                                                        <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                            <span>09:00 AM</span></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </mat-tab>
-                                    <mat-tab>
-                                        <ng-template mat-tab-label>
-                                            <div class="grp">
-                                                <h4>Sun 24,May</h4>
-                                                <p>29 Slots Available</p>
-                                            </div>
-                                        </ng-template>
-                                        <div class="slotsavailable">
-                                            <div class="row">
-                                                <div class="col-sm-2">
-                                                    <div>
-                                                        <span><i class="fa fa-sun"></i></span>
-                                                        Morning
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-10 driven">
-                                                    <div class="morningslot">
-                                                        <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                            <span>09:00 AM</span></div>
-                                                        <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                            <span>09:00 AM</span></div>
-                                                        <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                            <span>09:00 AM</span></div>
-                                                        <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                            <span>09:00 AM</span></div>
-                                                        <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                            <span>09:00 AM</span></div>
-                                                        <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                            <span>09:00 AM</span></div>
+                                                    <div class="col-sm-10 driven">
+                                                        <div class="morningslot">
+                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
+                                                                <span>09:00 AM</span></div>
+                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
+                                                                <span>09:00 AM</span></div>
+                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
+                                                                <span>09:00 AM</span></div>
+                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
+                                                                <span>09:00 AM</span></div>
+                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
+                                                                <span>09:00 AM</span></div>
+                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
+                                                                <span>09:00 AM</span></div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <hr>
-                                            <div class="row">
-                                                <div class="col-sm-2">
-                                                    <div>
-                                                        <span><i class="fa fa-sun"></i></span>
-                                                        Afternoon
+                                        </mat-tab>
+                                        <mat-tab>
+                                            <ng-template mat-tab-label>
+                                                <div class="grp">
+                                                    <h4>Sun 24,May</h4>
+                                                    <p>29 Slots Available</p>
+                                                </div>
+                                            </ng-template>
+                                            <div class="slotsavailable">
+                                                <div class="row">
+                                                    <div class="col-sm-2">
+                                                        <div>
+                                                            <span><i class="fa fa-sun"></i></span>
+                                                            Morning
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-10 driven">
+                                                        <div class="morningslot">
+                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
+                                                                <span>09:00 AM</span></div>
+                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
+                                                                <span>09:00 AM</span></div>
+                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
+                                                                <span>09:00 AM</span></div>
+                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
+                                                                <span>09:00 AM</span></div>
+                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
+                                                                <span>09:00 AM</span></div>
+                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
+                                                                <span>09:00 AM</span></div>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-sm-10 driven">
-                                                    <div class="morningslot">
-                                                        <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                            <span>09:00 AM</span></div>
-                                                        <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                            <span>09:00 AM</span></div>
-                                                        <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                            <span>09:00 AM</span></div>
-                                                        <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                            <span>09:00 AM</span></div>
-                                                        <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                            <span>09:00 AM</span></div>
-                                                        <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                            <span>09:00 AM</span></div>
+                                                <hr>
+                                                <div class="row">
+                                                    <div class="col-sm-2">
+                                                        <div>
+                                                            <span><i class="fa fa-sun"></i></span>
+                                                            Afternoon
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-10 driven">
+                                                        <div class="morningslot">
+                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
+                                                                <span>09:00 AM</span></div>
+                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
+                                                                <span>09:00 AM</span></div>
+                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
+                                                                <span>09:00 AM</span></div>
+                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
+                                                                <span>09:00 AM</span></div>
+                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
+                                                                <span>09:00 AM</span></div>
+                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
+                                                                <span>09:00 AM</span></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <div class="row">
+                                                    <div class="col-sm-2">
+                                                        <div>
+                                                            <span><i class="fa fa-sun"></i></span>
+                                                            Evening
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-10 driven">
+                                                        <div class="morningslot">
+                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
+                                                                <span>09:00 AM</span></div>
+                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
+                                                                <span>09:00 AM</span></div>
+                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
+                                                                <span>09:00 AM</span></div>
+                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
+                                                                <span>09:00 AM</span></div>
+                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
+                                                                <span>09:00 AM</span></div>
+                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
+                                                                <span>09:00 AM</span></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-2">
+                                                        <div>
+                                                            <span><i class="fa fa-moon"></i></span>
+                                                            Night
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-10 driven">
+                                                        <div class="morningslot">
+                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
+                                                                <span>09:00 AM</span></div>
+                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
+                                                                <span>09:00 AM</span></div>
+                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
+                                                                <span>09:00 AM</span></div>
+                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
+                                                                <span>09:00 AM</span></div>
+                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
+                                                                <span>09:00 AM</span></div>
+                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
+                                                                <span>09:00 AM</span></div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <hr>
-                                            <div class="row">
-                                                <div class="col-sm-2">
-                                                    <div>
-                                                        <span><i class="fa fa-sun"></i></span>
-                                                        Evening
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-10 driven">
-                                                    <div class="morningslot">
-                                                        <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                            <span>09:00 AM</span></div>
-                                                        <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                            <span>09:00 AM</span></div>
-                                                        <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                            <span>09:00 AM</span></div>
-                                                        <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                            <span>09:00 AM</span></div>
-                                                        <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                            <span>09:00 AM</span></div>
-                                                        <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                            <span>09:00 AM</span></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-sm-2">
-                                                    <div>
-                                                        <span><i class="fa fa-moon"></i></span>
-                                                        Night
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-10 driven">
-                                                    <div class="morningslot">
-                                                        <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                            <span>09:00 AM</span></div>
-                                                        <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                            <span>09:00 AM</span></div>
-                                                        <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                            <span>09:00 AM</span></div>
-                                                        <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                            <span>09:00 AM</span></div>
-                                                        <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                            <span>09:00 AM</span></div>
-                                                        <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                            <span>09:00 AM</span></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </mat-tab>
-                                </mat-tab-group>
-                            </div>
+                                        </mat-tab>
+                                    </mat-tab-group>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -802,34 +794,24 @@
                                     <p>You are seeing results from bangalore. See results near you</p>
                                     <div class="row"
                                         style="display: flex; justify-content: space-around;margin-top: 30px;">
-
                                         <button class="btn">HSR Layout</button>
-
                                         <button class="btn">Indiranagar</button>
-
                                         <button class="btn">Whitefield</button>
-
                                         <button class="btn">Marathahalli</button>
-
                                         <button class="btn">Sarjapur Road</button>
-
                                     </div>
                                     <div class="row" style="justify-content: space-around;margin-top: 30px;">
-
                                         <span class="">Search Location</span>
-
-                                        <button class="btn btn-primary currentLocation"><i
-                                                class="fa fa-location"></i>Current
-                                            Location</button>
-
+                                        <button class="btn btn-primary currentLocation">
+                                            <i class="fa fa-location"></i>
+                                            Current Location
+                                        </button>
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
-
                 <div class="card don">
                     <div class="row">
                         <div class="col-7 cosevn">
@@ -842,11 +824,8 @@
                             <img src="../../../assets/img/tracefinallogo.png">
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
     </div>
-
-
 </section>

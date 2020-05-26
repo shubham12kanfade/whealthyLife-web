@@ -2,29 +2,27 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpEventType } from '@angular/common/http';
 import { ApiConfiguration } from './configuration';
 import { BehaviorSubject } from 'rxjs';
+import { UserService } from '../user.service';
 
 @Injectable()
 export class ApiCallService extends ApiConfiguration {
   token: any = {};
   uploadSub = new BehaviorSubject<any>(0);
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, public userService: UserService) {
     super();
-    localStorage.setItem('token', 'token');
-    const token = localStorage.getItem('token');
-    this.token = token ? token : null;
-    // console.log('token', this.token);
   }
 
   setHeaderToken(token) {
     this.token = token;
-    localStorage.setItem('token', token);
   }
 
   getHeader() {
+    const token = this.userService.getUserToken();
+    this.token = token ? token : '';
     return {
       headers: {
-        Authorization: this.token
+        authorization: this.token
       }
     };
   }
@@ -92,7 +90,9 @@ export class ApiCallService extends ApiConfiguration {
 
     return new Promise((resolve, reject) => {
       const uploadData = new FormData();
-      uploadData.append('myFile', file, file.name);
+      for(var i = 0; i < file.length; i++) {
+        uploadData.append('myFile'+i, file[i], file[i].name);
+      }
       this.uploadSub.next(0);
       const request = this.http
         .post(url,

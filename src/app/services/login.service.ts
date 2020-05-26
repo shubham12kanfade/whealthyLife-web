@@ -9,11 +9,11 @@ export class LoginService {
   constructor(public ApiCallService: ApiCallService) { }
 
   loginUser(data) {
-    return this.ApiCallService.postData('api/v1/authentication/login/', data);
+    return this.ApiCallService.postData('authentication/login/', data);
   }
 
   verifyOtp(data) {
-    return this.ApiCallService.getData('api/v1/authentication/verify/mobile/' + data.mobile + '/' + data.otp);
+    return this.ApiCallService.getData('authentication/verify/mobile/' + data.mobile + '/' + data.otp);
   }
 }
   

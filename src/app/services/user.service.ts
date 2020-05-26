@@ -40,7 +40,7 @@ export class UserService {
 
   getUserToken() {
     if (this.storage.get('userInfo_wealthyLife')) {
-      return JSON.parse(this.storage.get('userInfo_token'));
+      return this.storage.get('userInfo_token');
     } else {
       return false;
     }

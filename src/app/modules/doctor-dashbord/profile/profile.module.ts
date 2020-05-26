@@ -15,6 +15,7 @@ import { ClinicTimingsComponent } from './clinic-timings/clinic-timings.componen
 import { ConsultantDetailsComponent } from './consultant-details/consultant-details.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { SharedModule } from '../../../shared/shared.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,8 @@ import { SharedModule } from '../../../shared/shared.module';
   imports: [
     CommonModule,
     ProfileRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
     SharedModule
   ]
 })

@@ -1,0 +1,37 @@
+#endcall {
+    position: fixed;
+    top: 3rem;
+    z-index: 99;
+    right: 36rem;
+}
+
+#timer {
+    position: fixed;
+    top: 3.5rem;
+    z-index: 99;
+    right: 43rem;
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+#addPrescription {
+    position: fixed;
+    bottom: 3rem;
+    z-index: 99;
+    left: 37%;
+}
+
+#addMedicine {
+    position: fixed;
+    bottom: 3rem;
+    z-index: 99;
+    left: 49%;
+}
+
+#addMedia {
+    position: fixed;
+    bottom: 3rem;
+    z-index: 99;
+    left: 60%;
+}

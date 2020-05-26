@@ -101,38 +101,39 @@
 								</a>
 								<ul class="dropdown-menu dropDown" aria-labelledby="navbarDropdown">
 									<li>
-										<a class="dropdown-item" style="display: flex;" href="#">
+										<a class="dropdown-item" style="display: flex;" (click)="onProfile()">
 											<img src="../../../assets/img/avatar.png" style="width: 50px;" alt="">
 											{{userInfo?.firstName}} <br>
 											{{userInfo?.lastName}}
 										</a>
 									</li>
 									<li>
-										<a class="dropdown-item" href="#">My Appointment</a>
+										<a class="dropdown-item" [routerLink]="['/my/appointments']">My Appointment</a>
 									</li>
 									<li>
-										<a class="dropdown-item" href="#">My Test</a>
+										<a class="dropdown-item" [routerLink]="['/my/Tests']">My Test</a>
 									</li>
 									<li>
-										<a class="dropdown-item" href="#">My Medicine Orders</a>
+										<a class="dropdown-item" [routerLink]="['/my/Orders']">My Medicine Orders</a>
 									</li>
 									<li>
-										<a class="dropdown-item" href="#">My Medical Records</a>
+										<a class="dropdown-item" [routerLink]="['/my/record']">My Medical Records</a>
 									</li>
 									<li>
-										<a class="dropdown-item" href="#">My Online consultations</a>
+										<a class="dropdown-item" [routerLink]="['/my/Consultations']">My Online
+											consultations</a>
 									</li>
 									<li>
-										<a class="dropdown-item" href="#">My Feedback</a>
+										<a class="dropdown-item" [routerLink]="['/my/Feedback']">My Feedback</a>
 									</li>
 									<li>
-										<a class="dropdown-item" href="#">View / Update Profile</a>
+										<a class="dropdown-item" [routerLink]="['/my/']">View / Update Profile</a>
 									</li>
 									<li>
-										<a class="dropdown-item" href="#">Settings</a>
+										<a class="dropdown-item" [routerLink]="['/Settings']">Settings</a>
 									</li>
 									<li>
-										<a class="dropdown-item" href="#" (click)="onLogOut()">Logout</a>
+										<a class="dropdown-item" (click)="onLogOut()">Logout</a>
 									</li>
 								</ul>
 							</li>

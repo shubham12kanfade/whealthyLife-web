@@ -14,8 +14,7 @@
                             </span>
                             <input data-qa-id="omni-searchbox-locality"
                                 class="c-omni-searchbox c-omni-searchbox--large dropdown-toggle" autocomplete="off"
-                                placeholder="Search location" #search><span
-                                class="c-omni-searchbox__button-container">
+                                placeholder="Search location" #search><span class="c-omni-searchbox__button-container">
                                 <span class="c-omni-searchbox__button c-omni-searchbox__button"
                                     data-qa-id="current_location">
                                     <i class="icon-ic_gps_system"></i>
@@ -31,10 +30,10 @@
                             </span>
                             <div class="">
                                 <ng-autocomplete [data]="countries" class="" [searchKeyword]="keyword"
-                                    placeHolder="Search doctors, clinics, hospitals etc" (selected)='selectEvent($event)'
-                                    (inputChanged)='onChangeSearch($event)' (inputFocused)='onFocused($event)'
-                                    historyIdentifier="countries" [itemTemplate]="itemTemplate"
-                                    [notFoundTemplate]="notFoundTemplate">
+                                    placeHolder="Search doctors, clinics, hospitals etc"
+                                    (selected)='selectEvent($event)' (inputChanged)='onChangeSearch($event)'
+                                    (inputFocused)='onFocused($event)' historyIdentifier="countries"
+                                    [itemTemplate]="itemTemplate" [notFoundTemplate]="notFoundTemplate">
                                 </ng-autocomplete>
 
                                 <ng-template #itemTemplate let-item>
@@ -45,28 +44,11 @@
                                     <div [innerHTML]="notFound"></div>
                                 </ng-template>
                             </div>
-
-                            <!-- <input data-qa-id="omni-searchbox-keyword"
-                                class="c-omni-searchbox c-omni-searchbox--large dropdown-toggle" autocomplete="off"
-                                placeholder="Search doctors, clinics, hospitals, etc." value="" data-toggle="dropdown">
-                            <div class="drp">
-                                <ul class="dropdown-menu">
-                                    <li><a routerLink="/doctors">Dentist</a></li>
-                                    <li><a href="#"> Gynecologist/obstetrician</a></li>
-                                    <li><a href="#">General Physician</a></li>
-                                    <li><a href="#">General Dermatologist</a></li>
-                                    <li><a href="#">Ear-nose-throat (ent) Specialist</a></li>
-                                    <li><a href="#">Homoeopath</a></li>
-                                    <li><a href="#">Ayurveda</a></li>
-                                </ul>
-                            </div> -->
-
                         </div>
                     </div>
                 </div>
             </div>
             <div class="c-popular-searches">
-
                 <div class="col-md-12">
                     <ul>
                         <li data-qa-id="popular-searches"><strong style="color: #fff;">Popular searches:</strong></li>
@@ -76,7 +58,6 @@
                                 href="/bangalore/gynecologist-obstetrician">Gynecologist/Obstetrician</a></li>
                         <li><span class="c-popular-searches"><span data-qa-id="others-speciality">Others</span><i
                                     class="icon-ic_down_cheveron"></i></span></li>
-
                     </ul>
                 </div>
             </div>
