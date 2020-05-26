@@ -14,7 +14,10 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { CalendarModule } from 'primeng/calendar';
 import { CdkTableModule } from '@angular/cdk/table';
-
+import { ToastModule } from 'primeng/toast';
+import { MessagesModule } from 'primeng/messages';
+import { MessageModule } from 'primeng/message';
+import {ProgressSpinnerModule} from 'primeng/progressspinner';
 
 
 @NgModule({
@@ -34,7 +37,11 @@ import { CdkTableModule } from '@angular/cdk/table';
     MatPaginatorModule,
     MatDatepickerModule,
     CalendarModule,
-    CdkTableModule
+    CdkTableModule,
+    ToastModule,
+    MessagesModule,
+    MessageModule,
+    ProgressSpinnerModule
   ],
   exports: [
     MatTabsModule,
@@ -50,7 +57,11 @@ import { CdkTableModule } from '@angular/cdk/table';
     MatPaginatorModule,
     MatDatepickerModule,
     CalendarModule,
-    CdkTableModule
+    CdkTableModule,
+    ToastModule,
+    MessagesModule,
+    MessageModule,
+    ProgressSpinnerModule
   ]
 })
 export class SharedModule { }

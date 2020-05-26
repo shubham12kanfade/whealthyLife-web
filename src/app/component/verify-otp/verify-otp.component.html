@@ -1,78 +1,43 @@
-<section  class="sect-top">
+<p-toast key="otperror" [showTransformOptions]="'translateX(100%)'"></p-toast>
+<section class="sect-top">
   <div class="container ">
-  
-      <div  class="col-sm-12   justify-content-center">
-  
-          <div  class="text-center  justify-content-center  d-flex mt-4  " >
-  
-  
-              <div  class=" d-flex text-head">
-                  <div class=" head-forgot" >
-  
-                  <div >
-                      Login
-                  </div>
-                  <div>
-                      Register
-                  </div>
-              </div>
-              </div>
-           
-           
-           </div>
-  
-           <hr  class="divide-line">
-  <div  class="row row-forgot "   >
-  
-    
-  
-      <div class="col-sm-4 mb-5  center">
-  
-      
-          <div class="  no-border  " >
-              <div class=" ">
-                <div class="fortitle">Verify OTP</div>
-              </div>
-  
-              <hr class="divide-line">
-              <div class=" card-body  " >
-               <div class="we-otp" style="margin-top: 0 px !important ; color: black; ">
+    <div class="col-sm-12   justify-content-center">
+      <p-messages [(value)]="msgs">
+      </p-messages>
+      <p-messages [(value)]="msgsWarn">
+        <a href="dkjhdd">dkjksdskdsk</a>
+      </p-messages>
+      <div class="row row-forgot ">
+        <div class="col-sm-4 mb-5  center">
+          <div class="  no-border  ">
+            <div class=" ">
+              <div class="fortitle">Verify OTP</div>
+            </div>
+            <hr class="divide-line">
+            <div class=" card-body  ">
+              <div class="we-otp" style="margin-top: 0 px !important ; color: black; ">
                 We have sent you an OTP on
-               </div>
-
-               <div  class="mt-2">
-               <h2>
-                +918698124095
-               </h2>
-               </div>
-
-            <div class="form mt-3">
+              </div>
+              <div class="mt-2">
+                <h2>
+                  {{mobileNumber}}
+                </h2>
+              </div>
+              <div class="form mt-3">
                 <div class="">OTP</div>
-                  <input class="form-control input-otp mt-1" id="username" name="username" placeholder="Please enter the 6 digit OTP here to verify" type="text" value="">
+                <input class="form-control input-otp mt-1" (input)="validate()" id="username" name="username"
+                  placeholder="Please enter the 4 digit OTP here to verify" [(ngModel)]="otp" type="number" value="">
+                <span class="text-danger" *ngIf="error" style="font-size: 11px;">{{error}}</span>
                 <div>
-
                   <div>
-
-                    
                   </div>
-
                 </div>
-              <button  class="submitBtn  btn ">Verify</button>
-  
+                <button class="submitBtn  btn" (click)="onVerify()">Verify</button>
               </div>
             </div>
-            </div>
-      
-         </div>
-      
-  
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  
-  </div>
-  
-  
-  
-  </div>
-  
-  
-  </section>
+</section>

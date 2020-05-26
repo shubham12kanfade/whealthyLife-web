@@ -1,14 +1,10 @@
 
 import { LocationService } from './../../services/location.service';
 import { RegistrationService } from './../../services/registration.service';
-//import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
-import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 import { Router } from '@angular/router';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-
-// import custom validator to validate that password and confirm password fields match
-import { MustMatch } from './../../helpers/must-match.validator';
+import { MessageService } from 'primeng/api';
 
 @Component({
   selector: 'app-register',
@@ -18,88 +14,73 @@ import { MustMatch } from './../../helpers/must-match.validator';
 export class RegisterComponent implements OnInit {
   register: FormGroup;
   submitted = false;
-  
   locatdata: any;
+  sending: boolean = false;
 
-  constructor(public rs:RegistrationService, public LocationService:LocationService, private router: Router, private formBuilder:FormBuilder )
-  {
+  constructor(public rs: RegistrationService,
+    public LocationService: LocationService,
+    private router: Router,
+    public messageService: MessageService,
+    private formBuilder: FormBuilder) {
     this.getLocation();
-    console.log("RegisterComponent -> onSubmit -> locatdata", this.locatdata)
-
-
   }
-// convenience getter for easy access to form fields
-get f() { return this.register.controls; }
+
+  get f() { return this.register.controls; }
 
   ngOnInit(): void {
-   
     this.register = this.formBuilder.group({
       mobileNumber: ['', Validators.required],
       firstName: ['', Validators.required],
       lastName: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(6)]],
-  //     confirmPassword: ['', Validators.required],
-  //     acceptTerms: [false, Validators.requiredTrue]
-  // }, {
-  //     validator: MustMatch('password', 'confirmPassword')
-  });
-
-
-  }
-
-  getLocation() {
-    this.LocationService.getLocation().subscribe((res: any) => {
-      this.locatdata = res;
-
-      console.log("HeaderComponent -> res", res)
     });
   }
 
-  onSubmit() {
-    this.submitted = true;
-
-    console.log("RegisterComponent -> onSubmit -> register", this.register)
-
-    console.log("RegisterComponent -> onSubmit -> locatdata", this.locatdata)
-    if (this.register.invalid) {
-      return;
+  getLocation() {
+    this.LocationService.getPosition().subscribe((pos: Position) => {
+      this.locatdata = {
+        lat: pos.coords.latitude,
+        lng: pos.coords.longitude
+      }
+    })
   }
+
+  onSubmit() {
+    this.sending = true;
+    this.submitted = true;
+    if (this.register.invalid) {
+      this.sending = false;
+      return;
+    }
     const data = {
-      
       ...this.register.value,
       designation: "User",
       loginType: "Password",
-      location:{
-        address:this.locatdata.city,
-        lat:this.locatdata.lat,
-        lng: this.locatdata.lon
-      },
-
+      location: this.locatdata,
     }
-
-
     this.rs.registarUser(data).then(resData => {
-    console.log("RegisterComponent -> onSubmit -> resData", resData)
-
-   if(resData.status=="SUCCESS"){
-
-       this.router.navigate(['/login']);
-
-
-   }
-
+      this.sending = false;
+      if (resData.status == "SUCCESS") {
+        this.router.navigate(['/verify_otp', this.register.value.mobileNumber]);
+      } else {
+        this.showToast('error', 'Faild', 'Somthinge went wrong please try after some time');
+      }
+      this.register.reset();
     }).catch(error => {
-    console.log("RegisterComponent -> onSubmit -> error", error)
-
+      this.sending = false;
+      console.log("RegisterComponent -> onSubmit -> error", error)
+      if (error && error.error && error.error.message) {
+        this.showToast('error', 'Faild', 'Somthinge went wrong please try after some time');
+      } else {
+        this.showToast('error', 'Faild', error.message);
+      }
     })
+  }
 
-
-    this.register.reset();
-    
-   }
-
-
- 
-
+  showToast(type, messageType, message) {
+    setTimeout(() => {
+      this.messageService.add({ severity: type, summary: messageType, detail: message });
+    });
+  }
 }

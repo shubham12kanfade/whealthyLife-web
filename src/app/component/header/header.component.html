@@ -13,9 +13,9 @@
 								src="../assets/img/syringe.png" alt="icon">Book Tests</a></li>
 					<li><a [routerLink]="['/help']" routerLinkActive="router-link-active"><img
 								src="../assets/img/hospital.png" alt="icon">Help</a></li>
-					<li><a [routerLink]="['/login']" routerLinkActive="router-link-active"><img
+					<li *ngIf="!userInfo"><a [routerLink]="['/login']" routerLinkActive="router-link-active"><img
 								src="../assets/img/user.png" alt="icon">Login</a></li>
-					<li><a [routerLink]="['/register']" routerLinkActive="router-link-active"><img
+					<li *ngIf="!userInfo"><a [routerLink]="['/register']" routerLinkActive="router-link-active"><img
 								src="../assets/img/user2.png" alt="icon">Register</a></li>
 				</ul>
 			</div>
@@ -93,18 +93,18 @@
 										alt="icon">Contact
 									us</a>
 							</li>
-							<li class="nav-item dropdown open" style="position: relative; top: -5px;">
+							<li class="nav-item dropdown open" *ngIf="userInfo" style="position: relative; top: -5px;">
 								<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
 									data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 									<img src="../../../assets/img/avatar.png" alt="">
-									Shubham
+									{{userInfo?.firstName}}
 								</a>
 								<ul class="dropdown-menu dropDown" aria-labelledby="navbarDropdown">
 									<li>
 										<a class="dropdown-item" style="display: flex;" href="#">
 											<img src="../../../assets/img/avatar.png" style="width: 50px;" alt="">
-											shubham <br>
-											kanfade
+											{{userInfo?.firstName}} <br>
+											{{userInfo?.lastName}}
 										</a>
 									</li>
 									<li>
@@ -132,12 +132,8 @@
 										<a class="dropdown-item" href="#">Settings</a>
 									</li>
 									<li>
-										<a class="dropdown-item" href="#">Logout</a>
+										<a class="dropdown-item" href="#" (click)="onLogOut()">Logout</a>
 									</li>
-									<!-- <div class="dropdown-divider"></div>
-									<li>
-										<a class="dropdown-item" href="#">Sign Out</a>
-									</li> -->
 								</ul>
 							</li>
 						</ul>

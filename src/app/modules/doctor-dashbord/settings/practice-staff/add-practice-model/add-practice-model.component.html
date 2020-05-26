@@ -47,91 +47,28 @@
       <span class="head">Notifications </span>
     </div>
     <div class="row">
-      <table class="table">
-        <thead>
-          <tr>
-            <th class="six wide body-normal-grey ng-scope">Type</th>
-            <th class="two wide body-normal-grey ng-scope">SMS</th>
-            <th class="two wide body-normal-grey ng-scope">EMAIL</th>
-            <th></th>
-          </tr>
-          <tr></tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="simp">This doctor</td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td class="simp">Daily Schedule</td>
-            <td>
-              <div class="form-check fchk">
-                <label class="form-check-label">
-                  <mat-checkbox class=""></mat-checkbox>
-                </label>
-              </div>
-            </td>
-            <td>
-              <div class="form-check fchk">
-                <label class="form-label">
-                  <mat-checkbox class=""></mat-checkbox>
-                </label>
-              </div>
-            </td>
-            <td>
-              <div class="form-check fchk">
-                <label class="form-label">
-                  <mat-checkbox class="" [disabled]="true">Enable Whatsapp Notification</mat-checkbox>
-                </label>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td class="simp">Appointments Confirmation</td>
-            <td>
-              <div class="form-check fchk">
-                <label class="form-check-label">
-                  <mat-checkbox class=""></mat-checkbox>
-                </label>
-              </div>
-            </td>
-            <td>
-              <div class="form-check fchk">
-                <label class="form-label">
-                  <mat-checkbox class=""></mat-checkbox>
-                </label>
-              </div>
-            </td>
-            <td></td>
-          </tr>
-          <tr>
-            <td class="simp">All doctors</td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td class="simp">Daily Schedule</td>
-            <td>
-              <div class="form-check fchk">
-                <label class="form-check-label">
-                  <mat-checkbox class=""></mat-checkbox>
-                </label>
-              </div>
-            </td>
-            <td>
-              <div class="form-check fchk">
-                <label class="form-label">
-                  <mat-checkbox class=""></mat-checkbox>
-                </label>
-              </div>
-            </td>
-            <td></td>
-          </tr>
-        </tbody>
-      </table>
+      <table mat-table [dataSource]="dataSource">
+        <ng-container matColumnDef="position">
+            <th mat-header-cell *matHeaderCellDef> Type </th>
+            <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+        </ng-container>
+        <ng-container matColumnDef="NAME">
+            <th mat-header-cell *matHeaderCellDef> SMS</th>
+            <td mat-cell *matCellDef="let element"> <mat-checkbox></mat-checkbox>{{element.NAME}} </td>
+        </ng-container>
+        <ng-container matColumnDef="TYPE">
+            <th mat-header-cell *matHeaderCellDef>  EMAIL </th>
+            <td mat-cell *matCellDef="let element"> <mat-checkbox></mat-checkbox> {{element.TYPE}} </td>
+        </ng-container>
+        <ng-container matColumnDef="STREANGTH">
+            <th mat-header-cell *matHeaderCellDef> </th>
+            <td mat-cell *matCellDef="let element"> <mat-checkbox >
+              Enable Whatsapp Notification
+            </mat-checkbox>  {{element.STREANGTH}} </td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
       
     </div>
 

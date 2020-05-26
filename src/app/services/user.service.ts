@@ -7,28 +7,47 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class UserService {
   userInfo = new BehaviorSubject(null);
+
   constructor(public storage: CookieService) { }
 
-  addUserInfo(data){
+  addUserInfo(data) {
     this.storage.set('userInfo_wealthyLife', JSON.stringify(data));
     this.storage.set('userInfo_token', data.token);
     this.userInfo.next(data);
     return;
   }
 
-  getUserLoginStatus(){
+  getUserLoginStatus() {
     return this.userInfo;
   }
-  
-  getUserInfo(){
-    return this.storage.get('userInfo_wealthyLife');
+
+  getUserInfo() {
+    console.log("UserService -> getUserInfo -> this.storage.get('userInfo_wealthyLife')", this.storage.get('userInfo_wealthyLife'))
+    if (this.storage.get('userInfo_wealthyLife')) {
+      return JSON.parse(this.storage.get('userInfo_wealthyLife'));
+    } else {
+      return false;
+    }
   }
 
-  getUserToken(){
-    return this.storage.get('userInfo_token');
+  getUserDesignation() {
+    if (this.storage.get('userInfo_wealthyLife')) {
+      return JSON.parse(this.storage.get('userInfo_wealthyLife')).designation;
+    } else {
+      return false;
+    }
   }
 
-  logOut(){
+  getUserToken() {
+    if (this.storage.get('userInfo_wealthyLife')) {
+      return JSON.parse(this.storage.get('userInfo_token'));
+    } else {
+      return false;
+    }
+  }
+
+  logOut() {
     this.storage.deleteAll();
+    this.userInfo.next(null);
   }
 }

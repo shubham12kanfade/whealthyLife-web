@@ -48,8 +48,6 @@ const routes: Routes = [
   {
     path: 'Consultant_details', component: ConsultantDetailsComponent
   },
-
-
   {
     path: 'edit_profile', component: EditProfileComponent
   }

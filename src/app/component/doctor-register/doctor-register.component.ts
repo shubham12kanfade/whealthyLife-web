@@ -3,7 +3,7 @@ import { LocationService } from './../../services/location.service';
 import { RegistrationService } from './../../services/registration.service';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-
+import { MessageService } from 'primeng/api';
 
 @Component({
   selector: 'app-doctor-register',
@@ -13,88 +13,75 @@ import { Router } from '@angular/router';
 export class DoctorRegisterComponent implements OnInit {
   register: FormGroup;
   submitted = false;
-  
+  sending = false;
   locatdata: any;
 
-  constructor(public rs:RegistrationService, public LocationService:LocationService, private router: Router, private formBuilder:FormBuilder )
-  {
+  constructor(public rs: RegistrationService,
+    public LocationService: LocationService,
+    private router: Router,
+    public messageService: MessageService,
+    private formBuilder: FormBuilder) {
     this.getLocation();
-    console.log("RegisterComponent -> onSubmit -> locatdata", this.locatdata)
-
-
   }
-// convenience getter for easy access to form fields
-get f() { return this.register.controls; }
+
+  get f() { return this.register.controls; }
 
   ngOnInit(): void {
-   
     this.register = this.formBuilder.group({
       mobileNumber: ['', Validators.required],
       firstName: ['', Validators.required],
       lastName: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(6)]],
-  //     confirmPassword: ['', Validators.required],
-  //     acceptTerms: [false, Validators.requiredTrue]
-  // }, {
-  //     validator: MustMatch('password', 'confirmPassword')
-  });
-
-
+    });
   }
 
   getLocation() {
-    this.LocationService.getLocation().subscribe((res: any) => {
-      this.locatdata = res;
-
-      console.log("HeaderComponent -> res", res)
-    });
+    this.LocationService.getPosition().subscribe((pos: Position) => {
+      this.locatdata = {
+        lat: pos.coords.latitude,
+        lng: pos.coords.longitude
+      }
+    })
   }
 
   onSubmit() {
     this.submitted = true;
-
-    console.log("RegisterComponent -> onSubmit -> register", this.register)
-
-    console.log("RegisterComponent -> onSubmit -> locatdata", this.locatdata)
+    this.sending = true;
     if (this.register.invalid) {
+      this.sending = false;
       return;
-  }
+    }
+
     const data = {
-      
       ...this.register.value,
       designation: "Doctor",
       loginType: "Password",
-      location:{
-        address:this.locatdata.city,
-        lat:this.locatdata.lat,
-        lng: this.locatdata.lon
-      },
-
+      location: this.locatdata
     }
 
-
     this.rs.registarUser(data).then(resData => {
-    console.log("RegisterComponent -> onSubmit -> resData", resData)
-
-   if(resData.status=="SUCCESS"){
-
-       this.router.navigate(['/login']);
-
-
-   }
-
+      this.sending = false;
+      if (resData.status == "SUCCESS") {
+        this.router.navigateByUrl('/verify_otp/' + this.register.value.mobileNumber);
+        this.register.reset();
+      } else {
+        this.showToast('error', 'Registration failed ', resData.data);
+      }
     }).catch(error => {
-    console.log("RegisterComponent -> onSubmit -> error", error)
-
+      this.sending = false;
+      console.log("RegisterComponent -> onSubmit -> error", error)
+      if (error && error.error.message) {
+        this.showToast('error', 'Registration failed ', error.error.message);
+      } else {
+        this.showToast('error', 'Registration failed ', error.message);
+      }
     })
+  }
 
-
-    this.register.reset();
-    
-   }
-
-
- 
-
+  showToast(type, messageType, message) {
+    setTimeout(() => {
+      this.messageService.add({ severity: type, summary: messageType, detail: message });
+    });
+  }
 }
