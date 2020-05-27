@@ -30,6 +30,8 @@ const routes: Routes = [
       { path: 'consult', loadChildren: () => import('../../modules/chat-with-doctor/chat-with-doctor.module').then(ch => ch.ChatWithDoctorModule) },
       { path: 'forgot_password', component: ForgotPasswordComponent },
       { path: 'appointments', component: MyAppointmentsComponent },
+      { path: 'order',loadChildren: ()=> import('../../modules/order/order.module').then(or => or.OrderModule)},
+     
     ]
   }
 ];
