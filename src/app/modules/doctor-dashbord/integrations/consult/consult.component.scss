@@ -1,0 +1,52 @@
+::ng-deep .mat-checkbox-layout {
+    white-space: normal !important;
+}
+
+
+.section-head{
+    color: black;
+    font-weight: 500;
+}
+
+.indexing{
+    display: block; background-color: lightgrey; height: 24px; width: 24px; text-align: center;
+    color: black;
+    font-weight: 500;
+}
+
+.mat-button-cust{
+    background-color: #ffa000;
+        color: #fff;
+}
+
+.section-2{
+    border-bottom: 1px solid lightgray;
+}
+
+.section{
+    border-top: 1px solid lightgray;border-bottom: 1px solid lightgray;
+}
+
+a {
+    color: #14bef0;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.b-100{
+    font-weight: 500;
+}
+
+
+
+@media screen and (max-width:500px){
+    .container-fluid{
+
+        padding-left: 15px;
+        padding-right: 33px;
+    }
+    .hb{
+        margin-right: 44px !important;
+    }
+   
+}

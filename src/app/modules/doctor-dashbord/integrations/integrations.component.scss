@@ -1,151 +1,39 @@
-.intri{
-    font-size: 14px;
+.bgcolor {
+    background-color: #f0f0f5;
+    // height: 96vh;
     
 }
 
-
-.mainintrigation{
-    margin: 0px -8px 0px -30px; text-align: center;
+.mousecursor {
+    cursor: pointer;
 }
 
-.tigate{
-    margin-left: 27px;
-}
-
-.form-check{
-    margin-top: 10px;
-}
-
-
-
-.integrations-header {
-    height: 2.42em;
-    padding: 0.9em 0.6em;
-    font-size: 30px;
-}
-.padd{
-    padding: 30px;
-}
-
-
-.works{
-    margin-left: 20px;
-}
-
-
-.indexingmg{
-
+.navactive {
+    background-color: #e7e7e7!important;
+    border-left-style: solid !important;
+    border-left-width: 3px !important;
    
-    text-align: center;
-    height: 25px;
-    width: 25px;
-    background-color:#cecece;
-    border-radius: 2px;
+    color: black;
 }
-
-.main-heading {
-    font-size: 30px;
-    font-weight: 500;
-    color: rgb(65, 65, 70) !important;
+.navactive1 {
+    background-color: #59697f!important;
+    color: #fff!important;
+    border-left-style: solid !important;
+    border-left-width: 3px !important;
 }
-
-hr.line {
-    border-top: 1px solid 	#808080;
-  }
-
+.hb {
+    background-color: white;
   
-  .ui.primary.button {
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgb(255, 160, 0);
-    border-image: initial;
-    padding: 5px;
-    margin-top: 20px;
 }
-
-.ui.primary.button {
-    box-shadow: rgb(202, 202, 211) 0px 0px 0px 0px inset;
+.colsm-4-h{
+    // height: 75vh;
 }
-
-.ui.primary.button, .ui.primary.buttons .button {
-    background-color: rgb(255, 160, 0);
-    color: rgb(255, 255, 255);
-    text-shadow: none;
-    background-image: none;
-    border-radius: 2px;
-    font-size: 12px;
+.colsm-8-h{
+    // height: 75vh;
 }
-
-// .follow-up-head{
-//     margin-top: 10px;
-//     margin-bottom: 10px;
-// }
-
-.section-head{
-    color: black;
-    margin-top: 10px;
-    margin-bottom: 10px;
-
-    
-   
-}
-
-
-.clinicafter{
-    margin-top: -20px;
-}
-
-.center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-   
+@media screen and (max-width: 767px) {
+    .colsm-4-h{
+        // height: auto ;
+    }
   }
-
-
-
-.prime-main-block .benefits img.arrow {
-    width: 38px;
-    height: 26px;
-    vertical-align: middle;
-    display: inline-block;
-    margin-left: 40px;
-}
-
-
-
-.bold-text{
-    color: black;
-    font-weight: bold;
-    margin-top: 10px;
-}
-
-// .manindevider{
-
-// }
-
-.maininit{
-
-    
-    padding: 20px;
-}
-.h-divider{
-    height:1px;
-    width:100%;
-    border-top:1px solid #cecece;
-   }
-
-
-   .medium-text {
-    font-size: 14px;
-}
-
-
-.prime-main-block .section .enable-cta {
-    margin: 20px 0;
-    width: 204px;
-    height: 40px;
-    font-size: 14px;
-    font-weight: 400;
-    border-radius: 2px;
-}
+ 

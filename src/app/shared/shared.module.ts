@@ -18,6 +18,8 @@ import { ToastModule } from 'primeng/toast';
 import { MessagesModule } from 'primeng/messages';
 import { MessageModule } from 'primeng/message';
 import {ProgressSpinnerModule} from 'primeng/progressspinner';
+import {MatSelectModule} from '@angular/material/select';
+import {MatCardModule} from '@angular/material/card'; 
 
 
 @NgModule({
@@ -41,7 +43,9 @@ import {ProgressSpinnerModule} from 'primeng/progressspinner';
     ToastModule,
     MessagesModule,
     MessageModule,
-    ProgressSpinnerModule
+    ProgressSpinnerModule,
+    MatSelectModule,
+    MatCardModule
   ],
   exports: [
     MatTabsModule,
@@ -61,7 +65,9 @@ import {ProgressSpinnerModule} from 'primeng/progressspinner';
     ToastModule,
     MessagesModule,
     MessageModule,
-    ProgressSpinnerModule
+    ProgressSpinnerModule,
+    MatSelectModule,
+    MatCardModule 
   ]
 })
 export class SharedModule { }
