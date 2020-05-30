@@ -35,7 +35,7 @@ export class BooktestsComponent implements OnInit {
         items: 4
       },
       1040: {
-        items: 7
+        items: 3
       }
     },
     nav: false
@@ -116,16 +116,16 @@ export class BooktestsComponent implements OnInit {
         items: 1
       },
       400: {
-        items: 2
+        items: 1
       },
       740: {
-        items: 3
+        items: 1
       },
       940: {
-        items: 4
+        items: 1
       },
       1040: {
-        items: 6
+        items: 1
       }
     },
     nav: false
