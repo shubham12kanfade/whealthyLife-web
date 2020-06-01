@@ -2,7 +2,7 @@
     <div class="container">
           <div class="row ">
             <div class="col-sm-11 col-md-11 col-lg-11 margintop mb-3 ">
-              <input data-aid="search-input" autocomplete="password" placeholder="Select any city or locality" class="c-search__input--location">
+              <input data-aid="search-input" autocomplete="password" placeholder="Select any city or locality" class="c-search__input--location" (click)="modalopen()">
               <input data-aid="search-input" placeholder="Search for Tests and Profiles" class="c-search__input--location">
             </div>
             <div class="col-sm-1 col-md-1 col-lg-1 margintop mb-3 " >
@@ -17,7 +17,7 @@
             <div class=" col-sm-12 col-md-12 col-lg-12 m-auto" >
                 <img src="../../../assets/img/corona.png" alt="Free Home Sample" class="banner">
                 <div class=" col-sm-6 col-md-6 col-lg-6   u-center--vertical clearfix u-padb--dbl u-padt--std  ">
-                  <h2>Get lab tests and full body checkups from the comfort of your home.</h2>
+                  <h1 class="text-bold">Get lab tests and full body checkups from the comfort of your home.</h1>
                   <span class="text-bold text-success">Upto 45% OFF</span>
                   <span class=" text-success"> + </span>
                  <span class="text-success">Get 10% Health Cashback</span> <span class="text-success">*</span>
@@ -33,15 +33,15 @@
 <section>
     <div class="container">
         <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-12 ">
+            <div class="col-sm-12 col-md-12 col-lg-12 m-2">
                 <h2>Top Booked Diagnostic Tests</h2>
                 </div>
                 <div class="col-sm-12 col-md-12 col-lg-12 cen">
                     <owl-carousel-o [options]="customOptions" #review>
                       <ng-template carouselSlide>
-                        <div class="card border u-border--std  " style="width: 18rem;">
+                        <div class="card border u-border--std  " style="width: 15rem;">
                           <div class="card-body border">
-                            <h5 class="card-title">Thyroid Profile (T3, T4, TSH)</h5>
+                            <h3 class="card-title">Thyroid Profile (T3, T4, TSH)</h3>
                             <p class="card-text">Known as </p>
                             <h4> ₹ 300</h4>
                             <button mat-stroked-button>ADD</button>
@@ -49,9 +49,9 @@
                         </div>
                       </ng-template>
                       <ng-template carouselSlide>
-                        <div class="card border u-border--std ml-2  " style="width: 18rem;">
+                        <div class="card border u-border--std ml-2  " style="width: 15rem;">
                           <div class="card-body border">
-                            <h5 class="card-title">Complete Blood Count</h5>
+                            <h3 class="card-title">Complete Blood Count</h3>
                             <p class="card-text">Complete Blood Count <br> Automated Blood </p>
                             <h4> ₹ 400</h4>
                             <button mat-stroked-button>ADD</button>
@@ -59,9 +59,9 @@
                         </div>
                       </ng-template>
                       <ng-template carouselSlide>
-                        <div class="card u-border--std  " style="width: 18rem;">
+                        <div class="card u-border--std  " style="width: 15rem;">
                           <div class="card-body border">
-                            <h5 class="card-title">Lipid Profile</h5>
+                            <h3 class="card-title">Lipid Profile</h3>
                             <p class="card-text">Known as </p>
                             <h4> ₹ 300</h4>
                             <button mat-stroked-button>ADD</button>
@@ -69,9 +69,9 @@
                         </div>
                       </ng-template>
                       <ng-template carouselSlide>
-                        <div class="card border u-border--std  " style="width: 18rem;">
+                        <div class="card border u-border--std  " style="width: 15rem;">
                           <div class="card-body border">
-                            <h5 class="card-title">Liver Function Test</h5>
+                            <h3 class="card-title">Liver Function Test</h3>
                             <p class="card-text">Known as <br> Liver Function Tests Blood</p>
                             <h4> ₹ 300</h4>
                             <button mat-stroked-button>ADD</button>
@@ -288,7 +288,7 @@
             </ng-template>
           </owl-carousel-o>
           <div class="row prev-next">
-            <div class="lhs" (click)="review2.prev()"> <i class="fa fa-chevron-circle-left fa-3x "
+            <div class="lhs1" (click)="review2.prev()"> <i class="fa fa-chevron-circle-left fa-3x "
                     aria-hidden="true"></i></div>
             <div class="rhs" (click)="review2.next()"> <i class="fa fa-chevron-circle-right fa-3x "
                     aria-hidden="true"></i></div>

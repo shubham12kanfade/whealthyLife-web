@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import { MatDialog } from '@angular/material/dialog';
+import { SelectCityComponent} from './select-city/select-city.component'
 
 @Component({
   selector: 'app-booktests',
@@ -8,7 +10,7 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 })
 export class BooktestsComponent implements OnInit {
   f_list: any = [];
-  constructor() {
+  constructor(public dialog: MatDialog) {
     this.f_list.length = 9;
   }
   customOptions: OwlOptions = {
@@ -35,7 +37,7 @@ export class BooktestsComponent implements OnInit {
         items: 4
       },
       1040: {
-        items: 3
+        items: 4
       }
     },
     nav: false
@@ -138,4 +140,11 @@ export class BooktestsComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  modalopen() {
+    const dialogRef = this.dialog.open(SelectCityComponent);
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
+  }
 }
