@@ -20,54 +20,41 @@ import { MessageModule } from 'primeng/message';
 import {ProgressSpinnerModule} from 'primeng/progressspinner';
 import {MatSelectModule} from '@angular/material/select';
 import {MatCardModule} from '@angular/material/card'; 
+import {MatButtonToggleModule} from '@angular/material/button-toggle'; 
+
+const material = [
+  CommonModule,
+  MatTabsModule,
+  MatIconModule,
+  MatDialogModule,
+  FullCalendarModule,
+  MatButtonModule,
+  MatRadioModule,
+  MatInputModule,
+  MatCheckboxModule,
+  MatFormFieldModule,
+  MatTableModule,
+  MatPaginatorModule,
+  MatDatepickerModule,
+  CalendarModule,
+  CdkTableModule,
+  ToastModule,
+  MessagesModule,
+  MessageModule,
+  ProgressSpinnerModule,
+  MatSelectModule,
+  MatCardModule,
+  MatButtonToggleModule
+]
 
 
 @NgModule({
   declarations: [],
   imports: [
-    CommonModule,
-    MatTabsModule,
-    MatIconModule,
-    MatDialogModule,
-    FullCalendarModule,
-    MatButtonModule,
-    MatRadioModule,
-    MatInputModule,
-    MatCheckboxModule,
-    MatFormFieldModule,
-    MatTableModule,
-    MatPaginatorModule,
-    MatDatepickerModule,
-    CalendarModule,
-    CdkTableModule,
-    ToastModule,
-    MessagesModule,
-    MessageModule,
-    ProgressSpinnerModule,
-    MatSelectModule,
-    MatCardModule
+    material
   ],
   exports: [
-    MatTabsModule,
-    MatIconModule,
-    MatDialogModule,
-    FullCalendarModule,
-    MatButtonModule,
-    MatInputModule,
-    MatRadioModule,
-    MatCheckboxModule,
-    MatFormFieldModule,
-    MatTableModule,
-    MatPaginatorModule,
-    MatDatepickerModule,
-    CalendarModule,
-    CdkTableModule,
-    ToastModule,
-    MessagesModule,
-    MessageModule,
-    ProgressSpinnerModule,
-    MatSelectModule,
-    MatCardModule 
+    material
   ]
 })
 export class SharedModule { }

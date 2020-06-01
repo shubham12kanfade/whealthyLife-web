@@ -1,58 +1,59 @@
-<div class="container-fluid " style="height: 512px; font-size: 19px; background-color: white;">
-  <div class="settings-header main-heading ng-scope">Automatic ID Generation</div>
-  <div class="ui fitted divider ng-scope"></div>
-  <div class="">
-    <div class="">
-      <div class="col-12">
-        <input type="checkbox" tabindex="0" id="patient-id" class="ng-pristine ng-untouched ng-valid">
-        <label class="generate label" for="patient-id">Patient ID Generation</label>
+
+<div  class="container-fluid">
+
+  <div class="card">
+    <h1 class="card-header">Automatic ID Generation</h1>
+    <div class="card-body">
+      
+      <div  class="row">
+
+        <div class="section-heading-main" >
+          <div class="ui-checkbox">
+            
+              <mat-checkbox class="example-margin">Patient ID Generation</mat-checkbox>
+          </div>
+          <p class=" desc-text">
+             WealthyLife lets you automatically assign Patient IDs for newly added patients to your records. You can also assign Patient IDs to all your existing patients.
+          </p>
+        <h3 class="body-normal-grey " >Current Pattern: P <span>{{</span>PATIENT-NUMBER<span>}}</span> <a (click)="modalopen()"> edit</a>
+          </h3>
       </div>
-      <p class="body-normal-grey desc-text">
-        Wealthy Life lets you automatically assign Patient IDs for newly added patients to your records. You can also
-        assign Patient IDs to all your existing patients.
-      </p>
-      <h3 class="body-normal-grey ">Current Pattern: P <span>{{</span>PATIENT-NUMBER<span>}}</span> <a class="linkpop"
-          (click)="PatientID()"> edit</a>
-      </h3>
-    </div>
-    <div class="ui fitted divider ng-scope"></div>
-
-
-    <div class="row">
-      <div class="col-12">
-        <input type="checkbox" tabindex="0" class="ng-pristine ng-untouched ng-valid">
-        <label class="generate label" for="invoice-id">Invoice ID Generation</label>
       </div>
-      <p class="body-normal-grey desc-text">
-        You need to select an Initial Value. You can choose an alphanumeric prefix (will not be increment), and a
-        numeric part which will be automatically incremented for every new bill.
-      </p>
-      <h3 class="body-normal-grey ng-binding ng-scope">Current Pattern: INV <span>{{</span>INVOICE-NUMBER<span>}}</span>
-        <a class="linkpop" (click)="InvoiceID()"> edit</a>
-      </h3>
-    </div>
 
+      <div  class="row mt-4">
 
-    <div class="ui fitted divider ng-scope"></div>
-
-    <div class="row " style="background-color: white;">
-      <div class="col-12">
-        <input type="checkbox" tabindex="0" id="receipt-id" class="ng-pristine ng-untouched ng-valid">
-        <label class="generate label" for="receipt-id">Receipt ID Generation</label>
+        <div class="section-heading-main" >
+          <div class="ui-checkbox">
+            
+              <mat-checkbox class="example-margin">Invoice ID Generation</mat-checkbox>
+          </div>
+          <p class=" desc-text">
+            You need to select an Initial Value. You can choose an alphanumeric prefix (will not be increment), and a numeric part which will be automatically incremented for every new bill.
+          </p>
+        <h3 class="body-normal-grey " >Current Pattern: INV <span>{{</span>INVOICE-NUMBER<span>}}</span> <a  (click)="InvoiceModalOpen()" > edit</a>
+          </h3>
       </div>
-      <p class="body-normal-grey desc-text">
-        You need to select an Initial Value. You can choose an alphanumeric prefix (will not be increment), and a
-        numeric part which will be automatically incremented for every new receipt.
-      </p>
-      <h3 class="body-normal-grey ng-binding ng-scope">Current Pattern: RCPT
-        <span>{{</span>RECEIPT-NUMBER<span>}}</span> <a class="linkpop" (click)="ReceiptID()"> edit</a>
-      </h3>
+
+      </div>
+      <div  class="row mt-4">
+
+        <div class="section-heading" >
+          <div class="ui-checkbox">
+            
+              <mat-checkbox class="example-margin">Receipt ID Generation</mat-checkbox>
+          </div>
+          <p class=" desc-text">
+            You need to select an Initial Value. You can choose an alphanumeric prefix (will not be increment), and a numeric part which will be automatically incremented for every new receipt.
+          </p>
+        <h3 class="body-normal-grey " >Current Pattern:  RCPT <span>{{</span>RECEIPT-NUMBER<span>}}</span> <a (click)=" RecieptModalOpen()"> edit</a>
+          </h3>
+      </div>
+
+      </div>
     </div>
   </div>
 
 </div>
-
-
 
 
 
@@ -215,3 +216,7 @@ second -->
   </div>
 
 </div>
+
+
+
+

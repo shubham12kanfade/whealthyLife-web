@@ -1,3 +1,5 @@
+
+<div class="container-fluid">
 <div class="card shadow mb-4">
     <div class="row">
       <div class="col-sm-12">
@@ -9,51 +11,41 @@
       </div>
     </div>
     <div class="card-body">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="col-sm-2">
-                <input type="checkbox" id="authenitcation" name="authenitcation" value="authenitcation" (click)="showmodal1()">     
-            </div>
-            <div class="col-sm-10 cdb">
-              <span class="">Two Factor Authentication</span><br> 
-              <span class="">- Two Factor Authentication adds an extra layer of security to your Practo account. Once enabled, Two Factor Authentication will be required to log into Ray practice.</span>
-            </div>
+        <div class="row" style="margin-left: 10px;">
+        <div  class="col-sm-12">
+
+          <mat-checkbox class="example-margin" >Two Factor Authentication</mat-checkbox>
+          <div style="margin-left: 26px;">
+            - Two Factor Authentication adds an extra layer of security to your Practo account. Once enabled, Two Factor Authentication will be required to log into Ray practice.
           </div>
+        </div>
         </div>
         <hr>
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="col-sm-2">
-                <input type="checkbox" id="accesszones" name="accesszones" value="accesszones"  (click)="showmodal2()">     
-            </div>
-            <div class="col-sm-10 cdb">
-              <span class="">WealthyLife Access Zones</span> <br>
-              <span class="">- Create secure access zones for your WealthyLife users.</span>
-            </div>
+        <div class="row data-row" >
+        <div  class="col-sm-12">
+          <mat-checkbox class="example-margin" >Practo Access Zones 
+          </mat-checkbox>
+          <div style="margin-left: 26px;">
+            - Create secure access zones for your Practo Ray users.
           </div>
+        </div>
         </div>
         <hr>
-        <div class="row">
+        <div class="row"  style="margin-left: 10px;">
           <div class="col-sm-12">
-            <div class="col-sm-2">
-                <input type="checkbox" id="Sunday" name="Sunday" value="Bike">     
-            </div>
-            <div class="col-sm-10 cdb">
-              <span class="">Hide cancelled Invoices</span> 
-            </div>
+            <mat-checkbox class="example-margin" >Hide cancelled Invoices
+            </mat-checkbox>
           </div>
         </div>
-        <div class="row">
+        <div class="row" style="margin-left: 10px;">
           <div class="col-sm-12">
-            <div class="col-sm-2">
-                <input type="checkbox" id="Sunday" name="Sunday" value="Bike">     
-            </div>
-            <div class="col-sm-10 cdb">
-              <span class="">Hide cancelled Payments</span> 
-            </div>
+            <mat-checkbox class="example-margin" >Hide cancelled Payments
+            </mat-checkbox>
           </div>
         </div>
     </div>
+</div>
+
 </div>
 
 
