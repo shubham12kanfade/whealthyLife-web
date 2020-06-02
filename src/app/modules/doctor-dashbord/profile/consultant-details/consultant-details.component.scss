@@ -1,0 +1,58 @@
+.bg {
+    background-color: #dff8f6;
+}
+
+.textcol {
+    color: #14aa9b;
+}
+
+.btn {
+    font-size: 1.50rem !important;
+}
+
+.butsetr {
+    position: absolute;
+    right: 0;
+}
+/* Success syling */
+
+.mat-button.mat-success,
+.mat-stroked-button.mat-success {
+    color: #155724;
+}
+.mat-button.mat-success:hover,
+.mat-stroked-button.mat-success:hover {
+  background-color: #f0fff3;
+}
+
+.mat-raised-button.mat-success,
+.mat-flat-button.mat-success,
+.mat-fab.mat-success,
+.mat-mini-fab.mat-success {
+  color: #f0fff3;
+  background-color: #f6c23e;
+  position: absolute;
+  right: 0px;
+}
+
+@media(max-width:576px) {
+    .paddingonxs{
+        padding-right:30px ;
+    }  
+    .mat-raised-button.mat-success,
+.mat-flat-button.mat-success,
+.mat-fab.mat-success,
+.mat-mini-fab.mat-success {
+  color: #f0fff3;
+  background-color: #f6c23e;
+  position: absolute;
+  right: 30px;
+
+} 
+}
+.mat-form-field {
+    margin-top: 16px;
+  }
+  .mat-radio-button ~ .mat-radio-button {
+    margin-left: 16px;
+  }
