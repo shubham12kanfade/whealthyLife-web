@@ -1,336 +1,452 @@
 <section>
-    <div class="container">
-          <div class="row ">
-            <div class="col-sm-11 col-md-11 col-lg-11 margintop mb-3 ">
-              <input data-aid="search-input" autocomplete="password" placeholder="Select any city or locality" class="c-search__input--location" (click)="modalopen()">
-              <input data-aid="search-input" placeholder="Search for Tests and Profiles" class="c-search__input--location">
-            </div>
-            <div class="col-sm-1 col-md-1 col-lg-1 margintop mb-3 " >
-              <button mat-stroked-button>Card</button>
-            </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-11 col-md-11 col-lg-11 margintop mb-3">
+        <input
+          data-aid="search-input"
+          autocomplete="password"
+          placeholder="Select any city or locality"
+          class="c-search__input--location"
+          (click)="modalopen()"
+        />
+        <input
+          data-aid="search-input"
+          placeholder="Search for Tests and Profiles"
+          class="c-search__input--location"
+        />
+      </div>
+      <div class="col-sm-1 col-md-1 col-lg-1 margintop mb-3">
+        <button mat-stroked-button>Card</button>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-12 m-auto">
+        <img
+          src="../../../assets/img/corona.png"
+          alt="Free Home Sample"
+          class="banner"
+        />
+        <div
+          class="col-sm-6 col-md-6 col-lg-6 u-center--vertical clearfix u-padb--dbl u-padt--std"
+        >
+          <h1 class="o-font-size--30 u-font-bold">
+            Get lab tests and full body checkups from the comfort of your home.
+          </h1>
+          <span class="u-font-bold o-font-size--24 text-success">Upto 45% OFF</span>
+          <span class="text-success"> + </span>
+          <span class="text-success">Get 10% Health Cashback</span>
+          <span class="text-success">*</span>
+          <span class="text-success u-pointeru-pointer"> T&amp;C</span>
+          <div class="row m-5">
+            <button mat-raised-button color="primary">See all Packages</button>
           </div>
+        </div>
+      </div>
     </div>
+  </div>
 </section>
 <section>
-    <div class="container">
-        <div class="row ">
-            <div class=" col-sm-12 col-md-12 col-lg-12 m-auto" >
-                <img src="../../../assets/img/corona.png" alt="Free Home Sample" class="banner">
-                <div class=" col-sm-6 col-md-6 col-lg-6   u-center--vertical clearfix u-padb--dbl u-padt--std  ">
-                  <h1 class="text-bold">Get lab tests and full body checkups from the comfort of your home.</h1>
-                  <span class="text-bold text-success">Upto 45% OFF</span>
-                  <span class=" text-success"> + </span>
-                 <span class="text-success">Get 10% Health Cashback</span> <span class="text-success">*</span>
-                  <span class="text-success"> T&amp;C</span>
-                  <div class="row m-5">
-                    <button mat-raised-button color="primary">See all Packages</button>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-12 m-2">
+        <h2>Top Booked Diagnostic Tests</h2>
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-12 cen">
+        <owl-carousel-o [options]="customOptions" #review>
+          <ng-template carouselSlide>
+            <div class="card border u-border--std" style="width: 15rem;">
+              <div class="card-body border">
+                <h3 class="card-title">Thyroid Profile (T3, T4, TSH)</h3>
+                <p class="card-text">Known as</p>
+                <h4>₹ 300</h4>
+                <button mat-stroked-button>ADD</button>
+              </div>
+            </div>
+          </ng-template>
+          <ng-template carouselSlide>
+            <div class="card border u-border--std ml-2" style="width: 15rem;">
+              <div class="card-body border">
+                <h3 class="card-title">Complete Blood Count</h3>
+                <p class="card-text">
+                  Complete Blood Count <br />
+                  Automated Blood
+                </p>
+                <h4>₹ 400</h4>
+                <button mat-stroked-button>ADD</button>
+              </div>
+            </div>
+          </ng-template>
+          <ng-template carouselSlide>
+            <div class="card u-border--std" style="width: 15rem;">
+              <div class="card-body border">
+                <h3 class="card-title">Lipid Profile</h3>
+                <p class="card-text">Known as</p>
+                <h4>₹ 300</h4>
+                <button mat-stroked-button>ADD</button>
+              </div>
+            </div>
+          </ng-template>
+          <ng-template carouselSlide>
+            <div class="card border u-border--std" style="width: 15rem;">
+              <div class="card-body border">
+                <h3 class="card-title">Liver Function Test</h3>
+                <p class="card-text">
+                  Known as <br />
+                  Liver Function Tests Blood
+                </p>
+                <h4>₹ 300</h4>
+                <button mat-stroked-button>ADD</button>
+              </div>
+            </div>
+          </ng-template>
+        </owl-carousel-o>
+        <div class="row prev-next">
+          <div class="lhs1" (click)="review.prev()">
+            <i class="fa fa-chevron-circle-left fa-3x" aria-hidden="true"></i>
+          </div>
+          <div class="rhs" (click)="review.next()">
+            <i class="fa fa-chevron-circle-right fa-3x" aria-hidden="true"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-12">
+        <h2>Health Checkups and Screenings For</h2>
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-12 cen">
+        <owl-carousel-o [options]="customOptions2" #review1>
+          <ng-template carouselSlide>
+            <img
+              src="../../../assets/img/cancer.svg"
+              alt="image"
+              class="banner1"
+            />
+            <h4 class="m-2 text-bold">Cancer</h4>
+          </ng-template>
+          <ng-template carouselSlide>
+            <img
+              src="../../../assets/img/skin.svg"
+              alt="image"
+              class="banner1"
+            />
+            <h4 class="m-2 text-bold">Skin</h4>
+          </ng-template>
+          <ng-template carouselSlide>
+            <img
+              src="../../../assets/img/kidney.svg"
+              alt="image"
+              class="banner1"
+            />
+            <h4 class="m-2 text-bold">Kidney</h4>
+          </ng-template>
+          <ng-template carouselSlide>
+            <img
+              src="../../../assets/img/diabetes.svg"
+              alt="image"
+              class="banner1"
+            />
+            <h4 class="m-2 text-bold">Digestion</h4>
+          </ng-template>
+          <ng-template carouselSlide>
+            <img
+              src="../../../assets/img/sexual_wellness.svg"
+              alt="image"
+              class="banner1"
+            />
+            <h4 class="m-2 text-bold">Sexual Wellness</h4>
+          </ng-template>
+          <ng-template carouselSlide>
+            <img
+              src="../../../assets/img/bones.svg"
+              alt="image"
+              class="banner1"
+            />
+            <h4 class="m-2 text-bold">Bone</h4>
+          </ng-template>
+        </owl-carousel-o>
+        <div class="row prev-next">
+          <div class="lhs" (click)="review1.prev()">
+            <i class="fa fa-chevron-circle-left fa-3x" aria-hidden="true"></i>
+          </div>
+          <div class="rhs" (click)="review1.next()">
+            <i class="fa fa-chevron-circle-right fa-3x" aria-hidden="true"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <div class="row"></div>
+    <div class="col-sm-12 col-md-12 col-lg-12 m-3">
+      <h2>Top booked Medical tests</h2>
+      <p class="mb-2">Get 10% Health Cashback * T&C</p>
+      <div col-sm-12 col-md-12 col-lg-12>
+        <owl-carousel-o [options]="customOptions3" #review2>
+          <ng-template carouselSlide>
+            <div class="card" style="width: 18rem;">
+              <ul class="list-group list-group-flush border">
+                <li class="list-group-item text-bold h6">
+                <div class="media">
+                  <img src="../../../assets/img/lipid_profile.png" class="mr-3 width-img" alt="" />
+                  <div class="media-body">
+                   <h4 class="text-bold"> Lipid Profile</h4>
                   </div>
-              </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-12 m-2">
-                <h2>Top Booked Diagnostic Tests</h2>
                 </div>
-                <div class="col-sm-12 col-md-12 col-lg-12 cen">
-                    <owl-carousel-o [options]="customOptions" #review>
-                      <ng-template carouselSlide>
-                        <div class="card border u-border--std  " style="width: 15rem;">
-                          <div class="card-body border">
-                            <h3 class="card-title">Thyroid Profile (T3, T4, TSH)</h3>
-                            <p class="card-text">Known as </p>
-                            <h4> ₹ 300</h4>
-                            <button mat-stroked-button>ADD</button>
-                          </div>
-                        </div>
-                      </ng-template>
-                      <ng-template carouselSlide>
-                        <div class="card border u-border--std ml-2  " style="width: 15rem;">
-                          <div class="card-body border">
-                            <h3 class="card-title">Complete Blood Count</h3>
-                            <p class="card-text">Complete Blood Count <br> Automated Blood </p>
-                            <h4> ₹ 400</h4>
-                            <button mat-stroked-button>ADD</button>
-                          </div>
-                        </div>
-                      </ng-template>
-                      <ng-template carouselSlide>
-                        <div class="card u-border--std  " style="width: 15rem;">
-                          <div class="card-body border">
-                            <h3 class="card-title">Lipid Profile</h3>
-                            <p class="card-text">Known as </p>
-                            <h4> ₹ 300</h4>
-                            <button mat-stroked-button>ADD</button>
-                          </div>
-                        </div>
-                      </ng-template>
-                      <ng-template carouselSlide>
-                        <div class="card border u-border--std  " style="width: 15rem;">
-                          <div class="card-body border">
-                            <h3 class="card-title">Liver Function Test</h3>
-                            <p class="card-text">Known as <br> Liver Function Tests Blood</p>
-                            <h4> ₹ 300</h4>
-                            <button mat-stroked-button>ADD</button>
-                          </div>
-                        </div>
-                      </ng-template>
-                    </owl-carousel-o>
-                    <div class="row prev-next">
-                      <div class="lhs" (click)="review.prev()"> <i class="fa fa-chevron-circle-left fa-3x "
-                              aria-hidden="true"></i></div>
-                      <div class="rhs" (click)="review.next()"> <i class="fa fa-chevron-circle-right fa-3x "
-                              aria-hidden="true"></i></div>
+              </li>
+                <li class="list-group-item">
+                  <p class="h6 text-bold">Ldl Cholesterol Test</p>
+                  <p>Also known as</p>
+                </li>
+                <li class="list-group-item">
+                  <p class="h6 text-bold">Hdl Cholesterol Test</p>
+                  <p>
+                    Also known as Cholesterol Hdl Enzymatic Colorimetric Method
+                    Blood
+                  </p>
+                </li>
+                <li class="list-group-item">
+                  <p class="h6 text-bold">Vldl Cholesterol Test</p>
+                  <p>Also known as Vldl Cholesterol Blood</p>
+                </li>
+                <li class="list-group-item">
+                  <p class="h6 text-bold">Total Cholesterol Test</p>
+                  <p>Also known as Cholesterol Test</p>
+                </li>
+                <li class="list-group-item">
+                  <p class="h6 text-bold">Triglycerides Blood Test</p>
+                  <p>Also known as Triglycerides Blood</p>
+                  <button mat-raised-button color="primary">BOOk NOW</button>
+                </li>
+              </ul>
+            </div>
+          </ng-template>
+          <ng-template carouselSlide>
+            <div class="card" style="width: 18rem;">
+              <ul class="list-group list-group-flush border">
+                <li class="list-group-item">
+                  <div class="media">
+                    <img src="../../../assets/img/liver_profile.png" class="mr-3 width-img" alt="" />
+                    <div class="media-body">
+                     <h4 class="text-bold">Liver Profile</h4>
+                    </div>
                   </div>
+                </li>
+                <li class="list-group-item">
+                  <p class="h6 text-bold">Gamma Glutamyl Transferase</p>
+                  <p>Also known as GGT</p>
+                </li>
+                <li class="list-group-item">
+                  <p class="h6 text-bold">Total Bilirubin</p>
+                  <p>Also known as Bilirubin Total Blood</p>
+                </li>
+                <li class="list-group-item">
+                  <p class="h6 text-bold">Ast Test</p>
+                  <p>Also known as SGOT</p>
+                </li>
+                <li class="list-group-item">
+                  <p class="h6 text-bold">Alp Test</p>
+                  <p>Also known as Alkaline Phosphatase</p>
+                </li>
+                <li class="list-group-item">
+                  <p class="h6 text-bold">Albumin Test</p>
+                  <p>Also known as Albumin Blood</p>
+                  <button mat-raised-button color="primary">BOOk NOW</button>
+                </li>
+              </ul>
+            </div>
+          </ng-template>
+          <ng-template carouselSlide>
+            <div class="card" style="width: 18rem;">
+              <ul class="list-group list-group-flush border">
+                <li class="list-group-item  h6">
+                  <div class="media">
+                    <img src="../../../assets/img/blood_sugar.png" class="mr-3 width-img" alt="" />
+                    <div class="media-body">
+                     <h4 class="text-bold">Blood Sugar</h4>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <p class="h6 text-bold">Hba1C Test</p>
+                  <p>Also known as Glycosylated Haemoglobin Blood</p>
+                </li>
+                <li class="list-group-item">
+                  <p class="h6 text-bold">Fasting Blood Sugar Test</p>
+                  <p>Also known as Glucose Fasting Blood</p>
+                </li>
+                <li class="list-group-item">
+                  <p class="h6 text-bold">Random Blood Sugar Test</p>
+                  <p>Also known as RBS</p>
+                </li>
+                <li class="list-group-item">
+                  <p class="h6 text-bold">Blood Sugar Levels After Eating</p>
+                  <p>Also known as Post Prandial Blood Sugar</p>
+                </li>
+                <li class="list-group-item">
+                  <p class="h6 text-bold">Creatinine Test</p>
+                  <p>Also known as Creatinine Conventional Blood</p>
+                  <button mat-raised-button color="primary">BOOk NOW</button>
+                </li>
+              </ul>
+            </div>
+          </ng-template>
+          <ng-template carouselSlide>
+            <div class="card" style="width: 18rem;">
+              <ul class="list-group list-group-flush border">
+                <li class="list-group-item">
+                  <div class="media">
+                    <img src="../../../assets/img/lipid_profile.png" class="mr-3 width-img" alt="" />
+                    <div class="media-body">
+                     <h4 class="text-bold"> Lipid Profile</h4>
+                    </div>
+                  </div>
+                </li>
 
-                </div>
+                <li class="list-group-item">
+                  <p class="h6 text-bold">Ldl Cholesterol Test</p>
+                  <p>Also known as</p>
+                </li>
+                <li class="list-group-item">
+                  <p class="h6 text-bold">Hdl Cholesterol Test</p>
+                  <p>Also known as</p>
+                </li>
+                <li class="list-group-item">
+                  <p class="h6 text-bold">Vldl Cholesterol Test</p>
+                  <p>Also known as</p>
+                </li>
+                <li class="list-group-item">
+                  <p class="h6 text-bold">Total Cholesterol Test</p>
+                  <p>Also known as</p>
+                </li>
+                <li class="list-group-item">
+                  <p class="h6 text-bold">Triglycerides Blood Test</p>
+                  <p>Also known as</p>
+                  <button mat-raised-button color="primary">BOOk NOW</button>
+                </li>
+              </ul>
             </div>
+          </ng-template>
+          <ng-template carouselSlide>
+            <div class="card" style="width: 18rem;">
+              <ul class="list-group list-group-flush border">
+                <li class="list-group-item">
+                  <div class="media">
+                    <img src="../../../assets/img/lipid_profile.png" class="mr-3 width-img" alt="" />
+                    <div class="media-body">
+                     <h4 class="text-bold"> Lipid Profile</h4>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <p class="h6 text-bold">Ldl Cholesterol Test</p>
+                  <p>Also known as</p>
+                </li>
+                <li class="list-group-item">
+                  <p class="h6 text-bold">Hdl Cholesterol Test</p>
+                  <p>Also known as</p>
+                </li>
+                <li class="list-group-item">
+                  <p class="h6 text-bold">Vldl Cholesterol Test</p>
+                  <p>Also known as</p>
+                </li>
+                <li class="list-group-item">
+                  <p class="h6 text-bold">Total Cholesterol Test</p>
+                  <p>Also known as</p>
+                </li>
+                <li class="list-group-item">
+                  <p class="h6 text-bold">Triglycerides Blood Test</p>
+                  <p>Also known as</p>
+                  <button mat-raised-button color="primary">BOOk NOW</button>
+                </li>
+              </ul>
+            </div>
+          </ng-template>
+        </owl-carousel-o>
+        <div class="row prev-next">
+          <div class="lhs1" (click)="review2.prev()">
+            <i class="fa fa-chevron-circle-left fa-3x" aria-hidden="true"></i>
+          </div>
+          <div class="rhs" (click)="review2.next()">
+            <i class="fa fa-chevron-circle-right fa-3x" aria-hidden="true"></i>
+          </div>
         </div>
-</section>
-<section>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-12 ">
-                <h2>Health Checkups and Screenings For</h2>
-            </div>
-            <div class="col-sm-12 col-md-12 col-lg-12 cen">
-              <owl-carousel-o [options]="customOptions2" #review1>
-                <ng-template carouselSlide>
-              <img src="../../../assets/img/cancer.svg" alt="image" class="banner1 ">
-              <h4 class=" m-2 text-bold"> Cancer</h4>
-            </ng-template>
-            <ng-template carouselSlide>
-              <img src="../../../assets/img/skin.svg" alt="image" class="banner1 ">
-              <h4 class="m-2 text-bold">Skin</h4>
-            </ng-template>
-            <ng-template carouselSlide>
-              <img src="../../../assets/img/kidney.svg" alt="image" class="banner1 ">
-              <h4 class="m-2 text-bold"> Kidney</h4>
-            </ng-template>
-            <ng-template carouselSlide>
-              <img src="../../../assets/img/diabetes.svg" alt="image" class="banner1 ">
-              <h4 class="m-2 text-bold"> Digestion</h4>
-            </ng-template>
-            <ng-template carouselSlide>
-              <img src="../../../assets/img/sexual_wellness.svg" alt="image" class="banner1 ">
-              <h4 class="m-2 text-bold"> Sexual Wellness</h4>
-            </ng-template>
-            <ng-template carouselSlide>
-              <img src="../../../assets/img/bones.svg" alt="image" class="banner1 ">
-              <h4 class="m-2 text-bold"> Bone</h4>
-            </ng-template>
-          </owl-carousel-o>
-          <div class="row prev-next">
-            <div class="lhs" (click)="review1.prev()"> <i class="fa fa-chevron-circle-left fa-3x "
-                    aria-hidden="true"></i></div>
-            <div class="rhs" (click)="review1.next()"> <i class="fa fa-chevron-circle-right fa-3x "
-                    aria-hidden="true"></i></div>
-            </div>
-            </div>
-        </div>
+      </div>
     </div>
-</section>
-<section>
-    <div class="container">
-        <div class="row"></div>
-        <div class=" col-sm-12 col-md-12 col-lg-12 m-3">
-            <h2>Top booked Medical tests</h2>
-            <p class="mb-2"> Get 10% Health Cashback  *  T&C</p>
-            <div col-sm-12 col-md-12 col-lg-12>
-              <owl-carousel-o [options]="customOptions3" #review2>
-                <ng-template carouselSlide>
-              <div class="card" style="width: 18rem;">
-                <ul class="list-group list-group-flush border">
-                  <li class="list-group-item text-bold h6 ">
-                     <img src="../../../assets/img/lipid_profile.png" alt="" class="width-img"> Lipid Profile</li>
-                  <li class="list-group-item">
-                    <p class="h6 text-bold ">Ldl Cholesterol Test</p>
-                    <p>Also known as </p>
-                  </li>
-                  <li class="list-group-item">
-                    <p class="h6 text-bold ">Hdl Cholesterol Test</p>
-                    <p>Also known as Cholesterol Hdl Enzymatic Colorimetric Method Blood </p>
-                  </li>
-                  <li class="list-group-item">
-                    <p class="h6 text-bold ">Vldl Cholesterol Test</p>
-                    <p>Also known as Vldl Cholesterol Blood </p>
-                  </li>
-                  <li class="list-group-item">
-                    <p class="h6 text-bold ">Total Cholesterol Test</p>
-                    <p>Also known as Cholesterol Test </p>
-                  </li>
-                  <li class="list-group-item">
-                    <p class="h6 text-bold ">Triglycerides Blood Test</p>
-                    <p>Also known as Triglycerides Blood </p>
-                    <button mat-raised-button color="primary"> BOOk NOW</button>
-                  </li>
-                </ul>
-              </div>
-            </ng-template>
-            <ng-template carouselSlide>
-              <div class="card" style="width: 18rem;">
-                <ul class="list-group list-group-flush border">
-                  <li class="list-group-item text-bold h6 ">
-                     <img src="../../../assets/img/liver_profile.png" alt="" class="width-img"> Liver Profile</li>
-                  <li class="list-group-item">
-                    <p class="h6 text-bold ">Gamma Glutamyl Transferase</p>
-                    <p>Also known as GGT </p>
-                  </li>
-                  <li class="list-group-item">
-                    <p class="h6 text-bold ">Total Bilirubin</p>
-                    <p>Also known as Bilirubin Total Blood </p>
-                  </li>
-                  <li class="list-group-item">
-                    <p class="h6 text-bold ">Ast Test</p>
-                    <p>Also known as SGOT </p>
-                  </li>
-                  <li class="list-group-item">
-                    <p class="h6 text-bold ">Alp Test</p>
-                    <p>Also known as Alkaline Phosphatase </p>
-                  </li>
-                  <li class="list-group-item">
-                    <p class="h6 text-bold ">Albumin Test</p>
-                    <p>Also known as Albumin Blood </p>
-                    <button mat-raised-button color="primary"> BOOk NOW</button>
-                  </li>
-                </ul>
-              </div>
-            </ng-template>
-            <ng-template carouselSlide>
-              <div class="card" style="width: 18rem;">
-                <ul class="list-group list-group-flush border">
-                  <li class="list-group-item text-bold h6 ">
-                     <img src="../../../assets/img/blood_sugar.png" alt="" class="width-img" > Blood Sugar</li>
-                  <li class="list-group-item">
-                    <p class="h6 text-bold ">Hba1C Test</p>
-                    <p>Also known as Glycosylated Haemoglobin Blood </p>
-                  </li>
-                  <li class="list-group-item">
-                    <p class="h6 text-bold ">Fasting Blood Sugar Test</p>
-                    <p>Also known as Glucose Fasting Blood </p>
-                  </li>
-                  <li class="list-group-item">
-                    <p class="h6 text-bold ">Random Blood Sugar Test</p>
-                    <p>Also known as RBS </p>
-                  </li>
-                  <li class="list-group-item">
-                    <p class="h6 text-bold ">Blood Sugar Levels After Eating</p>
-                    <p>Also known as Post Prandial Blood Sugar </p>
-                  </li>
-                  <li class="list-group-item">
-                    <p class="h6 text-bold ">Creatinine Test</p>
-                    <p>Also known as Creatinine Conventional Blood </p>
-                    <button mat-raised-button color="primary"> BOOk NOW</button>
-                  </li>
-                </ul>
-              </div>
-            </ng-template>
-            <ng-template carouselSlide>
-              <div class="card" style="width: 18rem;">
-                <ul class="list-group list-group-flush border">
-                  <li class="list-group-item text-bold h6 ">
-                     <img src="../../../assets/img/lipid_profile.png" alt="" class="width-img"> Lipid Profile</li>
-                  <li class="list-group-item">
-                    <p class="h6 text-bold ">Ldl Cholesterol Test</p>
-                    <p>Also known as </p>
-                  </li>
-                  <li class="list-group-item">
-                    <p class="h6 text-bold ">Hdl Cholesterol Test</p>
-                    <p>Also known as </p>
-                  </li>
-                  <li class="list-group-item">
-                    <p class="h6 text-bold ">Vldl Cholesterol Test</p>
-                    <p>Also known as </p>
-                  </li>
-                  <li class="list-group-item">
-                    <p class="h6 text-bold ">Total Cholesterol Test</p>
-                    <p>Also known as </p>
-                  </li>
-                  <li class="list-group-item">
-                    <p class="h6 text-bold ">Triglycerides Blood Test</p>
-                    <p>Also known as </p>
-                    <button mat-raised-button color="primary"> BOOk NOW</button>
-                  </li>
-                </ul>
-              </div>
-            </ng-template>
-            <ng-template carouselSlide>
-              <div class="card" style="width: 18rem;">
-                <ul class="list-group list-group-flush border">
-                  <li class="list-group-item text-bold h6 ">
-                     <img src="../../../assets/img/lipid_profile.png" alt="" class="width-img"> Lipid Profile</li>
-                  <li class="list-group-item">
-                    <p class="h6 text-bold ">Ldl Cholesterol Test</p>
-                    <p>Also known as </p>
-                  </li>
-                  <li class="list-group-item">
-                    <p class="h6 text-bold ">Hdl Cholesterol Test</p>
-                    <p>Also known as </p>
-                  </li>
-                  <li class="list-group-item">
-                    <p class="h6 text-bold ">Vldl Cholesterol Test</p>
-                    <p>Also known as </p>
-                  </li>
-                  <li class="list-group-item">
-                    <p class="h6 text-bold ">Total Cholesterol Test</p>
-                    <p>Also known as </p>
-                  </li>
-                  <li class="list-group-item">
-                    <p class="h6 text-bold ">Triglycerides Blood Test</p>
-                    <p>Also known as </p>
-                    <button mat-raised-button color="primary"> BOOk NOW</button>
-                  </li>
-                </ul>
-              </div>
-            </ng-template>
-          </owl-carousel-o>
-          <div class="row prev-next">
-            <div class="lhs1" (click)="review2.prev()"> <i class="fa fa-chevron-circle-left fa-3x "
-                    aria-hidden="true"></i></div>
-            <div class="rhs" (click)="review2.next()"> <i class="fa fa-chevron-circle-right fa-3x "
-                    aria-hidden="true"></i></div>
-        </div>
-            </div>
-
-        </div>
-
-    </div>
+  </div>
 </section>
 <section>
   <div class="container">
     <div class="row bg1">
       <div class="col-sm-12 col-md-12 col-lg-12 m-3">
-          <h2 class="text-center">Why book with us?</h2>
+        <h2 class="text-center">Why book with us?</h2>
       </div>
-          <div class="col-sm-6 col-md-6 col-lg-6 cen">
-            <img src="../../../assets/img/home_sample_pickup.png" alt="">
-              <h2 > Home sample collection for FREE</h2>
-              <h3>A certified professional will collect your sample  from a location of your preference.</h3>
+      <div class="col-sm-6 col-md-6 col-lg-6">
+        <div class="media">
+          <img
+            src="../../../assets/img/home_sample_pickup.png"
+            class="mr-3"
+            alt=""
+          />
+          <div class="media-body">
+            <h2>Home sample collection for FREE</h2>
+            <h3>
+              A certified professional will collect your sample from a location
+              of your preference.
+            </h3>
           </div>
-          <div class="col-sm-6 col-md-6 col-lg-6 cen">
-            <img src="../../../assets/img/practo_powered_labs.png" alt="">
-              <h2>Practo Associate Labs: Labs with industry standards</h2>
-              <h3>To ensure the accuracy of reports.</h3>
-
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-6 col-lg-6">
+        <div class="media">
+          <img
+            src="../../../assets/img/practo_powered_labs.png"
+            class="mr-3"
+            alt=""
+          />
+          <div class="media-body">
+            <h2>Practo Associate Labs: Labs with industry standards</h2>
+            <h3>To ensure the accuracy of reports.</h3>
           </div>
-          <div class="col-sm-6 col-md-6 col-lg-6 cen">
-            <img src="../../../assets/img/e_reports_on_next_day.png" alt="">
-              <h2>Home sample collection for FREE</h2>
-              <h3>A certified professional will collect your sample from a location of your preference.</h3>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-6 col-lg-6">
+        <div class="media">
+          <img
+            src="../../../assets/img/e_reports_on_next_day.png"
+            class="mr-3"
+            alt=""
+          />
+          <div class="media-body">
+            <h2>Home sample collection for FREE</h2>
+            <h3>
+              A certified professional will collect your sample from a location
+              of your preference.
+            </h3>
           </div>
-          <div class="col-sm-6 col-md-6 col-lg-6 cen ">
-            <img src="../../../assets/img/offers.png" alt="">
-              <h2>Practo Associate Labs: Labs with industry standards</h2>
-              <h3>To ensure the accuracy of reports.</h3>
-
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-6 col-lg-6">
+        <div class="media">
+          <img src="../../../assets/img/offers.png" class="mr-3" alt="" />
+          <div class="media-body">
+            <h2>Practo Associate Labs: Labs with industry standards</h2>
+            <h3>To ensure the accuracy of reports.</h3>
           </div>
+        </div>
+      </div>
+    </div>
   </div>
-
-  </div>
-
 </section>
 <section>
   <div class="container">
@@ -339,16 +455,25 @@
         <h2 class="text-center">How it works?</h2>
       </div>
       <div class="col-sm-4 col-md-4 col-lg-4 cen">
-        <img src="../../../assets/img/icon_lab.svg" alt="">
-        <p>Search for tests and packages and seamlessly book a home sample collection.</p>
+        <img src="../../../assets/img/icon_lab.svg" alt="" />
+        <p>
+          Search for tests and packages and seamlessly book a home sample
+          collection.
+        </p>
       </div>
       <div class="col-sm-4 col-md-4 col-lg-4 cen">
-        <img src="../../../assets/img/icon_doctor.svg" alt="">
-        <p>We will send a certified professional to your place to assist you with the sample collection</p>
+        <img src="../../../assets/img/icon_doctor.svg" alt="" />
+        <p>
+          We will send a certified professional to your place to assist you with
+          the sample collection
+        </p>
       </div>
       <div class="col-sm-4 col-md-4 col-lg-4 cen">
-        <img src="../../../assets/img/icon_records.svg"  alt="">
-        <p>We will email you the reports. You can also access your reports within your account on the Practo app</p>
+        <img src="../../../assets/img/icon_records.svg" alt="" />
+        <p>
+          We will email you the reports. You can also access your reports within
+          your account on the Practo app
+        </p>
       </div>
     </div>
   </div>
@@ -360,25 +485,24 @@
         <h2>We do great</h2>
       </div>
       <div class="col-sm-4 col-md-4 col-lg-4 cen">
-        <img src="../../../assets/img/user.png" alt="">
+        <img src="../../../assets/img/user.png" alt="" />
         <h4>
           15 Million users every month
         </h4>
       </div>
       <div class="col-sm-4 col-md-4 col-lg-4 cen">
-        <img src="../../../assets/img/briefcase.png" alt="">
+        <img src="../../../assets/img/briefcase.png" alt="" />
         <h4>
           Trusted by 2,00,000 healthcare professionals
         </h4>
       </div>
       <div class="col-sm-4 col-md-4 col-lg-4 cen">
-        <img src="../../../assets/img/loc.png" alt="">
+        <img src="../../../assets/img/loc.png" alt="" />
         <h4>
           We serve in 40+ cities
         </h4>
       </div>
     </div>
-
   </div>
 </section>
 <section>
@@ -392,26 +516,36 @@
       <div class="col-sm-12 col-md-12 col-lg-12 text-center m-2">
         <owl-carousel-o [options]="customOptions4" #review3>
           <ng-template carouselSlide>
-        <p>Everything went very well and smoothly. Technician was right on time. Really happy with the service.</p>
-        <p class="mt-4">Ashish Garnaik</p>
-      </ng-template>
-      <ng-template carouselSlide>
-        <p> Good service, Practo is avoiding to stand in que for health checkup.</p>
-        <p class="mt-4">Lalita Hegde</p>
-      </ng-template>
-      <ng-template carouselSlide>
-        <p> Very professional phlebo. Excellent job in collecting the sample. No pain at all. Got my report also within 24 hours.</p>
-        <p class="mt-4">Malathi Ganapathy</p>
-      </ng-template>
-    </owl-carousel-o>
-    <div class="row prev-next">
-      <div class="lhs" (click)="review3.prev()"> <i class="fa fa-chevron-circle-left fa-3x "
-              aria-hidden="true"></i></div>
-      <div class="rhs" (click)="review3.next()"> <i class="fa fa-chevron-circle-right fa-3x "
-              aria-hidden="true"></i></div>
-  </div>
+            <p>
+              Everything went very well and smoothly. Technician was right on
+              time. Really happy with the service.
+            </p>
+            <p class="mt-4">Ashish Garnaik</p>
+          </ng-template>
+          <ng-template carouselSlide>
+            <p>
+              Good service, Practo is avoiding to stand in que for health
+              checkup.
+            </p>
+            <p class="mt-4">Lalita Hegde</p>
+          </ng-template>
+          <ng-template carouselSlide>
+            <p>
+              Very professional phlebo. Excellent job in collecting the sample.
+              No pain at all. Got my report also within 24 hours.
+            </p>
+            <p class="mt-4">Malathi Ganapathy</p>
+          </ng-template>
+        </owl-carousel-o>
+        <div class="row prev-next">
+          <div class="lhs" (click)="review3.prev()">
+            <i class="fa fa-chevron-circle-left fa-3x" aria-hidden="true"></i>
+          </div>
+          <div class="rhs" (click)="review3.next()">
+            <i class="fa fa-chevron-circle-right fa-3x" aria-hidden="true"></i>
+          </div>
+        </div>
       </div>
-
     </div>
   </div>
 </section>
