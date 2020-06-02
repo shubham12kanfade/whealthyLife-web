@@ -1,0 +1,94 @@
+.section-head{
+    color: black;
+    font-weight: 500;
+}
+
+
+::ng-deep .mat-checkbox-layout {
+    white-space: normal !important;
+}
+
+.bold-text{
+    color: black;
+    font-weight: 500;
+}
+
+.integrations-header{
+    color: black;
+    margin-top: 20px;
+    font-weight: 700;
+}
+
+.arrow{
+    width: 38px;
+    height: 26px;
+    vertical-align: middle;
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.mat-button-cust{
+    background-color: #ffa000;
+        color: #fff;
+}
+
+
+a {
+    color: #14bef0;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.form-check{
+    margin-top: 20px;
+}
+
+.section-head{
+    padding: 20px 15px;
+    font-size: 14px;
+    color: #414146;
+}
+
+.note{
+    margin-left: -20px;
+}
+
+.form-check{
+    margin-left: -20px;
+}
+
+
+
+
+
+.mat-checkbox-inner-container{
+    margin-top: 3px;
+}
+
+.color-black{
+    color: black;
+}
+
+
+
+.container-fluid{
+
+  
+
+}
+
+@media screen and (max-width:500px){
+    .container-fluid{
+
+        padding-left: 15px;
+        padding-right: 33px;
+    }
+    .hb{
+        margin-right: 44px !important;
+    }
+
+    .arrow{
+        display: none;
+    }
+   
+}

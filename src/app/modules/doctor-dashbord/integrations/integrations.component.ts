@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-integrations',
@@ -7,25 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IntegrationsComponent implements OnInit {
 
-  activeTab = 'first';
+  active:String="drive";
+constructor(public router: Router) { 
+  console.log("DriveComponent -> constructor -> router",router.url)
+  
+}
 
-  constructor() { }
 
   ngOnInit(): void {
   }
-
-
-  first(activeTab){
-    this.activeTab = activeTab;
-  }
-
-  secondon(activeTab){
-    this.activeTab = activeTab;
-  }
-
-
-  wealthylife(activeTab)
- {
-  this.activeTab = activeTab;
- }
+navigation(val){
+  this.active=val;
+  this.router.navigateByUrl('/Doctor/Integrations/'+val);
+}
 }

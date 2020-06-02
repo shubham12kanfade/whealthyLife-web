@@ -1,4 +1,6 @@
+import { RequestImportExportComponent } from './request-import-export/request-import-export.component';
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-import-export',
@@ -12,8 +14,9 @@ export class ImportExportComponent implements OnInit {
   importtask: boolean=true;
 
   exporttask: boolean= false;
+  
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
   }
@@ -33,6 +36,17 @@ Exporthide(){
 
   this.exporttask = true;
   this.importtask = false ;
+}
+
+
+
+RequestExpImpModalOpen() {
+  const dialogRef = this.dialog.open(RequestImportExportComponent);
+
+  dialogRef.afterClosed().subscribe(result => {
+    console.log(`Dialog result: ${result}`);
+    
+  });
 }
 
 }

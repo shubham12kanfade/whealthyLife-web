@@ -1,0 +1,39 @@
+::ng-deep .mat-checkbox-layout {
+    white-space: normal !important;
+}
+
+
+.mat-button-cust{
+    background-color: #ffa000;
+        color: #fff;
+}
+
+
+
+a {
+    color: #14bef0;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+@media screen and (max-width:500px){
+    .container-fluid{
+
+        padding-left: 15px;
+        padding-right: 33px;
+    }
+    .hb{
+        margin-right: 44px !important;
+    }
+
+    .sdfs{
+   
+        margin: 0px 8px  !important;
+        padding-top: 15px !important;
+        vertical-align: bottom !important;
+    
+       }
+   
+}
