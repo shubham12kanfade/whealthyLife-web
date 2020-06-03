@@ -1,0 +1,84 @@
+.card:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.card-img-top{
+    height: auto;
+    width: 60%;
+    margin: 4px;
+//   padding-bottom: 20px;
+    margin-left:14%;
+}
+.card{
+    width: 100%;
+}
+.custom-select-sm {
+    height: calc(1.5em + 0.5rem + 2px);
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    padding-left: 0.5rem;
+    font-size: 0.875rem;
+    width: 100% !important;
+    background: white;
+    border: 1px solid lightgrey !important;
+}
+.card-title{
+    font-size: small;
+}
+.senior{
+    display: flex;
+}
+.seniorh1{
+    font-weight:500; font-size: 32px;
+}
+.seniorspan{
+    margin-top: 4%; 
+    margin-left: 3%;
+}
+.sec1{
+    margin-top:6%;
+}
+.strikthrough{
+    margin: 8px;
+    text-decoration: line-through;
+    font-size: 15px;
+}
+.greentext{
+    color: green;
+    font-size: 14px;
+}
+.priceoriginal{
+    font-size: 19px;
+    font-weight: 800;
+}
+.col-sm-4{
+    a{
+        text-decoration: none;
+    }
+}
+.prcdetails{
+    padding: 10px;
+}
+
+.comm{
+    margin-top:4%;
+}
+.updowns{
+    font-size: 14px;
+    a{
+        text-decoration: none;
+        color: black;
+    }
+}
+.updown{
+    font-size: 14px;
+    margin: 14px;
+   
+    a{
+        text-decoration: none;
+        color: black;
+    }
+}
+.bold{
+    font-weight: 700;
+    color: black;
+}
