@@ -46,6 +46,7 @@ const material = [
   MatSelectModule,
   MatCardModule,
   MatButtonToggleModule
+  
 ]
 
 @NgModule({
@@ -57,7 +58,10 @@ const material = [
     MatDialogModule,
     MatButtonModule,
     MatStepperModule,
-    MatRadioModule
+    MatRadioModule,
+    ToastModule,
+    MatButtonToggleModule,
+    material
   ],
   exports: [
     MatTabsModule,
@@ -65,7 +69,10 @@ const material = [
     MatDialogModule,
     MatButtonModule,
     MatStepperModule,
-    MatRadioModule
+    MatRadioModule,
+    ToastModule,
+    MatButtonToggleModule,
+    material
   ]
 })
 export class SharedModule { }

@@ -59,6 +59,4 @@ export class LoginComponent implements OnInit {
       this.messageService.add({ severity: type, summary: messageType, detail: message });
     });
   }
-
-
 }
