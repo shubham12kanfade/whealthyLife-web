@@ -20,6 +20,7 @@ import { HealthMedicineshealthComponent } from '../health-medicineshealth/health
 import { DoctorRegisterComponent } from 'src/app/component/doctor-register/doctor-register.component';
 import { VerifyOtpComponent } from 'src/app/component/verify-otp/verify-otp.component';
 import { SharedModule } from '../../shared/shared.module';
+import { PrivcyPolicyComponent } from './privcy-policy/privcy-policy.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { SharedModule } from '../../shared/shared.module';
     BooktestsComponent,
     HealthMedicineshealthComponent,
     DoctorRegisterComponent,
-    VerifyOtpComponent
+    VerifyOtpComponent,
+    PrivcyPolicyComponent
   ],
   imports: [
     CommonModule,
