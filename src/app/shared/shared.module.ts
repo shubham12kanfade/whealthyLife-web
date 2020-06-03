@@ -17,10 +17,11 @@ import { CdkTableModule } from '@angular/cdk/table';
 import { ToastModule } from 'primeng/toast';
 import { MessagesModule } from 'primeng/messages';
 import { MessageModule } from 'primeng/message';
-import {ProgressSpinnerModule} from 'primeng/progressspinner';
-import {MatSelectModule} from '@angular/material/select';
-import {MatCardModule} from '@angular/material/card'; 
-import {MatButtonToggleModule} from '@angular/material/button-toggle'; 
+import { ProgressSpinnerModule } from 'primeng/progressspinner';
+import { MatSelectModule } from '@angular/material/select';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatStepperModule } from '@angular/material/stepper';
 
 const material = [
   CommonModule,
@@ -47,14 +48,24 @@ const material = [
   MatButtonToggleModule
 ]
 
-
 @NgModule({
   declarations: [],
   imports: [
-    material
+    CommonModule,
+    MatTabsModule,
+    MatIconModule,
+    MatDialogModule,
+    MatButtonModule,
+    MatStepperModule,
+    MatRadioModule
   ],
   exports: [
-    material
+    MatTabsModule,
+    MatIconModule,
+    MatDialogModule,
+    MatButtonModule,
+    MatStepperModule,
+    MatRadioModule
   ]
 })
 export class SharedModule { }

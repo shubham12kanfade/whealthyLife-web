@@ -1,45 +1,35 @@
 <section class="bg-white p-sm-3">
-    <div class="progress ">
-        <div class="progress-bar " role="progressbar" style="width: 75%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-    </div>
-
     <div class="row">
         <div class="col-md-5 col-lg-3 offset-md-2">
-            <div class=" mb-4 h1 font-weight-bold text-dark pb-5">Connect a practice</div>
+            
             <p style="font-size: 15px;">Please select any one of the following:</p>
-            <form>
-
-
+            
                 <div class="form-group">
-                    <div class="onboarding-radio__list pure-u-1">
-                        <div class="onboarding-radio__item">
-                            <div class="o-radio "><input type="radio" class="o-radio--input" name="radio_list" id="ADD_OWN_CLINIC" data-qa-id="connect_clinic_ADD_OWN_CLINIC_input" value="on"><label class="o-radio--label" for="ADD_OWN_CLINIC" data-qa-id="connect_clinic_ADD_OWN_CLINIC_label">I own a establishment</label></div>
-                        </div>
-                        <div class="onboarding-radio__item">
-                            <div class="o-radio "><input type="radio" class="o-radio--input" name="radio_list" id="ADD_VISITING_CLINIC" data-qa-id="connect_clinic_ADD_VISITING_CLINIC_input" value="on"><label class="o-radio--label" for="ADD_VISITING_CLINIC" data-qa-id="connect_clinic_ADD_VISITING_CLINIC_label">I visit a establishment</label></div>
-                        </div>
-                    </div>
+                    <mat-radio-group aria-label="Select an option">
+                        <div class="row border py-2 pl-2">     <mat-radio-button value="1" >I own a establishment</mat-radio-button></div>
+                            <div class="row border py-2 pl-2"> <mat-radio-button value="2">I visit a establishment</mat-radio-button></div>
+                           </mat-radio-group>
+                   
                 </div>
-
-
                 <hr class="mt-5 mb-5">
                 <div class="row">
-                    <button type="button" class="btn btn-outline-dark px-5 h3" [routerLink]="['/Doctor/Profile/Education']" routerLinkActive="router-link-active"> <i class="fa fa-chevron-left" aria-hidden="true"></i> Back</button>
-                    <button type="button" class="btn btn-warning px-5 h3 butsetr" [routerLink]="['/Doctor/Profile/Clinic_details']" routerLinkActive="router-link-active">Contnue</button></div>
-
-
-            </form>
+                    <button mat-raised-button matStepperPrevious  > <i class="fa fa-chevron-left" aria-hidden="true"></i> Back</button>
+                    <button mat-raised-button color="success" [routerLink]="['/Doctor/Profile']" routerLinkActive="router-link-active" >Contnue</button>
+                   </div>
+                   
+           
         </div>
-        <div class="col-md-3 col-lg-4 offset-md-1">
-            <div class=" d-none d-sm-none d-md-block col-md-12 col-lg-8 mt-5 ml-5 pr-0 pl-0" style="border: 1px solid #14aa9b;">
-
-                <div class=" bg p-4 textcol">
-                    <div><i class="fa fa-lightbulb-o fa-lg" aria-hidden="true"></i> </div>
+        <div class="col-md-3 col-lg-5 offset-md-1">
+            <div class="d-none d-sm-none d-md-block col-md-12 col-lg-8 mt-5 ml-5 pr-0 pl-0"
+                style="border: 1px solid #14aa9b;">
+                <div class="bg p-4 textcol">
+                    <div>
+                        <i class="fa fa-lightbulb-o fa-lg" aria-hidden="true"></i>
+                    </div>
                     <p class="stext font-weight-bold">Patients often search for doctors by locality. Therefore, adding all your practice establishments ensures that your profile is visible to patients in all the relevant searches.</p>
-
                 </div>
             </div>
         </div>
-
+        
     </div>
 </section>
