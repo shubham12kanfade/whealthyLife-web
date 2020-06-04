@@ -1,3 +1,4 @@
+import { PrivcyPolicyComponent } from './privcy-policy/privcy-policy.component';
 import { MyAppointmentsComponent } from './../../component/my-appointments/my-appointments.component';
 import { ForgotPasswordComponent } from './../../component/forgot-password/forgot-password.component';
 import { PublicComponent } from './public.component';
@@ -31,6 +32,8 @@ const routes: Routes = [
       { path: 'forgot_password', component: ForgotPasswordComponent },
       { path: 'appointments', component: MyAppointmentsComponent },
       { path: 'order',loadChildren: ()=> import('../../modules/order/order.module').then(or => or.OrderModule)},
+      { path: 'privcyPolicy', component: PrivcyPolicyComponent
+    },
      
     ]
   }
