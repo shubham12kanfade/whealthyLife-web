@@ -42,8 +42,10 @@ export class HeaderComponent implements OnInit {
   }
 
   onLogOut() {
-    this.userService.logOut();
-    this.checkLogin();
+    if (window.confirm('are you really want to logout ?')) {
+      this.userService.logOut();
+      this.checkLogin();
+    }
   }
 
   onMenu(type) {

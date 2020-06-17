@@ -132,45 +132,57 @@
     <div class="gap11 container-fluid">
         <div class="col-md-12">
             <div class="row">
+                <div class="col-md-4" style="margin-bottom: 40px;">
+                    <!-- class="sticky1" -->
+                    <div>
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h2>Book from {{doctorList?.length}} Doctors in Bangalore</h2>
+                                    <p>With predicted wait-time & verified details</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="card cardex2 ">
+                                <p-calendar [inline]="true" [minDate]="minDate"></p-calendar>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="col-md-8 firstcard">
                     <div class="card">
                         <div class="card-body">
-                            <div class="col-md-12">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <h2>Book from 2450 Dentist in Bangalore</h2>
-                                        <p>With predicted wait-time & verified details</p>
-                                    </div>
-                                </div>
-                            </div>
+
                             <div class="col-md-12 profcard" *ngFor="let doctor of doctorList">
                                 <div class="row">
-                                    <div class="col-md-3">
+                                    <div class="col-md-2">
                                         <div class="profimage">
-                                            <img [src]="doctor?.avatar" onerror="this.src='../assets/img/user.jpeg'" alt="Avatar" width="200px" class="">
+                                            <img [src]="doctor?.userId?.avatar"
+                                                onerror="this.src='../assets/img/user.jpeg'" alt="Avatar" width="200px"
+                                                class="">
                                         </div>
                                         <div class="vprofile">
-                                            <a href="">View Profile</a>
-                                        </div>
+                                            <a [routerLink]="['/doctors/doctor_profile/', doctor._id]">View Profile</a>
+                                        </div>  
                                     </div>
-                                    <div class="col-md-6">
+                                    <div class="col-md-7">
                                         <div>
-                                            <h2><a href="">Dr. {{doctor?.firstName}} {{doctor?.lastName}}</a></h2>
-                                            <p>Dentist</p>
-                                            <p>14 years experience overall</p>
-                                            <p><strong><a href="">Marathahalli,Bangalore.</a> </strong></p>
-                                            <p>32 Smiles Multispeciality Dental Clinic + 15 more</p>
-                                            <p>32 Smiles Multispeciality Dental Clinic + 15 more</p>
+                                            <h2><a href="">Dr. {{doctor?.userId?.firstName}}
+                                                    {{doctor?.userId?.lastName}}</a></h2>
+                                            <p>{{doctor?.userId?.specialitie}}</p>
+                                            <p>{{doctor?.userId?.experience}} years experience overall</p>
+                                            <p>
+                                                <strong><a href="">{{doctor?.userId?.location?.landmark}}</a>
+                                                </strong>
+                                            </p>
                                         </div>
                                         <hr>
                                         <div class="col-sm-12">
                                             <div class="row">
+                                                <div class="col-sm-4"></div>
                                                 <div class="col-sm-4">
-                                                    <button class="btn btn-success btnsuccess"><i
-                                                            class="fa fa-thumbs-up"></i>95%</button>
-                                                </div>
-                                                <div class="col-sm-4">
-                                                    <p class="feedbacktext"><a href="">1341 feedback</a></p>
+                                                    <p class="feedbacktext"><a href="">0 feedback</a></p>
                                                 </div>
                                             </div>
                                         </div>
@@ -185,9 +197,9 @@
                                             </p>
                                         </div>
                                         <div class="">
-                                            <button class="btn btn-primary btnbooking" (click)=" showtime()">Book
+                                            <button class="btn btn-primary btnbooking" (click)=" showtime(doctor)">Book
                                                 Appointment
-                                                <br><span class="nobooktext">No booking fee</span>
+                                                <br><span class="nobooktext">Rs. {{doctor?.userId?.fees}}</span>
                                             </button>
                                         </div>
                                         <br><br>
@@ -198,621 +210,71 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <!-- <div class="col-md-12 profcard">
-                                <div class="row">
-                                    <div class="col-md-3">
-                                        <div class="profimage">
-                                            <img src="../assets/img/user.jpeg" alt="Avatar" width="200px" class="">
-                                        </div>
-                                        <div class="vprofile">
-                                            <a href="">View Profile</a>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div>
-                                            <h2><a href="">Dr.M.R.Pujari</a></h2>
-                                            <p>Dentist</p>
-                                            <p>14 years experience overall</p>
-                                            <p><strong><a href="">Marathahalli,Bangalore.</a> </strong></p>
-                                            <p>32 Smiles Multispeciality Dental Clinic + 15 more</p>
-                                            <p>32 Smiles Multispeciality Dental Clinic + 15 more</p>
-                                        </div>
-                                        <hr>
-                                        <div class="col-sm-12">
-                                            <div class="row">
-                                                <div class="col-sm-4">
-                                                    <button class="btn btn-success btnsuccess"><i
-                                                            class="fa fa-thumbs-up"></i>95%</button>
-                                                </div>
-                                                <div class="col-sm-4">
-                                                    <p class="feedbacktext"><a href="">1341 feedback</a></p>
-                                                </div>
+                                <div *ngIf="show === doctor?._id">
+                                    <div class="col-md-12 col-sm-12 slidetime">
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <mat-tab-group>
+                                                    <mat-tab *ngFor="let item of doctor?.slots">
+                                                        <ng-template mat-tab-label>
+                                                            <div class="grp">
+                                                                <h4 class="text-capitalize">{{item?.day}}</h4>
+                                                                <p>{{evningSlot?.length + morningSlot?.length}} Slots
+                                                                    Available</p>
+                                                            </div>
+                                                        </ng-template>
+                                                        <div class="slotsavailable">
+                                                            <div class="row">
+                                                                <div class="col-sm-2">
+                                                                    <div>
+                                                                        <span><i class="fa fa-sun"></i></span>
+                                                                        Morning
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-10 driven">
+                                                                    <div class="morningslot">
+                                                                        <div data-qa-id="slot_time"
+                                                                            (click)="onSelectSlot(item?.value)"
+                                                                            class="c-day-session__slot"
+                                                                            *ngFor="let item of morningSlot">
+                                                                            <span
+                                                                                [ngClass]="{selectedSloats: item?.value == selectedSlot}">{{item?.label}}</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <hr>
+                                                            <div class="row">
+                                                                <div class="col-sm-2">
+                                                                    <div>
+                                                                        <span><i class="fa fa-sun"></i></span>
+                                                                        Evening
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-10 driven">
+                                                                    <div class="morningslot">
+                                                                        <div data-qa-id="slot_time"
+                                                                            class="c-day-session__slot"
+                                                                            (click)="onSelectSlot(item?.value)"
+                                                                            *ngFor="let item of evningSlot">
+                                                                            <span
+                                                                                [ngClass]="{selectedSloats: item?.value == selectedSlot}">{{item?.label}}</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </mat-tab>
+                                                </mat-tab-group>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="bookingside">
-                                            <p><span class="availableicon"><i
-                                                        class="fa fa-calendar"></i></span>Available Today</p>
-                                        </div>
-                                        <div class="">
-                                            <button class="btn btn-primary btnbooking" (click)=" showtime()">Book
-                                                Appointment
-                                                <br> <span class="nobooktext">No booking fee</span>
-                                            </button>
-
-                                        </div>
-                                        <br><br>
-                                        <div>
-                                            <button type="button"
-                                                class="btn btn-outline-primary btnvideoconultation">Video
-                                                Consultation</button>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-12 profcard">
-                                <div class="row">
-                                    <div class="col-md-3">
-                                        <div class="profimage">
-                                            <img src="../assets/img/user.jpeg" alt="Avatar" width="200px" class="">
-                                        </div>
-                                        <div class="vprofile">
-                                            <a href="">View Profile</a>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div>
-                                            <h2><a href="">Dr.M.R.Pujari</a></h2>
-                                            <p>Dentist</p>
-                                            <p>14 years experience overall</p>
-                                            <p><strong><a href="">Marathahalli,Bangalore.</a> </strong></p>
-                                            <p>32 Smiles Multispeciality Dental Clinic + 15 more</p>
-                                            <p>32 Smiles Multispeciality Dental Clinic + 15 more</p>
-                                        </div>
-                                        <hr>
-                                        <div class="col-sm-12">
-                                            <div class="row">
-                                                <div class="col-sm-4">
-                                                    <button class="btn btn-success btnsuccess"><i
-                                                            class="fa fa-thumbs-up"></i>95%</button>
-                                                </div>
-                                                <div class="col-sm-4">
-                                                    <p class="feedbacktext"><a href="">1341 feedback</a></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="bookingside">
-                                            <p><span class="availableicon"><i
-                                                        class="fa fa-calendar"></i></span>Available Today</p>
-                                        </div>
-                                        <div class="">
-                                            <button class="btn btn-primary btnbooking" (click)=" showtime()">Book
-                                                Appointment
-                                                <br> <span class="nobooktext">No booking fee</span>
-                                            </button>
-
-                                        </div>
-                                        <br><br>
-                                        <div>
-
-                                            <button type="button"
-                                                class="btn btn-outline-primary btnvideoconultation">Video
-                                                Consultation</button>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-12 profcard">
-                                <div class="row">
-                                    <div class="col-md-3">
-                                        <div class="profimage">
-                                            <img src="../assets/img/user.jpeg" alt="Avatar" width="200px" class="">
-                                        </div>
-                                        <div class="vprofile">
-                                            <a href="">View Profile</a>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div>
-                                            <h2><a href="">Dr.M.R.Pujari</a></h2>
-                                            <p>Dentist</p>
-                                            <p>14 years experience overall</p>
-                                            <p><strong><a href="">Marathahalli,Bangalore.</a> </strong></p>
-                                            <p>32 Smiles Multispeciality Dental Clinic + 15 more</p>
-                                            <p>32 Smiles Multispeciality Dental Clinic + 15 more</p>
-                                        </div>
-                                        <hr>
-                                        <div class="col-sm-12">
-                                            <div class="row">
-                                                <div class="col-sm-4">
-                                                    <button class="btn btn-success btnsuccess"><i
-                                                            class="fa fa-thumbs-up"></i>95%</button>
-                                                </div>
-                                                <div class="col-sm-4">
-                                                    <p class="feedbacktext"><a href="">1341 feedback</a></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="bookingside">
-                                            <p><span class="availableicon"><i
-                                                        class="fa fa-calendar"></i></span>Available Today</p>
-                                        </div>
-                                        <div class="">
-                                            <button class="btn btn-primary btnbooking" (click)=" showtime()">Book
-                                                Appointment
-                                                <br> <span class="nobooktext">No booking fee</span>
-                                            </button>
-
-                                        </div>
-                                        <br><br>
-                                        <div>
-
-                                            <button type="button"
-                                                class="btn btn-outline-primary btnvideoconultation">Video
-                                                Consultation</button>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-12 profcard">
-                                <div class="row">
-                                    <div class="col-md-3">
-                                        <div class="profimage">
-                                            <img src="../assets/img/user.jpeg" alt="Avatar" width="200px" class="">
-                                        </div>
-                                        <div class="vprofile">
-                                            <a href="">View Profile</a>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div>
-                                            <h2><a href="">Dr.M.R.Pujari</a></h2>
-                                            <p>Dentist</p>
-                                            <p>14 years experience overall</p>
-                                            <p><strong><a href="">Marathahalli,Bangalore.</a> </strong></p>
-                                            <p>32 Smiles Multispeciality Dental Clinic + 15 more</p>
-                                            <p>32 Smiles Multispeciality Dental Clinic + 15 more</p>
-                                        </div>
-                                        <hr>
-                                        <div class="col-sm-12">
-                                            <div class="row">
-                                                <div class="col-sm-4">
-                                                    <button class="btn btn-success btnsuccess"><i
-                                                            class="fa fa-thumbs-up"></i>95%</button>
-                                                </div>
-                                                <div class="col-sm-4">
-                                                    <p class="feedbacktext"><a href="">1341 feedback</a></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="bookingside">
-                                            <p><span class="availableicon"><i
-                                                        class="fa fa-calendar"></i></span>Available Today</p>
-                                        </div>
-                                        <div class="">
-                                            <button class="btn btn-primary btnbooking" (click)=" showtime()">Book
-                                                Appointment <br>
-                                                <span class="nobooktext">No booking fee</span>
-                                            </button>
-
-                                        </div>
-                                        <br><br>
-                                        <div>
-
-                                            <button type="button"
-                                                class="btn btn-outline-primary btnvideoconultation">Video
-                                                Consultation</button>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-12 profcard">
-                                <div class="row">
-                                    <div class="col-md-3">
-                                        <div class="profimage">
-                                            <img src="../assets/img/user.jpeg" alt="Avatar" width="200px" class="">
-                                        </div>
-                                        <div class="vprofile">
-                                            <a href="">View Profile</a>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div>
-                                            <h2><a href="">Dr.M.R.Pujari</a></h2>
-                                            <p>Dentist</p>
-                                            <p>14 years experience overall</p>
-                                            <p><strong><a href="">Marathahalli,Bangalore.</a> </strong></p>
-                                            <p>32 Smiles Multispeciality Dental Clinic + 15 more</p>
-                                            <p>32 Smiles Multispeciality Dental Clinic + 15 more</p>
-                                        </div>
-                                        <hr>
-                                        <div class="col-sm-12">
-                                            <div class="row">
-                                                <div class="col-sm-4">
-                                                    <button class="btn btn-success btnsuccess"><i
-                                                            class="fa fa-thumbs-up"></i>95%</button>
-                                                </div>
-                                                <div class="col-sm-4">
-                                                    <p class="feedbacktext"><a href="">1341 feedback</a></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="bookingside">
-                                            <p><span class="availableicon"><i
-                                                        class="fa fa-calendar"></i></span>Available Today</p>
-                                        </div>
-                                        <div class="">
-                                            <button class="btn btn-primary btnbooking" (click)=" showtime()">Book
-                                                Appointment
-                                                <br> <span class="nobooktext">No booking fee</span>
-                                            </button>
-
-                                        </div>
-                                        <br><br>
-                                        <div>
-
-                                            <button type="button"
-                                                class="btn btn-outline-primary btnvideoconultation">Video
-                                                Consultation</button>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-12 profcard">
-                                <div class="row">
-                                    <div class="col-md-3">
-                                        <div class="profimage">
-                                            <img src="../assets/img/user.jpeg" alt="Avatar" width="200px" class="">
-                                        </div>
-                                        <div class="vprofile">
-                                            <a href="">View Profile</a>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div>
-                                            <h2><a href="">Dr.M.R.Pujari</a></h2>
-                                            <p>Dentist</p>
-                                            <p>14 years experience overall</p>
-                                            <p><strong><a href="">Marathahalli,Bangalore.</a> </strong></p>
-                                            <p>32 Smiles Multispeciality Dental Clinic + 15 more</p>
-                                            <p>32 Smiles Multispeciality Dental Clinic + 15 more</p>
-                                        </div>
-                                        <hr>
-                                        <div class="col-sm-12">
-                                            <div class="row">
-                                                <div class="col-sm-4">
-                                                    <button class="btn btn-success btnsuccess"><i
-                                                            class="fa fa-thumbs-up"></i>95%</button>
-                                                </div>
-                                                <div class="col-sm-4">
-                                                    <p class="feedbacktext"><a href="">1341 feedback</a></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="bookingside">
-                                            <p><span class="availableicon"><i
-                                                        class="fa fa-calendar"></i></span>Available Today</p>
-                                        </div>
-                                        <div class="">
-                                            <button class="btn btn-primary btnbooking" (click)=" showtime()">Book
-                                                Appointment
-                                                <br> <span class="nobooktext">No booking fee</span>
-                                            </button>
-
-                                        </div>
-                                        <br><br>
-                                        <div>
-
-                                            <button type="button"
-                                                class="btn btn-outline-primary btnvideoconultation">Video
-                                                Consultation</button>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> -->
-                        </div>
-                    </div>
-                    <div class=" showtime" *ngIf="show">
-                        <div class="col-md-12 col-sm-12">
-                            <div class="row">
-                                <div class="alert alert-warning" role="alert">
-                                    Due to Nationwide lockdown some centres are not providing appointment booking. We
-                                    encourage you to do online consultation for non emergency cases. For emergency cases
-                                    please call & verify No: +9133343434343.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-12 col-sm-12 slidetime">
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <mat-tab-group>
-                                        <mat-tab>
-                                            <ng-template mat-tab-label>
-                                                <div class="grp">
-                                                    <h4>Today</h4>
-                                                    <p>No Slots Available</p>
-                                                </div>
-                                            </ng-template>
-
-
-                                            <div class="noslot">
-                                                <p>No slots available for this day</p>
-                                                <div><button class="btn btn-primary">Next availability on Sat, 23
-                                                        May</button></div>
-                                                <p class="or">OR</p>
-                                                <div><button type="button" class="btn btn-outline-primary">Call
-                                                        Now</button>
-                                                </div>
-                                            </div>
-                                        </mat-tab>
-                                        <mat-tab>
-                                            <ng-template mat-tab-label>
-                                                <div class="grp">
-                                                    <h4>Tomorrow</h4>
-                                                    <p>29 Slots Available</p>
-                                                </div>
-                                            </ng-template>
-                                            <div class="slotsavailable">
-                                                <div class="row">
-                                                    <div class="col-sm-2">
-                                                        <div>
-                                                            <span><i class="fa fa-sun"></i></span>
-                                                            Morning
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-sm-10 driven">
-                                                        <div class="morningslot">
-                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                                <span>09:00 AM</span></div>
-                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                                <span>09:00 AM</span></div>
-                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                                <span>09:00 AM</span></div>
-                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                                <span>09:00 AM</span></div>
-                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                                <span>09:00 AM</span></div>
-                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                                <span>09:00 AM</span></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <hr>
-                                                <div class="row">
-                                                    <div class="col-sm-2">
-                                                        <div>
-                                                            <span><i class="fa fa-sun"></i></span>
-                                                            Afternoon
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-sm-10 driven">
-                                                        <div class="morningslot">
-                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                                <span>09:00 AM</span></div>
-                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                                <span>09:00 AM</span></div>
-                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                                <span>09:00 AM</span></div>
-                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                                <span>09:00 AM</span></div>
-                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                                <span>09:00 AM</span></div>
-                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                                <span>09:00 AM</span></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <hr>
-                                                <div class="row">
-                                                    <div class="col-sm-2">
-                                                        <div>
-                                                            <span><i class="fa fa-sun"></i></span>
-                                                            Evening
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-sm-10 driven">
-                                                        <div class="morningslot">
-                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                                <span>09:00 AM</span></div>
-                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                                <span>09:00 AM</span></div>
-                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                                <span>09:00 AM</span></div>
-                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                                <span>09:00 AM</span></div>
-                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                                <span>09:00 AM</span></div>
-                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                                <span>09:00 AM</span></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-sm-2">
-                                                        <div>
-                                                            <span><i class="fa fa-moon"></i></span>
-                                                            Night
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-sm-10 driven">
-                                                        <div class="morningslot">
-                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                                <span>09:00 AM</span></div>
-                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                                <span>09:00 AM</span></div>
-                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                                <span>09:00 AM</span></div>
-                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                                <span>09:00 AM</span></div>
-                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                                <span>09:00 AM</span></div>
-                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                                <span>09:00 AM</span></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </mat-tab>
-                                        <mat-tab>
-                                            <ng-template mat-tab-label>
-                                                <div class="grp">
-                                                    <h4>Sun 24,May</h4>
-                                                    <p>29 Slots Available</p>
-                                                </div>
-                                            </ng-template>
-                                            <div class="slotsavailable">
-                                                <div class="row">
-                                                    <div class="col-sm-2">
-                                                        <div>
-                                                            <span><i class="fa fa-sun"></i></span>
-                                                            Morning
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-sm-10 driven">
-                                                        <div class="morningslot">
-                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                                <span>09:00 AM</span></div>
-                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                                <span>09:00 AM</span></div>
-                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                                <span>09:00 AM</span></div>
-                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                                <span>09:00 AM</span></div>
-                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                                <span>09:00 AM</span></div>
-                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                                <span>09:00 AM</span></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <hr>
-                                                <div class="row">
-                                                    <div class="col-sm-2">
-                                                        <div>
-                                                            <span><i class="fa fa-sun"></i></span>
-                                                            Afternoon
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-sm-10 driven">
-                                                        <div class="morningslot">
-                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                                <span>09:00 AM</span></div>
-                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                                <span>09:00 AM</span></div>
-                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                                <span>09:00 AM</span></div>
-                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                                <span>09:00 AM</span></div>
-                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                                <span>09:00 AM</span></div>
-                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                                <span>09:00 AM</span></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <hr>
-                                                <div class="row">
-                                                    <div class="col-sm-2">
-                                                        <div>
-                                                            <span><i class="fa fa-sun"></i></span>
-                                                            Evening
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-sm-10 driven">
-                                                        <div class="morningslot">
-                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                                <span>09:00 AM</span></div>
-                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                                <span>09:00 AM</span></div>
-                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                                <span>09:00 AM</span></div>
-                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                                <span>09:00 AM</span></div>
-                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                                <span>09:00 AM</span></div>
-                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                                <span>09:00 AM</span></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-sm-2">
-                                                        <div>
-                                                            <span><i class="fa fa-moon"></i></span>
-                                                            Night
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-sm-10 driven">
-                                                        <div class="morningslot">
-                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                                <span>09:00 AM</span></div>
-                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                                <span>09:00 AM</span></div>
-                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                                <span>09:00 AM</span></div>
-                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                                <span>09:00 AM</span></div>
-                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                                <span>09:00 AM</span></div>
-                                                            <div data-qa-id="slot_time" class="c-day-session__slot ">
-                                                                <span>09:00 AM</span></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </mat-tab>
-                                    </mat-tab-group>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 sticky1 " style="margin-bottom: 40px;">
-                    <div>
-                        <div class="mapimage">
-                            <div class="card cardex2 ">
-                                <div class="card-body">
-                                    <h3> Provide current location to see Dentist near you </h3>
-                                    <p>You are seeing results from bangalore. See results near you</p>
-                                    <div class="row"
-                                        style="display: flex; justify-content: space-around;margin-top: 30px;">
-                                        <button class="btn">HSR Layout</button>
-                                        <button class="btn">Indiranagar</button>
-                                        <button class="btn">Whitefield</button>
-                                        <button class="btn">Marathahalli</button>
-                                        <button class="btn">Sarjapur Road</button>
-                                    </div>
-                                    <div class="row" style="justify-content: space-around;margin-top: 30px;">
-                                        <span class="">Search Location</span>
-                                        <button class="btn btn-primary currentLocation">
-                                            <i class="fa fa-location"></i>
-                                            Current Location
-                                        </button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="card don">
+                <!-- <div class="card don">
                     <div class="row">
                         <div class="col-7 cosevn">
                             <h2>Free Online Consultations</h2>
@@ -824,7 +286,7 @@
                             <img src="../../../assets/img/tracefinallogo.png">
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>

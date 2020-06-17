@@ -10,9 +10,13 @@ import { Router } from '@angular/router';
   styleUrls: ['./doctors.component.scss']
 })
 export class DoctorsComponent implements OnInit {
-  show: boolean = false;
+  show: any;
   aval: boolean = false;
   doctorList: any = [];
+  evningSlot: any = [];
+  morningSlot: any = [];
+  minDate = new Date();
+  selectedSlot: any;
 
   constructor(public consultationService: ConsultationService,
     public userService: UserService,
@@ -44,11 +48,42 @@ export class DoctorsComponent implements OnInit {
     })
   }
 
+  onSelectSlot(time) {
+    this.selectedSlot = time;
+  }
+
+
+
   ngOnInit(): void {
   }
 
-  showtime() {
-    this.show = !this.show;
+  showtime(doctor) {
+    this.show = doctor._id;
+    console.log("DoctorsComponent -> showtime -> doctor", doctor);
+    var session1Start = doctor.slots[0].session1Start.split(":");
+    var session1End = doctor.slots[0].session1End.split(":");
+    var session2Start = doctor.slots[0].session2Start.split(":");
+    var session2End = doctor.slots[0].session2End.split(":");
+    console.log("DoctorsComponent -> showtime -> session1Start", session1Start, session1End, session2Start, session2End)
+    this.morningSlot = [];
+    this.evningSlot = [];
+
+    for (var i = parseInt(session1Start[0]); i < parseInt(session1End[0]); i++) {
+      var hour = i < 10 ? '0' + i : i;
+      if (i <= 13) {
+        this.morningSlot.push({ label: hour + ':00', value: hour + ':00' });
+        this.morningSlot.push({ label: hour + ':30', value: hour + ':30' });
+      }
+    }
+
+    for (var i = parseInt(session2Start[0]); i < parseInt(session2End[0]); i++) {
+      var hour = i < 10 ? '0' + i : i;
+      if (i >= 13) {
+        this.evningSlot.push({ label: hour + ':00', value: hour + ':00' });
+        this.evningSlot.push({ label: hour + ':30', value: hour + ':30' });
+      }
+    }
+
   }
 
   avaialableclick() {
@@ -72,12 +107,12 @@ export class DoctorsComponent implements OnInit {
     });
 
     $(window).scroll(function () {
-      console.log("DoctorsComponent -> constructor -> $(window).scrollTop()", $(window).scrollTop())
       if ($(window).scrollTop() >= 112) {
         $('.sticky-outer-wrapper').addClass('fixed-sticky-outer');
       } else {
         $('.sticky-outer-wrapper').removeClass('fixed-sticky-outer');
       }
     });
+
   }
 }

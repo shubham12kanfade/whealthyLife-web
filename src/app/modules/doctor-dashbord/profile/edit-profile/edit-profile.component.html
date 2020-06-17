@@ -72,8 +72,8 @@
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <label for="country">Gender</label>
-                                        <select class="form-control" formControlName="gender" id="country">
+                                        <label for="gender">Gender</label>
+                                        <select class="form-control" formControlName="gender" id="gender">
                                             <option>Male</option>
                                             <option>Female</option>
                                         </select>
@@ -98,19 +98,21 @@
                                 <hr style="border-top: 1px solid lightgray;">
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <label for="country"> Blood group</label>
-                                        <select class="form-control" id="country" placeholder="Select an Option">
+                                        <label for="bloodGroup"> Blood group</label>
+                                        <select class="form-control" id="bloodGroup" formControlName="bloodGroup" placeholder="Select an Option">
                                             <option>O+</option>
                                             <option>A+</option>
+                                            <option>A-</option>
                                             <option>B+</option>
+                                            <option>B-</option>
                                             <option>O-</option>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <label for="country"> Time Zone</label>
-                                        <select class="form-control" id="country" formControlName="timeZone"
+                                        <label for="timezone"> Time Zone</label>
+                                        <select class="form-control" id="timezone" formControlName="timeZone"
                                             placeholder="Select an Option">
                                             <option *ngFor="let time of timeZone" [value]="time?.name">{{time?.value}}
                                             </option>
@@ -149,7 +151,7 @@
                                             </span></label>
                                         <select class="form-control" id="country" formControlName="country"
                                             (change)="getState()">
-                                            <option *ngFor="let country of countryList" [value]="country?.name">
+                                            <option *ngFor="let country of countryList" [value]="country?.id">
                                                 {{country?.name}}</option>
                                         </select>
                                     </div>
@@ -163,7 +165,7 @@
                                         </label>
                                         <select class="form-control" id="state" formControlName="state"
                                             (change)="getCity()">
-                                            <option *ngFor="let state of stateList" [value]="state?.name">
+                                            <option *ngFor="let state of stateList" [value]="state?.id">
                                                 {{state?.name}}</option>
                                         </select>
                                     </div>
@@ -172,7 +174,7 @@
                                     <div class="form-group">
                                         <label for="city">City</label>
                                         <select class="form-control" id="city" formControlName="city">
-                                            <option *ngFor="let city of cityList" [value]="city?.name">
+                                            <option *ngFor="let city of cityList" [value]="city?.id">
                                                 {{city?.name}}</option>
                                         </select>
                                     </div>

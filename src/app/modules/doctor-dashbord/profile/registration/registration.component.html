@@ -1,3 +1,4 @@
+<p-toast class="custom-error" [showTransformOptions]="'translateX(100%)'"></p-toast>
 <section>
     <mat-horizontal-stepper labelPosition="bottom" #stepper>
         <mat-step>
@@ -5,20 +6,21 @@
             <section class="bg-white p-sm-3">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-md-5 col-lg-3 offset-md-2 paddingonxs">
-                          
-                            <div class="form-group-sm">
+                        <div class="col-md-5 col-lg-3 offset-md-2 paddingonxs" [formGroup]="profileform">
+                            <div class="form-group-sm mb-3">
                                 <label for="RegistrationNumber">Registration Number</label>
-                                <input type="text" class="form-control" id="RegistrationNumber" placeholder="1234 " />
+                                <input type="text" class="form-control" id="RegistrationNumber" placeholder="R-898977"
+                                    formControlName="registrationNumber" />
                             </div>
                             <div class="form-group">
                                 <label for="RegistrationCouncil">Registration Council</label>
-                                <input type="text" class="form-control" id="RegistrationCouncil" placeholder="" />
+                                <input type="text" class="form-control" id="registrationNumber"
+                                    formControlName="registrationCouncil" placeholder="Enter your council" />
                             </div>
                             <div class="form-group">
                                 <label for="RegistrationYear">Registration Year</label>
-                                <select id="RegistrationYear" class="form-control">
-                                    <option *ngFor="let item of items; index as i">
+                                <select id="RegistrationYear" class="form-control" formControlName="registrationYear">
+                                    <option *ngFor="let item of items; index as i" [value]="2019 - i + 1">
                                         {{ 2019 - i + 1 }}
                                     </option>
                                 </select>
@@ -27,10 +29,13 @@
                             <div class="row">
                                 <button mat-raised-button [routerLink]="['/Doctor/Profile']"
                                     routerLinkActive="router-link-active">
-                                    <i class="fa fa-chevron-left" aria-hidden="true"></i> Back
+                                    <mat-icon aria-hidden="false" aria-label="Example home icon">chevron_left</mat-icon>
+                                    Back
                                 </button>
-                                <button mat-raised-button matStepperNext color="success">
-                                    Contnue
+                                <button mat-raised-button color="success" (click)="onSave(stepper)">
+                                    Save and Contnue
+                                    <mat-icon aria-hidden="false" aria-label="Example home icon">chevron_right
+                                    </mat-icon>
                                 </button>
                             </div>
                         </div>
@@ -44,9 +49,9 @@
                                     <p class="stext font-weight-bold">
                                         This information helps us perform critical checks to ensure
                                         that only licensed and genuine medical practitioners are
-                                        listed on Practo. Your profile will get a “Verified” badge
+                                        listed on WhealthyLife. Your profile will get a “Verified” badge
                                         on verification. Doctors with verified profiles get 95% more
-                                        patient views on Practo.
+                                        patient views on WhealthyLife.
                                     </p>
                                 </div>
                             </div>
@@ -57,15 +62,11 @@
         </mat-step>
         <mat-step>
             <ng-template matStepLabel>Education Qualification</ng-template>
-            <app-education></app-education>
-            <div>
-              
-            </div>
+            <app-education [stepper]="stepper"></app-education>
         </mat-step>
         <mat-step>
             <ng-template matStepLabel>Connect a practice</ng-template>
-            <app-connect-clinic></app-connect-clinic>
-           
+            <app-connect-clinic [stepper]="stepper"></app-connect-clinic>
         </mat-step>
     </mat-horizontal-stepper>
 </section>

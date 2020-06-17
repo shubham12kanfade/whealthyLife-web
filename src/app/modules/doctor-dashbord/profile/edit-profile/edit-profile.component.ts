@@ -41,6 +41,7 @@ export class EditProfileComponent implements OnInit {
       pincode: new FormControl(''),
       specialitie: new FormControl(''),
       timeZone: new FormControl(''),
+      bloodGroup: new FormControl('')
     })
   }
 
@@ -64,7 +65,7 @@ export class EditProfileComponent implements OnInit {
         state: this.profileForm.value.state,
         city: this.profileForm.value.city,
         pincode: this.profileForm.value.pincode,
-        country: this.profileForm.value.country
+        country: this.profileForm.value.country,
       }
     }
     this.mainService.updateUserprofile(data).then(resData => {
@@ -91,12 +92,14 @@ export class EditProfileComponent implements OnInit {
         address: resData.data.location.address,
         landmark: resData.data.location.landmark,
         pincode: resData.data.location.pincode,
-        state: resData.data.location.pincode,
-        city: resData.data.location.pincode,
+        state: resData.data.location.state,
+        city: resData.data.location.city,
         country: resData.data.location.country
       });
       this.profileData = resData.data;
       this.avatar = resData.data.avatar
+      this.getState();
+      this.getCity();
     }).catch(error => {
       console.log("EditProfileComponent -> getProfile -> error", error)
     })
@@ -135,7 +138,7 @@ export class EditProfileComponent implements OnInit {
   }
 
   getCity() {
-    this.mainService.getCity(this.profileForm.value.country, this.profileForm.value.state).then(resData => {
+    this.mainService.getCity(this.profileForm.value.state).then(resData => {
       this.cityList = resData.data;
     }).catch(error => {
       console.log("EditProfileComponent -> getCountry -> error", error)

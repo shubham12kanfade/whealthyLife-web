@@ -1,14 +1,16 @@
 <div id="wrapper">
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebars">
         <a class="sidebar-brand d-flex align-items-center justify-content-center h" [routerLink]="['/Doctor']">
-            <div class="sidebar-brand-text h">Wealthy Life</div>
+            <div class="sidebar-brand-text h">Whealthy Life</div>
         </a>
         <a class="sidebar-brand d-flex align-items-center justify-content-center d" [routerLink]="['/Doctor']">
             <div class="sidebar-brand-text ">W</div>
         </a>
         <hr class="sidebar-divider my-0">
         <div class="sidebar-heading h">
-            HEALTH IS WEALTH
+            <a [routerLink]="['/']">
+                HEALTH IS WEALTH
+            </a>
         </div>
         <li class="nav-item active">
             <a class="nav-link" [routerLink]="['/Doctor/Calendar']">
@@ -44,7 +46,7 @@
         <hr class="sidebar-divider">
 
         <div class="sidebar-heading h">
-            wealthylife.com
+            whealthylife.com
         </div>
 
         <li class="nav-item active ">
@@ -231,14 +233,14 @@
                             <a class="dropdown-item" [routerLink]="['/Doctor/Profile']">
                                 <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i> Profile
                             </a>
-                            <a class="dropdown-item" href="#">
+                            <a class="dropdown-item" [routerLink]="['/Doctor/Settings/practice-details']">
                                 <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i> Settings
                             </a>
                             <a class="dropdown-item" href="#">
                                 <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i> Activity Log
                             </a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#" (click)="onLogOut()">
+                            <a class="dropdown-item" (click)="onLogOut()">
                                 <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i> Logout
                             </a>
                         </div>

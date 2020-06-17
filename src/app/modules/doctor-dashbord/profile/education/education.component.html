@@ -1,36 +1,47 @@
 <section class="bg-white p-sm-3">
-    <div class="row">
+    <div class="row" [formGroup]="profileform">
         <div class="col-md-5 col-lg-3 offset-md-2">
             <p style="font-size: 15px;">Please enter your base level qualification.</p>
-                <div class="form-group">
-                    <label for="RegistrationNumber">Degree</label>
-                    <input type="text" class="form-control" id="RegistrationNumber" placeholder="1234 ">
-                </div>
-                <div class="form-group">
-                    <label for="RegistrationCouncil">College/Institute</label>
-                    <input type="text" class="form-control" id="RegistrationCouncil" placeholder="">
-                </div>
-                <div class="form-group ">
-                    <label for="RegistrationYear">Year of completion</label>
-                    <select id="RegistrationYear" class="form-control">
-                  <option *ngFor="let item of items;index as i"> {{2019-i+1}} </option>
+            <div class="form-group">
+                <label for="degree">Degree</label>
+                <input type="text" class="form-control" formControlName="degree" id="degree" placeholder="MBA">
+            </div>
+            <div class="form-group">
+                <label for="college">College/Institute</label>
+                <input type="text" class="form-control" formControlName="college" id="college" placeholder="">
+            </div>
+            <div class="form-group ">
+                <label for="RegistrationYear">Year of completion</label>
+                <select id="RegistrationYear" class="form-control" formControlName="yearOfCompletion">
+                    <option *ngFor="let item of items;index as i" [value]="2019-i+1"> {{2019-i+1}} </option>
                 </select>
-                </div>
-                <div class="form-group">
-                    <label for="RegistrationCouncil">Year of experience</label>
-                    <input type="number" class="form-control" id="RegistrationCouncil" placeholder="">
-                </div>
-                <hr class="mt-5 mb-5">
-                <div class="row">
-                    <button mat-raised-button matStepperPrevious  > <i class="fa fa-chevron-left" aria-hidden="true"></i> Back</button>
-                    <button mat-raised-button color="success" matStepperNext>Contnue</button>
-                   </div>
+            </div>
+            <div class="form-group">
+                <label for="experience">Year of experience</label>
+                <input type="number" class="form-control" formControlName="experience" id="experience" placeholder="">
+            </div>
+            <hr class="mt-5 mb-5">
+            <div class="row">
+                <button mat-raised-button matStepperPrevious>
+                    <mat-icon aria-hidden="false" aria-label="Example home icon">chevron_left
+                    </mat-icon>
+                    Back
+                </button>
+                <button mat-raised-button color="success" (click)="onSave()">Save and Contnue
+                    <mat-icon aria-hidden="false" aria-label="Example home icon" >chevron_right
+                    </mat-icon>
+                </button>
+            </div>
         </div>
         <div class="col-md-3 col-lg-5 offset-md-1">
-            <div class=" d-none d-sm-none d-md-block col-md-12 col-lg-8 mt-5 ml-5 pr-0 pl-0" style="border: 1px solid #14aa9b;">
+            <div class=" d-none d-sm-none d-md-block col-md-12 col-lg-8 mt-5 ml-5 pr-0 pl-0"
+                style="border: 1px solid #14aa9b;">
                 <div class=" bg p-4 textcol">
                     <div><i class="fa fa-lightbulb-o fa-lg" aria-hidden="true"></i> </div>
-                    <p class="stext font-weight-bold">On Practo, doctors are listed under the relevant specializations based on their academic degrees. Both, education and years of experience, showcase doctor’s expertise and are among the top 3 things that patients consider while making
+                    <p class="stext font-weight-bold">On WhealthyLife, doctors are listed under the relevant
+                        specializations
+                        based on their academic degrees. Both, education and years of experience, showcase doctor’s
+                        expertise and are among the top 3 things that patients consider while making
                         their decision</p>
                 </div>
             </div>

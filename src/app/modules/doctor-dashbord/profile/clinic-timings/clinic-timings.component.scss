@@ -7,7 +7,7 @@
 }
 
 .btn {
-    font-size: 1.50rem !important;
+    font-size: 1.5rem !important;
 }
 
 .butsetr {
@@ -22,59 +22,65 @@
 }
 .mat-button.mat-success:hover,
 .mat-stroked-button.mat-success:hover {
-  background-color: #f0fff3;
+    background-color: #f0fff3;
 }
 
 .mat-raised-button.mat-success,
 .mat-flat-button.mat-success,
 .mat-fab.mat-success,
 .mat-mini-fab.mat-success {
-  color: #f0fff3;
-  background-color: #f6c23e;
-  position: absolute;
-  right: 0px;
+    //   color: #f0fff3;
+    //   background-color: #f6c23e;
+    position: absolute;
+    right: 0px;
 }
 
-@media(max-width:576px) {
-    .paddingonxs{
-        padding-right:30px ;
-    }  
+@media (max-width: 576px) {
+    .paddingonxs {
+        padding-right: 30px;
+    }
     .mat-raised-button.mat-success,
-.mat-flat-button.mat-success,
-.mat-fab.mat-success,
-.mat-mini-fab.mat-success {
-  color: #f0fff3;
-  background-color: #f6c23e;
-  position: absolute;
-  right: 30px;
-
-} 
+    .mat-flat-button.mat-success,
+    .mat-fab.mat-success,
+    .mat-mini-fab.mat-success {
+        color: #f0fff3;
+        background-color: #f6c23e;
+        position: absolute;
+        right: 30px;
+    }
 }
 .mat-form-field {
     margin-top: 16px;
-  }
-  .dot {
+}
+.dot {
     height: 32px;
     width: 32px;
     background-color: white;
     border-radius: 50%;
     display: inline-block;
     margin-left: 2px;
-margin-right: 2px;
-cursor: pointer;
+    margin-right: 2px;
+    cursor: pointer;
 }
-.pt{
+.pt {
     margin: 5px 0 0px !important;
-
 }
-.acti{
+.acti {
     background-color: #ffa000;
-    >p{
+    > p {
         color: white !important;
     }
 }
-.addmore{
+.addmore {
     font-size: 12px;
     color: #14bef0;
     cursor: pointer;
+}
+
+.unselect {
+    background: lightgray;
+}
+
+.selected {
+    background: #4e73df !important;
 }

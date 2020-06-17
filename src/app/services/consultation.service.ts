@@ -11,7 +11,7 @@ export class ConsultationService {
 
 
   getDoctorlist() {
-    return this.api.getData('doctor');
+    return this.api.getData('doctor/list/for/consultation');
   }
 
   endSession() {

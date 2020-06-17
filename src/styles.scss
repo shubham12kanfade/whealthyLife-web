@@ -150,12 +150,7 @@
 
 @font-face {
 	font-family: practicon;
-	src: url(//www.practostatic.com/fonts/v13/practicon.eot);
-	src: url(//www.practostatic.com/fonts/v13/practicon.eot#iefix) format("embedded-opentype"),
-		url(//www.practostatic.com/fonts/v13/practicon.woff2) format("woff2"),
-		url(//www.practostatic.com/fonts/v13/practicon.woff) format("woff"),
-		url(//www.practostatic.com/fonts/v13/practicon.svg) format("svg"),
-		url(//www.practostatic.com/fonts/v13/practicon.ttf) format("truetype");
+	src: url(assets/webfonts/practicon.woff2) format("woff2"), url(assets/webfonts/practicon.woff) format("woff");
 	font-weight: 400;
 	font-style: normal;
 }

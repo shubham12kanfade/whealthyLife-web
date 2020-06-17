@@ -11,7 +11,7 @@ export class UserService {
   constructor(public storage: CookieService) { }
 
   addUserInfo(data) {
-    this.storage.set('userInfo_wealthyLife', JSON.stringify(data));
+    this.storage.set('userInfo_WhealthyLife', JSON.stringify(data));
     this.storage.set('userInfo_token', data.token);
     this.userInfo.next(data);
     return;
@@ -22,24 +22,24 @@ export class UserService {
   }
 
   getUserInfo() {
-    console.log("UserService -> getUserInfo -> this.storage.get('userInfo_wealthyLife')", this.storage.get('userInfo_wealthyLife'))
-    if (this.storage.get('userInfo_wealthyLife')) {
-      return JSON.parse(this.storage.get('userInfo_wealthyLife'));
+    console.log("UserService -> getUserInfo -> this.storage.get('userInfo_WhealthyLife')", this.storage.get('userInfo_WhealthyLife'))
+    if (this.storage.get('userInfo_WhealthyLife')) {
+      return JSON.parse(this.storage.get('userInfo_WhealthyLife'));
     } else {
       return false;
     }
   }
 
   getUserDesignation() {
-    if (this.storage.get('userInfo_wealthyLife')) {
-      return JSON.parse(this.storage.get('userInfo_wealthyLife')).designation;
+    if (this.storage.get('userInfo_WhealthyLife')) {
+      return JSON.parse(this.storage.get('userInfo_WhealthyLife')).designation;
     } else {
       return false;
     }
   }
 
   getUserToken() {
-    if (this.storage.get('userInfo_wealthyLife')) {
+    if (this.storage.get('userInfo_WhealthyLife')) {
       return this.storage.get('userInfo_token');
     } else {
       return false;

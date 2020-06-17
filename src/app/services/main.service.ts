@@ -17,6 +17,17 @@ export class MainService {
     return this.api.putData('doctor/update/my/profile', data);
   }
 
+  addTimeSlot(data) {
+    return this.api.postData('slot', data);
+  }
+
+  getTimeSlot() {
+    return this.api.getData('slot');
+  }
+
+  getTimeSlotByUserId(id) {
+    return this.api.getData('slot/' + id);
+  }
 
   getCountry() {
     return this.api.getData('country');
@@ -26,8 +37,8 @@ export class MainService {
     return this.api.getData('country/' + countryId + '/state');
   }
 
-  getCity(countryId, stateId) {
-    return this.api.getData('country/' + countryId + '/state/' + stateId + '/city');
+  getCity(stateId) {
+    return this.api.getData('country/state/' + stateId + '/city');
   }
 
   getTimeZone() {
