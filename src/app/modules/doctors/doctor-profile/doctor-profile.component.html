@@ -5,30 +5,32 @@
                 <div class="card mb-3">
                     <div class="row no-gutters">
                         <div class="col-md-2 p-2 img">
-                            <img [src]="profileData?.userId?.avatar"
+                            <img  [src]="profileData.avatar"
+                            onerror="this.src='../assets/img/user.jpeg'"
                                 class="card-img" alt="...">
                         </div>
                         <div class="col-md-10">
                             <div class="card-body mr-3">
-                                <div class="row text-dark">
-                                    <h1 class=" font-weight-bold">
-                                        Dr. {{profileData?.userId?.firstName}} {{profileData?.userId?.lastName}}</h1>
-                                    <p class="pl-1 pt-2 font-weight-bold">Profile is claimed</p>
+                                <div class="row text-dark mb-0">
+                                    <h2 class=" font-weight-bold mb-0">
+                                        Dr. {{profileData.firstName}} {{profileData.lastName}}</h2>
+                                   
                                 </div>
+                                <p class="pl-1 pt-2 font-weight-bold ">Profile is claimed</p>
                                 <div class="row text-dark">
                                     <p class="m-0">
-                                        BDS, MDS - Oral Medicine and Radiology
+                                        {{profileData.degree}} - {{profileData.specialitie}}
                                     </p>
                                 </div>
                                 <div class="row text-dark">
                                     <p>
                                         Dentist, Dental Surgeon, Cosmetic/Aesthetic Dentist, Implantologist, Oral
-                                        Medicine and Radiology, 14 Years Experience Overall (14 years as specialist)
+                                        Medicine and Radiology,{{profileData.experience}} Years Experience Overall ({{profileData.experience}} years as specialist)
                                     </p>
                                 </div>
                                 <div class="row text-dark">
                                     <i class="fa fa-check-circle p-1 text-success" aria-hidden="true"></i>
-                                    <p>BDS, MDS - Oral Medicine and Radiology</p>
+                                    <p>{{profileData.degree}} - {{profileData.specialitie}}</p>
                                 </div>
                                 <div class="row text-dark">
                                     <i class="fa fa-thumbs-up text-success p-1" aria-hidden="true"> 96% </i>
@@ -36,7 +38,7 @@
                                 </div>
                                 <div class="row text-dark">
                                     <p>
-                                        Dr. M. R. Pujari is highly qualified and highly experienced doctor with 13 years
+                                        Dr. {{profileData.firstName}} {{profileData.lastName}} is highly qualified and highly experienced doctor with {{profileData.experience}} years
                                         of vast experience. Working as a chief consultant in various dental clinics,
                                         cosmetic dentist, root canal specialist, TMJ and oral medicine specialist.
                                     </p>
@@ -591,7 +593,7 @@
                                 </div>
                                 <div class="col-7 font-sizex-smalll text-dark p-2"> VIDEO CONSULTATION₹ </div>
                                 <div class="col-3">
-                                    <h2 class="p-2"> 200</h2>
+                                    <h2 class="p-2">{{profileData.fees}}</h2>
                                 </div>
                             </div>
                             <!-- <mat-tab-group mat-stretch-tabs class="example-stretched-tabs mat-elevation-z4 ">
