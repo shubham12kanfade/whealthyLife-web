@@ -17,6 +17,7 @@ export class DoctorsComponent implements OnInit {
   morningSlot: any = [];
   minDate = new Date();
   selectedSlot: any;
+  docId: any;
 
   constructor(public consultationService: ConsultationService,
     public userService: UserService,
@@ -30,11 +31,26 @@ export class DoctorsComponent implements OnInit {
     this.consultationService.getDoctorlist().then(resData => {
       console.log("DoctorsComponent -> getDoctorList -> resData", resData);
       this.doctorList = resData.data;
-
+      // this.docId = resData.data._id;
+      console.log("DoctorsComponent -> getDoctorList -> this.docId", this.docId)
+      
+      // this.docId= this.doctorList._id;
+      console.log("DoctorsComponent -> getDoctorList -> this.doctorList", this.doctorList);
+    //   this.docId= this.doctorList._id;
+    //   console.log("DoctorsComponent -> getDoctorList -> this.docId", this.docId)
+    //5ecb7119a4c60c58792d9ebb
     }).catch(error => {
-      console.log("DoctorsComponent -> getDoctorList -> error", error)
+      console.log("DoctorsComponent -> getDoctorList -> error", error);
     })
   }
+
+
+  // getProfile(id){
+  //   this.router.navigate(['/doctor_profile/:id'])
+  // }
+
+
+  
 
   onConsultation(id) {
     var data = {

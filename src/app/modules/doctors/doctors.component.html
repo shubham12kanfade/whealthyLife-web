@@ -44,11 +44,11 @@
                         </div>
                     </li>
                     <li>
-                        <!-- <div class="liss">
+                        <div class="liss">
                             <mat-checkbox class="bringwhite"> </mat-checkbox>
                             Online Booking
-                        </div> -->
-                        <mat-checkbox>Check me!</mat-checkbox>
+                        </div>
+                        <!-- <mat-checkbox>Check me!</mat-checkbox> -->
                     </li>
                     <li>
                         <div class="form-group">
@@ -161,7 +161,7 @@
                                         onerror="this.src='../assets/img/user.jpeg'" alt="Avatar"  style="display: block; margin: auto; width:100%;height: 200px;"
                                         class="">
                                 <div class="card-body" style="text-align: center;padding: 0px;">
-                                    <h2><a href="">Dr. {{doctor?.userId?.firstName}}
+                                    <h2><a [routerLink]="['/doctor_profile/','doctor?._id']" >Dr. {{doctor?.userId?.firstName}}
                                         {{doctor?.userId?.lastName}}</a></h2>
                                 <p>{{doctor?.userId?.specialitie}}</p>
                                 <p>{{doctor?.userId?.experience}} years experience overall</p>
