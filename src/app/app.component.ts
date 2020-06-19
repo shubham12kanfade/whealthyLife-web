@@ -36,7 +36,7 @@ export class AppComponent implements OnInit {
     var message = firebase.messaging();
 
     message.getToken().then(rerData => {
-      console.log("AppComponent -> constructor -> rerData", rerData)
+      console.log("AppComponent -> constructor -> getToken", rerData)
     }).catch(error => {
       console.log("AppComponent -> constructor -> error", error)
     })
