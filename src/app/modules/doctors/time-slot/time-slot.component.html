@@ -1,0 +1,61 @@
+<!-- <div *ngIf="show === data?._id">
+  
+    <div class="col-md-12 col-sm-12 slidetime">
+        <div class="row">
+            <div class="col-sm-12">
+                <mat-tab-group>
+                    <mat-tab *ngFor="let item of doctor?.slots">
+                        <ng-template mat-tab-label>
+                            <div class="grp">
+                                <h4 class="text-capitalize">{{item?.day}}</h4>
+                                <p>{{evningSlot?.length + morningSlot?.length}} Slots
+                                    Available</p>
+                            </div>
+                        </ng-template>
+                        <div class="slotsavailable">
+                            <div class="row">
+                                <div class="col-sm-2">
+                                    <div>
+                                        <span><i class="fa fa-sun"></i></span>
+                                        Morning
+                                    </div>
+                                </div>
+                                <div class="col-sm-10 driven">
+                                    <div class="morningslot">
+                                        <div data-qa-id="slot_time"
+                                            (click)="onSelectSlot(item?.value)"
+                                            class="c-day-session__slot"
+                                            *ngFor="let item of morningSlot">
+                                            <span
+                                                [ngClass]="{selectedSloats: item?.value == selectedSlot}">{{item?.label}}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-sm-2">
+                                    <div>
+                                        <span><i class="fa fa-sun"></i></span>
+                                        Evening
+                                    </div>
+                                </div>
+                                <div class="col-sm-10 driven">
+                                    <div class="morningslot">
+                                        <div data-qa-id="slot_time"
+                                            class="c-day-session__slot"
+                                            (click)="onSelectSlot(item?.value)"
+                                            *ngFor="let item of evningSlot">
+                                            <span
+                                                [ngClass]="{selectedSloats: item?.value == selectedSlot}">{{item?.label}}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </mat-tab>
+                </mat-tab-group>
+            </div>
+        </div>
+    </div>
+</div> -->

@@ -3,6 +3,7 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 import { Router } from '@angular/router';
 import { MapsAPILoader } from '@agm/core';
 import { google } from 'google-maps';
+import { SpecialityService } from 'src/app/services/speciality.service';
 
 @Component({
   selector: 'app-bookappoiment',
@@ -14,39 +15,60 @@ export class BookappoimentComponent implements OnInit {
   google: google;
 
   keyword = 'name';
-  public countries = [
-    {
-      id: 1,
-      name: 'Dentist',
-    },
-    {
-      id: 2,
-      name: 'Gynecologist/obstetrician',
-    },
-    {
-      id: 3,
-      name: 'General Physician',
-    },
-    {
-      id: 4,
-      name: 'General Dermatologist',
-    },
-    {
-      id: 5,
-      name: 'Ear-nose-throat (ent) Specialist',
-    },
-    {
-      id: 6,
-      name: 'Homoeopath',
-    },
-    {
-      id: 7,
-      name: 'Ayurveda',
-    }
-  ];
+  countries: any=[];
+  // public countries = [
+  //   {
+  //     id: 1,
+  //     name: 'Dentist',
+  //   },
+  //   {
+  //     id: 2,
+  //     name: 'Gynecologist/obstetrician',
+  //   },
+  //   {
+  //     id: 3,
+  //     name: 'General Physician',
+  //   },
+  //   {
+  //     id: 4,
+  //     name: 'General Dermatologist',
+  //   },
+  //   {
+  //     id: 5,
+  //     name: 'Ear-nose-throat (ent) Specialist',
+  //   },
+  //   {
+  //     id: 6,
+  //     name: 'Homoeopath',
+  //   },
+  //   {
+  //     id: 7,
+  //     name: 'Ayurveda',
+  //   }
+  // ];
 
   constructor(public router: Router, private mapsAPILoader: MapsAPILoader,
-    private ngZone: NgZone) { }
+    private ngZone: NgZone , public speciality: SpecialityService ) { 
+
+      // this.speciality.getSpecialization().then((resData:any)=>{
+      // console.log("BookappoimentComponent -> resData", resData)
+      // }).catrch(error=>{
+      // console.log("BookappoimentComponent -> error", error)
+        
+
+      //})
+
+     this.speciality.getSpecialization().then((resData:any)=>{
+     console.log("BookappoimentComponent -> resData", resData)
+       this.countries=resData.data;
+     }).catch(error=>{
+     console.log("BookappoimentComponent -> error", error)
+       
+     })
+
+
+
+    }
 
   customOptionsOne: OwlOptions = {
     loop: true,
@@ -171,6 +193,9 @@ export class BookappoimentComponent implements OnInit {
 
   ngOnInit(): void {
     this.placesLoad();
+
+   
+
   }
 
   placesLoad() {

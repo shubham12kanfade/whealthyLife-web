@@ -3,6 +3,9 @@ import * as $ from 'jquery';
 import { ConsultationService } from 'src/app/services/consultation.service';
 import { UserService } from 'src/app/services/user.service';
 import { Router } from '@angular/router';
+import { TimeSlotComponent } from './time-slot/time-slot.component';
+import { MatDialog } from '@angular/material/dialog';
+import { SpecialityService } from 'src/app/services/speciality.service';
 
 @Component({
   selector: 'app-doctors',
@@ -18,13 +21,32 @@ export class DoctorsComponent implements OnInit {
   minDate = new Date();
   selectedSlot: any;
   docId: any;
+  specialityList: any;
 
   constructor(public consultationService: ConsultationService,
     public userService: UserService,
-    public router: Router
+    public router: Router,
+    public dialog: MatDialog,
+    public speciality :SpecialityService
   ) {
     this.getScroll();
     this.getDoctorList();
+
+    this.speciality.getSpecialization().then((resData:any)=>{
+    console.log("DoctorsComponent -> resData", resData)
+    this.specialityList=resData.data;
+    }).catch(error=>{
+    console.log("DoctorsComponent -> error", error)
+    })
+  }
+
+
+  addPractice() {
+    const dialogRef = this.dialog.open(TimeSlotComponent);
+    d: {id: this.doctorList._id}
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
   }
 
   getDoctorList() {
@@ -45,8 +67,8 @@ export class DoctorsComponent implements OnInit {
   }
 
 
-  // getProfile(id){
-  //   this.router.navigate(['/doctor_profile/:id'])
+  // getProfile(){
+  //   this.router.navigate('/doctor_profile/:id')
   // }
 
 
@@ -71,6 +93,7 @@ export class DoctorsComponent implements OnInit {
 
 
   ngOnInit(): void {
+
   }
 
   showtime(doctor) {
