@@ -28,6 +28,43 @@ ul > div > li {
   z-index: 999;
   bottom: 300px;
 }
+b{
+  font-weight: 500;
+}
+
+.scroll1{
+  height: 100vh;
+  overflow: auto;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+// /* Track */
+// ::-webkit-scrollbar-track {
+//   box-shadow: inset 0 0 5px grey; 
+//   border-radius: 10px;
+// }
+ 
+// /* Handle */
+// ::-webkit-scrollbar-thumb {
+//   background: #10185f; 
+//   border-radius: 10px;
+// }
+
+// /* Handle on hover */
+// ::-webkit-scrollbar-thumb:hover {
+//   background: #b30000; 
+// }
+
+// .scroll1::-webkit-scrollbar {
+//   width: 5px;
+//   // background: #888;
+  
+// }
+
+
+
 
 #exampleFormControlSelect1 {
   width: 200px;
@@ -226,16 +263,16 @@ ul > div > li {
 .availableicon {
   margin: 9px;
 }
-.btnbooking {
-  width: 100%;
-  line-height: 13px;
-}
+// .btnbooking {
+//   width: 100%;
+//   line-height: 13px;
+// }
 .nobooktext {
   font-size: 12px;
 }
-.btnvideoconultation {
-  width: 100%;
-}
+// .btnvideoconultation {
+//   width: 100%;
+// }
 .cardex2 {
   z-index: 982;
   margin: 0px 10px;

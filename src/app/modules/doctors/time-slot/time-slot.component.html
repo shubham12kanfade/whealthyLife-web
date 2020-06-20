@@ -1,61 +1,67 @@
-<!-- <div *ngIf="show === data?._id">
-  
-    <div class="col-md-12 col-sm-12 slidetime">
-        <div class="row">
-            <div class="col-sm-12">
-                <mat-tab-group>
-                    <mat-tab *ngFor="let item of doctor?.slots">
-                        <ng-template mat-tab-label>
-                            <div class="grp">
-                                <h4 class="text-capitalize">{{item?.day}}</h4>
-                                <p>{{evningSlot?.length + morningSlot?.length}} Slots
-                                    Available</p>
-                            </div>
-                        </ng-template>
-                        <div class="slotsavailable">
-                            <div class="row">
-                                <div class="col-sm-2">
-                                    <div>
-                                        <span><i class="fa fa-sun"></i></span>
-                                        Morning
-                                    </div>
-                                </div>
-                                <div class="col-sm-10 driven">
-                                    <div class="morningslot">
-                                        <div data-qa-id="slot_time"
-                                            (click)="onSelectSlot(item?.value)"
-                                            class="c-day-session__slot"
-                                            *ngFor="let item of morningSlot">
-                                            <span
-                                                [ngClass]="{selectedSloats: item?.value == selectedSlot}">{{item?.label}}</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <hr>
-                            <div class="row">
-                                <div class="col-sm-2">
-                                    <div>
-                                        <span><i class="fa fa-sun"></i></span>
-                                        Evening
-                                    </div>
-                                </div>
-                                <div class="col-sm-10 driven">
-                                    <div class="morningslot">
-                                        <div data-qa-id="slot_time"
-                                            class="c-day-session__slot"
-                                            (click)="onSelectSlot(item?.value)"
-                                            *ngFor="let item of evningSlot">
-                                            <span
-                                                [ngClass]="{selectedSloats: item?.value == selectedSlot}">{{item?.label}}</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+
+
+
+
+<section style="background-color: #f0f0f5;">
+    <div class="container-lg mt-5">
+        <div class="row mt-5">
+            <div class="col-sm-12 col-md-8 mt-5">
+                <div class="card mb-3">
+                    <div class="row no-gutters">
+                        <div class="col-md-2 p-2 img">
+                            <img  [src]="profileData.avatar"
+                            onerror="this.src='../assets/img/user.jpeg'"
+                                class="card-img" alt="...">
                         </div>
-                    </mat-tab>
-                </mat-tab-group>
+                        <div class="col-md-10">
+                            <div class="card-body mr-3">
+                                <div class="row text-dark mb-0">
+                                    <h2 class=" font-weight-bold mb-0">
+                                        Dr. {{profileData.firstName}} {{profileData.lastName}}</h2>
+                                   
+                                </div>
+                                <p class="pl-1 pt-2 font-weight-bold ">Profile is claimed</p>
+                                <div class="row text-dark">
+                                    <p class="m-0">
+                                        {{profileData.degree}} - {{profileData.specialitie}}
+                                    </p>
+                                </div>
+                                <div class="row text-dark">
+                                    <p>
+                                     
+                                        {{profileData.experience}} Years Experience Overall ({{profileData.experience}} years as specialist)
+                                    </p>
+                                </div>
+                                <div class="row text-dark">
+                                    <i class="fa fa-check-circle p-1 text-success" aria-hidden="true"></i>
+                                    <p>{{profileData.degree}} - {{profileData.specialitie}}</p>
+                                </div>
+                                <div class="row text-dark">
+                                    <i class="fa fa-thumbs-up text-success p-1" aria-hidden="true"> 96% </i>
+                                    <p>(3673 votes)</p>
+                                </div>
+                                <div class="row text-dark">
+                                    <p>
+                                        Dr. {{profileData.firstName}} {{profileData.lastName}} is highly qualified and highly experienced doctor with {{profileData.experience}} years
+                                        of vast experience.
+                                     
+                                    </p>
+                                </div>
+
+                            </div>
+                        
+                        </div>
+                    </div>
+                </div>
+                
+               
             </div>
+           
         </div>
     </div>
-</div> -->
+</section>
+
+
+
+
+

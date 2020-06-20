@@ -1,3 +1,4 @@
+import { TimeSlotComponent } from './time-slot/time-slot.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
@@ -7,7 +8,8 @@ import { DoctorProfileComponent } from './doctor-profile/doctor-profile.componen
 
 const routes: Routes = [
   { path: '', component: DoctorsComponent },
-  { path: 'doctor_profile/:id', component: DoctorProfileComponent }
+  { path: 'doctor_profile/:id', component: DoctorProfileComponent },
+  { path: 'timeSlot/:id', component: TimeSlotComponent }
 ];
 
 @NgModule({

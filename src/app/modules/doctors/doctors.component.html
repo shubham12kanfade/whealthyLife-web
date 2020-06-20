@@ -1,32 +1,89 @@
-<section style="margin-top: 100px;">
-    <div class="container-fluid">
+<section style="margin-top: 80px;">
+    <div class="container-fluid" style="padding: 0px !important;" >
         <div class="row">
-            <div class="col-sm-3">
+            <div class="col-sm-3" style="margin-top: 30px;">
                 <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" id="basic-addon1"><i class="fa fa-search"></i></span>
+                    <div class="input-group-prepend" [formGroup]="searchForm">
+                    <span class="input-group-text" id="basic-addon1"><i class="fa fa-search"></i></span>
                     </div>
                     <input type="text" class="form-control" placeholder="Search Doctor Here !" aria-label="Username"
-                        aria-describedby="basic-addon1">
+                        aria-describedby="basic-addon1"  [(ngModel)]="searchText" (input)="search()">
+                        <!-- <div class="ng-autocomplete">
+                            <ng-autocomplete 
+                              [data]="autoDoctList"
+                              [searchKeyword]="keyword"
+                              (selected)='selectEvent($event)'
+                              (inputChanged)='onChangeSearch($event)'
+                              (inputFocused)='onFocused($event)'
+                              [itemTemplate]="itemTemplate"
+                              [notFoundTemplate]="notFoundTemplate">                                 
+                            </ng-autocomplete>
+                             
+                            <ng-template #itemTemplate let-item>
+                            <a [innerHTML]="item.firstName"></a>
+                            </ng-template>
+                             
+                            <ng-template #notFoundTemplate let-notFound>
+                            <div [innerHTML]="notFound"></div>
+                            </ng-template>
+                            </div> -->
+                    
                 </div>
-
-
                 <div class="card" style="width:100%;">
                     <h2 style="margin: auto; display:block">
                         <b>SPECIALITY</b>
-
                     </h2>
-                    <ul class="list-group list-group-flush">
+                    <ul class="list-group list-group-flush scroll1" >
                         <li class="list-group-item" *ngFor="let speciality of specialityList">{{speciality.name}}</li>
-
                     </ul>
                 </div>
             </div>
-            <div class="col-sm-9">
+            <div class="col-sm-9 scroll1" style="background-color: #f3f3f3;padding-top: 60px;height: 120vh;">
                 <div class="col-sm-12">
                     <div class="row">
-
                         <div class="col-lg-4 col-sm-6 col-12" *ngFor="let doctor of doctorList">
+                        <div class="card" style="padding: 10px;border: 1px solid lightgray !important;
+                        border-radius: 5px !important;">
+                            <div class="card-header" style="padding: 0px;">
+                                <div class="row">
+                                <div class="col-4">
+                                    <img [src]="doctor?.userId?.avatar"
+                                    onerror="this.src='../assets/img/user.jpeg'" alt="Avatar"
+                                    style="display: block; margin: auto; width: 80px;height:80px; border-radius: 50%;"
+                                    class="img-thumbnail" >
+                                </div>
+                                <div class="col-8">
+                                    <h2 style="margin:0px;font-size: 16px;"><a [routerLink]="['/doctors/doctor_profile/',doctor?._id]">Dr.
+                                        {{doctor?.userId?.firstName}}
+                                        {{doctor?.userId?.lastName}}</a></h2>
+                                <p style="margin: 0px;font-size: 12px;">{{doctor?.userId?.specialitie}}</p>
+                                <p style="margin: 0px;font-size: 12px;"><b>{{doctor?.userId?.experience}}</b> years experience overall</p>
+                                <p><i class="fa fa-thumbs-up" style="color:#1ebb1e;"></i> 100%</p>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="card-body" style="padding: 10px;line-height: 10px;font-size: 12px;text-align: left; ">
+                                <div class="col-12" >
+                                    <p>
+                                        <b>{{doctor?.userId?.location?.landmark}}
+                                        </b>
+                                    </p>
+                                    <p><b>Rs. {{doctor?.userId?.fees}}</b> Consultation Fees</p>
+                                    <p> Available Today</p>
+                                </div>
+                            </div>
+                            <div class="card-footer" style="display:flex; justify-content: space-around; font-size: 12px;padding: 0px;
+                             background-color: white; 
+                             border-top: none;">
+                            <button type="button" (click)="onConsultation(doctor?._id)"
+                                class="btn btn-outline-primary " style="font-size: 12px;" >Video
+                                Consultation</button>
+                            <a [routerLink]="['/doctors/timeSlot/',doctor?._id]" > <button class="btn btn-primary btnbooking" style="font-size: 12px;" >Book Appointment
+                            </button></a>
+                            </div>
+                        </div>
+                    </div>
+                        <!-- <div class="col-lg-4 col-sm-6 col-12" *ngFor="let doctor of doctorList">
 
                             <div class="card" style="border: 1px solid lightgray !important;
                             border-radius: 5px !important;
@@ -67,7 +124,7 @@
                                     </button>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
