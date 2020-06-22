@@ -5,20 +5,32 @@
             <div class="form-group">
                 <label for="degree">Degree</label>
                 <input type="text" class="form-control" formControlName="degree" id="degree" placeholder="MBA">
+                <div *ngIf="submitted && f.degree.errors" class="error-block display-block">
+                    <div *ngIf="f.degree.errors.required">Degree is required</div>
+                </div>
             </div>
             <div class="form-group">
                 <label for="college">College/Institute</label>
                 <input type="text" class="form-control" formControlName="college" id="college" placeholder="">
+                <div *ngIf="submitted && f.college.errors" class="error-block display-block">
+                    <div *ngIf="f.college.errors.required">College is required</div>
+                </div>
             </div>
             <div class="form-group ">
                 <label for="RegistrationYear">Year of completion</label>
                 <select id="RegistrationYear" class="form-control" formControlName="yearOfCompletion">
                     <option *ngFor="let item of items;index as i" [value]="2019-i+1"> {{2019-i+1}} </option>
                 </select>
+                <div *ngIf="submitted && f.yearOfCompletion.errors" class="error-block display-block">
+                    <div *ngIf="f.yearOfCompletion.errors.required">Year of completion is required</div>
+                </div>
             </div>
             <div class="form-group">
                 <label for="experience">Year of experience</label>
                 <input type="number" class="form-control" formControlName="experience" id="experience" placeholder="">
+                <div *ngIf="submitted && f.experience.errors" class="error-block display-block">
+                    <div *ngIf="f.experience.errors.required">Year of experience is required</div>
+                </div>
             </div>
             <hr class="mt-5 mb-5">
             <div class="row">

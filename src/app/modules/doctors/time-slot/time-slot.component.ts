@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { DoctorProfileService } from 'src/app/services/doctor-profile.service';
+import { ConsultationService } from 'src/app/services/consultation.service';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-time-slot',
@@ -9,12 +12,20 @@ import { DoctorProfileService } from 'src/app/services/doctor-profile.service';
 export class TimeSlotComponent implements OnInit {
   profileData: any;
   id: any;
+  minDate = new Date();
+  aval: boolean;
+  evningSlot: any = [];
+  morningSlot: any = [];
+  selectedSlot: any;
+  show: any;
 
-  constructor(  public DoctorProfile: DoctorProfileService) { 
+
+  constructor(  public DoctorProfile: DoctorProfileService, public consultationService: ConsultationService,  public router: Router) { 
     this.getProfileDetails()
   }
 
   ngOnInit(): void {
+    // this.showtime(this.profileData)
   }
 
   getProfileDetails() {
@@ -25,6 +36,7 @@ export class TimeSlotComponent implements OnInit {
           resData
         );
         this.profileData = resData.data;
+        this.showtime(this.profileData)
         console.log("DoctorProfileComponent -> getProfileDetails -> profileData", this.profileData)
       })
       .catch((error) => {
@@ -34,6 +46,89 @@ export class TimeSlotComponent implements OnInit {
         );
       });
   }
+
+
+  onConsultation(id) {
+    var data = {
+      doctor: id
+    }
+    this.consultationService.createSession(data).then(resData => {
+      console.log("DoctorsComponent -> onConsultation -> resData", resData);
+      this.router.navigate(['/video-conference'])
+    }).catch(error => {
+      console.log("DoctorsComponent -> onConsultation -> error", error);
+    })
+  }
+
+  // addPractice() {
+  //   const dialogRef = this.dialog.open(TimeSlotComponent);
+
+  //   dialogRef.afterClosed().subscribe(result => {
+  //     console.log(`Dialog result: ${result}`);
+  //   });
+  // }
+  onSelectSlot(time) {
+    this.selectedSlot = time;
+  }
+
+  showtime(doctor) {
+    this.show = doctor._id;
+    console.log("DoctorsComponent -> showtime -> doctor", doctor);
+    var session1Start = doctor.slots[0].session1Start.split(":");
+    var session1End = doctor.slots[0].session1End.split(":");
+    var session2Start = doctor.slots[0].session2Start.split(":");
+    var session2End = doctor.slots[0].session2End.split(":");
+    console.log("DoctorsComponent -> showtime -> session1Start", session1Start, session1End, session2Start, session2End)
+    this.morningSlot = [];
+    this.evningSlot = [];
+
+    for (var i = parseInt(session1Start[0]); i < parseInt(session1End[0]); i++) {
+      var hour = i < 10 ? '0' + i : i;
+      if (i <= 13) {
+        this.morningSlot.push({ label: hour + ':00', value: hour + ':00' });
+        this.morningSlot.push({ label: hour + ':30', value: hour + ':30' });
+      }
+    }
+
+    for (var i = parseInt(session2Start[0]); i < parseInt(session2End[0]); i++) {
+      var hour = i < 10 ? '0' + i : i;
+      if (i >= 13) {
+        this.evningSlot.push({ label: hour + ':00', value: hour + ':00' });
+        this.evningSlot.push({ label: hour + ':30', value: hour + ':30' });
+      }
+    }
+
+  }
+
+  avaialableclick() {
+    this.aval = !this.aval;
+  }
+
+  // getScroll() {
+  //   $(window).scroll(function () {
+  //     var sticky = $('.sticky'),
+  //       scroll = $(window).scrollTop();
+
+  //     if (scroll >= 100) sticky.addClass('fixed');
+  //     else sticky.removeClass('fixed');
+  //   });
+  //   $(window).scroll(function () {
+  //     var sticky = $('.sticky1'),
+  //       scroll = $(window).scrollTop();
+
+  //     if (scroll >= 100 && scroll <= 1600) sticky.addClass('fixed1');
+  //     else sticky.removeClass('fixed1');
+  //   });
+
+  //   $(window).scroll(function () {
+  //     if ($(window).scrollTop() >= 112) {
+  //       $('.sticky-outer-wrapper').addClass('fixed-sticky-outer');
+  //     } else {
+  //       $('.sticky-outer-wrapper').removeClass('fixed-sticky-outer');
+  //     }
+  //   });
+
+  // }
  
 
 }

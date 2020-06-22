@@ -9,6 +9,8 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { TimeSlotComponent } from './time-slot/time-slot.component';
 import { AutocompleteLibModule } from 'angular-ng-autocomplete';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NotificationPopupComponent } from './notification-popup/notification-popup.component';
+import {ToastModule} from 'primeng/toast';
 
 
 
@@ -17,7 +19,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   declarations: [
     DoctorsComponent,
     DoctorProfileComponent,
-    TimeSlotComponent
+    TimeSlotComponent,
+    NotificationPopupComponent
   ],
   imports: [
     CommonModule,
@@ -25,7 +28,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     SharedModule,
     AutocompleteLibModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ToastModule
    
   ]
 })

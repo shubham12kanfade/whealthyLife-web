@@ -18,6 +18,8 @@
                                     Upload
                                 </button>
                                 <div *ngIf="identityFile">One file is Uploaded</div>
+                                <div *ngIf="!identityFile" class="error-block display-block">File Uplopad is required</div>
+                                
                             </div>
                             <p class="pt-2" style="font-size: 12px;">
                                 Please upload your identity proof to ensure that the ownership

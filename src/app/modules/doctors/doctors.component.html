@@ -1,7 +1,7 @@
-<section style="margin-top: 80px;">
-    <div class="container-fluid" style="padding: 0px !important;" >
+<section class="se1" >
+    <div class="container-fluid cont1" >
         <div class="row">
-            <div class="col-sm-3" style="margin-top: 30px;">
+            <div class="col-sm-3 mt-30">
                 <div class="input-group mb-3">
                     <div class="input-group-prepend" [formGroup]="searchForm">
                     <span class="input-group-text" id="basic-addon1"><i class="fa fa-search"></i></span>
@@ -29,8 +29,8 @@
                             </div> -->
                     
                 </div>
-                <div class="card" style="width:100%;">
-                    <h2 style="margin: auto; display:block">
+                <div class="card cad1" >
+                    <h2 class="hed1">
                         <b>SPECIALITY</b>
                     </h2>
                     <ul class="list-group list-group-flush scroll1" >
@@ -38,27 +38,26 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-sm-9 scroll1" style="background-color: #f3f3f3;padding-top: 60px;height: 120vh;">
+            <div class="col-sm-9 scroll1 aduj1"  >
                 <div class="col-sm-12">
                     <div class="row">
                         <div class="col-lg-4 col-sm-6 col-12" *ngFor="let doctor of doctorList">
-                        <div class="card" style="padding: 10px;border: 1px solid lightgray !important;
-                        border-radius: 5px !important;">
+                        <div class="card cad2" >
                             <div class="card-header" style="padding: 0px;">
                                 <div class="row">
                                 <div class="col-4">
                                     <img [src]="doctor?.userId?.avatar"
                                     onerror="this.src='../assets/img/user.jpeg'" alt="Avatar"
-                                    style="display: block; margin: auto; width: 80px;height:80px; border-radius: 50%;"
-                                    class="img-thumbnail" >
+                                    
+                                    class="img-thumbnail img2" >
                                 </div>
                                 <div class="col-8">
-                                    <h2 style="margin:0px;font-size: 16px;"><a [routerLink]="['/doctors/doctor_profile/',doctor?._id]">Dr.
+                                    <h2 class="hed3"><a [routerLink]="['/doctors/doctor_profile/',doctor?._id]">Dr.
                                         {{doctor?.userId?.firstName}}
                                         {{doctor?.userId?.lastName}}</a></h2>
                                 <p style="margin: 0px;font-size: 12px;">{{doctor?.userId?.specialitie}}</p>
                                 <p style="margin: 0px;font-size: 12px;"><b>{{doctor?.userId?.experience}}</b> years experience overall</p>
-                                <p><i class="fa fa-thumbs-up" style="color:#1ebb1e;"></i> 100%</p>
+                                <p><i class="fa fa-thumbs-up text-success"></i> 100%</p>
                                 </div>
                             </div>
                             </div>
@@ -132,6 +131,9 @@
     </div>
 </section>
 
+<section>
+    <button calss="btn">Show Pop-Up </button>
+</section>
 
 
 

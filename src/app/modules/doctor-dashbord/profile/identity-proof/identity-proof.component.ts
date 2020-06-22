@@ -14,6 +14,7 @@ export class IdentityProofComponent implements OnInit {
   items: any = [];
   identityFile: any;
   profileData: any;
+  submitted: boolean =false;
 
   constructor(public mainService: MainService,
     public messageService: MessageService,
@@ -31,6 +32,11 @@ export class IdentityProofComponent implements OnInit {
   }
 
   onSave(stepper) {
+
+    // if(this.identityFile= !''){
+    //   this.submitted= true;
+    // }
+
     this.mainService.updateUserprofile({ identityFile: this.identityFile }).then(resData => {
       this.showToast('success', 'Profile', 'Profile updated successfully');
       stepper.next();
@@ -43,6 +49,7 @@ export class IdentityProofComponent implements OnInit {
     const file = event.target.files;
     this.uploadService.upload(file).then(res => {
       this.identityFile = res.files[0];
+     
     }).catch(error => {
       console.error('error', error);
     });

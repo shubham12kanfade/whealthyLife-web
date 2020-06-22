@@ -413,6 +413,13 @@ input[type="number"] {
 	-moz-appearance: textfield;
 }
 
+.ui-datepicker {
+    border: 0px solid #d4d0d0 !important ;
+}
+.cardex2{
+	border: 1px solid #d4d0d0 !important ;
+}
+
 @keyframes ui-progress-spinner-color {
 	100%,
 	0% {

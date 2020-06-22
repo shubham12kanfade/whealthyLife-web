@@ -62,13 +62,12 @@ export class DoctorsComponent implements OnInit {
     console.log("DoctorsComponent -> error", error)
     })
   }
-  // addPractice() {
-  //   const dialogRef = this.dialog.open(TimeSlotComponent);
-  //   d: {id: this.doctorList._id}
-  //   dialogRef.afterClosed().subscribe(result => {
-  //     console.log(`Dialog result: ${result}`);
-  //   });
-  // }
+  addPractice() {
+    const dialogRef = this.dialog.open(TimeSlotComponent);
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
+  }
   getDoctorList() {
     this.consultationService.getDoctorlist().then(resData => {
       console.log("DoctorsComponent -> getDoctorList -> resData", resData);
