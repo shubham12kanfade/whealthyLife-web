@@ -10,7 +10,7 @@ import { TimeSlotComponent } from './time-slot/time-slot.component';
 import { AutocompleteLibModule } from 'angular-ng-autocomplete';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NotificationPopupComponent } from './notification-popup/notification-popup.component';
-import {ToastModule} from 'primeng/toast';
+import { ToastModule } from 'primeng/toast';
 
 
 

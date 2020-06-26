@@ -32,6 +32,13 @@ export class RegistrationProofComponent implements OnInit {
   }
 
   onSave() {
+
+    if(this.registrationProff.length == ''){
+      return;
+    }
+
+
+
     this.mainService.updateUserprofile({ registrationProff: this.registrationProff }).then(resData => {
       this.showToast('success', 'Profile', 'Profile updated successfully');
       this.stepper.next();

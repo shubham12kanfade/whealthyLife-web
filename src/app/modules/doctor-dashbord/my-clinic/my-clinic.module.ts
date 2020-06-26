@@ -9,17 +9,20 @@ import {AutocompleteLibModule} from 'angular-ng-autocomplete';
 import { DisplayClinicComponent } from './display-clinic/display-clinic.component';
 import { ClinicInformationComponent } from './clinic-information/clinic-information.component';
 import { MembersClinicComponent } from './members-clinic/members-clinic.component';
+import { TableModule } from 'primeng/table';
+import { ClinicDashboardComponent } from './clinic-dashboard/clinic-dashboard.component';
 
 
 @NgModule({
-  declarations: [ MyClinicComponent, DisplayClinicComponent, ClinicInformationComponent, MembersClinicComponent ],
+  declarations: [ MyClinicComponent, DisplayClinicComponent, ClinicInformationComponent, MembersClinicComponent, ClinicDashboardComponent ],
   imports: [
     CommonModule,
     MyClinicRoutingModule,
     SharedModule,
     AutocompleteLibModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    TableModule
   ]
 })
 export class MyClinicModule { }

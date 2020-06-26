@@ -3,15 +3,19 @@ import { Routes, RouterModule } from '@angular/router';
 import { MyClinicComponent } from './my-clinic.component';
 import { DisplayClinicComponent } from './display-clinic/display-clinic.component';
 import { ClinicInformationComponent } from './clinic-information/clinic-information.component';
+import { MembersClinicComponent } from './members-clinic/members-clinic.component';
+import { ClinicDashboardComponent } from './clinic-dashboard/clinic-dashboard.component';
 
 
 const routes: Routes = [
 
   
   { path: '', component: MyClinicComponent , children: [
-    {path : '' , redirectTo:'Clinic_Information' },
+    {path : '' , redirectTo:'dashboard' },
     { path: 'display_Clinic', component: DisplayClinicComponent},
-    { path: 'Clinic_Information' , component: ClinicInformationComponent  }
+    { path: 'AddClinic' , component: ClinicInformationComponent },
+    { path: 'Members' , component: MembersClinicComponent  },
+    { path : 'dashboard' , component: ClinicDashboardComponent}
   ]}
  
 ];

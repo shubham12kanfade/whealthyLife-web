@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
 import { TimeSlotComponent } from './time-slot/time-slot.component';
 import { MatDialog } from '@angular/material/dialog';
 import { SpecialityService } from 'src/app/services/speciality.service';
+import { MessageService } from 'primeng/api';
 
 @Component({
   selector: 'app-doctors',
@@ -49,7 +50,8 @@ export class DoctorsComponent implements OnInit {
     public userService: UserService,
     public router: Router,
     public dialog: MatDialog,
-    public speciality :SpecialityService
+    public speciality :SpecialityService,
+    public messageService: MessageService
   ) {
     this.getScroll();
     this.getDoctorList();
@@ -74,18 +76,29 @@ export class DoctorsComponent implements OnInit {
       this.doctorList = resData.data;
       this.tempArray = resData.data;
       this.doctorList.forEach(ele => this.autoDoctList.push(ele.userId));
+      this.messageService.add({key: 'myKey1', severity:'success', summary: 'Summary Text', detail: 'Order submitted',life:50000});
+
+      // setTimeout(() => {
+      //   this.messageService.add({key: 'myKey1', severity:'success', summary: 'Summary Text', detail: 'Detail Text'});
+      // });
+
     }).catch(error => {
       console.log("DoctorsComponent -> getDoctorList -> error", error);
     })
   }
 
+  clear() {
+    this.messageService.clear('myKey1');
+}
+
 
   search(){
     this.doctorList = this.tempArray;
-    this.doctorList = this.tempArray.filter(ele => ele.userId.firstName.includes(this.searchText));
+    this.doctorList = this.tempArray.filter(ele => ele.userId.firstName.includes(this.searchText.toLowerCase()));
     console.log("DoctorsComponent -> search -> this.searchText", this.searchText)
     if (!this.searchText) {
       this.doctorList = this.tempArray;
+      
     }
   }
 
@@ -200,4 +213,14 @@ export class DoctorsComponent implements OnInit {
     });
 
   }
+
+
+
+  showToast(type, messageType, message) {
+    setTimeout(() => {
+      this.messageService.add({ severity: type, summary: messageType, detail: message });
+    });
+  }
+
+
 }

@@ -440,3 +440,36 @@ input[type="number"] {
 .ui-calendar {
 	width: 100%;
 }
+
+
+// ng-autocomplete.ng-autocomplete.form-control {
+//     height: 37px !important;
+// }
+
+// input.ng-pristine.ng-valid.ng-touched {
+//     height: 2rem !important;
+// }
+
+// input.ng-untouched.ng-pristine.ng-valid {
+//     height: 40px !important;
+//     width: 100% !important;
+// }
+
+input.ng-untouched.ng-pristine.ng-valid {
+    border: 1px solid lightgray;
+    height: 41px !important;
+}
+.autocomplete-container .input-container input {
+    height: 41px !important;
+}
+input.ng-pristine.ng-valid.ng-touched {
+    border: 1px solid lightgray;
+    height: 41px !important;
+}
+
+input.ng-valid.ng-touched.ng-dirty {
+	border: 1px solid lightgray;
+    height: 41px !important;
+}
+
+

@@ -121,11 +121,18 @@ h2 {
 //     padding: 0px;
 // }
 
-.adj1 {
-    margin: 30px 40px;
+// .adj1 {
+//     margin: 4px 0px;
+// }
+
+.adj12{
+    margin: 4px 0px 25px;
 }
 button.mat-focus-indicator.mat-raised-button.mat-button-base.mat-accent {
     background-color: #f6c23e;
+}
+.sd{
+    font-size: 12px !important;
 }
 hr {
     margin: 25px 0px;
@@ -193,7 +200,23 @@ mat-icon.mat-icon.notranslate.material-icons.mat-icon-no-color {
     color: red;
     cursor: pointer;
 }
+// .shadow{
+//     box-shadow: 3px 3px 3px grey !important;
+// }
 
-table {
-    width: 100%;
-  }
+.textd{
+    text-decoration: none;
+}
+
+.py-2{
+    // border:1px solid !important; 
+    text-align: center;
+    // box-shadow:5px 5px 5px gray;
+}
+
+.padd{
+    padding:0px;
+}
+a{
+    color: black !important;
+}

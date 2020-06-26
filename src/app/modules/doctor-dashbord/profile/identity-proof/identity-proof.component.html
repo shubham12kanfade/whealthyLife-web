@@ -11,15 +11,47 @@
                                 {{profileData?.lastName}}</p>
                         </div>
                         <div class="row">
-                            <div class="border bgh m-auto">
-                                <input type="file" class="d-none" #file (change)="browseFile($event)">
+                            <div class="col-12">
+                                <div class="row" style="border: 1px solid lightgray;">
+                                    <div class="col-6" style="padding: 0px;">
+                                        <img src="{{identityFile1}}" class="img-fluid"
+                                            
+                                            style="padding: 0px;width: 100%;height: 150px;background-color: #eadfdf;">
+                                        <input type="file" class="d-none" #file1 (change)="browseFile1($event)">
+                                        <span (click)="file1.click()" class="btn border bg-white  z-index" style="position: absolute;top: 0;left: 0;font-size: 1rem !important;">
+                                            <i class="fa fa-upload" aria-hidden="true" style="margin: 0px;"></i>
+    
+                                        </span>
+                                    </div>
+                                    <div class="col-6" style="padding: 0px;">
+                                        <img src="{{identityFile2}}" class="img-fluid"
+                                           
+                                            style="padding: 0px;width:100%; height: 150px;background-color: #eadfdf;">
+                                            
+                                    
+                                    <input type="file" class="d-none" #file2 (change)="browseFile2($event)">
+                                    <span (click)="file2.click()" class="btn border bg-white  z-index" style="position: absolute;top: 0;left: 0;font-size: 1rem !important;">
+                                        <i class="fa fa-upload" aria-hidden="true" style="margin: 0px;"></i>
+
+                                    </span>
+                                </div>
+                                </div>
+                            </div>
+                            <!-- <div style="display: flex;">
+                            <img src="{{identityFile}}" onerror="this.src=''" style=" height: 150px; position: absolute;">
+                            <img src="{{identityFile}}" onerror="this.src=''" style=" height: 150px; position: relative;">
+                        </div> -->
+                            <div class="border m-auto">
+
+                                <!-- <input type="file" class="d-none" #file (change)="browseFile($event)">
                                 <button type="button" (click)="file.click()"
                                     class="btn border bg-white px-5 h3 z-index">
                                     Upload
-                                </button>
+                                </button> -->
                                 <div *ngIf="identityFile">One file is Uploaded</div>
-                                <div *ngIf="!identityFile" class="error-block display-block">File Uplopad is required</div>
-                                
+                                <div *ngIf="!identityFile" class="error-block display-block">File Uplopad is required
+                                </div>
+
                             </div>
                             <p class="pt-2" style="font-size: 12px;">
                                 Please upload your identity proof to ensure that the ownership

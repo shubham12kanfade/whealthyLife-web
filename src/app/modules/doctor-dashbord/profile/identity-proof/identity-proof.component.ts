@@ -15,6 +15,8 @@ export class IdentityProofComponent implements OnInit {
   identityFile: any;
   profileData: any;
   submitted: boolean =false;
+  identityFile2: any;
+  identityFile1: any;
 
   constructor(public mainService: MainService,
     public messageService: MessageService,
@@ -25,7 +27,8 @@ export class IdentityProofComponent implements OnInit {
   getProfile() {
     this.mainService.getProfile().then(resData => {
       this.profileData = resData.data;
-      this.identityFile = this.profileData.identityFile;
+      this.identityFile = this.profileData.identityFile1;
+      this.identityFile2 = this.profileData.identityFile2;
     }).catch(error => {
       console.log("EditProfileComponent -> getProfile -> error", error)
     })
@@ -33,11 +36,12 @@ export class IdentityProofComponent implements OnInit {
 
   onSave(stepper) {
 
-    // if(this.identityFile= !''){
-    //   this.submitted= true;
-    // }
+    if(this.identityFile.length == ''){
+      return;
+    }
 
-    this.mainService.updateUserprofile({ identityFile: this.identityFile }).then(resData => {
+    
+    this.mainService.updateUserprofile({ identityFile: this.identityFile1 , identityFile2: this.identityFile2 }).then(resData => {
       this.showToast('success', 'Profile', 'Profile updated successfully');
       stepper.next();
     }).catch(error => {
@@ -45,10 +49,19 @@ export class IdentityProofComponent implements OnInit {
     })
   }
 
-  browseFile(event) {
+  browseFile1(event) {
     const file = event.target.files;
     this.uploadService.upload(file).then(res => {
-      this.identityFile = res.files[0];
+      this.identityFile1 = res.files[0];
+     
+    }).catch(error => {
+      console.error('error', error);
+    });
+  }
+  browseFile2(event) {
+    const file = event.target.files;
+    this.uploadService.upload(file).then(res => {
+      this.identityFile2 = res.files[0];
      
     }).catch(error => {
       console.error('error', error);

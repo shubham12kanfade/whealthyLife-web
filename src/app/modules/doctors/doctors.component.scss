@@ -1,11 +1,13 @@
 .se1{
   margin-top: 80px;
+  background-color: #f3f3f3;
 }
 .cont1{
   padding: 0px !important;
 }
 .mt-30{
-  margin-top: 30px;
+  padding-top: 30px;
+ background-color: white;
 }
 .cad1{
  width:100%;
@@ -34,18 +36,130 @@
   height:80px;
   border-radius: 50%;
 }
+.cdfot{
+  display:flex; 
+  justify-content: space-around; 
+  font-size: 12px;
+  padding: 0px;
+  background-color: white; 
+  border-top: none;
+}
+.fsize{
+  font-size: 12px;
+}
+.fweight{
+ font-weight: 500; 
+ font-size:16px;
+ text-align: center;
+}
+
+.marg1{
+  margin: 10px 0px 0px 0px !important;
+}
+
+.imgt{
+ width: 60px;
+ height: 60px; 
+ border-radius: 50%;
+}
+// .ui-toast{
+//   background-color: white !important;
+//   width:300px;
+//   height: 300px;
+// }
+
+
+
+// .ui-toast .ui-toast-message.ui-toast-message-success {
+//   background-color: white !important;
+//   border: 0 none !important;
+//   color: #000000 !important;
+//   width: 400px !important;
+// }
+
+:host ::ng-deep .custom-toast .ui-toast-message {
+  
+  background: white !important;
+  width:350px;
+  right:50px;
+  // background: -webkit-linear-gradient(to right, #3F5EFB, #FC466B);
+  // background: linear-gradient(to right, #3F5EFB, #FC466B);
+  }
+
+  :host ::ng-deep .ui-button-icon{
+    background-color: gray;
+  }
+
+
+
+.marg{
+  margin: 0px;
+  font-weight: 500;
+  span{
+    font-weight: 600;
+  }
+}
+.hr1{
+  height: 2px solid black;
+}
+.acc{
+  display: flex;
+  justify-content: space-around;
+  margin: -10px 0px 0px 0px;
+}
+.acc1{
+  border-right: 1px solid lightgray;
+  width:100%;
+  text-align: center;
+  font-weight: 600;
+  padding:10px;
+  cursor: pointer;
+}
+.rej{
+  width: 100%;
+  text-align:center;
+  font-weight: 600;
+  padding:10px;
+  cursor: pointer;
+              
+}
+
+@media screen and (max-width:500px){
+  .hidd{
+    display: none;
+  }
+}
+
+// .ui-toast-top-right{
+//   background-color: white !important;
+//   border: 0 none !important;
+//   color: #000000 !important;
+//   width: 400px !important;
+// }
+
+// .ui-toast-message-success{
+//   background-color: white !important;
+//   border: 0 none !important;
+//   color: #000000 !important;
+//   width: 400px !important;
+// }
 
 
 
 
+// .custom-toast .ui-toast {
+//   position: fixed;
+//   top: 20%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+//   width: 50%;
+// }
 
-
-
-
-
-
-
-
+// // adjusts font, color and other elements of the toast window if needed
+// .custom-toast .ui-toast-message-content {
+//   font-family: 'Courier New', Courier, monospace;
+//   background: #FFD07B;
+// }
 
 
 
