@@ -13,33 +13,33 @@
 }
 
 mat-expansion-panel-header {
-    background: #10185f;
+    background: #4d5bde;
     color: white;
 }
 mat-expansion-panel-header:hover {
-    background: #10185f;
+    background: #4d5bde;
     color: white;
 }
 
 
 mat-expansion-panel-header#mat-expansion-panel-header-0 {
-    background: #10185f;
+    background: #4d5bde;
     color: white;
 }
 mat-expansion-panel-header#mat-expansion-panel-header-1 {
-    background: #10185f;
+    background: #4d5bde;
     color: white;
 }
 mat-expansion-panel-header#mat-expansion-panel-header-2 {
-    background: #10185f;
+    background: #4d5bde;
     color: white;
 }
 mat-expansion-panel-header#mat-expansion-panel-header-3 {
-    background: #10185f;
+    background: #4d5bde;
     color: white;
 }
 mat-expansion-panel-header#mat-expansion-panel-header-4 {
-    background: #10185f;
+    background: #4d5bde;
     color: white;
 }
 div#cdk-accordion-child-0 {
@@ -75,4 +75,26 @@ color: white;
     position: relative;
     text-align: left;
     width: 306px;
+}
+
+.sdsdd {
+    border: 1px solid;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    margin: auto;
+  
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sdsssd{
+    border: 1px solid lightgray;
+width: 60px;
+height: 26px;
+display: flex;
+justify-content: center;
+align-items: center;
 }
