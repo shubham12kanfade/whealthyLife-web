@@ -1,0 +1,181 @@
+<section style="margin-top: 80px;">
+    <div class="container-fluid">
+        <div class="col-12" style="padding: 30px 0px;">
+            <div class="row">
+                <div class="col-8">
+                    <mat-accordion>
+                        <mat-expansion-panel hideToggle>
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    <span class="Adj"> 1 </span> <span style="color: white;"> LOGIN & SIGNUP </span>
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <div class="col-12" style="padding-top: 30px;">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="row">
+                                            <div class="col-12" style="display: flex;
+                                        justify-content: center;">
+                                                <mat-form-field class="example-full-width">
+                                                    <mat-label>Enter Email / Mobile Number</mat-label>
+                                                    <textarea matInput></textarea>
+                                                </mat-form-field>
+                                            </div>
+                                            <div class="col-12">
+                                                <p>By continuing, you agree to Flipkart's <a href="#">Terms of Use</a>
+                                                    and <a href="#"> Privacy Policy</a></p>
+                                            </div>
+                                            <div class="col-12">
+                                                <a [routerLink]="['/order/Payment']" style="text-decoration: none;">
+                                                    <button mat-stroked-button color="accent" class="btu">
+                                                        <span> CONTINUE</span>
+                                                    </button>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <p>Advantages of oursecure login</p>
+                                        <h3 style="display: flex;"><span class="material-icons">
+                                                airport_shuttle
+                                            </span><span style="margin-left: 10px;">Easily Track Orders, Hassle free
+                                                Returns</span></h3>
+                                        <h3 style="display: flex;"><span class="material-icons">
+                                                notifications
+                                            </span><span style="margin-left: 10px;">Get Relevant Alerts and
+                                                Recommendation</span></h3>
+                                        <h3 style="display: flex;"><span class="material-icons">
+                                                star
+                                            </span><span style="margin-left: 10px;">Wishlist, Reviews, Ratings and
+                                                more.</span></h3>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </mat-expansion-panel>
+                        <mat-expansion-panel hideToggle>
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    <span class="Adj"> 2 </span> <span style="color: white;"> DELIVERY ADDRESS </span>
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <div class="col-12" style="padding-top: 30px;">
+                                <div class="row">
+
+                                    <table style="width: 100%;">
+                                        <tr>
+                                            <td>
+                                                <mat-form-field appearance="outline">
+                                                    <mat-label>Name</mat-label>
+                                                    <input matInput placeholder="Name">
+                                                </mat-form-field>
+                                            </td>
+                                            <td>
+                                                <mat-form-field appearance="outline">
+                                                    <mat-label>Mobile Number</mat-label>
+                                                    <input matInput placeholder="Mobile Number">
+                                                </mat-form-field>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <mat-form-field appearance="outline">
+                                                    <mat-label>Pincode</mat-label>
+                                                    <input matInput placeholder="Pincode">
+                                                </mat-form-field>
+                                            </td>
+                                            <td>
+                                                <mat-form-field appearance="outline">
+                                                    <mat-label>Locality</mat-label>
+                                                    <input matInput placeholder="Locality">
+                                                </mat-form-field>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">
+                                                <mat-form-field appearance="outline" >
+                                                    <mat-label>Address</mat-label>
+                                                    <input matInput placeholder="Address" class="asa" style="height: 50px !important;">
+                                                </mat-form-field>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <mat-form-field appearance="fill">
+                                                    <mat-label>City</mat-label>
+                                                    <mat-select>
+                                                      <mat-option value="option">Option</mat-option>
+                                                      <mat-option value="option">Hydrabad</mat-option>
+                                                      <mat-option value="option">Mumbai</mat-option>
+                                                      <mat-option value="option">Pune</mat-option>
+                                                      <mat-option value="option">Nagpur</mat-option>
+                                                    </mat-select>
+                                                  </mat-form-field>
+                                            </td>
+                                            <td>
+                                                <mat-form-field appearance="fill">
+                                                    <mat-label>State</mat-label>
+                                                    <mat-select>
+                                                      <mat-option value="option">Option</mat-option>
+                                                      <mat-option value="option">Hydrabad</mat-option>
+                                                      <mat-option value="option">Mumbai</mat-option>
+                                                      <mat-option value="option">Pune</mat-option>
+                                                      <mat-option value="option">Nagpur</mat-option>
+                                                    </mat-select>
+                                                  </mat-form-field>
+                                            </td>
+                                        </tr>
+                                        <div>
+                                            <p>Address Type</p>
+                                         </div>
+                                        <tr>
+                                            <td colspan="2">
+                                               <mat-radio-group aria-label="Select an option">
+                                                <mat-radio-button value="1">Home (Al day delivery)</mat-radio-button>
+                                                <mat-radio-button value="2">Work (Delivery between 10AM-5PM)</mat-radio-button>
+                                            </mat-radio-group>               
+                                            </td>
+                                        </tr>
+                                      
+                                    </table>   
+                                    
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <a [routerLink]="['/order/Payment']" style="text-decoration: none;"> 
+                                            <button mat-stroked-button color="accent"  class="btu">
+                                                <span> PLACE ORDER</span>
+                                            </button>
+                                        </a>
+                                    </div>
+                                    <div class="col-6">
+                                        <h3> Cancel </h3> 
+                                    </div>
+                                   
+                                </div> 
+                            </div>
+                        </mat-expansion-panel>
+                        <mat-expansion-panel hideToggle>
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    <span class="Adj"> 3 </span> <span style="color: white;"> ORDER SUMMARY </span>
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <p>This is the primary content of the panel.</p>
+                        </mat-expansion-panel>
+                        <mat-expansion-panel hideToggle>
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    <span class="Adj"> 4 </span> <span style="color: white;"> PAYMENT OPTIONS </span>
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <p>This is the primary content of the panel.</p>
+                        </mat-expansion-panel>
+                    </mat-accordion>
+                </div>
+                <div class="col-4">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

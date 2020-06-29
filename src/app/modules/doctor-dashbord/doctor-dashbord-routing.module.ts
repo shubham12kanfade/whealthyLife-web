@@ -3,9 +3,11 @@ import { ChangePasswordComponent } from './change-password/change-password.compo
 import { DoctorDashbordComponent } from './doctor-dashbord.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { ChartsComponent } from './charts/charts.component';
 const routes: Routes = [
   {
     path: '', component: DoctorDashbordComponent, children: [
+      { path: 'Charts' , component: ChartsComponent},
       { path: '', loadChildren: () => import('./dashbord-home/dashbord-home.module').then(dhm => dhm.DashbordHomeModule) },
       { path: 'Patients', loadChildren: () => import('./patients/patients.module').then(dhm => dhm.PatientsModule) },
       { path: 'Calendar', loadChildren: () => import('./calendar/calendar.module').then(dhm => dhm.CalendarModule) },

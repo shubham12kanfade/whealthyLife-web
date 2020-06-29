@@ -457,19 +457,23 @@ input[type="number"] {
 
 input.ng-untouched.ng-pristine.ng-valid {
     border: 1px solid lightgray;
-    height: 41px !important;
+    height: 50px !important;
 }
 .autocomplete-container .input-container input {
-    height: 41px !important;
+    height: 50px !important;
 }
 input.ng-pristine.ng-valid.ng-touched {
     border: 1px solid lightgray;
-    height: 41px !important;
+    height: 50px !important;
 }
 
 input.ng-valid.ng-touched.ng-dirty {
 	border: 1px solid lightgray;
     height: 41px !important;
+}
+
+.mat-form-field-appearance-legacy .mat-form-field-infix {
+    padding: 0em 0 !important;
 }
 
 

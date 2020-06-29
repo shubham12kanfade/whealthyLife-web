@@ -1,0 +1,78 @@
+.example-headers-align .mat-expansion-panel-header-title,
+.example-headers-align .mat-expansion-panel-header-description {
+  flex-basis: 0;
+}
+
+.example-headers-align .mat-expansion-panel-header-description {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.example-headers-align .mat-form-field + .mat-form-field {
+  margin-left: 8px;
+}
+
+mat-expansion-panel-header {
+    background: #10185f;
+    color: white;
+}
+mat-expansion-panel-header:hover {
+    background: #10185f;
+    color: white;
+}
+
+
+mat-expansion-panel-header#mat-expansion-panel-header-0 {
+    background: #10185f;
+    color: white;
+}
+mat-expansion-panel-header#mat-expansion-panel-header-1 {
+    background: #10185f;
+    color: white;
+}
+mat-expansion-panel-header#mat-expansion-panel-header-2 {
+    background: #10185f;
+    color: white;
+}
+mat-expansion-panel-header#mat-expansion-panel-header-3 {
+    background: #10185f;
+    color: white;
+}
+mat-expansion-panel-header#mat-expansion-panel-header-4 {
+    background: #10185f;
+    color: white;
+}
+div#cdk-accordion-child-0 {
+    background: white !important;
+    color: black;
+}
+.mat-expansion-panel-body {
+    padding: 0 24px 16px;
+    background: white;
+    color: black;
+}
+
+.Adj{
+    border: 1px solid;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    color: white;
+    margin: 0px 20px 0px 0px;
+}
+
+button.mat-focus-indicator.mat-stroked-button.mat-button-base.mat-accent {
+    min-width: 100% !important;
+min-height: 50px;
+background-color:#fb641b;
+color: white;
+}
+
+.mat-form-field {
+    display: inline-block;
+    position: relative;
+    text-align: left;
+    width: 306px;
+}

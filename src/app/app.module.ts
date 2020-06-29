@@ -14,7 +14,8 @@ import { ForgotPasswordComponent } from './component/forgot-password/forgot-pass
 import { MessageService } from 'primeng/api';
 import { MyAppointmentsComponent } from './component/my-appointments/my-appointments.component';
 import { DesignComponent } from './component/design/design.component';
-import { NotificationPopupComponent } from './component/notification-popup/notification-popup.component'
+import { NotificationPopupComponent } from './component/notification-popup/notification-popup.component';
+
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { NotificationPopupComponent } from './component/notification-popup/notif
     ForgotPasswordComponent,
     MyAppointmentsComponent,
     DesignComponent,
-    NotificationPopupComponent
+    NotificationPopupComponent,
+   
   ],
   imports: [
     BrowserModule,

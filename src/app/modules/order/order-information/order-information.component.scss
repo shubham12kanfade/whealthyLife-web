@@ -1,0 +1,62 @@
+.fil{
+    font-size: 20px;
+        font-weight: 400;
+        margin: 0px;
+}
+
+.fil1{
+    font-size: 16px;
+    font-weight: 400;
+
+}
+
+.hovv:hover{
+    box-shadow: 0px 0px 20px lightgrey;
+    border-radius: 5px;
+    padding: 0px !important;
+    z-index: 999;
+}
+
+.hovv{
+    padding: 1px !important;
+}
+
+.list-group-item {
+    position: relative;
+    display: block;
+    padding: 1px 15px;;
+    background-color: #fff;
+    border: 0px solid rgba(0, 0, 0, 0.125);
+}
+span.material-icons {
+    font-size: 12px;
+}
+
+// .mat-slider-horizontal {
+//     height: 48px;
+//     min-width: 128px !important;
+// }
+
+mat-slider.mat-slider.mat-focus-indicator.mat-accent.mat-slider-has-ticks.mat-slider-horizontal.mat-slider-thumb-label-showing.mat-slider-min-value {
+    min-width: 100% !important;
+}
+mat-slider.mat-slider.mat-focus-indicator.mat-accent.mat-slider-has-ticks.mat-slider-horizontal.mat-slider-thumb-label-showing {
+    min-width: 100%;
+}
+.mat-form-field-infix.ng-tns-c151-0 {
+    padding: 0px !important;
+}
+
+input.ng-pristine.ng-valid.ng-touched {
+    border: 1px solid lightgray;
+    height: 30px !important;
+}
+
+
+input.ng-untouched.ng-pristine.ng-valid {
+    border: 1px solid lightgray;
+    height: 30px !important;
+}
+.mat-form-field-appearance-legacy .mat-form-field-infix {
+    padding: 0em 0 !important;
+}

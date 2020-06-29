@@ -3,7 +3,10 @@ video {
     top: 1250px;
     left: 390px;
 }
-
+input.ng-untouched.ng-pristine.ng-valid {
+    border: 1px solid lightgray;
+    height: 50px !important;
+}
 .c-article-list__next_arrow {
     cursor: pointer;
     transform: rotate(-45deg) !important;

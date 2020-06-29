@@ -5,11 +5,12 @@ import { CommonModule } from '@angular/common';
 import { DoctorDashbordRoutingModule } from './doctor-dashbord-routing.module';
 import { SharedModule } from '../../shared/shared.module';
 import { ChangePasswordComponent } from './change-password/change-password.component';
+import { ChartsComponent } from './charts/charts.component';
 // import { MyClinicComponent } from './my-clinic/my-clinic.component';
 
 
 @NgModule({
-  declarations: [DoctorDashbordComponent, ChangePasswordComponent
+  declarations: [DoctorDashbordComponent, ChartsComponent
 
   ],
   imports: [
