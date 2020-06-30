@@ -60,3 +60,30 @@ input.ng-untouched.ng-pristine.ng-valid {
 .mat-form-field-appearance-legacy .mat-form-field-infix {
     padding: 0em 0 !important;
 }
+
+.sec1{
+    background-color: #f1f1f1;
+    margin-top: 80px;
+}
+.Padd{
+    padding: 10px;
+}
+.Padd1{
+    padding: 20px 0px 0px 0px;
+}
+
+@media screen and (max-width:500px){
+    .hovv{
+        margin: 10px 0px !important;
+        
+    }
+    .container-fluid{
+        padding: 2px;
+    }
+}
+
+.head1{
+    background: white;
+    padding: 20px;
+    border-bottom: 1px solid lightgray;
+}

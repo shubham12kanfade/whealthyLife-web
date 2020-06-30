@@ -1,21 +1,20 @@
-<section style="margin-top: 80px; background-color: #f1f3f6;">
+<section class="sec">
     <div class="container-fluid">
-        <div class="col-12" style="padding: 30px 0px;">
+        <div class="col-12 padd1">
             <div class="row">
                 <div class="col-8">
                     <mat-accordion>
                         <mat-expansion-panel hideToggle>
                             <mat-expansion-panel-header>
                                 <mat-panel-title>
-                                    <span class="Adj"> 1 </span> <span style="color: white;"> LOGIN & SIGNUP </span>
+                                    <span class="Adj"> 1 </span> <span class="bag1"> LOGIN & SIGNUP </span>
                                 </mat-panel-title>
                             </mat-expansion-panel-header>
-                            <div class="col-12" style="padding-top: 30px;">
+                            <div class="col-12 padd2">
                                 <div class="row">
                                     <div class="col-6">
                                         <div class="row">
-                                            <div class="col-12" style="display: flex;
-                                        justify-content: center;">
+                                            <div class="col-12 flec1">
                                                 <mat-form-field class="example-full-width">
                                                     <mat-label>Enter Email / Mobile Number</mat-label>
                                                     <textarea matInput></textarea>
@@ -36,33 +35,31 @@
                                     </div>
                                     <div class="col-6">
                                         <p>Advantages of oursecure login</p>
-                                        <h3 style="display: flex;"><span class="material-icons">
+                                        <h3 class="flec2"><span class="material-icons">
                                                 airport_shuttle
-                                            </span><span style="margin-left: 10px;">Easily Track Orders, Hassle free
+                                            </span><span class="marg1">Easily Track Orders, Hassle free
                                                 Returns</span></h3>
-                                        <h3 style="display: flex;"><span class="material-icons">
+                                        <h3 class="flec2"><span class="material-icons">
                                                 notifications
-                                            </span><span style="margin-left: 10px;">Get Relevant Alerts and
+                                            </span><span class="marg1">Get Relevant Alerts and
                                                 Recommendation</span></h3>
-                                        <h3 style="display: flex;"><span class="material-icons">
+                                        <h3 class="flec2"><span class="material-icons">
                                                 star
-                                            </span><span style="margin-left: 10px;">Wishlist, Reviews, Ratings and
+                                            </span><span class="marg1">Wishlist, Reviews, Ratings and
                                                 more.</span></h3>
                                     </div>
                                 </div>
-
                             </div>
                         </mat-expansion-panel>
                         <mat-expansion-panel hideToggle>
                             <mat-expansion-panel-header>
                                 <mat-panel-title>
-                                    <span class="Adj"> 2 </span> <span style="color: white;"> DELIVERY ADDRESS </span>
+                                    <span class="Adj"> 2 </span> <span class="bag1"> DELIVERY ADDRESS </span>
                                 </mat-panel-title>
                             </mat-expansion-panel-header>
-                            <div class="col-12" style="padding-top: 30px;">
+                            <div class="col-12" class="padd2">
                                 <div class="row">
-
-                                    <table style="width: 100%;">
+                                    <table class="wid">
                                         <tr>
                                             <td>
                                                 <mat-form-field appearance="outline">
@@ -93,9 +90,9 @@
                                         </tr>
                                         <tr>
                                             <td colspan="2">
-                                                <mat-form-field appearance="outline" >
+                                                <mat-form-field appearance="outline">
                                                     <mat-label>Address</mat-label>
-                                                    <input matInput placeholder="Address" class="asa" style="height: 50px !important;">
+                                                    <input matInput placeholder="Address" class="hei">
                                                 </mat-form-field>
                                             </td>
                                         </tr>
@@ -104,193 +101,196 @@
                                                 <mat-form-field appearance="fill">
                                                     <mat-label>City</mat-label>
                                                     <mat-select>
-                                                      <mat-option value="option">Option</mat-option>
-                                                      <mat-option value="option">Hydrabad</mat-option>
-                                                      <mat-option value="option">Mumbai</mat-option>
-                                                      <mat-option value="option">Pune</mat-option>
-                                                      <mat-option value="option">Nagpur</mat-option>
+                                                        <mat-option value="option">Option</mat-option>
+                                                        <mat-option value="option">Hydrabad</mat-option>
+                                                        <mat-option value="option">Mumbai</mat-option>
+                                                        <mat-option value="option">Pune</mat-option>
+                                                        <mat-option value="option">Nagpur</mat-option>
                                                     </mat-select>
-                                                  </mat-form-field>
+                                                </mat-form-field>
                                             </td>
                                             <td>
                                                 <mat-form-field appearance="fill">
                                                     <mat-label>State</mat-label>
                                                     <mat-select>
-                                                      <mat-option value="option">Option</mat-option>
-                                                      <mat-option value="option">Maharashatra</mat-option>
-                                                      <mat-option value="option">Delhi</mat-option>
-                                                      <mat-option value="option">Gujrat</mat-option>
-                                                      <mat-option value="option">Andra Padesh</mat-option>
+                                                        <mat-option value="option">Option</mat-option>
+                                                        <mat-option value="option">Maharashatra</mat-option>
+                                                        <mat-option value="option">Delhi</mat-option>
+                                                        <mat-option value="option">Gujrat</mat-option>
+                                                        <mat-option value="option">Andra Padesh</mat-option>
                                                     </mat-select>
-                                                  </mat-form-field>
+                                                </mat-form-field>
                                             </td>
                                         </tr>
                                         <div>
                                             <p>Address Type</p>
-                                         </div>
+                                        </div>
                                         <tr>
                                             <td colspan="2">
-                                               <mat-radio-group aria-label="Select an option">
-                                                   <div style="display: flex;
+                                                <mat-radio-group aria-label="Select an option">
+                                                    <div style="display: flex;
                                                    justify-content: space-around;
                                                    margin: 15px;">
-                                                       <mat-radio-button value="1">Home (Al day delivery)</mat-radio-button>
-                                                  
-                                                    <mat-radio-button value="2">Work (Delivery between 10AM-5PM)</mat-radio-button>
-                                                   </div>
-                                            </mat-radio-group>               
+                                                        <mat-radio-button value="1">Home (Al day delivery)
+                                                        </mat-radio-button>
+
+                                                        <mat-radio-button value="2">Work (Delivery between 10AM-5PM)
+                                                        </mat-radio-button>
+                                                    </div>
+                                                </mat-radio-group>
                                             </td>
                                         </tr>
-                                      
-                                    </table>   
-                                    
+                                    </table>
                                 </div>
                                 <div class="row">
                                     <div class="col-6">
-                                        <a [routerLink]="['/order/Payment']" style="text-decoration: none;"> 
-                                            <button mat-stroked-button color="accent"  class="btu">
+                                        <a [routerLink]="['/order/Payment']" style="text-decoration: none;">
+                                            <button mat-stroked-button color="accent" class="btu">
                                                 <span> SAVE </span>
                                             </button>
                                         </a>
                                     </div>
-                                    <div class="col-6" style="display: flex;
-                                    justify-content: center;
-                                    align-items: center;">
-                                    <a href="#">
-                                        <h3 style="margin: 0px;font-weight: 500;"> CANCEL </h3> 
-                                    </a>
+                                    <div class="col-6 flec3">
+                                        <a href="#">
+                                            <h3 class="fonSi"> CANCEL </h3>
+                                        </a>
                                     </div>
-                                </div> 
+                                </div>
                             </div>
                         </mat-expansion-panel>
                         <mat-expansion-panel hideToggle>
                             <mat-expansion-panel-header>
                                 <mat-panel-title>
-                                    <span class="Adj"> 3 </span> <span style="color: white;"> ORDER SUMMARY </span>
+                                    <span class="Adj"> 3 </span> <span class="bag1"> ORDER SUMMARY </span>
                                 </mat-panel-title>
                             </mat-expansion-panel-header>
-                            
-                                <div class="col-12" style="border-bottom: 1px solid lightgray;margin: 15px 0px;">
-                                    <div class="row">
-                                        <div class="col-3">
+                            <div class="col-12 bag2">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <div class="row">
+                                            <div class="col-12" style="text-align: center;">
+                                                <img class="img-fluid im1 " src="../../../assets/img/med1.jpg"
+                                                    alt="Card image cap">
+                                            </div>
+                                            <div class="col-12 flec4">
+                                                <div>
+                                                    <div class="sdsdd"> - </div>
+                                                </div>
+                                                <div>
+                                                    <div class="sdsssd"> 2 </div>
+                                                </div>
+                                                <div>
+                                                    <div class="sdsdd"> + </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-5">
+                                        <div class="col-12">
                                             <div class="row">
-                                                <div class="col-12" style="text-align: center;">
-                                            <img class="img-fluid  " src="../../../assets/img/med1.jpg" alt="Card image cap" style="max-width: 100%;max-height: 200px;">
+                                                <div class="col-12" class="maxh">
+                                                    <h4>Shelcal 500MG Tablet 15'S</h4>
+                                                    <p>Available offers</p>
+                                                    <h1>₹76.50</h1>
                                                 </div>
-                                                <div class="col-12" style="    display: flex;
-                                                justify-content: space-around;">
-                                                    <div >
-                                                        <div class="sdsdd"> - </div>
-                                                    </div>
-                                                    <div>
-                                                        <div class="sdsssd"> 2 </div>
-                                                    </div>
-                                                    <div>
-                                                        <div class="sdsdd" > + </div>
+                                                <div class="col-12 flec5">
+                                                    <div class="">
+                                                        <h3 style="font-weight: 500;">REMOVE</h3>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-5">
-                                            <div class="col-12">
-                                                <div class="row">
-                                                    <div class="col-12" style="max-height: 200px;">
-                                                        <h4>SHELCAL 500MG Tablet 15'S</h4>
-                                                        <p>Available offers</p>
-                                                        <h1>₹76.50</h1>
-                                                    </div>
-                                                    <div class="col-12" style="display: flex;
-                                                    justify-content: space-between;
-                                                    margin-top: 30px;">
-                                                        
-                                                        <div classd="">
-                                                            <h3 style="font-weight: 500;">REMOVE</h3>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                              
-                                            </div>
-                                            
-                                        </div>
-                                        <div class="col-4">
-                                            <h4>Delivery by Mon Jul 6 | Free₹80</h4>
-                                            <p>7 Days Replacement Policy</p>
-                                            
-                                        </div>
-            
                                     </div>
-                                    
-                                </div>
-                                <div class="row" style="    display: flex;
-                                justify-content: space-between;
-                                align-items: center;">
-                                    <div class="">
-                                        <span> Order confirmation email will be sent to </span>
-                                        <span>
-                                            <mat-form-field class="example-full-width">
-                                                <mat-label> Enter Email Id</mat-label>
-                                                <textarea matInput ></textarea>
-                                              </mat-form-field>
-                                        </span>
-                                    </div>
-                                    <div class="">
-                                        <a [routerLink]="['/order/Payment']" style="text-decoration: none;"> 
-                                            <button mat-stroked-button color="accent"  class="btu">
-                                                <span> COUNTINUE </span>
-                                            </button>
-                                        </a>
+                                    <div class="col-4">
+                                        <h4>Delivery by Mon Jul 6 | Free₹80</h4>
+                                        <p>7 Days Replacement Policy</p>
                                     </div>
                                 </div>
-                        
+                            </div>
+                            <div class="row" class="flec3">
+                                <div class="">
+                                    <span> Order confirmation email will be sent to </span>
+                                    <span>
+                                        <mat-form-field class="example-full-width">
+                                            <mat-label> Enter Email Id</mat-label>
+                                            <textarea matInput></textarea>
+                                        </mat-form-field>
+                                    </span>
+                                </div>
+                                <div class="">
+                                    <a [routerLink]="['/order/Payment']" style="text-decoration: none;">
+                                        <button mat-stroked-button color="accent" class="btu">
+                                            <span> COUNTINUE </span>
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
                         </mat-expansion-panel>
                         <mat-expansion-panel hideToggle>
                             <mat-expansion-panel-header>
                                 <mat-panel-title>
-                                    <span class="Adj"> 4 </span> <span style="color: white;"> PAYMENT OPTIONS </span>
+                                    <span class="Adj"> 4 </span> <span class="bag1"> PAYMENT OPTIONS </span>
                                 </mat-panel-title>
                             </mat-expansion-panel-header>
-                            <p>This is the primary content of the panel.</p>
+                            <div class="col-12" style="margin: 15px 0px;">
+                                <div class="row">
+                                    <div>
+                                        <img class="img-fluid im2 " src="../../../assets/images/razorpay.jpg"
+                                            alt="Card image cap">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <p class="Adj1">You'll be redirected to PhonePe page, where you can pay using UPI,
+                                        credit/debit card or wallet</p>
+                                </div>
+                                <div class="row">
+                                    <a [routerLink]="['/order/Payment']" style="text-decoration: none;">
+                                        <button mat-stroked-button color="accent" class="btu" style="margin: 0px 24px;">
+                                            <span> COUNTINUE </span>
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
                         </mat-expansion-panel>
                     </mat-accordion>
                 </div>
                 <div class="col-4">
                     <div class="card">
                         <div class="card-header cdh">
-                            <div class="" >
-                                <h2 style="margin: 0px;">PRICE DETAILS</h2>
+                            <div class="">
+                                <h2 class="marg3">PRICE DETAILS</h2>
                             </div>
                         </div>
                         <div class="card-body">
-                           <div class="row">
-                               <div class="col-6" >
-                                <h3>Price (1 items)</h3>
-                               </div>
-                               <div class="col-6" style="text-align: end;">
-                                <h3>₹76.50</h3>
+                            <div class="row">
+                                <div class="col-6">
+                                    <h3>Price (1 items)</h3>
+                                </div>
+                                <div class="col-6" class="textAl">
+                                    <h3>₹76.50</h3>
+                                </div>
                             </div>
-                           </div>
-                           <div class="row">
-                            <div class="col-6">
-                               <h3> Delivery Fee </h3>
-    
+                            <div class="row">
+                                <div class="col-6">
+                                    <h3> Delivery Fee </h3>
+
+                                </div>
+                                <div class="col-6" class="textAl">
+                                    <h3>FREE</h3>
+                                </div>
                             </div>
-                            <div class="col-6" style="text-align: end;">
-                                <h3>FREE</h3>
-                         </div>
-                        </div>
-                        <hr style="margin: 0px 0 7px 0;">
-                        <div class="row">
-                            <div class="col-6">
-                                <h3>Total Amount</h3>
+                            <hr style="margin: 0px 0 7px 0;">
+                            <div class="row">
+                                <div class="col-6">
+                                    <h3>Total Amount</h3>
+                                </div>
+                                <div class="col-6" class="textAl">
+                                    <h3> ₹76.50 </h3>
+                                </div>
                             </div>
-                            <div class="col-6"  style="text-align: end;">
-                               <h3> ₹76.50 </h3>
-                         </div>
-                        </div>
-                        <hr style="margin: 0px 0 7px 0;">
-                        <div>
-                            You will save ₹0 on this order
-                        </div>
+                            <hr class="hrS">
+                            <div>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -19,4 +19,30 @@ button.mat-focus-indicator.mat-button.mat-button-base.mat-warn {
     margin: auto;
     font-size: 17px;
 }
+.bord{
+    border: 1px solid lightgray !important;
+}
  
+// .stuck {
+//     position: fixed;
+//     top: 112px;
+//     left: 10px;
+//     bottom: 10px;
+//     width: 180px;
+//     overflow-y: scroll;
+//     max-height: 100%;
+//     width: 50%;
+// }
+
+// ::-webkit-scrollbar {
+//     width: 0px;
+//   }
+
+#f {
+    background: #fff;
+    padding: 20px;
+    width: 50%;
+    position: fixed;
+    top: 95px;
+    left: 0;
+}

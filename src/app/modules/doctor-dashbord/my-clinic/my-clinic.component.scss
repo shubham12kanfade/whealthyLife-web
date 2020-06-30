@@ -48,20 +48,6 @@ ul li:hover {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // .example-card {
 //     max-width: 400px;
 //   }
@@ -192,4 +178,15 @@ mat-icon.mat-icon.notranslate.material-icons.mat-icon-no-color {
     float: right;
     color: red;
     cursor: pointer;
+}
+
+.hei{
+    height: 86vh;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 767px){
+    .hei{
+        height: auto;
+    }
 }

@@ -80,6 +80,38 @@
     <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
 
+
+<script>
+         var windw = this;
+
+$.fn.followTo = function ( pos ) {
+    var $this = this,
+        $window = $(windw);
+    
+    $window.scroll(function(e){
+        if ($window.scrollTop() > pos) {
+            $this.css({
+                position: 'absolute',
+                top: pos
+            });
+        } else {
+            $this.css({
+                position: 'fixed',
+                top: 0
+            });
+        }
+    });
+};
+
+$('#f').followTo(100);
+
+</script>
+<script>
+    $(document).ready(function() {
+    $('#mydiv').scrollToFixed({ marginTop: 250 });
+});
+</script>
+
 </body>
 
 </html>

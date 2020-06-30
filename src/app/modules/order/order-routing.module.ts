@@ -10,7 +10,7 @@ import { AddToCartComponent } from './add-to-cart/add-to-cart.component';
 const routes: Routes = [
  {path:'',component : OrderComponent},
  { path : 'Order_information', component: OrderInformationComponent },
- { path : 'Product_Details', component: DetailsProductComponent},
+ { path : 'Product_Details/:id', component: DetailsProductComponent},
  { path : 'AddToCart', component: AddToCartComponent},
  { path:  'Payment' , component: OrderPaymentComponent}
 ];

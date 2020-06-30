@@ -1,187 +1,227 @@
-<section style="background-color: #f1f1f1;margin-top: 80px;">
-    <div class="container" style="">
-        <div class="row" style="padding: 10px;">
-            <div class="col-3"  >
-                <div class="card" >
+<section class="sec1">
+    <div class="container-fluid">
+        <div class="row Padd">
+            <div class="col-lg-3 col-md-3 col-sm-3 col-12">
+                <div class="card">
                     <div class="card-header">
-                        <p class="fil" >Filters</p>
+                        <p class="fil">Filters</p>
                     </div>
                     <div class="card-body">
-                      
-                    <div>
-                        <p class="fil1" >CATEGORIES</p>
-                        <ul class="list-group">
-                            <li class="list-group-item">AAAA</li>
-                            <li class="list-group-item">BBBB</li>
-                            <li class="list-group-item">CCCC</li>
-                            <li class="list-group-item">DDDD</li>
-                            
-                          </ul>
-                    </div> 
-                    <div>
-                        <p class="fil1" style="padding: 20px 0px 0px 0px;">PRICE</p>
-<!-- 
-                        <mat-form-field class="example-margin">
-                            <mat-label>Value</mat-label>
-                            <input matInput type="number" [(ngModel)]="value">
-                          </mat-form-field> -->
-                        
-                        <mat-slider
-                             thumbLabel
-                             [displayWith]="formatLabel"
-                             tickInterval="50"
-                             min="0"
-                             max="10000"
-                            
-                            ></mat-slider>
-                    </div> 
-                    <div>
-                        <p class="fil1">BRAND</p>
-                        <ul class="list-group">
-                            <li class="list-group-item"><mat-checkbox class="example-margin">AAAA</mat-checkbox></li>
-                            <li class="list-group-item"><mat-checkbox class="example-margin">BBBB</mat-checkbox></li>
-                            <li class="list-group-item"><mat-checkbox class="example-margin">CCCC</mat-checkbox></li>
-                            <li class="list-group-item"><mat-checkbox class="example-margin">DDDD</mat-checkbox></li>
-                            <li class="list-group-item"><mat-checkbox class="example-margin">EEEE</mat-checkbox></li>
-                            <li class="list-group-item"><mat-checkbox class="example-margin">FFFF</mat-checkbox></li>
-                            <li class="list-group-item"><mat-checkbox class="example-margin">GGGG</mat-checkbox></li>
-                          </ul>
-                    </div>
-                    <div>
-                        <p class="fil1">CUSTOMER RATINGS</p>
-                        <ul class="list-group">
-                            <li class="list-group-item"><mat-checkbox class="example-margin">4 <span class="material-icons">
-                                star_rate
-                                </span> & Above</mat-checkbox></li>
-                            <li class="list-group-item"><mat-checkbox class="example-margin">3 <span class="material-icons">
-                                star_rate
-                                </span> & Above</mat-checkbox></li>
-                            <li class="list-group-item"><mat-checkbox class="example-margin">2 <span class="material-icons">
-                                star_rate
-                                </span> & Above</mat-checkbox></li>
-                            <li class="list-group-item"><mat-checkbox class="example-margin">1 <span class="material-icons">
-                                star_rate
-                                </span> & Above</mat-checkbox></li>
-                           
-                          </ul>
-                    </div>   
-                    <div>
-                        <p class="fil1">OFFERS</p>
-                        <ul class="list-group">
-                            <li class="list-group-item"><mat-checkbox class="example-margin">Bank Offer</mat-checkbox></li>
-                            <li class="list-group-item"><mat-checkbox class="example-margin">No Cost EMI</mat-checkbox></li>
-                            <li class="list-group-item"><mat-checkbox class="example-margin">Special Price</mat-checkbox></li>
-                            <li class="list-group-item"><mat-checkbox class="example-margin">Buy  & Save More</mat-checkbox></li>
-                        </ul>
-                    </div>  
-                    <div>
-                        <p class="fil1">DISCOUNTS</p>
-                        <ul class="list-group">
-                            <li class="list-group-item"><mat-checkbox class="example-margin">50% or more</mat-checkbox></li>
-                            <li class="list-group-item"><mat-checkbox class="example-margin">40% or more</mat-checkbox></li>
-                            <li class="list-group-item"><mat-checkbox class="example-margin">30% or more</mat-checkbox></li>
-                            <li class="list-group-item"><mat-checkbox class="example-margin">20% or more</mat-checkbox></li>
-                            <li class="list-group-item"><mat-checkbox class="example-margin">10% or more</mat-checkbox></li>
-                            <li class="list-group-item"><mat-checkbox class="example-margin">10% or below</mat-checkbox></li>
-                            
-                          </ul>
-                    </div>  
-                    <div>
-                        <p class="fil1">AVALABILITY</p>
-                        <ul class="list-group">
-                            <li class="list-group-item"><mat-checkbox class="example-margin">Exclude Out of Stock</mat-checkbox></li>
-                          </ul>
-                    </div>  
+
+                        <div>
+                            <p class="fil1">CATEGORIES</p>
+                            <ul class="list-group">
+                                <li class="list-group-item">AAAA</li>
+                                <li class="list-group-item">BBBB</li>
+                                <li class="list-group-item">CCCC</li>
+                                <li class="list-group-item">DDDD</li>
+
+                            </ul>
+                        </div>
+                        <div>
+                            <p class="fil1 Padd1">PRICE</p>
+
+
+                            <mat-slider thumbLabel [displayWith]="formatLabel" tickInterval="50" min="0" max="10000">
+                            </mat-slider>
+                        </div>
+                        <div>
+                            <p class="fil1">BRAND</p>
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <mat-checkbox class="example-margin">AAAA</mat-checkbox>
+                                </li>
+                                <li class="list-group-item">
+                                    <mat-checkbox class="example-margin">BBBB</mat-checkbox>
+                                </li>
+                                <li class="list-group-item">
+                                    <mat-checkbox class="example-margin">CCCC</mat-checkbox>
+                                </li>
+                                <li class="list-group-item">
+                                    <mat-checkbox class="example-margin">DDDD</mat-checkbox>
+                                </li>
+                                <li class="list-group-item">
+                                    <mat-checkbox class="example-margin">EEEE</mat-checkbox>
+                                </li>
+                                <li class="list-group-item">
+                                    <mat-checkbox class="example-margin">FFFF</mat-checkbox>
+                                </li>
+                                <li class="list-group-item">
+                                    <mat-checkbox class="example-margin">GGGG</mat-checkbox>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <p class="fil1">CUSTOMER RATINGS</p>
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <mat-checkbox class="example-margin">4 <span class="material-icons">
+                                            star_rate
+                                        </span> & Above</mat-checkbox>
+                                </li>
+                                <li class="list-group-item">
+                                    <mat-checkbox class="example-margin">3 <span class="material-icons">
+                                            star_rate
+                                        </span> & Above</mat-checkbox>
+                                </li>
+                                <li class="list-group-item">
+                                    <mat-checkbox class="example-margin">2 <span class="material-icons">
+                                            star_rate
+                                        </span> & Above</mat-checkbox>
+                                </li>
+                                <li class="list-group-item">
+                                    <mat-checkbox class="example-margin">1 <span class="material-icons">
+                                            star_rate
+                                        </span> & Above</mat-checkbox>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <div>
+                            <p class="fil1">OFFERS</p>
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <mat-checkbox class="example-margin">Bank Offer</mat-checkbox>
+                                </li>
+                                <li class="list-group-item">
+                                    <mat-checkbox class="example-margin">No Cost EMI</mat-checkbox>
+                                </li>
+                                <li class="list-group-item">
+                                    <mat-checkbox class="example-margin">Special Price</mat-checkbox>
+                                </li>
+                                <li class="list-group-item">
+                                    <mat-checkbox class="example-margin">Buy & Save More</mat-checkbox>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <p class="fil1">DISCOUNTS</p>
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <mat-checkbox class="example-margin">50% or more</mat-checkbox>
+                                </li>
+                                <li class="list-group-item">
+                                    <mat-checkbox class="example-margin">40% or more</mat-checkbox>
+                                </li>
+                                <li class="list-group-item">
+                                    <mat-checkbox class="example-margin">30% or more</mat-checkbox>
+                                </li>
+                                <li class="list-group-item">
+                                    <mat-checkbox class="example-margin">20% or more</mat-checkbox>
+                                </li>
+                                <li class="list-group-item">
+                                    <mat-checkbox class="example-margin">10% or more</mat-checkbox>
+                                </li>
+                                <li class="list-group-item">
+                                    <mat-checkbox class="example-margin">10% or below</mat-checkbox>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <div>
+                            <p class="fil1">AVALABILITY</p>
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <mat-checkbox class="example-margin">Exclude Out of Stock</mat-checkbox>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-9">
-                <div class="card">
-                    <div class="card-header">
+            <div class="col-lg-9  col-md-9 col-sm-9 col-12 ">
+                <div class="">
+                    <div class="head1">
                         <p class="fil">Skin Care Product</p>
                     </div>
-                    <div class="card-body" style="padding: 1px;">
+                    <div class="" style="padding: 1px;  background: #f1f1f1;">
                         <div class="col-12">
-                            
-                         
-                        <div class="row">
-                            <div class="col-3 hovv">
-                                <div class="card" [routerLink]="['/order/Product_Details']"  >
-                                    <img class="img-fluid card-img-top " src="../../../assets/img/med1.jpg" alt="Card image cap">
-                                    <div class="card-body">
-                                        <h5 class="card-title">SHELCAL 500MG Tablet 15'S</h5>
-                                        <p class="card-text"><strong>₹76.50</strong></p>
+                            <div class="row">
+                                <div class="col-lg-3 col-md-4 col-sm-6 col-12 " *ngFor="let product of productList" style="padding:0px;">
+                                    <div class="hovv" >
+                                    <div class="card" [routerLink]="['/order/Product_Details/', product.id ]">
+                                        <img class="img-fluid card-img-top " src="{{product.avtar}}"
+                                            alt="Card image cap">
+                                        <div class="card-body">
+                                            <h5 class="card-title">{{product.name}}</h5>
+                                            <p class="card-text"><strong>₹{{product.price}}</strong></p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-3 hovv">
-                                <div class="card">
-                                    <img class="img-fluid card-img-top " src="../../../assets/img/med2.jpeg" alt="Card image cap">
-                                    <div class="card-body">
-                                        <h5 class="card-title">SHELCAL 500MG Tablet 15'S</h5>
-                                        <p class="card-text"><strong>₹76.50</strong></p>
+                                </div>
+                                <!-- <div class="col-3 hovv">
+                                    <div class="card">
+                                        <img class="img-fluid card-img-top " src="../../../assets/img/med2.jpeg"
+                                            alt="Card image cap">
+                                        <div class="card-body">
+                                            <h5 class="card-title">SHELCAL 500MG Tablet 15'S</h5>
+                                            <p class="card-text"><strong>₹76.50</strong></p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-3 hovv">
-                                <div class="card">
-                                    <img class="img-fluid card-img-top " src="../../../assets/img/med4.jpeg" alt="Card image cap">
-                                    <div class="card-body">
-                                        <h5 class="card-title">SHELCAL 500MG Tablet 15'S</h5>
-                                        <p class="card-text"><strong>₹76.50</strong></p>
+                                <div class="col-3 hovv">
+                                    <div class="card">
+                                        <img class="img-fluid card-img-top " src="../../../assets/img/med4.jpeg"
+                                            alt="Card image cap">
+                                        <div class="card-body">
+                                            <h5 class="card-title">SHELCAL 500MG Tablet 15'S</h5>
+                                            <p class="card-text"><strong>₹76.50</strong></p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-3 hovv">
-                                <div class="card">
-                                    <img class="img-fluid card-img-top " src="../../../assets/img/med4.jpeg" alt="Card image cap">
-                                    <div class="card-body">
-                                        <h5 class="card-title">SHELCAL 500MG Tablet 15'S</h5>
-                                        <p class="card-text"><strong>₹76.50</strong></p>
+                                <div class="col-3 hovv">
+                                    <div class="card">
+                                        <img class="img-fluid card-img-top " src="../../../assets/img/med4.jpeg"
+                                            alt="Card image cap">
+                                        <div class="card-body">
+                                            <h5 class="card-title">SHELCAL 500MG Tablet 15'S</h5>
+                                            <p class="card-text"><strong>₹76.50</strong></p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-3 hovv">
-                                <div class="card">
-                                    <img class="img-fluid card-img-top " src="../../../assets/img/med1.jpg" alt="Card image cap">
-                                    <div class="card-body">
-                                        <h5 class="card-title">SHELCAL 500MG Tablet 15'S</h5>
-                                        <p class="card-text"><strong>₹76.50</strong></p>
+                                <div class="col-3 hovv">
+                                    <div class="card">
+                                        <img class="img-fluid card-img-top " src="../../../assets/img/med1.jpg"
+                                            alt="Card image cap">
+                                        <div class="card-body">
+                                            <h5 class="card-title">SHELCAL 500MG Tablet 15'S</h5>
+                                            <p class="card-text"><strong>₹76.50</strong></p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-3 hovv">
-                                <div class="card">
-                                    <img class="img-fluid card-img-top " src="../../../assets/img/med2.jpeg" alt="Card image cap">
-                                    <div class="card-body">
-                                        <h5 class="card-title">SHELCAL 500MG Tablet 15'S</h5>
-                                        <p class="card-text"><strong>₹76.50</strong></p>
+                                <div class="col-3 hovv">
+                                    <div class="card">
+                                        <img class="img-fluid card-img-top " src="../../../assets/img/med2.jpeg"
+                                            alt="Card image cap">
+                                        <div class="card-body">
+                                            <h5 class="card-title">SHELCAL 500MG Tablet 15'S</h5>
+                                            <p class="card-text"><strong>₹76.50</strong></p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-3 hovv">
-                                <div class="card">
-                                    <img class="img-fluid card-img-top " src="../../../assets/img/med4.jpeg" alt="Card image cap">
-                                    <div class="card-body">
-                                        <h5 class="card-title">SHELCAL 500MG Tablet 15'S</h5>
-                                        <p class="card-text"><strong>₹76.50</strong></p>
+                                <div class="col-3 hovv">
+                                    <div class="card">
+                                        <img class="img-fluid card-img-top " src="../../../assets/img/med4.jpeg"
+                                            alt="Card image cap">
+                                        <div class="card-body">
+                                            <h5 class="card-title">SHELCAL 500MG Tablet 15'S</h5>
+                                            <p class="card-text"><strong>₹76.50</strong></p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-3 hovv">
-                                <div class="card">
-                                    <img class="img-fluid card-img-top " src="../../../assets/img/med4.jpeg" alt="Card image cap">
-                                    <div class="card-body">
-                                        <h5 class="card-title">SHELCAL 500MG Tablet 15'S</h5>
-                                        <p class="card-text"><strong>₹76.50</strong></p>
+                                <div class="col-3 hovv">
+                                    <div class="card">
+                                        <img class="img-fluid card-img-top " src="../../../assets/img/med4.jpeg"
+                                            alt="Card image cap">
+                                        <div class="card-body">
+                                            <h5 class="card-title">SHELCAL 500MG Tablet 15'S</h5>
+                                            <p class="card-text"><strong>₹76.50</strong></p>
+                                        </div>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>
-                        
-                    </div>
-
                 </div>
             </div>
         </div>
