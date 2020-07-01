@@ -42,17 +42,19 @@
                                     <div class="col-12">
                                         <div class="row">
                                             <div class="col-lg-3 col-md-3 col-sm-6 col-12">
+                                                <form>
                                                 <div class="col-12 flec1 as">
                                                     <div>
-                                                        <div class="sdsdd"> - </div>
+                                                        <div class="sdsdd" (click)="subtract()"> - </div>
                                                     </div>
                                                     <div>
-                                                        <div class="sdsssd"> 2 </div>
+                                                        <div class="sdsssd" >{{product.quantity}}</div>
                                                     </div>
                                                     <div>
-                                                        <div class="sdsdd"> + </div>
+                                                        <div class="sdsdd" (click)="addition()"> + </div>
                                                     </div>
                                                 </div>
+                                            </form>
                                             </div>
                                             <div class="col-lg-5 col-md-5 col-sm-6 col-12">
                                                 <div class="col-12 flec2">
