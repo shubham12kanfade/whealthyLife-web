@@ -178,3 +178,57 @@ align-items: center;
 .hrS{
     margin: 0px 0 7px 0;
 }
+.sty{
+    display: flex;
+    justify-content: space-around;
+    margin: 15px;
+}
+
+@media screen and (max-width:500px){
+    .hat{
+        display:flex;
+        flex-direction: column-reverse;
+    }
+    .hat1{
+        display:flex;
+        flex-direction: column;
+    }
+    .sty{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .dis{
+        display: none;
+    }
+    .flec7{
+        display: flex;
+       flex-direction: column;
+       
+    }
+    .asd{
+        display: flex;
+        align-items: center;
+        margin: 10px 0px;
+    }
+}
+
+.fontS{
+    font-weight: 500;
+    margin: 0px;
+}
+
+.flec5{
+    display: flex;
+    justify-content: space-around;
+    margin: 15px;
+}
+.flec6{
+    display: flex;
+    justify-content: space-around;
+}
+.flec7{
+    display: flex;
+    justify-content: space-around;
+   
+}

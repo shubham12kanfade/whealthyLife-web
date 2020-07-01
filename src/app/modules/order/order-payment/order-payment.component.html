@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <div class="col-12 padd1">
             <div class="row">
-                <div class="col-8">
+                <div class="col-lg-8 col-md-8 col-12" style="margin-bottom: 20px;">
                     <mat-accordion>
                         <mat-expansion-panel hideToggle>
                             <mat-expansion-panel-header>
@@ -11,8 +11,8 @@
                                 </mat-panel-title>
                             </mat-expansion-panel-header>
                             <div class="col-12 padd2">
-                                <div class="row">
-                                    <div class="col-6">
+                                <div class="row hat">
+                                    <div class="col-md-6 col-12">
                                         <div class="row">
                                             <div class="col-12 flec1">
                                                 <mat-form-field class="example-full-width">
@@ -33,7 +33,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-6">
+                                    <div class="col-md-6 col-12">
                                         <p>Advantages of oursecure login</p>
                                         <h3 class="flec2"><span class="material-icons">
                                                 airport_shuttle
@@ -60,7 +60,7 @@
                             <div class="col-12" class="padd2">
                                 <div class="row">
                                     <table class="wid">
-                                        <tr>
+                                        <tr class="hat1">
                                             <td>
                                                 <mat-form-field appearance="outline">
                                                     <mat-label>Name</mat-label>
@@ -74,7 +74,7 @@
                                                 </mat-form-field>
                                             </td>
                                         </tr>
-                                        <tr>
+                                        <tr class="hat1">
                                             <td>
                                                 <mat-form-field appearance="outline">
                                                     <mat-label>Pincode</mat-label>
@@ -88,7 +88,7 @@
                                                 </mat-form-field>
                                             </td>
                                         </tr>
-                                        <tr>
+                                        <tr class="hat1">
                                             <td colspan="2">
                                                 <mat-form-field appearance="outline">
                                                     <mat-label>Address</mat-label>
@@ -96,7 +96,7 @@
                                                 </mat-form-field>
                                             </td>
                                         </tr>
-                                        <tr>
+                                        <tr class="hat1">
                                             <td>
                                                 <mat-form-field appearance="fill">
                                                     <mat-label>City</mat-label>
@@ -109,7 +109,7 @@
                                                     </mat-select>
                                                 </mat-form-field>
                                             </td>
-                                            <td>
+                                            <td >
                                                 <mat-form-field appearance="fill">
                                                     <mat-label>State</mat-label>
                                                     <mat-select>
@@ -126,15 +126,13 @@
                                             <p>Address Type</p>
                                         </div>
                                         <tr>
-                                            <td colspan="2">
+                                            <td colspan="2" class="hat1">
                                                 <mat-radio-group aria-label="Select an option">
-                                                    <div style="display: flex;
-                                                   justify-content: space-around;
-                                                   margin: 15px;">
-                                                        <mat-radio-button value="1">Home (Al day delivery)
+                                                    <div class="sty">
+                                                        <mat-radio-button value="Any time">Home (All day delivery)
                                                         </mat-radio-button>
 
-                                                        <mat-radio-button value="2">Work (Delivery between 10AM-5PM)
+                                                        <mat-radio-button value="working hours">Work (Delivery between 10AM-5PM)
                                                         </mat-radio-button>
                                                     </div>
                                                 </mat-radio-group>
@@ -164,50 +162,60 @@
                                     <span class="Adj"> 3 </span> <span class="bag1"> ORDER SUMMARY </span>
                                 </mat-panel-title>
                             </mat-expansion-panel-header>
-                            <div class="col-12 bag2">
-                                <div class="row">
-                                    <div class="col-3">
+                            <div class="row">
+                                    <div class="col-12" *ngFor="let product of ProductData">
                                         <div class="row">
-                                            <div class="col-12" style="text-align: center;">
-                                                <img class="img-fluid im1 " src="../../../assets/img/med1.jpg"
-                                                    alt="Card image cap">
+                                            <div class="col-lg-3 col-md-3 col-sm-12 col-12">
+
+                                                <div class="col-12 " style="text-align: center;">
+                                                    <img class="img-fluid imge1 " src="{{product.avtar}}"
+                                                        alt="Card image cap">
+                                                </div>
+
                                             </div>
-                                            <div class="col-12 flec4">
-                                                <div>
-                                                    <div class="sdsdd"> - </div>
+                                            <div class="col-lg-5 col-md-5 col-sm-6 col-12 ">
+                                                <div class="col-12 maxH">
+                                                    <h4>{{product.name }}</h4>
+                                                    <p>Available offers</p>
+                                                    <h1>₹{{product.price}}</h1>
                                                 </div>
-                                                <div>
-                                                    <div class="sdsssd"> 2 </div>
-                                                </div>
-                                                <div>
-                                                    <div class="sdsdd"> + </div>
-                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-md-4 col-sm-6 dis">
+                                                <h4>Delivery by Mon Jul 6 | Free₹80</h4>
+                                                <p>7 Days Replacement Policy</p>
+
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-5">
-                                        <div class="col-12">
-                                            <div class="row">
-                                                <div class="col-12" class="maxh">
-                                                    <h4>Shelcal 500MG Tablet 15'S</h4>
-                                                    <p>Available offers</p>
-                                                    <h1>₹76.50</h1>
+                                    <div class="col-12">
+                                        <div class="row">
+                                            <div class="col-lg-3 col-md-3 col-sm-6 col-12">
+                                                <div class="col-12 flec5 as">
+                                                    <div>
+                                                        <div class="sdsdd"> - </div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="sdsssd"> 2 </div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="sdsdd"> + </div>
+                                                    </div>
                                                 </div>
-                                                <div class="col-12 flec5">
-                                                    <div class="">
-                                                        <h3 style="font-weight: 500;">REMOVE</h3>
+                                            </div>
+                                            <div class="col-lg-5 col-md-5 col-sm-6 col-12 asd" >
+                                                <div class="col-12 flec6">
+                                                    <div  >
+                                                        <h3 class="fontS" >SAVE FOR LATER</h3>
+                                                    </div>
+                                                    <div >
+                                                        <h3  class="fontS">REMOVE</h3>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-4">
-                                        <h4>Delivery by Mon Jul 6 | Free₹80</h4>
-                                        <p>7 Days Replacement Policy</p>
-                                    </div>
                                 </div>
-                            </div>
-                            <div class="row" class="flec3">
+                            <div class="row" class="flec7">
                                 <div class="">
                                     <span> Order confirmation email will be sent to </span>
                                     <span>
@@ -218,7 +226,7 @@
                                     </span>
                                 </div>
                                 <div class="">
-                                    <a [routerLink]="['/order/Payment']" style="text-decoration: none;">
+                                    <a  style="text-decoration: none;">
                                         <button mat-stroked-button color="accent" class="btu">
                                             <span> COUNTINUE </span>
                                         </button>
@@ -254,7 +262,7 @@
                         </mat-expansion-panel>
                     </mat-accordion>
                 </div>
-                <div class="col-4">
+                <div class="col-lg-4 col-md-4 col-12">
                     <div class="card">
                         <div class="card-header cdh">
                             <div class="">
@@ -266,7 +274,7 @@
                                 <div class="col-6">
                                     <h3>Price (1 items)</h3>
                                 </div>
-                                <div class="col-6" class="textAl">
+                                <div class="col-6 textAl" >
                                     <h3>₹76.50</h3>
                                 </div>
                             </div>
@@ -275,7 +283,7 @@
                                     <h3> Delivery Fee </h3>
 
                                 </div>
-                                <div class="col-6" class="textAl">
+                                <div class="col-6 textAl" >
                                     <h3>FREE</h3>
                                 </div>
                             </div>
@@ -284,7 +292,7 @@
                                 <div class="col-6">
                                     <h3>Total Amount</h3>
                                 </div>
-                                <div class="col-6" class="textAl">
+                                <div class="col-6 textAl" >
                                     <h3> ₹76.50 </h3>
                                 </div>
                             </div>

@@ -76,10 +76,10 @@ button.mat-focus-indicator.mat-stroked-button.mat-button-base.mat-accent {
     .flec2{
         display: flex;
         justify-content: space-between;
-        margin-top: 30px;
+        // margin-top: 30px;
     }
     .FontS{
-        font-weight: 500;
+        font-weight: 500 !important;
     }
     .marg12{
         margin: 15px 0px;
@@ -94,4 +94,19 @@ button.mat-focus-indicator.mat-stroked-button.mat-button-base.mat-accent {
     }
     .hr12{
        margin: 0px 0 7px 0;
+    }
+    .bordertop{
+        border-top: none;
+    }
+    .marbott{
+        margin-bottom: 10px;
+    }
+
+    @media screen and (max-width:500px){
+        .dis{
+            display: none;
+        }
+        .as{
+            margin: 15px;
+        }
     }

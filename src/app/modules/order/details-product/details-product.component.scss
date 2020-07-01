@@ -23,26 +23,26 @@ button.mat-focus-indicator.mat-button.mat-button-base.mat-warn {
     border: 1px solid lightgray !important;
 }
  
-// .stuck {
-//     position: fixed;
-//     top: 112px;
-//     left: 10px;
-//     bottom: 10px;
-//     width: 180px;
-//     overflow-y: scroll;
-//     max-height: 100%;
-//     width: 50%;
-// }
+.stuck {
+    position: fixed;
+    top: 112px;
+    left: 10px;
+    bottom: 10px;
+    width: 180px;
+    overflow-y: scroll;
+    max-height: 100%;
+    width: 50%;
+}
 
-// ::-webkit-scrollbar {
-//     width: 0px;
-//   }
+::-webkit-scrollbar {
+    width: 0px;
+  }
 
 #f {
     background: #fff;
     padding: 20px;
-    width: 50%;
+    width: 100%;
     position: fixed;
-    top: 95px;
+    top: 0;
     left: 0;
 }

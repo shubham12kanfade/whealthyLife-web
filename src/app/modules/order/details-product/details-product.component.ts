@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Params } from '@angular/router';
 
 @Component({
   selector: 'app-details-product',
@@ -7,8 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetailsProductComponent implements OnInit {
   productList: { id: number; avtar: string; name: string; price: number; discount: number; }[];
+  id1: number;
+  ProductData: { id: number; avtar: string; name: string; price: number; discount: number; }[];
 
-  constructor() {
+  constructor(private route: ActivatedRoute) {
     this.productList =[
       {
       id:0,
@@ -56,6 +59,15 @@ export class DetailsProductComponent implements OnInit {
    }
 
   ngOnInit(): void {
+    this.route.params
+      .subscribe(
+        (params: Params) => {
+          this.id1 = + params['id'];
+            this.ProductData= this.productList.filter(x => x.id === this.id1);
+            console.log("DetailsProductComponent -> ngOnInit -> this.ProductData", this.ProductData)
+        }
+      );
+    
 
   }
 
