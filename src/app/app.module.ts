@@ -12,13 +12,19 @@ import { AutocompleteLibModule } from 'angular-ng-autocomplete';
 import { AgmCoreModule } from '@agm/core';
 import { ForgotPasswordComponent } from './component/forgot-password/forgot-password.component'
 import { MessageService } from 'primeng/api';
-import { MyAppointmentsComponent } from './component/my-appointments/my-appointments.component'
+import { MyAppointmentsComponent } from './component/my-appointments/my-appointments.component';
+import { DesignComponent } from './component/design/design.component';
+import { NotificationPopupComponent } from './component/notification-popup/notification-popup.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     ForgotPasswordComponent,
-    MyAppointmentsComponent
+    MyAppointmentsComponent,
+    DesignComponent,
+    NotificationPopupComponent,
+   
   ],
   imports: [
     BrowserModule,

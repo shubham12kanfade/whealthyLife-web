@@ -1,0 +1,78 @@
+
+ <div class="row" style="overflow: auto; height: auto;">
+    <div class="col-lg-12 col-sm-12 col-12">
+        <form  class="adj1">
+          <!-- <button mat-raised-button color="primary" class="sub" > Save</button> -->
+          <button _ngcontent-ose-c259="" type="button" class="btn btn-light butt"   (click)="onSave()" >Save</button>
+        <h2 > MY CLINIC </h2>
+        <hr >
+        <div style="height: 68vh;overflow: auto; overflow-x: hidden;">
+        <div class="col-lg-4 form-group adj4 "  >
+            <label class="lab">Cline Name</label>
+            <ng-autocomplete   type="text"  [data]="countries"  [searchKeyword]="keyword"
+                 placeHolder="Search doctors, clinics, hospitals etc" 
+                (selected)='selectEvent($event)' (inputChanged)='onChangeSearch($event)'
+                (inputFocused)='onFocused($event)' historyIdentifier="countries"
+                [itemTemplate]="itemTemplate" [notFoundTemplate]="notFoundTemplate" >
+            </ng-autocomplete>
+ 
+            <ng-template #itemTemplate let-item>
+                <a [innerHTML]="item.name"></a>
+            </ng-template>
+
+            <ng-template #notFoundTemplate let-notFound>
+                <div [innerHTML]="notFound"></div><button mat-raised-button class="ad">Add</button>
+            </ng-template>
+ 
+        </div>
+        <div class="fir">
+            <p class="lab mar1">Address</p>
+           
+            <div class="row adj3" *ngFor="let address of dataArray; let i=index" >
+              <div class="col-12">
+                <!-- <button mat-raised-button color="warn" class="sub" > Remove</button> -->
+                
+                  <mat-icon (click)="removeAddress(i)" *ngIf=" i!= 0 "  >delete</mat-icon>
+               
+              </div>
+             
+          <div class="form-group col-lg-4" >
+            <label for="exampleInputEmail1">Street</label>
+            <input type="type" class="form-control" id="exampleInputEmail1"  name="Street{{i}}"  [(ngModel)]="address.Street">
+          </div>
+          <div class="form-group col-lg-4" >
+            <label for="exampleInputEmail1">Landmark</label>
+            <input type="type" class="form-control" id="exampleInputEmail1"  name="Landmark{{i}}" [(ngModel)]="address.Landmark">
+          </div>
+          <div class="form-group col-lg-4" >
+            <label for="exampleInputEmail1">Country</label>
+            <input type="type" class="form-control" id="exampleInputEmail1"  name="Country{{i}}" [(ngModel)]="address.Country">
+          </div>
+          <div class="form-group col-lg-4" >
+            <label for="exampleInputEmail1">State</label>
+            <input type="type" class="form-control" id="exampleInputEmail1"  name="State{{i}}" [(ngModel)]="address.State">
+          </div>
+          <div class="form-group col-lg-4" >
+            <label for="exampleInputEmail1">City</label>
+            <input type="type" class="form-control" id="exampleInputEmail1"  name="City{{i}}" [(ngModel)]="address.City">
+          </div>
+          
+          <div class="form-group col-lg-4" >
+            <label for="exampleInputEmail1">Pincode</label>
+            <input type="email" class="form-control" id="exampleInputEmail1"  name="Pincode{{i}}" [(ngModel)]="address.Pincode">
+          </div>
+          
+        </div>
+        <button mat-raised-button (click)="addAddress()" class="fl" >
+          <span class="material-icons">
+            add
+            </span>New Address</button>
+        
+        </div>
+      </div>
+
+       
+    </form>
+    </div>
+    
+</div>

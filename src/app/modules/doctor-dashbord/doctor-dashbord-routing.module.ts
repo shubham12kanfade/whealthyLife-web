@@ -1,10 +1,13 @@
+import { MyClinicModule } from './my-clinic/my-clinic.module';
 import { ChangePasswordComponent } from './change-password/change-password.component';
 import { DoctorDashbordComponent } from './doctor-dashbord.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { ChartsComponent } from './charts/charts.component';
 const routes: Routes = [
   {
     path: '', component: DoctorDashbordComponent, children: [
+      { path: 'Charts' , component: ChartsComponent},
       { path: '', loadChildren: () => import('./dashbord-home/dashbord-home.module').then(dhm => dhm.DashbordHomeModule) },
       { path: 'Patients', loadChildren: () => import('./patients/patients.module').then(dhm => dhm.PatientsModule) },
       { path: 'Calendar', loadChildren: () => import('./calendar/calendar.module').then(dhm => dhm.CalendarModule) },
@@ -19,6 +22,7 @@ const routes: Routes = [
       { path: 'Feedback', loadChildren: () => import('./feedback/feedback.module').then(dhm => dhm.FeedbackModule) },
       { path: 'Reach', loadChildren: () => import('./reach/reach.module').then(dhm => dhm.ReachModule) },
       { path: 'HealthFeed', loadChildren: () => import('./health-feed/health-feed.module').then(dhm => dhm.HealthFeedModule) },
+      { path: 'MyClinic', loadChildren: () => import('./my-clinic/my-clinic.module').then(dhm => dhm.MyClinicModule) },
       { path: 'change_password', component: ChangePasswordComponent },
     ]
   }

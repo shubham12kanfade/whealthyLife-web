@@ -6,6 +6,11 @@ import { DoctorsRoutingModule } from './doctors-routing.module';
 import { DoctorsComponent } from './doctors.component';
 import { DoctorProfileComponent } from './doctor-profile/doctor-profile.component';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { TimeSlotComponent } from './time-slot/time-slot.component';
+import { AutocompleteLibModule } from 'angular-ng-autocomplete';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NotificationPopupComponent } from './notification-popup/notification-popup.component';
+import { ToastModule } from 'primeng/toast';
 
 
 
@@ -13,12 +18,19 @@ import { SharedModule } from 'src/app/shared/shared.module';
 @NgModule({
   declarations: [
     DoctorsComponent,
-    DoctorProfileComponent
+    DoctorProfileComponent,
+    TimeSlotComponent,
+    NotificationPopupComponent
   ],
   imports: [
     CommonModule,
     DoctorsRoutingModule,
-    SharedModule
+    SharedModule,
+    AutocompleteLibModule,
+    FormsModule,
+    ReactiveFormsModule,
+    ToastModule
+   
   ]
 })
 export class DoctorsModule { }

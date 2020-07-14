@@ -11,12 +11,20 @@
                                 <label for="RegistrationNumber">Registration Number</label>
                                 <input type="text" class="form-control" id="RegistrationNumber" placeholder="R-898977"
                                     formControlName="registrationNumber" />
+                                    <div *ngIf="submitted && f.registrationNumber.errors" class="error-block display-block">
+                                        <div *ngIf="f.registrationNumber.errors.required">Registration Number is required</div>
+                                      </div>
+                                      
                             </div>
                             <div class="form-group">
                                 <label for="RegistrationCouncil">Registration Council</label>
                                 <input type="text" class="form-control" id="registrationNumber"
                                     formControlName="registrationCouncil" placeholder="Enter your council" />
-                            </div>
+                                    <div *ngIf="submitted && f.registrationCouncil.errors" class="error-block display-block">
+                                        <div *ngIf="f.registrationCouncil.errors.required">Registration Number is required</div>
+                                    </div>
+                                        
+                                    </div>
                             <div class="form-group">
                                 <label for="RegistrationYear">Registration Year</label>
                                 <select id="RegistrationYear" class="form-control" formControlName="registrationYear">
@@ -24,6 +32,10 @@
                                         {{ 2019 - i + 1 }}
                                     </option>
                                 </select>
+                                <div *ngIf="submitted && f.registrationCouncil.errors" class="error-block display-block">
+                                    <div *ngIf="f.registrationCouncil.errors.required">Registration Number is required</div>
+                                </div>
+                                   
                             </div>
                             <hr class="mt-5 mb-3" />
                             <div class="row">
