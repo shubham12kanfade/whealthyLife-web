@@ -13,7 +13,12 @@ import { AgmCoreModule } from '@agm/core';
 import { ForgotPasswordComponent } from './component/forgot-password/forgot-password.component'
 import { MessageService } from 'primeng/api';
 import { MyAppointmentsComponent } from './component/my-appointments/my-appointments.component'
-
+import { SocialLoginModule, SocialAuthServiceConfig } from 'angularx-social-login';
+import {
+  GoogleLoginProvider,
+  FacebookLoginProvider,
+  AmazonLoginProvider,
+} from 'angularx-social-login';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,6 +26,7 @@ import { MyAppointmentsComponent } from './component/my-appointments/my-appointm
     MyAppointmentsComponent
   ],
   imports: [
+    SocialLoginModule,
     BrowserModule,
     AppRoutingModule,
     CarouselModule,
@@ -31,7 +37,25 @@ import { MyAppointmentsComponent } from './component/my-appointments/my-appointm
     HttpClientModule,
     AgmCoreModule.forRoot()
   ],
-  providers: [ApiCallService, CookieService, MessageService],
+  providers: [ApiCallService, CookieService, MessageService,
+
+ 
+    {
+      provide: 'SocialAuthServiceConfig',
+      useValue: {
+        autoLogin: false,
+        providers: [
+          
+          {
+            id: FacebookLoginProvider.PROVIDER_ID,
+            provider: new FacebookLoginProvider('276350880312881'),
+          },
+          
+        ],
+      } as SocialAuthServiceConfig,
+    }
+  ],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }
