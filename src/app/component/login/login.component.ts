@@ -1,3 +1,4 @@
+import { AuthService, FacebookLoginProvider } from 'angularx-social-login';
 import { UserService } from './../../services/user.service';
 import { Router } from '@angular/router';
 import { FormGroup, FormControl } from '@angular/forms';
@@ -17,10 +18,12 @@ export class LoginComponent implements OnInit {
     password: new FormControl(""),
   })
   singIn: boolean = false;
+  Fblogin: any;
   constructor(private router: Router,
     public LoginService: LoginService,
     public messageService: MessageService,
-    private userService: UserService) {
+    private userService: UserService,
+    public authService: AuthService) {
     this.userService.getUserLoginStatus().subscribe(resData => {
       if (this.userService.getUserInfo())
         this.router.navigate(['']);
@@ -59,4 +62,17 @@ export class LoginComponent implements OnInit {
       this.messageService.add({ severity: type, summary: messageType, detail: message });
     });
   }
+
+
+  signInWithFB(): void {
+    this.authService.signIn(FacebookLoginProvider.PROVIDER_ID).then(x => {
+  this.Fblogin=x
+  console.log("LoginComponent -> signInWithFB -> Fblogin", this.Fblogin)
+      
+    });
+  }
+
+
+
+
 }

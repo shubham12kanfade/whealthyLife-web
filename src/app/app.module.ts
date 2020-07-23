@@ -13,12 +13,30 @@ import { AgmCoreModule } from '@agm/core';
 import { ForgotPasswordComponent } from './component/forgot-password/forgot-password.component'
 import { MessageService } from 'primeng/api';
 import { MyAppointmentsComponent } from './component/my-appointments/my-appointments.component'
-import { SocialLoginModule, SocialAuthServiceConfig } from 'angularx-social-login';
-import {
-  GoogleLoginProvider,
-  FacebookLoginProvider,
-  AmazonLoginProvider,
-} from 'angularx-social-login';
+import { SocialLoginModule, AuthService } from 'angularx-social-login';
+import { AuthServiceConfig, GoogleLoginProvider, FacebookLoginProvider, LinkedInLoginProvider  } from 'angularx-social-login';
+
+
+const config = new AuthServiceConfig([
+  // {
+  //   id: GoogleLoginProvider.PROVIDER_ID,
+  //   provider: new GoogleLoginProvider('528961187921-ld24b25466u4t2lacn9r35asg000lfis.apps.googleusercontent.com')
+  // },
+  {
+    id: FacebookLoginProvider.PROVIDER_ID,
+    provider: new FacebookLoginProvider('276350880312881')
+  },
+  // {
+  //   id: LinkedInLoginProvider.PROVIDER_ID,
+  //   provider: new LinkedInLoginProvider("78iqy5cu2e1fgr")
+  // }
+]);
+
+export function provideConfig() {
+  return config;
+}
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,22 +55,14 @@ import {
     HttpClientModule,
     AgmCoreModule.forRoot()
   ],
-  providers: [ApiCallService, CookieService, MessageService,
 
- 
+
+
+  providers: [ApiCallService, CookieService, MessageService,AuthService ,
+
     {
-      provide: 'SocialAuthServiceConfig',
-      useValue: {
-        autoLogin: false,
-        providers: [
-          
-          {
-            id: FacebookLoginProvider.PROVIDER_ID,
-            provider: new FacebookLoginProvider('276350880312881'),
-          },
-          
-        ],
-      } as SocialAuthServiceConfig,
+      provide: AuthServiceConfig,
+      useFactory: provideConfig
     }
   ],
 
