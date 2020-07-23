@@ -24,8 +24,9 @@
                                 </div>
                                 <div class="row text-dark">
                                     <p>
-                                        Dentist, Dental Surgeon, Cosmetic/Aesthetic Dentist, Implantologist, Oral
-                                        Medicine and Radiology,{{profileData.experience}} Years Experience Overall ({{profileData.experience}} years as specialist)
+                                        <!-- Dentist, Dental Surgeon, Cosmetic/Aesthetic Dentist, Implantologist, Oral
+                                        Medicine and Radiology, -->
+                                        {{profileData.experience}} Years Experience Overall ({{profileData.experience}} years as specialist)
                                     </p>
                                 </div>
                                 <div class="row text-dark">
@@ -39,8 +40,9 @@
                                 <div class="row text-dark">
                                     <p>
                                         Dr. {{profileData.firstName}} {{profileData.lastName}} is highly qualified and highly experienced doctor with {{profileData.experience}} years
-                                        of vast experience. Working as a chief consultant in various dental clinics,
-                                        cosmetic dentist, root canal specialist, TMJ and oral medicine specialist.
+                                        of vast experience.
+                                         <!-- Working as a chief consultant in various dental clinics,
+                                        cosmetic dentist, root canal specialist, TMJ and oral medicine specialist. -->
                                     </p>
                                 </div>
 
@@ -591,9 +593,9 @@
                                     <img src="//www.practostatic.com/web-assets/images/direct_consult.520d47dbea81.svg"
                                         class="m-auto p-2" data-reactid="187">
                                 </div>
-                                <div class="col-7 font-sizex-smalll text-dark p-2"> VIDEO CONSULTATION₹ </div>
+                                <div class="col-7 font-sizex-smalll text-dark p-2"> VIDEO CONSULTATION </div>
                                 <div class="col-3">
-                                    <h2 class="p-2">{{profileData.fees}}</h2>
+                                    <h2 class="p-2">₹{{profileData.fees}}</h2>
                                 </div>
                             </div>
                             <!-- <mat-tab-group mat-stretch-tabs class="example-stretched-tabs mat-elevation-z4 ">
@@ -824,10 +826,16 @@
                                         Clinic </p>
                                 </div>
                                 <div class="col-12">
-                                    <p class="font-sizex-smalll pl-2">5₹200Max 15 mins wait</p>
+                                    <p class="font-sizex-smalll pl-2">₹{{profileData.fees}}Max 15 mins wait</p>
                                 </div>
                                 <div class="col-12">
-                                    <p class="font-sizex-smalll mb-5 pl-2">Marathahalli</p>
+                                    <p class="font-sizex-smalll mb-5 pl-2">
+                                        {{profileData.location.address}},
+                                        {{city}},
+                                        {{state}},
+                                        {{Country}}
+                                       
+                                    </p>
                                 </div>
                             </div>
                             <hr>

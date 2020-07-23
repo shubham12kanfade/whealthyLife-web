@@ -69,7 +69,7 @@
             <div class="col-sm-12">
                 <owl-carousel-o [options]="customOptions1" #healthc>
                     <ng-template carouselSlide>
-                        <div class="healthcondition">
+                        <div class="healthcondition" [routerLink]="['/order/Order_information']">
                             <img src="../../../assets/img/h-c-5.webp" class="zoom">
                         </div>
                     </ng-template>

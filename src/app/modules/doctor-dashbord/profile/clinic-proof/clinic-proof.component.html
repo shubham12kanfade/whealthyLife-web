@@ -10,6 +10,7 @@
               Upload
             </button>
             <div *ngIf="establishmentProff">One file is Uploaded</div>
+            <div *ngIf="!establishmentProff" class="error-block display-block">File Uplopad is required</div>
           </div>
           <p class="pt-2" style="font-size: 12px;">
             Please provide your Establishment ownership proof to verify your

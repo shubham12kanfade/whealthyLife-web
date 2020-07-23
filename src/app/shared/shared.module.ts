@@ -23,6 +23,12 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatStepperModule } from '@angular/material/stepper';
 import {DropdownModule} from 'primeng/dropdown';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatBadgeModule} from '@angular/material/badge';
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatSliderModule} from '@angular/material/slider';
+
 
 const material = [
   CommonModule,
@@ -48,6 +54,11 @@ const material = [
   MatCardModule,
   MatButtonToggleModule,
   MatStepperModule,
+  MatGridListModule,
+  MatTooltipModule,
+  MatBadgeModule,
+  MatExpansionModule,
+  MatSliderModule
 ]
 
 @NgModule({
@@ -77,7 +88,12 @@ const material = [
   MatButtonToggleModule,
   MatStepperModule,
   material,
-  DropdownModule
+  DropdownModule,
+  MatGridListModule,
+  MatTooltipModule,
+  MatBadgeModule,
+  MatExpansionModule,
+  MatSliderModule
   ],
   exports: [
     CommonModule,
@@ -104,7 +120,12 @@ const material = [
     MatButtonToggleModule,
     MatStepperModule,
     material,
-    DropdownModule
+    DropdownModule,
+    MatGridListModule,
+    MatTooltipModule,
+    MatBadgeModule,
+    MatExpansionModule,
+    MatSliderModule
   ]
 })
 export class SharedModule { }

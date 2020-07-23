@@ -1,0 +1,26 @@
+#settingSidebar {
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 80vh;
+}
+
+ul li:hover {
+    background: #f0f0f0;
+    color: white;
+}
+
+.sidebar {
+    width: 100% !important;
+}
+
+#settingSidebar {
+    > li {
+        > a {
+            padding-left: 1.4rem !important;
+        }
+    }
+}
+
+.cf{
+    padding: 0px;
+}

@@ -11,9 +11,10 @@ import { FullCalendar } from 'primeng/fullcalendar/fullcalendar';
 })
 export class CalendarComponent implements OnInit {
   options: any;
-  events: any;
+  events: any = [];
 
   @ViewChild('fc') fc: FullCalendar;
+  patient: { name: string  }[];
   constructor() { }
 
 
@@ -30,6 +31,59 @@ export class CalendarComponent implements OnInit {
         right: 'month,agendaWeek,agendaDay'
       }
     }
+
+      this.events = [
+        {
+            "title": "All Day Event",
+            "start": "2020-06-21"
+        },
+        {
+            "title": "Long Event",
+            "start": "2020-06-25",
+            "end": "2020-06-27"
+        }
+       
+    ]
+
+//     this.options = {
+//       plugins: [dayGridPlugin, timeGridPlugin, interactionPlugin],
+      
+//       header: {
+//           left: 'prev,next',
+//           center: 'title',
+//           right: 'month,agendaWeek,agendaDay'
+//       }
+ 
+// }
+
+
+
+    
+
+    this.patient=[
+    {
+      name : "suchitra Meshram" 
+    },
+    {
+      name : "Sachin Patil" 
+    },
+    {
+      name : "Kamlesh Zade" 
+    },
+    {
+      name : "Marotrao Deshmukh" 
+    },
+  ]
+
+
+
   }
+
+
+
+
+
+
+
 
 }

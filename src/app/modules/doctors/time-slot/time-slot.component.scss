@@ -1,0 +1,105 @@
+.c-day-session__slot{
+    width: 84px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e4;
+    padding: 5px 0;
+    display: inline-block;
+    text-align: center;
+    color: #2d2d32;
+    cursor: pointer;
+    margin: 10px 0px;
+
+  }
+
+  .adj1{
+    display: flex;
+     justify-content: space-between;
+    vertical-align: middle;
+  }
+
+
+.cad1{
+    border: 1px solid #d4d0d0 !important;
+     border-radius: 5px !important;
+     
+}
+// .cardex2{
+//     border: 1px solid #d4d0d0 !important ;
+// }
+.wei{
+    font-weight: 500;
+}
+.hr1{
+    margin: 10px 0px; color: #d4d0d0;
+}
+.headD{
+    margin: 10px 0px; color: #d4d0d0;
+}
+.c1{
+    background-color: #f1efef;
+}
+.s1{
+    background-color: #f1efef; margin: 30px 0px;height: 100px; 
+}
+.bt1{
+    margin: 10px 0px;   
+     height: 35px;              
+     width: 100%;
+}
+
+.se1{
+    margin-top: 80px; 
+}
+.cd1{
+    padding-top: 30px;
+}
+.im1{
+    border-radius: 50%;
+ width:150px;
+}
+.btun{
+    display: block; 
+    margin: auto;
+}
+.cpad{
+    padding-top: 30px;
+}
+.talign{
+    text-align: right;
+}
+.se2{
+    background-color: #f1efef;
+     margin: 30px 0px;
+     height: 100px; 
+}
+.cont1{
+    background-color: #f1efef;
+}
+.hedi2{
+    padding: 6px 0px;
+}
+
+
+@media screen and (max-width:570px){
+    .im1{
+        border-radius: 50%;
+     width:150px;
+     display: block;
+     margin: auto;
+    }
+    .pad{
+        padding: 0px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 991px) {
+    .btun{
+        display: flex; 
+       
+    }
+    .bt1{
+        margin: 10px 10px;   
+         height: 35px;              
+         width: 100%;
+    }
+ }

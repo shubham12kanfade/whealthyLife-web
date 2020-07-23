@@ -1,4 +1,153 @@
-<section class="sectiona">
+<p-toast position="center" class="custom-toast" key="myKey1" [modal]="false" (onClose)="clear()" [baseZIndex]="5000"
+    position="top-right" timeout='0' >
+    <ng-template let-message pTemplate="message">
+        <div class="p-col-12 marg1" >
+            <div class="row">
+                <div class="col-4">
+                    <img src="" onerror="this.src='../../../assets/images/doc.jpg'" class="img-thumbnail imgt"
+                        >
+                </div>
+                <div class="col-8">
+                    <p class="marg"><span > Styajeet Kolhe </span></p>
+                    <p class="marg" > Patient</p>
+                    <p class="marg" > 12-06-2020 11.00 </p>
+                </div>
+            </div>
+        </div>
+        <hr class="hr1">
+        <div class="acc" >
+            <div class="acc1">
+                <!-- <button class="btn btn-block btn-success">Accept</button> -->
+                <!-- <button pButton type="button" class="ui-button-secondary">Accept</button> -->
+                <!-- <button type="button" pButton  label="Accept" class="ui-button-secondary" style="margin: auto; display: block;"></button> -->
+                Accept
+            </div>
+            <div class="rej"   (click)="clear()">
+                <!-- <button class="btn btn-block btn-danger">Reject</button> -->
+                <!-- <button type="button" pButton  label="Reject" class="ui-button-secondary"  style="margin: auto; display: block;" (click)="clear()" ></button> -->
+                Reject
+            </div>
+        </div>
+        <!-- <div style="text-align: center">
+            <i class="pi pi-exclamation-triangle" style="font-size: 3em"></i>
+            <h3>AAAAAAA</h3>
+            <p>BBBBBB</p>
+        </div> -->
+
+        <!-- <div class="p-grid ui-fluid " >
+            <div class="p-col-6" >
+                <button type="button" pButton  label="Yes" class="ui-button-success"></button>
+            </div>
+            <div class="p-col-6" >
+                <button type="button" pButton  label="No" class="ui-button-secondary"></button>
+            </div>
+        </div> -->
+    </ng-template>
+</p-toast>
+
+
+<section class="se1" >
+    <div class="container-fluid cont1">
+        <div class="row">
+            <div class="col-sm-3 mt-30" >
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend" [formGroup]="searchForm">
+                        <span class="input-group-text" id="basic-addon1"><i class="fa fa-search"></i></span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Search Doctor Here !" aria-label="Username"
+                        aria-describedby="basic-addon1" [(ngModel)]="searchText" (input)="search()">
+                    <!-- <div class="ng-autocomplete">
+                            <ng-autocomplete 
+                              [data]="autoDoctList"
+                              [searchKeyword]="keyword"
+                              (selected)='selectEvent($event)'
+                              (inputChanged)='onChangeSearch($event)'
+                              (inputFocused)='onFocused($event)'
+                              [itemTemplate]="itemTemplate"
+                              [notFoundTemplate]="notFoundTemplate">                                 
+                            </ng-autocomplete>
+                             
+                            <ng-template #itemTemplate let-item>
+                            <a [innerHTML]="item.firstName"></a>
+                            </ng-template>
+                             
+                            <ng-template #notFoundTemplate let-notFound>
+                            <div [innerHTML]="notFound"></div>
+                            </ng-template>
+                            </div> -->
+
+                </div>
+                <div class="card cad1 hidd">
+                    <h2 class="hed1">
+                        <b>SPECIALITY</b>
+                    </h2>
+                    <ul class="list-group list-group-flush scroll1">
+                        <li class="list-group-item" *ngFor="let speciality of specialityList">{{speciality.name}}</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-9 scroll1 aduj1 ">
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-lg-4 col-sm-6 col-12" *ngFor="let doctor of doctorList">
+                            <div class="card cad2">
+                                <div class="card-header" style="padding: 0px;">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <img [src]="doctor?.userId?.avatar"
+                                                onerror="this.src='../../../assets/images/doc.jpg'" alt="Avatar"
+                                                class="img-thumbnail img2">
+                                        </div>
+                                        <div class="col-8">
+                                            <h2 class="hed3"><a
+                                                    [routerLink]="['/doctors/doctor_profile/',doctor?._id]">Dr.
+                                                    {{doctor?.userId?.firstName}}
+                                                    {{doctor?.userId?.lastName}}</a></h2>
+                                            <p style="margin: 0px;font-size: 12px;">{{doctor?.userId?.specialitie}}</p>
+                                            <p style="margin: 0px;font-size: 12px;">
+                                                <b>{{doctor?.userId?.experience}}</b> years experience overall</p>
+                                            <p><i class="fa fa-thumbs-up text-success"></i> 100%</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body"
+                                    style="padding: 10px;line-height: 10px;font-size: 12px;text-align: left; ">
+                                    <div class="col-12">
+                                        <p>
+                                            <b>{{doctor?.userId?.location?.landmark}}
+                                            </b>
+                                        </p>
+                                        <p><b>Rs. {{doctor?.userId?.fees}}</b> Consultation Fees</p>
+                                        <p> Available Today</p>
+                                    </div>
+                                </div>
+                                <div class="card-footer cdfot"  >
+                                    <button type="button" (click)="onConsultation(doctor?._id)"
+                                        class="btn btn-outline-primary fsize" >Video
+                                        Consultation</button>
+
+                                    <a> <button [routerLink]="['/doctors/timeSlot/',doctor?._id]"
+                                            class="btn btn-primary fsize" >Book Appointment
+                                        </button></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-6 col-12 fweight" *ngIf="doctorList.length==''" >
+                           No Doctor Found
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+<!-- <section class="sectiona">
     <div class="container-fluid ">
         <div class="col-md-12">
             <div class="row">
@@ -48,6 +197,7 @@
                             <mat-checkbox class="bringwhite"> </mat-checkbox>
                             Online Booking
                         </div>
+                      
                     </li>
                     <li>
                         <div class="form-group">
@@ -126,14 +276,14 @@
             </ul>
         </div>
     </div>
-</section>
+</section> -->
 
-<section>
+<!-- <section>
     <div class="gap11 container-fluid">
         <div class="col-md-12">
             <div class="row">
                 <div class="col-md-4" style="margin-bottom: 40px;">
-                    <!-- class="sticky1" -->
+                  
                     <div>
                         <div class="col-md-12">
                             <div class="row">
@@ -151,10 +301,143 @@
                     </div>
                 </div>
                 <div class="col-md-8 firstcard">
+                    <div class="col-12" style="margin-top: 55px;">
+                        <div class="row">
+                            <div class="col-lg-4 col-sm-6 co-12" *ngFor="let doctor of doctorList">
+
+
+                                <div
+                                    style="border: 1px solid grey; border-radius:5px; padding: 10px 0px 0px 0Px;margin-top: 30px;">
+
+                                    <div class="row">
+                                        <div class="col-sm-5">
+
+                                            <img [src]="doctor?.userId?.avatar"
+                                                onerror="this.src='../assets/img/user.jpeg'" alt="Avatar"
+                                                style="display: block; margin: auto; width:100;height:100px ; border-radius: 50%;"
+                                                class="">
+                                        </div>
+                                        <div class="col-sm-7" style="display:block">
+                                            <div style="margin:0px 5px;">
+                                                <div class="bookingside">
+                                                    <p style="margin: 0px 0px; font-size: 12px;">
+                                                        <span class="availableicon">
+                                                            <i class="fa fa-calendar"></i>
+                                                        </span>
+                                                        Available Today
+                                                    </p>
+                                                </div>
+                                                <div class="">
+                                                    
+
+                                                    <button class="btn btn-primary btnbooking" (click)="addPractice()"
+                                                        style="height: 37px;
+                                                margin: 5px 0px;font-size: 12px;">Book
+                                                        Appointment
+                                                        <p class="nobooktext">Rs. {{doctor?.userId?.fees}}</p>
+                                                    </button>
+
+                                                   
+
+                                                    <button type="button" (click)="onConsultation(doctor?._id)"
+                                                        class="btn btn-outline-primary btnvideoconultation" style="height: 37px;
+                                                    margin: 5px 0px; font-size: 12px;">Video
+                                                        Consultation</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body" style="padding: 0px 10px; line-height: 10px; ">
+                                        <h2 style="margin: 0px;"><a [routerLink]="['/doctor_profile/','doctor?._id']"
+                                                style=" font-size: 16px;">Dr. {{doctor?.userId?.firstName}}
+                                                {{doctor?.userId?.lastName}}</a></h2>
+                                        <p>{{doctor?.userId?.specialitie}}</p>
+                                        <p>{{doctor?.userId?.experience}} years experience overall</p>
+                                        <p>
+                                            <strong><a href="">{{doctor?.userId?.location?.landmark}}</a>
+                                            </strong>
+                                        </p>
+
+                                    </div> -->
+<!-- <div class="card-footer" style="text-align:center ; margin:10px;">
+                                    <div class="bookingside">
+                                        <p>
+                                            <span class="availableicon">
+                                                <i class="fa fa-calendar"></i>
+                                            </span>
+                                            Available Today
+                                        </p>
+                                    </div>
+                                    <div class="" style="display:flex;">
+                                        <button class="btn btn-primary btnbooking" (click)=" showtime(doctor)">Book
+                                            Appointment
+                                            <p class="nobooktext">Rs. {{doctor?.userId?.fees}}</p>
+                                        </button>
+                                    
+                                        <button type="button" (click)="onConsultation(doctor?._id)"
+                                            class="btn btn-outline-primary btnvideoconultation">Video
+                                            Consultation</button>
+                                    </div>
+                                </div> -->
+<!-- </div> -->
+
+
+
+
+
+
+
+
+<!-- <div style="border: 1px solid grey; border-radius:5px; padding: 10px 0px 0px 0Px;margin-top: 30px;">
+
+                                    <img [src]="doctor?.userId?.avatar"
+                                        onerror="this.src='../assets/img/user.jpeg'" alt="Avatar"  style="display: block; margin: auto; width:100%;height: 200px;"
+                                        class="">
+                                <div class="card-body" style="padding: 0px 10px; line-height:7px;">
+                                    <h2><a [routerLink]="['/doctor_profile/','doctor?._id']" style="margin:0px 0px; " >Dr. {{doctor?.userId?.firstName}}
+                                        {{doctor?.userId?.lastName}}</a></h2>
+                                <p>{{doctor?.userId?.specialitie}}</p>
+                                <p>{{doctor?.userId?.experience}} years experience overall</p>
+                                <p>
+                                    <strong><a href="">{{doctor?.userId?.location?.landmark}}</a>
+                                    </strong>
+                                </p>
+                                
+                                </div>
+                                <div class="card-footer" style="text-align:center ; margin:10px;">
+                                    <div class="bookingside">
+                                        <p>
+                                            <span class="availableicon">
+                                                <i class="fa fa-calendar"></i>
+                                            </span>
+                                            Available Today
+                                        </p>
+                                    </div>
+                                    <div class="" style="display:flex;">
+                                        <button class="btn btn-primary btnbooking" (click)=" showtime(doctor)">Book
+                                            Appointment
+                                            <p class="nobooktext">Rs. {{doctor?.userId?.fees}}</p>
+                                        </button>
+                                    
+                                        <button type="button" (click)="onConsultation(doctor?._id)"
+                                            class="btn btn-outline-primary btnvideoconultation">Video
+                                            Consultation</button>
+                                    </div>
+                                </div>
+                                </div> -->
+<!-- </div>
+                        </div>
+                    </div> -->
+
+<!-- 
                     <div class="card">
                         <div class="card-body">
 
-                            <div class="col-md-12 profcard" *ngFor="let doctor of doctorList">
+                            <div class="col-sm-12" *ngFor="let doctor of doctorList">
+ -->
+
+
+<!-- 
                                 <div class="row">
                                     <div class="col-md-2">
                                         <div class="profimage">
@@ -163,7 +446,9 @@
                                                 class="">
                                         </div>
                                         <div class="vprofile">
-                                            <a [routerLink]="['/doctors/doctor_profile/', doctor._id]">View Profile</a>
+                                            <h2><a href="">Dr. {{doctor?.userId?.firstName}}
+                                                {{doctor?.userId?.lastName}}</a></h2>
+                                                
                                         </div>  
                                     </div>
                                     <div class="col-md-7">
@@ -209,8 +494,8 @@
                                                 Consultation</button>
                                         </div>
                                     </div>
-                                </div>
-                                <div *ngIf="show === doctor?._id">
+                                </div> -->
+<!-- <div *ngIf="show === doctor?._id">
                                     <div class="col-md-12 col-sm-12 slidetime">
                                         <div class="row">
                                             <div class="col-sm-12">
@@ -269,12 +554,12 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
+                                </div> -->
+<!-- </div>
                         </div>
                     </div>
-                </div>
-                <!-- <div class="card don">
+                </div> -->
+<!-- <div class="card don">
                     <div class="row">
                         <div class="col-7 cosevn">
                             <h2>Free Online Consultations</h2>
@@ -287,7 +572,7 @@
                         </div>
                     </div>
                 </div> -->
-            </div>
+<!-- </div>
         </div>
     </div>
-</section>
+</section> -->

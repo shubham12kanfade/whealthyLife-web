@@ -12,6 +12,9 @@ import { AutocompleteLibModule } from 'angular-ng-autocomplete';
 import { AgmCoreModule } from '@agm/core';
 import { ForgotPasswordComponent } from './component/forgot-password/forgot-password.component'
 import { MessageService } from 'primeng/api';
+import { DesignComponent } from './component/design/design.component';
+import { NotificationPopupComponent } from './component/notification-popup/notification-popup.component';
+
 import { MyAppointmentsComponent } from './component/my-appointments/my-appointments.component'
 import { SocialLoginModule, AuthService } from 'angularx-social-login';
 import { AuthServiceConfig, GoogleLoginProvider, FacebookLoginProvider, LinkedInLoginProvider  } from 'angularx-social-login';
@@ -41,7 +44,9 @@ export function provideConfig() {
   declarations: [
     AppComponent,
     ForgotPasswordComponent,
-    MyAppointmentsComponent
+    MyAppointmentsComponent,
+    DesignComponent,
+    NotificationPopupComponent,
   ],
   imports: [
     SocialLoginModule,

@@ -32,9 +32,15 @@ export class ClinicProofComponent implements OnInit {
     }).catch(error => {
       console.log("EditProfileComponent -> getProfile -> error", error);
     })
-  }
+  } 
 
   onSave() {
+
+    if(this.establishmentProff.length === ''){
+      return;
+    }
+
+
     this.mainService.updateUserprofile({ establishmentProff: this.establishmentProff }).then(resData => {
       this.showToast('success', 'Profile', 'Profile updated successfully');
       this.stepper.next();

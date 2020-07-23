@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 import { MainService } from 'src/app/services/main.service';
 import { UploadService } from 'src/app/services/upload.service';
 import { MessageService } from 'primeng/api';
@@ -15,18 +15,29 @@ export class RegistrationComponent implements OnInit {
 
   profileform: FormGroup;
   avatar: any;
+  submitted: boolean =false;
 
   constructor(public mainService: MainService,
     public messageService: MessageService,
-    public uploadService: UploadService) {
-    this.profileform = new FormGroup({
-      registrationNumber: new FormControl(''),
-      registrationCouncil: new FormControl(''),
-      registrationYear: new FormControl('')
-    })
+    public uploadService: UploadService,
+    private formBuilder: FormBuilder) {
+
+
+    this.profileform = this.formBuilder.group({
+      registrationNumber: new FormControl('',[Validators.required]),
+      registrationCouncil: new FormControl('',[Validators.required]),
+      registrationYear: new FormControl('',[Validators.required])
+    }) ;
+
+    // this.profileform = new FormGroup({
+    //   registrationNumber: new FormControl('',[Validators.required]),
+    //   registrationCouncil: new FormControl('',[Validators.required]),
+    //   registrationYear: new FormControl('',[Validators.required])
+    // })
     this.items.length = 28;
     this.getProfile();
   }
+  get f() { return this.profileform.controls; }
 
   getProfile() {
     this.mainService.getProfile().then(resData => {
@@ -36,8 +47,15 @@ export class RegistrationComponent implements OnInit {
     })
   }
 
+  
+
   onSave(next: MatStepper) {
     console.log(this.profileform.value);
+    this.submitted = true;
+
+    if (this.profileform.invalid) {
+      return;
+  }
     var data = {
       ...this.profileform.value,
       avatar: this.avatar,

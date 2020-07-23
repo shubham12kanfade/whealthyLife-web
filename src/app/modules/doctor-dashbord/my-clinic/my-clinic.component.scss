@@ -1,0 +1,192 @@
+#settingSidebar {
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 80vh;
+}
+
+ul li:hover {
+    background: #f0f0f0;
+    color: white;
+}
+
+// .sidebar {
+//     width: 20rem !important;
+// }
+// ul li a span {
+//     font-size: 1.5rem;
+//     display: inline;
+// }
+// .sidebar-heading {
+//     font-size: 1.5rem;
+// }
+// .sidebar-brand-text {
+//     font-size: 2rem;
+// }
+// .sidebar .nav-item .nav-link {
+//     width: 19rem;
+// }
+
+// .sidebar-brand-text {
+//     font-size: 1.5rem !important;
+// }
+
+.sidebar {
+    width: 100% !important;
+}
+
+#settingSidebar {
+    > li {
+        > a {
+            padding-left: 1.4rem !important;
+        }
+    }
+}
+
+.cf{
+    padding: 0px;
+}
+
+
+
+// .example-card {
+//     max-width: 400px;
+//   }
+
+//   .example-header-image {
+//     background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+//     background-size: cover;
+//   }
+
+.bg {
+    background-color: white;
+    min-height: 100vh;
+}
+h2 {
+    margin: 20px;
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: #4e73df !important ;
+}
+.lab {
+    font-size: 16px;
+    margin-left: 14px;
+}
+.fir {
+    margin: 10px;
+    padding: 0px 28px;
+}
+// .autocomplete-container .input-container input {
+//     font-size: 14px;
+
+//     border: 1px solid #cac9c9 !important;
+
+// }
+// .des{
+//     border: 1px solid #cac9c9 !important;
+// }
+// .input-container{
+//     border: 1px solid !important;
+// }
+// .ng-autocomplete{
+//     border: 1px solid #cac9c9 !important;
+// }
+
+// .ng-autocomplete {
+
+//     height: 52px;
+//     border: 1px solid #d1d3e2 !important;
+//     padding: 0px;
+//     max-width:100%;
+// }
+// .autocomplete-container {
+
+//     position: relative;
+//     height: 21px;
+//     top: -20px !important;
+//     height: 40px;
+//     padding: 0px;
+// }
+
+.adj1 {
+    margin: 30px 40px;
+}
+button.mat-focus-indicator.mat-raised-button.mat-button-base.mat-accent {
+    background-color: #f6c23e;
+}
+hr {
+    margin: 25px 0px;
+}
+
+.ad {
+    float: right;
+    position: absolute;
+    right: 0;
+    top: 42px;
+    height: 29px;
+}
+.fl {
+    float: right;
+    background-color: #ffa000;
+    color: #fff;
+    // width: 100px !important;
+}
+.adj3 {
+    border: 1px solid #d1d3e2;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+.mar1 {
+    margin-left: 7px;
+}
+
+.adj4 {
+    margin: 10px;
+    padding: 4px 15px 26px 15px;
+}
+.sub {
+    float: right;
+    // margin-right: 30px;
+}
+
+.mat-fab .mat-button-wrapper {
+    padding: 0px 0;
+    display: inline-block;
+    line-height: 20px;
+}
+
+.del {
+    float: right;
+    height: 40px;
+    width: 40px;
+}
+
+.butt {
+    color: #3a3b45;
+    background-color: #f8f9fc;
+    border-color: #f8f9fc;
+    float: right;
+    margin: 0px 20px;
+}
+
+.butt:hover {
+    color: #3a3b45;
+    background-color: #d4daed;
+    border-color: #cbd3e9;
+}
+
+mat-icon.mat-icon.notranslate.material-icons.mat-icon-no-color {
+    float: right;
+    color: red;
+    cursor: pointer;
+}
+
+.hei{
+    height: 86vh;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 767px){
+    .hei{
+        height: auto;
+    }
+}
