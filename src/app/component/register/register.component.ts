@@ -60,6 +60,7 @@ export class RegisterComponent implements OnInit {
       location: this.locatdata,
     }
     this.rs.registarUser(data).then(resData => {
+    console.log("RegisterComponent -> onSubmit -> resData", resData)
       this.sending = false;
       if (resData.status == "SUCCESS") {
         this.router.navigate(['/verify_otp', this.register.value.mobileNumber]);
@@ -68,10 +69,19 @@ export class RegisterComponent implements OnInit {
       }
       this.register.reset();
     }).catch(error => {
-      this.sending = false;
+    this.sending = false;
       console.log("RegisterComponent -> onSubmit -> error", error)
-      if (error && error.error && error.error.message) {
-        this.showToast('error', 'Faild', 'Somthinge went wrong please try after some time');
+  
+  
+      // error:
+      // code: 505
+      // message: "You have already registerd with us please login to continue"
+      // status: "ERROR"
+  
+  
+  
+       if (error && error.error && error.error.message) {
+        this.showToast('error', 'Faild', error.error.message);
       } else {
         this.showToast('error', 'Faild', error.message);
       }

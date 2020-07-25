@@ -14,12 +14,12 @@ export class ConsultationService {
     return this.api.getData('doctor/list/for/consultation');
   }
 
-  endSession() {
-    return this.api.getData('conference/end/session',);
+  endSession(data) {
+    return this.api.getData('conference/end/session',data);
   }
 
   createSession(data) {
-    return this.api.postData('conference', data, true);
+    return this.api.postData('conference/', data, true);
   }
 
 

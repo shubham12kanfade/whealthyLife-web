@@ -11,6 +11,6 @@ export class RegistrationService {
 
   }
   registarUser(data) {
-    return this.Ap.postData('authentication/register/', data);
+    return this.Ap.postData('authentication/register', data);
   }
 }

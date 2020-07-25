@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DoctorProfileService } from 'src/app/services/doctor-profile.service';
 import { ConsultationService } from 'src/app/services/consultation.service';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -20,7 +20,15 @@ export class TimeSlotComponent implements OnInit {
   show: any;
 
 
-  constructor(  public DoctorProfile: DoctorProfileService, public consultationService: ConsultationService,  public router: Router) { 
+  constructor(private route: ActivatedRoute,  public DoctorProfile: DoctorProfileService, public consultationService: ConsultationService,  public router: Router) { 
+   
+   
+    this.route.params.subscribe( params =>{
+      this.id=params.id
+      console.log("TimeSlotComponent -> constructor -> this.id", this.id)
+    
+        
+      } );
     this.getProfileDetails()
   }
 
@@ -29,15 +37,16 @@ export class TimeSlotComponent implements OnInit {
   }
 
   getProfileDetails() {
-    this.DoctorProfile.getDoctorProfile(this.id)
+    var data = {
+      findId: this.id
+    }
+    console.log("TimeSlotComponent -> getProfileDetails -> data", data)
+
+    this.DoctorProfile.getDoctorProfile(data)
       .then((resData) => {
-        console.log(
-          "DoctorProfileComponent -> getProfileDetails -> resData",
-          resData
-        );
         this.profileData = resData.data;
-        this.showtime(this.profileData)
-        console.log("DoctorProfileComponent -> getProfileDetails -> profileData", this.profileData)
+        this.showtime(this.profileData._id)
+        this.getSlot( this.profileData);
       })
       .catch((error) => {
         console.log(
@@ -47,6 +56,16 @@ export class TimeSlotComponent implements OnInit {
       });
   }
 
+  getSlot(id){
+    
+this.DoctorProfile.getSlot(id).then(resData=>{
+  resData
+  console.log("TimeSlotComponent -> getSlot -> resData++++++++++++++++++++", resData)
+}).catch((error=>{
+  console.log("TimeSlotComponent -> getSlot -> error++++++++++++++++++++++", error)
+}))
+
+  }
 
   onConsultation(id) {
     var data = {

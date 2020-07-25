@@ -18,7 +18,7 @@ export class MainService {
   }
 
   addTimeSlot(data) {
-    return this.api.postData('slot', data);
+    return this.api.postData('slots/', data);
   }
 
   getTimeSlot() {

@@ -11,6 +11,9 @@ export class LoginService {
   loginUser(data) {
     return this.ApiCallService.postData('authentication/login/', data);
   }
+  loginSocial(data) {
+    return this.ApiCallService.postData('authentication/login/with/social', data);
+  }
 
   verifyOtp(data) {
     return this.ApiCallService.getData('authentication/verify/mobile/' + data.mobile + '/' + data.otp);

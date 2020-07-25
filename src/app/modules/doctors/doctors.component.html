@@ -1,28 +1,26 @@
-<p-toast position="center" class="custom-toast" key="myKey1" [modal]="false" (onClose)="clear()" [baseZIndex]="5000"
-    position="top-right" timeout='0' >
+<p-toast position="center" class="custom-toast" key="myKey1" [modal]="false" (onClose)="clear()" [baseZIndex]="5000" position="top-right" timeout='0'>
     <ng-template let-message pTemplate="message">
-        <div class="p-col-12 marg1" >
+        <div class="p-col-12 marg1">
             <div class="row">
                 <div class="col-4">
-                    <img src="" onerror="this.src='../../../assets/images/doc.jpg'" class="img-thumbnail imgt"
-                        >
+                    <img src="" onerror="this.src='../../../assets/images/doc.jpg'" class="img-thumbnail imgt">
                 </div>
                 <div class="col-8">
-                    <p class="marg"><span > Styajeet Kolhe </span></p>
-                    <p class="marg" > Patient</p>
-                    <p class="marg" > 12-06-2020 11.00 </p>
+                    <p class="marg"><span> Styajeet Kolhe </span></p>
+                    <p class="marg"> Patient</p>
+                    <p class="marg"> 12-06-2020 11.00 </p>
                 </div>
             </div>
         </div>
         <hr class="hr1">
-        <div class="acc" >
+        <div class="acc">
             <div class="acc1">
                 <!-- <button class="btn btn-block btn-success">Accept</button> -->
                 <!-- <button pButton type="button" class="ui-button-secondary">Accept</button> -->
                 <!-- <button type="button" pButton  label="Accept" class="ui-button-secondary" style="margin: auto; display: block;"></button> -->
                 Accept
             </div>
-            <div class="rej"   (click)="clear()">
+            <div class="rej" (click)="clear()">
                 <!-- <button class="btn btn-block btn-danger">Reject</button> -->
                 <!-- <button type="button" pButton  label="Reject" class="ui-button-secondary"  style="margin: auto; display: block;" (click)="clear()" ></button> -->
                 Reject
@@ -46,16 +44,15 @@
 </p-toast>
 
 
-<section class="se1" >
+<section class="se1">
     <div class="container-fluid cont1">
         <div class="row">
-            <div class="col-sm-3 mt-30" >
+            <div class="col-sm-3 mt-30">
                 <div class="input-group mb-3">
                     <div class="input-group-prepend" [formGroup]="searchForm">
                         <span class="input-group-text" id="basic-addon1"><i class="fa fa-search"></i></span>
                     </div>
-                    <input type="text" class="form-control" placeholder="Search Doctor Here !" aria-label="Username"
-                        aria-describedby="basic-addon1" [(ngModel)]="searchText" (input)="search()">
+                    <input type="text" class="form-control" placeholder="Search Doctor Here !" aria-label="Username" aria-describedby="basic-addon1" [(ngModel)]="searchText" (input)="search()">
                     <!-- <div class="ng-autocomplete">
                             <ng-autocomplete 
                               [data]="autoDoctList"
@@ -94,46 +91,40 @@
                                 <div class="card-header" style="padding: 0px;">
                                     <div class="row">
                                         <div class="col-4">
-                                            <img [src]="doctor?.userId?.avatar"
-                                                onerror="this.src='../../../assets/images/doc.jpg'" alt="Avatar"
-                                                class="img-thumbnail img2">
+                                            <img [src]="doctor?.avatar" onerror="this.src='../../../assets/images/doc.jpg'" alt="Avatar" class="img-thumbnail img2">
                                         </div>
                                         <div class="col-8">
-                                            <h2 class="hed3"><a
-                                                    [routerLink]="['/doctors/doctor_profile/',doctor?._id]">Dr.
-                                                    {{doctor?.userId?.firstName}}
-                                                    {{doctor?.userId?.lastName}}</a></h2>
-                                            <p style="margin: 0px;font-size: 12px;">{{doctor?.userId?.specialitie}}</p>
+                                            <h2 class="hed3"><a [routerLink]="['/doctors/doctor_profile/',doctor?._id]">Dr.
+                                                    {{doctor?.firstName}}
+                                                    {{doctor?.lastName}}</a></h2>
+                                            <p style="margin: 0px;font-size: 12px;">{{doctor?.specialitie}}</p>
                                             <p style="margin: 0px;font-size: 12px;">
-                                                <b>{{doctor?.userId?.experience}}</b> years experience overall</p>
+                                                <b>{{doctor?.experience}}</b> years experience overall</p>
                                             <p><i class="fa fa-thumbs-up text-success"></i> 100%</p>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="card-body"
-                                    style="padding: 10px;line-height: 10px;font-size: 12px;text-align: left; ">
+                                <div class="card-body" style="padding: 10px;line-height: 10px;font-size: 12px;text-align: left; ">
                                     <div class="col-12">
                                         <p>
-                                            <b>{{doctor?.userId?.location?.landmark}}
+                                            <b>{{doctor?.location?.landmark}}
                                             </b>
                                         </p>
-                                        <p><b>Rs. {{doctor?.userId?.fees}}</b> Consultation Fees</p>
+                                        <p><b>Rs. {{doctor?.fees}}</b> Consultation Fees</p>
                                         <p> Available Today</p>
                                     </div>
                                 </div>
-                                <div class="card-footer cdfot"  >
-                                    <button type="button" (click)="onConsultation(doctor?._id)"
-                                        class="btn btn-outline-primary fsize" >Video
+                                <div class="card-footer cdfot">
+                                    <button type="button" (click)="onConsultation(doctor?._id)" class="btn btn-outline-primary fsize">Video
                                         Consultation</button>
 
-                                    <a> <button [routerLink]="['/doctors/timeSlot/',doctor?._id]"
-                                            class="btn btn-primary fsize" >Book Appointment
+                                    <a> <button [routerLink]="['/doctors/timeSlot/',doctor?._id]" class="btn btn-primary fsize">Book Appointment
                                         </button></a>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-sm-6 col-12 fweight" *ngIf="doctorList.length==''" >
-                           No Doctor Found
+                        <div class="col-lg-4 col-sm-6 col-12 fweight" *ngIf="doctorList.length==''">
+                            No Doctor Found
                         </div>
                     </div>
                 </div>

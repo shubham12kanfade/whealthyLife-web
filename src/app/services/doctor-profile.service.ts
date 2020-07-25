@@ -10,9 +10,15 @@ export class DoctorProfileService {
 
 
 getDoctorProfile(data){
+console.log("DoctorProfileService -> getDoctorProfile -> data", data)
  
-    return this.ApiCallService.getData('doctor/profile/details/',data);
+    return this.ApiCallService.postData('doctor/profile/details/',data);
  
+}
+
+getSlot(data){
+    
+return this.ApiCallService.getData('slots/by/'+data)
 }
 
 }

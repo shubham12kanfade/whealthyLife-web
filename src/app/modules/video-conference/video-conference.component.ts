@@ -1,10 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { CookieService } from 'ngx-cookie-service';
+import { Component, OnInit, Inject } from '@angular/core';
 import { ConsultationService } from 'src/app/services/consultation.service';
 import { UserService } from 'src/app/services/user.service';
 import { MessageService } from 'primeng/api';
 import { Router } from '@angular/router';
 var OT = window['OT'];
-
+import { DOCUMENT } from '@angular/common';
 @Component({
   selector: 'app-video-conference',
   templateUrl: './video-conference.component.html',
@@ -23,10 +24,12 @@ export class VideoConferenceComponent implements OnInit {
   min: any;
   remSec: any;
   sec: any;
-  constructor(public confernceService: ConsultationService,
+  constructor(@Inject(DOCUMENT) private document: Document,
+  public confernceService: ConsultationService,
     public messageService: MessageService,
     public router: Router,
-    public userService: UserService) {
+    public userService: UserService,
+    public CookieService:CookieService) {
     this.getSession();
   }
 
@@ -122,9 +125,14 @@ export class VideoConferenceComponent implements OnInit {
   }
 
   endSession() {
-    this.confernceService.endSession().then(resData => {
+
+    const Cooki=JSON.parse(this.CookieService.get('userInfo_WhealthyLife'))
+const data={
+  patient:Cooki._id
+}
+    this.confernceService.endSession(data).then(resData => {
       console.log("VideoConferenceComponent -> endSession -> resData", resData);
-      this.router.navigate(['/']);
+      this.document.location.href = 'http://localhost:4200/my/Feedback';
     }).catch(error => {
       console.log("VideoConferenceComponent -> endSession -> error", error)
     })
