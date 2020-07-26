@@ -63,94 +63,28 @@
         <div class="row">
             <div class="col-lg-4 col-12 pad">
                 <div class="card cardex2 ">
-                    <p-calendar [inline]="true" [minDate]="minDate"></p-calendar>
+                    <p-calendar [inline]="true" [minDate]="minDate" (onSelect)="onSelect($event)"></p-calendar>
                 </div>
             </div>
             <div class="col-lg-8 col-lg-8 col-12 slidetime">
                 <div class="row">
-                    <div class="card cad1">
+                    <div *ngFor="let item of slot" class="card cad1 ">
+                        <h3 class="wei">{{item.day}} </h3>
                         <div class="card-body">
                             <h3 class="wei">Morning Slots </h3>
                             <div class="row adj1">
-                                <div>
-                                    <button class="btn c-day-session__slot">10:00</button>
+                                <div *ngFor="let bu of item.mrningSlots; let j = index">
+                                    <button class="btn c-day-session__slot" (click)="selectSolot(bu.strtTime,'Morning Slots')">{{bu.strtTime}}</button>
                                 </div>
-                                <div>
-                                    <button class="btn c-day-session__slot">10:30</button>
-                                </div>
-                                <div>
-                                    <button class="btn c-day-session__slot">11:00</button>
-                                </div>
-                                <div>
-                                    <button class="btn c-day-session__slot">11:30</button>
-                                </div>
-                                <div>
-                                    <button class="btn c-day-session__slot">12:00</button>
-                                </div>
-                                <div>
-                                    <button class="btn c-day-session__slot">12:30</button>
-                                </div>
-                                <div>
-                                    <button class="btn c-day-session__slot">13:00</button>
-                                </div>
-                                <div>
-                                    <button class="btn c-day-session__slot">13:30</button>
-                                </div>
-                                <div>
-                                    <button class="btn c-day-session__slot">10:00</button>
-                                </div>
-                                <div>
-                                    <button class="btn c-day-session__slot">10:30</button>
-                                </div>
-                                <div>
-                                    <button class="btn c-day-session__slot">11:00</button>
-                                </div>
-                                <div>
-                                    <button class="btn c-day-session__slot">11:30</button>
-                                </div>
-                                <div>
-                                    <button class="btn c-day-session__slot">12:00</button>
-                                </div>
-                                <div>
-                                    <button class="btn c-day-session__slot">12:30</button>
-                                </div>
-                                <div>
-                                    <button class="btn c-day-session__slot">13:00</button>
-                                </div>
-                                <div>
-                                    <button class="btn c-day-session__slot">13:30</button>
-                                </div>
+
 
                             </div>
                             <hr class="hr1">
                             <h3 class="wei">Evening Slots </h3>
                             <div class="row adj1">
-                                <div>
-                                    <button class="btn c-day-session__slot">15:00</button>
-                                </div>
-                                <div>
-                                    <button class="btn c-day-session__slot">15:30</button>
-                                </div>
-                                <div>
-                                    <button class="btn c-day-session__slot">16:00</button>
-                                </div>
-                                <div>
-                                    <button class="btn c-day-session__slot">16:30</button>
-                                </div>
-                                <div>
-                                    <button class="btn c-day-session__slot">17:00</button>
-                                </div>
-                                <div>
-                                    <button class="btn c-day-session__slot">17:30</button>
-                                </div>
-                                <div>
-                                    <button class="btn c-day-session__slot">18:00</button>
-                                </div>
-                                <div>
-                                    <button class="btn c-day-session__slot">18:30</button>
-                                </div>
-                                <div>
-                                    <button class="btn c-day-session__slot">19:00</button>
+
+                                <div *ngFor="let it of item.eveningSlots; let x = index">
+                                    <button class="btn c-day-session__slot" (click)="selectSolot(it.strtTime,'Evening Slots')">{{it.strtTime}}</button>
                                 </div>
                             </div>
                         </div>
@@ -202,6 +136,74 @@
                         </mat-tab-group>
                     </div>
                 </div>
+                <!-- <div class="col-12">
+                <div class="row">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3>Morning Slots </h3>
+                            <div class="row" >
+                                <div class="col-3">
+                                    <button class="btn">10:00</button>
+                                </div>
+                                <div class="col-3">
+                                    <button class="btn">10:30</button>
+                                </div>
+                                <div class="col-3">
+                                    <button class="btn">11:00</button>
+                                </div>
+                                <div class="col-3">
+                                    <button class="btn">11:30</button>
+                                </div>
+                                <div class="col-3">
+                                    <button class="btn">12:00</button>
+                                </div>
+                                <div class="col-3">
+                                    <button class="btn">12:30</button>
+                                </div>
+                                <div class="col-3">
+                                    <button class="btn">13:00</button>
+                                </div>
+                                <div class="col-3">
+                                    <button class="btn">13:30</button>
+                                </div>
+                                
+                            </div>
+                            <h3>Evening Slots </h3>
+                            <div class="row" >
+                                <div class="col-3 c-day-session__slot">
+                                    <button class="btn">15:00</button>
+                                </div>
+                                <div class="col-3 c-day-session__slot">
+                                    <button class="btn">15:30</button>
+                                </div>
+                                <div class="col-3">
+                                    <button class="btn">16:00</button>
+                                </div>
+                                <div class="col-3">
+                                    <button class="btn">16:30</button>
+                                </div>
+                                <div class="col-3">
+                                    <button class="btn">17:00</button>
+                                </div>
+                                <div class="col-3">
+                                    <button class="btn">17:30</button>
+                                </div>
+                                <div class="col-3">
+                                    <button class="btn">18:00</button>
+                                </div>
+                                <div class="col-3">
+                                    <button class="btn">18:30</button>
+                                </div>
+                                <div class="col-3">
+                                    <button class="btn">19:00</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+
+            </div> -->
+
 
             </div>
         </div>

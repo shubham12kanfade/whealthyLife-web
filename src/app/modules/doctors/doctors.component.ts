@@ -76,7 +76,7 @@ export class DoctorsComponent implements OnInit {
       this.doctorList = resData.data;
       this.tempArray = resData.data;
       this.doctorList.forEach(ele => this.autoDoctList.push(ele.userId));
-      this.messageService.add({key: 'myKey1', severity:'success', summary: 'Summary Text', detail: 'Order submitted',life:50000});
+      // this.messageService.add({key: 'myKey1', severity:'success', summary: 'Summary Text', detail: 'Order submitted',life:50000});
 
       // setTimeout(() => {
       //   this.messageService.add({key: 'myKey1', severity:'success', summary: 'Summary Text', detail: 'Detail Text'});
@@ -216,11 +216,11 @@ export class DoctorsComponent implements OnInit {
 
 
 
-  showToast(type, messageType, message) {
-    setTimeout(() => {
-      this.messageService.add({ severity: type, summary: messageType, detail: message });
-    });
-  }
+  // showToast(type, messageType, message) {
+  //   setTimeout(() => {
+  //     this.messageService.add({ severity: type, summary: messageType, detail: message });
+  //   });
+  // }
 
 
 }

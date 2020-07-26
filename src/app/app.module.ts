@@ -18,6 +18,7 @@ import { NotificationPopupComponent } from './component/notification-popup/notif
 import { MyAppointmentsComponent } from './component/my-appointments/my-appointments.component'
 import { SocialLoginModule, AuthService } from 'angularx-social-login';
 import { AuthServiceConfig, GoogleLoginProvider, FacebookLoginProvider, LinkedInLoginProvider  } from 'angularx-social-login';
+import { ToastModule } from 'primeng/toast';
 
 
 const config = new AuthServiceConfig([
@@ -52,6 +53,7 @@ export function provideConfig() {
     ReactiveFormsModule,
     AutocompleteLibModule,
     HttpClientModule,
+    ToastModule,
     AgmCoreModule.forRoot()
   ],
 

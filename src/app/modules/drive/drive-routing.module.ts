@@ -1,3 +1,4 @@
+import { ChatsComponent } from './chats/chats.component';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { PaymentsComponent } from './payments/payments.component';
 import { ArticlesComponent } from './articles/articles.component';
@@ -40,6 +41,9 @@ const routes: Routes = [
       },
       {
         path: 'Payments', component: PaymentsComponent
+      },
+      {
+        path: 'Chat', component: ChatsComponent
       }
     ]
   },

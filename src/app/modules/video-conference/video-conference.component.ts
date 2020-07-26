@@ -132,7 +132,7 @@ const data={
 }
     this.confernceService.endSession(data).then(resData => {
       console.log("VideoConferenceComponent -> endSession -> resData", resData);
-      this.document.location.href = 'http://localhost:4200/my/Feedback';
+      this.document.location.href = 'http://localhost:4200/';
     }).catch(error => {
       console.log("VideoConferenceComponent -> endSession -> error", error)
     })

@@ -1,8 +1,10 @@
+import { BookingService } from './../../../services/booking.service';
+import { CookieService } from 'ngx-cookie-service';
 import { Component, OnInit } from '@angular/core';
 import { DoctorProfileService } from 'src/app/services/doctor-profile.service';
 import { ConsultationService } from 'src/app/services/consultation.service';
 import { Router, ActivatedRoute } from '@angular/router';
-
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-time-slot',
@@ -18,11 +20,15 @@ export class TimeSlotComponent implements OnInit {
   morningSlot: any = [];
   selectedSlot: any;
   show: any;
+  slot: any;
+  
+  cdate: string;
+  calenderDate: any;
+  slotbutton: any;
 
-
-  constructor(private route: ActivatedRoute,  public DoctorProfile: DoctorProfileService, public consultationService: ConsultationService,  public router: Router) { 
-   
-   
+  constructor(private BookingService:BookingService,private CookieService:CookieService, private route: ActivatedRoute,  public DoctorProfile: DoctorProfileService, public consultationService: ConsultationService,  public router: Router) { 
+  this.cdate =moment().format('llll');
+    console.log("TimeSlotComponent -> constructor -> now",  this.cdate)
     this.route.params.subscribe( params =>{
       this.id=params.id
       console.log("TimeSlotComponent -> constructor -> this.id", this.id)
@@ -30,7 +36,24 @@ export class TimeSlotComponent implements OnInit {
         
       } );
     this.getProfileDetails()
+    this.timeSlot()
   }
+
+
+  selectSolot(time,oclock){
+
+this.slotbutton=time
+console.log("TimeSlotComponent -> selectSolot -> time,oclock", time,oclock)
+
+  }
+  
+  
+  onSelect(event) {
+  console.log("TimeSlotComponent -> onSelect -> event", event)
+  this.calenderDate=event
+		// this.change.emit(event);
+	}
+
 
   ngOnInit(): void {
     // this.showtime(this.profileData)
@@ -44,9 +67,16 @@ export class TimeSlotComponent implements OnInit {
 
     this.DoctorProfile.getDoctorProfile(data)
       .then((resData) => {
+        console.log(
+          "DoctorProfileComponent -> getProfileDetails -> resData",
+          resData
+        );
+        
         this.profileData = resData.data;
-        this.showtime(this.profileData._id)
-        this.getSlot( this.profileData);
+        console.log("TimeSlotComponent -> getProfileDetails -> profileData", this.profileData)
+        this.showtime(this.profileData)
+      
+    
       })
       .catch((error) => {
         console.log(
@@ -56,16 +86,18 @@ export class TimeSlotComponent implements OnInit {
       });
   }
 
-  getSlot(id){
-    
-this.DoctorProfile.getSlot(id).then(resData=>{
-  resData
-  console.log("TimeSlotComponent -> getSlot -> resData++++++++++++++++++++", resData)
-}).catch((error=>{
-  console.log("TimeSlotComponent -> getSlot -> error++++++++++++++++++++++", error)
-}))
+  timeSlot(){
 
+this.DoctorProfile.getSlot(this.id).then((resData)=>{
+
+  this.slot=resData.data
+  console.log("TimeSlotComponent -> timeSlot -> slot",this.slot)
+}).catch((error)=>{
+console.log("TimeSlotComponent -> timeSlot -> error", error)
+  
+})
   }
+
 
   onConsultation(id) {
     var data = {
@@ -91,31 +123,55 @@ this.DoctorProfile.getSlot(id).then(resData=>{
   }
 
   showtime(doctor) {
-    this.show = doctor._id;
-    console.log("DoctorsComponent -> showtime -> doctor", doctor);
-    var session1Start = doctor.slots[0].session1Start.split(":");
-    var session1End = doctor.slots[0].session1End.split(":");
-    var session2Start = doctor.slots[0].session2Start.split(":");
-    var session2End = doctor.slots[0].session2End.split(":");
-    console.log("DoctorsComponent -> showtime -> session1Start", session1Start, session1End, session2Start, session2End)
-    this.morningSlot = [];
-    this.evningSlot = [];
+  console.log("TimeSlotComponent -> showtime -> doctor", doctor._id)
+  const pid=JSON.parse(this.CookieService.get('userInfo_WhealthyLife'))
 
-    for (var i = parseInt(session1Start[0]); i < parseInt(session1End[0]); i++) {
-      var hour = i < 10 ? '0' + i : i;
-      if (i <= 13) {
-        this.morningSlot.push({ label: hour + ':00', value: hour + ':00' });
-        this.morningSlot.push({ label: hour + ':30', value: hour + ':30' });
-      }
-    }
+const data={
+  petient:pid._id,
+  doctor:  doctor._id,
+  appoinmentType: "Scheduled",
+  status: "Pending",
+  date: this.calenderDate? this.calenderDate:this.cdate,
+  time: this.slotbutton
+}
+this.BookingService.addBooking(data).then((resData)=>{
+console.log("TimeSlotComponent -> showtime -> resData", resData)
+  
+}).catch((error)=>{
+console.log("TimeSlotComponent -> showtime -> error", error)
+  
+})
 
-    for (var i = parseInt(session2Start[0]); i < parseInt(session2End[0]); i++) {
-      var hour = i < 10 ? '0' + i : i;
-      if (i >= 13) {
-        this.evningSlot.push({ label: hour + ':00', value: hour + ':00' });
-        this.evningSlot.push({ label: hour + ':30', value: hour + ':30' });
-      }
-    }
+
+console.log("TimeSlotComponent -> showtime -> data", data)
+
+
+    
+    // this.show = doctor._id;
+    // console.log("DoctorsComponent -> showtime -> doctor", doctor);
+    // var session1Start = doctor.slots[0].session1Start.split(":");
+    // var session1End = doctor.slots[0].session1End.split(":");
+    // var session2Start = doctor.slots[0].session2Start.split(":");
+    // var session2End = doctor.slots[0].session2End.split(":");
+    // console.log("DoctorsComponent -> showtime -> session1Start", session1Start, session1End, session2Start, session2End)
+    // this.morningSlot = [];
+    // this.evningSlot = [];
+
+    // for (var i = parseInt(session1Start[0]); i < parseInt(session1End[0]); i++) {
+    //   var hour = i < 10 ? '0' + i : i;
+    //   if (i <= 13) {
+    //     this.morningSlot.push({ label: hour + ':00', value: hour + ':00' });
+    //     this.morningSlot.push({ label: hour + ':30', value: hour + ':30' });
+    //   }
+    // }
+
+    // for (var i = parseInt(session2Start[0]); i < parseInt(session2End[0]); i++) {
+    //   var hour = i < 10 ? '0' + i : i;
+    //   if (i >= 13) {
+    //     this.evningSlot.push({ label: hour + ':00', value: hour + ':00' });
+    //     this.evningSlot.push({ label: hour + ':30', value: hour + ':30' });
+    //   }
+    // }
 
   }
 

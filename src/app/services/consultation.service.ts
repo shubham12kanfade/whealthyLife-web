@@ -15,7 +15,7 @@ export class ConsultationService {
   }
 
   endSession(data) {
-    return this.api.getData('conference/end/session',data);
+    return this.api.postData('conference/end/session',data);
   }
 
   createSession(data) {

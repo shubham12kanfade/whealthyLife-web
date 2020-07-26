@@ -21,6 +21,7 @@ import { DoctorRegisterComponent } from 'src/app/component/doctor-register/docto
 import { VerifyOtpComponent } from 'src/app/component/verify-otp/verify-otp.component';
 import { SharedModule } from '../../shared/shared.module';
 import { PrivcyPolicyComponent } from './privcy-policy/privcy-policy.component';
+import { ToastModule } from 'primeng/toast';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { PrivcyPolicyComponent } from './privcy-policy/privcy-policy.component';
     CarouselModule,
     FormsModule,
     ReactiveFormsModule,
-    SharedModule
+    SharedModule,
+    ToastModule
   ]
 })
 export class PublicModule { }

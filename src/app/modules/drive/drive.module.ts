@@ -13,6 +13,7 @@ import { FeedbackComponent } from './feedback/feedback.component';
 import { PaymentsComponent } from './payments/payments.component';
 import { SharedModule } from './../../shared/shared.module';
 import { UploadRecordsComponent } from './upload-records/upload-records.component';
+import { ChatsComponent } from './chats/chats.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { UploadRecordsComponent } from './upload-records/upload-records.componen
     FeedbackComponent,
     PaymentsComponent,
     UploadRecordsComponent,
+    ChatsComponent,
   ],
 
 
