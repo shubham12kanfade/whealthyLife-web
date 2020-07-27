@@ -11,6 +11,7 @@ import { AutocompleteLibModule } from 'angular-ng-autocomplete';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NotificationPopupComponent } from './notification-popup/notification-popup.component';
 import { ToastModule } from 'primeng/toast';
+import { TreatmentsComponent } from './treatments/treatments.component';
 
 
 
@@ -20,7 +21,8 @@ import { ToastModule } from 'primeng/toast';
     DoctorsComponent,
     DoctorProfileComponent,
     TimeSlotComponent,
-    NotificationPopupComponent
+    NotificationPopupComponent,
+    TreatmentsComponent
   ],
   imports: [
     CommonModule,

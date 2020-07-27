@@ -3,8 +3,17 @@
         <div class="col-md-5 col-lg-3 offset-md-2">
             <p style="font-size: 15px;">Please enter your base level qualification.</p>
             <div class="form-group">
-                <label for="degree">Degree</label>
-                <input type="text" class="form-control" formControlName="degree" id="degree" placeholder="MBA">
+                <label for="college">Degree</label>
+                <input matInput placeholder="Degree" aria-label="State" [matAutocomplete]="auto" [formControl]="stateCtrl" style="width: 100%;" (keyup.enter)="enter()">
+                <mat-autocomplete #auto="matAutocomplete" (optionSelected)="optionSelected($event.option)">
+                    <mat-option *ngFor="let state of filteredStates | async" [value]="state">
+                        <span>{{ state }}</span>
+                    </mat-option>
+                </mat-autocomplete>
+
+
+
+
                 <div *ngIf="submitted && f.degree.errors" class="error-block display-block">
                     <div *ngIf="f.degree.errors.required">Degree is required</div>
                 </div>
@@ -46,15 +55,11 @@
             </div>
         </div>
         <div class="col-md-3 col-lg-5 offset-md-1">
-            <div class=" d-none d-sm-none d-md-block col-md-12 col-lg-8 mt-5 ml-5 pr-0 pl-0"
-                style="border: 1px solid #14aa9b;">
+            <div class=" d-none d-sm-none d-md-block col-md-12 col-lg-8 mt-5 ml-5 pr-0 pl-0" style="border: 1px solid #14aa9b;">
                 <div class=" bg p-4 textcol">
                     <div><i class="fa fa-lightbulb-o fa-lg" aria-hidden="true"></i> </div>
-                    <p class="stext font-weight-bold">On WhealthyLife, doctors are listed under the relevant
-                        specializations
-                        based on their academic degrees. Both, education and years of experience, showcase doctor’s
-                        expertise and are among the top 3 things that patients consider while making
-                        their decision</p>
+                    <p class="stext font-weight-bold">On WhealthyLife, doctors are listed under the relevant specializations based on their academic degrees. Both, education and years of experience, showcase doctor’s expertise and are among the top 3 things that patients consider while
+                        making their decision</p>
                 </div>
             </div>
         </div>

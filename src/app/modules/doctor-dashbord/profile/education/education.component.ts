@@ -5,12 +5,35 @@ import { UploadService } from 'src/app/services/upload.service';
 import { MessageService } from 'primeng/api';
 import { MatStepper } from '@angular/material/stepper';
 
+import { Observable } from 'rxjs/Observable';
+import { startWith } from 'rxjs/operators/startWith';
+import { map } from 'rxjs/operators/map';
+
+export class State {
+  constructor(public name: string, public population: string, public flag: string) { }
+}
+
+
 @Component({
   selector: 'app-education',
   templateUrl: './education.component.html',
   styleUrls: ['./education.component.scss']
 })
 export class EducationComponent implements OnInit {
+ 
+  stateCtrl: FormControl;
+  filteredStates: Observable<any[]>;
+
+  question = 'Would you like to add "';
+
+  states: string[] = [
+    'Arkansas',
+    'California',
+    'Florida',
+    'Texas'
+  ];
+
+ 
   items: any = [];
   profileform: FormGroup;
   avatar: any;
@@ -23,7 +46,12 @@ export class EducationComponent implements OnInit {
     public messageService: MessageService,
     public uploadService: UploadService,
     private formBuilder: FormBuilder) {
-
+      this.stateCtrl = new FormControl();
+      this.filteredStates = this.stateCtrl.valueChanges
+        .pipe(
+        startWith(''),
+        map(state => state ? this.filterStates(state) : this.states.slice())
+        );
       this.profileform = this.formBuilder.group({
         degree: new FormControl('', [Validators.required]),
       college: new FormControl('', [Validators.required]),
@@ -84,5 +112,37 @@ export class EducationComponent implements OnInit {
   }
 
   ngOnInit() { }
+
+
+
+  filterStates(name: string) {
+    let results = this.states.filter(state =>
+      state.toLowerCase().indexOf(name.toLowerCase()) === 0);
+
+    if (results.length < 1) {
+      results = [this.question + name + '"?'];
+    }
+
+    return results;
+  }
+
+  optionSelected(option) {
+    console.log('optionSelected:', option.value);
+    if (option.value.indexOf(this.question) === 0) {
+      let newState = option.value.substring(this.question.length).split('"?')[0];
+      console.log("EducationComponent -> optionSelected -> newState", newState)
+      this.states.push(newState);
+      this.stateCtrl.setValue(newState);
+    }
+  }
+
+  enter() {
+    const value = this.stateCtrl.value;
+    if (!this.states.some(entry => entry === value)) {
+      this.states.push(value);
+    }
+    setTimeout(() => this.stateCtrl.setValue(value));
+  }
+
 
 }

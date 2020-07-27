@@ -4,12 +4,15 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { DoctorsComponent } from './doctors.component';
 import { DoctorProfileComponent } from './doctor-profile/doctor-profile.component';
+import { TreatmentsComponent } from './treatments/treatments.component';
 
 
 const routes: Routes = [
   { path: '', component: DoctorsComponent },
   { path: 'doctor_profile/:id', component: DoctorProfileComponent },
-  { path: 'timeSlot/:id', component: TimeSlotComponent }
+  { path: 'timeSlot/:id', component: TimeSlotComponent },
+  { path: 'treatments/:id', component: TreatmentsComponent },
+
 ];
 
 @NgModule({

@@ -3,5 +3,5 @@ export const environment = {
   production: false,
   // apiUrl:"http://3.6.80.178:3311/api/v1/",
    //apiUrl:"http://3.6.80.178:3311/api/v1/"
- apiUrl:"http://169.254.8.146:3311/api/v1/"
+ apiUrl:"http://192.168.43.164:3311/api/v1/"
 };
