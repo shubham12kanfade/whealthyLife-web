@@ -8,7 +8,6 @@ import { TimeSlotComponent } from './time-slot/time-slot.component';
 import { MatDialog } from '@angular/material/dialog';
 import { SpecialityService } from 'src/app/services/speciality.service';
 import { MessageService } from 'primeng/api';
-
 @Component({
   selector: 'app-doctors',
   templateUrl: './doctors.component.html',
@@ -25,13 +24,11 @@ export class DoctorsComponent implements OnInit {
   docId: any;
   specialityList: any;
   autoDoctList: any=[];
-
   // countries: any=[];
   keyword = 'firstName';
   tempArray: any=[];
   showDatas: any;
   searchText: any;
-
   searchForm: FormGroup;
 //   data = [
 //     {
@@ -43,9 +40,6 @@ export class DoctorsComponent implements OnInit {
 //       name: 'England'
 //     }
 //  ];
-  
-
-
   constructor(public consultationService: ConsultationService,
     public userService: UserService,
     public router: Router,
@@ -56,7 +50,6 @@ export class DoctorsComponent implements OnInit {
     this.getScroll();
     this.getDoctorList();
     // this.placesLoad();
-
     this.speciality.getSpecialization().then((resData:any)=>{
     console.log("DoctorsComponent -> resData", resData)
     this.specialityList=resData.data;
@@ -77,31 +70,24 @@ export class DoctorsComponent implements OnInit {
       this.tempArray = resData.data;
       this.doctorList.forEach(ele => this.autoDoctList.push(ele.userId));
       // this.messageService.add({key: 'myKey1', severity:'success', summary: 'Summary Text', detail: 'Order submitted',life:50000});
-
       // setTimeout(() => {
       //   this.messageService.add({key: 'myKey1', severity:'success', summary: 'Summary Text', detail: 'Detail Text'});
       // });
-
     }).catch(error => {
       console.log("DoctorsComponent -> getDoctorList -> error", error);
     })
   }
-
   clear() {
     this.messageService.clear('myKey1');
 }
-
-
   search(){
     this.doctorList = this.tempArray;
     this.doctorList = this.tempArray.filter(ele => ele.userId.firstName.includes(this.searchText.toLowerCase()));
     console.log("DoctorsComponent -> search -> this.searchText", this.searchText)
     if (!this.searchText) {
       this.doctorList = this.tempArray;
-      
     }
   }
-
   // placesLoad() {
   //   this.mapsAPILoader.load().then(() => {
   //     let autocomplete = new google.maps.places.Autocomplete(this.searchElementRef.nativeElement, {
@@ -118,10 +104,6 @@ export class DoctorsComponent implements OnInit {
   //     });
   //   });
   // }
-
-
-  
-
   onConsultation(id) {
     var data = {
       doctor: id
@@ -133,28 +115,21 @@ export class DoctorsComponent implements OnInit {
       console.log("DoctorsComponent -> onConsultation -> error", error);
     })
   }
-
   onSelectSlot(time) {
     this.selectedSlot = time;
   }
-
   selectEvent(item) {
     // do something with selected item
   }
- 
   onChangeSearch(val: string) {
     // fetch remote data from here
     // And reassign the 'data' which is binded to 'data' property.
   }
-  
   onFocused(e){
     // do something when input is focused
   }
-
   ngOnInit(): void {
-
   }
-
   showtime(doctor) {
     this.show = doctor._id;
     console.log("DoctorsComponent -> showtime -> doctor", doctor);
@@ -165,7 +140,6 @@ export class DoctorsComponent implements OnInit {
     console.log("DoctorsComponent -> showtime -> session1Start", session1Start, session1End, session2Start, session2End)
     this.morningSlot = [];
     this.evningSlot = [];
-
     for (var i = parseInt(session1Start[0]); i < parseInt(session1End[0]); i++) {
       var hour = i < 10 ? '0' + i : i;
       if (i <= 13) {
@@ -173,7 +147,6 @@ export class DoctorsComponent implements OnInit {
         this.morningSlot.push({ label: hour + ':30', value: hour + ':30' });
       }
     }
-
     for (var i = parseInt(session2Start[0]); i < parseInt(session2End[0]); i++) {
       var hour = i < 10 ? '0' + i : i;
       if (i >= 13) {
@@ -181,29 +154,23 @@ export class DoctorsComponent implements OnInit {
         this.evningSlot.push({ label: hour + ':30', value: hour + ':30' });
       }
     }
-
   }
-
   avaialableclick() {
     this.aval = !this.aval;
   }
-
   getScroll() {
     $(window).scroll(function () {
       var sticky = $('.sticky'),
         scroll = $(window).scrollTop();
-
       if (scroll >= 100) sticky.addClass('fixed');
       else sticky.removeClass('fixed');
     });
     $(window).scroll(function () {
       var sticky = $('.sticky1'),
         scroll = $(window).scrollTop();
-
       if (scroll >= 100 && scroll <= 1600) sticky.addClass('fixed1');
       else sticky.removeClass('fixed1');
     });
-
     $(window).scroll(function () {
       if ($(window).scrollTop() >= 112) {
         $('.sticky-outer-wrapper').addClass('fixed-sticky-outer');
@@ -211,16 +178,10 @@ export class DoctorsComponent implements OnInit {
         $('.sticky-outer-wrapper').removeClass('fixed-sticky-outer');
       }
     });
-
   }
-
-
-
   // showToast(type, messageType, message) {
   //   setTimeout(() => {
   //     this.messageService.add({ severity: type, summary: messageType, detail: message });
   //   });
   // }
-
-
 }

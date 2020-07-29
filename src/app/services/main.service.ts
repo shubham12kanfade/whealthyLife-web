@@ -53,4 +53,7 @@ export class MainService {
     return this.api.getData('doctor/profile/percentage');
   }
 
+  addDegree(data){
+    return this.api.postData('qualification/add', data)
+  }
 }
