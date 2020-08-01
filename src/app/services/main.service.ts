@@ -53,7 +53,7 @@ export class MainService {
     return this.api.getData('doctor/profile/percentage');
   }
 
-  addDegree(data){
-    return this.api.postData('qualification/add', data)
+  getDegree(){
+    return this.api.getData('qualification/get/all')
   }
 }

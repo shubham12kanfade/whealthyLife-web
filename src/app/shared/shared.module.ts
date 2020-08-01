@@ -29,6 +29,8 @@ import {MatBadgeModule} from '@angular/material/badge';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatSliderModule} from '@angular/material/slider';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import {MatChipsModule} from '@angular/material/chips';
+import { MatOption, MatOptionModule } from '@angular/material/core';
 
 const material = [
   CommonModule,
@@ -59,7 +61,9 @@ const material = [
   MatBadgeModule,
   MatExpansionModule,
   MatSliderModule,
-  MatAutocompleteModule
+  MatAutocompleteModule,
+  MatChipsModule,
+  MatOptionModule,
 ]
 
 @NgModule({
@@ -95,7 +99,9 @@ const material = [
   MatBadgeModule,
   MatExpansionModule,
   MatSliderModule,
-  MatAutocompleteModule
+  MatAutocompleteModule,
+  MatChipsModule,
+  MatOptionModule
   ],
   exports: [
     CommonModule,
@@ -128,7 +134,9 @@ const material = [
     MatBadgeModule,
     MatExpansionModule,
     MatSliderModule,
-    MatAutocompleteModule
+    MatAutocompleteModule,
+    MatChipsModule,
+    MatOptionModule,
   ]
 })
 export class SharedModule { }

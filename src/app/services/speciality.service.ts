@@ -9,7 +9,7 @@ export class SpecialityService {
   constructor(public Api: ApiCallService) { }
 
   getSpecialization(){
-    return this.Api.getData('country/specialisations/');
+    return this.Api.getData('specialization/get/all/');
   }
 
 

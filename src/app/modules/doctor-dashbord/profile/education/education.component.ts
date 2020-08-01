@@ -27,35 +27,24 @@ export class EducationComponent implements OnInit {
 
   question = 'Would you like to add "';
 
-  states: string[] = [
-    'Arkansas',
-    'California',
-    'Florida',
-    'Texas'
-  ];
+  states: any;
 
 
   items: any = [];
   profileform: FormGroup;
   avatar: any;
-
+  name = 'Angular';
+  options:any = [];
   @Input() stepper: MatStepper;
   submitted: boolean = false;
   dynamicForm: FormGroup;
   seedData = [
-
-
     { degree: '', college: '', yearOfCompletion: '' },
-
   ]
-
-
 
   stateCtrl: FormControl;
   optionvalue: any;
   addFields: any;
-
-
 
   constructor(public mainService: MainService,
     public messageService: MessageService,
@@ -63,14 +52,13 @@ export class EducationComponent implements OnInit {
     private fb: FormBuilder,
     private CookieService: CookieService) {
 
-    this.stateCtrl = new FormControl();
-    this.filteredStates = this.stateCtrl.valueChanges
-      .pipe(
-        startWith(''),
-        map(state => state ? this.filterStates(state) : this.states.slice())
-      );
-
-
+      mainService.getDegree().then((resData)=>{
+      console.log("EducationComponent -> resData", resData.data);
+        this.states = resData.data;
+      }).catch((error)=>{
+      console.log("EducationComponent -> error", error)
+        
+      })
 
     this.items.length = 100;
     this.getProfile();
@@ -139,13 +127,13 @@ export class EducationComponent implements OnInit {
     console.log("EducationComponent -> save -> data", data)
 
 
-    this.mainService.addDegree(data).then(resData => {
-      console.log("EducationComponent -> save -> resData", resData)
-      this.showToast('success', 'Profile', 'Profile updated successfully');
-      this.stepper.next();
-    }).catch(error => {
-      console.log("EditProfileComponent -> onSave -> error", error)
-    })
+    // this.mainService.addDegree(data).then(resData => {
+    //   console.log("EducationComponent -> save -> resData", resData)
+    //   this.showToast('success', 'Profile', 'Profile updated successfully');
+       this.stepper.next();
+    // }).catch(error => {
+    //   console.log("EditProfileComponent -> onSave -> error", error)
+    // })
   }
 
   get filtersFormArray() {
@@ -186,7 +174,9 @@ export class EducationComponent implements OnInit {
       console.log("EditProfileComponent -> onSave -> error", error)
     })
   }
-
+  onItemAdded(itemToBeAdded) {
+    console.log('Item to be added: ', itemToBeAdded);
+  }
 
 
   showToast(type, messageType, message) {
@@ -195,49 +185,6 @@ export class EducationComponent implements OnInit {
     });
   }
 
-  filterStates(name: string) {
-    let results = this.states.filter(state =>
-      state.toLowerCase().indexOf(name.toLowerCase()) === 0);
-
-    if (results.length < 1) {
-      results = [this.question + name + '"?'];
-    }
-
-    return results;
-  }
-
-  optionSelected(option) {
-    console.log('optionSelected:', option.value);
-    this.optionvalue = option.value
-
-    if (option.value.indexOf(this.question) === 0) {
-      let newState = option.value.substring(this.question.length).split('"?')[0];
-      this.states.push(newState);
-      this.stateCtrl.setValue(newState);
-    }
-  }
-
-  enter(event) {
-    const value = event.target.value;
-    console.log("EducationComponent -> enter -> value", value, this.states, this.filteredStates);
-    var filterValue = this.states.filter(entry => entry.toLocaleLowerCase().includes(value.toLocaleLowerCase()));
-    console.log("EducationComponent -> enter -> filterValue", filterValue)
-    if (filterValue.length == 0) {
-      // this.states.push(value);
-      // this.stateCtrl.setValue(event.target.value);
-      this.addFields = event.target.value;
-    } else {
-      this.addFields = null;
-    }
-    // setTimeout(() => this.stateCtrl.setValue(value));
-  }
-
-
-
-
-  onAddFields(){
-
-  }
 
 
 }

@@ -16,6 +16,7 @@ import { ConsultantDetailsComponent } from "./consultant-details/consultant-deta
 import { SharedModule } from "./../../../shared/shared.module";
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DynamicAutocompleteComponent } from './dynamic-autocomplete/dynamic-autocomplete.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ClinicLocationComponent,
     ClinicTimingsComponent,
     ConsultantDetailsComponent,
-    EditProfileComponent
+    EditProfileComponent,
+    DynamicAutocompleteComponent
   ],
   imports: [
     CommonModule,

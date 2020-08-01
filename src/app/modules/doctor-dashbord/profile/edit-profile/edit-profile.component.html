@@ -23,11 +23,8 @@
                                     <div>Profile photo</div>
                                     <div class="row">
                                         <div class="col-sm-6" style="padding: 10px;">
-                                            <img [src]="avatar"
-                                                onerror="this.src='../../../.././../assets/img/avatar.png'"
-                                                class="profile-avtar">
-                                            <input type="file" style="display: none;" #file
-                                                (change)="browseFile($event)">
+                                            <img [src]="avatar" onerror="this.src='../../../.././../assets/img/avatar.png'" class="profile-avtar">
+                                            <input type="file" style="display: none;" #file (change)="browseFile($event)">
                                         </div>
                                         <div class="col-sm-6 ">
                                             <div>
@@ -42,15 +39,13 @@
                                 <div class="col-sm-3 ">
                                     <div class="form-group">
                                         <label for="firstname">First Name<span>*</span></label>
-                                        <input type="text" formControlName="firstName" class="form-control"
-                                            id="firstname">
+                                        <input type="text" formControlName="firstName" class="form-control" id="firstname">
                                     </div>
                                 </div>
                                 <div class="col-sm-3 ">
                                     <div class="form-group">
                                         <label for="lastName">Last Name<span>*</span></label>
-                                        <input type="text" formControlName="lastName" class="form-control"
-                                            id="lastName">
+                                        <input type="text" formControlName="lastName" class="form-control" id="lastName">
                                     </div>
                                 </div>
 
@@ -58,16 +53,14 @@
                                     <div class="form-group">
                                         <label for="Specialization">Phone number</label>
                                         <!-- <a style="float: right ;color:blue">Edit</a> -->
-                                        <input type="number" formControlName="mobileNumber" class="form-control"
-                                            readonly id="Contact">
+                                        <input type="number" formControlName="mobileNumber" class="form-control" readonly id="Contact">
                                     </div>
                                 </div>
                                 <div class="col-sm-6  mt-4">
                                     <div class="form-group">
                                         <label for="gstin">Email Address</label>
                                         <!-- <a style="float: right; color:blue">Edit</a> -->
-                                        <input type="email" formControlName="email" class="form-control" readonly
-                                            id="gstin">
+                                        <input type="email" formControlName="email" class="form-control" readonly id="gstin">
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
@@ -86,14 +79,20 @@
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <label for="Specialisations">Specialisations</label>
-                                        <select class="form-control" formControlName="specialitie" id="Specialisations"
-                                            placeholder="Select an Option">
-                                            <option *ngFor="let spec of speciality" [value]="spec?.name">{{spec?.value}}
-                                            </option>
-                                        </select>
-                                    </div>
+                                    <mat-form-field class="example-chip-list">
+                                        <mat-chip-list #chipList aria-label="Fruit selection">
+                                            <mat-chip *ngFor="let fruit of fruits" [selectable]="selectable" [removable]="removable" (removed)="remove(fruit)">
+                                                {{fruit.shortName}}
+                                                <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+                                            </mat-chip>
+                                            <input placeholder="New fruit..." #fruitInput [formControl]="fruitCtrl" [matAutocomplete]="auto" [matChipInputFor]="chipList" [matChipInputSeparatorKeyCodes]="separatorKeysCodes" (matChipInputTokenEnd)="add($event)">
+                                        </mat-chip-list>
+                                        <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
+                                            <mat-option *ngFor="let fruit of filteredFruits" [value]="fruit">
+                                                {{fruit}}
+                                            </mat-option>
+                                        </mat-autocomplete>
+                                    </mat-form-field>
                                 </div>
                                 <hr style="border-top: 1px solid lightgray;">
                                 <div class="col-sm-6">
@@ -112,8 +111,7 @@
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <label for="timezone"> Time Zone</label>
-                                        <select class="form-control" id="timezone" formControlName="timeZone"
-                                            placeholder="Select an Option">
+                                        <select class="form-control" id="timezone" formControlName="timeZone" placeholder="Select an Option">
                                             <option *ngFor="let time of timeZone" [value]="time?.name">{{time?.value}}
                                             </option>
                                         </select>
@@ -149,8 +147,7 @@
                                             Country<span>
                                                 *
                                             </span></label>
-                                        <select class="form-control" id="country" formControlName="country"
-                                            (change)="getState()">
+                                        <select class="form-control" id="country" formControlName="country" (change)="getState()">
                                             <option *ngFor="let country of countryList" [value]="country?.id">
                                                 {{country?.name}}</option>
                                         </select>
@@ -163,8 +160,7 @@
                                         <label for="Specialization">
                                             State
                                         </label>
-                                        <select class="form-control" id="state" formControlName="state"
-                                            (change)="getCity()">
+                                        <select class="form-control" id="state" formControlName="state" (change)="getCity()">
                                             <option *ngFor="let state of stateList" [value]="state?.id">
                                                 {{state?.name}}</option>
                                         </select>
@@ -187,8 +183,7 @@
                                             <div class="form-group">
                                                 <label for="Specialization">
                                                     Pincode</label>
-                                                <input type="number" formControlName="pincode" class="form-control"
-                                                    id="Contact">
+                                                <input type="number" formControlName="pincode" class="form-control" id="Contact">
                                             </div>
                                         </div>
                                     </div>

@@ -1,8 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { SpecialityService } from './../../../../services/speciality.service';
+import { Component, OnInit,ElementRef, ViewChild } from '@angular/core';
 import { MainService } from 'src/app/services/main.service';
 import { FormGroup, FormControl, FormControlName } from '@angular/forms';
 import { UploadService } from 'src/app/services/upload.service';
 import { MessageService } from 'primeng/api';
+import {COMMA, ENTER} from '@angular/cdk/keycodes';
+
+
+import {MatAutocompleteSelectedEvent, MatAutocomplete} from '@angular/material/autocomplete';
+import {MatChipInputEvent} from '@angular/material/chips';
+import {Observable} from 'rxjs';
+import {map, startWith} from 'rxjs/operators';
 
 @Component({
   selector: 'app-edit-profile',
@@ -20,10 +28,36 @@ export class EditProfileComponent implements OnInit {
   timeZone: any;
   speciality: any;
 
+
+
+  visible = true;
+  selectable = true;
+  removable = true;
+  separatorKeysCodes: number[] = [ENTER, COMMA];
+  fruitCtrl = new FormControl();
+  filteredFruits: Observable<string[]>;
+  fruits: any;
+  allFruits: string[] = ['Apple', 'Lemon', 'Lime', 'Orange', 'Strawberry'];
+
+  @ViewChild('fruitInput') fruitInput: ElementRef<HTMLInputElement>;
+  @ViewChild('auto') matAutocomplete: MatAutocomplete;
+
+
   constructor(public mainService: MainService,
     public uploadService: UploadService,
-    public messageService: MessageService
+    public messageService: MessageService,
+    public SpecialityService:SpecialityService
   ) {
+
+    this.filteredFruits = this.fruitCtrl.valueChanges.pipe(
+      startWith(null),
+      map((fruit: string | null) => fruit ? this._filter(fruit) : this.allFruits.slice()));
+this.SpecialityService.getSpecialization().then((resData)=>{
+console.log("EditProfileComponent -> resData", resData)
+//
+  this.fruits=resData.data
+})
+
     this.profileForm = new FormGroup({
       firstName: new FormControl(''),
       lastName: new FormControl(''),
@@ -150,5 +184,44 @@ export class EditProfileComponent implements OnInit {
       this.messageService.add({ severity: type, summary: messageType, detail: message });
     });
   }
+
+  add(event: MatChipInputEvent): void {
+    const input = event.input;
+    const value = event.value;
+
+    // Add our fruit
+    if ((value || '').trim()) {
+      this.fruits.push({shortName:value.trim()});
+    }
+
+    // Reset the input value
+    if (input) {
+      input.value = '';
+    }
+
+    this.fruitCtrl.setValue(null);
+  }
+
+  remove(fruit: string): void {
+    const index = this.fruits.indexOf(fruit);
+
+    if (index >= 0) {
+      this.fruits.splice(index, 1);
+    }
+  }
+
+  selected(event: MatAutocompleteSelectedEvent): void {
+    this.fruits.push({shortName:event.option.viewValue});
+    this.fruitInput.nativeElement.value = '';
+    this.fruitCtrl.setValue(null);
+  }
+
+  private _filter(value: string): string[] {
+    const filterValue = value.toLowerCase();
+
+    return this.allFruits.filter(fruit => fruit.toLowerCase().indexOf(filterValue) === 0);
+  }
+  
+
 
 }
