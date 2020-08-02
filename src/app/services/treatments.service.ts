@@ -8,4 +8,8 @@ export class TreatmentsService {
 getTreatmentsbyId(data){
 return this.ApiCallService.getData('treatment/get/all/by/doctor/'+data)
 }
+getTreatmentUsingSpecializetion(specialization){
+  return this.ApiCallService.getData('treatment/get/all/by/'+specialization)
+}
+
 }

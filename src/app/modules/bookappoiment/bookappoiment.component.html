@@ -12,14 +12,12 @@
                             <span class="c-omni-searchbox__icon">
                                 <i class="icon-ic_location"></i>
                             </span>
-                            <input data-qa-id="omni-searchbox-locality"
-                                class="c-omni-searchbox c-omni-searchbox--large dropdown-toggle" autocomplete="off"
-                                placeholder="Search location" #search><span class="c-omni-searchbox__button-container">
+                            <input data-qa-id="omni-searchbox-locality" class="c-omni-searchbox c-omni-searchbox--large dropdown-toggle" autocomplete="off" placeholder="Search location" #search><span class="c-omni-searchbox__button-container">
                                 <span class="c-omni-searchbox__button c-omni-searchbox__button"
                                     data-qa-id="current_location">
                                     <i class="icon-ic_gps_system"></i>
                                     <span class="c-omni-searchbox__button__text">Detect</span>
-                                </span>
+                            </span>
                             </span>
                         </div>
                     </div>
@@ -29,11 +27,8 @@
                                 <i class="icon-ic_search"></i>
                             </span>
                             <div class="">
-                                <ng-autocomplete [data]="countries" class="" [searchKeyword]="keyword"
-                                    placeHolder="Search  Clinics Heare !"
-                                    (selected)='selectEvent($event)' (inputChanged)='onChangeSearch($event)'
-                                    (inputFocused)='onFocused($event)' historyIdentifier="countries"
-                                    [itemTemplate]="itemTemplate" [notFoundTemplate]="notFoundTemplate">
+                                <ng-autocomplete [data]="countries" class="" [searchKeyword]="keyword" placeHolder="Search  Clinics Heare !" (selected)='selectEvent($event)' (inputChanged)='onChangeSearch($event)' (inputFocused)='onFocused($event)' historyIdentifier="countries" [itemTemplate]="itemTemplate"
+                                    [notFoundTemplate]="notFoundTemplate">
                                 </ng-autocomplete>
 
                                 <ng-template #itemTemplate let-item>
@@ -54,10 +49,9 @@
                         <li data-qa-id="popular-searches"><strong style="color: #fff;">Popular searches:</strong></li>
                         <li> <a data-qa-id="popular-search-item" href="/bangalore/dermatologist">Dermatologist</a></li>
                         <li><a data-qa-id="popular-search-item" href="/bangalore/pediatrician">Pediatrician</a></li>
-                        <li><a data-qa-id="popular-search-item"
-                                href="/bangalore/gynecologist-obstetrician">Gynecologist/Obstetrician</a></li>
-                        <li><span class="c-popular-searches"><span data-qa-id="others-speciality">Others</span><i
-                                    class="icon-ic_down_cheveron"></i></span></li>
+                        <li><a data-qa-id="popular-search-item" href="/bangalore/gynecologist-obstetrician">Gynecologist/Obstetrician</a></li>
+                        <li><span class="c-popular-searches"><span data-qa-id="others-speciality">Others</span><i class="icon-ic_down_cheveron"></i></span>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -67,19 +61,18 @@
         </div>
     </div>
     <div class="c-icon-list mt-57 book-opp">
-        <div class="c-icon-list__list_wrapper"><a data-qa-id="consult-icon" class="c-icon"
-                [routerLink]="['./chatnow']" routerLinkActive="router-link-active">
+        <div class="c-icon-list__list_wrapper">
+            <a data-qa-id="consult-icon" class="c-icon" [routerLink]="['./chatnow']" routerLinkActive="router-link-active">
                 <span class="icon-set tab-icon c-icon__img"><img src="../../../assets/img/chat-24px.svg"
                         class="img-icon"></span>
                 <span>Chat with a doctor</span>
             </a>
-            <a data-qa-id="order-icon" class="c-icon" [routerLink]="['/order']"   >
+            <a data-qa-id="order-icon" class="c-icon" [routerLink]="['/order']">
                 <span class="icon-set tab-icon c-icon__img"><img src="../../../assets/img/add_shopping_cart-24px.svg"
                         class="img-icon"></span>
                 <span>Order Medicines</span>
             </a>
-            <a data-qa-id="drive-icon" class="c-icon"
-                href="https://drive.WhealthyLife.com?utm_source=WhealthyLife_home">
+            <a data-qa-id="drive-icon" class="c-icon" href="https://drive.WhealthyLife.com?utm_source=WhealthyLife_home">
                 <span class="icon-set tab-icon c-icon__img">
                     <img src="../../../assets/img/library_books-24px.svg" class="img-icon">
                 </span>
@@ -91,14 +84,14 @@
                     <span class="c-offer-tag u-round-corner u-border-white u-t-bold u-t-white">New</span></div>
                 <span>Book test</span>
             </a>
-            <a data-qa-id="healthfeed-icon" class="c-icon"
-                href="/healthfeed?utm_source=WhealthyLife_home"><span class="icon-set tab-icon c-icon__img"><img
+            <a data-qa-id="healthfeed-icon" class="c-icon" href="/healthfeed?utm_source=WhealthyLife_home"><span class="icon-set tab-icon c-icon__img"><img
                         src="../../../assets/img/menu_book-24px.svg" class="img-icon"></span>
-                <span>Read articles</span></a><a data-qa-id="providers-icon" class="c-icon"
-                href="/providers?utm_source=WhealthyLife_home">
+                <span>Read articles</span></a>
+            <a data-qa-id="providers-icon" class="c-icon" href="/providers?utm_source=WhealthyLife_home">
                 <span class="icon-set tab-icon c-icon__img"><img src="../../../assets/img/local_mall-24px.svg"
                         class="img-icon"></span>
-                <span>For healthcare providers</span></a></div>
+                <span>For healthcare providers</span></a>
+        </div>
     </div>
 
     <section class="first-sec book-appoiment">
@@ -108,8 +101,7 @@
                 <div class="col-md-6">
                     <div class="c-section__highlights">
                         <div class="c-section__highlights_title">
-                            <h2>Safety of your data is our<br>
-                                top priority.
+                            <h2>Safety of your data is our<br> top priority.
                             </h2>
                         </div>
                         <div class="c-list-item">
@@ -130,8 +122,7 @@
                                 <span>Stringent data privacy
                                     policies</span></div>
                         </div>
-                        <div data-qa-id="security-cta" class="u-m-t-25 u-d-inline-block"><a class="c-button__redirect"
-                                href="/company/security" target="_blank">Read more</a></div>
+                        <div data-qa-id="security-cta" class="u-m-t-25 u-d-inline-block"><a class="c-button__redirect" href="/company/security" target="_blank">Read more</a></div>
                     </div>
                 </div>
 
@@ -188,8 +179,7 @@
                 <div class="col-md-6">
                     <div class="row">
                         <div class="col-md-12">
-                            <h2>Instant appointment with doctors.
-                                Guaranteed.
+                            <h2>Instant appointment with doctors. Guaranteed.
                             </h2>
                             <div class="c-list-item">
                                 <div>
@@ -207,45 +197,26 @@
                                 <div><span class="c-icon__img"><img src="../../../assets/img/check-24px.svg"></span>
                                     <span>25M Patients/year</span></div>
                             </div>
-                            <div data-qa-id="book-cta" class="u-m-t-25 u-d-inline-block"><a class="c-button__redirect"
-                                    href="/bangalore/doctors" target="_blank">Find me the right doctor</a>
+                            <div data-qa-id="book-cta" class="u-m-t-25 u-d-inline-block"><a class="c-button__redirect" href="/bangalore/doctors" target="_blank">Find me the right doctor</a>
                             </div>
                         </div>
 
                         <div class="col-md-12">
                             <div class="c-testimonial-list">
-                                <div class="slick-slider slick-initialized" dir="ltr"><span
-                                        class="c-testimonial-list__prev_arrow c-testimonial-list__arrow c-icon__img">
+                                <div class="slick-slider slick-initialized" dir="ltr"><span class="c-testimonial-list__prev_arrow c-testimonial-list__arrow c-icon__img">
                                         <img class="prev-arrow" src="../../../assets/img/arrow_back_ios-24px.svg" />
                                     </span>
                                     <div class="slick-list">
                                         <owl-carousel-o class="slick-track" [options]="customOptionsOne">
-                                            <ng-template carouselSlide data-index="-1" tabindex="-1"
-                                                class="slick-slide slick-cloned" style="width: 420px;">
+                                            <ng-template carouselSlide data-index="-1" tabindex="-1" class="slick-slide slick-cloned" style="width: 420px;">
                                                 <div>
                                                     <div class="u-t-grey">
                                                         <div class="c-testimonial__review_star u-m-b-10 u-t-green">
-                                                            <i class="icon-ic_star_solid icon-star"></i><i
-                                                                class="icon-ic_star_solid icon-star"></i><i
-                                                                class="icon-ic_star_solid icon-star"></i><i
-                                                                class="icon-ic_star_solid icon-star"></i><i
-                                                                class="icon-ic_star_solid icon-star"></i>
+                                                            <i class="icon-ic_star_solid icon-star"></i><i class="icon-ic_star_solid icon-star"></i><i class="icon-ic_star_solid icon-star"></i><i class="icon-ic_star_solid icon-star"></i><i class="icon-ic_star_solid icon-star"></i>
                                                         </div>
-                                                        <div class="c-testimonial__review_text u-t-regular">I had severe
-                                                            pain in
-                                                            chest as well blood in cough. I searched through a lot of
-                                                            pulmonologists based on rankings and feedbacks and finally
-                                                            settled
-                                                            to consult Dr Indu Bubna. She quickly diagnosed my disease
-                                                            as
-                                                            pulmonary embolism and I was admitted to ICU. Now its all
-                                                            fine.
-                                                            If i
-                                                            would have gotten late then I wouldn't be writing this.
-                                                            Thanks
-                                                            Whealthy Life!</div>
-                                                        <div><span class="icon-ic_user_system icon-user"></span><span
-                                                                class="u-t-regular u-inline-middle u-m-l-10">Anuupam
+                                                        <div class="c-testimonial__review_text u-t-regular">I had severe pain in chest as well blood in cough. I searched through a lot of pulmonologists based on rankings and feedbacks and finally settled to consult Dr Indu Bubna. She quickly diagnosed my
+                                                            disease as pulmonary embolism and I was admitted to ICU. Now its all fine. If i would have gotten late then I wouldn't be writing this. Thanks Whealthy Life!</div>
+                                                        <div><span class="icon-ic_user_system icon-user"></span><span class="u-t-regular u-inline-middle u-m-l-10">Anuupam
                                                                 Purohit</span></div>
                                                     </div>
                                                 </div>
@@ -263,9 +234,7 @@
 
                 <div class="col-md-6 text-center">
                     <div class="rh5v-DefaultPlayer_component ">
-                        <video class="rh5v-DefaultPlayer_video"
-                            poster="../../../assets/img/book.875ca26a3c4283c777660377e421e99b.png" loading="false"
-                            autoplay="" loop="" width="250" height="480">
+                        <video class="rh5v-DefaultPlayer_video" poster="../../../assets/img/book.875ca26a3c4283c777660377e421e99b.png" loading="false" autoplay="" loop="" width="250" height="480">
                             <source src="../../../assets/img/appointment.700ce682eaec91bf93b6574cb8f09cd0.webm"
                                 type="video/webm"></video>
                     </div>
@@ -276,9 +245,7 @@
             <div class="row mt-50 mb-50">
                 <div class="col-md-6">
                     <div class="rh5v-DefaultPlayer_component ">
-                        <video class="rh5v-DefaultPlayer_video"
-                            poster="../../../assets/img/consult.15f1b416f3f4c9383b780757d7293d00.png" loading="false"
-                            autoplay="" loop="" width="250" height="480">
+                        <video class="rh5v-DefaultPlayer_video" poster="../../../assets/img/consult.15f1b416f3f4c9383b780757d7293d00.png" loading="false" autoplay="" loop="" width="250" height="480">
                             <source src="../../../assets/img/consult.099446892618434cc8a038d7844c4380.webm"
                                 type="video/webm">
                         </video>
@@ -305,16 +272,12 @@
                                             src="../../../assets/img/check-24px.svg"></span><span class="u-t-bold">100%
                                     </span><span>Private and confidential</span></div>
                             </div>
-                            <div data-qa-id="consult-cta" class="u-m-t-25 u-d-inline-block"><a
-                                    class="c-button__redirect"
-                                    href="/consult?product=fabric&amp;amp;attribution=Home_Details_Section"
-                                    target="_blank">Chat
+                            <div data-qa-id="consult-cta" class="u-m-t-25 u-d-inline-block"><a class="c-button__redirect" href="/consult?product=fabric&amp;amp;attribution=Home_Details_Section" target="_blank">Chat
                                     now</a>
                             </div>
 
                             <span class="c-consult__doctors_online u-t-grey"><span
-                                    class="c-consult__doctors_pulse u-t-pulse left"></span><span
-                                    class="u-t-bold">41623</span><span> doctors online</span>
+                                    class="c-consult__doctors_pulse u-t-pulse left"></span><span class="u-t-bold">41623</span><span> doctors online</span>
                             </span>
                         </div>
 
@@ -326,32 +289,15 @@
                                     </span>
                                     <div class="slick-list">
                                         <owl-carousel-o class="slick-track" [options]="customOptionsOne">
-                                            <ng-template carouselSlide data-index="-1" tabindex="-1"
-                                                class="slick-slide slick-cloned" style="width: 420px;">
+                                            <ng-template carouselSlide data-index="-1" tabindex="-1" class="slick-slide slick-cloned" style="width: 420px;">
                                                 <div>
                                                     <div class="u-t-grey">
                                                         <div class="c-testimonial__review_star u-m-b-10 u-t-green">
-                                                            <i class="icon-ic_star_solid icon-star"></i><i
-                                                                class="icon-ic_star_solid icon-star"></i><i
-                                                                class="icon-ic_star_solid icon-star"></i><i
-                                                                class="icon-ic_star_solid icon-star"></i><i
-                                                                class="icon-ic_star_solid icon-star"></i>
+                                                            <i class="icon-ic_star_solid icon-star"></i><i class="icon-ic_star_solid icon-star"></i><i class="icon-ic_star_solid icon-star"></i><i class="icon-ic_star_solid icon-star"></i><i class="icon-ic_star_solid icon-star"></i>
                                                         </div>
-                                                        <div class="c-testimonial__review_text u-t-regular">I had severe
-                                                            pain in
-                                                            chest as well blood in cough. I searched through a lot of
-                                                            pulmonologists based on rankings and feedbacks and finally
-                                                            settled
-                                                            to consult Dr Indu Bubna. She quickly diagnosed my disease
-                                                            as
-                                                            pulmonary embolism and I was admitted to ICU. Now its all
-                                                            fine.
-                                                            If i
-                                                            would have gotten late then I wouldn't be writing this.
-                                                            Thanks
-                                                            Whealthy Life!</div>
-                                                        <div><span class="icon-ic_user_system icon-user"></span><span
-                                                                class="u-t-regular u-inline-middle u-m-l-10">Anuupam
+                                                        <div class="c-testimonial__review_text u-t-regular">I had severe pain in chest as well blood in cough. I searched through a lot of pulmonologists based on rankings and feedbacks and finally settled to consult Dr Indu Bubna. She quickly diagnosed my
+                                                            disease as pulmonary embolism and I was admitted to ICU. Now its all fine. If i would have gotten late then I wouldn't be writing this. Thanks Whealthy Life!</div>
+                                                        <div><span class="icon-ic_user_system icon-user"></span><span class="u-t-regular u-inline-middle u-m-l-10">Anuupam
                                                                 Purohit</span></div>
                                                     </div>
                                                 </div>
@@ -397,9 +343,7 @@
                                     </span><span class="u-t-bold">24hrs </span></div>
                             </div>
                             <div>
-                                <div data-qa-id="order-cta" class="u-m-t-25 u-d-inline-block"><a
-                                        class="c-button__redirect" href="/order?utm_source=WhealthyLife_home"
-                                        target="_blank">Order Medicines</a></div>
+                                <div data-qa-id="order-cta" class="u-m-t-25 u-d-inline-block"><a class="c-button__redirect" href="/order?utm_source=WhealthyLife_home" target="_blank">Order Medicines</a></div>
                                 <div class="c-order__last_order_info">
                                     <div class="u-t-circle">
                                         <div class="u-t-triangle"></div>
@@ -418,32 +362,15 @@
                                     </span>
                                     <div class="slick-list">
                                         <owl-carousel-o class="slick-track" [options]="customOptionsOne">
-                                            <ng-template carouselSlide data-index="-1" tabindex="-1"
-                                                class="slick-slide slick-cloned" style="width: 420px;">
+                                            <ng-template carouselSlide data-index="-1" tabindex="-1" class="slick-slide slick-cloned" style="width: 420px;">
                                                 <div>
                                                     <div class="u-t-grey">
                                                         <div class="c-testimonial__review_star u-m-b-10 u-t-green">
-                                                            <i class="icon-ic_star_solid icon-star"></i><i
-                                                                class="icon-ic_star_solid icon-star"></i><i
-                                                                class="icon-ic_star_solid icon-star"></i><i
-                                                                class="icon-ic_star_solid icon-star"></i><i
-                                                                class="icon-ic_star_solid icon-star"></i>
+                                                            <i class="icon-ic_star_solid icon-star"></i><i class="icon-ic_star_solid icon-star"></i><i class="icon-ic_star_solid icon-star"></i><i class="icon-ic_star_solid icon-star"></i><i class="icon-ic_star_solid icon-star"></i>
                                                         </div>
-                                                        <div class="c-testimonial__review_text u-t-regular">I had severe
-                                                            pain in
-                                                            chest as well blood in cough. I searched through a lot of
-                                                            pulmonologists based on rankings and feedbacks and finally
-                                                            settled
-                                                            to consult Dr Indu Bubna. She quickly diagnosed my disease
-                                                            as
-                                                            pulmonary embolism and I was admitted to ICU. Now its all
-                                                            fine.
-                                                            If i
-                                                            would have gotten late then I wouldn't be writing this.
-                                                            Thanks
-                                                            Whealthy Life!</div>
-                                                        <div><span class="icon-ic_user_system icon-user"></span><span
-                                                                class="u-t-regular u-inline-middle u-m-l-10">Anuupam
+                                                        <div class="c-testimonial__review_text u-t-regular">I had severe pain in chest as well blood in cough. I searched through a lot of pulmonologists based on rankings and feedbacks and finally settled to consult Dr Indu Bubna. She quickly diagnosed my
+                                                            disease as pulmonary embolism and I was admitted to ICU. Now its all fine. If i would have gotten late then I wouldn't be writing this. Thanks Whealthy Life!</div>
+                                                        <div><span class="icon-ic_user_system icon-user"></span><span class="u-t-regular u-inline-middle u-m-l-10">Anuupam
                                                                 Purohit</span></div>
                                                     </div>
                                                 </div>
@@ -459,16 +386,14 @@
                     </div>
                 </div>
                 <div class="col-md-6 text-center">
-                    <div class="c-section__right"><img style="max-width: 100%;"
-                            src="../../../assets/img/order.c84fc07b0be8a7e8d4db432eb4e606a2.svg">
+                    <div class="c-section__right"><img style="max-width: 100%;" src="../../../assets/img/order.c84fc07b0be8a7e8d4db432eb4e606a2.svg">
                     </div>
                 </div>
             </div>
             <div class="row mt-50 mb-50">
                 <div class="col-md-6">
                     <div class="c-section__right">
-                        <img style="max-width: 100%;"
-                            src="../../../assets/img/record.bfc5241f9b15340a32c98eb360d1005a.svg">
+                        <img style="max-width: 100%;" src="../../../assets/img/record.bfc5241f9b15340a32c98eb360d1005a.svg">
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -496,8 +421,7 @@
                                 <span>Access your records
                                     across</span><span class="u-t-bold"> 8000+ </span><span>centers</span></div>
                         </div>
-                        <div data-qa-id="record-cta" class="u-m-t-25 u-d-inline-block"><a class="c-button__redirect"
-                                href="//drive.WhealthyLife.com/login?utm_source=WhealthyLife_home" target="_blank">Find
+                        <div data-qa-id="record-cta" class="u-m-t-25 u-d-inline-block"><a class="c-button__redirect" href="//drive.WhealthyLife.com/login?utm_source=WhealthyLife_home" target="_blank">Find
                                 out more</a>
                         </div>
                     </div>
@@ -531,38 +455,20 @@
                                 <span>State of the art business analytics for enterprises</span>
                             </div>
                         </div>
-                        <div data-qa-id="provider-cta" class="u-m-t-25 u-d-inline-block"><a class="c-button__redirect"
-                                href="/providers?utm_source=WhealthyLife_home" target="_blank">Learn more</a></div>
+                        <div data-qa-id="provider-cta" class="u-m-t-25 u-d-inline-block"><a class="c-button__redirect" href="/providers?utm_source=WhealthyLife_home" target="_blank">Learn more</a></div>
                         <div class="c-testimonial-list">
                             <div class="slick-slider slick-initialized">
                                 <div class="slick-list">
                                     <owl-carousel-o class="slick-track" [options]="customOptionsOne">
-                                        <ng-template carouselSlide data-index="-1" tabindex="-1"
-                                            class="slick-slide slick-cloned" style="width: 420px;">
+                                        <ng-template carouselSlide data-index="-1" tabindex="-1" class="slick-slide slick-cloned" style="width: 420px;">
                                             <div>
                                                 <div class="u-t-grey">
                                                     <div class="c-testimonial__review_star u-m-b-10 u-t-green">
-                                                        <i class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i><i
-                                                            class="icon-ic_star_solid icon-star"></i>
+                                                        <i class="icon-ic_star_solid icon-star"></i><i class="icon-ic_star_solid icon-star"></i><i class="icon-ic_star_solid icon-star"></i><i class="icon-ic_star_solid icon-star"></i><i class="icon-ic_star_solid icon-star"></i>
                                                     </div>
-                                                    <div class="c-testimonial__review_text u-t-regular">I had severe
-                                                        pain in
-                                                        chest as well blood in cough. I searched through a lot of
-                                                        pulmonologists based on rankings and feedbacks and finally
-                                                        settled
-                                                        to consult Dr Indu Bubna. She quickly diagnosed my disease
-                                                        as
-                                                        pulmonary embolism and I was admitted to ICU. Now its all
-                                                        fine.
-                                                        If i
-                                                        would have gotten late then I wouldn't be writing this.
-                                                        Thanks
-                                                        Whealthy Life!</div>
-                                                    <div><span class="icon-ic_user_system icon-user"></span><span
-                                                            class="u-t-regular u-inline-middle u-m-l-10">Anuupam
+                                                    <div class="c-testimonial__review_text u-t-regular">I had severe pain in chest as well blood in cough. I searched through a lot of pulmonologists based on rankings and feedbacks and finally settled to consult Dr Indu Bubna. She quickly diagnosed my disease
+                                                        as pulmonary embolism and I was admitted to ICU. Now its all fine. If i would have gotten late then I wouldn't be writing this. Thanks Whealthy Life!</div>
+                                                    <div><span class="icon-ic_user_system icon-user"></span><span class="u-t-regular u-inline-middle u-m-l-10">Anuupam
                                                             Purohit</span></div>
                                                 </div>
                                             </div>

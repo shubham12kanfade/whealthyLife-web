@@ -56,7 +56,7 @@ export class BookappoimentComponent implements OnInit {
       // console.log("BookappoimentComponent -> error", error)
       //})
 
-     this.speciality.getSpecialization().then((resData:any)=>{
+     this.speciality.getSpecializationAll().then((resData:any)=>{
      console.log("BookappoimentComponent -> resData", resData)
        this.countries=resData.data;
      }).catch(error=>{

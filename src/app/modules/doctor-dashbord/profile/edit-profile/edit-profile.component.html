@@ -78,22 +78,30 @@
                                         <p-calendar formControlName="dob"></p-calendar>
                                     </div>
                                 </div>
+
+
                                 <div class="col-sm-6">
-                                    <mat-form-field class="example-chip-list">
-                                        <mat-chip-list #chipList aria-label="Fruit selection">
-                                            <mat-chip *ngFor="let fruit of fruits" [selectable]="selectable" [removable]="removable" (removed)="remove(fruit)">
-                                                {{fruit.shortName}}
-                                                <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
-                                            </mat-chip>
-                                            <input placeholder="New fruit..." #fruitInput [formControl]="fruitCtrl" [matAutocomplete]="auto" [matChipInputFor]="chipList" [matChipInputSeparatorKeyCodes]="separatorKeysCodes" (matChipInputTokenEnd)="add($event)">
-                                        </mat-chip-list>
-                                        <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
-                                            <mat-option *ngFor="let fruit of filteredFruits" [value]="fruit">
-                                                {{fruit}}
-                                            </mat-option>
-                                        </mat-autocomplete>
-                                    </mat-form-field>
+                                    <div class="form-group">
+                                        <label for="Specialisations">Specialisations</label>
+                                        <select class="form-control" formControlName="specialitie" id="Specialisations" placeholder="Select an Option" (change)="getTreatment($event)">
+                                            <option *ngFor="let spec of speciality" [value]="spec?._id">{{spec?.fullName}}
+                                            </option>
+                                        </select>
+                                    </div>
                                 </div>
+
+
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="treatment">Treatment Types</label>
+                                        <select class="form-control" formControlName="treatment" id="treatment" placeholder="Select an Option">
+                                            <option *ngFor="let spec of treatment" [value]="spec?.name">{{spec?.value}}
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+
+
                                 <hr style="border-top: 1px solid lightgray;">
                                 <div class="col-sm-6">
                                     <div class="form-group">

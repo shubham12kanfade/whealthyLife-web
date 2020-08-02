@@ -1,3 +1,4 @@
+import { TreatmentsService } from './../../../../services/treatments.service';
 import { SpecialityService } from './../../../../services/speciality.service';
 import { Component, OnInit,ElementRef, ViewChild } from '@angular/core';
 import { MainService } from 'src/app/services/main.service';
@@ -41,12 +42,14 @@ export class EditProfileComponent implements OnInit {
 
   @ViewChild('fruitInput') fruitInput: ElementRef<HTMLInputElement>;
   @ViewChild('auto') matAutocomplete: MatAutocomplete;
+  treatment: any;
 
 
   constructor(public mainService: MainService,
     public uploadService: UploadService,
     public messageService: MessageService,
-    public SpecialityService:SpecialityService
+    public SpecialityService:SpecialityService,
+    public TreatmentsService:TreatmentsService
   ) {
 
     this.filteredFruits = this.fruitCtrl.valueChanges.pipe(
@@ -55,7 +58,7 @@ export class EditProfileComponent implements OnInit {
 this.SpecialityService.getSpecialization().then((resData)=>{
 console.log("EditProfileComponent -> resData", resData)
 //
-  this.fruits=resData.data
+  // this.fruits=resData.data
 })
 
     this.profileForm = new FormGroup({
@@ -75,7 +78,8 @@ console.log("EditProfileComponent -> resData", resData)
       pincode: new FormControl(''),
       specialitie: new FormControl(''),
       timeZone: new FormControl(''),
-      bloodGroup: new FormControl('')
+      bloodGroup: new FormControl(''),
+      treatment: new FormControl('')
     })
   }
 
@@ -148,11 +152,31 @@ console.log("EditProfileComponent -> resData", resData)
   }
 
   getSpeciality() {
-    this.mainService.getSpeciality().then(resData => {
+    this.SpecialityService.getSpecialization().then(resData => {
       this.speciality = resData.data;
     }).catch(error => {
       console.log("EditProfileComponent -> getCountry -> error", error)
     })
+
+   
+      // this.mainService.getSpeciality().then(resData => {
+      //   this.speciality = resData.data;
+      // }).catch(error => {
+      //   console.log("EditProfileComponent -> getCountry -> error", error)
+      // })
+    
+
+  }
+
+  getTreatment(id){
+
+this.TreatmentsService.getTreatmentUsingSpecializetion("5f1d8bb5985f153bd0dd6e90").then((ResData)=>{
+console.log("EditProfileComponent -> getTreatment -> ResData", ResData)
+this.treatment=ResData.data
+})
+
+  console.log("EditProfileComponent -> getTreatment -> id", id.target.value)
+  
   }
 
   getCountry() {

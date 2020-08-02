@@ -11,6 +11,10 @@ export class SpecialityService {
   getSpecialization(){
     return this.Api.getData('specialization/get/all/');
   }
+  getSpecializationAll(){
+    return this.Api.getData('country/specialisations');
+  }
+
 
 
 }
