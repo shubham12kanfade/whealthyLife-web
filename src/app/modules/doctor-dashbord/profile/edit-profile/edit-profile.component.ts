@@ -124,6 +124,7 @@ console.log("EditProfileComponent -> resData", resData)
 
   getProfile() {
     this.mainService.getProfile().then(resData => {
+    console.log("EditProfileComponent -> getProfile -> resData", resData)
       this.profileForm.patchValue({
         ...resData.data,
         dob: new Date(resData.data.dob),

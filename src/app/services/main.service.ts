@@ -10,7 +10,7 @@ export class MainService {
   }
 
   getProfile() {
-    return this.api.getData('doctor/profile/details');
+    return this.api.getData('doctor/profile/details', true);
   }
 
   updateUserprofile(data) {

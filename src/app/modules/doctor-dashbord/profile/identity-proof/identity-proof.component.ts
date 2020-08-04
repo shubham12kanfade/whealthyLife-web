@@ -36,7 +36,7 @@ export class IdentityProofComponent implements OnInit {
 
   onSave(stepper) {
 
-    if(this.identityFile.length == ''){
+    if(this.identityFile == ''){
       return;
     }
 

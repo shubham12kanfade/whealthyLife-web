@@ -95,7 +95,7 @@
                                     <div class="form-group">
                                         <label for="treatment">Treatment Types</label>
                                         <select class="form-control" formControlName="treatment" id="treatment" placeholder="Select an Option">
-                                            <option *ngFor="let spec of treatment" [value]="spec?.name">{{spec?.value}}
+                                            <option *ngFor="let spec of treatment" [value]="spec?._id">{{spec?.fullName}}
                                             </option>
                                         </select>
                                     </div>

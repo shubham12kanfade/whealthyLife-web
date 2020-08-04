@@ -50,7 +50,7 @@ export class DoctorsComponent implements OnInit {
     this.getScroll();
     this.getDoctorList();
     // this.placesLoad();
-    this.speciality.getSpecialization().then((resData:any)=>{
+    this.speciality.getSpecializationAll().then((resData:any)=>{
     console.log("DoctorsComponent -> resData", resData)
     this.specialityList=resData.data;
     }).catch(error=>{

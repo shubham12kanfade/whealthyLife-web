@@ -49,7 +49,8 @@ export class ClinicLocationComponent implements OnInit {
         state: this.profileData.location.state,
         city: this.profileData.location.city,
         pincode: this.profileData.location.pincode,
-        country: this.profileData.location.country
+        country: this.profileData.location.country,
+        isVerified: 'Yes'
       }
     }
     this.mainService.updateUserprofile(data).then(resData => {
