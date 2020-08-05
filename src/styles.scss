@@ -414,9 +414,9 @@ input[type="number"] {
 }
 
 .ui-datepicker {
-    border: 0px solid #d4d0d0 !important ;
+	border: 0px solid #d4d0d0 !important ;
 }
-.cardex2{
+.cardex2 {
 	border: 1px solid #d4d0d0 !important ;
 }
 
@@ -441,7 +441,6 @@ input[type="number"] {
 	width: 100%;
 }
 
-
 // ng-autocomplete.ng-autocomplete.form-control {
 //     height: 37px !important;
 // }
@@ -456,24 +455,55 @@ input[type="number"] {
 // }
 
 input.ng-untouched.ng-pristine.ng-valid {
-    border: 1px solid lightgray;
-    height: 50px !important;
+	border: 1px solid lightgray;
+	height: 50px !important;
 }
 .autocomplete-container .input-container input {
-    height: 50px !important;
+	height: 50px !important;
 }
 input.ng-pristine.ng-valid.ng-touched {
-    border: 1px solid lightgray;
-    height: 50px !important;
+	border: 1px solid lightgray;
+	height: 50px !important;
 }
 
 input.ng-valid.ng-touched.ng-dirty {
 	border: 1px solid lightgray;
-    height: 41px !important;
+	height: 41px !important;
 }
 
 .mat-form-field-appearance-legacy .mat-form-field-infix {
-    padding: 0em 0 !important;
+	padding: 0em 0 !important;
 }
 
+.mat-form-field-appearance-legacy .mat-form-field-underline {
+	background-color: transparent;
+}
 
+.ng-tns-c277-2.ui-multiselect.ui-widget.ui-state-default.ui-corner-all {
+	display: block;
+	width: 100%;
+	height: calc(1.5em + 0.75rem + 2px);
+	font-size: 1rem !important;
+	font-weight: 400 !important;
+	line-height: 1.5 !important;
+	color: #6e707e !important;
+	background-color: #fff !important;
+	background-clip: padding-box !important;
+	border: 1px solid #d1d3e2 !important;
+	border-radius: 0rem !important;
+	transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out !important;
+}
+body .ui-multiselect {
+	display: block;
+	width: 100%;
+	height: calc(1.5em + 0.75rem + 2px);
+	font-size: 1rem !important;
+	font-weight: 400;
+	line-height: 1.5;
+	color: #6e707e;
+	background-color: #fff !important;
+	background-clip: padding-box !important;
+	border: 1px solid #d1d3e2 !important;
+	border-radius: 0rem !important;
+	transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out !important;
+}

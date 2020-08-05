@@ -12,4 +12,8 @@ getTreatmentUsingSpecializetion(specialization){
   return this.ApiCallService.getData('treatment/get/all/by/'+specialization)
 }
 
+getTreatmentUsingSpecializetionsID(specialization){
+  return this.ApiCallService.postData('treatment/get/by/specializations', specialization)
+}
+
 }

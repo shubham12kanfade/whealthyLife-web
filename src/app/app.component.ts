@@ -15,7 +15,6 @@ export class AppComponent implements OnInit {
 
   constructor(router: Router, public cookies: CookieService) {
 
-
   }
 
   ngOnInit() {

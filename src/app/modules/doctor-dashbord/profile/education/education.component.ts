@@ -34,7 +34,7 @@ export class EducationComponent implements OnInit {
   profileform: FormGroup;
   avatar: any;
   name = 'Angular';
-  options:any = [];
+  options: any = [];
   @Input() stepper: MatStepper;
   submitted: boolean = false;
   dynamicForm: FormGroup;
@@ -45,6 +45,8 @@ export class EducationComponent implements OnInit {
   stateCtrl: FormControl;
   optionvalue: any;
   addFields: any;
+  degrees: any;
+  resultDeggree: any = [];
 
   constructor(public mainService: MainService,
     public messageService: MessageService,
@@ -52,21 +54,23 @@ export class EducationComponent implements OnInit {
     private fb: FormBuilder,
     private CookieService: CookieService) {
 
-      mainService.getDegree().then((resData)=>{
+    mainService.getDegree().then((resData) => {
       console.log("EducationComponent -> resData", resData.data);
-        this.states = resData.data;
-      }).catch((error)=>{
+      this.degrees = resData.data;
+    }).catch((error) => {
       console.log("EducationComponent -> error", error)
-        
-      })
+    })
 
     this.items.length = 100;
     this.getProfile();
   }
 
 
-
-
+  search(event) {
+    console.log("EducationComponent -> search -> event", event)
+    this.resultDeggree = this.degrees.filter(ele => ele.fullName.toLowerCase().includes(event.query));
+    
+  }
 
   ngOnInit() {
     this.dynamicForm = this.fb.group({
@@ -130,7 +134,7 @@ export class EducationComponent implements OnInit {
     // this.mainService.addDegree(data).then(resData => {
     //   console.log("EducationComponent -> save -> resData", resData)
     //   this.showToast('success', 'Profile', 'Profile updated successfully');
-       this.stepper.next();
+    this.stepper.next();
     // }).catch(error => {
     //   console.log("EditProfileComponent -> onSave -> error", error)
     // })
