@@ -1,17 +1,17 @@
 import { TreatmentsService } from './../../../../services/treatments.service';
 import { SpecialityService } from './../../../../services/speciality.service';
-import { Component, OnInit,ElementRef, ViewChild } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { MainService } from 'src/app/services/main.service';
 import { FormGroup, FormControl, FormControlName } from '@angular/forms';
 import { UploadService } from 'src/app/services/upload.service';
 import { MessageService } from 'primeng/api';
-import {COMMA, ENTER} from '@angular/cdk/keycodes';
+import { COMMA, ENTER } from '@angular/cdk/keycodes';
 
 
-import {MatAutocompleteSelectedEvent, MatAutocomplete} from '@angular/material/autocomplete';
-import {MatChipInputEvent} from '@angular/material/chips';
-import {Observable} from 'rxjs';
-import {map, startWith} from 'rxjs/operators';
+import { MatAutocompleteSelectedEvent, MatAutocomplete } from '@angular/material/autocomplete';
+import { MatChipInputEvent } from '@angular/material/chips';
+import { Observable } from 'rxjs';
+import { map, startWith } from 'rxjs/operators';
 
 @Component({
   selector: 'app-edit-profile',
@@ -29,6 +29,12 @@ export class EditProfileComponent implements OnInit {
   timeZone: any;
   speciality: any;
 
+  languages = [
+    { label: 'English', value: 'English' },
+    { label: 'Marathi', value: 'Marathi' },
+    { label: 'Hindi', value: 'Hindi' },
+    { label: 'Telgu', value: 'Telgu' }
+  ]
 
 
   visible = true;
@@ -43,23 +49,23 @@ export class EditProfileComponent implements OnInit {
   @ViewChild('fruitInput') fruitInput: ElementRef<HTMLInputElement>;
   @ViewChild('auto') matAutocomplete: MatAutocomplete;
   treatment: any;
-
+  addedValue: any;
 
   constructor(public mainService: MainService,
     public uploadService: UploadService,
     public messageService: MessageService,
-    public SpecialityService:SpecialityService,
-    public TreatmentsService:TreatmentsService
+    public SpecialityService: SpecialityService,
+    public TreatmentsService: TreatmentsService
   ) {
 
     this.filteredFruits = this.fruitCtrl.valueChanges.pipe(
       startWith(null),
       map((fruit: string | null) => fruit ? this._filter(fruit) : this.allFruits.slice()));
-this.SpecialityService.getSpecialization().then((resData)=>{
-console.log("EditProfileComponent -> resData", resData)
-//
-  // this.fruits=resData.data
-})
+    this.SpecialityService.getSpecialization().then((resData) => {
+      console.log("EditProfileComponent -> resData", resData)
+      //
+      // this.fruits=resData.data
+    })
 
     this.profileForm = new FormGroup({
       firstName: new FormControl(''),
@@ -124,6 +130,7 @@ console.log("EditProfileComponent -> resData", resData)
 
   getProfile() {
     this.mainService.getProfile().then(resData => {
+      console.log("EditProfileComponent -> getProfile -> resData", resData)
       this.profileForm.patchValue({
         ...resData.data,
         dob: new Date(resData.data.dob),
@@ -158,25 +165,33 @@ console.log("EditProfileComponent -> resData", resData)
       console.log("EditProfileComponent -> getCountry -> error", error)
     })
 
-   
-      // this.mainService.getSpeciality().then(resData => {
-      //   this.speciality = resData.data;
-      // }).catch(error => {
-      //   console.log("EditProfileComponent -> getCountry -> error", error)
-      // })
-    
+
+    // this.mainService.getSpeciality().then(resData => {
+    //   this.speciality = resData.data;
+    // }).catch(error => {
+    //   console.log("EditProfileComponent -> getCountry -> error", error)
+    // })
+
 
   }
 
-  getTreatment(id){
+  getTreatment(id) {
+    console.log("EditProfileComponent -> getTreatment -> id", id.value);
+    var data = {
+      specializations: []
+    }
+    id.value.forEach(element => {
+      data.specializations.push(element._id);
+    });
 
-this.TreatmentsService.getTreatmentUsingSpecializetion("5f1d8bb5985f153bd0dd6e90").then((ResData)=>{
-console.log("EditProfileComponent -> getTreatment -> ResData", ResData)
-this.treatment=ResData.data
-})
+    this.TreatmentsService.getTreatmentUsingSpecializetionsID(data).then((ResData) => {
+      console.log("EditProfileComponent -> getTreatment -> ResData", ResData)
+      this.treatment = ResData.data
+    })
+  }
 
-  console.log("EditProfileComponent -> getTreatment -> id", id.target.value)
-  
+  getResult(event) {
+    console.log("EditProfileComponent -> getResult -> event", event)
   }
 
   getCountry() {
@@ -215,7 +230,7 @@ this.treatment=ResData.data
 
     // Add our fruit
     if ((value || '').trim()) {
-      this.fruits.push({shortName:value.trim()});
+      this.fruits.push({ shortName: value.trim() });
     }
 
     // Reset the input value
@@ -235,7 +250,7 @@ this.treatment=ResData.data
   }
 
   selected(event: MatAutocompleteSelectedEvent): void {
-    this.fruits.push({shortName:event.option.viewValue});
+    this.fruits.push({ shortName: event.option.viewValue });
     this.fruitInput.nativeElement.value = '';
     this.fruitCtrl.setValue(null);
   }
@@ -245,7 +260,17 @@ this.treatment=ResData.data
 
     return this.allFruits.filter(fruit => fruit.toLowerCase().indexOf(filterValue) === 0);
   }
-  
 
 
+
+  isNumber(evt) {
+    evt = (evt) ? evt : window.event;
+    var charCode = (evt.which) ? evt.which : evt.keyCode;
+    if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+      console.log("EditProfileComponent -> isNumber -> evt", evt)
+      evt.preventDefault();
+      return;
+    }
+    return;
+  }
 }

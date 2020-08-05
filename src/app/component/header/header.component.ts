@@ -53,7 +53,9 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.showToast('success', "sdsdsjds", "dsdsdsd");
+    if (this.userInfo.designation === 'Doctor') {
+      this.showToast('success', "sdsdsjds", "dsdsdsd");
+    }
   }
 
   onClick() {
@@ -93,7 +95,7 @@ export class HeaderComponent implements OnInit {
   showToast(type, messageType, message) {
     console.log("HeaderComponent -> showToast -> type, messageType, message", type, messageType, message)
     setTimeout(() => {
-      this.messageService.add({ key: 'myKey2', severity:'success', summary: 'Summary Text', detail: 'Order submitted',life:50000 });
+      this.messageService.add({ key: 'myKey2', severity: 'success', summary: 'Summary Text', detail: 'Order submitted', life: 50000 });
       console.log("HeaderComponent -> showToast -> this.messageService", this.messageService);
     }, 1000);
   }

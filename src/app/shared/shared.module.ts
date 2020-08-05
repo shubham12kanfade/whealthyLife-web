@@ -22,15 +22,17 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatStepperModule } from '@angular/material/stepper';
-import {DropdownModule} from 'primeng/dropdown';
-import {MatGridListModule} from '@angular/material/grid-list';
-import {MatTooltipModule} from '@angular/material/tooltip';
-import {MatBadgeModule} from '@angular/material/badge';
-import {MatExpansionModule} from '@angular/material/expansion';
-import {MatSliderModule} from '@angular/material/slider';
-import {MatAutocompleteModule} from '@angular/material/autocomplete';
-import {MatChipsModule} from '@angular/material/chips';
+import { DropdownModule } from 'primeng/dropdown';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatBadgeModule } from '@angular/material/badge';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatSliderModule } from '@angular/material/slider';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatChipsModule } from '@angular/material/chips';
 import { MatOption, MatOptionModule } from '@angular/material/core';
+import { MultiSelectModule } from 'primeng/multiselect';
+import {AutoCompleteModule} from 'primeng/autocomplete';
 
 const material = [
   CommonModule,
@@ -64,44 +66,47 @@ const material = [
   MatAutocompleteModule,
   MatChipsModule,
   MatOptionModule,
+  
 ]
 
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
-  MatTabsModule,
-  MatIconModule,
-  MatDialogModule,
-  FullCalendarModule,
-  MatButtonModule,
-  MatRadioModule,
-  MatInputModule,
-  MatCheckboxModule,
-  MatFormFieldModule,
-  MatTableModule,
-  MatPaginatorModule,
-  MatDatepickerModule,
-  CalendarModule,
-  CdkTableModule,
-  ToastModule,
-  MessagesModule,
-  MessageModule,
-  ProgressSpinnerModule,
-  MatSelectModule,
-  MatCardModule,
-  MatButtonToggleModule,
-  MatStepperModule,
-  material,
-  DropdownModule,
-  MatGridListModule,
-  MatTooltipModule,
-  MatBadgeModule,
-  MatExpansionModule,
-  MatSliderModule,
-  MatAutocompleteModule,
-  MatChipsModule,
-  MatOptionModule
+    MatTabsModule,
+    MatIconModule,
+    MatDialogModule,
+    FullCalendarModule,
+    MatButtonModule,
+    MatRadioModule,
+    MatInputModule,
+    MatCheckboxModule,
+    MatFormFieldModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatDatepickerModule,
+    CalendarModule,
+    CdkTableModule,
+    ToastModule,
+    MessagesModule,
+    MessageModule,
+    ProgressSpinnerModule,
+    MatSelectModule,
+    MatCardModule,
+    MatButtonToggleModule,
+    MatStepperModule,
+    material,
+    DropdownModule,
+    MatGridListModule,
+    MatTooltipModule,
+    MatBadgeModule,
+    MatExpansionModule,
+    MatSliderModule,
+    MatAutocompleteModule,
+    MatChipsModule,
+    MatOptionModule,
+    MultiSelectModule,
+    AutoCompleteModule
   ],
   exports: [
     CommonModule,
@@ -137,6 +142,8 @@ const material = [
     MatAutocompleteModule,
     MatChipsModule,
     MatOptionModule,
+    MultiSelectModule,
+    AutoCompleteModule
   ]
 })
 export class SharedModule { }

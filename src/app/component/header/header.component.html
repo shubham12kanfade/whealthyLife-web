@@ -109,7 +109,7 @@
                                 <ul class="dropdown-menu dropDown" aria-labelledby="navbarDropdown">
                                     <li>
                                         <a class="dropdown-item" style="display: flex; cursor: pointer;" (click)="onProfile()">
-                                            <img src="../../../assets/img/avatar.png" style="width: 50px;" alt=""> {{userInfo?.firstName}}  {{userInfo?.lastName}}
+                                            <img src="../../../assets/img/avatar.png" style="width: 50px;" alt=""> {{userInfo?.firstName}} {{userInfo?.lastName}}
                                         </a>
                                     </li>
                                     <li>
@@ -177,12 +177,16 @@
         <hr class="hr1">
         <div class="acc">
             <div class="acc1">
-                Accept
-            </div>
-            <div class="rej" (click)="clear()">
-                Reject
-            </div>
-        </div>
-       
-    </ng-template>
+            <div class="acc1" [routerLink]="['/video-conference']" >
+                <!-- <button class="btn btn-block btn-success">Accept</button> -->
+<!-- <button pButton type="button" class="ui-button-secondary">Accept</button> -->
+<!-- <button type="button" pButton  label="Accept" class="ui-button-secondary" style="margin: auto; display: block;"></button> -->
+Accept
+</div>
+<div class="rej" (click)="clear()">
+    Reject
+</div>
+</div>
+
+</ng-template>
 </p-toast> -->
