@@ -4,6 +4,7 @@ import { RegistrationService } from './../../services/registration.service';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { MessageService } from 'primeng/api';
+import { MustMatch } from 'src/app/helpers/must-match.validator';
 
 @Component({
   selector: 'app-doctor-register',
@@ -33,7 +34,11 @@ export class DoctorRegisterComponent implements OnInit {
       lastName: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(6)]],
-    });
+      Conpassword: ['', [Validators.required]],
+      
+    }, {
+      validator: MustMatch('password', 'Conpassword')
+  });
   }
 
   getLocation() {
@@ -46,6 +51,9 @@ export class DoctorRegisterComponent implements OnInit {
   }
 
   onSubmit() {
+
+console.log("DoctorRegisterComponent -> onSubmit -> helo")
+
     this.submitted = true;
     this.sending = true;
     if (this.register.invalid) {
@@ -59,6 +67,7 @@ export class DoctorRegisterComponent implements OnInit {
       loginType: "Password",
       location: this.locatdata
     }
+    console.log("DoctorRegisterComponent -> onSubmit -> data", data)
 
     this.rs.registarUser(data).then(resData => {
       this.sending = false;

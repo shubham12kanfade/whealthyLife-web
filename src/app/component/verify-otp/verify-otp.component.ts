@@ -26,7 +26,7 @@ export class VerifyOtpComponent implements OnInit {
 
     this.activateRouter.paramMap.subscribe((param: any) => {
       console.log("VerifyOtpComponent -> ngOnInit -> param", param.params.mobile);
-      this.show('success', 'You have successfully registered with Whealthy life');
+      // this.show('success', 'You have successfully registered with Whealthy life');
       this.showWarn('warn', 'We have sent an email on your registered email, please verify your mail.');
       setTimeout(() => {
         this.hideMsg();
@@ -43,7 +43,13 @@ export class VerifyOtpComponent implements OnInit {
           if (resData.code == 200) {
             this.showToast('success', 'OTP', 'Mobile number verified successfully');
             this.userService.addUserInfo(resData.data);
-            this.router.navigate(['/']);
+            if(resData.data.designation == "Doctor")
+            {
+              this.router.navigate(["/Doctor"])
+            }else{
+              this.router.navigate(['/']);
+            }
+           
           }
         }).catch(error => {
           console.log("VerifyOtpComponent -> onVerify -> error", error)

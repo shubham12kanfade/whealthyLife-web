@@ -92,7 +92,7 @@
                           </div>
                           <div class="mobile-number">
                             <input class="form-control email-text" id="mobile" name="mobile" placeholder="Mobile Number"
-                              formControlName="mobileNumber" type="tel" value="" />
+                              formControlName="mobileNumber" type="number" value="" />
                           </div>
                         </div>
                         <div *ngIf="submitted && f.mobileNumber.errors" class="error-block display-block">
@@ -125,6 +125,24 @@
                           <div *ngIf="submitted && f.password.errors" class="error-block display-block">
                             <div *ngIf="f.password.errors.required">Password is required</div>
                             <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+                          </div>
+                          <div class="password-strength">
+                            Password Strength:
+                            <span id="password-strength-indicator">&nbsp;</span>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-12">
+                      <div class="padding-top-8">
+                        <p class="no-bottom-margin">Confirm Password</p>
+                        <div class="padding-top-8">
+                          <input class="form-control email-text" id="password" name="password" placeholder="Password"
+                            type="password" formControlName="Conpassword" value="" />
+                            <div *ngIf="submitted && f.Conpassword.errors" class="error-block display-block">
+                              <div *ngIf="f.Conpassword.errors.required">Confirm Password is required</div>
+                              <div *ngIf="f.Conpassword.errors.mustMatch">Passwords must match</div>
                           </div>
                           <div class="password-strength">
                             Password Strength:

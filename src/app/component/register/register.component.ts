@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { MessageService } from 'primeng/api';
+import { MustMatch } from 'src/app/helpers/must-match.validator';
 
 @Component({
   selector: 'app-register',
@@ -34,7 +35,11 @@ export class RegisterComponent implements OnInit {
       lastName: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(6)]],
-    });
+      Conpassword: ['', [Validators.required]],
+      
+    }, {
+      validator: MustMatch('password', 'Conpassword')
+  });
   }
 
   getLocation() {

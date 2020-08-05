@@ -87,7 +87,7 @@
             <div class="main_title mb-5" data-aos="fade-down">
                 <h2>Affordable full body <strong>health checkups</strong> at home</h2>
             </div>
-            <div class="mx-auto packs">
+            <div   *ngIf="showmore" class="mx-auto packs">
                 <div class="form-row">
                     <div *ngFor="let item of labs.slice(0,4)" class="col-md-3 col-sm-6 col-12 " data-aos="fade-right">
                         <div class="adj2 p-single equal-height">
@@ -123,7 +123,46 @@
               
                 </div>
                 <div class="text-center mt-3 mb-3" data-aos="fade-down">
-                    <a href="#" class="btn-main">More Packages</a>
+                    <a class="btn-main" (click)="showmoreFun()" >More Packages</a>
+                </div>
+            </div>
+            <div *ngIf="!showmore" class="mx-auto packs">
+                <div class="form-row">
+                    <div *ngFor="let item of labs" class="col-md-3 col-sm-6 col-12 " data-aos="fade-right">
+                        <div class="adj2 p-single equal-height">
+                            <div class="p-head">
+                                <h4>{{item.heading}}</h4>
+                                <p>{{item.subHeading}}</p>
+                            </div>
+                            <div class="p-body">
+                                <div class="sec-content">
+                                    <img src="../assets/img/micro.svg" alt="icon" class="icon-left">
+                                    <ul class="sec-content-ul">
+                                        <li *ngFor="let dis of item.discription"><strong>{{dis}}</strong></li>
+                                      
+                                    </ul>
+                                </div>
+                                <div class="sec-content mini">
+                                    <img src="../assets/img/stethoscope.svg" alt="icon" class="icon-left">
+                                    <ul class="sec-content-ul">
+                                        <li><strong>Powered by WhealthyLife</strong></li>
+                                        <li>Online reports in 24 hrs</li>
+                                        <li>NABL, CAP accredited</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="p-footer">
+                                <span class="tag">{{item.offer}}% off</span>
+                                <span class="price"><i class="fa fa-inr"></i>999 <small><del><i
+                                                class="fa fa-inr"></i>{{item.price}}</del></small></span>
+                                <a href="#" class="btn-border">View More</a>
+                            </div>
+                        </div>
+                    </div>
+              
+                </div>
+                <div class="text-center mt-3 mb-3" data-aos="fade-down">
+                    <a class="btn-main" (click)="showmoreFun()" >Less Packages</a>
                 </div>
             </div>
         </div>
@@ -164,7 +203,7 @@
                     <owl-carousel-o [options]="customOptions" #review>
                         <ng-template carouselSlide *ngFor="let item of Specialit">
                             <div class="pr-2 pl-2">
-                                <a>
+                                <a [routerLink]="['/doctors/'+item._id]" routerLinkActive="router-link-active" >
                                     <div class="cat-content">
                                         <div class="inner-cat-content">
                                             <h2>{{item.fullName}}</h2>
@@ -348,7 +387,7 @@
     <section class="testimonial">
         <div class="container margin_120_95">
             <div class="row">
-                <div class="col-md-7" data-aos="fade-right">
+                <div class="col-md-7 m-auto" data-aos="fade-right">
                     <h1 class="text-center">Our Happy Customers</h1>
                     <div id="myCarousel" class="carousel slide" data-ride="carousel">
                         <!-- <ol class="carousel-indicators">
@@ -386,7 +425,7 @@
                     </div>
 
                 </div>
-                <div class="col-md-5" data-aos="fade-left">
+                <!-- <div class="col-md-5" data-aos="fade-left">
                     <h2 class="mb-3 h2-size">Reliable Results. Always.</h2>
                     <div class="intrinsic">
                         <iframe width="560" height="315"
@@ -394,7 +433,7 @@
                             frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen></iframe>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>

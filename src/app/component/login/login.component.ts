@@ -41,10 +41,14 @@ export class LoginComponent implements OnInit {
     };
     this.LoginService.loginUser(data)
       .then((resData: any) => {
-        console.log("RegisterComponent -> onSubmit -> resData", resData);
+        console.log("RegisterComponent -> onSubmit -> resData++++++++++++++++++++++++++++++++++++++", resData);
         if (resData.status == "SUCCESS") {
           this.userService.addUserInfo(resData.data);
         }
+        if (resData.data.designation == "Doctor") {
+         this.router.navigate(["/Doctor"])
+        }
+
       })
       .catch((error) => {
         console.log("RegisterComponent -> onSubmit -> error", error);

@@ -19,6 +19,7 @@ export class HomeComponent implements OnInit {
   stateList: any;
   cityList: any;
   india:any=101;
+  showmore: boolean=true;
 
   constructor(public SpecialityService:SpecialityService,
     public MainService:MainService) {
@@ -51,7 +52,9 @@ this.stateList = csc.getStatesOfCountry("101");
   getCityList(event) {
     this.cityList = csc.getCitiesOfState(event.target.value);
   }
-
+  showmoreFun(){
+    this.showmore=!this.showmore
+  }
   customOptions: OwlOptions = {
     loop: true,
     mouseDrag: true,

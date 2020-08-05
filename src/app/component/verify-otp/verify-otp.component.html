@@ -26,7 +26,7 @@
               <div class="form mt-3">
                 <div class="">OTP</div>
                 <input class="form-control input-otp mt-1" (input)="validate()" id="username" name="username"
-                  placeholder="Please enter the 4 digit OTP here to verify" [(ngModel)]="otp" type="number" value="">
+                  placeholder="Please enter the 4 digit OTP here to verify" [(ngModel)]="otp" type="number" [maxlength]="4" value="">
                 <span class="text-danger" *ngIf="error" style="font-size: 11px;">{{error}}</span>
                 <div>
                   <div>
