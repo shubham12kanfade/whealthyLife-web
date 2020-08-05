@@ -56,4 +56,9 @@ export class MainService {
   getDegree(){
     return this.api.getData('qualification/get/all')
   }
+getLabs(){
+  return this.api.getData('lab/get/all')
+}
+
+
 }
