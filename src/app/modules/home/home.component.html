@@ -10,11 +10,7 @@
                     <div class="adj input-group">
                         <input type="text" class=" search-query" placeholder="Type test names and select from options">
                         <select class="city-select">
-                            <option>Enter City</option>
-                            <option>Delhi</option>
-                            <option>Kolkata</option>
-                            <option>Mumbai</option>
-                            <option>Chennai</option>
+                        <!-- city Enter -->
                         </select>
                         <input type="submit" class="btn_search" value="Search">
                     </div>
@@ -75,7 +71,7 @@
                         <h2>Now <strong>Book</strong> an <strong>appointment</strong> with our doctors for free</h2>
                         <p><strong>Enjoy peace of mind while giving samples <br>with highly skilled & friendly
                                 technicians<br> at home or office.</strong></p>
-                        <a href="#" class="btn-main mt-3">Book an Appointment</a>
+                        <a [routerLink]="['bookappointment']" routerLinkActive="router-link-active"  class="btn-main mt-3">Book an Appointment</a>
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -93,21 +89,18 @@
             </div>
             <div class="mx-auto packs">
                 <div class="form-row">
-                    <div class="col-md-3 col-sm-6 col-12 " data-aos="fade-right">
+                    <div *ngFor="let item of labs.slice(0,4)" class="col-md-3 col-sm-6 col-12 " data-aos="fade-right">
                         <div class="adj2 p-single equal-height">
                             <div class="p-head">
-                                <h4>Young Indian Health Checkup</h4>
-                                <p>Ideal for individuals aged 21 to 40 years</p>
+                                <h4>{{item.heading}}</h4>
+                                <p>{{item.subHeading}}</p>
                             </div>
                             <div class="p-body">
                                 <div class="sec-content">
                                     <img src="../assets/img/micro.svg" alt="icon" class="icon-left">
                                     <ul class="sec-content-ul">
-                                        <li><strong>Includes 60 Tests</strong></li>
-                                        <li>T3-T4-TSH</li>
-                                        <li>Iron Deficiency Profile</li>
-                                        <li>Liver Function Tests</li>
-                                        <li>and 57 other tests</li>
+                                        <li *ngFor="let dis of item.discription"><strong>{{dis}}</strong></li>
+                                      
                                     </ul>
                                 </div>
                                 <div class="sec-content mini">
@@ -120,115 +113,14 @@
                                 </div>
                             </div>
                             <div class="p-footer">
-                                <span class="tag">45% off</span>
+                                <span class="tag">{{item.offer}}% off</span>
                                 <span class="price"><i class="fa fa-inr"></i>999 <small><del><i
-                                                class="fa fa-inr"></i>1800</del></small></span>
+                                                class="fa fa-inr"></i>{{item.price}}</del></small></span>
                                 <a href="#" class="btn-border">View More</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 col-sm-6 col-12 " data-aos="fade-down">
-                        <div class="adj2 p-single equal-height">
-                            <div class="p-head">
-                                <h4>Advanced Young Indian Health Checkup</h4>
-                                <p>Ideal for men aged 21 to 40 years</p>
-                            </div>
-                            <div class="p-body">
-                                <div class="sec-content">
-                                    <img src="../assets/img/micro.svg" alt="icon" class="icon-left">
-                                    <ul class="sec-content-ul">
-                                        <li><strong>Includes 63 Tests</strong></li>
-                                        <li>T3-T4-TSH</li>
-                                        <li>Iron Deficiency Profile</li>
-                                        <li>Liver Function Tests</li>
-                                        <li>and 60 other tests</li>
-                                    </ul>
-                                </div>
-                                <div class="sec-content mini">
-                                    <img src="../assets/img/stethoscope.svg" alt="icon" class="icon-left">
-                                    <ul class="sec-content-ul">
-                                        <li><strong>Powered by WhealthyLife</strong></li>
-                                        <li>Online reports in 24 hrs</li>
-                                        <li>NABL, CAP accredited</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="p-footer">
-                                <span class="tag">36% off</span>
-                                <span class="price"><i class="fa fa-inr"></i>1799 <small><del><i
-                                                class="fa fa-inr"></i>2800</del></small></span>
-                                <a href="#" class="btn-border">View More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6 col-12 " data-aos="fade-left">
-                        <div class="adj2 p-single equal-height">
-                            <div class="p-head">
-                                <h4>Working Women's Health Checkup</h4>
-                                <p>Ideal for women aged 21 to 40 years</p>
-                            </div>
-                            <div class="p-body">
-                                <div class="sec-content">
-                                    <img src="../assets/img/micro.svg" alt="icon" class="icon-left">
-                                    <ul class="sec-content-ul">
-                                        <li><strong>Includes 66 Tests</strong></li>
-                                        <li>Anandham 1.3</li>
-                                        <li>Follicle Stimulating Hormone</li>
-                                        <li>Luteinising Hormone (LH)</li>
-                                        <li>and 63 other tests</li>
-                                    </ul>
-                                </div>
-                                <div class="sec-content mini">
-                                    <img src="../assets/img/stethoscope.svg" alt="icon" class="icon-left">
-                                    <ul class="sec-content-ul">
-                                        <li><strong>Powered by WhealthyLife</strong></li>
-                                        <li>Online reports in 24 hrs</li>
-                                        <li>NABL, CAP accredited</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="p-footer">
-                                <span class="tag">46% off</span>
-                                <span class="price"><i class="fa fa-inr"></i>1799 <small><del><i
-                                                class="fa fa-inr"></i>3300</del></small></span>
-                                <a href="#" class="btn-border">View More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6 col-12 " data-aos="fade-right">
-                        <div class="adj2 p-single equal-height">
-                            <div class="p-head">
-                                <h4>Young Indian Health Checkup</h4>
-                                <p>Ideal for individuals aged 21 to 40 years</p>
-                            </div>
-                            <div class="p-body">
-                                <div class="sec-content">
-                                    <img src="../assets/img/micro.svg" alt="icon" class="icon-left">
-                                    <ul class="sec-content-ul">
-                                        <li><strong>Includes 60 Tests</strong></li>
-                                        <li>T3-T4-TSH</li>
-                                        <li>Iron Deficiency Profile</li>
-                                        <li>Liver Function Tests</li>
-                                        <li>and 57 other tests</li>
-                                    </ul>
-                                </div>
-                                <div class="sec-content mini">
-                                    <img src="../assets/img/stethoscope.svg" alt="icon" class="icon-left">
-                                    <ul class="sec-content-ul">
-                                        <li><strong>Powered by WhealthyLife</strong></li>
-                                        <li>Online reports in 24 hrs</li>
-                                        <li>NABL, CAP accredited</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="p-footer">
-                                <span class="tag">45% off</span>
-                                <span class="price"><i class="fa fa-inr"></i>999 <small><del><i
-                                                class="fa fa-inr"></i>1800</del></small></span>
-                                <a href="#" class="btn-border">View More</a>
-                            </div>
-                        </div>
-                    </div>
+              
                 </div>
                 <div class="text-center mt-3 mb-3" data-aos="fade-down">
                     <a href="#" class="btn-main">More Packages</a>
@@ -259,7 +151,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> 
     </section>
 
 
@@ -270,67 +162,20 @@
                 <div class="col-sm-12 pt-5 pb-5">
                     <h2>TOP CATEGORIES</h2>
                     <owl-carousel-o [options]="customOptions" #review>
-                        <ng-template carouselSlide>
+                        <ng-template carouselSlide *ngFor="let item of Specialit">
                             <div class="pr-2 pl-2">
                                 <a>
                                     <div class="cat-content">
                                         <div class="inner-cat-content">
-                                            <h2>Dietitian/Nutritionist</h2>
+                                            <h2>{{item.fullName}}</h2>
                                         </div>
-                                        <img src="../assets/img/Nutritionist.jpg" alt="img">
+                                        <img [src]="item.backImg" onError="this.src='./../../../assets/imag/Doctor-And-Patient.png'"alt="img">
                                     </div>
                                 </a>
                             </div>
 
                         </ng-template>
-                        <ng-template carouselSlide>
-                            <div class="pr-2 pl-2">
-                                <a>
-                                    <div class="cat-content">
-                                        <div class="inner-cat-content">
-                                            <h2>Gynaecologist</h2>
-                                        </div>
-                                        <img src="../assets/img/gynaecologist.jpg" alt="img">
-                                    </div>
-                                </a>
-                            </div>
-                        </ng-template>
-                        <ng-template carouselSlide>
-                            <div class="pr-2 pl-2">
-                                <a>
-                                    <div class="cat-content">
-                                        <div class="inner-cat-content">
-                                            <h2>Psychologist</h2>
-                                        </div>
-                                        <img src="../assets/img/Psychologist.jpg" alt="img">
-                                    </div>
-                                </a>
-                            </div>
-                        </ng-template>
-                        <ng-template carouselSlide>
-                            <div class="pr-2 pl-2">
-                                <a>
-                                    <div class="cat-content">
-                                        <div class="inner-cat-content">
-                                            <h2>Dermatologist</h2>
-                                        </div>
-                                        <img src="../assets/img/dermatologist.jpg" alt="img">
-                                    </div>
-                                </a>
-                            </div>
-                        </ng-template>
-                        <ng-template carouselSlide>
-                            <div class="pr-2 pl-2">
-                                <a>
-                                    <div class="cat-content">
-                                        <div class="inner-cat-content">
-                                            <h2>Homeopath</h2>
-                                        </div>
-                                        <img src="../assets/img/homeopathy.jpg" alt="img">
-                                    </div>
-                                </a>
-                            </div>
-                        </ng-template>
+                     
 
                     </owl-carousel-o>
                     <div class="row prev-next">
