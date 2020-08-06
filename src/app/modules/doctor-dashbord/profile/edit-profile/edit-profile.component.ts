@@ -30,12 +30,12 @@ export class EditProfileComponent implements OnInit {
   speciality: any;
 
   languages = [
+    { label: 'kanada', value: 'kanada' },
     { label: 'English', value: 'English' },
     { label: 'Marathi', value: 'Marathi' },
     { label: 'Hindi', value: 'Hindi' },
-    { label: 'Telgu', value: 'Telgu' }
+    { label: 'Bengali', value: 'Bengali' },
   ]
-
 
   visible = true;
   selectable = true;
@@ -123,9 +123,9 @@ export class EditProfileComponent implements OnInit {
 
   ngOnInit(): void {
     this.getCountry();
-    this.getProfile();
     this.getSpeciality();
     this.getTimeZone();
+    this.getProfile();
   }
 
   getProfile() {

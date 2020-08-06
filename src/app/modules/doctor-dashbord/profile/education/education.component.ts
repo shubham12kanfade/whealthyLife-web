@@ -68,7 +68,7 @@ export class EducationComponent implements OnInit {
 
   search(event) {
     console.log("EducationComponent -> search -> event", event)
-    this.resultDeggree = this.degrees.filter(ele => ele.fullName.toLowerCase().includes(event.query));
+    this.resultDeggree = this.degrees.filter(ele => ele.shortName.toLowerCase().includes(event.query));
     
   }
 

@@ -23,11 +23,8 @@
                                     <div>Profile photo</div>
                                     <div class="row">
                                         <div class="col-sm-6" style="padding: 10px;">
-                                            <img [src]="avatar"
-                                                onerror="this.src='../../../.././../assets/img/avatar.png'"
-                                                class="profile-avtar">
-                                            <input type="file" style="display: none;" #file
-                                                (change)="browseFile($event)">
+                                            <img [src]="avatar" onerror="this.src='../../../.././../assets/img/avatar.png'" class="profile-avtar">
+                                            <input type="file" style="display: none;" #file (change)="browseFile($event)">
                                         </div>
                                         <div class="col-sm-6 ">
                                             <div>
@@ -42,15 +39,13 @@
                                 <div class="col-sm-3 ">
                                     <div class="form-group">
                                         <label for="firstname">First Name<span>*</span></label>
-                                        <input type="text" formControlName="firstName" class="form-control"
-                                            id="firstname">
+                                        <input type="text" formControlName="firstName" class="form-control" id="firstname">
                                     </div>
                                 </div>
                                 <div class="col-sm-3 ">
                                     <div class="form-group">
                                         <label for="lastName">Last Name<span>*</span></label>
-                                        <input type="text" formControlName="lastName" class="form-control"
-                                            id="lastName">
+                                        <input type="text" formControlName="lastName" class="form-control" id="lastName">
                                     </div>
                                 </div>
 
@@ -58,16 +53,14 @@
                                     <div class="form-group">
                                         <label for="Specialization">Phone number</label>
                                         <!-- <a style="float: right ;color:blue">Edit</a> -->
-                                        <input type="number" formControlName="mobileNumber" class="form-control"
-                                            readonly id="Contact">
+                                        <input type="number" formControlName="mobileNumber" class="form-control" readonly id="Contact">
                                     </div>
                                 </div>
                                 <div class="col-sm-6  mt-4">
                                     <div class="form-group">
                                         <label for="gstin">Email Address</label>
                                         <!-- <a style="float: right; color:blue">Edit</a> -->
-                                        <input type="email" formControlName="email" class="form-control" readonly
-                                            id="gstin">
+                                        <input type="email" formControlName="email" class="form-control" readonly id="gstin">
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
@@ -90,19 +83,14 @@
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <label for="Specialisations">Specialisations</label>
-                                        <p-multiSelect formControlName="specialitie" defaultLabel="Select Specialities"
-                                            [options]="speciality" [filter]="true" filterBy="fullName"
-                                            [showToggleAll]="false" optionLabel="fullName"
-                                            (onFilter)="getResult($event)"
-                                            (onChange)="getTreatment($event)">
+                                        <p-multiSelect formControlName="specialitie" defaultLabel="Select Specialities" [options]="speciality" [filter]="true" filterBy="fullName" [showToggleAll]="false" optionLabel="fullName" (onFilter)="getResult($event)" (onChange)="getTreatment($event)">
                                         </p-multiSelect>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <label for="treatment">Treatment Types</label>
-                                        <p-multiSelect formControlName="treatment" [options]="treatment"
-                                            [showToggleAll]="false" optionLabel="fullName">
+                                        <p-multiSelect formControlName="treatment" [options]="treatment" [showToggleAll]="false" optionLabel="fullName">
                                         </p-multiSelect>
                                     </div>
                                 </div>
@@ -111,22 +99,22 @@
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <label for="bloodGroup"> Blood group</label>
-                                        <select class="form-control" id="bloodGroup" formControlName="bloodGroup"
-                                            placeholder="Select an Option">
+                                        <select class="form-control" id="bloodGroup" formControlName="bloodGroup" placeholder="Select an Option">
                                             <option>O+</option>
+                                            <option>O-</option>           
                                             <option>A+</option>
                                             <option>A-</option>
                                             <option>B+</option>
                                             <option>B-</option>
-                                            <option>O-</option>
+                                            <option>AB+</option>
+                                            <option>AB-</option>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <label for="timezone"> Time Zone</label>
-                                        <select class="form-control" id="timezone" formControlName="timeZone"
-                                            placeholder="Select an Option">
+                                        <select class="form-control" id="timezone" formControlName="timeZone" placeholder="Select an Option">
                                             <option *ngFor="let time of timeZone" [value]="time?.name">{{time?.value}}
                                             </option>
                                         </select>
@@ -162,8 +150,7 @@
                                             Country<span>
                                                 *
                                             </span></label>
-                                        <select class="form-control" id="country" formControlName="country"
-                                            (change)="getState()">
+                                        <select class="form-control" id="country" formControlName="country" (change)="getState()">
                                             <option *ngFor="let country of countryList" [value]="country?.id">
                                                 {{country?.name}}</option>
                                         </select>
@@ -176,8 +163,7 @@
                                         <label for="Specialization">
                                             State
                                         </label>
-                                        <select class="form-control" id="state" formControlName="state"
-                                            (change)="getCity()">
+                                        <select class="form-control" id="state" formControlName="state" (change)="getCity()">
                                             <option *ngFor="let state of stateList" [value]="state?.id">
                                                 {{state?.name}}</option>
                                         </select>
@@ -200,8 +186,7 @@
                                             <div class="form-group">
                                                 <label for="Specialization">
                                                     Pincode</label>
-                                                <input type="text" maxlength="6" formControlName="pincode" id="onlynumber" class="form-control"
-                                                    id="Contact">
+                                                <input type="text" maxlength="6" formControlName="pincode" id="onlynumber" class="form-control" id="Contact">
                                             </div>
                                         </div>
                                     </div>

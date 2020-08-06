@@ -12,11 +12,12 @@
 
 
                                 <label for="college">Degree</label>
-                                <!-- <app-dynamic-autocomplete formControlName="option" [options]="states" (added)="onItemAdded($event)">
-                                </app-dynamic-autocomplete> -->
+                                <app-dynamic-autocomplete formControlName="degree" [options]="states" (added)="onItemAdded($event)">
+                                </app-dynamic-autocomplete>
 
-                                <p-autoComplete formControlName="degree" [suggestions]="resultDeggree" (completeMethod)="search($event)">
-                                </p-autoComplete>
+                                <!-- <p-autoComplete formControlName="degree" [suggestions]="resultDeggree" (completeMethod)="search($event)" field="shortName">
+                                    <ng-template let></ng-template>
+                                </p-autoComplete> -->
                             </div>
 
                             <div class="form-group">

@@ -27,7 +27,7 @@ export class VerifyOtpComponent implements OnInit {
     this.activateRouter.paramMap.subscribe((param: any) => {
       console.log("VerifyOtpComponent -> ngOnInit -> param", param.params.mobile);
       // this.show('success', 'You have successfully registered with Whealthy life');
-      this.showWarn('warn', 'We have sent an email on your registered email, please verify your mail.');
+      this.showWarn('warn', 'We have sent an otp on your registered Mobile Number, please verify .');
       setTimeout(() => {
         this.hideMsg();
       }, 3000);

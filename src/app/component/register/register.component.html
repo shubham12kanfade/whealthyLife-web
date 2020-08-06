@@ -1,77 +1,74 @@
 <p-toast class="custom-error" [showTransformOptions]="'translateX(100%)'"></p-toast>
 <section class="mt-120 mb-50 login-area">
-  <div class="container">
-    <div class="row">
-    </div>
-    <div class="row">
-      <div class="col-sm-6 sidimg d-none d-sm-block">
-        <img src="../assets/img/illustration.webp" />
-      </div>
-      <div class="col-sm-6 box margin-toprm">
+    <div class="container">
         <div class="row">
-          <div class="col-sm-12 nma">
-            <ul class="nav nav-pills">
-              <li class="nav-item">
-                <a class="nav-link" data-toggle="pill" routerLink="/login">Login</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" data-toggle="pill" href="#Register">Register</a>
-              </li>
-            </ul>
-            <div class="tab-content">
-              <div class="tab-pane container active" id="Login"></div>
-              <div class="tab-pane container fade" id="Register"></div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 sidimg d-none d-sm-block">
+                <img src="../assets/img/bg.jpg" />
             </div>
-          </div>
-          <div class="col-md-12">
-            <form [formGroup]="register" (ngSubmit)="onSubmit()">
-              <div class="outer-box">
-                <div class="box-header">
-                  <div>
-                    <p class="no-bottom-margin display-inline" id="joinWhealthyLife">
-                      Join Whealthy Life
-                    </p>
-                    <a routerLink="/doctor_signup" class="register font-12 black-link align-top"
-                      id="normal-doctor-signup">
-                      <span class="blue-link">Register Here</span>
-                    </a>
-                    <p class="register font-14 align-top">
-                      Are you a doctor?&nbsp;
-                    </p>
-                    <div style="clear: both;"></div>
-                  </div>
-                </div>
-                <div class="outer-space">
-                  <div class="row">
-                    <div class="col-sm-12 col-md-6">
-                      <p class="no-bottom-margin">First Name</p>
-                      <div class="padding-top-8">
-                        <input autofocus="" class="form-control email-text" id="name" formControlName="firstName"
-                          placeholder="First Name" type="text" value="" />
-                        <div *ngIf="submitted && f.firstName.errors" class="error-block display-block">
-                          <div *ngIf="f.firstName.errors.required">First Name is required</div>
+            <div class="col-sm-6 box margin-toprm">
+                <div class="row">
+                    <div class="col-sm-12 nma">
+                        <ul class="nav nav-pills">
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="pill" routerLink="/login">Login</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" data-toggle="pill" href="#Register">Register</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane container active" id="Login"></div>
+                            <div class="tab-pane container fade" id="Register"></div>
                         </div>
-                      </div>
                     </div>
-                    <div class="col-sm-12 col-md-6">
-                      <p class="no-bottom-margin">Last Name</p>
-                      <div class="padding-top-8">
-                        <input autofocus="" class="form-control email-text" name="lastName" formControlName="lastName"
-                          placeholder="Last Name" type="text" value="" />
-                        <div *ngIf="submitted && f.lastName.errors" class="error-block display-block">
-                          <div *ngIf="f.lastName.errors.required">Last Name is required</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <input type="hidden" id="is-patient-signup" />
-                  <div class="row">
                     <div class="col-md-12">
-                      <div class="padding-top-8">
-                        <p class="no-bottom-margin">Mobile Number</p>
-                        <div class="padding-top-8">
-                          <div class="select-box select-mob">
-                            <select class="countryCode" id="country" name="country">
+                        <form [formGroup]="register" (ngSubmit)="onSubmit()">
+                            <div class="outer-box">
+                                <div class="box-header">
+                                    <div>
+                                        <p class="no-bottom-margin display-inline" id="joinWhealthyLife">
+                                            Join Whealthy Life As paisent
+                                        </p>
+                                        <a routerLink="/doctor_signup" class="register font-12 black-link align-top" id="normal-doctor-signup">
+                                            <span class="blue-link">Register Here</span>
+                                        </a>
+                                        <p class="register font-14 align-top">
+                                            Are you a doctor?&nbsp;
+                                        </p>
+                                        <div style="clear: both;"></div>
+                                    </div>
+                                </div>
+                                <div class="outer-space">
+                                    <div class="row">
+                                        <div class="col-sm-12 col-md-6">
+                                            <p class="no-bottom-margin">First Name</p>
+                                            <div class="padding-top-8">
+                                                <input autofocus="" class="form-control email-text" id="name" formControlName="firstName" placeholder="First Name" type="text" value="" />
+                                                <div *ngIf="submitted && f.firstName.errors" class="error-block display-block">
+                                                    <div *ngIf="f.firstName.errors.required">First Name is required</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12 col-md-6">
+                                            <p class="no-bottom-margin">Last Name</p>
+                                            <div class="padding-top-8">
+                                                <input autofocus="" class="form-control email-text" name="lastName" formControlName="lastName" placeholder="Last Name" type="text" value="" />
+                                                <div *ngIf="submitted && f.lastName.errors" class="error-block display-block">
+                                                    <div *ngIf="f.lastName.errors.required">Last Name is required</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <input type="hidden" id="is-patient-signup" />
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="padding-top-8">
+                                                <p class="no-bottom-margin">Mobile Number</p>
+                                                <div class="padding-top-8">
+                                                    <div class="select-box select-mob">
+                                                        <select class="countryCode" id="country" name="country">
                               <option selected="" value="IN">+91</option>
                               <option value="SG">+65</option>
                               <option value="PH">+63</option>
@@ -88,108 +85,101 @@
                               <option value="SA">+966</option>
                               <option value="US">+1</option>
                             </select>
-                          </div>
-                          <div class="mobile-number">
-                            <input class="form-control email-text" id="mobile" name="mobile" placeholder="Mobile Number"
-                              formControlName="mobileNumber" type="number" value="" />
-                          </div>
-                        </div>
-                        <div *ngIf="submitted && f.mobileNumber.errors" class="error-block display-block">
-                          <div *ngIf="f.mobileNumber.errors.required">Mobile Number is required</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-md-12">
-                      <p class="no-bottom-margin padding-top-8">Email</p>
-                      <div class="padding-top-8">
-                        <input autofocus="" class="form-control email-text" formControlName="email"
-                          placeholder="Enter your Email" type="text" value="" />
-                        <div *ngIf="submitted && f.email.errors" class="error-block display-block">
-                          <div *ngIf="f.email.errors.required">Email is required</div>
-                          <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-md-12">
-                      <div class="padding-top-8">
-                        <p class="no-bottom-margin">Create Password</p>
-                        <div class="padding-top-8">
-                          <input class="form-control email-text" id="password" name="password" placeholder="Password"
-                            type="password" formControlName="password" value="" />
-                          <div *ngIf="submitted && f.password.errors" class="error-block display-block">
-                            <div *ngIf="f.password.errors.required">Password is required</div>
-                            <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
-                          </div>
-                          <div class="password-strength">
-                            Password Strength:
-                            <span id="password-strength-indicator">&nbsp;</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-12">
-                      <div class="padding-top-8">
-                        <p class="no-bottom-margin">Confirm Password</p>
-                        <div class="padding-top-8">
-                          <input class="form-control email-text" id="password" name="password" placeholder="Confirm Password"
-                            type="password" formControlName="Conpassword" value="" />
-                            <div *ngIf="submitted && f.Conpassword.errors" class="error-block display-block">
-                              <div *ngIf="f.Conpassword.errors.required">Confirm Password is required</div>
-                              <div *ngIf="f.Conpassword.errors.mustMatch">Passwords must match</div>
-                          </div>
-                          <div class="password-strength">
-                            Password Strength:
-                            <span id="password-strength-indicator">&nbsp;</span>
-                          </div>
+                                                    </div>
+                                                    <div class="mobile-number">
+                                                        <input class="form-control email-text" id="mobile" name="mobile" placeholder="Mobile Number" formControlName="mobileNumber" type="number" value="" />
+                                                    </div>
+                                                </div>
+                                                <div *ngIf="submitted && f.mobileNumber.errors" class="error-block display-block">
+                                                    <div *ngIf="f.mobileNumber.errors.required">Mobile Number is required</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <p class="no-bottom-margin padding-top-8">Email</p>
+                                            <div class="padding-top-8">
+                                                <input autofocus="" class="form-control email-text" formControlName="email" placeholder="Enter your Email" type="text" value="" />
+                                                <div *ngIf="submitted && f.email.errors" class="error-block display-block">
+                                                    <div *ngIf="f.email.errors.required">Email is required</div>
+                                                    <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="padding-top-8">
+                                                <p class="no-bottom-margin">Create Password</p>
+                                                <div class="padding-top-8">
+                                                    <input class="form-control email-text" id="password" name="password" placeholder="Password" type="password" formControlName="password" value="" />
+                                                    <div *ngIf="submitted && f.password.errors" class="error-block display-block">
+                                                        <div *ngIf="f.password.errors.required">Password is required</div>
+                                                        <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+                                                    </div>
+                                                    <div class="password-strength">
+                                                        Password Strength:
+                                                        <span id="password-strength-indicator">&nbsp;</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="padding-top-8">
+                                                <p class="no-bottom-margin">Confirm Password</p>
+                                                <div class="padding-top-8">
+                                                    <input class="form-control email-text" id="password" name="password" placeholder="Confirm Password" type="password" formControlName="Conpassword" value="" />
+                                                    <div *ngIf="submitted && f.Conpassword.errors" class="error-block display-block">
+                                                        <div *ngIf="f.Conpassword.errors.required">Confirm Password is required</div>
+                                                        <div *ngIf="f.Conpassword.errors.mustMatch">Passwords must match</div>
+                                                    </div>
+                                                    <div class="password-strength">
+                                                        Password Strength:
+                                                        <span id="password-strength-indicator">&nbsp;</span>
+                                                    </div>
 
-                        </div>
-                      </div>
-                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
 
 
-                  </div>
-                  <div class="row">
-                    <div class="col-md-12">
-                      <div>
-                        <div class="padding-top-20 font-12 textMuted">
-                          <div class="otp-flow">
-                            <div class="otp_flow">
-                              <input checked="checked" id="subscribe_promotion" name="subscribe_promotion"
-                                type="checkbox" value="y" />
-                              <label for="subscribe_promotion"></label>
-                            </div>
-                            <label class="mousePointerSignup font-12 textMuted line-height-20"
-                              for="subscribe_promotion">Receive relevant offers and promotional communication
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div>
+                                                <div class="padding-top-20 font-12 textMuted">
+                                                    <div class="otp-flow">
+                                                        <div class="otp_flow">
+                                                            <input checked="checked" id="subscribe_promotion" name="subscribe_promotion" type="checkbox" value="y" />
+                                                            <label for="subscribe_promotion"></label>
+                                                        </div>
+                                                        <label class="mousePointerSignup font-12 textMuted line-height-20" for="subscribe_promotion">Receive relevant offers and promotional communication
                               from Whealthy Life</label>
-                            <div class="padding-top-8 textMuted font-10 sign-up-terms">
-                              <p class="no-bottom-margin">
-                                By signing up, I agree to
-                                <a href="#" target="_blank" id="terms">terms</a>
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-md-12">
-                      <div class="padding-top-20">
-                        <div id="recaptcha-container-register" data-sitekey="6LcgVBgUAAAAANU9A74W9CtzZ3NeJdhbGIoUbDXG"
-                          data-size="invisible"></div>
-                        <button class="btn btn-lg common-btn WhealthyLife-btn" type="submit">
+                                                        <div class="padding-top-8 textMuted font-10 sign-up-terms">
+                                                            <p class="no-bottom-margin">
+                                                                By signing up, I agree to
+                                                                <a href="#" target="_blank" id="terms">terms</a>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="padding-top-20">
+                                                <div id="recaptcha-container-register" data-sitekey="6LcgVBgUAAAAANU9A74W9CtzZ3NeJdhbGIoUbDXG" data-size="invisible"></div>
+                                                <button class="btn btn-lg common-btn WhealthyLife-btn" type="submit">
                           Send OTP <p-progressSpinner *ngIf="sending" class="progress-bar12"
                             [style]="{width: '23px', height: '23px'}" strokeWidth="3" animationDuration="1.5s">
                           </p-progressSpinner>
                         </button>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- <div style="clear: both;"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- <div style="clear: both;"></div>
                   <div>
                     <input id="csrf_token" name="csrf_token" type="hidden"
                       value="ImNjOWM3ODhkNWFjZTY4NGZiZDgwZTllN2MyMzAyZTQ4YWI1MTc4OWIi.Xqm0Gw.TB1NvM_3DNESu158HhBU7H2xYnk" />
@@ -198,12 +188,12 @@
                     <input id="view_type" name="view_type" type="hidden" value="normal" />
                     <input id="type" name="type" type="hidden" value="patient" />
                   </div> -->
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                 </div>
-              </div>
-            </form>
-          </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </section>
