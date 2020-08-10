@@ -1,3 +1,4 @@
+import { MainService } from './../../services/main.service';
 import { Component, OnInit, HostListener } from '@angular/core';
 import * as $ from 'jquery';
 import { UserService } from 'src/app/services/user.service';
@@ -14,10 +15,12 @@ import { MessageService } from 'primeng/api';
 export class HeaderComponent implements OnInit {
   openMenu: any = false;
   userInfo: any;
+  onlieProfile: any;
 
   constructor(public userService: UserService,
     public router: Router,
-    public messageService: MessageService
+    public messageService: MessageService,
+    private MainService:MainService
 
   ) {
     this.scrollUp();
@@ -53,11 +56,25 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
+
+this.getProfileOnline();
+
     if (this.userInfo.designation === 'Doctor') {
       this.showToast('success', "sdsdsjds", "dsdsdsd");
     }
   }
 
+  getProfileOnline(){
+this.MainService.getProfile().then((resData)=>{
+console.log("HeaderComponent -> getProfileOnline -> resData +++++++++++++++++++++++++++++++++++++++++++++++++++++", resData)
+  this.onlieProfile=resData.data
+}).catch((err)=>{
+console.log("HeaderComponent -> getProfileOnline -> err", err)
+  
+})
+
+  }
   onClick() {
 
   }

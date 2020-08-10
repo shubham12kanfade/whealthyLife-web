@@ -8,7 +8,7 @@
                         <h2 class="font-weight-bold text-primary">Accounts</h2>
                     </div>
                     <div class="col-sm-9">
-                        <button mat-stroked-button class="float-right" (click)="onSave()">Save Changes</button>
+                        <button mat-raised-button color="warn" class="float-right" (click)="onSave()">Save Changes</button>
                     </div>
                 </div>
             </div>
@@ -20,29 +20,27 @@
                         <div class="col-sm-6  maincol">
                             <div class="row">
                                 <div class="col-sm-6">
-                                    <div>Profile photo</div>
+                                    
                                     <div class="row">
-                                        <div class="col-sm-6" style="padding: 10px;">
-                                            <img [src]="avatar" onerror="this.src='../../../.././../assets/img/avatar.png'" class="profile-avtar">
-                                            <input type="file" style="display: none;" #file (change)="browseFile($event)">
+                                 
+                                        <div class="col-sm-6 m-auto containerq"  >
+                                            <img [src]="avatar"  onerror="this.src='./../../../../../assets/images/doc.jpg'" (click)="image.click()" class="profile-avtar " style="cursor: pointer;">
+                                            <input type="file" style="display: none;" #image (change)="browseFile($event)">
+                                            
+                                            <div class="overlay profile-avtar " (click)="image.click()" style="margin: auto;text-align: center; cursor: pointer;"><span style="margin-top: 86px;" class="material-icons">cloud_upload</span></div>
+                                            <div  style="margin: auto;
+                                            text-align: center;">Profile photo</div>
                                         </div>
-                                        <div class="col-sm-6 ">
-                                            <div>
-                                                <h4 style="font-size: 14px;">Pick a photo from your computer</h4>
-                                                <a style="color:blue; cursor: pointer;" (click)="file.click()">add
-                                                    Photo</a>
-                                            </div>
-                                        </div>
+                                        
                                     </div>
                                 </div>
                                 <hr class="bodhr">
-                                <div class="col-sm-3 ">
+                                <div class="col-sm-6 ">
                                     <div class="form-group">
                                         <label for="firstname">First Name<span>*</span></label>
                                         <input type="text" formControlName="firstName" class="form-control" id="firstname">
                                     </div>
-                                </div>
-                                <div class="col-sm-3 ">
+                                
                                     <div class="form-group">
                                         <label for="lastName">Last Name<span>*</span></label>
                                         <input type="text" formControlName="lastName" class="form-control" id="lastName">
@@ -69,13 +67,14 @@
                                         <select class="form-control" formControlName="gender" id="gender">
                                             <option>Male</option>
                                             <option>Female</option>
+                                            <option>Other</option>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <label for="website">Date of birth</label><br />
-                                        <p-calendar formControlName="dob"></p-calendar>
+                                        <p-calendar formControlName="dob" placeholder="mm/dd/yyyy"></p-calendar>
                                     </div>
                                 </div>
 

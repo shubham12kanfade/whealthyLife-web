@@ -870,7 +870,7 @@ ul#additional_links li:after {
   .division {
     border-right: 0 !important;
     overflow: hidden;
-    background-color: #1a2358;
+    background-color: #0BA114;
     padding: 5px;
     margin: 5px 0;
   }
@@ -5236,7 +5236,7 @@ color: #fff; border-radius: 2px; font-weight: bold;}
 .first-sec .main_title h2 { margin-bottom: 30px;}
 .first-sec .main_title p { padding: 0;}
 .first-sec .main_title h2 strong { color:#0084c6;}
-.btn-main { border-radius: 45px; padding: 1em 3em; background-color: #0880c4; color: #fff; text-align: center;
+.btn-main { border-radius: 45px; padding: 1em 3em; background-color: #0BA114; color: #fff; text-align: center;
 line-height: 1.25; font-size: 16px; font-weight: 400;display: inline-block;}
 .btn-main:hover { color: #fff; background-color:rgb(9, 7, 124);}
 .packs { max-width: 1200px; width: 100%;}
@@ -5261,7 +5261,7 @@ line-height: 1.25; font-size: 16px; font-weight: 400;display: inline-block;}
 .info h2 { line-height: 1.5; font-size: 36px;}
 .info ul { list-style: none; margin-bottom:15px; padding: 0; overflow: hidden;}
 .info ul li {font-size: 16px; position: relative; line-height:2;}
-.info ul li::before {content: '\f00c'; font-family: FontAwesome; padding-right: 8px; color: #0880c4; }
+.info ul li::before {content: '\f00c'; font-family: FontAwesome; padding-right: 8px; color:#0BA114; }
 .pic-middle img { max-width: 500px; width: 100%; margin:0 auto;}
 .c-logo img { height: 100px; width: 100%; max-width: 100%; object-fit: contain;}
 .c-logo { border:1px solid #ddd; padding: 5px;}
@@ -5356,7 +5356,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 #contact-popup { max-width: 600px; width: 100%; display: none;}
 .img-popup { max-width: 100%; width: 100%; object-fit: cover; height: 100%;}
 .inner-popup h4 { text-align: center; margin-bottom:30px;}
-.bottom-sec {background: #1d2869; padding: 12px 0; width: 100%; }
+.bottom-sec {background: #0BA114; padding: 12px 0; width: 100%; }
 .division { border-right: 1px solid #ddd; overflow: hidden;}
 .division img { float: left;
   margin-right: 10px;

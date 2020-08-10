@@ -99,10 +99,11 @@ export class EditProfileComponent implements OnInit {
   }
 
   onSave() {
-    console.log(this.profileForm.value);
+    console.log("+++++++++++++++++",this.profileForm.value.dob.toString());
     var data = {
       ...this.profileForm.value,
       avatar: this.avatar,
+      dob:this.profileForm.value.dob.toString(),
       location: {
         address: this.profileForm.value.address,
         landmark: this.profileForm.value.landmark,
@@ -133,7 +134,7 @@ export class EditProfileComponent implements OnInit {
       console.log("EditProfileComponent -> getProfile -> resData", resData)
       this.profileForm.patchValue({
         ...resData.data,
-        dob: new Date(resData.data.dob),
+        dob: resData.data.dob? new Date(resData.data.dob): null,
         address: resData.data.location.address,
         landmark: resData.data.location.landmark,
         pincode: resData.data.location.pincode,

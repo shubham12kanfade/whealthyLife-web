@@ -88,10 +88,32 @@
 }
 
 .profile-avtar {
-	width: 100px;
-	height: 100px;
+	width: 150px;
+	height: 150px;
 	border-radius: 50%;
 	border: 1px solid;
 	outline: none;
 }
 
+.overlay {
+	position: absolute; 
+	top: 0;
+	background: rgb(0, 0, 0);
+	background: rgba(0, 0, 0, 0.5); /* Black see-through */
+	color: #f1f1f1; 
+	width: 150px;
+	transition: .5s ease;
+	opacity:0;
+	color: white;
+	font-size: 20px;
+	padding: 20px;
+	text-align: center;
+  }
+  
+  .containerq:hover .overlay {
+	opacity: 1;
+  }
+
+// .overlay {
+// 	opacity: 1;
+//   }

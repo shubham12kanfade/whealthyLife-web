@@ -1,6 +1,6 @@
 <p-toast class="custom-error" [showTransformOptions]="'translateX(100%)'"></p-toast>
 <section>
-    <mat-horizontal-stepper labelPosition="bottom" #stepper>
+    <mat-horizontal-stepper labelPosition="bottom" #stepper >
         <mat-step>
             <ng-template matStepLabel> Medical Registration</ng-template>
             <section class="bg-white p-sm-3">
@@ -39,17 +39,23 @@
                             </div>
                             <hr class="mt-5 mb-3" />
                             <div class="row">
-                                <button mat-raised-button [routerLink]="['/Doctor/Profile']"
-                                    routerLinkActive="router-link-active">
-                                    <mat-icon aria-hidden="false" aria-label="Example home icon">chevron_left</mat-icon>
+                                <button class="mr-2" mat-raised-button  [routerLink]="['/Doctor/Profile']">
+                                    <mat-icon aria-hidden="false" aria-label="Example home icon">chevron_left
+                                    </mat-icon>
                                     Back
                                 </button>
-                                <button mat-raised-button color="success" (click)="onSave(stepper)">
-                                    Save and Contnue
-                                    <mat-icon aria-hidden="false" aria-label="Example home icon">chevron_right
+                                <button  class="ml-2" mat-raised-button color="warn"  (click)="onSave(stepper)">Save and Contnue
+                                    <mat-icon aria-hidden="false" aria-label="Example home icon" >chevron_right
                                     </mat-icon>
                                 </button>
+                                <!-- <button class="save" mat-stroked-button color="primary" [disabled]="dynamicForm.invalid || filtersFormArray.controls.length < 1" (click)="save()">
+                                Save
+                              </button> -->
                             </div>
+
+
+
+
                         </div>
                         <div class="col-md-3 col-lg-5 offset-md-1">
                             <div class="d-none d-sm-none d-md-block col-md-12 col-lg-8 mt-5 ml-5 pr-0 pl-0"

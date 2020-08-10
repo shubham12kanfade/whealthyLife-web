@@ -5,13 +5,22 @@
       <form>
         <div class="row">
           <div class="border bgh m-auto">
+
+            <img src="{{establishmentProff}}" class="img-fluid"
+                                           
+            style="padding: 0px;width:100%; height: 150px;background-color: #eadfdf;">
+
             <input type="file" class="d-none" #file (change)="browseFile($event)">
-            <button type="button" (click)="file.click()" class="btn border bg-white px-5 h3 z-index">
-              Upload
-            </button>
-            <div *ngIf="establishmentProff">One file is Uploaded</div>
-            <div *ngIf="!establishmentProff" class="error-block display-block">File Uplopad is required</div>
+            <span (click)="file.click()" class="btn border bg-white  z-index" style="position: absolute;top: 0;left: 0;font-size: 1rem !important;">
+              <i class="fa fa-upload" aria-hidden="true" style="margin: 0px;"></i>
+
+          </span>
+          
           </div>
+
+          <div *ngIf="establishmentProff" class="display-block text-center">One file is Uploaded</div>
+          <div *ngIf="!establishmentProff" class="error-block display-block text-center">File Uplopad is required</div>
+
           <p class="pt-2" style="font-size: 12px;">
             Please provide your Establishment ownership proof to verify your
             profile, so that no one else can get access to your information.
@@ -30,7 +39,7 @@
           <button mat-raised-button matStepperPrevious>
             <i class="fa fa-chevron-left" aria-hidden="true"></i> Back
           </button>
-          <button mat-raised-button (click)="onSave()" color="success">
+          <button mat-raised-button (click)="onSave()" color="warn">
             Save and contnue
             <mat-icon aria-hidden="false" aria-label="Example home icon">chevron_right
             </mat-icon>

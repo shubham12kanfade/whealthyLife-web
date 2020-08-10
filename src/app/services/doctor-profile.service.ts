@@ -12,4 +12,8 @@ export class DoctorProfileService {
   getSlot(data) {
     return this.ApiCallService.getData('slots/by/' + data)
   }
+  getDoctorProfileid(data) {
+    console.log("DoctorProfileService -> getDoctorProfile -> data"+data)
+    return this.ApiCallService.getData('doctor/' + data);
+  }
 }

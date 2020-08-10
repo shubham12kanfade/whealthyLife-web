@@ -1,3 +1,5 @@
+import { DoctorProfileService } from 'src/app/services/doctor-profile.service';
+import { UserService } from './../../../../services/user.service';
 import { Component, OnInit, Input } from '@angular/core';
 import { MainService } from '../../../../services/main.service';
 import { MessageService } from 'primeng/api';
@@ -22,9 +24,13 @@ export class ClinicTimingsComponent implements OnInit {
   timeSlot: FormGroup;
   timeSloats: any = [];
   TimeSloat2: any = [];
+  doctorinfo: any;
+  days: any;
 
   constructor(public mainService: MainService,
-    public messageService: MessageService) {
+    public messageService: MessageService,
+    public UserService:UserService,
+    public DoctorProfileService:DoctorProfileService) {
     this.timeSlot = new FormGroup({
       session1Start: new FormControl('00:00'),
       session1End: new FormControl('13:00'),
@@ -32,6 +38,9 @@ export class ClinicTimingsComponent implements OnInit {
       session2End: new FormControl('23:30'),
     })
     this.getTime();
+this.doctorinfo=this.UserService.getUserInfo();
+
+
   }
 
   getTimeSlots() {
@@ -105,8 +114,64 @@ export class ClinicTimingsComponent implements OnInit {
   }
   ngOnInit(): void {
     this.getTimeSlots();
+this.getProfile();
+  
+  }
+  getProfile(){
+this.DoctorProfileService.getSlot(this.doctorinfo._id).then((resData)=>{
+
+this.days=resData.data 
+
+for (let i = 0; i < this.days.length; i++) {
+  console.log("ClinicTimingsComponent -> getProfile -> this.days[i].day", this.days[i]?.day)
+
+  if(this.days[i].day=="monday")
+  {
+    this.dMO = true;
+  
+  }
+  if(this.days[i].day=="tuesday")
+  {
+    this.dTU = true;
+    
+  }
+  if(this.days[i].day=="wednesday")
+  {
+    this.dWE = true;
+  
+  }
+  if(this.days[i].day=="thursday")
+  {
+    this.dTH = true;
+ 
+  }
+  if(this.days[i].day=="friday")
+  {
+    this.dFR= true;
+   
+  }
+  if(this.days[i].day=="saturday")
+  {
+    this.dSA = true;
+    
+  }
+  if(this.days[i].day=="sunday")
+  {
+    this.dSU = true;
   }
 
+
+}
+
+
+
+
+}).catch((error)=>{
+console.log("ClinicTimingsComponent -> getProfile -> error", error)
+  
+
+})
+  }
   getTimeSloatObject() {
     var data = [];
     if (this.dMO) {

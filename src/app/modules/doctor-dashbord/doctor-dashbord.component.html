@@ -1,7 +1,7 @@
 <section style="background-color: #f0f0f5;">
     <div class="container-fluid" style="background-color: #f0f0f5; height: 100vh;">
         <div id="wrapper">
-            <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebars">
+            <ul class="navbar-nav bg-color sidebar sidebar-dark accordion" id="accordionSidebars">
                 <a class="sidebar-brand d-flex align-items-center justify-content-center h" [routerLink]="['']">
                     <div class="sidebar-brand-text h">Whealthy Life</div>
                 </a>
@@ -11,55 +11,55 @@
                 <hr class="sidebar-divider my-0">
                 <div class="sidebar-heading h">
                     <a [routerLink]="['']">
-                        HEALTH IS WEALTH
+                
                     </a>
                 </div>
-                <li class="nav-item active">
+                <li style="font-size: large !important;" class=" nav-item active">
                     <a class="nav-link" [routerLink]="['/Doctor']">
                         <i class='fas fa-tachometer-alt' style="padding-right: 8px;"></i>
                         <span>Dashboard</span></a>
                 </li>
-                <li class="nav-item active">
+                <li style="font-size: large !important;" class=" nav-item active">
                     <a class="nav-link" [routerLink]="['/Doctor/Calendar']">
                         <i class="fas fa-fw fa-calendar-alt"></i>
                         <span>Calender</span></a>
                 </li>
-                <li class="nav-item active">
+                <li style="font-size: large !important;" class=" nav-item active">
                     <a class="nav-link" [routerLink]="['/Doctor/Patients']">
                         <i class="fa fa-fw  fa-medkit"></i>
                         <span>Patients</span></a>
                 </li>
-                <li class="nav-item active">
+                <li style="font-size: large !important;" class=" nav-item active">
                     <a class="nav-link" [routerLink]="['/Doctor/MyClinic']">
                         <i class="fas fa-home" style="padding-right: 10px;
                     "></i>
                         <span>My Clinic</span></a>
                 </li>
-                <li class="nav-item active">
+                <li style="font-size: large !important;" class=" nav-item active">
                     <a class="nav-link" [routerLink]="['/Doctor/Charts']">
                         <i class="fas fa-comments" style="padding-right: 10px;
                     "></i>
                         <span>Charts</span></a>
                 </li>
-                <li class="nav-item active">
+                <li style="font-size: large !important;" class=" nav-item active">
                     <a class="nav-link" RouterLink="/Doctor/Communications">
                         <i class="fas fa-fw fa-broadcast-tower"></i>
                         <span>Communications</span></a>
                 </li>
-                <li class="nav-item active">
+                <li style="font-size: large !important;" class=" nav-item active">
                     <a class="nav-link" [routerLink]="['/Doctor/Reports']">
                         <i class="fas fa-fw fa-chart-area"></i>
                         <span>Reports</span></a>
                 </li>
         
-                <li class="nav-item active">
+                <li style="font-size: large !important;" class=" nav-item active">
                     <a class="nav-link" [routerLink]="['/Doctor/Settings']">
                         <i class="fas fa-fw fa-cog"></i>
                         <span>Settings</span></a>
                 </li>
-                <li class="nav-item active">
+                <li style="font-size: large !important;" class=" nav-item active">
                     <a class="nav-link" [routerLink]="['/Doctor/Integrations']">
-                        <i class="fas fa-fw fa-cog"></i>
+                        <i class="fas fa-fw fa-cogs"></i>
                         <span>Integrations</span></a>
                 </li>
                 <hr class="sidebar-divider">
@@ -68,34 +68,34 @@
                     whealthylife.com
                 </div>
         
-                <li class="nav-item active ">
+                <li style="font-size: large !important;" class=" nav-item active ">
                     <a class="nav-link" [routerLink]="['/Doctor/Profile']">
         
                         <i class="fas fa-fw fa-user-alt"></i>
                         <span>Profile</span></a>
                 </li>
-                <li class="nav-item active">
+                <li style="font-size: large !important;" class=" nav-item active">
                     <a class="nav-link" RouterLink="#">
                         <i class="fas fa-fw fa-award"></i>
                         <span>Prime</span></a>
                 </li>
-                <li class="nav-item active">
+                <li style="font-size: large !important;" class=" nav-item active">
                     <a class="nav-link" RouterLink="/Doctor/Feedback">
                         <i class="fas fa-fw fa-thumbs-up"></i>
                         <span>Feedback</span></a>
                 </li>
-                <li class="nav-item active">
+                <li style="font-size: large !important;" class=" nav-item active">
                     <a class="nav-link" RouterLink="/Doctor/Reach">
                         <i class="fas fa-fw fa-bullhorn"></i>
                         <span>Reach</span></a>
                 </li>
         
-                <li class="nav-item active">
+                <li style="font-size: large !important;" class=" nav-item active">
                     <a class="nav-link" RouterLink="#">
                         <i class="far fa-fw fa-comments"></i>
                         <span>Consult</span></a>
                 </li>
-                <li class="nav-item active">
+                <li style="font-size: large !important;" class=" nav-item active">
                     <a class="nav-link" RouterLink="/Doctor/HealthFeed">
                         <i class="fa fa-fw fa-file"></i>
                         <span>HealthFeed</span></a>
@@ -272,7 +272,7 @@
                 </div>
             </div>
         </div>
-        <a class="scroll-to-top rounded" href="#page-top">
+        <a class="scroll-to-top rounded" (click)="gotoTop()" >
             <i class="fas fa-angle-up"></i>
         </a>
         <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"

@@ -15,17 +15,25 @@
                         <input type="submit" class="btn_search" value="Search">
                     </div>
                     <ul class="banner-ft">
-                        <li>
+                        <li [routerLink]="['/bookappointment']" routerLinkActive="router-link-active" >
                             <img src="../assets/img/microscope.svg" alt="lab">
-                            <span>Certified Diagnostic Labs</span>
+                            <span>Book Appointment</span>
                         </li>
-                        <li>
+                        <li [routerLink]="['/booktests']" routerLinkActive="router-link-active" >
                             <img src="../assets/img/doctor.svg" alt="lab">
-                            <span>Trained Pickup Staff</span>
+                            <span>Lab Test</span>  
                         </li>
-                        <li>
+                        <li [routerLink]="['/']" routerLinkActive="router-link-active" >
                             <img src="../assets/img/newspaper.svg" alt="lab">
                             <span>Online Reports</span>
+                        </li>
+                        <li [routerLink]="['/']" routerLinkActive="router-link-active"  class="mt-5">
+                            <img src="../assets/img/newspaper.svg" alt="lab">
+                            <span>Order Medicine</span>
+                        </li>
+                        <li [routerLink]="['/']" routerLinkActive="router-link-active"  class="mt-5">
+                            <img src="../assets/img/newspaper.svg" alt="lab">
+                            <span>Track Your Order</span>
                         </li>
                     </ul>
                 </div>
@@ -38,25 +46,25 @@
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="division">
                         <img src="../assets/img/delivery.svg" alt="icon">
-                        <h4>Free Home Sample Pickup</h4>
+                        <h4 class="mb-0" style="margin-top: 7px;">Free Home Sample Pickup</h4>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="division">
                         <img src="../assets/img/webpage.svg" alt="icon">
-                        <h4>View Reports Online</h4>
+                        <h4 class="mb-0" style="margin-top: 7px;">View Reports Online</h4>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="division">
                         <img src="../assets/img/stethoscope-hd.svg" alt="icon">
-                        <h4>Free Doctor Consultation</h4>
+                        <h4 class="mb-0" style="margin-top: 7px;">Free Doctor Consultation</h4>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="division">
                         <img src="../assets/img/feedback.svg" alt="icon">
-                        <h4>Best Prices Guaranteed</h4>
+                        <h4 class="mb-0" style="margin-top: 7px;">Best Prices Guaranteed</h4>
                     </div>
                 </div>
             </div>

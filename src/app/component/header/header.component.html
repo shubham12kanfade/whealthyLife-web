@@ -10,7 +10,7 @@
         <div class="row">
             <div class="col-md-8 offset-md-4 col-12">
                 <ul class="top-list right">
-                    <li>
+                    <!-- <li>
                         <a [routerLink]="['/bookappointment']" routerLinkActive="router-link-active"><img src="../assets/img/stethoscope.png" alt="icon">Book Appointment</a>
                     </li>
                     <li>
@@ -21,7 +21,7 @@
                     </li>
                     <li>
                         <a [routerLink]="['/help']" routerLinkActive="router-link-active"><img src="../assets/img/hospital.png" alt="icon">Help</a>
-                    </li>
+                    </li> -->
                     <li *ngIf="!userInfo">
                         <a [routerLink]="['/login']" routerLinkActive="router-link-active"><img src="../assets/img/user.png" alt="icon">Login</a>
                     </li>
@@ -104,12 +104,12 @@
                             </li>
                             <li class="nav-item dropdown open" *ngIf="userInfo" style="position: relative; top: -5px;">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <img src="../../../assets/img/avatar.png" alt=""> {{userInfo?.firstName}}
-                                </a>
+                                    <img [src]="onlieProfile?.avatar" onError="this.src='../../../assets/img/avatar.png'" class="avatar1" alt=""> {{userInfo?.firstName}}           
+                                      </a>
                                 <ul class="dropdown-menu dropDown" aria-labelledby="navbarDropdown">
                                     <li>
                                         <a class="dropdown-item" style="display: flex; cursor: pointer;" (click)="onProfile()">
-                                            <img src="../../../assets/img/avatar.png" style="width: 50px;" alt=""> {{userInfo?.firstName}} {{userInfo?.lastName}}
+                                            <img [src]="onlieProfile?.avatar" onError="this.src='../../../assets/img/avatar.png'" class="avatar"alt=""> <p class="mb-0" style="margin-top:10px ">{{userInfo?.firstName}} {{userInfo?.lastName}}    </p>
                                         </a>
                                     </li>
                                     <li>

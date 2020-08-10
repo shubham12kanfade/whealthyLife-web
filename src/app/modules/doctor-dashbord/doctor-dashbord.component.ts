@@ -20,6 +20,15 @@ export class DoctorDashbordComponent implements OnInit {
     this.router.navigate(['/']);
   }
 
+  gotoTop() {
+    window.scroll({ 
+      top: 0, 
+      left: 0, 
+      behavior: 'smooth' 
+    });
+  }
+
+
   ngOnInit(): void {
     // this.router.events.subscribe((resData: any) => {
     //   console.log("resData", resData.url);

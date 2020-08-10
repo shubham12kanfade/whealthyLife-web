@@ -17,18 +17,25 @@ export class IdentityProofComponent implements OnInit {
   submitted: boolean =false;
   identityFile2: any;
   identityFile1: any;
+  Twoimgarray: any=['',''];
+  
 
   constructor(public mainService: MainService,
     public messageService: MessageService,
     public uploadService: UploadService) {
+  
+   
+    
+      
+
     this.getProfile();
   }
 
   getProfile() {
     this.mainService.getProfile().then(resData => {
+    console.log("IdentityProofComponent -> getProfile -> resData", resData)
       this.profileData = resData.data;
-      this.identityFile = this.profileData.identityFile1;
-      this.identityFile2 = this.profileData.identityFile2;
+      this.Twoimgarray=resData.data.identityFile
     }).catch(error => {
       console.log("EditProfileComponent -> getProfile -> error", error)
     })
@@ -40,8 +47,13 @@ export class IdentityProofComponent implements OnInit {
       return;
     }
 
+
+const data= {
+  identityFile: this.Twoimgarray
+}
+console.log("IdentityProofComponent -> onSave -> data", data)
     
-    this.mainService.updateUserprofile({ identityFile: this.identityFile1 , identityFile2: this.identityFile2 }).then(resData => {
+    this.mainService.updateUserprofile(data).then(resData => {
       this.showToast('success', 'Profile', 'Profile updated successfully');
       stepper.next();
     }).catch(error => {
@@ -52,7 +64,7 @@ export class IdentityProofComponent implements OnInit {
   browseFile1(event) {
     const file = event.target.files;
     this.uploadService.upload(file).then(res => {
-      this.identityFile1 = res.files[0];
+      this.Twoimgarray[0]= res.files[0];
      
     }).catch(error => {
       console.error('error', error);
@@ -61,7 +73,7 @@ export class IdentityProofComponent implements OnInit {
   browseFile2(event) {
     const file = event.target.files;
     this.uploadService.upload(file).then(res => {
-      this.identityFile2 = res.files[0];
+      this.Twoimgarray[1] = res.files[0];
      
     }).catch(error => {
       console.error('error', error);

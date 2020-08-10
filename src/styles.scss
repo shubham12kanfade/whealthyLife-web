@@ -507,3 +507,11 @@ body .ui-multiselect {
 	border-radius: 0rem !important;
 	transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out !important;
 }
+::ng-deep .mat-step-header .mat-step-icon-selected {
+    background-color: #0ba114 !important; 
+ }
+
+
+ .mat-step-header .mat-step-icon-selected, .mat-step-header .mat-step-icon-state-done, .mat-step-header .mat-step-icon-state-edit {
+    background-color: #09a113 !important;
+}
