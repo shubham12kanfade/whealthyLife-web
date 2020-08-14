@@ -27,14 +27,17 @@ export class DynamicAutocompleteComponent implements OnInit {
   @Output() added = new EventEmitter();
 
   constructor(public mainService: MainService,) {
-    
+
   }
 
   // Function to call when the option changes.
-  onChange = (option: string) => {};
+  onChange = (option: string) => {
+    console.log("DynamicAutocompleteComponent -> onChange -> option", option)
+
+  };
 
   // Function to call when the input is touched (when the autocomplete is clicked).
-  onTouched = () => {};
+  onTouched = () => { };
 
   get value() {
     return this.selectedValue;
@@ -44,17 +47,17 @@ export class DynamicAutocompleteComponent implements OnInit {
     this.getList();
   }
 
-  getList(){
-    this.mainService.getDegree().then((resData)=>{
+  getList() {
+    this.mainService.getDegree().then((resData) => {
       console.log("EducationComponent -> resData", resData.data);
       this.filteredOptions = this.myControl.valueChanges
-      .pipe(
-        startWith(''),
-        map(option => option ? this.filter(option) : resData.data.slice())
-      );
-      }).catch((error)=>{
+        .pipe(
+          startWith(''),
+          map(option => option ? this.filter(option) : resData.data.slice())
+        );
+    }).catch((error) => {
       console.log("EducationComponent -> error", error);
-      })
+    })
   }
 
   optionSelected(option) {

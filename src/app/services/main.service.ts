@@ -60,5 +60,13 @@ getLabs(){
   return this.api.getData('lab/get/all')
 }
 
+getProfilevalidation(id){
+  return this.api.postData('doctor/profile/validity/by/',id)
+}
+
+addDegree(data){
+  return this.api.postData('qualification/add',data)
+}
+
 
 }

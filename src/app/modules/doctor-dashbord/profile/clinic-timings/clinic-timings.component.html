@@ -33,25 +33,25 @@
                     <div class="row mt-5" [formGroup]="timeSlot">
                         <div class="form-group col-md-6">
                             <label for="startSession">Sessions 1 Start</label>
-                            <select class="form-control" id="startSession" formControlName="session1Start">
+                            <select class="form-control"  id="session1s" id="startSession"  formControlName="session1Start">
                                 <option *ngFor="let item of TimeSloat" [value]="item?.value">{{item?.value}}</option>
                             </select>
                         </div>
                         <div class="form-group col-md-6">
                             <label for="startSession">Sessions 1 End</label>
-                            <select class="form-control" id="startSession" formControlName="session1End">
+                            <select class="form-control"  id="session1e" id="startSession" formControlName="session1End">
                                 <option *ngFor="let item of TimeSloat" [value]="item?.value">{{item?.value}}</option>
                             </select>
                         </div>
                         <div class="form-group col-md-6">
                             <label for="startSession">Sessions 2 Start</label>
-                            <select class="form-control" id="startSession" formControlName="session2Start">
+                            <select class="form-control"  id="session2s" id="startSession" formControlName="session2Start">
                                 <option *ngFor="let item of TimeSloat2" [value]="item?.value">{{item?.value}}</option>
                             </select>
                         </div>
                         <div class="form-group col-md-6">
                             <label for="startSession">Sessions 2 End</label>
-                            <select class="form-control" id="startSession" formControlName="session2End">
+                            <select class="form-control"  id="session2e" id="startSession" formControlName="session2End">
                                 <option *ngFor="let item of TimeSloat2" [value]="item?.value">{{item?.value}}</option>
                             </select>
                         </div>
@@ -67,7 +67,7 @@
                         <mat-icon aria-hidden="false" aria-label="Example home icon">chevron_left</mat-icon>
                         Back
                     </button>
-                    <button mat-raised-button color="warn" (click)="onSave()">
+                    <button style="position: absolute; right: 0;" mat-raised-button color="warn" (click)="onSave()">
                         Save and contnue
                         <mat-icon aria-hidden="false" aria-label="Example home icon">chevron_right</mat-icon>
                     </button>

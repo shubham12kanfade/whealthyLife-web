@@ -9,6 +9,7 @@ import { MainService } from 'src/app/services/main.service';
 })
 export class DoctorDashbordComponent implements OnInit {
   userInfo: any;
+  doctorInfo: any;
 
   constructor(public router: Router,
     public mainService: MainService,
@@ -29,7 +30,20 @@ export class DoctorDashbordComponent implements OnInit {
   }
 
 
+getDoctordata(){
+this.mainService.getProfile().then((resData)=>{
+this.doctorInfo=resData.data
+  
+}).catch((error)=>{
+console.log("DoctorDashbordComponent -> getDoctordata -> error", error)
+  
+})
+
+}
+
+
   ngOnInit(): void {
+    this.getDoctordata()
     // this.router.events.subscribe((resData: any) => {
     //   console.log("resData", resData.url);
     //   if (resData && resData.url !== undefined && resData.url !== '/Doctor/Profile/edit_profile') {

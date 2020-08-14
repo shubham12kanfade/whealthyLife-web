@@ -33,6 +33,7 @@ import { MatChipsModule } from '@angular/material/chips';
 import { MatOption, MatOptionModule } from '@angular/material/core';
 import { MultiSelectModule } from 'primeng/multiselect';
 import {AutoCompleteModule} from 'primeng/autocomplete';
+import { NgxMatSelectSearchModule } from 'ngx-mat-select-search';
 
 const material = [
   CommonModule,
@@ -66,7 +67,7 @@ const material = [
   MatAutocompleteModule,
   MatChipsModule,
   MatOptionModule,
-  
+  NgxMatSelectSearchModule
 ]
 
 @NgModule({

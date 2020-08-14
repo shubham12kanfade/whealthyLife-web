@@ -16,4 +16,21 @@ getTreatmentUsingSpecializetionsID(specialization){
   return this.ApiCallService.postData('treatment/get/by/specializations', specialization)
 }
 
+getDoctorTreatmentbyid(data){
+  return this.ApiCallService.postData('treatment/get/all/by/specialization',data)
+}
+addDoctorspec(data){
+  return this.ApiCallService.postData('doctor/specialization/add',data)
+
+}
+
+newaddspecialization(data){
+  return this.ApiCallService.postData('specialization/add',data)
+}
+
+addDoctorTreatment(data){
+  return this.ApiCallService.postData('doctor/treatments/add',data)
+}
+
+
 }

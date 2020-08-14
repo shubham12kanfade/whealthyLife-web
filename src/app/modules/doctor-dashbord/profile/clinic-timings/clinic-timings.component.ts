@@ -1,6 +1,6 @@
 import { DoctorProfileService } from 'src/app/services/doctor-profile.service';
 import { UserService } from './../../../../services/user.service';
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
 import { MainService } from '../../../../services/main.service';
 import { MessageService } from 'primeng/api';
 import { FormGroup, FormControlName, FormControl } from '@angular/forms';
@@ -37,6 +37,10 @@ export class ClinicTimingsComponent implements OnInit {
       session2Start: new FormControl('14:00'),
       session2End: new FormControl('23:30'),
     })
+
+  
+  
+
     this.getTime();
 this.doctorinfo=this.UserService.getUserInfo();
 
@@ -164,14 +168,15 @@ for (let i = 0; i < this.days.length; i++) {
 }
 
 
-
-
 }).catch((error)=>{
 console.log("ClinicTimingsComponent -> getProfile -> error", error)
   
 
 })
   }
+
+  change(){}
+
   getTimeSloatObject() {
     var data = [];
     if (this.dMO) {

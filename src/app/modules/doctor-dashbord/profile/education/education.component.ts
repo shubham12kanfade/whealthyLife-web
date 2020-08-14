@@ -1,3 +1,4 @@
+
 import { CookieService } from 'ngx-cookie-service';
 import { Component, OnInit, Input } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormBuilder, FormArray } from '@angular/forms';
@@ -7,8 +8,7 @@ import { MessageService } from 'primeng/api';
 import { MatStepper } from '@angular/material/stepper';
 
 import { Observable } from 'rxjs/Observable';
-import { startWith } from 'rxjs/operators/startWith';
-import { map } from 'rxjs/operators/map';
+
 
 export class State {
   constructor(public name: string, public population: string, public flag: string) { }
@@ -47,6 +47,7 @@ export class EducationComponent implements OnInit {
   addFields: any;
   degrees: any;
   resultDeggree: any = [];
+  newCategory: boolean = false;
 
   constructor(public mainService: MainService,
     public messageService: MessageService,
@@ -65,12 +66,23 @@ export class EducationComponent implements OnInit {
     this.getProfile();
   }
 
-
-  search(event) {
-    console.log("EducationComponent -> search -> event", event)
-    this.resultDeggree = this.degrees.filter(ele => ele.shortName.toLowerCase().includes(event.query));
-    
+  onSelect(e) {
+    console.log("+++++++", e);
+    if (this.newCategory) {
+        
+    }
   }
+
+  // search(event) {
+  //   this.newCategory = false;
+  //   this.resultDeggree = this.degrees.filter(ele => ele.shortName.toLowerCase().includes(event.query));
+  //   console.log("EducationComponent -> search -> event", event, this.resultDeggree);
+  //   if (this.resultDeggree.length === 0) {
+  //     this.newCategory = true;
+  //     this.resultDeggree[0] = { shortName: event.query };
+  //   }
+
+  // }
 
   ngOnInit() {
     this.dynamicForm = this.fb.group({
@@ -131,13 +143,13 @@ export class EducationComponent implements OnInit {
     console.log("EducationComponent -> save -> data", data)
 
 
-    // this.mainService.addDegree(data).then(resData => {
-    //   console.log("EducationComponent -> save -> resData", resData)
-    //   this.showToast('success', 'Profile', 'Profile updated successfully');
+    this.mainService.updateUserprofile(data).then(resData => {
+      console.log("EducationComponent -> save -> resData", resData)
+      this.showToast('success', 'Profile', 'Profile updated successfully');
     this.stepper.next();
-    // }).catch(error => {
-    //   console.log("EditProfileComponent -> onSave -> error", error)
-    // })
+    }).catch(error => {
+      console.log("EditProfileComponent -> onSave -> error", error)
+    })
   }
 
   get filtersFormArray() {
@@ -165,7 +177,7 @@ export class EducationComponent implements OnInit {
 
   onSave() {
     this.submitted = true;
-
+this.profileform
     if (this.profileform.invalid) {
       return;
     }
@@ -188,7 +200,35 @@ export class EducationComponent implements OnInit {
       this.messageService.add({ severity: type, summary: messageType, detail: message });
     });
   }
+  filteredOptions: Observable<string[]>;
+  check:boolean=false
+  addthisdegree:any
+  adddegree:any
+  search(value)
+  {
+//     this.adddegree=value
+//  this.filteredOptions= this.degrees.filter((ele) =>
+//  ele.shortName.toLowerCase().includes(value.toLowerCase())
+// );
 
 
+    const shit=this.degrees.filter(
+      (val)=> val.shortName.toLowerCase().includes(value))
+    if(shit.length){
+     this.check=false
+    }else{
+    this.check=true
+    this.addthisdegree=value
+    }
+    this.filteredOptions = this.degrees.filter(
+      (val)=> val.shortName.includes(value))
+   
+  }
+  onChange(){
 
+    this.adddegree
+
+  
+  }
+  
 }
