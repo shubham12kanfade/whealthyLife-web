@@ -33,9 +33,9 @@
         </div>
     </div>
 </div>
-<!-- <div class="fixed-popup"><a href="#contact-popup" data-fancybox>
+ <div class="fixed-popup"><a href="#contact-popup" data-fancybox>
 		<img src="../assets/img/answer.png" alt="contact"><span>Ask a Question</span></a>
-</div> -->
+</div>
 <div id="contact-popup">
     <div class="row no-gutters">
         <div class="col-md-5 equal-height hidden-xs">
@@ -104,7 +104,7 @@
                             </li>
                             <li class="nav-item dropdown open" *ngIf="userInfo" style="position: relative; top: -5px;">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <img [src]="onlieProfile?.avatar" onError="this.src='../../../assets/img/avatar.png'" class="avatar1" alt=""> {{userInfo?.firstName}}           
+                                    <img [src]="onlieProfile?.avatar" onError="this.src='../../../assets/img/avatar.png'" class="avatar1" alt=""> {{userInfo?.firstName}}
                                       </a>
                                 <ul class="dropdown-menu dropDown" aria-labelledby="navbarDropdown">
                                     <li>
@@ -160,7 +160,7 @@
     </a>
 </div>
 
-<!-- <p-toast position="center" class="custom-toast" key="myKey2" [modal]="false" (onClose)="clear()" [baseZIndex]="5000" position="top-right" timeout='0'>
+ <p-toast position="center" class="custom-toast" key="myKey2" [modal]="false" (onClose)="clear()" [baseZIndex]="5000" position="top-right" timeout='0'>
     <ng-template let-message pTemplate="message">
         <div class="p-col-12 marg1">
             <div class="row">
@@ -183,6 +183,6 @@
                 Reject
             </div>
         </div>
-       
+
     </ng-template>
-</p-toast> -->
+</p-toast>

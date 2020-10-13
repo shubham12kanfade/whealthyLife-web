@@ -8,11 +8,21 @@
             <form method="post" action="#">
                 <div id="custom-search-input">
                     <div class="adj input-group">
-                        <input type="text" class=" search-query" placeholder="Type test names and select from options">
-                        <select class="city-select">
-                        <!-- city Enter -->
-                        </select>
+                        <input type="text" class=" search-query"  placeholder="Type test names and select from options">
+                        <!-- <select class="city-select">
+                         city Enter
+                        </select> -->
                         <input type="submit" class="btn_search" value="Search">
+
+                        <!-- <div class="input-group">
+                          <input type="text" class="form-control" placeholder="Search this blog">
+                          <div class="input-group-append">
+                            <button class="btn btn-secondary" type="button">
+                              <i class="fa fa-search"></i>
+                            </button>
+                          </div>
+                        </div> -->
+
                     </div>
                     <ul class="banner-ft">
                         <li [routerLink]="['/bookappointment']" routerLinkActive="router-link-active" >
@@ -21,7 +31,7 @@
                         </li>
                         <li [routerLink]="['/booktests']" routerLinkActive="router-link-active" >
                             <img src="../assets/img/doctor.svg" alt="lab">
-                            <span>Lab Test</span>  
+                            <span>Lab Test</span>
                         </li>
                         <li [routerLink]="['/']" routerLinkActive="router-link-active" >
                             <img src="../assets/img/newspaper.svg" alt="lab">
@@ -108,7 +118,7 @@
                                     <img src="../assets/img/micro.svg" alt="icon" class="icon-left">
                                     <ul class="sec-content-ul">
                                         <li *ngFor="let dis of item.discription"><strong>{{dis}}</strong></li>
-                                      
+
                                     </ul>
                                 </div>
                                 <div class="sec-content mini">
@@ -128,7 +138,7 @@
                             </div>
                         </div>
                     </div>
-              
+
                 </div>
                 <div class="text-center mt-3 mb-3" data-aos="fade-down">
                     <a class="btn-main" (click)="showmoreFun()" >More Packages</a>
@@ -147,7 +157,7 @@
                                     <img src="../assets/img/micro.svg" alt="icon" class="icon-left">
                                     <ul class="sec-content-ul">
                                         <li *ngFor="let dis of item.discription"><strong>{{dis}}</strong></li>
-                                      
+
                                     </ul>
                                 </div>
                                 <div class="sec-content mini">
@@ -167,7 +177,7 @@
                             </div>
                         </div>
                     </div>
-              
+
                 </div>
                 <div class="text-center mt-3 mb-3" data-aos="fade-down">
                     <a class="btn-main" (click)="showmoreFun()" >Less Packages</a>
@@ -198,7 +208,7 @@
                     </div>
                 </div>
             </div>
-        </div> 
+        </div>
     </section>
 
 
@@ -222,7 +232,7 @@
                             </div>
 
                         </ng-template>
-                     
+
 
                     </owl-carousel-o>
                     <div class="row prev-next">

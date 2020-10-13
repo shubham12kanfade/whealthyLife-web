@@ -1,219 +1,237 @@
 .pharmacyimg {
-    img {
-        height: 150px !important;
-        width: 100% !important;
-    }
+  img {
+    height: 150px !important;
+    width: 100% !important;
+
+  }
 }
 
+// .has-search .form-control {
+//   padding-left: 2.375rem;
+// }
+
+// .has-search .form-control-feedback {
+//   position: absolute;
+//   z-index: 2;
+//   display: block;
+//   width: 2.375rem;
+//   height: 2.375rem;
+//   line-height: 2.375rem;
+//   text-align: center;
+//   pointer-events: none;
+//   color: #aaa;
+// }
+
 .adj {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
+  z-index: 2;
 }
 
 .adj2 {
-    height: 388px !important;
+  height: 388px !important;
 }
 
 .labsimg {
-    img {
-        height: 150px !important;
-        width: 100% !important;
-    }
+  img {
+    height: 150px !important;
+    width: 100% !important;
+  }
 }
 
 .modal-content {
-    height: 85%;
+  height: 85%;
 }
 
 .pharmacy {
-    color: red;
-    font-size: 22px;
+  color: red;
+  font-size: 22px;
 }
 
 .labs {
-    color: red;
+  color: red;
 }
 
 .lb {
-    font-size: 22px;
+  font-size: 22px;
 }
 
 .modal-title {
-    color: black !important;
-    font-weight: 800;
+  color: black !important;
+  font-weight: 800;
 }
 
 hr {
-    border: 1px solid;
+  border: 1px solid;
 }
 
 .bbt {
-    width: 170px;
-    margin-left: 30%;
-    margin-bottom: 9px;
-    margin-top: 35px;
-    height: 56px;
-    float: right;
-    margin-right: 10px;
-    font-size: 18px;
+  width: 170px;
+  margin-left: 30%;
+  margin-bottom: 9px;
+  margin-top: 35px;
+  height: 56px;
+  float: right;
+  margin-right: 10px;
+  font-size: 18px;
 }
 
 #custom-search-input input[type="submit"] {
-    font-size: 16px !important;
+  font-size: 16px !important;
 }
 
 a {
-    // color: #337ab7;
-    text-decoration: none;
+  // color: #337ab7;
+  text-decoration: none;
 }
 
 .btn-main {
-    border-radius: 20px;
-    padding: 10px 30px !important;
-    background-color: #0BA114;
-    color: #fff;
-    text-align: center;
-    line-height: 1.25;
-    font-size: 16px;
-    font-weight: 400;
-    display: inline-block;
+  border-radius: 20px;
+  padding: 10px 30px !important;
+  background-color: #0ba114;
+  color: #fff;
+  text-align: center;
+  line-height: 1.5;
+  font-size: 16px;
+  font-weight: 400;
+  display: inline-block;
 }
 
 .categories h2 {
-    font-size: 25px;
-    font-weight: bold;
-    margin-bottom: 20px;
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
 .categories .prev-next {
-    // position: absolute;
-    // top: 30px;
-    // right: 30px;
-    // cursor: pointer;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  cursor: pointer;
 }
 
 .categories .prev-next i {
-    color: #0880c4;
-    margin: 0 3px;
+  color: #0880c4;
+  margin: 0 3px;
 }
 .categories .prev-next i:hover {
-    color: #000;
-    margin: 0 3px;
+  color: #000;
+  margin: 0 3px;
 }
 
 .fixed {
-    top: 13%;
-    width: 95%;
+  top: 13%;
+  width: 95%;
 }
 
 @media (max-width: 786px) {
-    .lb {
-        font-size: 16px;
-    }
-    .pharmacy {
-        font-size: 16px;
-    }
-    .pharmacyimg img {
-        height: 98px !important;
-        width: 76% !important;
-    }
-    .labsimg img {
-        height: 93px !important;
-        width: 76% !important;
-    }
-    .bbt {
-        width: 152px;
-        margin-bottom: 9px;
-        margin-top: 17px;
-        height: 44px;
-        font-size: 15px;
-        float: right;
-        margin-right: 10px;
-    }
+  .lb {
+    font-size: 16px;
+  }
+  .pharmacy {
+    font-size: 16px;
+  }
+  .pharmacyimg img {
+    height: 98px !important;
+    width: 76% !important;
+  }
+  .labsimg img {
+    height: 93px !important;
+    width: 76% !important;
+  }
+  .bbt {
+    width: 152px;
+    margin-bottom: 9px;
+    margin-top: 17px;
+    height: 44px;
+    font-size: 15px;
+    float: right;
+    margin-right: 10px;
+  }
 }
 
 @media (max-width: 575px) {
-    .pharmacyimg img {
-        height: 98px !important;
-        width: 48% !important;
-        margin: 0px 22%;
-    }
-    .labsimg img {
-        height: 93px !important;
-        width: 48% !important;
-        margin: 0px 22%;
-    }
+  .pharmacyimg img {
+    height: 98px !important;
+    width: 48% !important;
+    margin: 0px 22%;
+  }
+  .labsimg img {
+    height: 93px !important;
+    width: 48% !important;
+    margin: 0px 22%;
+  }
 }
 
 .modal-header .close {
-    padding: 1rem 1rem;
-    margin: -1.5rem -1rem -1rem auto;
-    font-size: 29px;
+  padding: 1rem 1rem;
+  margin: -1.5rem -1rem -1rem auto;
+  font-size: 29px;
 }
 
 .lhs {
-    position: absolute;
-    top: 54%;
-    z-index: 999;
-    left: 16px;
-    font-size: 10px;
+  position: absolute;
+  top: 54%;
+  z-index: 999;
+  left: 16px;
+  font-size: 10px;
 }
 
 .rhs {
-    position: absolute;
-    top: 54%;
-    z-index: 999;
-    right: 16px;
-    font-size: 10px;
+  position: absolute;
+  top: 54%;
+  z-index: 999;
+  right: 16px;
+  font-size: 10px;
 }
 
 .categories .prev-next i {
-    color: #f1f3ff;
-    margin: 0 3px;
+  color: #f1f3ff;
+  margin: 0 3px;
 }
 
 @media (max-width: 768px) {
-    .lab-slide .main_title h2 {
-        text-align: left;
-        margin-bottom: 5px;
-        font-size: 22px;
-    }
+  .lab-slide .main_title h2 {
+    text-align: left;
+    margin-bottom: 5px;
+    font-size: 22px;
+  }
 }
 
 .app-download-sec .pic-middle img {
-    max-width: 151px;
+  max-width: 151px;
 }
 
 .app-download-sec .info h2 {
-    font-size: 29px;
+  font-size: 29px;
 }
 
 .testimonial h1 {
-    font-size: 1.8em;
+  font-size: 1.8em;
 }
 
 .h2-size {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 .container.margin_120_95 {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
 .deal-offer h1 {
-    font-size: 1.8em;
+  font-size: 1.8em;
 }
 
 .deal-offer h4 {
-    font-size: 1rem;
+  font-size: 1rem;
 }
 
 .element:before {
-    content: "\f000";
-    font-family: FontAwesome;
+  content: "\f000";
+  font-family: FontAwesome;
 }
 
-div#myCarousel{
-    padding: 0px !important;
+div#myCarousel {
+  padding: 0px !important;
 }
