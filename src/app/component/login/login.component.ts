@@ -75,7 +75,7 @@ export class LoginComponent implements OnInit {
     this.authService.signIn(FacebookLoginProvider.PROVIDER_ID).then((x) => {
       this.Fblogin = x;
       if (this.Fblogin) {
-        console.log("LoginComponent -> signInWithFB -> this.Fblogin");
+        console.log("LoginComponent -> signInWithFB -> this.Fblogin",this.Fblogin);
       }
       this.LoginService.loginSocial(this.Fblogin)
         .then((resData: any) => {
