@@ -14,7 +14,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: '', component: DriveComponent, children: [ 
+    path: '', component: DriveComponent, children: [
       {
         path: '', redirectTo: 'record', pathMatch: 'full'
       },

@@ -22,11 +22,11 @@
                     <li>
                         <a [routerLink]="['/help']" routerLinkActive="router-link-active"><img src="../assets/img/hospital.png" alt="icon">Help</a>
                     </li> -->
-                    <li *ngIf="!userInfo">
-                        <a [routerLink]="['/login']" routerLinkActive="router-link-active"><img src="../assets/img/user.png" alt="icon">Login</a>
+                    <li *ngIf="!userInfo" >
+                        <a [routerLink]="['/login']" routerLinkActive="router-link-active" class="custom-font">LOGIN</a>
                     </li>
-                    <li *ngIf="!userInfo">
-                        <a [routerLink]="['/register']" routerLinkActive="router-link-active"><img src="../assets/img/user2.png" alt="icon">Register</a>
+                    <li *ngIf="!userInfo" >
+                        <a [routerLink]="['/register']" routerLinkActive="router-link-active" class="custom-font1">REGISTER</a>
                     </li>
                 </ul>
             </div>
@@ -86,29 +86,29 @@
 					</button>
 
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav ml-auto py-4 py-md-0">
+                        <ul class="navbar-nav ml-auto py-4 py-md-0 imp">
 
-                            <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                                <a [routerLink]="['']" routerLinkActive="router-link-active"><img src="../assets/img/home.png" alt="icon">Home</a>
+                            <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 font-custome">
+                                <a [routerLink]="['']" routerLinkActive="router-link-active" >Home</a>
                             </li>
-                            <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                                <a [routerLink]="['/about']"><img src="../assets/img/doctor.png" alt="icon">About us</a>
+                            <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 font-custome">
+                                <a [routerLink]="['/about']">About Us</a>
                             </li>
 
-                            <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                                <a [routerLink]="['/bookcheckup']" routerLinkActive="router-link-active"><img src="../assets/img/syringe2.png" alt="icon">Book Health & Checkups</a>
+                            <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 font-custome">
+                                <a [routerLink]="['/bookcheckup']" routerLinkActive="router-link-active">Book Health & Checkups</a>
                             </li>
-                            <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                                <a [routerLink]="['/contact']"><img src="../assets/img/cardiogram.png" alt="icon">Contact us
+                            <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 font-custome1">
+                                <a [routerLink]="['/contact']">Contact Us
                                 </a>
                             </li>
                             <li class="nav-item dropdown open" *ngIf="userInfo" style="position: relative; top: -5px;">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <img [src]="onlieProfile?.avatar" onError="this.src='../../../assets/img/avatar.png'" class="avatar1" alt=""> {{userInfo?.firstName}}
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="    margin-top: 12px;">
+                                    <img [src]="onlieProfile?.avatar" onError="this.src='../../../assets/img/avatar.png'" class="avatar1" alt="" > {{userInfo?.firstName}}
                                       </a>
                                 <ul class="dropdown-menu dropDown" aria-labelledby="navbarDropdown">
                                     <li>
-                                        <a class="dropdown-item" style="display: flex; cursor: pointer;" (click)="onProfile()">
+                                        <a class="dropdown-item" style="display: flex; cursor: pointer; " (click)="onProfile()">
                                             <img [src]="onlieProfile?.avatar" onError="this.src='../../../assets/img/avatar.png'" class="avatar"alt=""> <p class="mb-0" style="margin-top:10px ">{{userInfo?.firstName}} {{userInfo?.lastName}}    </p>
                                         </a>
                                     </li>

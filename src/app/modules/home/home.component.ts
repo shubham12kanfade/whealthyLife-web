@@ -1,3 +1,6 @@
+import { startWith, map } from 'rxjs/operators';
+import { Observable } from 'rxjs';
+import { FormControl, FormBuilder } from '@angular/forms';
 import { MainService } from 'src/app/services/main.service';
 import { SpecialityService } from './../../services/speciality.service';
 
@@ -21,6 +24,11 @@ export class HomeComponent implements OnInit {
   india:any=101;
   showmore: boolean=true;
 
+  myControl = new FormControl();
+  options: string[] = ['Mumbai', 'Chennai', 'Banglore', 'Pune'];
+  filteredOptions: Observable<string[]>;
+
+
   constructor(public SpecialityService:SpecialityService,
     public MainService:MainService) {
 SpecialityService.getSpecialization().then((resData)=>{
@@ -28,7 +36,7 @@ console.log("HomeComponent -> constructor -> resData", resData)
 this.Specialit=resData.data
 }).catch((error)=>{
 console.log("HomeComponent -> constructor -> error", error)
-  
+
 })
 
 MainService.getLabs().then((resData)=>{
@@ -36,7 +44,7 @@ console.log("HomeComponent -> resData+++++++++++++++++", resData)
   this.labs=resData.data
 }).catch((eror)=>{
 console.log("HomeComponent -> eror", eror)
-  
+
 })
 this.countryList = csc.getAllCountries();
 // console.log("HomeComponent -> this.countryList", this.countryList)
@@ -46,7 +54,7 @@ this.stateList = csc.getStatesOfCountry("101");
    }
 
    getStateList(event) {
-    
+
 
   }
   getCityList(event) {
@@ -150,6 +158,19 @@ this.stateList = csc.getStatesOfCountry("101");
 
 
   ngOnInit(): void {
+
+    this.filteredOptions = this.myControl.valueChanges.pipe(
+      startWith(''),
+      map(value => this._filter(value))
+    );
+
+  }
+
+
+  private _filter(value: string): string[] {
+    const filterValue = value.toLowerCase();
+
+    return this.options.filter(option => option.toLowerCase().indexOf(filterValue) === 0);
   }
 
 }
