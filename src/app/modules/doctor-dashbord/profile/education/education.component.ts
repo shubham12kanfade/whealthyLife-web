@@ -55,12 +55,17 @@ export class EducationComponent implements OnInit {
     private fb: FormBuilder,
     private CookieService: CookieService) {
 
-    mainService.getDegree().then((resData) => {
-      console.log("EducationComponent -> resData", resData.data);
-      this.degrees = resData.data;
-    }).catch((error) => {
-      console.log("EducationComponent -> error", error)
-    })
+  
+
+this.mainService.getDoctorEducation().then((resData)=>{
+console.log("EducationComponent -> resData+++++++++++++++++++++++++", resData)
+const data={ }
+this.dynamicForm.value['qualificationArray'].push()
+  console.log("EducationComponent -> this.dynamicForm['qualificationArray']",this.dynamicForm.value['qualificationArray'])
+}).catch((err)=>{
+console.log("EducationComponent -> err", err)
+  
+})
 
     this.items.length = 100;
     this.getProfile();
@@ -72,31 +77,15 @@ export class EducationComponent implements OnInit {
         
     }
   }
-
-  // search(event) {
-  //   this.newCategory = false;
-  //   this.resultDeggree = this.degrees.filter(ele => ele.shortName.toLowerCase().includes(event.query));
-  //   console.log("EducationComponent -> search -> event", event, this.resultDeggree);
-  //   if (this.resultDeggree.length === 0) {
-  //     this.newCategory = true;
-  //     this.resultDeggree[0] = { shortName: event.query };
-  //   }
-
-  // }
-
   ngOnInit() {
     this.dynamicForm = this.fb.group({
-      filters: this.fb.array([])
+      qualificationArray: this.fb.array([])
     });
-
-    // Uncomment the line below If you want to seed the Form with some data
     this.seedFiltersFormArray();
   }
-
   seedFiltersFormArray() {
     this.seedData.forEach(seedDatum => {
       const formGroup = this.createFilterGroup();
-
       formGroup.patchValue(seedDatum);
       this.filtersFormArray.push(formGroup);
     });
@@ -104,46 +93,34 @@ export class EducationComponent implements OnInit {
 
   createFilterGroup() {
     return this.fb.group({
-      degree: ['', Validators.required],
+      qualificationId: ['', Validators.required],
       college: ['', Validators.required],
-      yearOfCompletion: ['', Validators.required],
+      completionYear: ['', Validators.required],
 
     });
   }
-
   addFilterToFiltersFormArray() {
     this.filtersFormArray.push(this.createFilterGroup());
     console.log("EducationComponent -> addFilterToFiltersFormArray -> filtersFormArray", this.filtersFormArray.value)
   }
-
   removeFilterFromFiltersFormArray(index) {
     this.filtersFormArray.removeAt(index);
   }
-
   selectedAPIChanged(i) {
     this.getFilterGroupAtIndex(i).addControl('value', this.getFormControl());
   }
-
   getFormControl() {
     return this.fb.control(null);
   }
-
   save() {
     this.submitted = true;
-
-
     const user = JSON.parse(this.CookieService.get('userInfo_WhealthyLife'))
     console.log("EducationComponent -> save -> user", user)
-
-
     const data = {
-
       ...this.dynamicForm.value,
     }
     console.log("EducationComponent -> save -> data", data)
-
-
-    this.mainService.updateUserprofile(data).then(resData => {
+    this.mainService.addDoctorDegree(data).then(resData => {
       console.log("EducationComponent -> save -> resData", resData)
       this.showToast('success', 'Profile', 'Profile updated successfully');
     this.stepper.next();
@@ -151,22 +128,13 @@ export class EducationComponent implements OnInit {
       console.log("EditProfileComponent -> onSave -> error", error)
     })
   }
-
   get filtersFormArray() {
-    return (<FormArray>this.dynamicForm.get('filters'));
+    return (<FormArray>this.dynamicForm.get('qualificationArray'));
   }
-
   getFilterGroupAtIndex(index) {
     return (<FormGroup>this.filtersFormArray.at(index));
   }
-
-
-
-
-
-
   get f() { return this.profileform.controls; }
-
   getProfile() {
     this.mainService.getProfile().then(resData => {
       this.profileform.patchValue(resData.data);
@@ -174,15 +142,12 @@ export class EducationComponent implements OnInit {
       console.log("EditProfileComponent -> getProfile -> error", error)
     })
   }
-
   onSave() {
     this.submitted = true;
 this.profileform
     if (this.profileform.invalid) {
       return;
     }
-
-
     this.mainService.updateUserprofile(this.profileform.value).then(resData => {
       this.showToast('success', 'Profile', 'Profile updated successfully');
       this.stepper.next();
@@ -206,12 +171,6 @@ this.profileform
   adddegree:any
   search(value)
   {
-//     this.adddegree=value
-//  this.filteredOptions= this.degrees.filter((ele) =>
-//  ele.shortName.toLowerCase().includes(value.toLowerCase())
-// );
-
-
     const shit=this.degrees.filter(
       (val)=> val.shortName.toLowerCase().includes(value))
     if(shit.length){
@@ -222,13 +181,8 @@ this.profileform
     }
     this.filteredOptions = this.degrees.filter(
       (val)=> val.shortName.includes(value))
-   
   }
   onChange(){
-
     this.adddegree
-
-  
   }
-  
 }
