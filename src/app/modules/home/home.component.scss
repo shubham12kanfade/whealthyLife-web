@@ -5,6 +5,10 @@
   }
 }
 
+// .custom-search-input[_ngcontent-gfd-c122] input[type=submit][_ngcontent-gfd-c122] {
+//   font-size: 16px !important;
+// }
+
 .example-form {
   min-width: 150px;
   max-width: 500px;
@@ -24,8 +28,12 @@
   height: 388px !important;
 }
 #custom-search-input .search-query {
-  width: 77%;
-  // margin-top: 1px;
+  width: 77.7%;
+  padding-left: inherit;
+}
+
+#custom-search-input .btn_search {
+  margin-top: 11px;
 }
 
 .labsimg {
@@ -81,11 +89,16 @@ a {
   text-decoration: none;
 }
 
+.search-deivde{
+  border-left: 3px solid !important;
+  padding-left: 10px;
+}
+
 .btn-main {
   border-radius: 20px;
   padding: 10px 30px !important;
   background-color: #0ba114;
-  color: #fff;
+  color: #ffffffff;
   text-align: center;
   line-height: 1.5;
   font-size: 16px;

@@ -16,7 +16,7 @@
                             [matAutocomplete]="auto">
                           <input type="submit" class="btn_search" value="Search">
                           <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
-                            <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                            <mat-option *ngFor="let option of filteredOptions | async" [value]="option" class="search-deivde">
                               {{option}}
                             </mat-option>
                           </mat-autocomplete>
