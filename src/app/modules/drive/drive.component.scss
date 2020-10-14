@@ -16,9 +16,14 @@
     color: black;
 }
 
+.ml-3, .mx-3 {
+  margin-left: 1rem!important;
+  cursor: pointer;
+}
+
 .hb {
     background-color: white;
-  
+
 }
 .colsm-4-h{
     height: 75vh;
@@ -31,4 +36,3 @@
         height: auto ;
     }
   }
- 
