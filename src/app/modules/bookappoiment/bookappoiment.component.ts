@@ -48,7 +48,7 @@ export class BookappoimentComponent implements OnInit {
   // ];
 
   constructor(public router: Router, private mapsAPILoader: MapsAPILoader,
-    private ngZone: NgZone , public speciality: SpecialityService ) { 
+    private ngZone: NgZone , public speciality: SpecialityService ) {
 
       // this.speciality.getSpecialization().then((resData:any)=>{
       // console.log("BookappoimentComponent -> resData", resData)
@@ -134,7 +134,7 @@ export class BookappoimentComponent implements OnInit {
     pullDrag: true,
     dots: false,
     autoplay: true,
-    // autoplaySpeed:100,
+    autoplaySpeed:100,
     margin: 10,
     navSpeed: 100,
     navText: ['', ''],
@@ -191,7 +191,7 @@ export class BookappoimentComponent implements OnInit {
   ngOnInit(): void {
     this.placesLoad();
 
-   
+
 
   }
 
