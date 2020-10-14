@@ -1,5 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 
+*{
+  font-family: Camphor,verdana !important;
+}
+
 .start-header {
 	opacity: 1;
 	transform: translateY(0);
@@ -508,7 +512,7 @@ body .ui-multiselect {
 	transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out !important;
 }
 ::ng-deep .mat-step-header .mat-step-icon-selected {
-    background-color: #0ba114 !important; 
+    background-color: #0ba114 !important;
  }
 
 
