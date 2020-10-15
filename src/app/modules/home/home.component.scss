@@ -84,12 +84,26 @@ hr {
   font-size: 16px !important;
 }
 
+#custom-search-input {
+  margin: 0;
+  top: 0 !important;
+  padding: 0;
+  width: 911px;
+  margin: auto;
+  position: relative;
+}
+
+// .mat-form-field-wrapper {
+//   position: relative;
+//   top: 41px;
+// }
+
 a {
   // color: #337ab7;
   text-decoration: none;
 }
 
-.search-deivde{
+.search-deivde {
   border-left: 3px solid !important;
   padding-left: 10px;
 }
@@ -98,7 +112,8 @@ a {
   border-radius: 20px;
   padding: 10px 30px !important;
   background-color: #0ba114;
-  color: #ffffffff;
+  cursor: pointer;
+  color: white !important;
   text-align: center;
   line-height: 1.5;
   font-size: 16px;

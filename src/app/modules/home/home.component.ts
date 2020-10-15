@@ -31,26 +31,25 @@ export class HomeComponent implements OnInit {
 
   constructor(public SpecialityService:SpecialityService,
     public MainService:MainService) {
-SpecialityService.getSpecialization().then((resData)=>{
-console.log("HomeComponent -> constructor -> resData", resData)
-this.Specialit=resData.data
-}).catch((error)=>{
-console.log("HomeComponent -> constructor -> error", error)
+      SpecialityService.getSpecialization().then((resData)=>{
+          console.log("HomeComponent -> constructor -> resData", resData)
+          this.Specialit=resData.data
+        }).catch((error)=>{
+          console.log("HomeComponent -> constructor -> error", error)
+        })
 
-})
+      MainService.getLabs().then((resData)=>{
+        console.log("HomeComponent -> resData+++++++++++++++++", resData)
+          this.labs=resData.data
+      }).catch((eror)=>{
+        console.log("HomeComponent -> eror", eror)
+      })
 
-MainService.getLabs().then((resData)=>{
-console.log("HomeComponent -> resData+++++++++++++++++", resData)
-  this.labs=resData.data
-}).catch((eror)=>{
-console.log("HomeComponent -> eror", eror)
+      this.countryList = csc.getAllCountries();
+      console.log("HomeComponent -> this.countryList", this.countryList)
 
-})
-this.countryList = csc.getAllCountries();
-// console.log("HomeComponent -> this.countryList", this.countryList)
-
-this.stateList = csc.getStatesOfCountry("101");
-    console.log("HomeComponent -> getStateList -> stateList", this.stateList)
+      this.stateList = csc.getStatesOfCountry("101");
+        console.log("HomeComponent -> getStateList -> stateList", this.stateList)
    }
 
    getStateList(event) {

@@ -67,6 +67,11 @@ getProfilevalidation(id){
 addDegree(data){
   return this.api.postData('qualification/add',data)
 }
-
+addDoctorDegree(data){
+  return this.api.postData('doctor/qualification/add',data)
+}
+getDoctorEducation(){
+  return this.api.getData('doctor/qualification/all')
+}
 
 }
