@@ -16,7 +16,7 @@ export class SpecialityService {
   }
 
   getTestMaster() {
-    return this.Api.getData('country/specialisations');
+    return this.Api.getData('tests/all');
   }
 
 

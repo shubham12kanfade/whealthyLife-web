@@ -4,10 +4,14 @@ import { FormControl, FormBuilder } from '@angular/forms';
 import { MainService } from 'src/app/services/main.service';
 import { SpecialityService } from './../../services/speciality.service';
 
+
 import { Component, OnInit, ElementRef, ViewChild, NgZone } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import csc from 'country-state-city';
 
+export interface User {
+  name: string;
+}
 
 
 @Component({
@@ -25,9 +29,10 @@ export class HomeComponent implements OnInit {
   showmore: boolean=true;
 
   myControl = new FormControl();
-  // options: string[] = ['Mumbai', 'Chennai', 'Banglore', 'Pune'];
-  filteredOptions: Observable<string[]>;
+  filteredOptions: Observable<User[]>;
   test: any;
+
+  options: string[] = ["ASD", "sddcbsda", "sjkbcjbc"]
 
 
   constructor(public SpecialityService:SpecialityService,
@@ -174,25 +179,21 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
 
-    // this.filteredOptions = this.myControl.valueChanges.pipe(
+    // this.filteredOptions = this.myControl.valueChanges
+    // .pipe(
     //   startWith(''),
-    //   map(test => this._filter(test))
+    //   map(value => typeof value === 'string' ? value : value.name),
+    //   map(name => name ? this._filter(name) : this.options.slice())
     // );
-
-    this.filteredOptions = this.myControl.valueChanges
-      .pipe(
-        startWith(''),
-        map(test => typeof test === 'string' ? test : test.name),
-        map(name => name ? this._filter(name) : this.test.slice())
-      );
-
   }
+  // displayFn(user: User): string {
+  //   return user && user.name ? user.name : '';
+  // }
 
+  // private _filter(name: string): User[] {
+  //   const filterValue = name.toLowerCase();
 
-  private _filter(test: string): string[] {
-    const filterValue = test.toLowerCase();
-
-    return this.test.filter(test => test.name.toLowerCase().indexOf(filterValue) === 0);
-  }
+  //   return this.options.filter(option => option.name.toLowerCase().indexOf(filterValue) === 0);
+  // }
 
 }

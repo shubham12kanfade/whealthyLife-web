@@ -14,7 +14,7 @@
                                 <div class="row text-dark mb-0">
                                     <h2 class=" font-weight-bold mb-0">
                                         Dr. {{profileData.firstName}} {{profileData.lastName}}</h2>
-                                   
+
                                 </div>
                                 <p class="pl-1 pt-2 font-weight-bold ">Profile is claimed</p>
                                 <div class="row text-dark">
@@ -61,7 +61,7 @@
                 <ul>
 
                     <li>
-                        <div class="a font-weight-bold mcursor " [ngClass]="{selectActive: active=='Info'}"
+                        <div class="a font-weight-bold mcursor " [ngClass]="{selectActive: active =='Info'}"
                             (click)="activefn('Info')">Info</div>
                     </li>
                     <li>
@@ -412,7 +412,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card mb-3" *ngIf="active=='Feedback'">
+                <div class="card mb-3" *ngIf="active == 'Feedback'">
                     <div class="row no-gutters">
                         <div class="col-md-12">
                             <div class="card-body ml-3 mr-3">
@@ -834,7 +834,7 @@
                                         {{city}},
                                         {{state}},
                                         {{Country}}
-                                       
+
                                     </p>
                                 </div>
                             </div>

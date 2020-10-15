@@ -20,57 +20,29 @@
                             [matAutocomplete]="auto">
                           <input type="submit" class="btn_search" value="Search">
                           <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
-                            <mat-option *ngFor="let option of test | async" [value]="test" class="search-deivde">
-                             <span></span><span>{{option.name}}</span>
+                            <mat-option *ngFor="let option of test" [value]="option" class="search-deivde">
+                             <span></span><span>{{option.fullName}}</span>
                             </mat-option>
                           </mat-autocomplete>
                         </mat-form-field>
                       </form>
-                        <!-- <select class="city-select">
-                         city Enter
-                        </select> -->
-<!--
-                        <div id="c-omni-container" class="c-omni-container--desktop">
-                          <div class="c-omni u-clearfix">
-                              <div class="c-omni__wrapper u-clearfix c-omni__wrapper--locality dropdown" role="button">
-                                  <div class="c-omni-searchbox_wrapper ">
-                                      <span class="c-omni-searchbox__icon">
-                                          <i class="icon-ic_location"></i>
-                                      </span>
-                                      <input data-qa-id="omni-searchbox-locality" class="c-omni-searchbox c-omni-searchbox--large dropdown-toggle" autocomplete="off" placeholder="Search location" #search><span class="c-omni-searchbox__button-container">
-                                          <span class="c-omni-searchbox__button c-omni-searchbox__button"
-                                              data-qa-id="current_location">
-                                              <i class="icon-ic_gps_system"></i>
-                                              <span class="c-omni-searchbox__button__text">Detect</span>
-                                      </span>
-                                      </span>
-                                  </div>
-                              </div>
-                              <div class="c-omni__wrapper u-clearfix c-omni__wrapper--keyword dropdown" role="button">
-                                  <div class="c-omni-searchbox_wrapper dropdown">
-                                      <span class="c-omni-searchbox__icon">
-                                          <i class="icon-ic_search"></i>
-                                      </span>
-                                      <div class="">
-                                          <ng-autocomplete [data]="countries" class="" [searchKeyword]="keyword" placeHolder="Type test names and select from options"
-                                          (selected)='getStateList($event)' (inputChanged)='getCityList($event)' (inputFocused)='showmoreFun($event)'
-                                          historyIdentifier="countries" [itemTemplate]="itemTemplate"
-                                              [notFoundTemplate]="notFoundTemplate">
-                                          </ng-autocomplete>
 
-                                          <ng-template #itemTemplate let-item>
-                                              <a [innerHTML]="item.name"></a>
-                                          </ng-template>
 
-                                          <ng-template #notFoundTemplate let-notFound>
-                                              <div [innerHTML]="notFound"></div>
-                                          </ng-template>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                      </div> -->
-
+                      <!-- <form class="example-form">
+                        <mat-form-field class="example-full-width">
+                          <input type="text"
+                                 placeholder="Pick one"
+                                 aria-label="Number"
+                                 matInput
+                                 [formControl]="myControl"
+                                 [matAutocomplete]="auto">
+                          <mat-autocomplete #auto="matAutocomplete">
+                            <mat-option *ngFor="let option of options" [value]="option">
+                              {{option}}
+                            </mat-option>
+                          </mat-autocomplete>
+                        </mat-form-field>
+                      </form> -->
 
 
                       </div>
@@ -244,7 +216,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="pic-middle" data-aos="fade-right">
-                        <img src="../../../assets/img/Swati/MedicalRecord.jpg" alt="WhealthyLife"
+                        <img src="../assets/img/Healthcare-characters-vector-3-01.jpg" alt="WhealthyLife"
                             class="img-fluid">
                     </div>
                 </div>
@@ -279,7 +251,7 @@
                                         <div class="inner-cat-content">
                                             <h2>{{item.fullName}}</h2>
                                         </div>
-                                        <img [src]="item.backImg" onError="this.src='./../../../assets/img/Swati/Appointment.svg'" alt="img">
+                                        <img [src]="item.backImg" onError="this.src='src\assets\img\Swati\MedicalRecord.jpg'" alt="img">
                                     </div>
                                 </a>
                             </div>
@@ -316,7 +288,7 @@
                     </div>
                 </div>
                 <div class="col-md-5">
-                    <img src="../../../assets/img/Swati/HealthCareProvider.png" alt="WhealthyLife" class="img-fluid"
+                    <img src="../assets/imag/Doctor-And-Patient.png" alt="WhealthyLife" class="img-fluid"
                         data-aos="fade-left">
                 </div>
             </div>

@@ -13,11 +13,26 @@
   min-width: 150px;
   max-width: 500px;
   width: 100%;
+  // background-color: #f1f3ff;
 }
 
 .example-full-width {
   width: 100%;
 }
+
+
+// .example-form {
+//   min-width: 90px;
+//   max-width: 500px;
+//   width: 100%;
+// }
+
+// .example-full-width {
+//   width: 100%;
+//   font-size: small;
+// }
+
+
 .adj {
   display: flex;
   justify-content: center;
@@ -120,7 +135,7 @@ a {
   font-weight: 400;
   display: inline-block;
   z-index: 1;
-  position: absolute;
+  position: ab;
 }
 
 .categories h2 {
