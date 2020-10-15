@@ -20,8 +20,8 @@
                             [matAutocomplete]="auto">
                           <input type="submit" class="btn_search" value="Search">
                           <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
-                            <mat-option *ngFor="let option of filteredOptions | async" [value]="option" class="search-deivde">
-                             <span></span><span>{{option}}</span>
+                            <mat-option *ngFor="let option of test | async" [value]="test" class="search-deivde">
+                             <span></span><span>{{option.name}}</span>
                             </mat-option>
                           </mat-autocomplete>
                         </mat-form-field>

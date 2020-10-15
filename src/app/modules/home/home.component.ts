@@ -25,8 +25,9 @@ export class HomeComponent implements OnInit {
   showmore: boolean=true;
 
   myControl = new FormControl();
-  options: string[] = ['Mumbai', 'Chennai', 'Banglore', 'Pune'];
+  // options: string[] = ['Mumbai', 'Chennai', 'Banglore', 'Pune'];
   filteredOptions: Observable<string[]>;
+  test: any;
 
 
   constructor(public SpecialityService:SpecialityService,
@@ -50,6 +51,21 @@ export class HomeComponent implements OnInit {
 
       this.stateList = csc.getStatesOfCountry("101");
         console.log("HomeComponent -> getStateList -> stateList", this.stateList)
+
+        SpecialityService.getTestMaster().then(testdata => {
+        console.log(": -----------------------------------");
+        console.log("HomeComponent -> testdata", testdata);
+        console.log(": -----------------------------------");
+
+        this.test = testdata;
+
+        }).catch(err => {
+        console.log(": -------------------------");
+        console.log("HomeComponent -> err", err);
+        console.log(": -------------------------");
+
+        })
+
    }
 
    getStateList(event) {
@@ -158,18 +174,25 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.filteredOptions = this.myControl.valueChanges.pipe(
-      startWith(''),
-      map(value => this._filter(value))
-    );
+    // this.filteredOptions = this.myControl.valueChanges.pipe(
+    //   startWith(''),
+    //   map(test => this._filter(test))
+    // );
+
+    this.filteredOptions = this.myControl.valueChanges
+      .pipe(
+        startWith(''),
+        map(test => typeof test === 'string' ? test : test.name),
+        map(name => name ? this._filter(name) : this.test.slice())
+      );
 
   }
 
 
-  private _filter(value: string): string[] {
-    const filterValue = value.toLowerCase();
+  private _filter(test: string): string[] {
+    const filterValue = test.toLowerCase();
 
-    return this.options.filter(option => option.toLowerCase().indexOf(filterValue) === 0);
+    return this.test.filter(test => test.name.toLowerCase().indexOf(filterValue) === 0);
   }
 
 }

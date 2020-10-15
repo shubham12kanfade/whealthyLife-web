@@ -119,6 +119,8 @@ a {
   font-size: 16px;
   font-weight: 400;
   display: inline-block;
+  z-index: 1;
+  position: absolute;
 }
 
 .categories h2 {
