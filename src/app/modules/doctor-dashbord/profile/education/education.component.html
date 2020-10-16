@@ -1,80 +1,100 @@
 <section class="bg-white p-sm-3">
-    <div class="row">
-        <div class="col-md-5 col-lg-3 offset-md-2">
-            <form [formGroup]="dynamicForm">
-                <div formArrayName="qualificationArray">
-                    <div *ngFor="let filter of filtersFormArray.controls; let i = index;let x = index;">
-                        <div [formGroupName]="i" class="container">
-                            <div class="form-group">
-                                <label for="college">Degree</label>
-                                <input type="text" class="form-control" matInput formControlName="qualificationId"
-                                    (input)="search($event.target.value)" [matAutocomplete]="auto">
-                                <mat-autocomplete #auto="matAutocomplete">
-                                    <mat-option *ngFor="let option of filteredOptions" [value]="option.shortName">
-                                        {{option.shortName}}
-                                    </mat-option>
-                                    <mat-option [value]="addthisdegree" *ngIf="check" (click)="onChange()">
-                                        {{addthisdegree}}<button style="    position: absolute;
-                                          right: 0;
-                                      " mat-button matSuffix mat-icon-button aria-label="Clear">
-                                            <mat-icon>library_add</mat-icon>
-                                        </button>
-                                    </mat-option>
-                                </mat-autocomplete>
-                            </div>
+  <div class="row">
+    <div class="col-md-5 col-lg-3 offset-md-2">
+      <div [formGroup]="reg">
+        <div formArrayName="qualificationArray">
+          <div
+            *ngFor="
+              let ite of getControlName('qualificationArray');
+              let fo = index
+            "
+            [formGroupName]="fo"
+          >
+            <div class="form-group-sm mb-3">
+              <label for="RegistrationNumber">Registration Number</label>
+              <input
+                type="text"
+                class="form-control"
+                id="RegistrationNumber"
+                placeholder="R-898977"
+                formControlName="qualificationId"
+              />
+            </div>
+            <div class="form-group">
+              <label for="RegistrationCouncil">Registration Council</label>
+              <input
+                type="text"
+                class="form-control"
+                id="registrationNumber"
+                formControlName="college"
+                placeholder="Enter your council"
+              />
+            </div>
+            <div class="form-group">
+              <label for="RegistrationYear">Registration Year</label>
+              <select
+                id="completionYear"
+                class="form-control"
+                formControlName="completionYear"
+              >
+                <option value="asd">asd</option>
+              </select>
+            </div>
+            <div class="col-12 mb-5">
+              <button
+                mat-mini-fab
+                color="warn"
+                (click)="remDegree(fo)"
+                class="mx-2 float-right"
+                aria-label="Example icon button with a menu icon"
+              >
+                <mat-icon> delete</mat-icon>
+              </button>
+              <button
+                mat-mini-fab
+                color="primary"
+                (click)="addPostService()"
+                class="mx-2 float-right"
+                aria-label="Example icon button with a menu icon"
+              >
+                <mat-icon>add_circle_outline</mat-icon>
+              </button>
+            </div>
+          </div>
+        </div>
+        <hr class="mt-5 mb-3" />
 
-                            <div class="form-group">
-                                <label for="college">College/Institute</label>
-                                <input type="text" class="form-control" formControlName="college" id="college"
-                                    placeholder="">
-                            </div>
-                            <div class="form-group ">
-                                <label for="RegistrationYear">Year of completion</label>
-                                <select id="RegistrationYear" class="form-control" formControlName="completionYear">
-                                    <option *ngFor="let item of items;index as i" [value]="2019-i+1"> {{2019-i+1}}
-                                    </option>
-                                </select>
-                            </div>
-                            <div class="col-12 mb-5">
-                                <button mat-mini-fab color="warn" *ngIf="i >= '1'"
-                                    (click)="removeFilterFromFiltersFormArray(i)" class=" mx-2 float-right"
-                                    aria-label="Example icon button with a menu icon">
-                                    <mat-icon> delete</mat-icon>
-                                </button>
-                                <button mat-mini-fab color="primary" *ngIf="filtersFormArray.controls.length == x+1"
-                                    (click)="addFilterToFiltersFormArray()" class=" mx-2 float-right"
-                                    aria-label="Example icon button with a menu icon">
-                                    <mat-icon>add_circle_outline</mat-icon>
-                                </button>
-                            </div>
-                            <hr style="margin-top: 72px;">
-                        </div>
-                    </div>
-                </div>
-            </form>
-            <div class="row">
-                <button class="mr-2" mat-raised-button matStepperPrevious>
-                    <mat-icon aria-hidden="false" aria-label="Example home icon">chevron_left
-                    </mat-icon>
-                    Back
-                </button>
-                <button class="ml-2" mat-raised-button color="warn" (click)="save()">Save and Contnue
-                    <mat-icon aria-hidden="false" aria-label="Example home icon">chevron_right
-                    </mat-icon>
-                </button>
-            </div>
+        <div class="row">
+          <button class="mr-2" mat-raised-button matStepperPrevious>
+            <mat-icon aria-hidden="false" aria-label="Example home icon"
+              >chevron_left
+            </mat-icon>
+            Back
+          </button>
+          <button class="ml-2" mat-raised-button color="warn" (click)="save()">
+            Save and Contnue
+            <mat-icon aria-hidden="false" aria-label="Example home icon"
+              >chevron_right
+            </mat-icon>
+          </button>
         </div>
-        <div class="col-md-3 col-lg-5 offset-md-1">
-            <div class=" d-none d-sm-none d-md-block col-md-12 col-lg-8 mt-5 ml-5 pr-0 pl-0"
-                style="border: 1px solid #14aa9b;">
-                <div class=" bg p-4 textcol">
-                    <div><i class="fa fa-lightbulb-o fa-lg" aria-hidden="true"></i> </div>
-                    <p class="stext font-weight-bold">On WhealthyLife, doctors are listed under the relevant
-                        specializations based on their academic degrees. Both, education and years of experience,
-                        showcase doctor’s expertise and are among the top 3 things that patients consider while
-                        making their decision</p>
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
+    <div class="col-md-3 col-lg-5 offset-md-1">
+      <div
+        class="d-none d-sm-none d-md-block col-md-12 col-lg-8 mt-5 ml-5 pr-0 pl-0"
+        style="border: 1px solid #14aa9b"
+      >
+        <div class="bg p-4 textcol">
+          <div><i class="fa fa-lightbulb-o fa-lg" aria-hidden="true"></i></div>
+          <p class="stext font-weight-bold">
+            On WhealthyLife, doctors are listed under the relevant
+            specializations based on their academic degrees. Both, education and
+            years of experience, showcase doctor’s expertise and are among the
+            top 3 things that patients consider while making their decision
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>

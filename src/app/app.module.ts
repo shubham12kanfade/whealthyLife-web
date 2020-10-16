@@ -21,6 +21,7 @@ import { AuthServiceConfig, GoogleLoginProvider, FacebookLoginProvider, LinkedIn
 import { ToastModule } from 'primeng/toast';
 
 
+
 const config = new AuthServiceConfig([
 
   {
@@ -54,6 +55,7 @@ export function provideConfig() {
     AutocompleteLibModule,
     HttpClientModule,
     ToastModule,
+   
     AgmCoreModule.forRoot()
   ],
 

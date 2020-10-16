@@ -3,39 +3,7 @@
 
 </div>
 <!-- Mobile menu overlay mask -->
-<div class="top">
-    <div class="container">
 
-
-        <div class="row">
-            <div class="col-md-8 offset-md-4 col-12">
-                <ul class="top-list right">
-                    <!-- <li>
-                        <a [routerLink]="['/bookappointment']" routerLinkActive="router-link-active"><img src="../assets/img/stethoscope.png" alt="icon">Book Appointment</a>
-                    </li>
-                    <li>
-                        <a [routerLink]="['/drive/records']" routerLinkActive="router-link-active"><img src="../assets/img/report.png" alt="icon">View Medical Records</a>
-                    </li>
-                    <li>
-                        <a [routerLink]="['/booktests']" routerLinkActive="router-link-active"><img src="../assets/img/syringe.png" alt="icon">Book Tests</a>
-                    </li>
-                    <li>
-                        <a [routerLink]="['/help']" routerLinkActive="router-link-active"><img src="../assets/img/hospital.png" alt="icon">Help</a>
-                    </li> -->
-                    <li *ngIf="!userInfo" >
-                        <a [routerLink]="['/login']" routerLinkActive="router-link-active" class="custom-font">LOGIN</a>
-                    </li>
-                    <li *ngIf="!userInfo" >
-                        <a [routerLink]="['/register']" routerLinkActive="router-link-active" class="custom-font1">REGISTER</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
- <div class="fixed-popup"><a href="#contact-popup" data-fancybox>
-		<img src="../assets/img/answer.png" alt="contact"><span>Ask a Question</span></a>
-</div>
 <div id="contact-popup">
     <div class="row no-gutters">
         <div class="col-md-5 equal-height hidden-xs">
@@ -72,7 +40,16 @@
 <div class="navigation-wrap bg-light start-header start-style">
     <div class="container">
         <div class="row">
+         
             <div class="col-12">
+                <div class="col-12">
+                    <ul class="top-list right">
+                        <li class="float-right" *ngIf="!userInfo" >
+                            <a [routerLink]="['/login']" routerLinkActive="router-link-active" class="custom-font">LOGIN</a>
+                        </li>
+                       
+                    </ul>
+                </div>
                 <nav class="navbar navbar-expand-md navbar-light">
 
                     <div id="logo_home" data-aos="fade-up">
@@ -86,6 +63,11 @@
 					</button>
 
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        
+
+                       
+
+                        
                         <ul class="navbar-nav ml-auto py-4 py-md-0 imp">
 
                             <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 font-custome">

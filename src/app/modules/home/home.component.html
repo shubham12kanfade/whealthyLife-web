@@ -160,7 +160,7 @@
             </div>
             <div   *ngIf="showmore" class="mx-auto packs">
                 <div class="form-row">
-                    <div *ngFor="let item of labs.slice(0,4)" class="col-md-3 col-sm-6 col-12 " data-aos="fade-right">
+                    <div *ngFor="let item of labs | slice: 0:4" class="col-md-3 col-sm-6 col-12 " data-aos="fade-right">
                         <div class="adj2 p-single equal-height">
                             <div class="p-head">
                                 <h4>{{item.heading}}</h4>

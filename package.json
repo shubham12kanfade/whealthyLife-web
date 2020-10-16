@@ -13,12 +13,12 @@
   "dependencies": {
     "@agm/core": "^1.1.0",
     "@angular/animations": "~9.0.2",
-    "@angular/cdk": "^10.1.2",
+    "@angular/cdk": "^10.2.5",
     "@angular/common": "~9.0.2",
     "@angular/compiler": "~9.0.2",
     "@angular/core": "~9.0.2",
     "@angular/forms": "^9.0.7",
-    "@angular/material": "^9.2.4",
+    "@angular/material": "^10.2.5",
     "@angular/platform-browser": "~9.0.2",
     "@angular/platform-browser-dynamic": "~9.0.2",
     "@angular/router": "~9.0.2",
@@ -48,7 +48,6 @@
     "primeng": "^9.0.6",
     "rxjs": "~6.5.4",
     "rxjs-compat": "^6.5.5",
-    "socket.io-client": "^2.3.0",
     "swiper": "^6.1.1",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"

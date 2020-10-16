@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatTabsModule } from '@angular/material/tabs';
-import { MatIconModule } from '@angular/material/icon';
+
 import { MatDialogModule } from '@angular/material/dialog';
 import { FullCalendarModule } from 'primeng/fullcalendar';
 import { MatButtonModule } from '@angular/material/button';
@@ -34,41 +34,42 @@ import { MatOption, MatOptionModule } from '@angular/material/core';
 import { MultiSelectModule } from 'primeng/multiselect';
 import {AutoCompleteModule} from 'primeng/autocomplete';
 import { NgxMatSelectSearchModule } from 'ngx-mat-select-search';
+import {MatIconModule} from '@angular/material/icon';
 
-const material = [
-  CommonModule,
-  MatTabsModule,
-  MatIconModule,
-  MatDialogModule,
-  FullCalendarModule,
-  MatButtonModule,
-  MatRadioModule,
-  MatInputModule,
-  MatCheckboxModule,
-  MatFormFieldModule,
-  MatTableModule,
-  MatPaginatorModule,
-  MatDatepickerModule,
-  CalendarModule,
-  CdkTableModule,
-  ToastModule,
-  MessagesModule,
-  MessageModule,
-  ProgressSpinnerModule,
-  MatSelectModule,
-  MatCardModule,
-  MatButtonToggleModule,
-  MatStepperModule,
-  MatGridListModule,
-  MatTooltipModule,
-  MatBadgeModule,
-  MatExpansionModule,
-  MatSliderModule,
-  MatAutocompleteModule,
-  MatChipsModule,
-  MatOptionModule,
-  NgxMatSelectSearchModule
-]
+// const material = [
+//   CommonModule,
+//   MatTabsModule,
+//   MatIconModule,
+//   MatDialogModule,
+//   FullCalendarModule,
+//   MatButtonModule,
+//   MatRadioModule,
+//   MatInputModule,
+//   MatCheckboxModule,
+//   MatFormFieldModule,
+//   MatTableModule,
+//   MatPaginatorModule,
+//   MatDatepickerModule,
+//   CalendarModule,
+//   CdkTableModule,
+//   ToastModule,
+//   MessagesModule,
+//   MessageModule,
+//   ProgressSpinnerModule,
+//   MatSelectModule,
+//   MatCardModule,
+//   MatButtonToggleModule,
+//   MatStepperModule,
+//   MatGridListModule,
+//   MatTooltipModule,
+//   MatBadgeModule,
+//   MatExpansionModule,
+//   MatSliderModule,
+//   MatAutocompleteModule,
+//   MatChipsModule,
+//   MatOptionModule,
+//   NgxMatSelectSearchModule
+// ]
 
 @NgModule({
   declarations: [],
@@ -96,7 +97,6 @@ const material = [
     MatCardModule,
     MatButtonToggleModule,
     MatStepperModule,
-    material,
     DropdownModule,
     MatGridListModule,
     MatTooltipModule,
@@ -105,6 +105,7 @@ const material = [
     MatSliderModule,
     MatAutocompleteModule,
     MatChipsModule,
+    NgxMatSelectSearchModule,
     MatOptionModule,
     MultiSelectModule,
     AutoCompleteModule
@@ -133,7 +134,6 @@ const material = [
     MatCardModule,
     MatButtonToggleModule,
     MatStepperModule,
-    material,
     DropdownModule,
     MatGridListModule,
     MatTooltipModule,
@@ -144,7 +144,8 @@ const material = [
     MatChipsModule,
     MatOptionModule,
     MultiSelectModule,
-    AutoCompleteModule
+    AutoCompleteModule,
+    NgxMatSelectSearchModule
   ]
 })
 export class SharedModule { }

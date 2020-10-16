@@ -3,7 +3,7 @@ import { Component, OnInit, HostListener } from '@angular/core';
 import * as $ from 'jquery';
 import { UserService } from 'src/app/services/user.service';
 import { Router } from '@angular/router';
-import io from 'socket.io-client';
+// import io from 'socket.io-client';
 import { MessageService } from 'primeng/api';
 
 
@@ -23,19 +23,8 @@ export class HeaderComponent implements OnInit {
     private MainService:MainService
 
   ) {
-    this.scrollUp();
-    const socket = io('http://169.254.8.146:3311/');
-    socket.on('connect', (resData) => {
-      console.log("HeaderComponent -> resData", resData)
-      console.log(socket.connected); // true
-    });
-    socket.on('', (resData) => {
-      console.log("HeaderComponent -> resData", resData)
-      console.log(socket.connected); // true
-    });
-    // socket.on('disconnect', () => {
-    //   console.log(socket.connected); // false
-    // });
+    this.checkLogin()
+ 
   }
 
 
@@ -52,7 +41,6 @@ export class HeaderComponent implements OnInit {
 
   checkLogin() {
     this.userInfo = this.userService.getUserInfo();
-    console.log("HeaderComponent -> checkLogin -> this.userInfo ", this.userInfo)
   }
 
   ngOnInit(): void {
@@ -67,15 +55,10 @@ this.getProfileOnline();
 
   getProfileOnline(){
 this.MainService.getProfile().then((resData)=>{
-console.log("HeaderComponent -> getProfileOnline -> resData +++++++++++++++++++++++++++++++++++++++++++++++++++++", resData)
   this.onlieProfile=resData.data
 }).catch((err)=>{
-console.log("HeaderComponent -> getProfileOnline -> err", err)
   
 })
-
-  }
-  onClick() {
 
   }
 
