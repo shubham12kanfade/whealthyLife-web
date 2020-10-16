@@ -71,7 +71,7 @@ console.log("HeaderComponent -> getProfileOnline -> resData ++++++++++++++++++++
   this.onlieProfile=resData.data
 }).catch((err)=>{
 console.log("HeaderComponent -> getProfileOnline -> err", err)
-  
+
 })
 
   }

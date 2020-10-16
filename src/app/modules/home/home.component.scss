@@ -5,6 +5,13 @@
   }
 }
 
+.ng-autocomplete {
+  width: 100%;
+  max-width: 600px;
+  display: table;
+  margin: 0 auto;
+}
+
 // .custom-search-input[_ngcontent-gfd-c122] input[type=submit][_ngcontent-gfd-c122] {
 //   font-size: 16px !important;
 // }
@@ -20,7 +27,6 @@
   width: 100%;
 }
 
-
 // .example-form {
 //   min-width: 90px;
 //   max-width: 500px;
@@ -31,7 +37,6 @@
 //   width: 100%;
 //   font-size: small;
 // }
-
 
 .adj {
   display: flex;

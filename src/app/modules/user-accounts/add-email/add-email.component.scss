@@ -11,7 +11,7 @@
     padding-bottom: 15px;
 }
 .grid_16.min_height_400 {
-    font-family: Helvetica,sans-serif;
+  font-family: Camphor,verdana !important;
 }
 
 .container_12 .grid_12, .container_16 .grid_16 {
@@ -30,7 +30,7 @@
     text-align: center;
 }
 .form-control {
-    width: 36% !important;  
+    width: 36% !important;
     font-size: 15px;
 }
 .form-group{
@@ -43,7 +43,7 @@
         color: #FFF !important;
         font-size: 15px;
 }
-.prime:hover { 
+.prime:hover {
         background-position: right center !important;
     }
 .text-center {

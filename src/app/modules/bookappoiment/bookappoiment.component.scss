@@ -1,295 +1,295 @@
 video {
-    opacity: 100;
-    top: 1250px;
-    left: 390px;
+  opacity: 100;
+  top: 1250px;
+  left: 390px;
 }
 input.ng-untouched.ng-pristine.ng-valid {
-    border: 1px solid lightgray;
-    height: 50px !important;
+  border: 1px solid lightgray;
+  height: 50px !important;
 }
 .c-article-list__next_arrow {
-    cursor: pointer;
-    transform: rotate(-45deg) !important;
+  cursor: pointer;
+  transform: rotate(-45deg) !important;
 }
 .c-article-list__prev_arrow {
-    cursor: pointer;
-    transform: rotate(45deg) !important;
+  cursor: pointer;
+  transform: rotate(45deg) !important;
 }
 .cfw {
-    background-color: #f0f0f5;
+  background-color: #f0f0f5;
 }
 
 .u-bold {
-    font-weight: 400;
+  font-weight: 400;
 }
 /*! CSS Used from: Embedded */
 .__react_component_tooltip {
-    border-radius: 3px;
-    display: inline-block;
-    font-size: 13px;
-    left: -999em;
-    opacity: 0;
-    padding: 8px 21px;
-    position: fixed;
-    pointer-events: none;
-    transition: opacity 0.3s ease-out;
-    top: -999em;
-    visibility: hidden;
-    z-index: 999;
+  border-radius: 3px;
+  display: inline-block;
+  font-size: 13px;
+  left: -999em;
+  opacity: 0;
+  padding: 8px 21px;
+  position: fixed;
+  pointer-events: none;
+  transition: opacity 0.3s ease-out;
+  top: -999em;
+  visibility: hidden;
+  z-index: 999;
 }
 .__react_component_tooltip:before,
 .__react_component_tooltip:after {
-    content: "";
-    width: 0;
-    height: 0;
-    position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
 }
 .__react_component_tooltip.type-dark {
-    color: #fff;
-    background-color: #222;
+  color: #fff;
+  background-color: #222;
 }
 .__react_component_tooltip.type-dark.place-top:after {
-    border-top-color: #222;
-    border-top-style: solid;
-    border-top-width: 6px;
+  border-top-color: #222;
+  border-top-style: solid;
+  border-top-width: 6px;
 }
 .__react_component_tooltip.place-top {
-    margin-top: -10px;
+  margin-top: -10px;
 }
 .__react_component_tooltip.place-top:before {
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    bottom: -8px;
-    left: 50%;
-    margin-left: -10px;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  bottom: -8px;
+  left: 50%;
+  margin-left: -10px;
 }
 .__react_component_tooltip.place-top:after {
-    border-left: 8px solid transparent;
-    border-right: 8px solid transparent;
-    bottom: -6px;
-    left: 50%;
-    margin-left: -8px;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  bottom: -6px;
+  left: 50%;
+  margin-left: -8px;
 }
 /*! CSS Used fontfaces */
 
 /*! CSS Used from: Embedded */
 footer {
-    display: block;
+  display: block;
 }
 body {
-    line-height: 1;
-    text-align: left;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    background-color: #f0f0f5;
-    font-family: Camphor, verdana !important;
-    color: #414146;
+  line-height: 1;
+  text-align: left;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f0f0f5;
+  font-family: Camphor, verdana !important;
+  color: #414146;
 }
 // *{top:auto;-o-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;outline:none;margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
 // .c-copyright,.c-footer__title,.u-t-bold{font-weight:700;}
 .u-t-white {
-    color: #fff;
+  color: #fff;
 }
 .u-d-inline {
-    display: inline;
+  display: inline;
 }
 .rh5v-Overlay_component,
 .u-d-hide {
-    display: none;
+  display: none;
 }
 .u-f-right {
-    float: right;
+  float: right;
 }
 .u-f-left {
-    float: left;
+  float: left;
 }
 .c-button__redirect,
 .c-footer__column,
 .c-nav__logo,
 .u-d-inline-block {
-    display: inline-block;
+  display: inline-block;
 }
 .u-t-green {
-    color: #00a500;
+  color: #00a500;
 }
 .u-t-grey {
-    color: #787887;
+  color: #787887;
 }
 .u-t-regular {
-    font-size: 14px;
+  font-size: 14px;
 }
 .u-inline-middle {
-    display: inline-block;
-    vertical-align: middle;
+  display: inline-block;
+  vertical-align: middle;
 }
 .c-nav,
 .u-fill-white {
-    background-color: #fff;
+  background-color: #fff;
 }
 .u-t-pulse {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: #14bef0;
-    box-shadow: 0 0 0 rgba(40, 190, 240, 0.4);
-    animation: pulse 1.2s infinite;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #14bef0;
+  box-shadow: 0 0 0 rgba(40, 190, 240, 0.4);
+  animation: pulse 1.2s infinite;
 }
 .c-button__redirect,
 .u-t-pulse {
-    cursor: pointer;
+  cursor: pointer;
 }
 .u-round-corner {
-    border-radius: 3px;
+  border-radius: 3px;
 }
 .u-t-circle {
-    position: absolute;
-    border-radius: 10em;
-    background: #c5e6f3;
+  position: absolute;
+  border-radius: 10em;
+  background: #c5e6f3;
 }
 .u-t-circle,
 .u-t-circle .u-t-triangle {
-    width: 24px;
-    height: 24px;
-    overflow: hidden;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
 }
 .u-t-circle .u-t-triangle {
-    position: relative;
-    animation: keyframes-rotation 2s infinite linear;
-    border-radius: 50%;
+  position: relative;
+  animation: keyframes-rotation 2s infinite linear;
+  border-radius: 50%;
 }
 .u-t-circle .u-t-triangle:after {
-    content: "";
-    width: 12px;
-    height: 12px;
-    top: 0;
-    background: linear-gradient(-90deg, rgba(197, 230, 243, 0.79), transparent),
-        linear-gradient(180deg, #14bef0 0, rgba(0, 58, 52, 0));
-    transform: rotate(90deg);
-    position: absolute;
-    border-top: 1px solid #14bef0;
+  content: "";
+  width: 12px;
+  height: 12px;
+  top: 0;
+  background: linear-gradient(-90deg, rgba(197, 230, 243, 0.79), transparent),
+    linear-gradient(180deg, #14bef0 0, rgba(0, 58, 52, 0));
+  transform: rotate(90deg);
+  position: absolute;
+  border-top: 1px solid #14bef0;
 }
 .c-article-card__body {
-    margin: 10px;
+  margin: 10px;
 }
 .c-jumbo__header_container {
-    margin-bottom: 50px;
+  margin-bottom: 50px;
 }
 .c-section__highlights_title {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 .c-jumbo__subheading {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 .c-testimonial__review_text,
 .u-m-b-10 {
-    padding: 0px 23px;
-    margin-bottom: 10px;
+  padding: 0px 23px;
+  margin-bottom: 10px;
 }
 .u-m-b-5 {
-    margin-bottom: 5px;
+  margin-bottom: 5px;
 }
 .c-order__last_order_info,
 .u-m-t-25 {
-    margin-top: 25px;
+  margin-top: 25px;
 }
 .c-testimonial-list {
-    margin-top: 50px;
+  margin-top: 50px;
 }
 .u-m-l-10 {
-    margin-left: 10px;
+  margin-left: 10px;
 }
 .c-section__container,
 .c-section__content,
 .c-section__right {
-    margin: 0 auto;
+  margin: 0 auto;
 }
 .c-section__container {
-    padding: 0 100px;
+  padding: 0 100px;
 }
 .c-button__redirect {
-    padding: 0 25px;
+  padding: 0 25px;
 }
 .c-icon > span {
-    margin-bottom: 3mm;
-    padding: 0 30px;
+  margin-bottom: 3mm;
+  padding: 0 30px;
 }
 
 .icon-user:before {
-    padding: 5px;
+  padding: 5px;
 }
 .c-section__content {
-    max-width: 1180px;
+  max-width: 1180px;
 }
 .u-w-50 {
-    width: 50%;
+  width: 50%;
 }
 .c-navbar,
 .c-section__container,
 .u-w-100 {
-    width: 100%;
+  width: 100%;
 }
 .c-certificate,
 .c-footer__column,
 .c-order__last_order_info {
-    vertical-align: top;
+  vertical-align: top;
 }
 .c-nav__logo,
 .c-section__container {
-    vertical-align: middle;
+  vertical-align: middle;
 }
 .c-button__redirect,
 .c-certificate,
 .c-footer__copyright,
 .c-section__right,
 .u-t-center {
-    text-align: center;
+  text-align: center;
 }
 .c-list-item__icon {
-    color: #14bef0;
+  color: #14bef0;
 }
 
 @media (max-width: 768px) {
-    // .c-list-item {
-    //     font-size: 18px;
-    // }
+  // .c-list-item {
+  //     font-size: 18px;
+  // }
 }
 
 // .c-list-item {
 //     font-size: 18px;
 // }
 .u-title-font {
-    font-size: 20px;
+  font-size: 20px;
 }
 .u-base-font {
-    font-size: 14px;
+  font-size: 14px;
 }
 .c-section__content,
 .u-clearfix {
-    *zoom: 1;
+  *zoom: 1;
 }
 .c-section__content:after,
 .c-section__content:before,
 .u-clearfix:after,
 .u-clearfix:before {
-    content: " ";
+  content: " ";
 }
 .u-border-white {
-    border: 1px solid #fff;
+  border: 1px solid #fff;
 }
 .c-button__redirect {
-    line-height: 38px;
-    width: auto;
-    height: 40px;
-    font-size: 16px;
-    color: #fff;
-    background-color: #14bef0;
-    border: 1px solid #14bef0;
-    border-radius: 2px;
-    box-sizing: border-box;
-    text-decoration: none;
-    outline: 0;
-    font-weight: 400;
+  line-height: 38px;
+  width: auto;
+  height: 40px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #14bef0;
+  border: 1px solid #14bef0;
+  border-radius: 2px;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: 0;
+  font-weight: 400;
 }
 // .c-full-width{overflow:hidden;display:table;width:100%;min-height:650px;height:calc(100vh - 102px);}
 // .c-list-item{line-height:1.4;color:#787887;}
@@ -305,1564 +305,1654 @@ body {
 // .c-offer-tag{background-color:#00a500;font-size:12px;padding:3px 5px;}
 // .c-icon-list{overflow:hidden;height:80px;padding:17px 0;background-color:#1d2869;text-align:center;}
 .c-offer-tag {
-    background-color: #00a500;
-    font-size: 12px;
-    padding: 1px 5px;
-    position: absolute;
-    right: 8px;
-    border: 0;
+  background-color: #00a500;
+  font-size: 12px;
+  padding: 1px 5px;
+  position: absolute;
+  right: 8px;
+  border: 0;
 }
 
 .c-icon-list {
-    overflow: hidden;
-    /* height: 80px; */
-    padding: 20px 0;
-    background-color: #1d2869;
-    text-align: center;
+  overflow: hidden;
+  /* height: 80px; */
+  padding: 20px 0;
+  background-color: #1d2869;
+  text-align: center;
 }
 .c-icon-list__list_wrapper {
-    width: auto;
-    margin: 0 auto;
-    display: inline-block;
+  width: auto;
+  margin: 0 auto;
+  display: inline-block;
 }
 .c-icon {
-    float: left;
-    text-align: center;
-    color: #fff;
-    cursor: pointer;
-    text-decoration: none;
+  float: left;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
 }
 .c-icon:not(:last-child) {
-    border-right: 1px solid #4a5387;
+  border-right: 1px solid #4a5387;
 }
 .c-icon:hover .tab-icon {
-    transform: scale(1.3);
+  transform: scale(1.3);
 }
 .c-icon:hover span {
-    color: #fff;
+  color: #fff;
 }
 .c-icon__img {
-    transition: transform 0.2s ease-out;
+  transition: transform 0.2s ease-out;
 }
 .c-icon > span {
-    color: #b8bbd9;
-    font-size: 14px;
-    text-decoration: none;
-    line-height: 28px;
+  color: #b8bbd9;
+  font-size: 14px;
+  text-decoration: none;
+  line-height: 28px;
 }
 .c-icon .tab-offer {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 .tab-icon {
-    font-size: 20px;
-    display: block;
+  font-size: 20px;
+  display: block;
 }
 .c-jumbo {
-    background-color: #28328c;
+  background-color: #28328c;
 }
 .c-jumbo__banner {
-    background: url(../../../assets/img/homepage.06859593240c3efd483fe48951cfe6ff.png) top no-repeat !important;
-    min-height: 460px;
-    background-attachment: fixed;
-    background-position-y: 60px;
+  background: url(../../../assets/img/homepage.06859593240c3efd483fe48951cfe6ff.png)
+    top no-repeat !important;
+  min-height: 460px;
+  background-attachment: fixed;
+  background-position-y: 60px;
 }
 .c-jumbo__header_container {
-    padding-top: 40px;
+  padding-top: 40px;
 }
 .c-jumbo__header {
-    text-align: center;
-    font-size: 40px;
-    color: #fff;
-    font-weight: 400;
+  text-align: center;
+  font-size: 40px;
+  color: #fff;
+  font-weight: 400;
 }
 .c-jumbo__subheading {
-    font-size: 24px;
+  font-size: 24px;
 }
 .c-my-doctors {
-    max-width: 100%;
-    padding: 0 1em;
-    padding-top: 50px;
-    text-align: center;
+  max-width: 100%;
+  padding: 0 1em;
+  padding-top: 50px;
+  text-align: center;
 }
 .c-omni-wrapper {
-    width: 785px;
-    margin: 0 auto;
-    z-index: 1;
-    position: relative;
+  width: 785px;
+  margin: 0 auto;
+  z-index: 1;
+  position: relative;
 }
 .c-popular-searches {
-    color: #8d93b3;
-    font-size: 14px;
-    padding: 15px 0;
-    position: relative;
-    width: 785px;
-    margin: 0 auto;
+  color: #8d93b3;
+  font-size: 14px;
+  padding: 15px 0;
+  position: relative;
+  width: 785px;
+  margin: 0 auto;
 }
 
 // .c-popular-searches__item{margin-left:25px;cursor:pointer;color:#8d93b3;text-decoration:none;}
 
 .c-popular-searches__item:hover {
-    color: #fff;
-    text-decoration: underline;
+  color: #fff;
+  text-decoration: underline;
 }
 .c-media-list {
-    background: url(//www.WhealthyLifestatic.com/web-assets/home/assets/images/logo_india.6ae037c11f3c08c0f974ad35d22cdc55.png)
-        top no-repeat;
-    height: 40px;
-    background-size: 200px;
-    filter: grayscale(100%);
-    opacity: 0.4;
+  background: url(//www.WhealthyLifestatic.com/web-assets/home/assets/images/logo_india.6ae037c11f3c08c0f974ad35d22cdc55.png)
+    top no-repeat;
+  height: 40px;
+  background-size: 200px;
+  filter: grayscale(100%);
+  opacity: 0.4;
 }
 .c-media-list.fortune {
-    background-position: -45px -10px;
-    width: 116px;
-    margin-left: 0;
+  background-position: -45px -10px;
+  width: 116px;
+  margin-left: 0;
 }
 .c-media-list:not(.hospital-logo-image) {
-    cursor: pointer;
+  cursor: pointer;
 }
 .c-media-list:not(:first-child) {
-    margin-left: 25px;
+  margin-left: 25px;
 }
 .c-media-list.tech-crunch {
-    background-position: -31px -70px;
-    width: 137px;
+  background-position: -31px -70px;
+  width: 137px;
 }
 .c-media-list.forbes {
-    background-position: -62px -129px;
-    width: 78px;
+  background-position: -62px -129px;
+  width: 78px;
 }
 .c-media-list.economic {
-    background-position: -9px -187px;
-    width: 184px;
+  background-position: -9px -187px;
+  width: 184px;
 }
 .c-media-list.wall-street {
-    background-position: -13px -248px;
-    width: 175px;
+  background-position: -13px -248px;
+  width: 175px;
 }
 .c-media-list.times {
-    background-position: -47px -305px;
-    width: 105px;
+  background-position: -47px -305px;
+  width: 105px;
 }
 .c-media-list:not(.hospital-logo-image):hover {
-    filter: grayscale(0);
-    opacity: 1;
+  filter: grayscale(0);
+  opacity: 1;
 }
 .customer-logo-footer {
-    overflow: hidden;
-    width: 1000px;
-    margin: 0 auto;
-    padding-top: 20px;
+  overflow: hidden;
+  width: 1000px;
+  margin: 0 auto;
+  padding-top: 20px;
 }
 .c-consult__doctors_online {
-    display: inline-block;
-    padding: 15px 10px;
-    line-height: 12px;
+  display: inline-block;
+  padding: 15px 10px;
+  line-height: 12px;
 }
 .c-consult__doctors_pulse {
-    margin: 1px 10px 0 0;
+  margin: 1px 10px 0 0;
 }
 .c-download__section-pic {
-    width: 300px;
-    padding-bottom: 18px;
+  width: 300px;
+  padding-bottom: 18px;
 }
 .c-download__list {
-    margin-bottom: 25px;
-    margin-left: -5px;
+  margin-bottom: 25px;
+  margin-left: -5px;
 }
 .c-download__app_links img {
-    height: 40px;
-    margin-right: 15px;
+  height: 40px;
+  margin-right: 15px;
 }
 .c-country-list {
-    text-align: center;
-    border-top: 1px solid #e0e0e5;
-    padding: 15px 0;
-    background: #f0f0f5;
+  text-align: center;
+  border-top: 1px solid #e0e0e5;
+  padding: 15px 0;
+  background: #f0f0f5;
 }
 .c-country-list__wrapper {
-    width: auto;
-    display: inline-block;
-    margin-top: 5px;
+  width: auto;
+  display: inline-block;
+  margin-top: 5px;
 }
 .c-country-list__link {
-    float: left;
+  float: left;
 }
 .c-country-list__wrapper .c-country-list__link:not(:first-child) {
-    margin-left: 60px;
+  margin-left: 60px;
 }
 .c-country-list__link a {
-    font-size: 14px;
-    color: #414146;
+  font-size: 14px;
+  color: #414146;
 }
 .c-country-list__flag {
-    width: 35px;
-    display: inline-block;
-    height: 15px;
-    position: relative;
+  width: 35px;
+  display: inline-block;
+  height: 15px;
+  position: relative;
 }
 .c-country-list__flag:before {
-    content: "";
-    width: 25px;
-    height: 20px;
-    position: absolute;
-    left: -2px;
-    top: -2px;
-    background-image: url(//www.WhealthyLifestatic.com/web-assets/home/assets/images/flags_small.05856764a38c842407c9770c6987b52d.svg);
-    background-repeat: no-repeat;
+  content: "";
+  width: 25px;
+  height: 20px;
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  background-image: url(//www.WhealthyLifestatic.com/web-assets/home/assets/images/flags_small.05856764a38c842407c9770c6987b52d.svg);
+  background-repeat: no-repeat;
 }
 .c-country-list__name {
-    display: inline-block;
-    vertical-align: top;
-    line-height: 18px;
+  display: inline-block;
+  vertical-align: top;
+  line-height: 18px;
 }
 .c-country-list__flag_singapore:before {
-    background-position: -3px -52px;
+  background-position: -3px -52px;
 }
 .c-country-list__flag_philippines:before {
-    background-position: -3px -27px;
+  background-position: -3px -27px;
 }
 .c-country-list__flag_indonesia:before {
-    background-position: -3px -103px;
+  background-position: -3px -103px;
 }
 .c-country-list__flag_brazil:before {
-    background-position: -3px -172px;
+  background-position: -3px -172px;
 }
 .c-article-card {
-    width: 333.33px;
+  width: 333.33px;
 }
 .c-article-card__container {
-    text-decoration: none;
-    color: #414146;
+  text-decoration: none;
+  color: #414146;
 }
 .c-article-card__body {
-    border: 1px solid #dedee8;
-    border-radius: 4px;
-    line-height: 1.5;
-    min-height: 350px;
-    box-shadow: 0 1px 4px 0 #e0e0e5;
-    transition: transform 0.3s ease-out;
+  border: 1px solid #dedee8;
+  border-radius: 4px;
+  line-height: 1.5;
+  min-height: 350px;
+  box-shadow: 0 1px 4px 0 #e0e0e5;
+  transition: transform 0.3s ease-out;
 }
 .c-article-card__image-wrapper {
-    height: 175px;
-    overflow: hidden;
+  height: 175px;
+  overflow: hidden;
 }
 .c-article-card__image-wrapper img {
-    width: 311px;
-    border-radius: 4px 4px 0 0;
-    min-height: 100%;
+  width: 311px;
+  border-radius: 4px 4px 0 0;
+  min-height: 100%;
 }
 .c-article-card_details {
-    padding: 8px 15px 15px;
+  padding: 8px 15px 15px;
 }
 .c-article-card_author {
-    color: #787887;
+  color: #787887;
 }
 .c-article-card__body:hover {
-    transform: scale(1.02);
+  transform: scale(1.02);
 }
 .c-article-card_bullet {
-    font-size: 13px;
-    display: inline-block;
-    color: #787887;
-    margin: -1px 0;
-    margin-left: 5px;
-    vertical-align: 1px;
+  font-size: 13px;
+  display: inline-block;
+  color: #787887;
+  margin: -1px 0;
+  margin-left: 5px;
+  vertical-align: 1px;
 }
 .c-article-list__prev_arrow {
-    position: absolute;
-    top: 50%;
-    left: -77px;
-    margin-top: -45px;
-    font-size: 60px;
+  position: absolute;
+  top: 50%;
+  left: -77px;
+  margin-top: -45px;
+  font-size: 60px;
 }
 .c-article-list__arrow {
-    color: #b4b4be;
+  color: #b4b4be;
 }
 .c-article-list__next_arrow {
-    position: absolute;
-    top: 50%;
-    right: -77px;
-    margin-top: -45px;
-    font-size: 60px;
+  position: absolute;
+  top: 50%;
+  right: -77px;
+  margin-top: -45px;
+  font-size: 60px;
 }
 .c-article-list__prev_arrow {
-    cursor: pointer;
-    transform: rotate(90deg);
+  cursor: pointer;
+  transform: rotate(90deg);
 }
 .c-article-list__next_arrow {
-    cursor: pointer;
-    transform: rotate(-90deg);
+  cursor: pointer;
+  transform: rotate(-90deg);
 }
 .c-healthfeed {
-    padding: 35px 0;
+  padding: 35px 0;
 }
 .c-healthfeed__header {
-    font-size: 40px;
-    margin-bottom: 40px;
+  font-size: 40px;
+  margin-bottom: 40px;
 }
 .c-healthfeed__articles_wrapper {
-    width: 1000px;
-    margin: 0 auto;
-    position: relative;
-    min-height: 370px;
+  width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  min-height: 370px;
 }
 .c-order__last_order_info {
-    display: inline-block;
-    width: 285px;
-    padding-left: 15px;
+  display: inline-block;
+  width: 285px;
+  padding-left: 15px;
 }
 .c-order__last_order_text {
-    padding-left: 40px;
-    display: inline-block;
-    line-height: 1.5;
-    margin-top: -5px;
-    vertical-align: middle;
+  padding-left: 40px;
+  display: inline-block;
+  line-height: 1.5;
+  margin-top: -5px;
+  vertical-align: middle;
 }
 .c-order__last_order_info .u-t-circle {
-    margin-top: 8px;
+  margin-top: 8px;
 }
 .c-provider-logo {
-    background: url(//www.WhealthyLifestatic.com/web-assets/home/assets/images/logo_india.6ae037c11f3c08c0f974ad35d22cdc55.png)
-        top no-repeat;
-    height: 40px;
-    background-size: 200px;
-    filter: grayscale(100%);
-    opacity: 0.4;
+  background: url(//www.WhealthyLifestatic.com/web-assets/home/assets/images/logo_india.6ae037c11f3c08c0f974ad35d22cdc55.png)
+    top no-repeat;
+  height: 40px;
+  background-size: 200px;
+  filter: grayscale(100%);
+  opacity: 0.4;
 }
 .c-provider-logo__suguna {
-    background-position: 81px -367px;
-    width: 320px;
+  background-position: 81px -367px;
+  width: 320px;
 }
 .c-provider-logo__pratiksha {
-    background-position: -1px -420px;
-    width: 245px;
+  background-position: -1px -420px;
+  width: 245px;
 }
 .c-provider-logo__nmc {
-    background-position: -25px -481px;
-    width: 210px;
+  background-position: -25px -481px;
+  width: 210px;
 }
 .c-provider-logo__vps {
-    background-position: -70px -599px;
-    width: 156px;
+  background-position: -70px -599px;
+  width: 156px;
 }
 .c-certificate {
-    width: 23%;
+  width: 23%;
 }
 .c-certificate__info {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 .c-certificate-list {
-    width: 925px;
-    padding-top: 50px;
-    margin: 0 auto;
+  width: 925px;
+  padding-top: 50px;
+  margin: 0 auto;
 }
 [class*=" icon-ic_"]:before,
 [class^="icon-ic_"]:before {
-    font-family: practicon;
-    font-style: normal;
-    font-weight: 400;
-    speak: none;
-    display: inline-block;
-    text-decoration: inherit;
-    width: 1em;
-    margin-right: 0.2em;
-    text-align: center;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1em;
-    margin-left: 0.2em;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  font-family: Camphor, verdana !important;
+  font-style: normal;
+  font-weight: 400;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: 0.2em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  margin-left: 0.2em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .icon-ic_done_badge:before {
-    content: "\E800";
+  content: "\E800";
 }
 .icon-ic_done_open_system:before {
-    content: "\E9A8";
+  content: "\E9A8";
 }
 .icon-ic_star_solid:before {
-    content: "\E934";
+  content: "\E934";
 }
 .icon-ic_user_system:before {
-    content: "\E91E";
+  content: "\E91E";
 }
 .icon-ic_back_cheveron:before {
-    content: "\E94E";
+  content: "\E94E";
 }
 .icon-ic_next_cheveron:before {
-    content: "\E93C";
+  content: "\E93C";
 }
 .icon-ic_down_cheveron:before {
-    content: "\E947";
+  content: "\E947";
 }
 .icon-ic_drawer_system:before {
-    content: "\E946";
+  content: "\E946";
 }
 .icon-ic_dropdown:before {
-    content: "\E99C";
+  content: "\E99C";
 }
 .icon-ic_chat:before {
-    content: "\E921";
+  content: "\E921";
 }
 .icon-ic_cart:before {
-    content: "\E920";
+  content: "\E920";
 }
 .icon-ic_records_3:before {
-    content: "\E96F";
+  content: "\E96F";
 }
 .icon-ic_lab_home:before {
-    content: "\E9B4";
+  content: "\E9B4";
 }
 .icon-ic_read:before {
-    content: "\E971";
+  content: "\E971";
 }
 .icon-ic_briefcase:before {
-    content: "\E929";
+  content: "\E929";
 }
 .icon-ic_clinic:before {
-    content: "\E922";
+  content: "\E922";
 }
 .icon-ic_location:before {
-    content: "\E984";
+  content: "\E984";
 }
 .icon-ic_gps_system:before {
-    content: "\E9BA";
+  content: "\E9BA";
 }
 .icon-ic_search:before {
-    content: "\E966";
+  content: "\E966";
 }
 .icon-ic_phone:before {
-    content: "\E8EE";
+  content: "\E8EE";
 }
 .c-navbar {
-    position: fixed;
-    top: 0;
-    z-index: 2;
+  position: fixed;
+  top: 0;
+  z-index: 2;
 }
 .c-nav {
-    height: 102px;
+  height: 102px;
 }
 .c-nav__wrapper {
-    width: 100%;
-    height: 60px;
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 16px 0 12px 50px;
+  width: 100%;
+  height: 60px;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 16px 0 12px 50px;
 }
 .c-nav__menu,
 .c-nav__wrapper {
-    border-bottom: 1px solid #d8d8d8;
+  border-bottom: 1px solid #d8d8d8;
 }
 .c-nav__menu {
-    height: 42px;
-    background-color: #fafafa;
+  height: 42px;
+  background-color: #fafafa;
 }
 .c-nav__logo {
-    background: url(https://nav.WhealthyLife.com/8.0.26/consumer/images/WhealthyLife.svg) no-repeat;
-    height: 23px;
-    width: 100px;
-    margin: 3px 0 0;
+  background: url(https://nav.WhealthyLife.com/8.0.26/consumer/images/WhealthyLife.svg)
+    no-repeat;
+  height: 23px;
+  width: 100px;
+  margin: 3px 0 0;
 }
 .c-footer {
-    min-width: 1200px;
-    background-color: #28328c;
-    padding: 48px 0;
-    color: #fff;
-    font-size: 14px;
+  min-width: 1200px;
+  background-color: #28328c;
+  padding: 48px 0;
+  color: #fff;
+  font-size: 14px;
 }
 .c-footer__wrapper {
-    width: 1180px;
-    margin: auto;
+  width: 1180px;
+  margin: auto;
 }
 .c-footer__content {
-    margin-bottom: 28px;
+  margin-bottom: 28px;
 }
 .c-footer__logo {
-    margin: 28px 0;
+  margin: 28px 0;
 }
 .c-footer__title {
-    margin-bottom: 4px;
-    font-size: 14px;
+  margin-bottom: 4px;
+  font-size: 14px;
 }
 .c-footer__row {
-    margin-bottom: 16px;
+  margin-bottom: 16px;
 }
 .c-footer__item {
-    text-decoration: none;
-    color: #fff;
-    display: block;
+  text-decoration: none;
+  color: #fff;
+  display: block;
 }
 .c-footer__item:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 .c-footer__column {
-    font-size: 14px;
-    width: 18.9%;
-    line-height: 20px;
+  font-size: 14px;
+  width: 18.9%;
+  line-height: 20px;
 }
 .c-footer__column:last-child {
-    width: auto;
+  width: auto;
 }
 .c-copyright {
-    color: #b8bbd9;
+  color: #b8bbd9;
 }
 .slick-slider {
-    box-sizing: border-box;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    -webkit-touch-callout: none;
-    -khtml-user-select: none;
-    -ms-touch-action: pan-y;
-    touch-action: pan-y;
-    -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
 }
 .slick-list,
 .slick-slider {
-    position: relative;
-    display: block;
+  position: relative;
+  display: block;
 }
 .slick-list {
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
 }
 .slick-list:focus {
-    outline: none;
+  outline: none;
 }
 .slick-slider .slick-list,
 .slick-slider .slick-track {
-    transform: translateZ(0);
+  transform: translateZ(0);
 }
 .slick-track {
-    position: relative;
-    top: 0;
-    left: 0;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+  position: relative;
+  top: 0;
+  left: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 .slick-track:after,
 .slick-track:before {
-    display: table;
-    content: "";
+  display: table;
+  content: "";
 }
 .slick-track:after {
-    clear: both;
+  clear: both;
 }
 .slick-slide {
-    display: none;
-    float: left;
-    height: 100%;
-    min-height: 1px;
+  display: none;
+  float: left;
+  height: 100%;
+  min-height: 1px;
 }
 .slick-slide img {
-    display: block;
+  display: block;
 }
 .slick-initialized .slick-slide {
-    display: block;
+  display: block;
 }
 .c-home {
-    margin-top: 102px;
-    min-width: 1180px;
+  margin-top: 102px;
+  min-width: 1180px;
 }
 .c-omni-searchbox_wrapper {
-    position: relative;
+  position: relative;
 }
 .c-omni-searchbox__icon {
-    font-size: 16px;
-    position: absolute;
-    top: 50%;
-    left: 5px;
-    width: 30px;
-    transform: translateY(-50%);
+  font-size: 16px;
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  width: 30px;
+  transform: translateY(-50%);
 }
 .c-omni-searchbox {
-    width: 100%;
-    font-family: inherit;
-    font-size: inherit;
-    line-height: 1.4;
-    padding: 6px 20px 5px 30px;
-    color: inherit;
-    border-radius: 2px;
-    border: 1px solid;
-    border-color: #b4b4be;
-    cursor: pointer;
-    outline: 0;
-    -moz-appearance: none;
-    appearance: none;
-    -webkit-appearance: none;
-    background: #fff;
+  width: 100%;
+  font-family: Camphor, verdana !important;
+  font-size: inherit;
+  line-height: 1.4;
+  padding: 6px 20px 5px 30px;
+  color: inherit;
+  border-radius: 2px;
+  border: 1px solid;
+  border-color: #b4b4be;
+  cursor: pointer;
+  outline: 0;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-appearance: none;
+  background: #fff;
 }
 .c-omni-searchbox:active,
 .c-omni-searchbox:focus {
-    border-color: #787887;
+  border-color: #787887;
 }
 .c-omni-searchbox--large {
-    height: 50px;
+  height: 50px;
 }
 .c-omni-searchbox__button {
-    line-height: 1.7;
-    height: 100%;
-    padding: 0 5px;
-    border-radius: 2px;
-    background: #f0f0f5;
-    transform: translateZ(0);
-    transition: transform 0.2s ease;
-    display: table;
+  line-height: 1.7;
+  height: 100%;
+  padding: 0 5px;
+  border-radius: 2px;
+  background: #f0f0f5;
+  transform: translateZ(0);
+  transition: transform 0.2s ease;
+  display: table;
 }
 .c-omni-searchbox__button-container {
-    cursor: pointer;
-    position: absolute;
-    right: 5px;
-    height: 70%;
-    top: 50%;
-    transform: translate3d(0, -50%, 0);
-    overflow: hidden;
+  cursor: pointer;
+  position: absolute;
+  right: 5px;
+  height: 70%;
+  top: 50%;
+  transform: translate3d(0, -50%, 0);
+  overflow: hidden;
 }
 .c-omni-searchbox__button i {
-    color: #787887;
-    font-size: 16px;
+  color: #787887;
+  font-size: 16px;
 }
 .c-omni-searchbox__button__text {
-    top: 1px;
+  top: 1px;
 }
 .c-omni-searchbox__button__text,
 .c-omni-searchbox__button i {
-    position: relative;
-    display: table-cell;
-    vertical-align: middle;
+  position: relative;
+  display: table-cell;
+  vertical-align: middle;
 }
 .c-section__content:after,
 .c-section__content:before,
 .u-clearfix:after,
 .u-clearfix:before {
-    content: "";
-    display: table;
+  content: "";
+  display: table;
 }
 .c-section__content:after,
 .u-clearfix:after {
-    clear: both;
+  clear: both;
 }
 .c-section__content,
 .u-clearfix {
-    zoom: 1;
+  zoom: 1;
 }
 .c-omni {
-    width: 100%;
-    color: #414146;
-    font-size: 14px;
-    line-height: 1.4;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
-    text-size-adjust: 100%;
+  width: 100%;
+  color: #414146;
+  font-size: 14px;
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 .c-omni__wrapper {
-    position: relative;
+  position: relative;
 }
 .c-omni-container--desktop .c-omni__wrapper {
-    display: inline-block;
-    float: left;
-    margin: 0;
+  display: inline-block;
+  float: left;
+  margin: 0;
 }
 .c-omni-container--desktop .c-omni__wrapper--locality {
-    width: 40%;
+  width: 40%;
 }
 .c-omni-container--desktop .c-omni__wrapper--locality .c-omni-searchbox {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
 }
 .c-omni-container--desktop .c-omni__wrapper--keyword {
-    width: 60%;
+  width: 60%;
 }
 .c-omni-container--desktop .c-omni__wrapper--keyword .c-omni-searchbox {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    border-left: 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-left: 0;
 }
 /*! CSS Used from: https://www.WhealthyLifestatic.com/nav/8.0.32/consumer/css/WhealthyLifenav.css ; media=all */
 @media all {
-    .WhealthyLife_GlobalNavigation .navbar a,
-    .WhealthyLife_GlobalNavigation .navbar .nav-items.hover-dark a,
-    .WhealthyLife_GlobalNavigation .navbar .navlist,
-    .WhealthyLife_GlobalNavigation .navbar .navlist .navlink .product-block div,
-    .WhealthyLife_GlobalNavigation .navbar .u-d-item,
-    .WhealthyLife_GlobalNavigation .navbar .u-d-item a {
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 20px;
-    }
-    .WhealthyLife_GlobalNavigation {
-        width: 100%;
-        z-index: 2000;
-        top: 0;
-    }
-    .WhealthyLife_GlobalNavigation .navbar .nav-left,
-    .WhealthyLife_GlobalNavigation .navbar .nav-mid,
-    .WhealthyLife_GlobalNavigation .navbar .nav-right {
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-    }
-    .WhealthyLife_GlobalNavigation .text-left {
-        text-align: left;
-    }
-    .WhealthyLife_GlobalNavigation .text-right {
-        text-align: right;
-    }
-    .WhealthyLife_GlobalNavigation .btn-border {
-        display: inline-block;
-        border-radius: 3px;
-        border: 1px solid #414146;
-        background-color: transparent;
-        padding: 5px 20px;
-        cursor: pointer;
-        color: #414146 !important;
-    }
-    .WhealthyLife_GlobalNavigation .btn-border:hover {
-        background-color: transparent;
-        border: 1px solid #14bef0;
-        color: #14bef0 !important;
-    }
-    .WhealthyLife_GlobalNavigation:before {
-        content: " ";
-        display: table;
-    }
-    .WhealthyLife_GlobalNavigation:after {
-        content: " ";
-        display: table;
-        visibility: hidden;
-        display: block;
-        font-size: 0;
-        content: " ";
-        clear: both;
-        height: 0;
-    }
-    .WhealthyLife_GlobalNavigation [class^="icon-"],
-    .WhealthyLife_GlobalNavigation [class*=" icon-"] {
-        font-family: "practicon" !important;
-        speak: none;
-        font-style: normal;
-        font-weight: normal;
-        font-variant: normal;
-        text-transform: none;
-        line-height: 1;
-        width: auto;
-        height: auto;
-        background: none;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-    }
-    .WhealthyLife_GlobalNavigation .navbar {
-        height: 60px;
-        background-color: #fff;
-        font-family: "Camphor", "Open Sans", sans-serif;
-        padding: 12px 0;
-        color: #414146;
-        box-sizing: border-box;
-        border-bottom: 1px solid rgba(216, 216, 216, 0.5);
-        border-radius: 0;
-    }
-    .WhealthyLife_GlobalNavigation .navbar * {
-        box-sizing: border-box;
-    }
-    .WhealthyLife_GlobalNavigation .navbar .wrapper {
-        cursor: auto;
-        display: block;
-        width: 100%;
-        height: 100%;
-        max-width: 1280px;
-        margin: 0 auto;
-        padding: 0 50px;
-    }
-    .WhealthyLife_GlobalNavigation .navbar a {
-        text-decoration: none;
-    }
-    .WhealthyLife_GlobalNavigation .navbar .overlay_layer {
-        position: fixed;
-        height: 100%;
-        width: 100%;
-        top: 0;
-        left: 0;
-        background-color: rgba(0, 0, 0, 0.4);
-        z-index: 100;
-        visibility: hidden;
-        opacity: 0;
-        transition: all 0.3s ease-out;
-        -webkit-transition: all 0.3s ease-out;
-        -moz-transition: all 0.3s ease-out;
-        -o-transition: all 0.3s ease-out;
-        -ms-transition: all 0.3s ease-out;
-    }
-    .WhealthyLife_GlobalNavigation .navbar.mobile {
-        padding: 0;
-        line-height: 60px;
-    }
-    .WhealthyLife_GlobalNavigation .navbar.mobile .overlay {
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        width: 0;
-        top: 60px;
-        z-index: 1000;
-        background: #fff;
-        overflow-x: hidden;
-        overflow-y: auto;
-        transition: 0.1s;
-    }
-    .WhealthyLife_GlobalNavigation .navbar.mobile .overlay .navlist .navlink:first-of-type {
-        margin-top: 5px;
-    }
-    .WhealthyLife_GlobalNavigation .navbar.mobile .nav-login-mobile.btn-border {
-        height: 30px;
-        color: #14bef0 !important;
-        padding: 5px 12px 8px 12px;
-        border-radius: 3px;
-        border: solid 1px #14bef0;
-    }
-    .WhealthyLife_GlobalNavigation {
-        font-family: "Camphor";
-        font-weight: 400;
-        -webkit-tap-highlight-color: transparent;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-    }
-    .WhealthyLife_GlobalNavigation .navbar {
-        margin: 0;
-    }
-    .WhealthyLife_GlobalNavigation .navbar a:focus,
-    .WhealthyLife_GlobalNavigation .navbar i:focus,
-    .WhealthyLife_GlobalNavigation .navbar div:focus,
-    .WhealthyLife_GlobalNavigation .navbar span:focus {
-        outline: none !important;
-    }
-    .WhealthyLife_GlobalNavigation .navbar a::-moz-selection,
-    .WhealthyLife_GlobalNavigation .navbar a::selection,
-    .WhealthyLife_GlobalNavigation .navbar a::-webkit-selection,
-    .WhealthyLife_GlobalNavigation .navbar i::-moz-selection,
-    .WhealthyLife_GlobalNavigation .navbar i::selection,
-    .WhealthyLife_GlobalNavigation .navbar i::-webkit-selection,
-    .WhealthyLife_GlobalNavigation .navbar div::-moz-selection,
-    .WhealthyLife_GlobalNavigation .navbar div::selection,
-    .WhealthyLife_GlobalNavigation .navbar div::-webkit-selection,
-    .WhealthyLife_GlobalNavigation .navbar span::-moz-selection,
-    .WhealthyLife_GlobalNavigation .navbar span::selection,
-    .WhealthyLife_GlobalNavigation .navbar span::-webkit-selection {
-        color: transparent;
-    }
-    .WhealthyLife_GlobalNavigation .navbar .nav-left,
-    .WhealthyLife_GlobalNavigation .navbar .nav-mid,
-    .WhealthyLife_GlobalNavigation .navbar .nav-right {
-        display: inline-block;
-        height: 100%;
-        vertical-align: top;
-    }
-    .WhealthyLife_GlobalNavigation .navbar .nav-left {
-        vertical-align: middle;
-        width: 252px;
-        box-sizing: border-box;
-    }
-    .WhealthyLife_GlobalNavigation .navbar .nav-left .ic::before {
-        line-height: 35px;
-    }
-    .WhealthyLife_GlobalNavigation .navbar .nav-left .WhealthyLife-logo {
-        line-height: 35px;
-    }
-    .WhealthyLife_GlobalNavigation .navbar .nav-mid {
-        width: 48%;
-        position: relative;
-        left: 0;
-    }
-    .WhealthyLife_GlobalNavigation .navbar .nav-right {
-        float: right;
-    }
-    .WhealthyLife_GlobalNavigation .navbar .nav-items {
-        display: inline-block;
-        margin-right: 24px;
-    }
-    .WhealthyLife_GlobalNavigation .navbar .nav-items.hover-dark a {
-        color: #414146;
-        line-height: 35px;
-    }
-    .WhealthyLife_GlobalNavigation .navbar .nav-items:last-child {
-        margin-right: 0px;
-    }
-    .WhealthyLife_GlobalNavigation .navbar .navlist {
-        position: relative;
-        height: 100%;
-        background-color: #fff;
-        display: inline-block;
-        position: absolute;
-        left: 0;
-        min-height: auto;
-        width: 100%;
-    }
-    .WhealthyLife_GlobalNavigation .navbar .navlist a {
-        color: #414146;
-        display: block;
-        padding: 8px 0;
-        clear: both;
-        position: relative;
-        cursor: pointer;
-    }
-    .WhealthyLife_GlobalNavigation .navbar .navlist .navlink {
-        margin: 0;
-        max-width: 100%;
-        box-sizing: border-box;
-        vertical-align: top;
-        display: block;
-        clear: both;
-        padding: 0 0 0 24px;
-    }
-    .WhealthyLife_GlobalNavigation .navbar .navlist .navlink.selected:hover {
-        background: none;
-    }
-    .WhealthyLife_GlobalNavigation .navbar .navlist .navlink .icon-wrap {
-        width: 25px;
-        display: table-cell;
-    }
-    .WhealthyLife_GlobalNavigation .navbar .navlist .navlink .product-block {
-        width: 98%;
-        display: table-cell;
-    }
-    .WhealthyLife_GlobalNavigation .navbar .navlist .navlink .product-block div {
-        color: #414146;
-    }
-    .WhealthyLife_GlobalNavigation .navbar .navlist .navlink a i {
-        margin: 0 15px 0 0;
-    }
-    .WhealthyLife_GlobalNavigation .navbar .navlist .navlink.selected > a {
-        color: #14bef0;
-        font-weight: 400;
-    }
-    .WhealthyLife_GlobalNavigation .navbar .navlist .navlink.selected > a i.ic {
-        color: #14bef0;
-        font-weight: 400;
-    }
-    .WhealthyLife_GlobalNavigation .navbar .navlist .navlink:hover a {
-        color: #14bef0;
-    }
-    .WhealthyLife_GlobalNavigation .navbar .navlist .navlink:hover a .product-block div:first-child,
-    .WhealthyLife_GlobalNavigation .navbar .navlist .navlink:hover a i.ic {
-        color: #14bef0;
-    }
-    .WhealthyLife_GlobalNavigation .navbar .WhealthyLife_logo_new,
-    .WhealthyLife_GlobalNavigation .navbar .ic,
-    .WhealthyLife_GlobalNavigation .navbar .hamburger,
-    .WhealthyLife_GlobalNavigation .navbar .downarrow {
-        vertical-align: middle;
-        display: inline-block;
-    }
-    .WhealthyLife_GlobalNavigation .navbar .WhealthyLife_logo_new {
-        background: url(https://www.WhealthyLifestatic.com/nav/8.0.32/consumer/images/WhealthyLife.svg) no-repeat;
-        height: 23px;
-        width: 100px;
-        margin: -3px 0 0 0;
-    }
-    .WhealthyLife_GlobalNavigation .navbar .ic {
-        font-size: 24px;
-        line-height: 30px;
-        color: #414146;
-    }
-    .WhealthyLife_GlobalNavigation .navbar .ic.icon-ic_done_badge {
-        color: #9f3bff;
-    }
-    .WhealthyLife_GlobalNavigation .navbar .hamburger {
-        margin: 0 !important;
-    }
-    .WhealthyLife_GlobalNavigation .navbar .hamburger:hover {
-        cursor: pointer;
-    }
-    .WhealthyLife_GlobalNavigation .navbar .downarrow {
-        font-size: 15px;
-        line-height: 30px;
-        padding: 0 5px;
-        cursor: pointer;
-    }
-    .WhealthyLife_GlobalNavigation .navbar .download {
-        padding: 18px 0 0 30px;
-    }
-    .WhealthyLife_GlobalNavigation .navbar .download .appdownload-block {
-        margin: auto;
-        display: inline-block;
-        color: #14bef0;
-        border: 1px solid #14bef0;
-        text-align: center;
-        padding: 9px 20px;
-        font-weight: 400;
-        border-radius: 3px;
-    }
-    .WhealthyLife_GlobalNavigation .navbar .download .appdownload-block:hover {
-        color: #fff !important;
-        background: #14bef0 !important;
-    }
-    .WhealthyLife_GlobalNavigation .new {
-        float: right;
-        background: #ff7800;
-        padding: 2px 5px;
-        font-size: 10px;
-        box-sizing: content-box;
-        color: white;
-        vertical-align: middle;
-        display: inline;
-        line-height: 12px;
-        border-radius: 2px;
-        margin-top: 10px;
-        text-transform: uppercase;
-    }
-    .WhealthyLife_GlobalNavigation .navbar .dropdown-toggle {
-        position: relative;
-        cursor: pointer;
-        line-height: 35px;
-    }
-    .WhealthyLife_GlobalNavigation .navbar .nav-dropdown {
-        cursor: auto;
-        overflow: hidden;
-        position: absolute;
-        right: 0;
-        z-index: -1;
-        height: 0;
-        opacity: 0;
-        visibility: hidden;
-        background-color: #fff;
-        color: #414146;
-        padding: 5px 0;
-        margin-top: 4px;
-        width: 223px;
-        border-radius: 2px;
-        border: solid 1px #f0f0f5;
-        -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.11);
-        -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.11);
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.11);
-        -webkit-transition: all 0.1s ease-out;
-        -moz-transition: all 0.1s ease-out;
-        -ms-transition: all 0.1s ease-out;
-        -o-transition: all 0.1s ease-out;
-        transition: all 0.1s ease-out;
-    }
-    .WhealthyLife_GlobalNavigation .navbar .nav-dropdown a {
-        text-decoration: none;
-        color: inherit;
-    }
-    .WhealthyLife_GlobalNavigation .navbar .u-d-item {
-        cursor: pointer;
-        padding: 0;
-    }
-    .WhealthyLife_GlobalNavigation .navbar .u-d-item a {
-        padding: 10px 20px;
-        display: block;
-    }
-    .WhealthyLife_GlobalNavigation .navbar .u-d.nav-dropdown .u-d-item:hover {
-        background-color: #f0f0f5;
-    }
-    .WhealthyLife_GlobalNavigation .navbar.mobile {
-        display: none;
-    }
-    .WhealthyLife_GlobalNavigation .navbar.mobile .wrapper {
-        box-sizing: border-box;
-        padding: 0 10px;
-    }
-    .WhealthyLife_GlobalNavigation .secondary-navigation {
-        width: 100%;
-        background-color: #fafafa;
-        height: 42px;
-        min-height: 42px;
-        padding: 0;
-    }
-    .WhealthyLife_GlobalNavigation .secondary-navigation__wrapper {
-        max-width: 1280px;
-        line-height: 42px;
-        margin: 0 auto;
-        padding: 0 50px;
-        box-sizing: border-box;
-        border: none;
-    }
-    .WhealthyLife_GlobalNavigation .secondary-navigation__wrapper__promo-space {
-        display: inline-block;
-        margin-left: -14px;
-    }
-    .WhealthyLife_GlobalNavigation .secondary-navigation__wrapper__promo-space__app-link a {
-        color: #626262;
-        font-weight: 400;
-        font-size: 14px;
-    }
-    .WhealthyLife_GlobalNavigation .secondary-navigation__wrapper__promo-space__app-link a span {
-        opacity: 0.7;
-    }
-    .WhealthyLife_GlobalNavigation .secondary-navigation__wrapper__promo-space__app-link a:hover,
-    .WhealthyLife_GlobalNavigation .secondary-navigation__wrapper__promo-space__app-link a:focus {
-        text-decoration: none;
-        color: #626262;
-    }
-    .WhealthyLife_GlobalNavigation .secondary-navigation__wrapper__promo-space__app-link a:hover span,
-    .WhealthyLife_GlobalNavigation .secondary-navigation__wrapper__promo-space__app-link a:focus span {
-        opacity: 1;
-    }
-    .WhealthyLife_GlobalNavigation .secondary-navigation__wrapper__promo-space__app-link a i {
-        display: inline-block;
-        font-size: 22px;
-        position: relative;
-        top: 2px;
-        right: -4px;
-        opacity: 0.4;
-        vertical-align: initial;
-        animation: tada 8s linear 5s 2;
-    }
-    .WhealthyLife_GlobalNavigation .secondary-navigation__wrapper__product-links {
-        display: inline-block;
-        float: right;
-    }
-    .WhealthyLife_GlobalNavigation .secondary-navigation__wrapper__product-links__link {
-        display: inline-block;
-    }
-    .WhealthyLife_GlobalNavigation .secondary-navigation__wrapper__product-links__link.selected a {
-        color: #28328c;
-        font-weight: 400;
-    }
-    .WhealthyLife_GlobalNavigation .secondary-navigation__wrapper__product-links__link a {
-        color: #414146;
-        font-size: 12px;
-        margin-left: 16px;
-    }
-    .WhealthyLife_GlobalNavigation .secondary-navigation__wrapper__product-links__link a:hover,
-    .WhealthyLife_GlobalNavigation .secondary-navigation__wrapper__product-links__link a:focus {
-        text-decoration: none;
-        color: #28328c;
-    }
-    .WhealthyLife_GlobalNavigation .secondary-navigation__wrapper__product-links .dropdown-toggle {
-        display: inline-block;
-        margin-left: 16px;
-    }
-    .WhealthyLife_GlobalNavigation .secondary-navigation__wrapper__product-links .dropdown-toggle .nav-dropdown {
-        width: 212px;
-    }
-    .WhealthyLife_GlobalNavigation .secondary-navigation__wrapper__product-links .dropdown-toggle span.up-triangle {
-        font-size: 12px;
-        color: #414146;
-        border-bottom: none;
-    }
-    .WhealthyLife_GlobalNavigation .secondary-navigation__wrapper__product-links .dropdown-toggle .downarrow {
-        padding-left: 0px;
-    }
-    .WhealthyLife_GlobalNavigation .secondary-navigation__wrapper__product-links .dropdown-toggle .u-d-item {
-        min-height: 50px;
-    }
-    .WhealthyLife_GlobalNavigation .secondary-navigation__wrapper__product-links .dropdown-toggle .u-d-item a {
-        margin-left: 0;
-        padding: 16px 20px;
-    }
-    .WhealthyLife_GlobalNavigation .secondary-navigation__wrapper__helpful-links {
-        display: inline-block;
-        float: right;
-    }
-    .WhealthyLife_GlobalNavigation .secondary-navigation__wrapper__helpful-links::before {
-        content: "";
-        line-height: 16px;
-        margin-left: 11px;
-        border-left: 1px solid #cfcfcf;
-    }
-    .WhealthyLife_GlobalNavigation .secondary-navigation__wrapper__helpful-links a {
-        color: #787887;
-        font-size: 12px;
-        margin-left: 16px;
-    }
-    .WhealthyLife_GlobalNavigation .secondary-navigation__wrapper__helpful-links a:hover,
-    .WhealthyLife_GlobalNavigation .secondary-navigation__wrapper__helpful-links a:focus {
-        text-decoration: none;
-        color: #787887;
-    }
-    .WhealthyLife_GlobalNavigation .secondary-navigation__wrapper__product-tabs {
-        display: none;
-        width: 100%;
-        text-align: center;
-        table-layout: fixed;
-        background-color: #fff;
-        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.04);
-        padding-top: 8px;
-    }
-    .WhealthyLife_GlobalNavigation .secondary-navigation__wrapper__product-tabs__tab {
-        display: table-cell;
-        height: 40px;
-        line-height: 14px;
-    }
-    .WhealthyLife_GlobalNavigation .secondary-navigation__wrapper__product-tabs__tab a {
-        color: #414146;
-        font-size: 12px;
-        font-weight: 400;
-        line-height: 12px;
-    }
-    .WhealthyLife_GlobalNavigation .secondary-navigation__wrapper__product-tabs__tab a:hover,
-    .WhealthyLife_GlobalNavigation .secondary-navigation__wrapper__product-tabs__tab a:focus {
-        text-decoration: none;
-        color: #414146;
-    }
-    @media only screen and (min-width: 1020px) and (max-width: 1220px) {
-        .WhealthyLife_GlobalNavigation .navbar .nav-left {
-            width: 18%;
-        }
-    }
-    @media only screen and (min-width: 981px) and (max-width: 1020px) {
-        .WhealthyLife_GlobalNavigation .navbar .nav-left {
-            width: 17%;
-        }
-    }
-    @media only screen and (min-width: 990px) and (max-width: 1070px) {
-        .WhealthyLife_GlobalNavigation .navbar .nav-mid {
-            width: 44%;
-        }
-    }
-    @media only screen and (max-width: 980px) {
-        .WhealthyLife_GlobalNavigation .navbar .nav-left {
-            width: auto;
-        }
-        .WhealthyLife_GlobalNavigation .navbar .nav-mid {
-            display: none;
-        }
-    }
-    @media only screen and (min-width: 801px) {
-        .WhealthyLife_GlobalNavigation .navbar.mobile {
-            display: none !important;
-        }
-        .WhealthyLife_GlobalNavigation .navbar.desktop {
-            display: block !important;
-        }
-    }
-    @media only screen and (max-width: 800px) {
-        .WhealthyLife_GlobalNavigation .navbar {
-            position: relative;
-        }
-        .WhealthyLife_GlobalNavigation .navbar.desktop {
-            display: none !important;
-        }
-        .WhealthyLife_GlobalNavigation .navbar.mobile {
-            background-color: #fafafa;
-            display: block !important;
-        }
-        .WhealthyLife_GlobalNavigation .navbar.mobile .overlay_layer {
-            top: 60px !important;
-            background: transparent;
-            height: 0;
-        }
-        .WhealthyLife_GlobalNavigation .navbar .nav-left {
-            padding: 0;
-            margin: 0;
-        }
-        .WhealthyLife_GlobalNavigation .navbar .nav-left .ic {
-            margin-top: -4px;
-        }
-        .WhealthyLife_GlobalNavigation .navbar .nav-left .hamburger {
-            font-size: 22px;
-            line-height: 24px;
-            margin-top: 0;
-        }
-        .WhealthyLife_GlobalNavigation .navbar .nav-mid {
-            display: inline-block;
-            vertical-align: middle;
-            width: 100px;
-            z-index: 30;
-            margin: auto;
-            margin-left: 10px;
-        }
-        .WhealthyLife_GlobalNavigation .navbar .nav-mid a {
-            display: block;
-            width: 100%;
-        }
-        .WhealthyLife_GlobalNavigation .navbar .nav-mid a .WhealthyLife_logo_new {
-            display: block;
-            margin: 0 auto;
-        }
-        .WhealthyLife_GlobalNavigation .navbar .nav-mid.new_logo_wrap {
-            height: 23px !important;
-        }
-        .WhealthyLife_GlobalNavigation .navbar .nav-right .nav-items.dropdown-toggle {
-            display: inline-block;
-            margin: 0 0 0 15px;
-        }
-        .WhealthyLife_GlobalNavigation .navbar .overlay {
-            top: 0px;
-        }
-        .WhealthyLife_GlobalNavigation .navbar .navlist .navlink {
-            padding: 0 0 0 10px;
-        }
-        .WhealthyLife_GlobalNavigation .navbar .navlist .navlink.selected {
-            color: #14bef0;
-        }
-        .WhealthyLife_GlobalNavigation .navbar .navlist .navlink a {
-            font-size: 14px;
-            line-height: 18px;
-            padding: 11px 0;
-        }
-        .WhealthyLife_GlobalNavigation .navbar .navlist .navlink:focus {
-            background: #f4f4f4;
-            outline: none;
-            border: none;
-        }
-        .WhealthyLife_GlobalNavigation .navbar .navlist .navlink:focus a {
-            background: #f4f4f4;
-            outline: none;
-            border: none;
-        }
-        .WhealthyLife_GlobalNavigation .navbar .navlist .navlink.selected:hover > a {
-            color: #14bef0;
-        }
-        .WhealthyLife_GlobalNavigation .navbar .navlist .navlink.selected:hover > a i.ic {
-            color: #14bef0;
-        }
-        .WhealthyLife_GlobalNavigation .navbar .navlist .navlink:hover a {
-            color: #414146;
-        }
-        .WhealthyLife_GlobalNavigation .navbar .navlist .navlink:hover a .product-block div:first-child,
-        .WhealthyLife_GlobalNavigation .navbar .navlist .navlink:hover a i.ic {
-            color: #414146;
-        }
-        .WhealthyLife_GlobalNavigation .navbar .ic {
-            font-size: 20px;
-            line-height: 25px;
-        }
-        .WhealthyLife_GlobalNavigation .navbar .downarrow {
-            padding: 0;
-        }
-        .WhealthyLife_GlobalNavigation .navbar .download {
-            padding: 18px 16px;
-        }
-        .WhealthyLife_GlobalNavigation .secondary-navigation {
-            display: none;
-        }
-        .WhealthyLife_GlobalNavigation .secondary-navigation__wrapper__promo-space,
-        .WhealthyLife_GlobalNavigation .secondary-navigation__wrapper__product-links,
-        .WhealthyLife_GlobalNavigation .secondary-navigation__wrapper__helpful-links {
-            display: none;
-        }
-    }
-    @media only screen and (max-width: 500px) {
-        .WhealthyLife_GlobalNavigation .navbar .overlay {
-            width: 85%;
-        }
-    }
-    @media only screen and (max-width: 320px) {
-        .WhealthyLife_GlobalNavigation .mobile.navbar .nav-right a {
-            margin-right: 6px;
-        }
-    }
-}
-@keyframes pulse {
-    0% {
-        box-shadow: 0 0 0 0 rgba(30, 190, 240, 0.4);
-    }
-    70% {
-        box-shadow: 0 0 0 10px rgba(30, 190, 240, 0);
-    }
-    to {
-        box-shadow: 0 0 0 0 rgba(30, 190, 240, 0);
-    }
-}
-@keyframes keyframes-rotation {
-    0% {
-        transform: rotate(0);
-    }
-    to {
-        transform: rotate(1turn);
-    }
-}
-@keyframes tada {
-    0% {
-        -webkit-transform: scale(1);
-        transform: scale(1);
-        color: #28328c;
-        opacity: 1;
-    }
-    2.5%,
-    5% {
-        -webkit-transform: scale(0.9) rotate(-8deg);
-        transform: scale(0.9) rotate(-8deg);
-    }
-    7.5%,
-    12.5%,
-    17.5% {
-        -webkit-transform: scale(1.2) rotate(8deg);
-        transform: scale(1.2) rotate(8deg);
-    }
-    10%,
-    15% {
-        -webkit-transform: scale(1.2) rotate(-8deg);
-        transform: scale(1.2) rotate(-8deg);
-    }
-    20%,
-    25% {
-        -webkit-transform: scale(1) rotate(0);
-        transform: scale(1) rotate(0);
-    }
-    25% {
-        color: #28328c;
-        opacity: 1;
-    }
-    30% {
-        color: #626262;
-        opacity: 0.3;
-    }
-}
-
-.mt-150 {
-    margin-top: 150px;
-}
-.mt-100 {
-    margin-top: 100px;
-}
-.mt-80 {
-    margin-top: 80px;
-}
-.mt-50 {
-    margin-top: 50px;
-}
-.mt-57 {
-    margin-top: 57px;
-}
-.mt-30 {
-    margin-top: 30px;
-}
-.mb-150 {
-    margin-bottom: 150px;
-}
-.mb-100 {
-    margin-bottom: 100px;
-}
-.mb-50 {
-    margin-bottom: 50px;
-}
-.mb-30 {
-    margin-bottom: 30px;
-}
-.book-opp .img-icon {
-    background-color: #fff;
-    padding: 5px;
-    border-radius: 50%;
-}
-.margin_120_95 {
-    padding-top: 120px;
-    padding-bottom: 95px;
-    margin: 0 auto;
-}
-
-.book-appoiment h2 {
-    font-size: 23px;
+  .WhealthyLife_GlobalNavigation .navbar a,
+  .WhealthyLife_GlobalNavigation .navbar .nav-items.hover-dark a,
+  .WhealthyLife_GlobalNavigation .navbar .navlist,
+  .WhealthyLife_GlobalNavigation .navbar .navlist .navlink .product-block div,
+  .WhealthyLife_GlobalNavigation .navbar .u-d-item,
+  .WhealthyLife_GlobalNavigation .navbar .u-d-item a {
     font-weight: 400;
-}
-
-.book-appoiment .c-icon__img {
-    margin-right: 6px;
-}
-
-.bookapo-box .inner-box {
-    background-color: #fff;
-    border: 1px solid #ececec;
-    transition: all 0.3s ease;
-    padding: 25px 15px 25px;
-    margin-bottom: 20px;
-    text-align: center;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .WhealthyLife_GlobalNavigation {
+    width: 100%;
+    z-index: 2000;
+    top: 0;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .nav-left,
+  .WhealthyLife_GlobalNavigation .navbar .nav-mid,
+  .WhealthyLife_GlobalNavigation .navbar .nav-right {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .WhealthyLife_GlobalNavigation .text-left {
+    text-align: left;
+  }
+  .WhealthyLife_GlobalNavigation .text-right {
+    text-align: right;
+  }
+  .WhealthyLife_GlobalNavigation .btn-border {
+    display: inline-block;
+    border-radius: 3px;
+    border: 1px solid #414146;
+    background-color: transparent;
+    padding: 5px 20px;
     cursor: pointer;
-}
-
-.bookapo-box .inner-box:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 50px 30px -40px #00000085;
-}
-
-.bookapo-box h3 {
-    font-size: 25px;
-    color: #179cc3;
-}
-.bookapo-box h5 {
-    font-size: 16px;
-    color: #808080;
-}
-
-video {
-    position: relative !important;
+    color: #414146 !important;
+  }
+  .WhealthyLife_GlobalNavigation .btn-border:hover {
+    background-color: transparent;
+    border: 1px solid #14bef0;
+    color: #14bef0 !important;
+  }
+  .WhealthyLife_GlobalNavigation:before {
+    content: " ";
+    display: table;
+  }
+  .WhealthyLife_GlobalNavigation:after {
+    content: " ";
+    display: table;
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+  .WhealthyLife_GlobalNavigation [class^="icon-"],
+  .WhealthyLife_GlobalNavigation [class*=" icon-"] {
+    font-family: Camphor, verdana !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    width: auto;
+    height: auto;
+    background: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .WhealthyLife_GlobalNavigation .navbar {
+    height: 60px;
+    background-color: #fff;
+    font-family: Camphor, verdana !important;
+    padding: 12px 0;
+    color: #414146;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(216, 216, 216, 0.5);
+    border-radius: 0;
+  }
+  .WhealthyLife_GlobalNavigation .navbar * {
+    box-sizing: border-box;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .wrapper {
+    cursor: auto;
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 50px;
+  }
+  .WhealthyLife_GlobalNavigation .navbar a {
+    text-decoration: none;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .overlay_layer {
+    position: fixed;
+    height: 100%;
     width: 100%;
     top: 0;
     left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 100;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+  }
+  .WhealthyLife_GlobalNavigation .navbar.mobile {
+    padding: 0;
+    line-height: 60px;
+  }
+  .WhealthyLife_GlobalNavigation .navbar.mobile .overlay {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    top: 60px;
+    z-index: 1000;
+    background: #fff;
+    overflow-x: hidden;
+    overflow-y: auto;
+    transition: 0.1s;
+  }
+  .WhealthyLife_GlobalNavigation
+    .navbar.mobile
+    .overlay
+    .navlist
+    .navlink:first-of-type {
+    margin-top: 5px;
+  }
+  .WhealthyLife_GlobalNavigation .navbar.mobile .nav-login-mobile.btn-border {
+    height: 30px;
+    color: #14bef0 !important;
+    padding: 5px 12px 8px 12px;
+    border-radius: 3px;
+    border: solid 1px #14bef0;
+  }
+  .WhealthyLife_GlobalNavigation {
+    font-family: Camphor, verdana !important;
+    font-weight: 400;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  .WhealthyLife_GlobalNavigation .navbar {
+    margin: 0;
+  }
+  .WhealthyLife_GlobalNavigation .navbar a:focus,
+  .WhealthyLife_GlobalNavigation .navbar i:focus,
+  .WhealthyLife_GlobalNavigation .navbar div:focus,
+  .WhealthyLife_GlobalNavigation .navbar span:focus {
+    outline: none !important;
+  }
+  .WhealthyLife_GlobalNavigation .navbar a::-moz-selection,
+  .WhealthyLife_GlobalNavigation .navbar a::selection,
+  .WhealthyLife_GlobalNavigation .navbar a::-webkit-selection,
+  .WhealthyLife_GlobalNavigation .navbar i::-moz-selection,
+  .WhealthyLife_GlobalNavigation .navbar i::selection,
+  .WhealthyLife_GlobalNavigation .navbar i::-webkit-selection,
+  .WhealthyLife_GlobalNavigation .navbar div::-moz-selection,
+  .WhealthyLife_GlobalNavigation .navbar div::selection,
+  .WhealthyLife_GlobalNavigation .navbar div::-webkit-selection,
+  .WhealthyLife_GlobalNavigation .navbar span::-moz-selection,
+  .WhealthyLife_GlobalNavigation .navbar span::selection,
+  .WhealthyLife_GlobalNavigation .navbar span::-webkit-selection {
+    color: transparent;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .nav-left,
+  .WhealthyLife_GlobalNavigation .navbar .nav-mid,
+  .WhealthyLife_GlobalNavigation .navbar .nav-right {
+    display: inline-block;
+    height: 100%;
+    vertical-align: top;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .nav-left {
+    vertical-align: middle;
+    width: 252px;
+    box-sizing: border-box;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .nav-left .ic::before {
+    line-height: 35px;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .nav-left .WhealthyLife-logo {
+    line-height: 35px;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .nav-mid {
+    width: 48%;
+    position: relative;
+    left: 0;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .nav-right {
+    float: right;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .nav-items {
+    display: inline-block;
+    margin-right: 24px;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .nav-items.hover-dark a {
+    color: #414146;
+    line-height: 35px;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .nav-items:last-child {
+    margin-right: 0px;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .navlist {
+    position: relative;
+    height: 100%;
+    background-color: #fff;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    min-height: auto;
+    width: 100%;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .navlist a {
+    color: #414146;
+    display: block;
+    padding: 8px 0;
+    clear: both;
+    position: relative;
+    cursor: pointer;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .navlist .navlink {
+    margin: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+    vertical-align: top;
+    display: block;
+    clear: both;
+    padding: 0 0 0 24px;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .navlist .navlink.selected:hover {
+    background: none;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .navlist .navlink .icon-wrap {
+    width: 25px;
+    display: table-cell;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .navlist .navlink .product-block {
+    width: 98%;
+    display: table-cell;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .navlist .navlink .product-block div {
+    color: #414146;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .navlist .navlink a i {
+    margin: 0 15px 0 0;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .navlist .navlink.selected > a {
+    color: #14bef0;
+    font-weight: 400;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .navlist .navlink.selected > a i.ic {
+    color: #14bef0;
+    font-weight: 400;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .navlist .navlink:hover a {
+    color: #14bef0;
+  }
+  .WhealthyLife_GlobalNavigation
+    .navbar
+    .navlist
+    .navlink:hover
+    a
+    .product-block
+    div:first-child,
+  .WhealthyLife_GlobalNavigation .navbar .navlist .navlink:hover a i.ic {
+    color: #14bef0;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .WhealthyLife_logo_new,
+  .WhealthyLife_GlobalNavigation .navbar .ic,
+  .WhealthyLife_GlobalNavigation .navbar .hamburger,
+  .WhealthyLife_GlobalNavigation .navbar .downarrow {
+    vertical-align: middle;
+    display: inline-block;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .WhealthyLife_logo_new {
+    background: url(https://www.WhealthyLifestatic.com/nav/8.0.32/consumer/images/WhealthyLife.svg)
+      no-repeat;
+    height: 23px;
+    width: 100px;
+    margin: -3px 0 0 0;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .ic {
+    font-size: 24px;
+    line-height: 30px;
+    color: #414146;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .ic.icon-ic_done_badge {
+    color: #9f3bff;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .hamburger {
+    margin: 0 !important;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .hamburger:hover {
+    cursor: pointer;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .downarrow {
+    font-size: 15px;
+    line-height: 30px;
+    padding: 0 5px;
+    cursor: pointer;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .download {
+    padding: 18px 0 0 30px;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .download .appdownload-block {
+    margin: auto;
+    display: inline-block;
+    color: #14bef0;
+    border: 1px solid #14bef0;
+    text-align: center;
+    padding: 9px 20px;
+    font-weight: 400;
+    border-radius: 3px;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .download .appdownload-block:hover {
+    color: #fff !important;
+    background: #14bef0 !important;
+  }
+  .WhealthyLife_GlobalNavigation .new {
+    float: right;
+    background: #ff7800;
+    padding: 2px 5px;
+    font-size: 10px;
+    box-sizing: content-box;
+    color: white;
+    vertical-align: middle;
+    display: inline;
+    line-height: 12px;
+    border-radius: 2px;
+    margin-top: 10px;
+    text-transform: uppercase;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .dropdown-toggle {
+    position: relative;
+    cursor: pointer;
+    line-height: 35px;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .nav-dropdown {
+    cursor: auto;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    z-index: -1;
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+    background-color: #fff;
+    color: #414146;
+    padding: 5px 0;
+    margin-top: 4px;
+    width: 223px;
+    border-radius: 2px;
+    border: solid 1px #f0f0f5;
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.11);
+    -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.11);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.11);
+    -webkit-transition: all 0.1s ease-out;
+    -moz-transition: all 0.1s ease-out;
+    -ms-transition: all 0.1s ease-out;
+    -o-transition: all 0.1s ease-out;
+    transition: all 0.1s ease-out;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .nav-dropdown a {
+    text-decoration: none;
+    color: inherit;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .u-d-item {
+    cursor: pointer;
+    padding: 0;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .u-d-item a {
+    padding: 10px 20px;
+    display: block;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .u-d.nav-dropdown .u-d-item:hover {
+    background-color: #f0f0f5;
+  }
+  .WhealthyLife_GlobalNavigation .navbar.mobile {
+    display: none;
+  }
+  .WhealthyLife_GlobalNavigation .navbar.mobile .wrapper {
+    box-sizing: border-box;
+    padding: 0 10px;
+  }
+  .WhealthyLife_GlobalNavigation .secondary-navigation {
+    width: 100%;
+    background-color: #fafafa;
+    height: 42px;
+    min-height: 42px;
+    padding: 0;
+  }
+  .WhealthyLife_GlobalNavigation .secondary-navigation__wrapper {
+    max-width: 1280px;
+    line-height: 42px;
+    margin: 0 auto;
+    padding: 0 50px;
+    box-sizing: border-box;
+    border: none;
+  }
+  .WhealthyLife_GlobalNavigation .secondary-navigation__wrapper__promo-space {
+    display: inline-block;
+    margin-left: -14px;
+  }
+  .WhealthyLife_GlobalNavigation
+    .secondary-navigation__wrapper__promo-space__app-link
+    a {
+    color: #626262;
+    font-weight: 400;
+    font-size: 14px;
+  }
+  .WhealthyLife_GlobalNavigation
+    .secondary-navigation__wrapper__promo-space__app-link
+    a
+    span {
+    opacity: 0.7;
+  }
+  .WhealthyLife_GlobalNavigation
+    .secondary-navigation__wrapper__promo-space__app-link
+    a:hover,
+  .WhealthyLife_GlobalNavigation
+    .secondary-navigation__wrapper__promo-space__app-link
+    a:focus {
+    text-decoration: none;
+    color: #626262;
+  }
+  .WhealthyLife_GlobalNavigation
+    .secondary-navigation__wrapper__promo-space__app-link
+    a:hover
+    span,
+  .WhealthyLife_GlobalNavigation
+    .secondary-navigation__wrapper__promo-space__app-link
+    a:focus
+    span {
+    opacity: 1;
+  }
+  .WhealthyLife_GlobalNavigation
+    .secondary-navigation__wrapper__promo-space__app-link
+    a
+    i {
+    display: inline-block;
+    font-size: 22px;
+    position: relative;
+    top: 2px;
+    right: -4px;
+    opacity: 0.4;
+    vertical-align: initial;
+    animation: tada 8s linear 5s 2;
+  }
+  .WhealthyLife_GlobalNavigation .secondary-navigation__wrapper__product-links {
+    display: inline-block;
+    float: right;
+  }
+  .WhealthyLife_GlobalNavigation
+    .secondary-navigation__wrapper__product-links__link {
+    display: inline-block;
+  }
+  .WhealthyLife_GlobalNavigation
+    .secondary-navigation__wrapper__product-links__link.selected
+    a {
+    color: #28328c;
+    font-weight: 400;
+  }
+  .WhealthyLife_GlobalNavigation
+    .secondary-navigation__wrapper__product-links__link
+    a {
+    color: #414146;
+    font-size: 12px;
+    margin-left: 16px;
+  }
+  .WhealthyLife_GlobalNavigation
+    .secondary-navigation__wrapper__product-links__link
+    a:hover,
+  .WhealthyLife_GlobalNavigation
+    .secondary-navigation__wrapper__product-links__link
+    a:focus {
+    text-decoration: none;
+    color: #28328c;
+  }
+  .WhealthyLife_GlobalNavigation
+    .secondary-navigation__wrapper__product-links
+    .dropdown-toggle {
+    display: inline-block;
+    margin-left: 16px;
+  }
+  .WhealthyLife_GlobalNavigation
+    .secondary-navigation__wrapper__product-links
+    .dropdown-toggle
+    .nav-dropdown {
+    width: 212px;
+  }
+  .WhealthyLife_GlobalNavigation
+    .secondary-navigation__wrapper__product-links
+    .dropdown-toggle
+    span.up-triangle {
+    font-size: 12px;
+    color: #414146;
+    border-bottom: none;
+  }
+  .WhealthyLife_GlobalNavigation
+    .secondary-navigation__wrapper__product-links
+    .dropdown-toggle
+    .downarrow {
+    padding-left: 0px;
+  }
+  .WhealthyLife_GlobalNavigation
+    .secondary-navigation__wrapper__product-links
+    .dropdown-toggle
+    .u-d-item {
+    min-height: 50px;
+  }
+  .WhealthyLife_GlobalNavigation
+    .secondary-navigation__wrapper__product-links
+    .dropdown-toggle
+    .u-d-item
+    a {
+    margin-left: 0;
+    padding: 16px 20px;
+  }
+  .WhealthyLife_GlobalNavigation .secondary-navigation__wrapper__helpful-links {
+    display: inline-block;
+    float: right;
+  }
+  .WhealthyLife_GlobalNavigation
+    .secondary-navigation__wrapper__helpful-links::before {
+    content: "";
+    line-height: 16px;
+    margin-left: 11px;
+    border-left: 1px solid #cfcfcf;
+  }
+  .WhealthyLife_GlobalNavigation
+    .secondary-navigation__wrapper__helpful-links
+    a {
+    color: #787887;
+    font-size: 12px;
+    margin-left: 16px;
+  }
+  .WhealthyLife_GlobalNavigation
+    .secondary-navigation__wrapper__helpful-links
+    a:hover,
+  .WhealthyLife_GlobalNavigation
+    .secondary-navigation__wrapper__helpful-links
+    a:focus {
+    text-decoration: none;
+    color: #787887;
+  }
+  .WhealthyLife_GlobalNavigation .secondary-navigation__wrapper__product-tabs {
+    display: none;
+    width: 100%;
+    text-align: center;
+    table-layout: fixed;
+    background-color: #fff;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.04);
+    padding-top: 8px;
+  }
+  .WhealthyLife_GlobalNavigation
+    .secondary-navigation__wrapper__product-tabs__tab {
+    display: table-cell;
+    height: 40px;
+    line-height: 14px;
+  }
+  .WhealthyLife_GlobalNavigation
+    .secondary-navigation__wrapper__product-tabs__tab
+    a {
+    color: #414146;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 12px;
+  }
+  .WhealthyLife_GlobalNavigation
+    .secondary-navigation__wrapper__product-tabs__tab
+    a:hover,
+  .WhealthyLife_GlobalNavigation
+    .secondary-navigation__wrapper__product-tabs__tab
+    a:focus {
+    text-decoration: none;
+    color: #414146;
+  }
+  @media only screen and (min-width: 1020px) and (max-width: 1220px) {
+    .WhealthyLife_GlobalNavigation .navbar .nav-left {
+      width: 18%;
+    }
+  }
+  @media only screen and (min-width: 981px) and (max-width: 1020px) {
+    .WhealthyLife_GlobalNavigation .navbar .nav-left {
+      width: 17%;
+    }
+  }
+  @media only screen and (min-width: 990px) and (max-width: 1070px) {
+    .WhealthyLife_GlobalNavigation .navbar .nav-mid {
+      width: 44%;
+    }
+  }
+  @media only screen and (max-width: 980px) {
+    .WhealthyLife_GlobalNavigation .navbar .nav-left {
+      width: auto;
+    }
+    .WhealthyLife_GlobalNavigation .navbar .nav-mid {
+      display: none;
+    }
+  }
+  @media only screen and (min-width: 801px) {
+    .WhealthyLife_GlobalNavigation .navbar.mobile {
+      display: none !important;
+    }
+    .WhealthyLife_GlobalNavigation .navbar.desktop {
+      display: block !important;
+    }
+  }
+  @media only screen and (max-width: 800px) {
+    .WhealthyLife_GlobalNavigation .navbar {
+      position: relative;
+    }
+    .WhealthyLife_GlobalNavigation .navbar.desktop {
+      display: none !important;
+    }
+    .WhealthyLife_GlobalNavigation .navbar.mobile {
+      background-color: #fafafa;
+      display: block !important;
+    }
+    .WhealthyLife_GlobalNavigation .navbar.mobile .overlay_layer {
+      top: 60px !important;
+      background: transparent;
+      height: 0;
+    }
+    .WhealthyLife_GlobalNavigation .navbar .nav-left {
+      padding: 0;
+      margin: 0;
+    }
+    .WhealthyLife_GlobalNavigation .navbar .nav-left .ic {
+      margin-top: -4px;
+    }
+    .WhealthyLife_GlobalNavigation .navbar .nav-left .hamburger {
+      font-size: 22px;
+      line-height: 24px;
+      margin-top: 0;
+    }
+    .WhealthyLife_GlobalNavigation .navbar .nav-mid {
+      display: inline-block;
+      vertical-align: middle;
+      width: 100px;
+      z-index: 30;
+      margin: auto;
+      margin-left: 10px;
+    }
+    .WhealthyLife_GlobalNavigation .navbar .nav-mid a {
+      display: block;
+      width: 100%;
+    }
+    .WhealthyLife_GlobalNavigation .navbar .nav-mid a .WhealthyLife_logo_new {
+      display: block;
+      margin: 0 auto;
+    }
+    .WhealthyLife_GlobalNavigation .navbar .nav-mid.new_logo_wrap {
+      height: 23px !important;
+    }
+    .WhealthyLife_GlobalNavigation
+      .navbar
+      .nav-right
+      .nav-items.dropdown-toggle {
+      display: inline-block;
+      margin: 0 0 0 15px;
+    }
+    .WhealthyLife_GlobalNavigation .navbar .overlay {
+      top: 0px;
+    }
+    .WhealthyLife_GlobalNavigation .navbar .navlist .navlink {
+      padding: 0 0 0 10px;
+    }
+    .WhealthyLife_GlobalNavigation .navbar .navlist .navlink.selected {
+      color: #14bef0;
+    }
+    .WhealthyLife_GlobalNavigation .navbar .navlist .navlink a {
+      font-size: 14px;
+      line-height: 18px;
+      padding: 11px 0;
+    }
+    .WhealthyLife_GlobalNavigation .navbar .navlist .navlink:focus {
+      background: #f4f4f4;
+      outline: none;
+      border: none;
+    }
+    .WhealthyLife_GlobalNavigation .navbar .navlist .navlink:focus a {
+      background: #f4f4f4;
+      outline: none;
+      border: none;
+    }
+    .WhealthyLife_GlobalNavigation
+      .navbar
+      .navlist
+      .navlink.selected:hover
+      > a {
+      color: #14bef0;
+    }
+    .WhealthyLife_GlobalNavigation
+      .navbar
+      .navlist
+      .navlink.selected:hover
+      > a
+      i.ic {
+      color: #14bef0;
+    }
+    .WhealthyLife_GlobalNavigation .navbar .navlist .navlink:hover a {
+      color: #414146;
+    }
+    .WhealthyLife_GlobalNavigation
+      .navbar
+      .navlist
+      .navlink:hover
+      a
+      .product-block
+      div:first-child,
+    .WhealthyLife_GlobalNavigation .navbar .navlist .navlink:hover a i.ic {
+      color: #414146;
+    }
+    .WhealthyLife_GlobalNavigation .navbar .ic {
+      font-size: 20px;
+      line-height: 25px;
+    }
+    .WhealthyLife_GlobalNavigation .navbar .downarrow {
+      padding: 0;
+    }
+    .WhealthyLife_GlobalNavigation .navbar .download {
+      padding: 18px 16px;
+    }
+    .WhealthyLife_GlobalNavigation .secondary-navigation {
+      display: none;
+    }
+    .WhealthyLife_GlobalNavigation .secondary-navigation__wrapper__promo-space,
+    .WhealthyLife_GlobalNavigation
+      .secondary-navigation__wrapper__product-links,
+    .WhealthyLife_GlobalNavigation
+      .secondary-navigation__wrapper__helpful-links {
+      display: none;
+    }
+  }
+  @media only screen and (max-width: 500px) {
+    .WhealthyLife_GlobalNavigation .navbar .overlay {
+      width: 85%;
+    }
+  }
+  @media only screen and (max-width: 320px) {
+    .WhealthyLife_GlobalNavigation .mobile.navbar .nav-right a {
+      margin-right: 6px;
+    }
+  }
+}
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(30, 190, 240, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(30, 190, 240, 0);
+  }
+  to {
+    box-shadow: 0 0 0 0 rgba(30, 190, 240, 0);
+  }
+}
+@keyframes keyframes-rotation {
+  0% {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+@keyframes tada {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    color: #28328c;
+    opacity: 1;
+  }
+  2.5%,
+  5% {
+    -webkit-transform: scale(0.9) rotate(-8deg);
+    transform: scale(0.9) rotate(-8deg);
+  }
+  7.5%,
+  12.5%,
+  17.5% {
+    -webkit-transform: scale(1.2) rotate(8deg);
+    transform: scale(1.2) rotate(8deg);
+  }
+  10%,
+  15% {
+    -webkit-transform: scale(1.2) rotate(-8deg);
+    transform: scale(1.2) rotate(-8deg);
+  }
+  20%,
+  25% {
+    -webkit-transform: scale(1) rotate(0);
+    transform: scale(1) rotate(0);
+  }
+  25% {
+    color: #28328c;
+    opacity: 1;
+  }
+  30% {
+    color: #626262;
+    opacity: 0.3;
+  }
+}
+
+.mt-150 {
+  margin-top: 150px;
+}
+.mt-100 {
+  margin-top: 100px;
+}
+.mt-80 {
+  margin-top: 80px;
+}
+.mt-50 {
+  margin-top: 50px;
+}
+.mt-57 {
+  margin-top: 57px;
+}
+.mt-30 {
+  margin-top: 30px;
+}
+.mb-150 {
+  margin-bottom: 150px;
+}
+.mb-100 {
+  margin-bottom: 100px;
+}
+.mb-50 {
+  margin-bottom: 50px;
+}
+.mb-30 {
+  margin-bottom: 30px;
+}
+.book-opp .img-icon {
+  background-color: #fff;
+  padding: 5px;
+  border-radius: 50%;
+}
+.margin_120_95 {
+  padding-top: 120px;
+  padding-bottom: 95px;
+  margin: 0 auto;
+}
+
+.book-appoiment h2 {
+  font-size: 23px;
+  font-weight: 400;
+}
+
+.book-appoiment .c-icon__img {
+  margin-right: 6px;
+}
+
+.bookapo-box .inner-box {
+  background-color: #fff;
+  border: 1px solid #ececec;
+  transition: all 0.3s ease;
+  padding: 25px 15px 25px;
+  margin-bottom: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.bookapo-box .inner-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 50px 30px -40px #00000085;
+}
+
+.bookapo-box h3 {
+  font-size: 25px;
+  color: #179cc3;
+}
+.bookapo-box h5 {
+  font-size: 16px;
+  color: #808080;
+}
+
+video {
+  position: relative !important;
+  width: 100%;
+  top: 0;
+  left: 0;
 }
 
 .c-popular-searches ul li {
-    float: left;
-    margin-right: 10px;
+  float: left;
+  margin-right: 10px;
 }
 .c-popular-searches ul li a {
-    margin: 0 10px 0 0px;
-    color: #fff;
+  margin: 0 10px 0 0px;
+  color: #fff;
 }
 
 @media (max-width: 767px) {
-    .c-icon {
-        width: 50%;
-        float: left;
-        margin: 30px 0;
-    }
-    .c-icon:not(:last-child) {
-        border-right: 0;
-    }
-    * {
-        vertical-align: middle !important;
-    }
-    .c-offer-tag {
-        background-color: #00a500;
-        font-size: 12px;
-        padding: 1px 5px;
-        position: absolute;
-        border: 0;
-        right: 40px;
-    }
-    .c-omni-container--desktop .c-omni__wrapper--keyword {
-        width: 100%;
-        margin-bottom: 10px;
-    }
-    .c-omni-container--desktop .c-omni__wrapper--locality {
-        width: 100%;
-        margin-bottom: 10px;
-    }
-    .c-omni-wrapper {
-        width: 90%;
-        margin: 0 auto;
-        z-index: 1;
-        position: relative;
-    }
+  .c-icon {
+    width: 50%;
+    float: left;
+    margin: 30px 0;
+  }
+  .c-icon:not(:last-child) {
+    border-right: 0;
+  }
+  * {
+    vertical-align: middle !important;
+  }
+  .c-offer-tag {
+    background-color: #00a500;
+    font-size: 12px;
+    padding: 1px 5px;
+    position: absolute;
+    border: 0;
+    right: 40px;
+  }
+  .c-omni-container--desktop .c-omni__wrapper--keyword {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .c-omni-container--desktop .c-omni__wrapper--locality {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .c-omni-wrapper {
+    width: 90%;
+    margin: 0 auto;
+    z-index: 1;
+    position: relative;
+  }
 
-    .c-popular-searches__item {
-        float: left;
-    }
+  .c-popular-searches__item {
+    float: left;
+  }
 
-    .c-popular-searches {
-        width: 100%;
-    }
+  .c-popular-searches {
+    width: 100%;
+  }
 }
 
 .prev-arrow {
-    position: absolute;
-    top: 50%;
-    left: -7px;
+  position: absolute;
+  top: 50%;
+  left: -7px;
 }
 
 .next-arrow {
-    position: absolute;
-    top: 50%;
-    right: -7px;
+  position: absolute;
+  top: 50%;
+  right: -7px;
 }
 
 .rh5v-DefaultPlayer_component {
-    padding-bottom: 16px;
+  padding-bottom: 16px;
 }
 
 @media (max-width: 450px) {
-    .mt-57 {
-        margin-top: 30px;
-    }
+  .mt-57 {
+    margin-top: 30px;
+  }
 }
-
-

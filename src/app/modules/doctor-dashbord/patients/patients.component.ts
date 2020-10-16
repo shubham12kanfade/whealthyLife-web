@@ -1,3 +1,5 @@
+import { PaitentsService } from './../../../services/paitents.service';
+import { UserService } from './../../../services/user.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -13,11 +15,26 @@ export class PatientsComponent implements OnInit {
   PatientDate: string="today";
 
   activeTab = 'today';
-  constructor() { }
+  DoctId: any;
+  constructor(public userService : UserService, public paitentService : PaitentsService) {
+
+         this.DoctId= this.userService.getUserInfo()
+        console.log(": --------------------------------------------------");
+        console.log("PatientsComponent -> constructor -> DoctId", this.DoctId);
+        console.log(": --------------------------------------------------");
 
 
 
- 
+        this.paitentService.getAllPaitent(this.DoctId._id).then(resData=>{
+          console.log("PatientsComponent -> constructor -> resData", resData);
+        }).catch(error =>{
+          console.log("PatientsComponent -> constructor -> error", error);
+        })
+   }
+
+
+
+
   ngOnInit(): void {
   }
 
@@ -41,5 +58,7 @@ export class PatientsComponent implements OnInit {
   showpopup(){
     this.show=!this.show;
   }
+
+
 
 }

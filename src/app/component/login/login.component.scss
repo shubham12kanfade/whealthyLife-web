@@ -1,5 +1,5 @@
 body {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Camphor,verdana !important;
 }
 
 .sidimg {
@@ -35,7 +35,7 @@ body {
 .outer-box {
     border: solid 3px rgba(216, 216, 216, 0.5);
     border-radius: 0px;
-    font-family: "Camphor";
+    font-family: Camphor,verdana !important;
     color: #787887;
 }
 .padding-bottom-8 {
@@ -244,7 +244,7 @@ label {
     vertical-align: middle;
     box-sizing: border-box;
     border-radius: 3px;
-    font-family: sans-serif;
+    font-family: Camphor,verdana !important;
     line-height: 24px;
 }
 
@@ -381,21 +381,20 @@ label {
 .login-area .padding-bottom-8 {
     padding-bottom: 8px;
     font-size: 18px;
-    font-family: sans-serif;
+    font-family: Camphor,verdana !important;
     color: #585858;
 }
 
 .login-area label {
-    font-family: sans-serif;
+    font-family: Camphor,verdana !important;
 }
 .login-area .forget-pasword {
-    font-family: sans-serif;
+    font-family: Camphor,verdana !important;
 }
 
 .fb {
     height: 45px;
-    font-family: 'Camphor';
-    font-size: 14px;
+    font-family: Camphor,verdana !important;    font-size: 14px;
     background-color: #3B5A97;
     color: #FFF;
     text-align: center;

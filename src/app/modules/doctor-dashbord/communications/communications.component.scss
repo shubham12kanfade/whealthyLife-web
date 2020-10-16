@@ -31,7 +31,7 @@
   }
 a {
   cursor: pointer;
-}    
+}
 ul {
   padding: 0;
   margin: 0;
@@ -53,7 +53,7 @@ body .hidden {
 h1,
 h2,
 h3 {
-  font-family: camphor, "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-family: Camphor,verdana !important;
   line-height: 1.2857em;
   margin: 0 0 1rem;
   font-weight: 400;
@@ -439,7 +439,7 @@ textarea {
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
   text-align: left;
   line-height: 1.2142em;
-  font-family: camphor, "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-family: Camphor,verdana !important;
   padding: 0.5em;
   background: #fff;
   border: 1px solid #cacad3;
@@ -680,7 +680,7 @@ i.angle.down.icon {
   border: none;
   margin: 0 0 0;
   padding: 0 0;
-  font-family: camphor, "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-family: Camphor,verdana !important;
   font-weight: 400;
   line-height: 1.2857em;
   text-transform: none;
@@ -704,7 +704,7 @@ i.angle.down.icon {
   vertical-align: baseline;
   background: #fff none;
   color: #787887;
-  font-family: camphor, "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-family: Camphor,verdana !important;
   margin: 0 0.25em 0 0;
   padding: 0.6rem 1rem 0.6rem;
   text-transform: none;
@@ -1142,7 +1142,7 @@ i.angle.down.icon {
   vertical-align: top;
 }
 .ui.form input[type="text"] {
-  font-family: camphor, "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-family: Camphor,verdana !important;
   margin: 0;
   outline: 0;
   -webkit-appearance: none;
@@ -1287,7 +1287,7 @@ i.angle.down.icon {
   display: -ms-flexbox;
   display: flex;
   margin: 1rem 0;
-  font-family: camphor, "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-family: Camphor,verdana !important;
   background: #fff;
   font-weight: 400;
   border: 1px solid #cacad3;
@@ -1969,7 +1969,7 @@ i.angle.down.icon {
 .ui.list > .item .header {
   display: block;
   margin: 0;
-  font-family: camphor, "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-family: Camphor,verdana !important;
   font-weight: 400;
   color: #414146;
 }
@@ -2249,7 +2249,7 @@ i.angle.down.icon {
   background: #fff;
   position: relative;
   z-index: 4;
-  font-family: Arial, Helvetica, sans-serif;
+    font-family: Camphor,verdana !important;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -2981,7 +2981,7 @@ i:after {
   padding: 10px;
   overflow-x: auto;
   min-height: 40px;
-  font-family: "PT Serif", serif;
+  font-family: Camphor,verdana !important;
   font-size: 18px;
 }
 .practo-skin-theme .fr-element {
@@ -3115,7 +3115,7 @@ i:after {
 .practo-skin-theme.fr-toolbar {
   color: #222;
   background: #fff;
-  font-family: Arial, Helvetica, sans-serif;
+    font-family: Camphor,verdana !important;
   padding: 0 2px;
   border-radius: 2px;
   -moz-border-radius: 2px;
