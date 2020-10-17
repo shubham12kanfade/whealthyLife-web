@@ -197,7 +197,7 @@
     opacity: 1;
   }
   .main-menu ul ul li.third-level > a:after {
-    font-family: 'ElegantIcons';
+    font-family: Camphor,verdana !important;
     content: "\35";
     float: right;
     font-size: 16px;

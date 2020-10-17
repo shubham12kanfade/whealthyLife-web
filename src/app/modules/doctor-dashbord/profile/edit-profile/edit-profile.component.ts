@@ -218,7 +218,7 @@ export class EditProfileComponent implements OnInit {
         console.log("EditProfileComponent -> getTreatment -> ResData", ResData);
         this.treatment = ResData.data;
         this.tempData1=ResData.data;
-       
+
       }
     );
   }
@@ -352,7 +352,7 @@ export class EditProfileComponent implements OnInit {
   onAddNew1(value) {
     console.log("EditProfileComponent -> onAddNew -> value", value);
 
-  
+
   }
 
 
@@ -373,7 +373,7 @@ export class EditProfileComponent implements OnInit {
     this.TreatmentsService.addDoctorTreatment(data1)
       .then((resData) => {
       console.log("EditProfileComponent -> onChanget -> resData", resData)
-      
+
       })
       .catch((error) => {
         console.log("EditProfileComponent -> onChange -> error", error);

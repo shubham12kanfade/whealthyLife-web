@@ -10,6 +10,7 @@
   font-weight: 600;
   border-right: 3px solid;
   padding-right: 10px;
+  cursor: pointer;
 }
 
 .imp{
@@ -19,6 +20,7 @@
 
 .font-custome1 {
   font-weight: 600;
+  cursor: pointer;
 }
 
 .custom-font {
@@ -152,7 +154,7 @@ a {
     > a {
       color: #1e1e1e !important;
       font-size: 14px;
-      font-family: inherit;
+      font-family: Camphor,verdana !important;
       line-height: 2;
     }
   }

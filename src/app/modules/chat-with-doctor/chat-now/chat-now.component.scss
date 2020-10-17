@@ -47,7 +47,7 @@ button{-webkit-appearance:button;cursor:pointer;}
 button::-moz-focus-inner{border:0;padding:0;}
 *{box-sizing:border-box;}
 *:before,*:after{box-sizing:border-box;}
-button{font-family:inherit;font-size:inherit;line-height:inherit;}
+button{  font-family: Camphor,verdana !important;font-size:inherit;line-height:inherit;}
 img{vertical-align:middle;}
 .pull-right{float:right!important;}
 button::-moz-focus-inner{padding:0;border:0;}
@@ -113,7 +113,7 @@ input{line-height:normal;}
 textarea{overflow:auto;}
 *{box-sizing:border-box;}
 *:before,*:after{box-sizing:border-box;}
-input,button,textarea{font-family:inherit;font-size:inherit;line-height:inherit;}
+input,button,textarea{  font-family: Camphor,verdana !important;font-size:inherit;line-height:inherit;}
 img{vertical-align:middle;}
 .clearfix:before,.clearfix:after{content:" ";display:table;}
 .clearfix:after{clear:both;}

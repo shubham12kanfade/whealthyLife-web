@@ -35,7 +35,7 @@ const routes: Routes = [
       { path: 'order',loadChildren: ()=> import('../../modules/order/order.module').then(or => or.OrderModule)},
       { path: 'privcyPolicy', component: PrivcyPolicyComponent
     },
-     
+
     ]
   }
 ];

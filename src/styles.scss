@@ -217,7 +217,7 @@ $Praco-Site-theme: mat-light-theme($Praco-Site-primary, $Praco-Site-accent, $Pra
 }
 
 @font-face {
-	font-family: practicon;
+  font-family: Camphor,verdana !important;
 	src: url(assets/webfonts/practicon.woff2) format("woff2"), url(assets/webfonts/practicon.woff) format("woff");
 	font-weight: 400;
 	font-style: normal;
@@ -323,7 +323,7 @@ body {
 }
 body {
 	margin: 0;
-	font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-family: Camphor,verdana !important;
 }
 
 .mt-3rem {
@@ -339,7 +339,7 @@ body {
 }
 body {
 	margin: 0;
-	font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-family: Camphor,verdana !important;
 }
 
 b,
@@ -590,4 +590,4 @@ body .ui-multiselect {
 }
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0;  font-family: Camphor,verdana !important; }

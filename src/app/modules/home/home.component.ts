@@ -30,9 +30,10 @@ export class HomeComponent implements OnInit {
 
   myControl = new FormControl();
   filteredOptions: Observable<User[]>;
-  test: any;
+  test: any=[];
 
   options: string[] = ["ASD", "sddcbsda", "sjkbcjbc"]
+  searchData: any = [];
 
 
   constructor(public SpecialityService:SpecialityService,
@@ -62,13 +63,17 @@ export class HomeComponent implements OnInit {
         console.log("HomeComponent -> testdata", testdata);
         console.log(": -----------------------------------");
 
-        this.test = testdata;
+       testdata.data.map(ele => {
 
-        }).catch(err => {
+         this.searchData = ele.fullName
+         console.log(": ---------------------------------------");
+         console.log("HomeComponent -> searchData", this.searchData);
+         console.log(": ---------------------------------------");
+        })
+      }).catch(err => {
         console.log(": -------------------------");
         console.log("HomeComponent -> err", err);
         console.log(": -------------------------");
-
         })
 
    }
@@ -174,6 +179,11 @@ export class HomeComponent implements OnInit {
 
     nav: false
   };
+
+
+
+
+
 
 
 
