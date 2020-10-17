@@ -15,6 +15,10 @@ export class SpecialityService {
     return this.Api.getData('country/specialisations');
   }
 
+  getTestMaster() {
+    return this.Api.getData('tests/all');
+  }
+
 
 
 }

@@ -1,4 +1,4 @@
-video {
+ video {
     opacity: 100;
     top: 1250px;
     left: 390px;
@@ -131,7 +131,7 @@ body {
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background: #14bef0;
+    background: #0ba114;
     box-shadow: 0 0 0 rgba(40, 190, 240, 0.4);
     animation: pulse 1.2s infinite;
 }
@@ -164,10 +164,10 @@ body {
     height: 12px;
     top: 0;
     background: linear-gradient(-90deg, rgba(197, 230, 243, 0.79), transparent),
-        linear-gradient(180deg, #14bef0 0, rgba(0, 58, 52, 0));
+        linear-gradient(180deg, #0ba114 0, rgba(0, 58, 52, 0));
     transform: rotate(90deg);
     position: absolute;
-    border-top: 1px solid #14bef0;
+    border-top: 1px solid #0ba114;
 }
 .c-article-card__body {
     margin: 10px;
@@ -246,7 +246,7 @@ body {
     text-align: center;
 }
 .c-list-item__icon {
-    color: #14bef0;
+    color: #0ba114;
 }
 
 @media (max-width: 768px) {
@@ -283,8 +283,8 @@ body {
     height: 40px;
     font-size: 16px;
     color: #fff;
-    background-color: #14bef0;
-    border: 1px solid #14bef0;
+    background-color: #0ba114;
+    border: 1px solid #0ba114;
     border-radius: 2px;
     box-sizing: border-box;
     text-decoration: none;
@@ -317,7 +317,7 @@ body {
     overflow: hidden;
     /* height: 80px; */
     padding: 20px 0;
-    background-color: #1d2869;
+    background-color: #0ba114;
     text-align: center;
 }
 .c-icon-list__list_wrapper {
@@ -1026,8 +1026,8 @@ body {
     }
     .WhealthyLife_GlobalNavigation .btn-border:hover {
         background-color: transparent;
-        border: 1px solid #14bef0;
-        color: #14bef0 !important;
+        border: 1px solid #0ba114;
+        color: #0ba114 !important;
     }
     .WhealthyLife_GlobalNavigation:before {
         content: " ";
@@ -1120,10 +1120,10 @@ body {
     }
     .WhealthyLife_GlobalNavigation .navbar.mobile .nav-login-mobile.btn-border {
         height: 30px;
-        color: #14bef0 !important;
+        color: #0ba114 !important;
         padding: 5px 12px 8px 12px;
         border-radius: 3px;
-        border: solid 1px #14bef0;
+        border: solid 1px #0ba114;
     }
     .WhealthyLife_GlobalNavigation {
         font-family: "Camphor";
@@ -1239,19 +1239,19 @@ body {
         margin: 0 15px 0 0;
     }
     .WhealthyLife_GlobalNavigation .navbar .navlist .navlink.selected > a {
-        color: #14bef0;
+        color: #0ba114;
         font-weight: 400;
     }
     .WhealthyLife_GlobalNavigation .navbar .navlist .navlink.selected > a i.ic {
-        color: #14bef0;
+        color: #0ba114;
         font-weight: 400;
     }
     .WhealthyLife_GlobalNavigation .navbar .navlist .navlink:hover a {
-        color: #14bef0;
+        color: #0ba114;
     }
     .WhealthyLife_GlobalNavigation .navbar .navlist .navlink:hover a .product-block div:first-child,
     .WhealthyLife_GlobalNavigation .navbar .navlist .navlink:hover a i.ic {
-        color: #14bef0;
+        color: #0ba114;
     }
     .WhealthyLife_GlobalNavigation .navbar .WhealthyLife_logo_new,
     .WhealthyLife_GlobalNavigation .navbar .ic,
@@ -1292,8 +1292,8 @@ body {
     .WhealthyLife_GlobalNavigation .navbar .download .appdownload-block {
         margin: auto;
         display: inline-block;
-        color: #14bef0;
-        border: 1px solid #14bef0;
+        color: #0ba114;
+        border: 1px solid #0ba114;
         text-align: center;
         padding: 9px 20px;
         font-weight: 400;
@@ -1301,7 +1301,7 @@ body {
     }
     .WhealthyLife_GlobalNavigation .navbar .download .appdownload-block:hover {
         color: #fff !important;
-        background: #14bef0 !important;
+        background: #0ba114 !important;
     }
     .WhealthyLife_GlobalNavigation .new {
         float: right;
@@ -1592,7 +1592,7 @@ body {
             padding: 0 0 0 10px;
         }
         .WhealthyLife_GlobalNavigation .navbar .navlist .navlink.selected {
-            color: #14bef0;
+            color: #0ba114;
         }
         .WhealthyLife_GlobalNavigation .navbar .navlist .navlink a {
             font-size: 14px;
@@ -1610,10 +1610,10 @@ body {
             border: none;
         }
         .WhealthyLife_GlobalNavigation .navbar .navlist .navlink.selected:hover > a {
-            color: #14bef0;
+            color: #0ba114;
         }
         .WhealthyLife_GlobalNavigation .navbar .navlist .navlink.selected:hover > a i.ic {
-            color: #14bef0;
+            color: #0ba114;
         }
         .WhealthyLife_GlobalNavigation .navbar .navlist .navlink:hover a {
             color: #414146;
