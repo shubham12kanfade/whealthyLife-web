@@ -1,61 +1,8 @@
 <main>
+  <div>
     <div class="hero_home version_1">
-
-        <div class="content">
-
-            <!-- <p>
-                Book tests with top labs, get sample pick up, share reports with doctors online
-            </p> -->
-            <form method="post" action="#">
-              <div id="custom-search-input">
-                <div class="row" >
-
-                  <div class="adj input-group" style="margin-top: 100px;">
-
-                    <h3 class="mb-3" ><span style="color: white;">Diagnostic Tests at your Doorstep!</span> </h3>
-                    <form class="example-form">
-                        <mat-form-field class="example-full-width">
-                          <input type="text" class=" search-query"  placeholder="Type test names and select from options"
-                            [formControl]="myControl"
-                            [matAutocomplete]="auto">
-                          <input type="submit" class="btn_search" value="Search">
-                          <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
-                            <mat-option *ngFor="let option of searchData | async" [value]="option" class="search-deivde">
-                             <span></span><span>{{option.fullName}}</span>
-                            </mat-option>
-                          </mat-autocomplete>
-                        </mat-form-field>
-                      </form>
-                      </div>
-                    </div>
-                    <ul class="banner-ft">
-                      <div>
-                        <li [routerLink]="['/bookappointment']" routerLinkActive="router-link-active" >
-                            <img src="../../../assets/img/Swati/Appointment.svg " alt="lab">
-                            <span>Book Appointment</span>
-                        </li>
-                        <li [routerLink]="['/booktests']" routerLinkActive="router-link-active" >
-                            <img src="../../../assets/img/Swati/LabTest.svg " alt="lab">
-                            <span>Lab Test</span>
-                        </li>
-                        <li [routerLink]="['/']" routerLinkActive="router-link-active" >
-                            <img src="../../../assets/img/Swati/OnlineReport.svg" alt="lab">
-                            <span>Online Reports</span>
-                        </li>
-                      </div>
-                        <li [routerLink]="['/']" routerLinkActive="router-link-active"  class="mt-5">
-                            <img src="../../../assets/img/Swati/Medicine.svg" alt="lab">
-                            <span>Order Medicine</span>
-                        </li>
-                        <li [routerLink]="['/']" routerLinkActive="router-link-active"  class="mt-5">
-                            <img src="../../../assets/img/Swati/TrackOrder.svg" alt="lab">
-                            <span>Track Your Order</span>
-                        </li>
-                    </ul>
-                </div>
-            </form>
-        </div>
-    </div>
+</div>
+  </div>
     <div class="bottom-sec">
         <div class="container">
             <div class="row">
@@ -232,7 +179,8 @@
                                         <div class="inner-cat-content">
                                             <h2>{{item.fullName}}</h2>
                                         </div>
-                                        <img [src]="item.backImg" onError="this.src='src\assets\img\Swati\MedicalRecord.jpg'" alt="img">
+                                       
+                                        <img [src]="item.backImg" onError="this.src='./../../../assets/img/Swati/MedicalRecord.jpg'" alt="img">
                                     </div>
                                 </a>
                             </div>

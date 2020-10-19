@@ -28,7 +28,7 @@ import { ToastModule } from 'primeng/toast';
     HeaderComponent,
     FooterComponent,
     PublicComponent,
-    HomeComponent,
+   
     LoginComponent,
     RegisterComponent,
     ContactUsComponent,
