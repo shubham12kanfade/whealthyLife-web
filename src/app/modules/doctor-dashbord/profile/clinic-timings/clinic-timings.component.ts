@@ -125,6 +125,11 @@ this.getProfile();
 this.DoctorProfileService.getSlot(this.doctorinfo._id).then((resData)=>{
 
 this.days=resData.data 
+console.log("ClinicTimingsComponent -> getProfile -> days", this.days)
+
+
+
+
 
 for (let i = 0; i < this.days.length; i++) {
   console.log("ClinicTimingsComponent -> getProfile -> this.days[i].day", this.days[i]?.day)

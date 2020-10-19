@@ -37,18 +37,19 @@
                 class="form-control"
                 formControlName="completionYear"
               >
-                <option value="asd">asd</option>
+                <option  *ngFor="let item of ylength ;let i=index" [value]="year-i">{{year-i}}</option>
               </select>
             </div>
             <div class="col-12 mb-5">
-              <button
+              <button 
+              *ngIf="getControlName('qualificationArray').length>1"
                 mat-mini-fab
                 color="warn"
                 (click)="remDegree(fo)"
                 class="mx-2 float-right"
                 aria-label="Example icon button with a menu icon"
               >
-                <mat-icon> delete</mat-icon>
+              
               </button>
               <button
                 mat-mini-fab
@@ -57,7 +58,7 @@
                 class="mx-2 float-right"
                 aria-label="Example icon button with a menu icon"
               >
-                <mat-icon>add_circle_outline</mat-icon>
+              <i class="fa fa-plus text-white" aria-hidden="true"></i>
               </button>
             </div>
           </div>
