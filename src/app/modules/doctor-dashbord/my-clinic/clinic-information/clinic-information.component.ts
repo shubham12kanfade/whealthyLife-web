@@ -1,5 +1,11 @@
+import { UserService } from './../../../../services/user.service';
+import { MyclinicService } from './../../../../services/myclinic.service';
 import { Component, OnInit } from '@angular/core';
 import { Address } from '../address/address.module';
+import { FormGroup, Validators, FormBuilder, FormArray } from '@angular/forms';
+import { MainService } from 'src/app/services/main.service';
+import { MessageService } from 'primeng/api';
+
 
 @Component({
   selector: 'app-clinic-information',
@@ -9,48 +15,97 @@ import { Address } from '../address/address.module';
 export class ClinicInformationComponent implements OnInit {
   Address = new Address();
   dataArray = [];
+  AddClinic: FormGroup;
+  avatar: any;
+  submitted: boolean =false;
 
   keyword = 'name';
-  public countries = [
-    {
-      id: 1,
-      name: 'Clininc 1 ',
-    },
-    {
-      id: 2,
-      name: 'Clininc 2',
-    },
-    {
-      id: 3,
-      name: 'Clininc 3',
-    },
-    {
-      id: 4,
-      name: 'Clininc 4',
-    }
-  ];
 
-  constructor() { }
+  DocId: any;
+
+  constructor(public mainService: MainService, public messageService: MessageService,
+    public myclinicService : MyclinicService, private fb: FormBuilder, public userService:UserService) {
+
+      this.AddClinic = this.fb.group({
+        name : [''],
+      })
+
+      const docData=this.userService.getUserInfo();
+
+      this.DocId= docData._id;
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // employees(): FormArray {
+    //   return this.AddClinic.get("employees") as FormArray
+    // }
+
+
+    // newEmployee(): FormGroup {
+    //   return this.fb.group({
+    //     street: ['', Validators.required],
+    //     landmark: ['', Validators.required],
+    //     country: ['', Validators.required],
+    //     state: ['', [Validators.required]],
+    //     city: ['', [Validators.required, Validators.minLength(6)]],
+    //     pincode: ['', [Validators.required]],
+    //   })
+    // }
+
+    // addEmployee() {
+    //   this.employees().push(this.newEmployee());
+    // }
+
+    // removeEmployee(empIndex:number) {
+    //   this.employees().removeAt(empIndex);
+    // }
+
 
   ngOnInit(): void {
-    this.Address = new Address();
-    this.dataArray.push(this.Address);
+
   }
 
-  addAddress(){
-   this.Address = new Address();
-   
-   this.dataArray.push(this.Address);
-   
-  }
 
-  removeAddress(index){
-    this.dataArray.splice(index)
-  }
 
-  onSave(){
-    console.log("MyClinicComponent -> addAddress -> this.Address", this.Address)
-    console.log("MyClinicComponent -> addAddress -> this.dataArray", this.dataArray)
+
+
+
+  onSave() {
+    // this.getclinic();
+
+    alert(JSON.stringify (this.AddClinic.value));
+
+    if(this.AddClinic.invalid){
+      return
+    }
+
+    const data = {
+      ...this.AddClinic.value,
+      addedBy:this.DocId
+    }
+
+    this.myclinicService.addClinic(data).then(resData =>{
+    console.log(": --------------------------------------------------------");
+    console.log("ClinicInformationComponent -> onSave -> resData", resData);
+    console.log(": --------------------------------------------------------");
+    }).catch(error=>{
+    console.log(": ----------------------------------------------------");
+    console.log("ClinicInformationComponent -> onSave -> error", error);
+    console.log(": ----------------------------------------------------");
+    })
+
   }
 
 
@@ -58,12 +113,12 @@ export class ClinicInformationComponent implements OnInit {
   selectEvent(item) {
     // do something with selected item
   }
- 
+
   onChangeSearch(val: string) {
     // fetch remote data from here
     // And reassign the 'data' which is binded to 'data' property.
   }
-  
+
   onFocused(e){
     // do something when input is focused
   }
