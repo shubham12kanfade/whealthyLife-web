@@ -13,6 +13,7 @@
                     <hr>
                       <div class="row"  *ngFor="let items of Address; let a = index" >
                           <div class="col-12 col-sm-12 col-md-8 col-lg-6">
+
                               <div class="" *ngIf="ClicId[a] === clinicId[i]" >
 
                                   <p class="pstyle">Address:-
@@ -28,7 +29,7 @@
                           </div>
                       </div>
                   </div>
-
+                  <h3 style="text-align: center;" *ngIf="clinicId == 0">No Clinic Here</h3>
               <!-- <div class="col-12 addre" >
                   <div class="row">
                       <div class="col-12 col-sm-12 col-md-8 col-lg-6">

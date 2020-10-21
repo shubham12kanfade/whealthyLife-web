@@ -31,8 +31,15 @@ export class ClinicInformationComponent implements OnInit {
       })
 
       const docData=this.userService.getUserInfo();
+     console.log(": ----------------------------------------------");
+     console.log("ClinicInformationComponent -> docData", docData);
+     console.log(": ----------------------------------------------");
 
-      this.DocId= docData._id;
+     this.DocId= docData._id;
+     console.log(": ----------------------------------------------------");
+     console.log("ClinicInformationComponent -> this.DocId", this.DocId);
+     console.log(": ----------------------------------------------------");
+
 
     }
 
