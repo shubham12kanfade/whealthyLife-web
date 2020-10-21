@@ -92,7 +92,7 @@
                    placeHolder="Search doctors, clinics, hospitals etc"
                   (selected)='selectEvent($event)' (inputChanged)='onChangeSearch($event)'
                   (inputFocused)='onFocused($event)' historyIdentifier="countries"
-                  [itemTemplate]="itemTemplate" [notFoundTemplate]="notFoundTemplate" formControlName="clinicName">
+                  [itemTemplate]="itemTemplate" [notFoundTemplate]="notFoundTemplate" >
               </ng-autocomplete>
               <ng-template #itemTemplate let-item>
                   <a [innerHTML]="item.name"></a>
@@ -120,7 +120,7 @@
             <div class="row" style="margin:10px">
               <div class="form-group col-lg-4 fg"  >
                 <label for="exampleInputEmail1">Street</label>
-                <input type="type" class="form-control" id="exampleInputEmail1" style="margin-bottom: 30px;" formControlName="street" >
+                <input type="type" class="form-control" id="exampleInputEmail1" style="margin-bottom: 30px;" formControlName="address" >
               </div>
               <div class="form-group col-lg-4 fg" >
                 <label for="exampleInputEmail1">Landmark</label>

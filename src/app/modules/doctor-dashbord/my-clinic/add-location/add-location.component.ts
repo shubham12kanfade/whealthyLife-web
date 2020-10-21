@@ -20,48 +20,41 @@ export class AddLocationComponent implements OnInit {
 
 
   keyword = 'name';
-  public countries = [
-    {
-      id: 1,
-      name: 'Clininc 1 ',
-    },
-    {
-      id: 2,
-      name: 'Clininc 2',
-    },
-    {
-      id: 3,
-      name: 'Clininc 3',
-    },
-    {
-      id: 4,
-      name: 'Clininc 4',
-    }
-  ];
+  public countries = []
+  //   {
+  //     id: 1,
+  //     name: 'Clininc 1 ',
+  //   },
+  //   {
+  //     id: 2,
+  //     name: 'Clininc 2',
+  //   },
+  //   {
+  //     id: 3,
+  //     name: 'Clininc 3',
+  //   },
+  //   {
+  //     id: 4,
+  //     name: 'Clininc 4',
+  //   }
+  // ];
   DocId: any;
+  obj: any;
+  clinicId: void;
 
   constructor(public mainService: MainService, public messageService: MessageService,
     public myclinicService : MyclinicService, private fb: FormBuilder, public userService:UserService) {
 
       this.AddClinic = this.fb.group({
-        clinicName : [''],
         location: this.fb.array([this.createLocation()]),
-
       })
 
       const docData=this.userService.getUserInfo();
-      console.log(": ----------------------------------------------");
-      console.log("ClinicInformationComponent -> docData", docData);
-      console.log(": ----------------------------------------------");
-      this.DocId= docData._id;
-      console.log(": ----------------------------------------------------");
-      console.log("ClinicInformationComponent -> this.DocId", this.DocId);
-      console.log(": ----------------------------------------------------");
 
+      this.DocId= docData._id;
 
 
       this.getclinic();
-
 
 
     }
@@ -69,9 +62,9 @@ export class AddLocationComponent implements OnInit {
 
     getclinic(){
       this.myclinicService.getClinic(this.DocId).then(resData=>{
-        console.log(": ----------------------------------------------");
-        console.log("ClinicInformationComponent -> resData", resData);
-        console.log(": ----------------------------------------------");
+
+
+        this.countries = resData.data;
 
         }).catch(error=>{
         console.log(": ------------------------------------------");
@@ -81,18 +74,13 @@ export class AddLocationComponent implements OnInit {
         })
     }
 
-
-
-
-
-
     location(): FormArray {
       return this.AddClinic.get("location") as FormArray;
     }
 
     createLocation(): FormGroup {
       return this.fb.group({
-        street: ['', Validators.required],
+        address: ['', Validators.required],
         landmark: ['', Validators.required],
         country: ['', Validators.required],
         state: ['', [Validators.required]],
@@ -123,21 +111,15 @@ export class AddLocationComponent implements OnInit {
     }
 
     const data = {
-      ...this.AddClinic.value
+      ...this.AddClinic.value,
+      clinicId : this.obj,
     }
 
     this.myclinicService.postAddClinicLocation(data).then(resData =>{
-    console.log(": --------------------------------------------------------");
-    console.log("ClinicInformationComponent -> onSave -> resData", resData);
-    console.log(": --------------------------------------------------------");
+
     }).catch(error=>{
-    console.log(": ----------------------------------------------------");
-    console.log("ClinicInformationComponent -> onSave -> error", error);
-    console.log(": ----------------------------------------------------");
+
     })
-
-
-
 
 
   //   console.log(this.AddClinic.value);
@@ -161,15 +143,23 @@ export class AddLocationComponent implements OnInit {
 
 
   selectEvent(item) {
+
+    this.obj = item._id;
+
     // do something with selected item
   }
 
-  onChangeSearch(val: string) {
+  onChangeSearch(event) {
+
+    const obj = event.value
+
+
     // fetch remote data from here
     // And reassign the 'data' which is binded to 'data' property.
   }
 
   onFocused(e){
+
     // do something when input is focused
   }
 

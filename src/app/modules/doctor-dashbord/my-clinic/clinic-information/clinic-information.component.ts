@@ -37,17 +37,6 @@ export class ClinicInformationComponent implements OnInit {
     }
 
 
-
-
-
-
-
-
-
-
-
-
-
     // employees(): FormArray {
     //   return this.AddClinic.get("employees") as FormArray
     // }
@@ -76,10 +65,6 @@ export class ClinicInformationComponent implements OnInit {
   ngOnInit(): void {
 
   }
-
-
-
-
 
 
   onSave() {

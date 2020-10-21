@@ -10,7 +10,7 @@ export class MyclinicService {
 
 
   getClinic(id){
-    return this.api.getData('clinic/by/doctor/'+id);
+    return this.api.getData('clinic/by/'+id);
   }
 
   postAddClinicLocation(data) {
@@ -19,6 +19,10 @@ export class MyclinicService {
 
   addClinic(data){
     return this.api.postData('clinic/',data);
+  }
+
+  getClinicLocation(id) {
+    return this.api.getData('clinic/location/by/clinicId/'+id);
   }
 
 }
