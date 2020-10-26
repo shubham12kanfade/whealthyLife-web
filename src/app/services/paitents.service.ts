@@ -10,7 +10,7 @@ export class PaitentsService {
   constructor(public API :ApiCallService) {  }
 
   getAllPaitent(id) {
-    return this.API.getData('appointment/get/by/time');
+    return this.API.getData('appoinment/get/by/time');
   }
 
 }

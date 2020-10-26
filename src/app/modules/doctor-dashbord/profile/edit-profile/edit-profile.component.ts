@@ -114,11 +114,11 @@ export class EditProfileComponent implements OnInit {
   }
 
   onSave() {
-    console.log("+++++++++++++++++", this.profileForm.value.dob.toString());
+    console.log("+++++++++++++++++", this.profileForm.value.dob);
     var data = {
       ...this.profileForm.value,
       avatar: this.avatar,
-      dob: this.profileForm.value.dob.toString(),
+      dob: this.profileForm.value.dob,
       location: {
         address: this.profileForm.value.address,
         landmark: this.profileForm.value.landmark,

@@ -30,12 +30,16 @@
                 <a class="nav-link" routerLink="AddClinic">
                     <span>Add Clinic</span></a>
             </li>
-           
+            <li class="nav-item">
+              <a class="nav-link" routerLink="Addlocation">
+                  <span>Add Location</span></a>
+          </li>
+
         </ul>
         </div>
         <div class="col-lg-9 col-md-9 col-sm-8 col-12">
           <div class="col-12 bg" >
-            <router-outlet ></router-outlet>    
+            <router-outlet ></router-outlet>
         </div>
         </div>
       </div>
@@ -57,12 +61,12 @@
                     <div class="col-lg-4 form-group adj4 "  >
                         <label class="lab">Cline Name</label>
                         <ng-autocomplete   type="text"  [data]="countries"  [searchKeyword]="keyword"
-                             placeHolder="Search doctors, clinics, hospitals etc" 
+                             placeHolder="Search doctors, clinics, hospitals etc"
                             (selected)='selectEvent($event)' (inputChanged)='onChangeSearch($event)'
                             (inputFocused)='onFocused($event)' historyIdentifier="countries"
                             [itemTemplate]="itemTemplate" [notFoundTemplate]="notFoundTemplate" >
                         </ng-autocomplete>
-             
+
                         <ng-template #itemTemplate let-item>
                             <a [innerHTML]="item.name"></a>
                         </ng-template>
@@ -70,18 +74,18 @@
                         <ng-template #notFoundTemplate let-notFound>
                             <div [innerHTML]="notFound"></div><button mat-raised-button class="ad">Add</button>
                         </ng-template>
-             
+
                     </div>
                     <div class="fir">
                         <p class="lab mar1">Address</p>
-                       
+
                         <div class="row adj3" *ngFor="let address of dataArray; let i=index" >
                           <div class="col-12">
-                            
+
                               <mat-icon (click)="removeAddress(i)" *ngIf=" i!= 0 "  >delete</mat-icon>
-                           
+
                           </div>
-                         
+
                       <div class="form-group col-lg-4" >
                         <label for="exampleInputEmail1">Street</label>
                         <input type="type" class="form-control" id="exampleInputEmail1"  name="Street{{i}}"  [(ngModel)]="address.Street">
@@ -102,24 +106,24 @@
                         <label for="exampleInputEmail1">City</label>
                         <input type="type" class="form-control" id="exampleInputEmail1"  name="City{{i}}" [(ngModel)]="address.City">
                       </div>
-                      
+
                       <div class="form-group col-lg-4" >
                         <label for="exampleInputEmail1">Pincode</label>
                         <input type="email" class="form-control" id="exampleInputEmail1"  name="Pincode{{i}}" [(ngModel)]="address.Pincode">
                       </div>
-                      
+
                     </div>
                     <button mat-raised-button (click)="addAddress()" class="fl" >
                       <span class="material-icons">
                         add
                         </span>New Address</button>
-                    
+
                     </div>
 
-                   
+
                 </form>
                 </div>
-                
+
             </div>
         </div>
     </div>

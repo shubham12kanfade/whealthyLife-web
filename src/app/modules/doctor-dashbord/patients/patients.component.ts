@@ -16,17 +16,42 @@ export class PatientsComponent implements OnInit {
 
   activeTab = 'today';
   DoctId: any;
+  paitent: any;
+
+  alllPaitent: any = [];
+  weekPaitent: any = [];
+  todaylPaitent: any = [];
+
+  weekpaitent: any;
+  todaypaitent: any;
+  Allpaitent: any;
   constructor(public userService : UserService, public paitentService : PaitentsService) {
 
          this.DoctId= this.userService.getUserInfo()
-        console.log(": --------------------------------------------------");
-        console.log("PatientsComponent -> constructor -> DoctId", this.DoctId);
-        console.log(": --------------------------------------------------");
 
 
 
         this.paitentService.getAllPaitent(this.DoctId._id).then(resData=>{
           console.log("PatientsComponent -> constructor -> resData", resData);
+           this.Allpaitent = resData.data.AllPaitent.length;
+           this.todaypaitent = resData.data.TodayPaitent.length;
+           this.weekpaitent = resData.data.WeeKPaitent.length;
+
+           for (let i = 0 ; i <  resData.data.AllPaitent.length; i++ ){
+
+            this.alllPaitent[i] = resData.data.AllPaitent[i].petient
+          }
+
+          for (let i = 0 ; i < resData.data.TodayPaitent.length; i++ ){
+
+            this.todaylPaitent[i] = resData.data.TodayPaitent[i].petient
+          }
+
+          for (let i = 0 ; i < resData.data.WeeKPaitent.length; i++ ){
+
+            this.weekPaitent[i] = resData.data.WeeKPaitent[i].petient
+          }
+
         }).catch(error =>{
           console.log("PatientsComponent -> constructor -> error", error);
         })
