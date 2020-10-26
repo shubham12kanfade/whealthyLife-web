@@ -30,7 +30,7 @@
     "@types/opentok": "^2.9.0",
     "angular-animations": "0.0.10",
     "angular-ng-autocomplete": "^2.0.1",
-    "angularx-social-login": "1.2.0",
+    "angularx-social-login": "^1.2.7",
     "chart.js": "^2.9.3",
     "country-state-city": "^1.0.5",
     "datepicker-bootstrap": "^1.9.13",

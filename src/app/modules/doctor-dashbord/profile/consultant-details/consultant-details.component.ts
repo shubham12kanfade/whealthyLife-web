@@ -4,7 +4,7 @@ import { UploadService } from 'src/app/services/upload.service';
 import { MessageService } from 'primeng/api';
 import { MatStepper } from '@angular/material/stepper';
 import { Router } from '@angular/router';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, FormBuilder, FormArray } from '@angular/forms';
 
 @Component({
   selector: 'app-consultant-details',
@@ -15,29 +15,87 @@ export class ConsultantDetailsComponent implements OnInit {
 
   @Input() stepper: any;
   items: any = [];
-  profileForm: FormGroup;
+  // empForm: FormGroup;
+  memberForm : FormGroup;
   profileData: any;
+  TimeSloat: any[];
 
   constructor(public mainService: MainService,
     public messageService: MessageService,
-    public router: Router) {
-    this.profileForm = new FormGroup({
-      fees: new FormControl(''),
-      establishmentHour: new FormControl('sameAsEstablishmentHour'),
-    })
+    public router: Router,
+    private fb:FormBuilder) {
+      this.memberForm = this.fb.group({
+        ClinicDetails: this.fb.array([this.createClinicDetails()]),
+        fees : [''],
+        establishmentHour : [''],
+
+      })
+
     this.getProfile();
   }
 
+  ClinicDetails() {
+    return this.memberForm.get("ClinicDetails") as FormArray;
+  }
+
+  createClinicDetails(): FormGroup {
+    return this.fb.group({
+      clinicName : [''],
+      clinicAddress : [''],
+     
+      times: this.fb.array([this.createtimes()]),
+    });
+  }
+
+  addClinicDetails() {
+    this.ClinicDetails().push(this.createClinicDetails());
+  }
+
+  deleteClinicDetails(j: number) {
+    this.ClinicDetails().removeAt(j);
+  }
+
+
+  createtimes(): FormGroup {
+    return this.fb.group({
+      session1Start : [''],
+      session1End : [''],
+      timeday : ['']
+    });
+  }
+
+  times(index = 0) {
+    var array = this.memberForm.get("ClinicDetails") as FormArray;
+    const resFloors = array.controls[index].get("times") as FormArray;
+    return resFloors;
+  }
+
+  addTime(index) {
+    this.times(index).push(this.createtimes());
+  }
+
+  deleteTime(index:number,i: number) {
+    this.times(index).removeAt(i);
+  }
+
+
+
+
+
+
+
+
+
   getProfile() {
     this.mainService.getProfile().then(resData => {
-      this.profileForm.patchValue(resData.data);
+      this.memberForm.patchValue(resData.data);
     }).catch(error => {
       console.log("EditProfileComponent -> getProfile -> error", error);
     })
   }
 
   onSave() {
-    this.mainService.updateUserprofile(this.profileForm.value).then(resData => {
+    this.mainService.updateUserprofile(this.memberForm.value).then(resData => {
       this.showToast('success', 'Profile', 'Profile updated successfully');
       this.router.navigate(['/Doctor/Profile']);
     }).catch(error => {
@@ -51,6 +109,25 @@ export class ConsultantDetailsComponent implements OnInit {
     });
   }
 
-  ngOnInit() { }
+  ngOnInit() { 
+    this.getTime();
+  }
+
+  getTime() {
+    this.TimeSloat = [];
+    
+    for (var i = 0; i < 24; i++) {
+      var hour = i < 10 ? '0' + i : i;
+      // if (i <= 13) {
+        this.TimeSloat.push({ label: hour + ':00', value: hour + ':00' });
+        this.TimeSloat.push({ label: hour + ':30', value: hour + ':30' });
+        // } else {
+          //   this.TimeSloat2.push({ label: hour + ':00', value: hour + ':00' });
+          //   this.TimeSloat2.push({ label: hour + ':30', value: hour + ':30' });
+          // }
+        }
+        
+        console.log("ConsultantDetailsComponent -> getTime -> this.TimeSloat", this.TimeSloat)
+  }
 
 }
