@@ -1,55 +1,63 @@
-
-
-.flex1{
-    display: flex;
-    // justify-content: space-around;
-}
-.container-fluid{
-    padding-left: 7px !important;
-    padding-right: 7px !important;
+table {
+  width: 100%;
 }
 
-.patientfont{
-    font-size: 15px;
+.col.text-center {
+  margin-top: -10rem !important;
 }
 
-.pointer {cursor: pointer;}
+input#mat-input-0 {
+  margin: 10px;
+}
 
-.progress-bar{
-    width: 100% ; background-color:  #ffa000;
-   
+.flex1 {
+  display: flex;
+  // justify-content: space-around;
+}
+.container-fluid {
+  padding-left: 7px !important;
+  padding-right: 7px !important;
+}
+
+.patientfont {
+  font-size: 15px;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.progress-bar {
+  width: 100%;
+  background-color: #ffa000;
 }
 
 .ui.button.tour-button {
-    color: #28328c;
-    border: 1px solid #28328c;
-    vertical-align: top;
+  color: #28328c;
+  border: 1px solid #28328c;
+  vertical-align: top;
 
-
-    height: 2.33333rem;
-    min-width: 5.3333rem;
-    margin: .66667rem;
-    border-radius: 2px;
-    border: 1px solid #cacad3;
+  height: 2.33333rem;
+  min-width: 5.3333rem;
+  margin: 0.66667rem;
+  border-radius: 2px;
+  border: 1px solid #cacad3;
 }
 
+::ng-deep.mat-tab-label,
+::ng-deep.mat-tab-label-active {
+  min-width: 25px !important;
+  padding: 8px !important;
+  margin: 20px !important;
+  justify-content: center;
+  font-weight: 700;
+}
 
+.full {
+  height: 100px;
+}
 
-  ::ng-deep.mat-tab-label, ::ng-deep.mat-tab-label-active{
-    min-width: 25px !important;
-    padding: 8px!important;
-    margin: 20px!important;
-    justify-content: center;
-    font-weight: 700;
-   }
-
-   .full{
-    height: 100px;
-   }
-
-
-
-   .div-border {
-    height: 100%;
-    border-right: 1px solid lightgray;
+.div-border {
+  height: 100%;
+  border-right: 1px solid lightgray;
 }
