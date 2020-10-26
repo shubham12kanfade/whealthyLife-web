@@ -12,12 +12,12 @@ import { UserService } from 'src/app/services/user.service';
 export class DisplayClinicComponent implements OnInit {
   DocId: any;
   clinicId: any=[];
-  clinic: any;
-  ele: any = [];
-  getLocation: any;
-  arr: any =[];
+  // clinic: any;
+  // ele: any = [];
+  // getLocation: any;
+  // arr: any =[];
   ClinicName: any=[];
-  did: any;
+  // did: any;
   Address:any=[];
   ClicId: any = [];
 
@@ -33,28 +33,21 @@ export class DisplayClinicComponent implements OnInit {
       this.myclinicService.getClinic(this.DocId).then(resData=>{
 
 
-
         for(let i= 0; i < resData.data.length ;i++){
           this.ClinicName[i] = resData.data[i].name
 
 
           this.clinicId[i] = resData.data[i]._id;
 
-
           this.myclinicService.getClinicLocation(this.clinicId[i] ).then(ClinicAdd =>{
-
-
 
           for(let k = 0; k< ClinicAdd.data.length; k++ ){
             this.ClicId[k] = ClinicAdd.data[k].clinicId;
 
           }
 
-
-
           for(let a=0; a < ClinicAdd.data.length; a++ ){
             this.Address[a]=ClinicAdd.data[a].location;
-
 
           }
 
@@ -67,7 +60,6 @@ export class DisplayClinicComponent implements OnInit {
 
         }
 
-
       }).catch(error=>{
         console.log(": ------------------------------------------");
         console.log("ClinicInformationComponent -> error", error);
@@ -76,8 +68,6 @@ export class DisplayClinicComponent implements OnInit {
       })
 
    }
-
-
 
   ngOnInit(): void {
   }

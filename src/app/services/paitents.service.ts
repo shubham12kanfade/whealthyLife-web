@@ -13,4 +13,12 @@ export class PaitentsService {
     return this.API.getData('appoinment/get/by/time');
   }
 
+  // getPaitentDetail(data){
+  //   return this.API.postData('appoinment/get/by/id/',data);
+  // }
+
+  getAppointment(data){
+    return this.API.postData('appoinment/get/by/id',data);
+  }
+
 }
