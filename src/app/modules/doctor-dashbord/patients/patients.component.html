@@ -13,7 +13,7 @@
 
                 <div class="padding">
 
-                    Sunit Practice
+                    <!-- Sunit Practice -->
                 </div>
 
             </div>
@@ -27,15 +27,13 @@
                    Today
                     </ng-template>
                     <div class="tab-content">
+                      <div class="text-center">
+                        <ul *ngIf="todaypaitent != 0">
 
-                    <div class="text-center">
-                      <ul>
-                        <li >{{DoctId.firstName}} {{DoctId.lastName}}
-                        </li>
-                      </ul>
+                            <li *ngFor=" let paitents of todaylPaitent"   style="border-bottom: 2px solid; cursor: pointer;"><h3> {{paitents.firstName}}  {{paitents.lastName}} </h3> </li>
 
-                    </div>
-
+                        </ul><h3 *ngIf="todaypaitent == 0">No Paitent Available</h3>
+                      </div>
                     </div>
                   </mat-tab>
 
@@ -47,10 +45,10 @@
                       <div class="col-sm-12">
 
                         <div class="text-center">
-
-                             Recent screen
+                          <ul *ngIf="weekpaitent != 0">
+                            <li *ngFor=" let paitents of weekPaitent"  style="border-bottom: 2px solid; cursor: pointer;"><h3> {{paitents.firstName}}  {{paitents.lastName}} </h3> </li>
+                          </ul><h3 *ngIf="weekpaitent == 0">No Paitent Available</h3>
                         </div>
-
 
                       </div>
                     </div>
@@ -64,30 +62,81 @@
                       <div class="col-sm-12">
 
                         <div  class="text-center">
-
-                            All Screen
+                          <ul *ngIf="Allpaitent != 0">
+                            <li *ngFor=" let paitents of alllPaitent" (click)="onClick(paitents._id)"  style="border-bottom: 2px solid; cursor: pointer;"><h3> {{paitents.firstName}}  {{paitents.lastName}} </h3> </li>
+                          </ul><h3 *ngIf="Allpaitent == 0">No Paitent Available</h3>
                         </div>
 
                       </div>
                     </div>
                   </mat-tab>
                 </mat-tab-group>
-
-
               </div>
-
         </div>
-
-        <div class="col-sm-9">
-            <div class="h-100 row align-items-center">
+        <div class="col-sm-9" >
+            <div class="h-100 row align-items-center"  >
                 <div class="col text-center">
-                    Select a patient to view details
+                  <div class="col-md-12" *ngIf="!spin" >
+                    <div class="row" >
+
+                      <div class="">
+                        <mat-form-field style="width: 100%;">
+                          <mat-label>Search Here</mat-label>
+                          <input matInput (keyup)="applyFilter($event)" placeholder="" #input>
+                        </mat-form-field>
+                      </div>
+                      <!-- *ngIf="!dataSource.filteredData?.length" -->
+
+                      <div class="mat-elevation-z8" >
+                        <table mat-table #table [dataSource]="dataSource.filteredData" matSort  >
+
+                          <ng-container matColumnDef="position">
+                            <th mat-header-cell *matHeaderCellDef style="width:10%"> No </th>
+                            <td mat-cell *matCellDef="let element; let i=index"> {{i+1}} </td>
+                          </ng-container>
+
+                          <!-- Name Column -->
+                          <ng-container matColumnDef="paitentName">.
+                            <th mat-header-cell *matHeaderCellDef> Paitent Name </th>
+                            <td mat-cell *matCellDef="let element"> {{element.petient.firstName}} {{element.petient.lastName}} </td>
+                          </ng-container>
+
+                          <!-- Position Column -->
+                          <ng-container matColumnDef="appointmentType">
+                            <th mat-header-cell *matHeaderCellDef> Appointment Type </th>
+                            <td mat-cell *matCellDef="let element"> {{element.appoinmentType}} </td>
+                          </ng-container>
+
+                          <!-- Weight Column -->
+                          <ng-container matColumnDef="date">
+                            <th mat-header-cell *matHeaderCellDef> Appointment Date </th>
+                            <td mat-cell *matCellDef="let element"> {{element.date}} </td>
+                          </ng-container>
+
+                          <!-- Symbol Column -->
+                          <ng-container matColumnDef="status">
+                            <th mat-header-cell *matHeaderCellDef> Appointment Status </th>
+                            <td mat-cell *matCellDef="let element"> {{element.status}} </td>
+                          </ng-container>
+
+                          <ng-container matColumnDef="time">
+                            <th mat-header-cell *matHeaderCellDef> Appointment Time </th>
+                            <td mat-cell *matCellDef="let element"> {{element.time}} </td>
+                          </ng-container>
+
+                          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                        </table>
+
+                        <mat-paginator [pageSizeOptions]="[5, 10]" showFirstLastButtons></mat-paginator>
+                      </div>
+
+                    </div>
+                  </div>
                 </div>
               </div>
 
         </div>
-
-
 
     </div>
 </div>
@@ -96,3 +145,37 @@
 
 
 </section>
+
+
+<!--
+*ngFor="let item of appointment; let i = index"
+*ngIf="appointment[i]"
+<mat-form-field appearance="outline">
+  <mat-label>Appoinment Type</mat-label>
+  <input matInput [readonly]="true">{{item.appoinmentType}}
+</mat-form-field>
+
+<mat-form-field appearance="outline">
+  <mat-label>Appoinment Date</mat-label>
+  <input matInput [readonly]="true">{{item.date}}
+</mat-form-field>
+
+<mat-form-field appearance="outline">
+  <mat-label>Doctor Name</mat-label>
+  <input matInput [readonly]="true">{{item.doctor.firstName}} {{item.doctor.lastName}}
+</mat-form-field>
+
+<mat-form-field appearance="outline">
+  <mat-label>Paitent Name</mat-label>
+  <input matInput [readonly]="true">{{item.petient.firstName}} {{item.petient.lastName}}
+</mat-form-field>
+
+<mat-form-field appearance="outline">
+  <mat-label>Appoinment Status</mat-label>
+  <input matInput [readonly]="true">{{item.status}}
+</mat-form-field>
+
+<mat-form-field appearance="outline">
+  <mat-label>Appoinment Time</mat-label>
+  <input matInput [readonly]="true">{{item.time}}
+</mat-form-field> -->

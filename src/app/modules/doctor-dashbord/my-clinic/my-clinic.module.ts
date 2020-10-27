@@ -11,10 +11,11 @@ import { ClinicInformationComponent } from './clinic-information/clinic-informat
 import { MembersClinicComponent } from './members-clinic/members-clinic.component';
 import { TableModule } from 'primeng/table';
 import { ClinicDashboardComponent } from './clinic-dashboard/clinic-dashboard.component';
+import { AddLocationComponent } from './add-location/add-location.component';
 
 
 @NgModule({
-  declarations: [ MyClinicComponent, DisplayClinicComponent, ClinicInformationComponent, MembersClinicComponent, ClinicDashboardComponent ],
+  declarations: [ MyClinicComponent, DisplayClinicComponent, ClinicInformationComponent, MembersClinicComponent, ClinicDashboardComponent, AddLocationComponent ],
   imports: [
     CommonModule,
     MyClinicRoutingModule,
