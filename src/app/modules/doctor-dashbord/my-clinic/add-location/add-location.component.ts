@@ -1,166 +1,147 @@
-import { Component, OnInit } from '@angular/core';
-import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { MessageService } from 'primeng/api';
-import { MainService } from 'src/app/services/main.service';
-import { MyclinicService } from 'src/app/services/myclinic.service';
-import { UserService } from 'src/app/services/user.service';
-
+import { Component, OnInit } from "@angular/core";
+import { FormArray, FormBuilder, FormGroup, Validators } from "@angular/forms";
+import { MessageService } from "primeng/api";
+import { MainService } from "src/app/services/main.service";
+import { MyclinicService } from "src/app/services/myclinic.service";
+import { UserService } from "src/app/services/user.service";
+import csc from "country-state-city";
 @Component({
-  selector: 'app-add-location',
-  templateUrl: './add-location.component.html',
-  styleUrls: ['./add-location.component.scss']
+  selector: "app-add-location",
+  templateUrl: "./add-location.component.html",
+  styleUrls: ["./add-location.component.scss"],
 })
 export class AddLocationComponent implements OnInit {
   // Address = new Address();
   dataArray = [];
   AddClinic: FormGroup;
   avatar: any;
-  submitted: boolean =false;
+  submitted: boolean = false;
 
+  keyword = "name";
+  public countries = [];
 
-
-  keyword = 'name';
-  public countries = []
-  //   {
-  //     id: 1,
-  //     name: 'Clininc 1 ',
-  //   },
-  //   {
-  //     id: 2,
-  //     name: 'Clininc 2',
-  //   },
-  //   {
-  //     id: 3,
-  //     name: 'Clininc 3',
-  //   },
-  //   {
-  //     id: 4,
-  //     name: 'Clininc 4',
-  //   }
-  // ];
   DocId: any;
   obj: any;
   clinicId: void;
+  countryList: any;
+  SelectedCountry: any = [];
+  ArrofState: any;
 
-  constructor(public mainService: MainService, public messageService: MessageService,
-    public myclinicService : MyclinicService, private fb: FormBuilder, public userService:UserService) {
+  constructor(
+    public mainService: MainService,
+    public messageService: MessageService,
+    public myclinicService: MyclinicService,
+    private fb: FormBuilder,
+    public userService: UserService
+  ) {
+    this.AddClinic = this.fb.group({
+      location: this.fb.array([this.createLocation()]),
+    });
 
-      this.AddClinic = this.fb.group({
-        location: this.fb.array([this.createLocation()]),
-      })
+    const docData = this.userService.getUserInfo();
 
-      const docData=this.userService.getUserInfo();
+    this.DocId = docData._id;
 
-      this.DocId= docData._id;
+    this.getclinic();
+    this.countryList = csc.getAllCountries();
+    console.log("AddLocationComponent -> this.AddClinic", this.AddClinic);
+    this.AddClinic.controls["location"].valueChanges.subscribe((resData) => {
+      this.SelectedCountry = [];
+      console.log("AddLocationComponent -> resData", resData);
+      const data = resData;
+      this.SelectedCountry.push(resData);
 
-
-      this.getclinic();
-
-
+      this.showCitys();
+    });
+  }
+  showCitys() {
+    this.SelectedCountry;
+    console.log(
+      "AddLocationComponent -> showCitys -> this.SelectedCountry",
+      this.SelectedCountry
+    );
+    this.ArrofState = [];
+    this.SelectedCountry[0].forEach((element) => {
+      console.log("AddLocationComponent -> showCitys -> element");
+      let data = [];
+      data = csc.getStatesOfCountry(element.country);
+      this.ArrofState.push(data);
+    });
+    console.log(
+      "AddLocationComponent -> showCitys ->   this.ArrofState",
+      this.ArrofState
+    );
+  }
+  FnArrofState(i){
+    if(this.ArrofState){
+   console.log("AddLocationComponent -> FnArrofState -> this.ArrofState[i]", this.ArrofState[i])
+   return this.ArrofState[i]
     }
-
-
-    getclinic(){
-      this.myclinicService.getClinic(this.DocId).then(resData=>{
-
-
+    else{
+      console.log("Sunit false")
+      return null
+   
+    }
+    
+  }
+  getclinic() {
+    this.myclinicService
+      .getClinic(this.DocId)
+      .then((resData) => {
         this.countries = resData.data;
+      })
+      .catch((error) => {});
+  }
 
-        }).catch(error=>{
-        console.log(": ------------------------------------------");
-        console.log("ClinicInformationComponent -> error", error);
-        console.log(": ------------------------------------------");
+  location(): FormArray {
+    return this.AddClinic.get("location") as FormArray;
+  }
 
-        })
-    }
+  createLocation(): FormGroup {
+    return this.fb.group({
+      address: ["", Validators.required],
+      landmark: ["", Validators.required],
+      country: ["", Validators.required],
+      state: ["", [Validators.required]],
+      city: ["", [Validators.required]],
+      pincode: ["", [Validators.required]],
+    });
+  }
 
-    location(): FormArray {
-      return this.AddClinic.get("location") as FormArray;
-    }
+  addQuantity() {
+    this.location().push(this.createLocation());
+  }
+  removeQuantity(i: number) {
+    this.location().removeAt(i);
+  }
 
-    createLocation(): FormGroup {
-      return this.fb.group({
-        address: ['', Validators.required],
-        landmark: ['', Validators.required],
-        country: ['', Validators.required],
-        state: ['', [Validators.required]],
-        city: ['', [Validators.required]],
-        pincode: ['', [Validators.required]]
-      });
-    }
-
-    addQuantity() {
-      this.location().push(this.createLocation());
-    }
-    removeQuantity(i: number) {
-      this.location().removeAt(i);
-    }
-
-    ngOnInit(){
-
-    }
-
+  ngOnInit() {}
 
   onSave() {
-    // this.getclinic();
+    alert(JSON.stringify(this.AddClinic.value));
 
-    alert(JSON.stringify (this.AddClinic.value));
-
-    if(this.AddClinic.invalid){
-      return
+    if (this.AddClinic.invalid) {
+      return;
     }
 
     const data = {
       ...this.AddClinic.value,
-      clinicId : this.obj,
-    }
+      clinicId: this.obj,
+    };
 
-    this.myclinicService.postAddClinicLocation(data).then(resData =>{
-
-    }).catch(error=>{
-
-    })
-
-
-  //   console.log(this.AddClinic.value);
-  //   this.submitted = true;
-
-  //   if (this.AddClinic.invalid) {
-  //     return;
-  // }
-  //   var data = {
-  //     ...this.AddClinic.value,
-  //   }
-  //   this.mainService.updateUserprofile(data).then(resData => {
-  //     console.log("EditProfileComponent -> onSave -> resData", resData)
-  //     this.showToast('success', 'Profile', 'Profile updated successfully');
-  //     next.next();
-  //   }).catch(error => {
-  //     console.log("EditProfileComponent -> onSave -> error", error)
-  //   })
+    this.myclinicService
+      .postAddClinicLocation(data)
+      .then((resData) => {})
+      .catch((error) => {});
   }
 
-
-
   selectEvent(item) {
-
     this.obj = item._id;
-
-    // do something with selected item
   }
 
   onChangeSearch(event) {
-
-    const obj = event.value
-
-
-    // fetch remote data from here
-    // And reassign the 'data' which is binded to 'data' property.
+    const obj = event.value;
   }
 
-  onFocused(e){
-
-    // do something when input is focused
-  }
-
+  onFocused(e) {}
 }
