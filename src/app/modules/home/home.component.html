@@ -1,6 +1,63 @@
 <main>
-  <div>
-    <div class="hero_home version_1"></div>
+  <div class="hero_home version_1">
+    <div class="col-12" >
+      <div class="row flecs1" >
+        <h1 class="head1" >Diagnostic Tests at your Doorstep!</h1>
+      </div>
+      <div class="row mar-30" >
+        <div class="flec1">
+        <span class="wid-80">
+          <input type="email" class="form-control"  id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Type test name and select from option" >
+        </span>
+        <span class="wid-25">
+          <button class="btn btn-primary btnn" >
+            Search
+          </button>
+        </span>
+      </div>
+      </div>
+      
+
+
+
+      <div class="row mar-30">
+        <div class="col-6 offset-3">
+          <ul class="banner-ft">
+            <div class="flecs2 ">
+              <li class="text-center mar-30" [routerLink]="['/bookappointment']" routerLinkActive="router-link-active" >
+              
+                  <img src="../../../assets/img/Swati/Appointment.svg " alt="lab">
+                  <span class="sub-title" >Book Appointment</span>
+              
+              </li>
+              <li class="text-center mar-30" [routerLink]="['/booktests']" routerLinkActive="router-link-active" >
+                  <img src="../../../assets/img/Swati/LabTest.svg " alt="lab">
+                  <span class="sub-title">Lab Test</span>
+              </li>
+              <li class="text-center mar-30" [routerLink]="['/']" routerLinkActive="router-link-active" >
+                  <img src="../../../assets/img/Swati/OnlineReport.svg" alt="lab">
+                  <span class="sub-title" >Online Reports</span>
+              </li>
+            </div>
+            <div class="flecs2 marTop-30" >
+
+              <li class="text-center" [routerLink]="['/']" routerLinkActive="router-link-active"  >
+                <img src="../../../assets/img/Swati/Medicine.svg" alt="lab">
+                <span class="sub-title">Order Medicine</span>
+            </li>
+            <li class="text-center mar-30" [routerLink]="['/']" routerLinkActive="router-link-active"  >
+                <img src="../../../assets/img/Swati/TrackOrder.svg" alt="lab">
+                <span class="sub-title">Track Your Order</span>
+            </li>
+
+            </div>
+            
+          </ul> 
+         
+        </div>
+        
+      </div>
+    </div>
   </div>
   <div class="bottom-sec">
     <div class="container">
@@ -194,7 +251,6 @@
           <a class="btn-main" (click)="showmoreFun()">More Packages</a>
         </div>
       </div>
-      
     </div>
   </section>
 
@@ -228,7 +284,54 @@
     </div>
   </section>
 
-  <section class="categories">
+
+ <!-- //site breack / -->
+
+ <section>
+   <div class="container">
+    <h2>TOP CATEGORIES</h2>
+     <div >
+      <owl-carousel-o [options]="customOptions" #review>
+        <ng-template carouselSlide *ngFor="let item of Specialit">
+          <div class="pr-2 pl-2">
+            <a
+              [routerLink]="['/doctors/' + item._id]"
+              routerLinkActive="router-link-active"
+            >
+              <div class="cat-content">
+                <div class="inner-cat-content">
+                  <h2>{{ item.fullName }}</h2>
+                </div>
+
+                <img
+                  [src]="item.backImg"
+                  onError="this.src='./../../../assets/img/Swati/MedicalRecord.jpg'"
+                  alt="img"
+                />
+              </div>
+            </a>
+          </div>
+        </ng-template>
+      </owl-carousel-o>
+      <div class="row prev-next">
+        <div class="lhs" (click)="review.prev()">
+          <i class="fa fa-chevron-circle-left fa-3x" aria-hidden="true"></i>
+        </div>
+        <div class="rhs" (click)="review.next()">
+          <i
+            class="fa fa-chevron-circle-right fa-3x"
+            aria-hidden="true"
+          ></i>
+        </div>
+      </div>
+    </div>
+   </div>
+ </section>
+
+
+
+
+  <!-- <section class="categories">
     <div class="row">
       <div class="container">
         <div class="col-sm-12 pt-5 pb-5">
@@ -269,7 +372,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <section class="clients">
     <div class="container margin_60_35">

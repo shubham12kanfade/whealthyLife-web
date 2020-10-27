@@ -5,6 +5,107 @@
   }
 }
 
+.btnn{
+      width: 100%;
+      height: 45px;
+      border:1px solid #d81730;
+      border-radius:0px 5px 5px 0px;
+      background-color: #d81730; 
+}
+
+.flecs1{
+  margin-top: 120px;
+  display: flex;
+  justify-content: center;
+}
+
+.flecs2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.marTop-30{
+ margin-top: 30px;
+}
+
+
+.head1{
+  z-index: 999;
+  color: #ffffff;
+  font-size: 45px;
+  font-weight: 500;
+}
+
+input#exampleInputEmail1 {
+  height: 45px;
+  border-radius: 5px 0px 0px 5px;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.sub-title{
+  color: white;
+  font-size: 12px;font-weight: 600;
+}
+
+.mar-30{
+ margin-top:30px;
+}
+
+.mar-50{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.flec1{
+  width: 100%;display: flex;margin: 0% 30%;
+}
+
+.wid-80{
+  width: 75%;
+}
+
+.wid-25{
+  width: 25%;
+}
+
+@media screen  and (max-width: 767.98px) { 
+
+  .wid-80{
+    width: 100%;
+    margin-bottom: 30px !important;
+  }
+  
+  .wid-25{
+    width: 100%;
+    display: block;
+  }
+
+  .flec1{
+    display: block;
+  }
+
+  .head1{
+    z-index: 999;
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 30px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+}
+
+
+
 .ng-autocomplete {
   width: 100%;
   max-width: 600px;
