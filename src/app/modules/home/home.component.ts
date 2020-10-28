@@ -21,8 +21,8 @@ export interface User {
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  Specialit: any;
-  labs: any;
+  Specialit: any=[];
+  labs: any  = [];
   countryList: any;
   stateList: any;
   cityList: any;
