@@ -72,17 +72,17 @@ export class AddLocationComponent implements OnInit {
       this.ArrofState
     );
   }
-  FnArrofState(i){
-    if(this.ArrofState){
-   console.log("AddLocationComponent -> FnArrofState -> this.ArrofState[i]", this.ArrofState[i])
-   return this.ArrofState[i]
+  FnArrofState(i) {
+    if (this.ArrofState) {
+      console.log(
+        "AddLocationComponent -> FnArrofState -> this.ArrofState[i]",
+        this.ArrofState[i]
+      );
+      return this.ArrofState[i];
+    } else {
+      console.log("Sunit false");
+      return null;
     }
-    else{
-      console.log("Sunit false")
-      return null
-   
-    }
-    
   }
   getclinic() {
     this.myclinicService

@@ -5,8 +5,12 @@ import { CommonModule } from '@angular/common';
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { SamplePickupComponent } from './sample-pickup/sample-pickup.component';
+import { ViewReportComponent } from './view-report/view-report.component';
+import { DoctorConsulationComponent } from './doctor-consulation/doctor-consulation.component';
+import { PricesGuarantedComponent } from './prices-guaranted/prices-guaranted.component';
 @NgModule({
-  declarations: [HomeComponent],
+  declarations: [HomeComponent, SamplePickupComponent, ViewReportComponent, DoctorConsulationComponent, PricesGuarantedComponent],
   imports: [
     CommonModule,
     HomeRoutingModule,

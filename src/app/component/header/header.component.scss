@@ -7,24 +7,30 @@
 }
 
 .font-custome {
-  font-weight: 600;
-  border-right: 3px solid;
+  font-size: 15px;
+  font-weight: 500;
+  // border-right: 3px solid;
   padding-right: 10px;
+  font-family: Camphor, verdana !important;;
   cursor: pointer;
 }
 
 .imp{
-  display: flex;
+    display: flex;
     align-items: center;
 }
 
 .font-custome1 {
-  font-weight: 600;
+  font-size: 15px;
+  font-weight: 400;
   cursor: pointer;
+}
+*[ng-reflect-router-link]:focus {
+  outline: none;
 }
 
 .custom-font {
-  font-weight: 600;
+  font-weight: 400;
   font-size: 16px !important;
 }
 
@@ -50,8 +56,9 @@
 }
 
 a {
-  color: #337ab7 !important;
+  color:rgb(29, 28, 28) !important;
   text-decoration: none;
+  
 }
 
 .fixed-popup a {
@@ -1117,4 +1124,12 @@ b {
   width: 30px !important;
   height: 30px !important;
   border-radius: 50% !important;
+}
+.sdiv:hover {
+  color:dodgerblue;
+}
+
+
+.constC{
+  color: dodgerblue;
 }
