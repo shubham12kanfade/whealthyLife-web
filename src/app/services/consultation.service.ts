@@ -9,7 +9,10 @@ export class ConsultationService {
   constructor(public api: ApiCallService) {
   }
 
-
+getDoctorUsingId(id){
+  
+  return this.api.getData('doctor/specialization/by/specialization/'+id);
+}
   getDoctorlist() {
     return this.api.getData('doctor/list/for/consultation');
   }
