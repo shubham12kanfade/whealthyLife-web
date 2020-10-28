@@ -1,4 +1,6 @@
+import { ChatService } from './../../../services/chat.service';
 import { Component, OnInit } from '@angular/core';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-charts',
@@ -10,8 +12,38 @@ export class ChartsComponent implements OnInit {
   dataS: { id: number; avtar: string; name: string;  massages: number };
   headName: string;
   headAvtar: string;
+  DoctId: any;
+  DOCFirst: any;
+  DOCLast: any;
 
-  constructor() { }
+  constructor(private chat : ChatService,public userService : UserService) {
+
+    this.DoctId = this.userService.getUserInfo();
+
+    this.DOCFirst = this.DoctId.firstName
+    console.log(": --------------------------------------------------------------");
+    console.log("ChartsComponent -> constructor -> this.DOCFirst", this.DOCFirst);
+    console.log(": --------------------------------------------------------------");
+    this.DOCLast = this.DoctId.lastName
+    console.log(": ------------------------------------------------------------");
+    console.log("ChartsComponent -> constructor -> this.DOCLast", this.DOCLast);
+    console.log(": ------------------------------------------------------------");
+
+
+    this.chat.getChatHead(this.DoctId._id).then(resData => {
+    console.log(": --------------------------------------------------");
+    console.log("ChartsComponent -> constructor -> resData", resData);
+    console.log(": --------------------------------------------------");
+
+    }).catch(error => {
+    console.log(": ----------------------------------------------");
+    console.log("ChartsComponent -> constructor -> error", error);
+    console.log(": ----------------------------------------------");
+
+    })
+
+
+  }
 
   ngOnInit(): void {
 
@@ -34,6 +66,8 @@ export class ChartsComponent implements OnInit {
     this.headName=this.dataS.name;
     this.headAvtar=this.dataS.avtar;
   }
+
+
 
 
 
