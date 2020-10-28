@@ -19,6 +19,8 @@ export class ConsultantDetailsComponent implements OnInit {
   memberForm : FormGroup;
   profileData: any;
   TimeSloat: any[];
+  data12: any[];
+  data:[];
 
   constructor(public mainService: MainService,
     public messageService: MessageService,
@@ -32,6 +34,29 @@ export class ConsultantDetailsComponent implements OnInit {
       })
 
     this.getProfile();
+
+
+    this.mainService.getAllClinic().then(AllClinicName =>{
+    console.log("ConsultantDetailsComponent -> AllClinicName", AllClinicName);
+
+    const dfgf= AllClinicName.data;
+    console.log("ConsultantDetailsComponent -> dfgf", dfgf)
+
+    for(let i=0 ; i < dfgf.length ; i++ ){
+      this.data12.push(dfgf[i]);
+      
+
+      // this.data.push(dfgf[i]);
+    
+    }
+    console.log("ConsultantDetailsComponent ->  this.data12",  this.data12);
+    //  this.data12 = AllClinicName
+
+    }).catch(error =>{
+    console.log("ConsultantDetailsComponent -> error", error);
+    })
+
+
   }
 
   ClinicDetails() {
@@ -76,6 +101,36 @@ export class ConsultantDetailsComponent implements OnInit {
 
   deleteTime(index:number,i: number) {
     this.times(index).removeAt(i);
+  }
+
+
+  keyword = 'name';
+
+
+
+  // data = [
+  //    {
+  //      id: 1,
+  //      name: 'Usa'
+  //    },
+  //    {
+  //      id: 2,
+  //      name: 'England'
+  //    }
+  // ];
+ 
+ 
+  selectEvent(item) {
+    // do something with selected item
+  }
+ 
+  onChangeSearch(val: string) {
+    // fetch remote data from here
+    // And reassign the 'data' which is binded to 'data' property.
+  }
+  
+  onFocused(e){
+    // do something when input is focused
   }
 
 

@@ -54,24 +54,35 @@ export class MainService {
   }
 
   getDegree(){
-    return this.api.getData('qualification/get/all')
+    return this.api.getData('qualification/get/all');
   }
-getLabs(){
-  return this.api.getData('lab/get/all')
-}
 
-getProfilevalidation(id){
-  return this.api.postData('doctor/profile/validity/by/',id)
-}
+  getLabs(){
+    return this.api.getData('lab/get/all');
+  }
 
-addDegree(data){
-  return this.api.postData('qualification/add',data)
-}
-addDoctorDegree(data){
-  return this.api.postData('doctor/qualification/add',data)
-}
-getDoctorEducation(){
-  return this.api.getData('doctor/qualification/all')
-}
+  getProfilevalidation(id){
+    return this.api.postData('doctor/profile/validity/by/',id);
+  }
+
+  addDegree(data){
+    return this.api.postData('qualification/add',data);
+  }
+
+  addDoctorDegree(data){
+    return this.api.postData('doctor/qualification/add',data);
+  }
+
+  getDoctorEducation(){
+    return this.api.getData('doctor/qualification/all');
+  }
+
+  getAllClinic(){
+    return this.api.getData('clinic/all');
+  }
+
+
+
+
 
 }
