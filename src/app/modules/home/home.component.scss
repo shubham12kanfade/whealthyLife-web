@@ -13,13 +13,13 @@
       background-color: #d81730; 
 }
 
-.flecs1{
+.flecs1 {
   margin-top: 120px;
   display: flex;
   justify-content: center;
 }
 
-.flecs2{
+.flecs2 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,8 +27,8 @@
   // cursor: pointer;
 }
 
-.marTop-30{
- margin-top: 30px;
+.marTop-30 {
+  margin-top: 30px;
 }
 
 .opt{
@@ -48,12 +48,12 @@ input#exampleInputEmail1 {
   border-radius: 5px 0px 0px 5px;
 }
 
-.text-center{
+.text-center {
   text-align: center;
   cursor: pointer;
 }
 
-.sub-title{
+.sub-title {
   color: white;
   font-size: 12px;font-weight: 600;
   cursor: pointer;
@@ -64,42 +64,43 @@ input#exampleInputEmail1 {
 //  cursor: pointer;
 }
 
-.mar-50{
+.mar-50 {
   width: 100%;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
 }
 
-.flec1{
-  width: 100%;display: flex;margin: 0% 30%;
+.flec1 {
+  width: 100%;
+  display: flex;
+  margin: 0% 30%;
 }
 
-.wid-80{
+.wid-80 {
   width: 75%;
 }
 
-.wid-25{
+.wid-25 {
   width: 25%;
 }
 
-@media screen  and (max-width: 767.98px) { 
-
-  .wid-80{
+@media screen and (max-width: 767.98px) {
+  .wid-80 {
     width: 100%;
     margin-bottom: 30px !important;
   }
-  
-  .wid-25{
+
+  .wid-25 {
     width: 100%;
     display: block;
   }
 
-  .flec1{
+  .flec1 {
     display: block;
   }
 
-  .head1{
+  .head1 {
     z-index: 999;
     color: #ffffff;
     font-size: 30px;
@@ -109,10 +110,7 @@ input#exampleInputEmail1 {
     justify-content: center;
     text-align: center;
   }
-
 }
-
-
 
 .ng-autocomplete {
   width: 100%;
@@ -346,10 +344,11 @@ a {
 }
 
 @media (max-width: 768px) {
-  .lab-slide .main_title h2 {
+  .lab-slide .main_title h2 p {
     text-align: left;
     margin-bottom: 5px;
     font-size: 22px;
+    font-weight: 300;
   }
 }
 
@@ -374,6 +373,10 @@ a {
   padding-bottom: 3rem;
 }
 
+.container h2 {
+  text-align: center;
+}
+
 .deal-offer h1 {
   font-size: 1.8em;
 }
@@ -384,9 +387,27 @@ a {
 
 .element:before {
   content: "\f000";
-  font-family: FontAwesome;
+  font-family: Camphor, verdana;
 }
 
 div#myCarousel {
   padding: 0px !important;
+}
+
+.item.carousel-item.active.ng-star-inserted {
+  text-align: center;
+  font-family: Camphor, Verdana !important;
+  font-size: 15px;
+}
+
+p.testimonial {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  font-family: Camphor, Verdana !important;
+}
+
+.title-left {
+  text-align: center;
 }
