@@ -81,6 +81,13 @@ export class MainService {
     return this.api.getData('clinic/all');
   }
 
+  getAddressByClinic(id){
+    return this.api.getData('clinic/location/by/clinicId/'+id);
+    // http://whealthylife.in:3311/api/v1/clinic/location/by/clinicId/:clinicId
+  }
+
+  
+
 
 
 
