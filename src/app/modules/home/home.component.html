@@ -162,9 +162,9 @@
                     alt="icon"
                     class="icon-left"
                   />
-                  <ul class="sec-content-ul">
-                    <li *ngFor="let dis of item.discription">
-                      <strong>{{ dis }}</strong>
+                  <ul class="sec-content-ul" >
+                    <li >
+                      <strong>{{ item.discription }}</strong>
                     </li>
                   </ul>
                 </div>
@@ -216,9 +216,9 @@
                     alt="icon"
                     class="icon-left"
                   />
-                  <ul class="sec-content-ul">
-                    <li *ngFor="let dis of item.discription">
-                      <strong>{{ dis }}</strong>
+                  <ul class="sec-content-ul" *ngIf="item.discription && item.discription.length > 0">
+                    <li >
+                      <strong>{{ item.discription }}</strong>
                     </li>
                   </ul>
                 </div>
@@ -291,7 +291,7 @@
    <div class="container">
     <h2>TOP CATEGORIES</h2>
      <div >
-      <owl-carousel-o [options]="customOptions" #review>
+      <owl-carousel-o [options]="customOptions" #review >
         <ng-template carouselSlide *ngFor="let item of Specialit">
           <div class="pr-2 pl-2">
             <a
