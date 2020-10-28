@@ -1,32 +1,4 @@
-<!-- <p-toast position="center" class="custom-toast" key="myKey1" [modal]="false" (onClose)="clear()" [baseZIndex]="5000" position="top-right" timeout='0'>
-    <ng-template let-message pTemplate="message">
-        <div class="p-col-12 marg1">
-            <div class="row">
-                <div class="col-4">
-                    <img src="" onerror="this.src='../../../assets/images/doc.jpg'" class="img-thumbnail imgt">
-                </div>
-                <div class="col-8">
-                    <p class="marg"><span> Styajeet Kolhe </span></p>
-                    <p class="marg"> Patient</p>
-                    <p class="marg"> 12-06-2020 11.00 </p>
-                </div>
-            </div>
-        </div>
-        <hr class="hr1">
-        <div class="acc">
-            <div class="acc1">
-            
-                Accept
-            </div>
-            <div class="rej" (click)="clear()">
-             
-                Reject
-            </div>
-        </div>
-     
 
-    </ng-template>
-</p-toast> -->
 
 
 <section class="se1">
@@ -38,33 +10,15 @@
                         <span class="input-group-text" id="basic-addon1"><i class="fa fa-search"></i></span>
                     </div>
                     <input type="text" class="form-control" placeholder="Search Doctor Here !" aria-label="Username" aria-describedby="basic-addon1" [(ngModel)]="searchText" (input)="search()">
-                    <!-- <div class="ng-autocomplete">
-                            <ng-autocomplete 
-                              [data]="autoDoctList"
-                              [searchKeyword]="keyword"
-                              (selected)='selectEvent($event)'
-                              (inputChanged)='onChangeSearch($event)'
-                              (inputFocused)='onFocused($event)'
-                              [itemTemplate]="itemTemplate"
-                              [notFoundTemplate]="notFoundTemplate">                                 
-                            </ng-autocomplete>
-                             
-                            <ng-template #itemTemplate let-item>
-                            <a [innerHTML]="item.firstName"></a>
-                            </ng-template>
-                             
-                            <ng-template #notFoundTemplate let-notFound>
-                            <div [innerHTML]="notFound"></div>
-                            </ng-template>
-                            </div> -->
-
+                
                 </div>
                 <div class="card cad1 hidd">
                     <h2 class="hed1">
                         <b>SPECIALITY</b>
                     </h2>
                     <ul class="list-group list-group-flush scroll1">
-                        <li class="list-group-item" *ngFor="let speciality of specialityList">{{speciality.fullName}}</li>
+                        <li class="list-group-item" *ngFor="let speciality of specialityList"  [routerLink]="['/doctors', speciality._id]"
+                        routerLinkActive="router-link-active">{{speciality.fullName}}</li>
                     </ul>
                 </div>
             </div>
