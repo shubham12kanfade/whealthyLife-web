@@ -4,11 +4,7 @@
 <div id="contact-popup">
   <div class="row no-gutters">
     <div class="col-md-5 equal-height hidden-xs">
-      <img
-        src="../assets/img/why-healthcheck.jpg"
-        alt="img-popup"
-        class="img-popup"
-      />
+      <img src="../assets/img/why-healthcheck.jpg" alt="img-popup" class="img-popup" />
     </div>
     <div class="col-md-7">
       <form class="equal-height inner-popup">
@@ -28,11 +24,7 @@
           <input type="text" class="form-control" placeholder="Your Subject" />
         </div>
         <div class="form-group">
-          <textarea
-            class="form-control"
-            rows="4"
-            placeholder="Your Message"
-          ></textarea>
+          <textarea class="form-control" rows="4" placeholder="Your Message"></textarea>
         </div>
         <div class="form-group text-center">
           <input type="submit" class="btn btn-main" value="Submit" />
@@ -49,138 +41,78 @@
         <nav class="navbar navbar-expand-md navbar-light">
           <div id="logo_home" data-aos="fade-up">
             <h1>
-              <a
-                [routerLink]="['']"
-                routerLinkActive="router-link-active"
-                title="WhealthyLife"
-                ><img
-                  src="../assets/img/tracefinallogo.png"
-                  class="log"
-                  alt="logo"
-              /></a>
+              <a [routerLink]="['']" routerLinkActive="router-link-active" title="WhealthyLife"><img
+                  src="../assets/img/tracefinallogo.png" class="log" alt="logo" /></a>
             </h1>
           </div>
 
-          <button class="navbar-toggler" type="button" (click)="onMenu(true)" >
+          <button class="navbar-toggler" type="button" (click)="onMenu(true)">
             <span class="navbar-toggler-icon"></span>
           </button>
 
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto py-4 py-md-0 imp">
+
               <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 font-custome">
-                <a [routerLink]="['']" routerLinkActive="router-link-active"
-                  >Home</a
-                >
-              </li>
-              <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 font-custome">
-                <a [routerLink]="['/about']">About Us</a>
+                <div class="sdiv" [routerLink]="['']" routerLinkActive="constC">Home</div>
               </li>
 
               <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 font-custome">
-                <a
-                  [routerLink]="['/bookcheckup']"
-                  routerLinkActive="router-link-active"
-                  >Book Health & Checkups</a
-                >
-              </li>
-              <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 font-custome1">
-                <a [routerLink]="['/contact']">Contact Us </a>
-              </li>
-              <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 font-custome1">
-                <a 
-                  [routerLink]="['/login']"
-                  routerLinkActive="router-link-active"
-                  class="custom-font"
-                  style="cursor: pointer" *ngIf="!userInfo"
-                  >LOGIN</a
-                >
+                <div class="sdiv" [routerLink]="['/about']" routerLinkActive="constC" >About Us</div>
               </li>
 
-              <li
-                class="nav-item dropdown open"
-                *ngIf="userInfo"
-                style="position: relative; top: -5px"
-              >
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  id="navbarDropdown"
-                  role="button"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                  style="margin-top: 12px"
-                >
-                  <img
-                    [src]="onlieProfile?.avatar"
-                    onError="this.src='../../../assets/img/avatar.png'"
-                    class="avatar1"
-                    alt=""
-                  />
+              <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 font-custome">
+                <div class="sdiv" [routerLink]="['/bookcheckup']" routerLinkActive="constC">Book Health & Checkups</div>
+              </li>
+              <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 font-custome1">
+                <div class="sdiv" [routerLink]="['/contact']" routerLinkActive="constC">Contact Us </div>
+              </li>
+
+              <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 font-custome1">
+                <div class="sdiv" [routerLink]="['/login']" routerLinkActive="constC"
+                 *ngIf="!userInfo">LOGIN</div>
+              </li>
+
+              <li class="nav-item dropdown open" *ngIf="userInfo" style="position: relative; top: -5px">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false" style="margin-top: 12px">
+                  <img [src]="onlieProfile?.avatar" onError="this.src='../../../assets/img/avatar.png'" class="avatar1"
+                    alt="" />
                   {{ userInfo?.firstName }}
                 </a>
-                <ul
-                  class="dropdown-menu dropDown"
-                  aria-labelledby="navbarDropdown"
-                >
+                <ul class="dropdown-menu dropDown" aria-labelledby="navbarDropdown">
                   <li>
-                    <a
-                      class="dropdown-item"
-                      style="display: flex; cursor: pointer"
-                      (click)="onProfile()"
-                    >
-                      <img
-                        [src]="onlieProfile?.avatar"
-                        onError="this.src='../../../assets/img/avatar.png'"
-                        class="avatar"
-                        alt=""
-                      />
+                    <a class="dropdown-item" style="display: flex; cursor: pointer" (click)="onProfile()">
+                      <img [src]="onlieProfile?.avatar" onError="this.src='../../../assets/img/avatar.png'"
+                        class="avatar" alt="" />
                       <p class="mb-0" style="margin-top: 10px">
                         {{ userInfo?.firstName }} {{ userInfo?.lastName }}
                       </p>
                     </a>
                   </li>
                   <li>
-                    <a class="dropdown-item" [routerLink]="['/my/appointments']"
-                      >My Appointment</a
-                    >
+                    <a class="dropdown-item" [routerLink]="['/my/appointments']">My Appointment</a>
                   </li>
                   <li>
-                    <a class="dropdown-item" [routerLink]="['/my/Tests']"
-                      >My Test</a
-                    >
+                    <a class="dropdown-item" [routerLink]="['/my/Tests']">My Test</a>
                   </li>
                   <li>
-                    <a class="dropdown-item" [routerLink]="['/my/Orders']"
-                      >My Medicine Orders</a
-                    >
+                    <a class="dropdown-item" [routerLink]="['/my/Orders']">My Medicine Orders</a>
                   </li>
                   <li>
-                    <a class="dropdown-item" [routerLink]="['/my/record']"
-                      >My Medical Records</a
-                    >
+                    <a class="dropdown-item" [routerLink]="['/my/record']">My Medical Records</a>
                   </li>
                   <li>
-                    <a
-                      class="dropdown-item"
-                      [routerLink]="['/my/Consultations']"
-                      >My Online consultations</a
-                    >
+                    <a class="dropdown-item" [routerLink]="['/my/Consultations']">My Online consultations</a>
                   </li>
                   <li>
-                    <a class="dropdown-item" [routerLink]="['/my/Feedback']"
-                      >My Feedback</a
-                    >
+                    <a class="dropdown-item" [routerLink]="['/my/Feedback']">My Feedback</a>
                   </li>
                   <li>
-                    <a class="dropdown-item" [routerLink]="['/my/']"
-                      >View / Update Profile</a
-                    >
+                    <a class="dropdown-item" [routerLink]="['/my/']">View / Update Profile</a>
                   </li>
                   <li>
-                    <a class="dropdown-item" [routerLink]="['/Settings']"
-                      >Settings</a
-                    >
+                    <a class="dropdown-item" [routerLink]="['/Settings']">Settings</a>
                   </li>
                   <li>
                     <a class="dropdown-item" (click)="onLogOut()">Logout</a>
@@ -196,57 +128,24 @@
 </div>
 <div id="mySidenav" class="sidenav sidebar-left-nav" *ngIf="openMenu">
   <a class="closebtn" (click)="onMenu(false)">&times;</a>
-  <a
-    [routerLink]="['']"
-    (click)="onMenu(false)"
-    routerLinkActive="router-link-active"
-    class="border"
-  >
-    <img
-      src="../assets/img/home.png"
-      (click)="onMenu(false)"
-      alt="icon"
-    />Home</a
-  >
-  <a [routerLink]="['/about']" (click)="onMenu(false)" class="border"
-    ><img src="../assets/img/doctor.png" alt="icon" />About us</a
-  >
-  <a
-    [routerLink]="['/bookcheckup']"
-    (click)="onMenu(false)"
-    class="border"
-    routerLinkActive="router-link-active"
-  >
-    <img
-      src="../assets/img/syringe2.png"
-      (click)="onMenu(false)"
-      alt="icon"
-    />Book Health & Checkups</a
-  >
-  <a [routerLink]="['/contact']" (click)="onMenu(false)" class="border"
-    ><img src="../assets/img/cardiogram.png" alt="icon" />Contact us
+  <a [routerLink]="['']" (click)="onMenu(false)" routerLinkActive="router-link-active" class="border">
+    <img src="../assets/img/home.png" (click)="onMenu(false)" alt="icon" />Home</a>
+  <a [routerLink]="['/about']" (click)="onMenu(false)" class="border"><img src="../assets/img/doctor.png"
+      alt="icon" />About us</a>
+  <a [routerLink]="['/bookcheckup']" (click)="onMenu(false)" class="border" routerLinkActive="router-link-active">
+    <img src="../assets/img/syringe2.png" (click)="onMenu(false)" alt="icon" />Book Health & Checkups</a>
+  <a [routerLink]="['/contact']" (click)="onMenu(false)" class="border"><img src="../assets/img/cardiogram.png"
+      alt="icon" />Contact us
   </a>
 </div>
 
-<p-toast
-  position="center"
-  class="custom-toast"
-  key="myKey2"
-  [modal]="false"
-  (onClose)="clear()"
-  [baseZIndex]="5000"
-  position="top-right"
-  timeout="0"
->
+<p-toast position="center" class="custom-toast" key="myKey2" [modal]="false" (onClose)="clear()" [baseZIndex]="5000"
+  position="top-right" timeout="0">
   <ng-template let-message pTemplate="message">
     <div class="p-col-12 marg1">
       <div class="row">
         <div class="col-4">
-          <img
-            src=""
-            onerror="this.src='../../../assets/images/doc.jpg'"
-            class="img-thumbnail imgt"
-          />
+          <img src="" onerror="this.src='../../../assets/images/doc.jpg'" class="img-thumbnail imgt" />
         </div>
         <div class="col-8">
           <p class="marg"><span> Styajeet Kolhe </span></p>

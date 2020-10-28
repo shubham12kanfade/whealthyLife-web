@@ -591,3 +591,6 @@ body .ui-multiselect {
 
 html, body { height: 100%; }
 body { margin: 0;  font-family: Camphor,verdana !important; }
+*[ng-reflect-router-link]:focus {
+	outline: none;
+  }

@@ -10,7 +10,7 @@
           <input type="email" class="form-control"  id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Type test name and select from option" >
         </span>
         <span class="wid-25">
-          <button class="btn btn-primary btnn" >
+          <button class="btn btn-danger btnn" >
             Search
           </button>
         </span>
@@ -63,25 +63,30 @@
     <div class="container">
       <div class="row">
         <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="division">
+           <div class="division opt" [routerLink]="['/SamplePickup']" routerLinkActive="router-link-active">
+            <div class="division">
             <img
               src="../../../assets/img/Swati/SamplePickup.svg"
               alt="icon"
               style="height: 34px"
             />
-            <h4 class="mb-0" style="margin-top: 7px">
+            <h4 class="mb-0" style="margin-top: 7px;">
               Free Home Sample Pickup
             </h4>
-          </div>
+          </div> 
+        </div> 
         </div>
         <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="division">
+          <div class="opt" [routerLink]="['/ViewReport']" routerLinkActive="router-link-active">
+            <div class="division">
             <img src="../../../assets/img/Swati/ReportOnline.svg" alt="icon" />
             <h4 class="mb-0" style="margin-top: 7px">View Reports Online</h4>
           </div>
+          </div>
         </div>
         <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="division">
+          <div class="opt"  [routerLink]="['/DoctorConsulation']" routerLinkActive="router-link-active">
+            <div class="division">
             <img
               src="../../../assets/img/Swati/DoctorConsulation.svg"
               alt="icon"
@@ -90,9 +95,10 @@
               Free Doctor Consultation
             </h4>
           </div>
+          </div>
         </div>
         <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="division">
+          <div class="division opt"  [routerLink]="['/PricesGuaranted']" routerLinkActive="router-link-active">
             <img src="../../../assets/img/Swati/BestPrices.svg " alt="icon" />
             <h4 class="mb-0" style="margin-top: 7px">Best Prices Guaranteed</h4>
           </div>
