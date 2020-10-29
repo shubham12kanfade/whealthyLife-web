@@ -75,29 +75,61 @@ input#exampleInputEmail1 {
   width: 100%;
   display: flex;
   margin: 0% 30%;
+  justify-content: center;
 }
 
 .wid-80 {
-  width: 75%;
+  width: 75% !important;
+  height: 30px;
 }
 
 .wid-25 {
-  width: 25%;
+  width: 25% !important;
+  height: 30px;
 }
+
+.changes12{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 30px;
+  flex-grow: 1;
+}
+
+.changes12:hover{
+  flex-grow: 3;
+}
+// .hov > .hov2 >img + span:hover{
+//   // padding-top: 30px;
+//   // flex-grow: 2;
+//   display: flex;
+//   flex-grow: 2;
+//   transition: ease-in;
+// }
 
 @media screen and (max-width: 767.98px) {
   .wid-80 {
     width: 100%;
-    margin-bottom: 30px !important;
+    margin-bottom: 100px !important;
+
+  }
+
+  .adj-mar{
+    // height: 45px;
+    border-radius: 5px !important;
+    margin-bottom: 15px !important;
+    margin-top: -30px !important;
   }
 
   .wid-25 {
-    width: 100%;
-    display: block;
+    width: 100% !important;
+    display: flex;
+    justify-content: center;
   }
 
   .flec1 {
     display: block;
+    margin: 10%;
   }
 
   .head1 {

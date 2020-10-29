@@ -1,3 +1,16 @@
+<!-- <section>
+  <div class="container-fluid" >
+    <div class="row hero_home version_1">
+      <h1> Diagnostic Tests at your Doorstep! </h1>
+    </div>
+  </div>
+</section> -->
+
+
+
+
+
+
 <main>
   <div class="hero_home version_1">
     <div class="col-12" >
@@ -7,7 +20,7 @@
       <div class="row mar-30" >
         <div class="flec1">
         <span class="wid-80">
-          <input type="email" class="form-control"  id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Type test name and select from option" >
+          <input type="email" class="form-control adj-mar"  id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Type test name and select from option" >
         </span>
         <span class="wid-25">
           <button class="btn btn-danger btnn" >
@@ -17,10 +30,35 @@
       </div>
       </div>
 
+      <div class="row" style="margin-top: 50px !important;">
+        <div class="col-lg-6 offset-lg-3 col-12" style="display: flex;justify-content: space-evenly;;flex-wrap: wrap;width: 100%;">
+         <div class="row hov">
+          <div class="col-lg-4 col-6 hov2 changes12" [routerLink]="['/bookappointment']" routerLinkActive="router-link-active" >
+            <img src="../../../assets/img/Swati/Appointment.svg " alt="lab" style="height:60px;margin-bottom: 10px;">
+            <span class="sub-title" >Book Appointment</span>
+          </div>
+          <div class="col-lg-4 col-6 changes12" [routerLink]="['/booktests']" routerLinkActive="router-link-active" >
+            <img src="../../../assets/img/Swati/LabTest.svg" alt="lab" style="height:60px;margin-bottom: 10px;">
+            <span class="sub-title" >Lab Test</span>
+          </div>
+          <div class="col-lg-4 col-6 changes12" [routerLink]="['/']" routerLinkActive="router-link-active" >
+            <img src="../../../assets/img/Swati/OnlineReport.svg" alt="lab" style="height:60px;margin-bottom: 10px;">
+            <span class="sub-title" >Online Reports</span>
+          </div>
+          <div class="col-lg-4 offset-lg-2 col-6 changes12" [routerLink]="['/']" routerLinkActive="router-link-active" >
+            <img src="../../../assets/img/Swati/Medicine.svg" alt="lab" style="height:60px;margin-bottom: 10px;">
+            <span class="sub-title" >Order Medicine</span>
+          </div>
+          <div class="col-lg-4 changes12" [routerLink]="['/']" routerLinkActive="router-link-active" >
+            <img src="../../../assets/img/Swati/TrackOrder.svg" alt="lab" style="height:60px;margin-bottom: 10px;">
+            <span class="sub-title" >Track Your Order</span>
+          </div>
+        </div>
+      </div>
+      </div>
 
 
-
-      <div class="row mar-30">
+      <!-- <div class="row mar-30">
         <div class="col-6 offset-3">
           <ul class="banner-ft">
             <div class="flecs2 ">
@@ -49,28 +87,24 @@
                 <img src="../../../assets/img/Swati/TrackOrder.svg" alt="lab">
                 <span class="sub-title">Track Your Order</span>
             </li>
-
             </div>
-
           </ul>
-
         </div>
-
-      </div>
+      </div> -->
     </div>
   </div>
   <div class="bottom-sec">
     <div class="container">
       <div class="row">
         <div class="col-md-3 col-sm-6 col-xs-12">
-           <div class="division opt" [routerLink]="['/SamplePickup']" routerLinkActive="router-link-active">
-            <div class="division">
+           <div class="opt" [routerLink]="['/SamplePickup']" routerLinkActive="router-link-active">
+            <div class="division" style="display: flex;align-items: center;">
             <img
               src="../../../assets/img/Swati/SamplePickup.svg"
               alt="icon"
-              style="height: 34px"
+              style="height: 34px;width:34px;border-radius:50%;"
             />
-            <h4 class="mb-0" style="margin-top: 7px;">
+            <h4 class="mb-0">
               Free Home Sample Pickup
             </h4>
           </div> 
@@ -78,31 +112,51 @@
         </div>
         <div class="col-md-3 col-sm-6 col-xs-12">
           <div class="opt" [routerLink]="['/ViewReport']" routerLinkActive="router-link-active">
-            <div class="division">
-            <img src="../../../assets/img/Swati/ReportOnline.svg" alt="icon" />
-            <h4 class="mb-0" style="margin-top: 7px">View Reports Online</h4>
+            <div class="division" style="display: flex;align-items: center;">
+            <img src="../../../assets/img/Swati/ReportOnline.svg" alt="icon" style="height: 34px;width:34px;border-radius:50%;" />
+            <h4 class="mb-0" >View Reports Online</h4>
           </div>
           </div>
         </div>
         <div class="col-md-3 col-sm-6 col-xs-12">
           <div class="opt"  [routerLink]="['/DoctorConsulation']" routerLinkActive="router-link-active">
-            <div class="division">
+            <div class="division" style="display: flex;align-items: center;">
             <img
               src="../../../assets/img/Swati/DoctorConsulation.svg"
               alt="icon"
+              style="height: 34px;width:34px;border-radius:50%;"
             />
-            <h4 class="mb-0" style="margin-top: 7px">
+            <h4 class="mb-0" >
               Free Doctor Consultation
             </h4>
           </div>
           </div>
         </div>
+
+
         <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="division opt"  [routerLink]="['/PricesGuaranted']" routerLinkActive="router-link-active">
-            <img src="../../../assets/img/Swati/BestPrices.svg " alt="icon" />
-            <h4 class="mb-0" style="margin-top: 7px">Best Prices Guaranteed</h4>
+          <div class="opt"  [routerLink]="['/PricesGuaranted']" routerLinkActive="router-link-active">
+            <div class="division" style="display: flex;align-items: center;">
+            <img
+              src="../../../assets/img/Swati/BestPrices.svg"
+              alt="icon"
+              style="height: 34px;width:34px;border-radius:50%;"
+            />
+            <h4 class="mb-0" >
+              Best Prices Guaranteed
+            </h4>
+          </div>
           </div>
         </div>
+
+
+        <!-- <div class="col-md-3 col-sm-6 col-xs-12">
+          <div class="division opt"  [routerLink]="['/PricesGuaranted']" routerLinkActive="router-link-active">
+            <img src="../../../assets/img/Swati/BestPrices.svg " alt="icon" 
+            style="height: 34px;width:34px;border-radius:50%;"/>
+            <h4 class="mb-0" >Best Prices Guaranteed</h4>
+          </div>
+        </div> -->
       </div>
     </div>
   </div>
@@ -297,7 +351,17 @@
    <div class="container">
     <h2>TOP CATEGORIES</h2>
      <div >
-      <owl-carousel-o [options]="customOptions" #review >
+      <div class="row prev-next">
+        <div class="lhs" (click)="review1.prev()">
+          <i class="fa fa-chevron-circle-left fa-3x" aria-hidden="true"></i>
+        </div>
+        <div class="rhs" (click)="review1.next()">
+          <i
+            class="fa fa-chevron-circle-right fa-3x"
+            aria-hidden="true"
+          ></i>
+        </div>
+      <owl-carousel-o [options]="customOptions" #review1 >
         <ng-template carouselSlide *ngFor="let item of Specialit">
           <div class="pr-2 pl-2">
             <a
@@ -319,16 +383,6 @@
           </div>
         </ng-template>
       </owl-carousel-o>
-      <div class="row prev-next">
-        <div class="lhs" (click)="review.prev()">
-          <i class="fa fa-chevron-circle-left fa-3x" aria-hidden="true"></i>
-        </div>
-        <div class="rhs" (click)="review.next()">
-          <i
-            class="fa fa-chevron-circle-right fa-3x"
-            aria-hidden="true"
-          ></i>
-        </div>
       </div>
     </div>
    </div>

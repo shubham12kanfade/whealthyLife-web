@@ -100,18 +100,15 @@ export class HomeComponent implements OnInit {
 
           for(let i = 0; i < OfferData.data.length; i++){
             this.offerData[i] = OfferData.data[i]
-            console.log(": -------------------------------------------------------");
-            console.log("HomeComponent -> this.offerData[i] ", this.offerData[i] );
-            console.log(": -------------------------------------------------------");
-
+            // console.log(": -------------------------------------------------------");
+            // console.log("HomeComponent -> this.offerData[i] ", this.offerData[i] );
+            // console.log(": -------------------------------------------------------");
           }
 
           }).catch(error => {
           console.log("HomeComponent -> error", error);
 
           })
-
-
    }
 
    getStateList(event) {
