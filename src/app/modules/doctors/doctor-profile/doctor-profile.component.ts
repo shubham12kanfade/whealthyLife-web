@@ -1,8 +1,10 @@
+import { BookingPageService } from './../../../services/booking-page.service';
 import { LocationService } from "./../../../services/location.service";
 import { DoctorProfileService } from "./../../../services/doctor-profile.service";
 import { Component, OnInit } from "@angular/core";
 import { MainService } from "src/app/services/main.service";
 import { ActivatedRoute } from "@angular/router";
+import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 
 @Component({
   selector: "app-doctor-profile",
@@ -16,29 +18,47 @@ export class DoctorProfileComponent implements OnInit {
   city: any;
   state: any;
   Country: any;
+  degree: any;
+  slot: any;
  
   constructor(
     public mainService: MainService,
     public activatedRoutes: ActivatedRoute,
     public DoctorProfile: DoctorProfileService,
-    public LocationS: LocationService
+    public LocationS: LocationService,
+    public BookingPageService:BookingPageService
   ) { }
 
   ngOnInit(): void {
     this.activatedRoutes.params.subscribe((params) => {
       this.id = params["id"];
       this.getProfileDetails();
-      console.log("DoctorProfileComponent -> ngOnInit -> this.id", this.id);
     });
+
+this.BookingPageService.getDegree(this.id).then((resData)=>{
+console.log(" DoctorProfileComponent -> ngOnInit -> resData DoctorProfileComponent -> ngOnInit -> resData", resData)
+this.degree=resData.data
+}).catch((err)=>{
+console.log("DoctorProfileComponent -> ngOnInit -> err", err)
+  
+})
+this.BookingPageService.getDoctorSlotId(this.id).then((resData)=>{
+console.log("DoctorProfileComponent -> ngOnInit -> resData", resData)
+  this.slot=resData.data
+}).catch((err)=>{
+console.log("DoctorProfileComponent -> ngOnInit -> err", err)
+  
+})
+
+
   }
 
   getProfileDetails() {
-    this.DoctorProfile.getDoctorProfile(this.id)
+const data={ findId:this.id}
+
+    this.DoctorProfile.getDoctorProfile(data)
       .then((resData) => {
-        console.log(
-          "DoctorProfileComponent -> getProfileDetails -> resData",
-          resData
-        );
+        
         this.profileData = resData.data;
         console.log("DoctorProfileComponent -> getProfileDetails -> profileData", this.profileData)
      

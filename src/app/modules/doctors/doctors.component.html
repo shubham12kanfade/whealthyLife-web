@@ -6,10 +6,11 @@
         <div class="row">
             <div class="col-sm-3 mt-30">
                 <div class="input-group mb-3">
-                    <div class="input-group-prepend" [formGroup]="searchForm">
+                    <div class="input-group-prepend" >
                         <span class="input-group-text" id="basic-addon1"><i class="fa fa-search"></i></span>
-                    </div>
                     <input type="text" class="form-control" placeholder="Search Doctor Here !" aria-label="Username" aria-describedby="basic-addon1" [(ngModel)]="searchText" (input)="search()">
+                  
+                    </div>
                 
                 </div>
                 <div class="card cad1 hidd">
@@ -29,16 +30,16 @@
                             <div class="card cad2">
                                 <div class="card-header" style="padding: 0px;">
                                     <div class="row">
-                                        <div class="col-4">
-                                            <img [src]="doctor?.avatar" onerror="this.src='../../../assets/images/doc.jpg'" alt="Avatar" class="img-thumbnail img2">
+                                        <div class="col-4" >
+                                            <img  [routerLink]="['/doctors/doctor_profile/',doctor?.doctorId?._id]" [src]="doctor?.doctorId?.avatar" onerror="this.src='../../../assets/images/doc.jpg'" alt="Avatar" class="img-thumbnail img2">
                                         </div>
                                         <div class="col-8">
-                                            <h2 class="hed3"><a [routerLink]="['/doctors/doctor_profile/',doctor?._id]">Dr.
-                                                    {{doctor?.firstName}}
-                                                    {{doctor?.lastName}}</a></h2>
-                                            <p style="margin: 0px;font-size: 12px;">{{doctor?.specialitie}}</p>
+                                            <h2 class="hed3"><a [routerLink]="['/doctors/doctor_profile/',doctor?.doctorId?._id]">Dr.
+                                                    {{doctor?.doctorId?.firstName}}
+                                                    {{doctor?.doctorId?.lastName}}</a></h2>
+                                            <p style="margin: 0px;font-size: 12px;"><span *ngFor="let spec of doctor?.doctorId?.specialitie | slice:0:2"> {{spec.fullName}}</span></p>
                                             <p style="margin: 0px;font-size: 12px;">
-                                                <b>{{doctor?.experience}}</b> years experience overall</p>
+                                                <b>{{doctor?.doctorId?.registrationYear}}</b> years experience overall</p>
                                             <p><i class="fa fa-thumbs-up text-success"></i> 100%</p>
                                         </div>
                                     </div>
@@ -46,18 +47,18 @@
                                 <div class="card-body" style="padding: 10px;line-height: 10px;font-size: 12px;text-align: left; ">
                                     <div class="col-12">
                                         <p>
-                                            <b>{{doctor?.location?.landmark}}
+                                            <b>{{doctor?.doctorId?.location?.landmark}}
                                             </b>
                                         </p>
-                                        <p><b>Rs. {{doctor?.fees}}</b> Consultation Fees</p>
+                                        <p><b>Rs. {{doctor?.doctorId?.fees}}</b> Consultation Fees</p>
                                         <p> Available Today</p>
                                     </div>
                                 </div>
                                 <div class="card-footer cdfot">
-                                    <button type="button" (click)="onConsultation(doctor?._id)" class="btn btn-outline-primary fsize">Video
+                                    <button type="button" (click)="onConsultation(doctor?.doctorId?._id)" class="btn btn-outline-primary fsize">Video
                                         Consultation</button>
 
-                                    <a> <button [routerLink]="['/doctors/timeSlot/',doctor?._id]" class="btn btn-primary fsize">Book Appointment
+                                    <a> <button [routerLink]="['/doctors/timeSlot/',doctor?.doctorId?._id]" class="btn btn-primary fsize">Book Appointment
                                         </button></a>
                                 </div>
                             </div>

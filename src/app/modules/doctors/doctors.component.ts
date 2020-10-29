@@ -81,7 +81,7 @@ export class DoctorsComponent implements OnInit {
       doctor: id
     }
     this.consultationService.createSession(data).then(resData => {
-      console.log("DoctorsComponent -> onConsultation -> resData", resData);
+      // console.log("DoctorsComponent -> onConsultation -> resData", resData);
       this.router.navigate(['/video-conference'])
     }).catch(error => {
       console.log("DoctorsComponent -> onConsultation -> error", error);
@@ -100,18 +100,18 @@ export class DoctorsComponent implements OnInit {
     this.activatedRoute.params.subscribe(params => {
     
       this.DocID= params['id'];
-      console.log("DoctorsComponent -> ngOnInit -> this.DocID++++++++++++++++++++++++", this.DocID)
+      // console.log("DoctorsComponent -> ngOnInit -> this.DocID++++++++++++++++++++++++", this.DocID)
       this.getDoctorList()
     })
   }
   showtime(doctor) {
     this.show = doctor._id;
-    console.log("DoctorsComponent -> showtime -> doctor", doctor);
+    // console.log("DoctorsComponent -> showtime -> doctor", doctor);
     var session1Start = doctor.slots[0].session1Start.split(":");
     var session1End = doctor.slots[0].session1End.split(":");
     var session2Start = doctor.slots[0].session2Start.split(":");
     var session2End = doctor.slots[0].session2End.split(":");
-    console.log("DoctorsComponent -> showtime -> session1Start", session1Start, session1End, session2Start, session2End)
+    // console.log("DoctorsComponent -> showtime -> session1Start", session1Start, session1End, session2Start, session2End)
     this.morningSlot = [];
     this.evningSlot = [];
     for (var i = parseInt(session1Start[0]); i < parseInt(session1End[0]); i++) {
