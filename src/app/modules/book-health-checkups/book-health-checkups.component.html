@@ -130,94 +130,98 @@
   </div>
 </div> -->
 
-<section style="margin-top: 130px;">
+<section style="margin: 130px 0px;">
   <div class="container">
-    <div class="col-12">
-      <owl-carousel-o [options]="customOptions">
+    <div class="col-12" style="position: relative;">
+      <p  class="slider-arroy" >
+        <a class="btn " (click)="owlCar.prev()">
+          <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-left-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5.5a.5.5 0 0 0 0-1H5.707l2.147-2.146a.5.5 0 1 0-.708-.708l-3 3a.5.5 0 0 0 0 .708l3 3a.5.5 0 0 0 .708-.708L5.707 8.5H11.5z"/>
+        </svg>
+       </a>
+        <a class="btn" (click)="owlCar.next()">
+          <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-11.5.5a.5.5 0 0 1 0-1h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5z"/>
+        </svg>
+      </a>
+      </p>
+      <owl-carousel-o [options]="customOptions" #owlCar >
         <ng-template carouselSlide>
-          <div class="card" style="box-shadow:5px 5px 5px #ca2224 !important;border-radius:5px !important;position: relative;height: 200px;width: 100%;display: flex;
-          width: 100%;justify-content: center;align-items: center;background-color: #21ac0c;">
+          <div class="card card-style1" >
           <a href="/health-checkup-packages/diabetes-checkup?city=ahmedabad">
             <img src="../../../assets/img/Swati/BookHeathCheckup/Diabetes.png" alt="image" class="diabetes-img" style="height: 200px;opacity: 0.8;"/>
               <div style="position: absolute;top: 150 !important;left: 100 !important;">
-              <h2 class="card-title" style="color: white;font-weight: 600;"> Diabetes </h2>
+              <h2 class="card-title font-change" > Diabetes </h2>
             </div>
           </a>
           </div>
         </ng-template>  
         <ng-template carouselSlide>
-          <div class="card" style="box-shadow:5px 5px 5px #ca2224 !important;border-radius:5px !important;position: relative;height: 200px;width: 100%;display: flex;
-          width: 100%;justify-content: center;align-items: center;background-color: #21ac0c;">
+          <div class="card card-style1">
           <a href="/health-checkup-packages/diabetes-checkup?city=ahmedabad">
             <img src="../../../assets/img/Swati/BookHeathCheckup/Cancer.png" alt="image" class="diabetes-img" style="height: 200px;opacity: 0.8;"/>
               <div style="position: absolute;top: 150;left: 100;">
-              <h2 class="card-title" style="color: white;font-weight: 600;"> Cancer </h2>
+              <h2 class="card-title font-change" > Cancer </h2>
             </div>
           </a>
           </div>
         </ng-template>  
         <ng-template carouselSlide>
-          <div class="card" style="box-shadow:5px 5px 5px #ca2224 !important;border-radius:5px !important;position: relative;height: 200px;width: 100%;display: flex;
-          width: 100%;justify-content: center;align-items: center;background-color: #21ac0c;">
+          <div class="card card-style1">
           <a href="/health-checkup-packages/diabetes-checkup?city=ahmedabad">
             <img src="../../../assets/img/Swati/BookHeathCheckup/Skin.png" alt="image" class="diabetes-img" style="height: 200px;opacity: 0.8;"/>
               <div style="position: absolute;top: 150;left: 100;">
-              <h2 class="card-title" style="color: white;font-weight: 600;"> Skin </h2>
+              <h2 class="card-title font-change" > Skin </h2>
             </div>
           </a>
           </div>
         </ng-template>  
         <ng-template carouselSlide>
-          <div class="card" style="box-shadow:5px 5px 5px #ca2224 !important;border-radius:5px !important;position: relative;height: 200px;width: 100%;display: flex;
-          width: 100%;justify-content: center;align-items: center;background-color: #21ac0c;">
+          <div class="card card-style1">
           <a href="/health-checkup-packages/diabetes-checkup?city=ahmedabad">
             <img src="../../../assets/img/Swati/BookHeathCheckup/Kidney.png" alt="image" class="diabetes-img" style="height: 200px;opacity: 0.8;"/>
               <div style="position: absolute;top: 150;left: 100;">
-              <h2 class="card-title" style="color: white;font-weight: 600;"> Kidney </h2>
+              <h2 class="card-title font-change" > Kidney </h2>
             </div>
           </a>
           </div>
         </ng-template>
         <ng-template carouselSlide>
-          <div class="card" style="box-shadow:5px 5px 5px #ca2224 !important;border-radius:5px !important;position: relative;height: 200px;width: 100%;display: flex;
-          width: 100%;justify-content: center;align-items: center;background-color: #21ac0c;">
+          <div class="card card-style1" >
           <a href="/health-checkup-packages/diabetes-checkup?city=ahmedabad">
             <img src="../../../assets/img/Swati/BookHeathCheckup/Diabetes.png" alt="image" class="diabetes-img" style="height: 200px;opacity: 0.8;"/>
               <div style="position: absolute;top: 150;left: 100;">
-              <h2 class="card-title" style="color: white;font-weight: 600;"> Digestion </h2>
+              <h2 class="card-title font-change" > Digestion </h2>
             </div>
           </a>
           </div>
         </ng-template>
         <ng-template carouselSlide>
-          <div class="card" style="box-shadow:5px 5px 5px #ca2224 !important;border-radius:5px !important;position: relative;height: 200px;width: 100%;display: flex;
-          width: 100%;justify-content: center;align-items: center;background-color: #21ac0c;">
+          <div class="card card-style1" >
           <a href="/health-checkup-packages/diabetes-checkup?city=ahmedabad">
-            <img src="../../../assets/img/Swati/BookHeathCheckup/SexualWellness.png" alt="image" class="diabetes-img" style="height: 200px;opacity: 0.8;"/>
-              <div style="position: absolute;top: 150;left: 100;">
-              <h2 class="card-title" style="color: white;font-weight: 600;">Sexual Wellness </h2>
+            <img src="../../../assets/img/Swati/BookHeathCheckup/SexualWellness.png" alt="image" class="diabetes-img" style="height:200px;opacity: 0.8;"/>
+              <div class="div-title">
+              <h2 class="card-title font-change">Sexual Wellness </h2>
             </div>
           </a>
           </div>
         </ng-template>
         <ng-template carouselSlide>
-          <div class="card" style="box-shadow:5px 5px 5px #ca2224 !important;border-radius:5px !important;position: relative;height: 200px;width: 100%;display: flex;
-          width: 100%;justify-content: center;align-items: center;background-color: #21ac0c;">
+          <div class="card card-style1" >
           <a href="/health-checkup-packages/diabetes-checkup?city=ahmedabad">
             <img src="../../../assets/img/Swati/BookHeathCheckup/Bone.png" alt="image" class="diabetes-img" style="height: 200px;opacity: 0.8;"/>
               <div style="position: absolute;top: 150;left: 100;">
-              <h2 class="card-title" style="color: white;font-weight: 600;"> Bone </h2>
+              <h2 class="card-title font-change" > Bone </h2>
             </div>
           </a>
           </div>
         </ng-template>
         <ng-template carouselSlide>
-          <div class="card" style="box-shadow:5px 5px 5px #ca2224 !important;border-radius:5px !important;position: relative;height: 200px;width: 100%;display: flex;
-          width: 100%;justify-content: center;align-items: center;background-color: #21ac0c;">
+          <div class="card card-style1" >
           <a href="/health-checkup-packages/diabetes-checkup?city=ahmedabad">
             <img src="../../../assets/img/fever.svg" alt="image" class="diabetes-img" style="height: 200px;opacity: 0.8;"/>
               <div style="position: absolute;top: 150;left: 100;">
-              <h2 class="card-title" style="color: white;font-weight: 600;"> Fever </h2>
+              <h2 class="card-title font-change" > Fever </h2>
             </div>
           </a>
           </div>

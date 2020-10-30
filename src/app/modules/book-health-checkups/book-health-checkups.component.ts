@@ -19,7 +19,10 @@ export class BookHealthCheckupsComponent implements OnInit {
     touchDrag: true,
     pullDrag: true,
     dots: false,
-    navSpeed: 700,
+    autoplay:true,
+    autoplayHoverPause:true,
+    navSpeed: 3000,
+    autoplaySpeed:3000,
     navText: ['', ''],
     responsive: {
       0: {
@@ -35,7 +38,7 @@ export class BookHealthCheckupsComponent implements OnInit {
         items: 4
       }
     },
-    nav: true
+    nav: false
   }
 
 }

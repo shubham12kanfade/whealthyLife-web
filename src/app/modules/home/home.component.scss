@@ -96,16 +96,18 @@ input#exampleInputEmail1 {
   flex-grow: 1;
 }
 
-.changes12:hover{
-  flex-grow: 3;
-}
-// .hov > .hov2 >img + span:hover{
-//   // padding-top: 30px;
-//   // flex-grow: 2;
-//   display: flex;
-//   flex-grow: 2;
-//   transition: ease-in;
+// .changes12:hover{
+//   flex-grow: 3;
 // }
+
+ .hov2 >img:hover{
+  // padding-top: 30px;
+  flex-grow: 2;
+  display: flex;
+  flex-grow: 2;
+  transition: ease-in;
+  padding: -30px !important ;
+}
 
 @media screen and (max-width: 767.98px) {
   .wid-80 {
