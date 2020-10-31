@@ -88,6 +88,23 @@
 .o-font-size--30 {
   font-size: 30px;
 }
+
+
+@media screen and (max-width:600px) {
+  .o-font-size--30 {
+    font-size: 20px;
+  }
+}
+
+.truncate {
+ 
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+
 .u-font-bold {
   font-weight: 500;
 }
@@ -97,3 +114,68 @@
 .u-pointer {
   cursor: pointer;
 }
+
+
+
+.card-style{
+  border: 1px solid #c3c3c3 !important;
+  text-align: left;
+  height:247px;
+  margin:0px 10px;
+}
+
+.fw-600{
+  font-weight: 600;
+}
+
+.list-style{
+  font-weight: 600;
+  margin: 0px;
+  font-size: 14px;
+}
+
+.fs-14{
+  font-size: 14px !important;
+}
+
+.list-group-flush .list-group-item {
+  border: 1px solid rgb(228, 225, 225);
+}
+
+.list-group-flush .list-group-item:hover {
+  background-color: rgb(196, 194, 194);
+}
+
+.btns{
+  border-radius: 25px;
+  margin: 20px;
+  background-color: lightgrey;
+  color: black;
+  border: 1px solid;
+}
+
+.btns:focus{
+  border-radius: 25px;
+  margin: 20px;
+  background-color: #3f51b5 !important;
+  background-color: transparent;
+  color: black;
+}
+
+.btns1{
+  border-radius: 25px;
+  margin: 20px;
+  background-color: white;
+  color: black;
+  border: 1px solid;
+}
+
+
+
+// .btns{
+//   border-radius: 25px;
+//   margin: 20px;
+//   // background-color: #3f51b5 !important;
+//   background-color: transparent;
+//   color: black;
+// }
