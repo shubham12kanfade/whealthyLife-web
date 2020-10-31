@@ -1,3 +1,7 @@
+* .fa {
+  font-family: "FontAwesome";
+}
+
 .input-group {
   display: flex;
 }
@@ -100,10 +104,12 @@
 
 .fa-bell {
   font-size: 2rem !important;
+  font-family: "FontAwesome";
 }
 
 .fa-envelope {
   font-size: 2rem !important;
+  font-family: "FontAwesome";
 }
 .bg-color {
   background-color: #f44336;
@@ -118,4 +124,101 @@
 
 .dropdown-item {
   cursor: pointer;
+}
+
+.fa-tachometer:before {
+  content: \f625;
+  font-family: "FontAwesome";
+}
+
+.fa-medkit:before {
+  content: "\f0fa";
+  font-family: "FontAwesome";
+}
+
+.fa-home:before {
+  content: "\f015";
+  font-family: "FontAwesome";
+}
+
+.fa-comments:before {
+  content: "\f086";
+  font-family: "FontAwesome";
+}
+
+.fa-gear:before,
+.fa-cog:before {
+  font-family: "FontAwesome";
+  content: "\f013";
+}
+
+.fa-gears:before,
+.fa-cogs:before {
+  content: "\f085";
+  font-family: "FontAwesome";
+}
+
+// .fa-thumbs-up:before {
+//   content: "\f164";
+//   font-family: "FontAwesome";
+// }
+
+.fa-bullhorn:before {
+  font-family: "FontAwesome";
+  content: "\f0a1";
+}
+
+.fa-file:before {
+  content: "\f15b";
+  font-family: "FontAwesome";
+}
+
+.fa-bell:before {
+  content: "\f0f3";
+  font-family: "FontAwesome";
+}
+
+.fa-envelope:before {
+  content: "\f0e0";
+  font-family: "FontAwesome";
+}
+
+.fa-user:before {
+  content: "\f007";
+  font-family: "FontAwesome";
+}
+
+.fa-list:before {
+  content: "\f03a";
+  font-family: "FontAwesome";
+}
+
+.fa-user-alt:before {
+  content: "\f007";
+  font-family: "FontAwesome";
+}
+
+.fa-award:before {
+  content: "\f559";
+  font-family: "FontAwesome";
+}
+
+.fa-calendar-alt:before {
+  content: "\f073";
+  font-family: "FontAwesome";
+}
+
+.fa-broadcast-tower:before {
+  content: "\f519";
+  font-family: "FontAwesome";
+}
+
+.fa-chart-area:before {
+  content: "\f1fe";
+  font-family: "FontAwesome";
+}
+
+.fa-thumbs-up:before {
+  content: "\f164";
+  font-family: "FontAwesome";
 }

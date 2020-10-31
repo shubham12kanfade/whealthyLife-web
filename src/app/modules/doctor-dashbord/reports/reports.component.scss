@@ -1,34 +1,49 @@
 .dnamep {
-    padding-top: 13px;
+  padding-top: 13px;
 }
 
 .pointer {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 i:hover {
-    background-color: #787887!important;
-    color: white;
+  background-color: #787887 !important;
+  color: white;
 }
 
 .filterpress {
-    background-color: #787887!important;
-    color: white;
+  background-color: #787887 !important;
+  color: white;
 }
 
 .card {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    min-width: 0;
-    word-wrap: break-word;
-    background-color: #fff;
-    background-clip: border-box;
-    border: 1px solid #e3e6f0;
-    width: 100%;
-    border-radius: 0.35rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid #e3e6f0;
+  width: 100%;
+  border-radius: 0.35rem;
 }
 
 .font-weight-bold {
-    font-weight: 1000 !important;
+  font-weight: 1000 !important;
+}
+
+.fa-envelope:before {
+  content: "\f0e0";
+  font-family: "FontAwesome";
+}
+
+.fa-print:before {
+  content: "\f02f";
+  font-family: "FontAwesome";
+}
+
+.fa-filter:before {
+  content: "\f0b0";
+  font-family: "FontAwesome";
 }

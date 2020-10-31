@@ -1,49 +1,50 @@
 .card {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    min-width: 0;
-    word-wrap: break-word;
-    background-color: #fff;
-    background-clip: border-box;
-    border: 1px solid #e3e6f0;
-    width: 100%;
-    border-radius: 0.35rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid #e3e6f0;
+  width: 100%;
+  border-radius: 0.35rem;
 }
 
 .img {
-    width: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin-top: 40px;
-    margin-left: -50px;
-    margin-bottom: 40px;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 40px;
+  margin-left: -50px;
+  margin-bottom: 40px;
 }
 
 .large {
-    font-size: 15px;
+  font-size: 15px;
 }
 
 .stext {
-    font-size: 12px;
+  font-size: 12px;
 }
 
 .lht {
-    line-height: normal;
+  line-height: normal;
 }
 
 .btn {
-    font-size: 1.50rem !important;
+  font-size: 1.5rem !important;
 }
 
 .bg {
-    background-color: #dff8f6;
+  background-color: #dff8f6;
 }
 
 .textcol {
-    color: #14aa9b;
-}.example-button-row button,
+  color: #14aa9b;
+}
+.example-button-row button,
 .example-button-row a {
   margin-right: 8px;
 }
@@ -52,7 +53,7 @@
 
 .mat-button.mat-success,
 .mat-stroked-button.mat-success {
-    color: #155724;
+  color: #155724;
 }
 .mat-button.mat-success:hover,
 .mat-stroked-button.mat-success:hover {
@@ -65,9 +66,17 @@
 .mat-mini-fab.mat-success {
   color: #f0fff3;
   background-color: #f6c23e;
-  
 }
 
 .mat-icon-button.mat-success {
-  color:#f6c23e;
+  color: #f6c23e;
+}
+
+span.material-icons {
+  font-family: Material Icons !important;
+}
+
+.fa-lightbulb-o:before {
+  content: "\f0eb";
+  font-family: "FontAwesome";
 }

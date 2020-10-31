@@ -69,9 +69,9 @@
         [routerLink]="['./chatnow']"
         routerLinkActive="router-link-active"
       >
-        <span class="icon-set tab-icon c-icon__img"
-          ><img src="../../../assets/img/chat-24px.svg" class="img-icon"
-        /></span>
+        <span class="icon-set tab-icon c-icon__img">
+          <img src="../../../assets/img/chat-24px.svg" class="img-icon"/>
+      </span>
         <span>Chat with a doctor</span>
       </a>
       <a data-qa-id="order-icon" class="c-icon" [routerLink]="['/order']">
@@ -99,7 +99,9 @@
         data-qa-id="lab-icon"
         class="c-icon"
         href="/tests?utm_source=WhealthyLife_home"
-      >
+        routerLink="/booktests"
+        routerLinkActive="active"
+        >
         <div class="tab-offer" style="position: relative; margin-bottom: 3mm">
           <span class="icon-set tab-icon c-icon__img"
             ><img src="../../../assets/img/opacity-24px.svg" class="img-icon"
@@ -280,7 +282,7 @@
                     <owl-carousel-o
                       class="slick-track"
                       [options]="customOptionsOne"
-                      
+
                     >
                       <ng-template
                         *ngFor="let item of appointmentC"
@@ -289,7 +291,7 @@
                         tabindex="-1"
                         class="slick-slide slick-cloned"
                         style="width: 420px"
-                        
+
                       >
                         <div>
                           <div class="u-t-grey">
@@ -718,7 +720,7 @@
                 >Learn more</a
               >
             </div>
-           
+
 
 
             <div class="c-testimonial-list">

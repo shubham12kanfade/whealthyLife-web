@@ -60,3 +60,8 @@ span#basic-addon1 {
   border-top-left-radius: 0px;
   border-bottom-left-radius: 0px;
 }
+
+.fa-lightbulb-o:before {
+  content: "\f0eb";
+  font-family: "FontAwesome";
+}

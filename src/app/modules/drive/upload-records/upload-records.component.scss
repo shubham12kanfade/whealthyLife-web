@@ -1,13 +1,25 @@
-.adddiv{height: 60px; width: 60px; background-color:#787787; cursor: pointer;}
-.addicon{width: 100%;margin-top: 15px
-    
+.adddiv {
+  height: 60px;
+  width: 60px;
+  background-color: #787787;
+  cursor: pointer;
 }
-.maindiv{background-color: #f0f0f5;
-    height: 20vh;
-    overflow: auto;
-    }
-    .btn-info2 {
-        color: #36b9cc;
-        background-color:white;
-        border-color: #36b9cc;
-    }
+.addicon {
+  width: 100%;
+  margin-top: 15px;
+}
+.maindiv {
+  background-color: #f0f0f5;
+  height: 20vh;
+  overflow: auto;
+}
+.btn-info2 {
+  color: #36b9cc;
+  background-color: white;
+  border-color: #36b9cc;
+}
+
+.fa-plus:before {
+  content: "\f067";
+  font-family: "FontAwesome";
+}

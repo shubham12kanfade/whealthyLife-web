@@ -73,8 +73,8 @@
             <h4 class="mb-0" style="margin-top: 7px;">
               Free Home Sample Pickup
             </h4>
-          </div> 
-        </div> 
+          </div>
+        </div>
         </div>
         <div class="col-md-3 col-sm-6 col-xs-12">
           <div class="opt" [routerLink]="['/ViewReport']" routerLinkActive="router-link-active">
@@ -190,9 +190,9 @@
               <div class="p-footer">
                 <span class="tag">% off</span>
                 <span class="price"
-                  ><i class="fa fa-inr"></i>999
+                  ><img src="../../../assets/img/icons8-rupee-24.png">999
                   <small
-                    ><del><i class="fa fa-inr"></i></del></small
+                    ><del></del></small
                 ></span>
                 <a href="#" class="btn-border">View More</a>
               </div>
@@ -244,7 +244,7 @@
               <div class="p-footer">
                 <span class="tag">% off</span>
                 <span class="price"
-                  ><i class="fa fa-inr"></i>999
+                  ><img src="../../../assets/img/icons8-rupee-24.png">999
                   <small
                     ><del><i class="fa fa-inr"></i></del></small
                 ></span>
@@ -321,13 +321,10 @@
       </owl-carousel-o>
       <div class="row prev-next">
         <div class="lhs" (click)="review.prev()">
-          <i class="fa fa-chevron-circle-left fa-3x" aria-hidden="true"></i>
+          <img src="../../../assets/img/icons8-chevron-left-30.png">
         </div>
         <div class="rhs" (click)="review.next()">
-          <i
-            class="fa fa-chevron-circle-right fa-3x"
-            aria-hidden="true"
-          ></i>
+          <img src="../../../assets/img/icons8-chevron-right-30.png">
         </div>
       </div>
     </div>
@@ -410,89 +407,93 @@
   </section>
 
   <section class="v-packages deal-offer">
-    <div class="container margin_60_35">
+    <div class="container-fluid margin_60_35">
       <div class="title-left">
         <h1>Top deals and offers</h1>
         <h4>Hand-picked deals for a healthier you</h4>
       </div>
-      <div *ngIf="showmore" class="row">
-        <div class="col-md-3" data-aos="fade-right" *ngFor=" let item of offerData; let i = index">
-          <div class="checkup-visual-containers" >
-            <a href="#" >
-              <div class="text-info">
-                <h3>
-                  <strong>{{item.title}}</strong><br/>{{item.description}}
-                </h3>
-                <p>{{item.buttonText}}</p>
+      <div *ngIf="showmore" class="mx-auto packs">
+        <div  class="form-row">
+          <div class="col-md-3 col-sm-6 col-12 " data-aos="fade-right" *ngFor=" let item of offerData; let i = index">
+              <div class="checkup-visual-containers" >
+                <a href="#" >
+                  <div class="text-info">
+                    <h3>
+                      <strong>{{item.title}}</strong><br/>{{item.description}}
+                    </h3>
+                    <p>{{item.buttonText}}</p>
+                  </div>
+                  <img [src]="item.backImg" alt="checkup" />
+                </a>
               </div>
-              <img [src]="item.backImg" alt="checkup" />
-            </a>
           </div>
-        </div>
-        <div class="text-center mt-3 mb-3" data-aos="fade-down">
-          <a class="btn-main" (click)="showmoreFun1()">More Packages</a>
-        </div>
-        <!-- <div class="col-md-3" data-aos="fade-up">
-          <div class="checkup-visual-containers">
-            <a href="#">
-              <div class="text-info">
-                <h3>
-                  <strong>Free</strong><br />
-                  home sample collection <br />
-                  for Diagnostic tests
-                </h3>
-                <p>Know more</p>
-              </div>
-              <img src="../assets/img/ckup-2.jpg" alt="checkup" />
-            </a>
-          </div>
-        </div>
-        <div class="col-md-3" data-aos="fade-down">
-          <div class="checkup-visual-containers">
-            <a href="#">
-              <div class="text-info">
-                <h3>
-                  <strong>Free</strong><br />
-                  View test results online
-                </h3>
-                <p>View results</p>
-              </div>
-              <img src="../assets/img/ckup-3.jpg" alt="checkup" />
-            </a>
-          </div>
-        </div>
-        <div class="col-md-3" data-aos="fade-left">
-          <div class="checkup-visual-containers">
-            <a href="#">
-              <div class="text-info">
-                <h3>
-                  <strong>Free</strong><br />
-                  Book an Appointment
-                </h3>
-                <p>Book now</p>
-              </div>
-              <img src="../assets/img/ckup-4.jpg" alt="checkup" />
-            </a>
-          </div>
-        </div> -->
 
+          <!-- <div class="col-md-3" data-aos="fade-up">
+            <div class="checkup-visual-containers">
+              <a href="#">
+                <div class="text-info">
+                  <h3>
+                    <strong>Free</strong><br />
+                    home sample collection <br />
+                    for Diagnostic tests
+                  </h3>
+                  <p>Know more</p>
+                </div>
+                <img src="../assets/img/ckup-2.jpg" alt="checkup" />
+              </a>
+            </div>
+          </div>
+          <div class="col-md-3" data-aos="fade-down">
+            <div class="checkup-visual-containers">
+              <a href="#">
+                <div class="text-info">
+                  <h3>
+                    <strong>Free</strong><br />
+                    View test results online
+                  </h3>
+                  <p>View results</p>
+                </div>
+                <img src="../assets/img/ckup-3.jpg" alt="checkup" />
+              </a>
+            </div>
+          </div>
+          <div class="col-md-3" data-aos="fade-left">
+            <div class="checkup-visual-containers">
+              <a href="#">
+                <div class="text-info">
+                  <h3>
+                    <strong>Free</strong><br />
+                    Book an Appointment
+                  </h3>
+                  <p>Book now</p>
+                </div>
+                <img src="../assets/img/ckup-4.jpg" alt="checkup" />
+              </a>
+            </div>
+          </div> -->
+        </div>
+        <div class="text-center mt-3 mb-3" data-aos="fade-down">
+          <a class="btn-main" (click)="showmoreFun()">More Packages</a>
+        </div>
       </div>
-      <div *ngIf="!showmore" class="row">
-        <div class="col-md-3" data-aos="fade-right" *ngFor=" let item of offerData">
-          <div class="checkup-visual-containers" >
-            <a href="#" >
-              <div class="text-info">
-                <h3>
-                  <strong>{{item.title}}</strong><br/>{{item.description}}
-                </h3>
-                <p>{{item.buttonText}}</p>
-              </div>
-              <img [src]="item.backImg" alt="checkup" />
-            </a>
+      <div *ngIf="!showmore" class="mx-auto packs">
+        <div  class="form-row">
+          <div class="col-md-3 col-sm-6 col-12" data-aos="fade-right" *ngFor=" let item of offerData">
+            <div class="checkup-visual-containers" >
+              <a href="#" >
+                <div class="text-info">
+                  <h3>
+                    <strong>{{item.title}}</strong><br/>{{item.description}}
+                  </h3>
+                  <p>{{item.buttonText}}</p>
+                </div>
+                <img [src]="item.backImg" alt="checkup" />
+              </a>
+            </div>
           </div>
         </div>
         <div class="text-center mt-3 mb-3" data-aos="fade-down">
-          <a class="btn-main" (click)="showmoreFun1()">More Packages</a>
+          <a class="btn-main" (click)="showmoreFun()">More Packages</a>
         </div>
       </div>
     </div>
@@ -663,14 +664,14 @@
        </owl-carousel-o>
        <div class="row prev-next">
          <div class="lhs" (click)="review.prev()">
-          <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-left" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <!-- <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-left" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
-          </svg>
+          </svg> -->
          </div>
          <div class="rhs" (click)="review.next()">
-          <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <!-- <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
-          </svg>
+          </svg> -->
          </div>
        </div>
      </div>
@@ -704,6 +705,9 @@
             </ul>
             <a href="#" class="app"
               ><img src="../assets/img/1_EiZrcN_DIapbZaxutxbZRA.png" alt="app"
+            /></a>
+            <a href="#" class="app"
+              ><img src="../assets/img/app-store.e30d53a6.png" alt="app"
             /></a>
           </div>
         </div>

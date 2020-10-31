@@ -5,12 +5,12 @@
   }
 }
 
-.btnn{
-      width: 100%;
-      height: 45px;
-      // border:1px solid #d81730;
-      // border-radius:0px 5px 5px 0px;
-      background-color: #d81730; 
+.btnn {
+  width: 100%;
+  height: 45px;
+  // border:1px solid #d81730;
+  // border-radius:0px 5px 5px 0px;
+  background-color: #d81730;
 }
 
 .flecs1 {
@@ -31,12 +31,12 @@
   margin-top: 30px;
 }
 
-.opt{
+.opt {
   cursor: pointer;
   border: none;
 }
 
-.head1{
+.head1 {
   z-index: 999;
   color: #ffffff;
   font-size: 45px;
@@ -55,13 +55,14 @@ input#exampleInputEmail1 {
 
 .sub-title {
   color: white;
-  font-size: 12px;font-weight: 600;
+  font-size: 12px;
+  font-weight: 600;
   cursor: pointer;
 }
 
-.mar-30{
- margin-top:30px;
-//  cursor: pointer;
+.mar-30 {
+  margin-top: 30px;
+  //  cursor: pointer;
 }
 
 .mar-50 {
@@ -410,4 +411,35 @@ p.testimonial {
 
 .title-left {
   text-align: center;
+}
+
+.price img {
+  height: 16px;
+  padding-bottom: 2px;
+}
+
+section.ng-star-inserted {
+  padding-bottom: 56px;
+  position: relative;
+}
+
+.lhs img {
+  margin-top: -60px;
+  position: absolute;
+  margin-right: -46px;
+  top: 30;
+}
+
+.rhs img {
+  margin-top: -60px;
+  position: absolute;
+  margin-left: -46px;
+  top: 30;
+}
+
+b,
+strong {
+  font-weight: bolder;
+  font-weight: 100;
+  font-size: 15px;
 }

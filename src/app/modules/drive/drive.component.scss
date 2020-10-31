@@ -1,38 +1,43 @@
 .bgcolor {
-    background-color: #f0f0f5;
-    height: 96vh;
-    overflow: hidden;
+  background-color: #f0f0f5;
+  height: 96vh;
+  overflow: hidden;
 }
 
 .mousecursor {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .navactive {
-    background-color: #f0f0f5 !important;
-    border-left-style: solid !important;
-    border-left-width: 3px !important;
-    border-left-color: #14bef0 !important;
-    color: black;
+  background-color: #f0f0f5 !important;
+  border-left-style: solid !important;
+  border-left-width: 3px !important;
+  border-left-color: #14bef0 !important;
+  color: black;
 }
 
-.ml-3, .mx-3 {
-  margin-left: 1rem!important;
+.ml-3,
+.mx-3 {
+  margin-left: 1rem !important;
   cursor: pointer;
 }
 
 .hb {
-    background-color: white;
-
+  background-color: white;
 }
-.colsm-4-h{
-    height: 75vh;
+.colsm-4-h {
+  height: 75vh;
 }
-.colsm-8-h{
-    height: 75vh;
+.colsm-8-h {
+  height: 75vh;
 }
 @media screen and (max-width: 767px) {
-    .colsm-4-h{
-        height: auto ;
-    }
+  .colsm-4-h {
+    height: auto;
   }
+}
+
+.fa-user-circle:before {
+  content: "\f2bd";
+  font-family: "FontAwesome";
+}

@@ -6,11 +6,25 @@
 //     font-size: 1.5rem;
 // }
 
-
 // .text-xs {
 //     font-size: 1.5rem;
 // }
 
 p {
   font-family: Lato;
+}
+
+.fa-calendar:before {
+  content: "\f073";
+  font-family: "FontAwesome";
+}
+
+.fa-comments:before {
+  content: "\f086";
+  font-family: "FontAwesome";
+}
+
+.fa-download:before {
+  content: "\f019";
+  font-family: "FontAwesome";
 }
