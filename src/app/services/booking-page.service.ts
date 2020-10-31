@@ -19,8 +19,19 @@ export class BookingPageService {
 getDegree(id){
   return this.apiCallService.getData('doctor/qualification/by/'+id)
 }
-getDoctorSlotId(id){
-  return this.apiCallService.getData('slots/by/'+id)
+getDoctorSlotId(id,data){
+  return this.apiCallService.postData('slots/by/'+id,data)
 }
+getDroctorAward(id){
+  return this.apiCallService.getData('doctor/award/by/'+id) 
+
+}
+
+
+getDroctorMember(id){
+  return this.apiCallService.getData('doctor/membership/by/'+id) 
+
+}
+
 
 }
