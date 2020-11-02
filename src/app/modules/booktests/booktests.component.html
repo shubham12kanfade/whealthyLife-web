@@ -1,17 +1,53 @@
 <section style="margin-top: 100px;">
   <div class="container">
     <div class="col-sm-12">
-      <div class="row">
+      <!-- <div class="row">
         <div class="col-lg-6">
+
+
+
+
+
           <input data-aid="search-input" autocomplete="password" placeholder="Select any city or locality"
           class="c-search__input--location" (click)="modalopen()"/>
         <input data-aid="search-input" placeholder="Search for Tests and Profiles"
           class="c-search__input--location"/>
         </div>
         <div class="col-lg-6" style="text-align: end;">
-          <button mat-stroked-button>Card</button>
+          <button mat-stroked-button><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-cart" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+          </svg>Card</button>
+        </div>
+      </div> -->
+
+      <div class="row">
+        <div class="col-lg-6 col-md-8 col-sm-12">
+          <div class="input-group">
+            <input type="text" class="form-control" (click)="modalopen()" placeholder="Select any city or locality">
+            <div class="input-group-append">
+              <span class="input-group-text"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-trash" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
+                <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4L4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
+              </svg></span>
+            </div>
+            <input type="text" class="form-control" placeholder="Search for Tests and Profiles">
+            <div class="input-group-append">
+              <span class="input-group-text"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
+                <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
+              </svg></span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-4 col-sm-12" style="text-align: end;">
+          <button class="btn " style="border: 1px solid;color: black;"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-cart" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+          </svg>  Cart</button>
         </div>
       </div>
+
+
+
       <div class="row" style="margin-top: 30px;">
         <img src="../../../assets/img/corona.png" alt="Free Home Sample" style="position: relative;" class="banner"
         style="height:300px;" />
@@ -34,7 +70,7 @@
       <div class="row" style="margin-top: 30px;">
         <h2 style="font-weight: 600;">Top Booked Diagnostic Tests</h2>
         <div class="col-sm-12 col-md-12 col-lg-12 cen">
-          <div class="row" style="position: absolute;z-index: 9;width: 100%;justify-content: space-between;top: 100px;">
+          <div class="row" style="position: absolute;z-index: 9;width: 100%;justify-content: space-between;top: 70px;">
             <span  (click)="review12.prev()">
               <i class="fa fa-chevron-circle-left fa-3x" aria-hidden="true">
               </i>
@@ -46,7 +82,7 @@
           </div>
           <owl-carousel-o [options]="customOptions" #review12>
             <ng-template carouselSlide>
-              <div class="card card-style" >
+              <div class="card card-style cad1" >
                 <div class="card-body">
                   <h3 class="card-title truncate fw-600" >Thyroid Profile (T3, T4, TSH)</h3>
                   <div style="height: 50%;">
@@ -61,7 +97,7 @@
             </ng-template>
 
             <ng-template carouselSlide>
-              <div class="card card-style">
+              <div class="card card-style cad1">
                 <div class="card-body">
                   <h3 class="card-title truncate fw-600" >Complete Blood Count</h3>
    
@@ -76,7 +112,7 @@
               </div>
             </ng-template>
             <ng-template carouselSlide>
-              <div class="card card-style">
+              <div class="card card-style cad1">
                 <div class="card-body">
                   <h3 class="card-title truncate fw-600" >Liver Function Test</h3>
    
@@ -91,7 +127,7 @@
               </div>
             </ng-template>
             <ng-template carouselSlide>
-              <div class="card card-style">
+              <div class="card card-style cad1">
                 <div class="card-body">
                   <h3 class="card-title truncate fw-600" >Dengue NS1</h3>
    
@@ -106,7 +142,7 @@
               </div>
             </ng-template>
             <ng-template carouselSlide>
-              <div class="card card-style">
+              <div class="card card-style cad1">
                 <div class="card-body">
                   <h3 class="card-title truncate fw-600">Malarial Antigen</h3>
    
@@ -122,7 +158,7 @@
             </ng-template>
 
             <ng-template carouselSlide>
-              <div class="card card-style">
+              <div class="card card-style cad1">
                 <div class="card-body">
                   <h3 class="card-title truncate fw-600" > Hba1c </h3>
    
@@ -152,21 +188,23 @@
       <div class="row" style="margin-top: 30px;">
         <h2 style="font-weight: 600;">Health Checkups and Screenings For</h2>
         <div class="col-sm-12 col-md-12 col-lg-12 cen">
-          <owl-carousel-o [options]="customOptions2" #review1>
+          <div class="row" style="position: absolute;width: 100%;justify-content: space-between;top: 20px;">
+            <span  (click)="review25.prev()" style="z-index: 9;">
+              <i class="fa fa-chevron-circle-left fa-3x" aria-hidden="true">
+              </i>
+            </span>
+            <span  (click)="review25.next()" style="z-index: 9;">
+              <i class="fa fa-chevron-circle-right fa-3x" aria-hidden="true">
+              </i>
+            </span>
+          </div>
+          <owl-carousel-o [options]="customOptions2" #review25>
             <ng-template carouselSlide>
-              <img
-                src="../../../assets/img/cancer.svg"
-                alt="image"
-                class="banner1"
-              />
+              <img src="../../../assets/img/cancer.svg" alt="image" class="banner1" />
               <h4 class="m-2 text-bold">Cancer</h4>
             </ng-template>
             <ng-template carouselSlide>
-              <img
-                src="../../../assets/img/skin.svg"
-                alt="image"
-                class="banner1"
-              />
+              <img src="../../../assets/img/skin.svg" alt="image" class="banner1"/>
               <h4 class="m-2 text-bold">Skin</h4>
             </ng-template>
             <ng-template carouselSlide>
@@ -202,14 +240,14 @@
               <h4 class="m-2 text-bold">Bone</h4>
             </ng-template>
           </owl-carousel-o>
-          <div class="row prev-next">
+          <!-- <div class="row prev-next">
             <div class="lhs" (click)="review1.prev()">
               <i class="fa fa-chevron-circle-left fa-3x" aria-hidden="true"></i>
             </div>
             <div class="rhs" (click)="review1.next()">
               <i class="fa fa-chevron-circle-right fa-3x" aria-hidden="true"></i>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
@@ -421,36 +459,123 @@
 <section style="margin-top: 30px;">
   <div class="container">
     <h2 style="font-weight: 600;">Popular Health Checkup Packages</h2>
-    <div style="display: flex;"> 
-      <button type="button" class="btn btns"> Featured Checkups </button>
-      <button type="button" class="btn btns"> Women's Health </button>
-      <button type="button" class="btn btns"> Men's Health </button>
+    <div style="display: flex;flex-wrap: wrap; justify-content: flex-start;"> 
+      <!-- <button type="button" class="btn btns"> Featured Checkups </button> -->
+      <button type="button" [ngClass]="{'btns3': health}" class="btn btns" (click)="healthCheck()"> Women's Health </button>
+      <button type="button" [ngClass]="{'btns3': !health}" class="btn btns" (click)="healthCheck()"> Men's Health </button>
     </div>
-    <div class="col-12">
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="card" style="width:100%;border: 1px solid #dedcdc !important;">
-            <img class="card-img-top" src="../../../assets/booktests/img1.jpg" alt="Card image cap" style="height:200px;position: relative;">
-            <div class="asdd"> </div>
-            <!-- <div style="position: absolute;"></div> -->
-          <div class="card-body" style="margin-top: -80px;">
-            <h2 class="card-title" style="margin: 0px;">Young Indian Health Checkup</h2>
-            <p class="card-text">Ideal for individuals aged <span style="font-weight:600;font-size: 14px;"> 20 - 40 years</span> </p>
-            <button type="button" class="btn btns1">60 tests included</button>
-          </div>
-      <div class="card-footer text-muted" style="display: flex;justify-content: space-between;">
-        <div>
-        <p><span style="font-size: 20px;font-weight: 600;"> ₹ 749 </span> <span><s> ₹ 749  </s></span> <span style="color: #00a500;"> 35% off</span> </p>
-        <p style="color: #00a500;">+ 10% Health cashback* T&C</p>
-      </div>
-      <div>
-        <button class="btn btn-primary"> Book Now </button>
-      </div>
-      </div>
-    </div>
+    <div class="col-12" *ngIf="health">
+      <!-- <div class="row"> -->
+        <div class="row" style="position: absolute;z-index: 9;width: 100%;justify-content: space-between;top: 100px;">
+          <span  (click)="review321.prev()">
+            <i class="fa fa-chevron-circle-left fa-3x" aria-hidden="true">
+            </i>
+          </span>
+          <span  (click)="review321.next()">
+            <i class="fa fa-chevron-circle-right fa-3x" aria-hidden="true">
+            </i>
+          </span>
         </div>
-   
-      </div>
+        <owl-carousel-o [options]="customOptions321" #review321 >
+          <ng-template carouselSlide *ngFor="let slide of curosalArray" >
+            <div class="card card-style" >
+              <div class="card" style="width:100%;border: 1px solid #dedcdc !important;" >
+                <div style="height:175px;">
+                <img class="card-img-top" src="{{slide.image}}" alt="Card image cap" style="height:175px;">
+                <div class="asdd"> </div>
+               </div>
+                <!-- <div style="position: absolute;"></div> -->
+              <div class="card-body">
+                <h2 class="card-title" style="margin: 0px;font-weight: 600;">Young Indian Health Checkup</h2>
+                <p class="card-text">Ideal for individuals aged <span style="font-weight:600;font-size: 14px;"> 20 - 40 years</span> </p>
+                <button type="button" class="btn btns1" style="margin: 0px;">60 tests included</button>
+              </div>
+          <div class="card-footer">
+            <div class="row">
+              <div class="col-lg-8">
+                <div ><span style="font-size: 20px;font-weight: 600;"> ₹ 749 </span> <s> ₹ 749 </s><span style="color: #00a500;"> 35% off</span></div>
+                <p style="color: #4ece4e;"> + 10% Health cashback* T&C</p>
+              </div>
+              <div class="col-lg-4" style="display: flex; justify-content: center;">
+                <button class="btn btn-primary"> Book Now </button>
+              </div>
+            </div>
+            <!-- <div class="row">
+              <div class="col-lg-8">
+                <div style="font-size: 20px;font-weight: 600;"> ₹ 749 </span> <span><s> ₹ 749  </s></span> <span style="color: #00a500;"> 35% off</div>
+                  <p style="color: #00a500;"> + 10% Health cashback* T&C</p>
+
+              </div>
+              <div class="col-lg-4">
+                <button class="btn btn-primary"> Book Now </button>
+              </div>
+            </div> -->
+            <div>
+          </div>
+          <div>
+            
+          </div>
+          </div>
+        </div>
+            </div>
+          </ng-template>
+        </owl-carousel-o>
+    </div>
+    <div class="col-12" *ngIf="!health">
+        <div class="row" style="position: absolute;z-index: 9;width: 100%;justify-content: space-between;top: 100px;">
+          <span  (click)="review321a.prev()">
+            <i class="fa fa-chevron-circle-left fa-3x" aria-hidden="true">
+            </i>
+          </span>
+          <span  (click)="review321a.next()">
+            <i class="fa fa-chevron-circle-right fa-3x" aria-hidden="true">
+            </i>
+          </span>
+        </div>
+        <owl-carousel-o [options]="customOptions321" #review321a >
+          <ng-template carouselSlide *ngFor="let slide of curosalArray1" >
+            <div class="card card-style" >
+              <div class="card" style="width:100%;border: 1px solid #dedcdc !important;" >
+                <div style="height:175px;">
+                <img class="card-img-top" src="{{slide.image}}" alt="Card image cap" style="height:175px;">
+                <div class="asdd"> </div>
+               </div>
+                <!-- <div style="position: absolute;"></div> -->
+              <div class="card-body">
+                <h2 class="card-title" style="margin: 0px;font-weight: 600;">Young Indian Health Checkup</h2>
+                <p class="card-text">Ideal for individuals aged <span style="font-weight:600;font-size: 14px;"> 20 - 40 years</span> </p>
+                <button type="button" class="btn btns1" style="margin: 0px;">60 tests included</button>
+              </div>
+          <div class="card-footer">
+            <div class="row">
+              <div class="col-lg-8">
+                <div ><span style="font-size: 20px;font-weight: 600;"> ₹ 749 </span> <s> ₹ 749 </s><span style="color: #00a500;"> 35% off</span></div>
+                <p style="color: #4ece4e;"> + 10% Health cashback* T&C</p>
+              </div>
+              <div class="col-lg-4" style="display: flex; justify-content: center;">
+                <button class="btn btn-primary"> Book Now </button>
+              </div>
+            </div>
+            <!-- <div class="row">
+              <div class="col-lg-8">
+                <div style="font-size: 20px;font-weight: 600;"> ₹ 749 </span> <span><s> ₹ 749  </s></span> <span style="color: #00a500;"> 35% off</div>
+                  <p style="color: #00a500;"> + 10% Health cashback* T&C</p>
+
+              </div>
+              <div class="col-lg-4">
+                <button class="btn btn-primary"> Book Now </button>
+              </div>
+            </div> -->
+            <div>
+          </div>
+          <div>
+            
+          </div>
+          </div>
+        </div>
+            </div>
+          </ng-template>
+        </owl-carousel-o>
     </div>
   </div>
 </section>
@@ -466,7 +591,7 @@
   <div class="container">
 
     <div class="col-sm-12 col-md-12 col-lg-12">
-      <h2>Top booked Medical tests</h2>
+      <h2 style="font-weight: 600;">Top booked Medical tests</h2>
       <p class="mb-2">Get 10% Health Cashback * T&C</p>
      
         <div class="row" style="display: flex;justify-content: space-between;width: 100%;position:absolute;top:50%">
@@ -1146,37 +1271,53 @@
         </h2>
       </div>
       <div class="col-sm-12 col-md-12 col-lg-12 text-center m-2">
-        <owl-carousel-o [options]="customOptions4" #review3>
+        <div class="row disp" style="position: absolute;;width: 100%;justify-content: space-between;top: 20px;">
+          <span  (click)="reviewlast.prev()" style="z-index: 9;"> 
+            <i class="fa fa-chevron-circle-left fa-3x" aria-hidden="true">
+            </i>
+          </span>
+          <span  (click)="reviewlast.next()" style="z-index: 9;">
+            <i class="fa fa-chevron-circle-right fa-3x" aria-hidden="true">
+            </i>
+          </span>
+        </div>
+        <owl-carousel-o [options]="customOptions4" #reviewlast>
           <ng-template carouselSlide>
-            <p>
+            <div>
+            <p >
               Everything went very well and smoothly. Technician was right on
               time. Really happy with the service.
             </p>
             <p class="mt-4">Ashish Garnaik</p>
+          </div>
           </ng-template>
           <ng-template carouselSlide>
+            <div>
             <p>
               Good service, WhealthyLife is avoiding to stand in que for health
               checkup.
             </p>
             <p class="mt-4">Lalita Hegde</p>
+          </div>
           </ng-template>
           <ng-template carouselSlide>
+            <div>
             <p>
               Very professional phlebo. Excellent job in collecting the sample.
               No pain at all. Got my report also within 24 hours.
             </p>
             <p class="mt-4">Malathi Ganapathy</p>
+          </div>
           </ng-template>
         </owl-carousel-o>
-        <div class="row prev-next">
+        <!-- <div class="row prev-next">
           <div class="lhs" (click)="review3.prev()">
             <i class="fa fa-chevron-circle-left fa-3x" aria-hidden="true"></i>
           </div>
           <div class="rhs" (click)="review3.next()">
             <i class="fa fa-chevron-circle-right fa-3x" aria-hidden="true"></i>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
