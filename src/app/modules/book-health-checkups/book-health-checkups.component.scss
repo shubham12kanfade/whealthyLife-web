@@ -77,7 +77,7 @@ svg.bi.bi-arrow-left-circle-fill {
 
 }
 .font-change{
-  color: white;
+  color: black;
   font-weight: 600;
 }
 
@@ -99,14 +99,41 @@ svg.bi.bi-arrow-left-circle-fill {
 }
 
 .card-style1{
-  box-shadow:5px 5px 5px #ca2224 !important;
+  box-shadow:5px 5px 5px darkgray !important;
   border-radius:5px !important;
   position: relative;
   height: 200px;
-  width: 100%;
+  // width: 100%;
+  // margin: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #21ac0c;
-  // margin: 30px !important;
+  background-color: lightgray;
+  margin: 0px 20px; 
+  // margin-right: 50px;
+}
+
+.card-style2{
+  box-shadow:5px 5px 5px darkgray !important;
+  border-radius:5px !important;
+  // position: relative;
+  height: 200px;
+  // width: 100%;
+  // margin: 30px;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  background-color: lightgray;
+  margin: 0px 20px; 
+  // margin-right: 50px;
+}
+
+.heading-style{
+
+  position: absolute;
+  display: flex;
+  top:150px;
+  justify-content: center;
+  align-items: center;
+  width:100%
 }
