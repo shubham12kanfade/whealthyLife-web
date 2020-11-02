@@ -12,11 +12,11 @@
                             <h2 class=" font-weight-bold mb-0">
                                 Dr. {{profileData.firstName}} {{profileData.lastName}}</h2>
                             <p class="m-0">
-                                {{profileData.degree}} - {{profileData.specialitie}}
+                                {{profileData.degree}} - <span *ngFor="let item of profileData.specialitie">{{item.fullName}}</span>
                             </p>
                             <p>
 
-                                {{profileData.experience}} Years Experience Overall ({{profileData.experience}} years as specialist)
+                                {{profileData?.experience}} Years Experience Overall ({{profileData?.experience}} years as specialist)
                             </p>
                             <div class="row text-dark">
                                 <i class="fa fa-thumbs-up text-success p-1" aria-hidden="true"> 96% </i>
@@ -47,7 +47,7 @@
 </section>
 
 
-<section class="se2">
+<!-- <section class="se2">
     <div class="container cont1">
         <div class="col-12">
             <h2 class="hedi2">Description</h2>
@@ -56,7 +56,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
 <section style="">
     <div class="container">
