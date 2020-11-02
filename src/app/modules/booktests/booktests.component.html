@@ -17,7 +17,7 @@
         style="height:300px;" />
         <div class="row" style="position: absolute;">
           <div class="col-lg-6 col-md-8" style="margin:10px">
-            <h1 class="o-font-size--30 u-font-bold" style="text-align: center;">
+            <h1 class="o-font-size--30 u-font-bold" style="text-align: center;font-weight: 600;">
               Get lab tests and full body checkups from the comfort of your home.
             </h1>
             <span class="u-font-bold o-font-size--24 text-success">Upto 45% OFF</span>
@@ -31,10 +31,8 @@
           </div>
         </div>
       </div>
-
-
       <div class="row" style="margin-top: 30px;">
-        <h2>Top Booked Diagnostic Tests</h2>
+        <h2 style="font-weight: 600;">Top Booked Diagnostic Tests</h2>
         <div class="col-sm-12 col-md-12 col-lg-12 cen">
           <div class="row" style="position: absolute;z-index: 9;width: 100%;justify-content: space-between;top: 100px;">
             <span  (click)="review12.prev()">
@@ -151,9 +149,8 @@
           </div> -->
         </div>
       </div>
-
       <div class="row" style="margin-top: 30px;">
-        <h2>Health Checkups and Screenings For</h2>
+        <h2 style="font-weight: 600;">Health Checkups and Screenings For</h2>
         <div class="col-sm-12 col-md-12 col-lg-12 cen">
           <owl-carousel-o [options]="customOptions2" #review1>
             <ng-template carouselSlide>
@@ -215,7 +212,6 @@
           </div>
         </div>
       </div>
-
     </div>
   </div>
 </section>
@@ -422,10 +418,10 @@
   </div>
 </section> -->
 
-<section>
-  <div class="container-fluid">
-    <h2>Popular Health Checkup Packages</h2>
-    <div> 
+<section style="margin-top: 30px;">
+  <div class="container">
+    <h2 style="font-weight: 600;">Popular Health Checkup Packages</h2>
+    <div style="display: flex;"> 
       <button type="button" class="btn btns"> Featured Checkups </button>
       <button type="button" class="btn btns"> Women's Health </button>
       <button type="button" class="btn btns"> Men's Health </button>
@@ -433,17 +429,16 @@
     <div class="col-12">
       <div class="row">
         <div class="col-sm-4">
-          <div class="card" style="width:100%;">
-            <img class="card-img-top" src="../../../assets/booktests/img1.jpg" alt="Card image cap" style="height:200px;">
+          <div class="card" style="width:100%;border: 1px solid #dedcdc !important;">
+            <img class="card-img-top" src="../../../assets/booktests/img1.jpg" alt="Card image cap" style="height:200px;position: relative;">
+            <div class="asdd"> </div>
             <!-- <div style="position: absolute;"></div> -->
-          <div class="card-body">
+          <div class="card-body" style="margin-top: -80px;">
             <h2 class="card-title" style="margin: 0px;">Young Indian Health Checkup</h2>
             <p class="card-text">Ideal for individuals aged <span style="font-weight:600;font-size: 14px;"> 20 - 40 years</span> </p>
+            <button type="button" class="btn btns1">60 tests included</button>
           </div>
-      <div class="card-body">
-        <button type="button" class="btn btns1">60 tests included</button>
-      </div>
-      <div class="card-footer text-muted">
+      <div class="card-footer text-muted" style="display: flex;justify-content: space-between;">
         <div>
         <p><span style="font-size: 20px;font-weight: 600;"> ₹ 749 </span> <span><s> ₹ 749  </s></span> <span style="color: #00a500;"> 35% off</span> </p>
         <p style="color: #00a500;">+ 10% Health cashback* T&C</p>
