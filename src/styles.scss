@@ -65,7 +65,8 @@ $Praco-Site-theme: mat-light-theme($Praco-Site-primary, $Praco-Site-accent, $Pra
 /* You can add global styles to this file, and also import other style files */
 
 *{
-  font-family: Camphor,verdana !important;
+//   font-family: Camphor,verdana !important;
+font-family: FontAwesome !important;
 }
 
 .start-header {
