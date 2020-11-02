@@ -23,7 +23,7 @@
 .aduj1{
   background-color: #f3f3f3;
   padding-top: 60px;
-  height: 120vh;
+
 }
 .cad2{
   height: 235px;
@@ -211,7 +211,7 @@ b{
 }
 
 .scroll1{
-  height: 100vh;
+ 
   overflow: auto;
 }
 ::-webkit-scrollbar {
@@ -271,10 +271,8 @@ b{
   margin-top: 10px !important;
 }
 .mapimage {
-  // background-size: cover;
-  // background-repeat: no-repeat;
+ 
   width: auto;
-  height: 800px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -367,9 +365,10 @@ b{
   float: right;
 }
 
-// .list-group{
-//   display: none;
-// }
+.list-group{
+height: 87vh !important;
+overflow: auto;
+}
 
 .btn-secondary {
   background: #10185f !important;

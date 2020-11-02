@@ -21,7 +21,7 @@ export class BookappoimentComponent implements OnInit {
   ChatC: any;
   MedicineC: any;
   HealthcareProvidersC: any;
-  topFour: any;
+  topFour: any[];
   Countdata: any;
 
   constructor(public router: Router, private mapsAPILoader: MapsAPILoader,
