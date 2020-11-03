@@ -7,6 +7,7 @@ import { SharedModule } from '../../shared/shared.module';
 import { ChangePasswordComponent } from './change-password/change-password.component';
 import { ChartsComponent } from './charts/charts.component';
 // import { MyClinicComponent } from './my-clinic/my-clinic.component';
+import { NgxChartsModule }from '@swimlane/ngx-charts';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { ChartsComponent } from './charts/charts.component';
   imports: [
     CommonModule,
     DoctorDashbordRoutingModule,
-    SharedModule
+    SharedModule,
+    NgxChartsModule
   ]
 })
 export class DoctorDashbordModule { }

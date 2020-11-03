@@ -27,6 +27,7 @@
     "@fullcalendar/daygrid": "^4.4.0",
     "@fullcalendar/interaction": "^4.4.0",
     "@fullcalendar/timegrid": "^4.4.0",
+    "@swimlane/ngx-charts": "^16.0.0",
     "@types/opentok": "^2.9.0",
     "angular-animations": "0.0.10",
     "angular-ng-autocomplete": "^2.0.1",

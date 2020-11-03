@@ -22,10 +22,10 @@ export class DoctorDashbordComponent implements OnInit {
   }
 
   gotoTop() {
-    window.scroll({ 
-      top: 0, 
-      left: 0, 
-      behavior: 'smooth' 
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
     });
   }
 
@@ -33,10 +33,10 @@ export class DoctorDashbordComponent implements OnInit {
 getDoctordata(){
 this.mainService.getProfile().then((resData)=>{
 this.doctorInfo=resData.data
-  
+
 }).catch((error)=>{
 console.log("DoctorDashbordComponent -> getDoctordata -> error", error)
-  
+
 })
 
 }
