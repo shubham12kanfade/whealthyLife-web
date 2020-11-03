@@ -28,7 +28,7 @@
                 >
                   {{ street.degree }}
                 </mat-option>
-                
+
                 <mat-option (click)="AddDegree(box.value)" *ngIf="Degree.length == 0" [value]="box.value">{{box.value +" "}} Click to add Degree </mat-option>
               </mat-autocomplete>
             </div>
@@ -65,7 +65,8 @@
                 (click)="remDegree(fo)"
                 class="mx-2 float-right"
                 aria-label="Example icon button with a menu icon"
-              ></button>
+              >
+              <i class="fa fa-minus text-white" aria-hidden="true"></i></button>
               <button
                 mat-mini-fab
                 color="primary"
