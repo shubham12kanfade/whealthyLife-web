@@ -70,6 +70,7 @@ console.log("DoctorProfileComponent -> ngOnInit -> err", err)
 
 this.BookingPageService.getDoctorSlotId(this.id,{date: this.currentDate}).then((resData)=>{
   this.slot=resData.data
+  console.log("DoctorProfileComponent -> ngOnInit -> this.slot", this.slot)
 }).catch((err)=>{
 console.log("DoctorProfileComponent -> ngOnInit -> err", err)
 })
