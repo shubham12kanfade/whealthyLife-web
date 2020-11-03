@@ -7,6 +7,7 @@ import { ActivatedRoute } from "@angular/router";
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { FeedBackPopComponent } from '../feed-back-pop/feed-back-pop.component';
 import csc from 'country-state-city';
+import { CheckingPopupComponent } from './../checking-popup/checking-popup.component';
 
 @Component({
   selector: "app-doctor-profile",
@@ -37,11 +38,24 @@ export class DoctorProfileComponent implements OnInit {
     this.currentDate = new Date();
     console.log("DoctorProfileComponent -> this.currentDate", this.currentDate)
   }
-  openDialog(): void {
-    const dialogRef = this.dialog.open(FeedBackPopComponent, {
-      width: '250px',
+  // openDialog(): void {
+  //   const dialogRef = this.dialog.open(FeedBackPopComponent, {
+  //     width: '250px',
+  //   });
+  // }
+
+  openDialog() {
+    const dialogRef = this.dialog.open(CheckingPopupComponent);
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
     });
   }
+
+
+
+
+
 getCitys(id){
    const data=csc.getCityById(id)
    return data.name
