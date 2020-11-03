@@ -119,3 +119,13 @@
 .dropdown-item {
   cursor: pointer;
 }
+
+.fa-award-alt:before {
+  content: \f559;
+  font-family: "FontAwesome";
+  font-style: normal;
+}
+
+p {
+  font-family: Lato;
+}

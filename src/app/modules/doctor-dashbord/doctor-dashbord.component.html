@@ -85,7 +85,8 @@
                 </li>
                 <li style="font-size: large !important;" class=" nav-item active">
                     <a class="nav-link" RouterLink="/Doctor/Communications">
-                      <i class="fas fa-broadcast-tower" style="padding-right: 8px;"></i>
+                      <i class="fas fa-broadcast-tower"></i>
+                        <!-- <img src="../../../assets/img/broadcast-tower-solid.svg" style="padding-right: 8px; color: white;"> -->
                         <span>Communications</span></a>
                 </li>
                 <li style="font-size: large !important;" class=" nav-item active">
@@ -118,7 +119,7 @@
                 </li>
                 <li style="font-size: large !important;" class=" nav-item active">
                     <a class="nav-link" RouterLink="#">
-                        <i class="fas fa-fw fa-award-alt" style="padding-right: 8px;"></i>
+                        <i class="fa fa-award-alt" style="padding-right: 8px;"></i>
                         <span>Prime</span></a>
                 </li>
                 <li style="font-size: large !important;" class=" nav-item active">
@@ -336,6 +337,19 @@
             </div>
         </div>
     </div>
-</section>
 
+    <div style="display: block; height: 50%; width: 60%;
+      margin-left: 10%; margin-top: -33%; ">
+      <canvas baseChart
+      [datasets]="barChartData"
+      [labels]="barChartLabels"
+      [options]="barChartOptions"
+      [plugins]="barChartPlugins"
+      [legend]="barChartLegend"
+      [chartType]="barChartType"
+      >
+      </canvas>
+    </div>
+
+</section>
 

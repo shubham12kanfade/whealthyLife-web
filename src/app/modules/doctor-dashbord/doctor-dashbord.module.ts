@@ -8,6 +8,8 @@ import { ChangePasswordComponent } from './change-password/change-password.compo
 import { ChartsComponent } from './charts/charts.component';
 // import { MyClinicComponent } from './my-clinic/my-clinic.component';
 import { NgxChartsModule }from '@swimlane/ngx-charts';
+import { ChartsModule } from 'ng2-charts';
+
 
 
 @NgModule({
@@ -18,7 +20,8 @@ import { NgxChartsModule }from '@swimlane/ngx-charts';
     CommonModule,
     DoctorDashbordRoutingModule,
     SharedModule,
-    NgxChartsModule
+    NgxChartsModule,
+    ChartsModule
   ]
 })
 export class DoctorDashbordModule { }
