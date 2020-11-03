@@ -35,7 +35,7 @@ import { MultiSelectModule } from 'primeng/multiselect';
 import {AutoCompleteModule} from 'primeng/autocomplete';
 import { NgxMatSelectSearchModule } from 'ngx-mat-select-search';
 import {MatIconModule} from '@angular/material/icon';
-
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 // const material = [
 //   CommonModule,
 //   MatTabsModule,
@@ -108,7 +108,8 @@ import {MatIconModule} from '@angular/material/icon';
     NgxMatSelectSearchModule,
     MatOptionModule,
     MultiSelectModule,
-    AutoCompleteModule
+    AutoCompleteModule,
+    MatSnackBarModule
   ],
   exports: [
     CommonModule,
@@ -145,7 +146,8 @@ import {MatIconModule} from '@angular/material/icon';
     MatOptionModule,
     MultiSelectModule,
     AutoCompleteModule,
-    NgxMatSelectSearchModule
+    NgxMatSelectSearchModule,
+    MatSnackBarModule
   ]
 })
 export class SharedModule { }
