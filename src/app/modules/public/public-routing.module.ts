@@ -1,3 +1,4 @@
+import { BookingAuthGuard } from './../../guard/booking-auth.guard';
 import { PrivcyPolicyComponent } from './privcy-policy/privcy-policy.component';
 import { MyAppointmentsComponent } from './../../component/my-appointments/my-appointments.component';
 import { ForgotPasswordComponent } from './../../component/forgot-password/forgot-password.component';
@@ -19,8 +20,8 @@ const routes: Routes = [
       { path: 'register', component: RegisterComponent },
       { path: 'doctor_signup', component: DoctorRegisterComponent },
       { path: 'verify_otp/:mobile', component: VerifyOtpComponent },
-      { path: 'doctors', loadChildren: () => import('../../modules/doctors/doctors.module').then(dd => dd.DoctorsModule) },
-      { path: 'doctors/:id', loadChildren: () => import('../../modules/doctors/doctors.module').then(dd => dd.DoctorsModule) },
+      { path: 'doctors', loadChildren: () => import('../../modules/doctors/doctors.module').then(dd => dd.DoctorsModule) ,canActivate:[BookingAuthGuard]},
+      { path: 'doctors/:id', loadChildren: () => import('../../modules/doctors/doctors.module').then(dd => dd.DoctorsModule) ,canActivate:[BookingAuthGuard]},
       { path: 'accounts', loadChildren: () => import('../../modules/user-accounts/user-accounts.module').then(us => us.UserAccountsModule) },
       { path: 'contact', loadChildren: () => import('../../modules/contact-us/contact-us.module').then(c => c.ContactUsModule) },
       { path: 'about', loadChildren: () => import('../../modules/about/about.module').then(a => a.AboutModule) },

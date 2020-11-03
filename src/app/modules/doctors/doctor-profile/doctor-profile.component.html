@@ -5,12 +5,8 @@
         <div class="card mb-3">
           <div class="row no-gutters">
             <div class="col-md-2 p-2 img">
-              <img
-                [src]="profileData?.avatar"
-                onerror="this.src='../assets/img/user.jpeg'"
-                class="card-img"
-                alt="..."
-              />
+              <img [src]="profileData?.avatar" onerror="this.src='../assets/img/user.jpeg'" class="card-img"
+                alt="..." />
             </div>
             <div class="col-md-10">
               <div class="card-body mr-3">
@@ -41,10 +37,7 @@
                 </div>
 
                 <div class="row text-dark">
-                  <i
-                    class="fa fa-thumbs-up text-success p-1"
-                    aria-hidden="true"
-                  >
+                  <i class="fa fa-thumbs-up text-success p-1" aria-hidden="true">
                     96%
                   </i>
                   <p>(3673 votes)</p>
@@ -72,38 +65,26 @@
         </div>
         <ul>
           <li>
-            <div
-              class="a font-weight-bold mcursor"
-              [ngClass]="{ selectActive: active == 'Info' }"
-              (click)="activefn('Info')"
-            >
+            <div class="a font-weight-bold mcursor" [ngClass]="{ selectActive: active == 'Info' }"
+              (click)="activefn('Info')">
               Info
             </div>
           </li>
           <li>
-            <div
-              class="a font-weight-bold mcursor"
-              [ngClass]="{ selectActive: active == 'Feedback' }"
-              (click)="activefn('Feedback')"
-            >
+            <div class="a font-weight-bold mcursor" [ngClass]="{ selectActive: active == 'Feedback' }"
+              (click)="activefn('Feedback')">
               Feedback
             </div>
           </li>
           <li>
-            <div
-              class="a font-weight-bold mcursor"
-              [ngClass]="{ selectActive: active == 'Consult' }"
-              (click)="activefn('Consult')"
-            >
+            <div class="a font-weight-bold mcursor" [ngClass]="{ selectActive: active == 'Consult' }"
+              (click)="activefn('Consult')">
               Consult
             </div>
           </li>
           <li>
-            <div
-              class="a font-weight-bold mcursor"
-              [ngClass]="{ selectActive: active == 'Q&AHealthfeed' }"
-              (click)="activefn('Q&AHealthfeed')"
-            >
+            <div class="a font-weight-bold mcursor" [ngClass]="{ selectActive: active == 'Q&AHealthfeed' }"
+              (click)="activefn('Q&AHealthfeed')">
               Q&AHealthfeed
             </div>
           </li>
@@ -115,15 +96,14 @@
                 <div class="card-body ml-3 mr-3">
                   <div class="row text-dark">
                     <p class="pl-1 pt-2 font-weight-bold">
-                        {{  getCitys(profileData?.location?.city) }} ,  {{  getStates(profileData?.location?.state) }} , {{  getCountrys(profileData?.location?.country) }} 
+                      {{  getCitys(profileData?.location?.city) }} , {{  getStates(profileData?.location?.state) }} ,
+                      {{  getCountrys(profileData?.location?.country) }}
                     </p>
                   </div>
                   <div class="row">
                     <div class="col-sm-12 col-md-4">
                       <div class="row text-dark">
-                        <p
-                          class="pl-1 pt-2 font-weight-bold text-left mcursor text-info text-decoration-underline"
-                        >
+                        <p class="pl-1 pt-2 font-weight-bold text-left mcursor text-info text-decoration-underline">
                           32 Smiles Multispeciality Dental Clinic
                         </p>
                       </div>
@@ -143,7 +123,9 @@
                       </div>
                       <div class="row">
                         <p class="text-left pr-3 text-dark fontsizesmall">
-                           {{profileData?.location?.address}} {{profileData?.location?.landmark}}    {{  getCitys(profileData?.location?.city) }} ,  {{  getStates(profileData?.location?.state) }} , {{  getCountrys(profileData?.location?.country) }}  {{profileData?.location?.pincode}}
+                          {{profileData?.location?.address}} {{profileData?.location?.landmark}}
+                          {{  getCitys(profileData?.location?.city) }} , {{  getStates(profileData?.location?.state) }}
+                          , {{  getCountrys(profileData?.location?.country) }} {{profileData?.location?.pincode}}
                         </p>
                       </div>
                       <div class="row">
@@ -173,10 +155,7 @@
                       </div>
                       <div class="row">
                         <p class="font-weight-bold checkprime">Prime</p>
-                        <i
-                          class="fa fa-check-circle p-1 checkprime"
-                          aria-hidden="true"
-                        ></i>
+                        <i class="fa fa-check-circle p-1 checkprime" aria-hidden="true"></i>
                         <p class="checkprime">
                           Max. 15 mins wait + Verified details
                         </p>
@@ -185,7 +164,7 @@
                   </div>
                 </div>
 
-            
+
               </div>
             </div>
           </div>
@@ -250,15 +229,9 @@
                         <p class="line-height">
                           Happy with:
                           <span class="feedback__context">Doctor</span>
-                          <span class="feedback__context"
-                            >friendlinessExplanation of the health issue</span
-                          >
-                          <span class="feedback__context"
-                            >Treatment satisfactionValue</span
-                          >
-                          <span class="feedback__context"
-                            >for moneyWait time</span
-                          >
+                          <span class="feedback__context">friendlinessExplanation of the health issue</span>
+                          <span class="feedback__context">Treatment satisfactionValue</span>
+                          <span class="feedback__context">for moneyWait time</span>
                         </p>
                       </div>
                       <div class="row">
@@ -332,10 +305,7 @@
                     <h3>Services</h3>
 
                     <div class="row border-bottom pb-2">
-                      <div
-                        class="col-sm-12 col-md-6 col-lg-4 b"
-                        *ngFor="let pro of profileData['specialitie']"
-                      >
+                      <div class="col-sm-12 col-md-6 col-lg-4 b" *ngFor="let pro of profileData['specialitie']">
                         <li>{{ pro.fullName }}</li>
                       </div>
                     </div>
@@ -344,10 +314,7 @@
                       <div class="col-sm-12 col-md-6">
                         <h3>Specializations</h3>
                         <div class="row  pb-2">
-                          <div
-                            class="col-sm-12 b"
-                            *ngFor="let pro of profileData['specialitie']"
-                          >
+                          <div class="col-sm-12 b" *ngFor="let pro of profileData['specialitie']">
                             <li>{{ pro.fullName }}</li>
                           </div>
                         </div>
@@ -373,10 +340,7 @@
                       <div class="col-sm-12 col-md-6 b">
                         <h3>Membership</h3>
                         <div class="row pb-2">
-                          <div
-                            class="col-sm-12 b"
-                            *ngFor="let pro of memberShip"
-                          >
+                          <div class="col-sm-12 b" *ngFor="let pro of memberShip">
                             <li>{{ pro?.membershipId?.descrioton }}</li>
                           </div>
                         </div>
@@ -455,15 +419,9 @@
                       <p class="line-height">
                         Happy with:
                         <span class="feedback__context">Doctor</span>
-                        <span class="feedback__context"
-                          >friendlinessExplanation of the health issue</span
-                        >
-                        <span class="feedback__context"
-                          >Treatment satisfactionValue</span
-                        >
-                        <span class="feedback__context"
-                          >for moneyWait time</span
-                        >
+                        <span class="feedback__context">friendlinessExplanation of the health issue</span>
+                        <span class="feedback__context">Treatment satisfactionValue</span>
+                        <span class="feedback__context">for moneyWait time</span>
                       </p>
                     </div>
                     <div class="row">
@@ -537,11 +495,8 @@
         </div>
         <div class="card mb-3" *ngIf="active == 'Q&AHealthfeed'">
           <div class="card p-2">
-            <img
-              class="card-img-top"
-              src="https://www.practostatic.com/fit/a0684ea161613c0e81938d5b4ead63f4f8a82a99"
-              alt="Card image cap"
-            />
+            <img class="card-img-top" src="https://www.practostatic.com/fit/a0684ea161613c0e81938d5b4ead63f4f8a82a99"
+              alt="Card image cap" />
             <div class="card-body">
               <h3>Myths and Facts About Orthodontic (Braces) Treatment</h3>
               <p class="card-text">
@@ -553,12 +508,9 @@
               </p>
             </div>
             <div class="row m-2">
-              <a
-                data-qa-id="healthfeed-article-continue"
-                target="_blank"
+              <a data-qa-id="healthfeed-article-continue" target="_blank"
                 href="https://www.practo.com/healthfeed/myths-and-facts-about-orthodontic-braces-treatment-28848/post"
-                class="u-primary-text u-d-block"
-              >
+                class="u-primary-text u-d-block">
                 Continue Reading
               </a>
             </div>
@@ -574,7 +526,7 @@
             <p class="text-right pr-2 pl-2 text-danger">Report an Error</p>
           </div>
         </div>
-       
+
       </div>
       <div class="col-sm-12 col-md-4 mt-5">
         <div class="bg-white mb-3">
@@ -582,11 +534,8 @@
             <div class="col-sm-12">
               <div class="row">
                 <div class="col-2">
-                  <img
-                    src="//www.practostatic.com/web-assets/images/direct_consult.520d47dbea81.svg"
-                    class="m-auto p-2"
-                    data-reactid="187"
-                  />
+                  <img src="//www.practostatic.com/web-assets/images/direct_consult.520d47dbea81.svg" class="m-auto p-2"
+                    data-reactid="187" />
                 </div>
                 <div class="col-7 font-sizex-smalll text-dark p-2">
                   VIDEO CONSULTATION
@@ -596,59 +545,18 @@
                 </div>
               </div>
               <mat-tab-group mat-stretch-tabs class="example-stretched-tabs">
-                <div *ngFor="let slo of slot">
-                  <mat-tab [label]="slo.day">
-                    <div class="container">
-                      <div class="row heightover">
-                        <div class="col-sm-12">
-                          <div class="row">
-                            <div class="col-sm-12">
-                              <h4 class="font-weight-bold mb-1">
-                                Evening(1 slot)
-                              </h4>
-                            </div>
-                          </div>
-                          <div class="row">
-                            <div
-                              *ngFor="
-                                let eveS of slo.eveningSlots;
-                                let i = index
-                              "
-                              class="col-3"
-                            >
-                              <div class="btn btn-outline-light mt-1 mb-1">
-                                {{ eveS?.strtTime }}
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-sm-12">
-                            <h4 class="font-weight-bold mb-1">
-                              Mrning(1 slot)
-                            </h4>
-                          </div>
-                          <div class="row">
-                            <div
-                              *ngFor="
-                                let mornS of slo.mrningSlots;
-                                let i = index
-                              "
-                              class="col-3"
-                            >
-                              <div class="btn btn-outline-light mt-1 mb-1">
-                                {{ mornS?.strtTime }}
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </mat-tab>
+                <div>
+                 
+                    <mat-tab label="First"> Content 1 </mat-tab>
+                    <mat-tab label="Second"> Content 2 </mat-tab>
+                    <mat-tab label="Third"> Content 3 </mat-tab>
+                 
                 </div>
               </mat-tab-group>
             </div>
           </div>
         </div>
-      
+
       </div>
     </div>
   </div>

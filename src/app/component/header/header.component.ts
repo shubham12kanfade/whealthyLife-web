@@ -5,6 +5,11 @@ import { UserService } from 'src/app/services/user.service';
 import { Router } from '@angular/router';
 // import io from 'socket.io-client';
 import { MessageService } from 'primeng/api';
+import {
+  MatSnackBar,
+  MatSnackBarHorizontalPosition,
+  MatSnackBarVerticalPosition,
+} from '@angular/material/snack-bar';
 
 
 @Component({
@@ -20,11 +25,20 @@ export class HeaderComponent implements OnInit {
   constructor(public userService: UserService,
     public router: Router,
     public messageService: MessageService,
-    private MainService:MainService
-
+    private MainService:MainService,
+    private _snackBar: MatSnackBar
   ) {
     this.checkLogin()
  
+    this._snackBar.open('Please Login', '', {
+      duration: 500,
+      horizontalPosition: 'right',
+      verticalPosition:'top',
+      panelClass: ['redNoMatch']
+
+    });
+  
+  
   }
 
 
@@ -43,8 +57,12 @@ export class HeaderComponent implements OnInit {
     this.userInfo = this.userService.getUserInfo();
   }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.router.events.subscribe((resData)=>{
+    console.log("HeaderComponent -> ngOnInit -> resData", resData)
+ 
 
+    })
 
 this.getProfileOnline();
 
@@ -86,7 +104,7 @@ this.MainService.getProfile().then((resData)=>{
     })
   }
 
-
+  NavigationCancel
 
   clear() {
     this.messageService.clear('myKey2');
