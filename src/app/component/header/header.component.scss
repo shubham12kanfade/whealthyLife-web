@@ -1133,3 +1133,11 @@ b {
 .constC{
   color: dodgerblue;
 }
+::ng-deep .redNoMatch
+{
+  font-size: 30px !important;
+  color:white;
+  background: #F44336 !important;
+ 
+}
+

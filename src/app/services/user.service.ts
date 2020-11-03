@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
@@ -8,7 +9,7 @@ import { BehaviorSubject } from 'rxjs';
 export class UserService {
   userInfo = new BehaviorSubject(null);
 
-  constructor(public storage: CookieService) { }
+  constructor(public storage: CookieService,public Router:Router) { }
 
   addUserInfo(data) {
     this.storage.set('userInfo_WhealthyLife', JSON.stringify(data));
@@ -49,5 +50,6 @@ export class UserService {
   logOut() {
     this.storage.deleteAll();
     this.userInfo.next(null);
+    this.Router.navigate([""])
   }
 }
