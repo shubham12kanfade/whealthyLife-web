@@ -65,6 +65,21 @@ export class DoctorsComponent implements OnInit {
       console.log("DoctorsComponent -> getDoctorList -> error", error);
     })
   }
+
+    getfreeDocList(){
+ 
+this.consultationService.getDoctFree().then((resData)=>{
+console.log("DoctorsComponent -> getfreeDocList -> resData", resData)
+  
+}).catch((err)=>{
+console.log("DoctorsComponent -> getfreeDocList -> err", err)
+  
+})
+     
+    }
+
+
+
   clear() {ActivatedRoute
     this.messageService.clear('myKey1');
 }
@@ -101,7 +116,16 @@ export class DoctorsComponent implements OnInit {
     
       this.DocID= params['id'];
       // console.log("DoctorsComponent -> ngOnInit -> this.DocID++++++++++++++++++++++++", this.DocID)
+      const free="free"
+    if(this.DocID==free.toString)
+      {
+        this.getfreeDocList()
+      }
       this.getDoctorList()
+    
+    
+    
+    
     })
   }
   showtime(doctor) {
