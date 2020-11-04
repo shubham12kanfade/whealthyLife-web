@@ -1,0 +1,266 @@
+<h2 mat-dialog-title> Slot Booking </h2>
+<mat-dialog-content class="mat-typography">
+
+  <mat-card style="margin-bottom: 20px;">
+      <div class="container-fluid">
+        <h2>Doctor Information</h2>
+          <div class="row">
+              <div class="col-lg-3">
+                  <div class="row">
+                      <div class="col-lg-12" style="display: flex;justify-content: center;">
+                        <img src="../../../../assets/images/doc2.jpg" class="img-set1" >
+                      </div>
+                      <div class="col-lg-12" >
+                        <h3 style="margin: 0px;text-align: center;font-weight: 600;">Dr. {{profileData?.firstName}} {{profileData?.lastName}}</h3>
+                         <div style="text-align: center;"><span style="font-size: 12px" *ngFor="let deg of degree">
+                          {{ deg.degree }}
+                        </span> </div>
+                        </div>
+                    </div>
+              </div>
+              <div class="col-lg-3">
+                <h3 style="font-weight: 600;text-align: center;"> Specialization In</h3>
+                <div style="text-align: center;" *ngFor="let prospec of profileData?.specialitie">{{
+                  prospec?.fullName + ", "
+                }}</div>
+              </div>
+              <div class="col-lg-3" style="font-size: 14px;">
+                <h3 style="font-weight: 600;text-align: center;">Doctor Fee : ₹ {{profileData?.fees}} </h3>
+                <p style="text-align: center;">
+                    <i class="fa fa-thumbs-up" style="font-size:18px;color:#01a400"></i> 96% (3673 Votes)
+                </p>
+                <h3 style="text-align: center;"> <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                </h3>
+            </div>
+              <div class="col-lg-3">
+                  <h3 style="text-align: center;font-weight: 600; text-align: center;">Address</h3>
+                  {{profileData?.location?.address}} {{profileData?.location?.city}} {{profileData?.location?.country}}
+                  {{profileData?.location?.landmark}} {{profileData?.location?.state}} {{profileData?.location?.pincode}}
+            </div>
+          </div>
+      </div>
+  </mat-card>
+
+
+  <mat-card style="margin-bottom: 20px;">
+      <div class="container-fluid">
+        <h2 >Patient Information</h2>
+          <div class="row">
+              <div class="col-lg-3">
+                  <div class="row">
+                      <div class="col-lg-12" style="display: flex;justify-content: center;">
+                        <img src="../../../../assets/images/images-dweb_top_banner - Copy.png" class="img-set1" >
+                      </div>
+                      <div class="col-lg-12" >
+                        <h3 style="margin: 0px;text-align: center;font-weight: 600;">{{CURUser?.firstName}} {{CURUser?.lastName}} </h3>
+                         <div style="text-align: center;"> patient</div>
+                        </div>
+                    </div>
+
+              </div>
+              <div class="col-lg-4">
+                <h3 style="font-weight: 600;text-align: center;"> Contact Detail</h3>
+                <div style="text-align: center;">{{ CURUser?.mobileNumber}} </div>
+                <div style="text-align: center;"> Email :{{ CURUser?.email }} </div>
+              </div>
+              <div class="col-lg-5">
+                  <h3 style="text-align: center;font-weight: 600; text-align: center;">Address</h3>
+                  {{CURUser?.location?.address}} {{CURUser?.location?.landmark}} {{CURUser?.location?.country}}
+                  {{CURUser?.location?.state}} {{CURUser?.location?.city}} {{CURUser?.location?.pincode}}
+            </div>
+          </div>
+      </div>
+  </mat-card>
+
+
+  <mat-card>
+      <div class="container-fluid">
+        <h2>Slot Information</h2>
+          <div class="row">
+              <div class="col-lg-4">
+                <h3>Date :- 23/10/2020 </h3>
+              </div>
+              <div class="col-lg-4">
+                <h3>Time :- 11:00 AM </h3>
+              </div>
+              <div class="col-lg-4">
+                <h3>Duration :- 30 min </h3>
+            </div>
+          </div>
+      </div>
+  </mat-card>
+
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Book</button>
+</mat-dialog-actions>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div mat-dialog-title style="width:120vh">
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="row">
+                <div class="col-sm-4">
+                    <img src="../../../../assets/images/doc2.jpg" class="img-set1" >
+                </div>
+                <div class="col-sm-8">
+                    <div style="font-size: 18px;">
+                        Dr. Sunita Deshpande
+                    </div>
+                    <div style="font-size: 14px;">
+                        MBBS , M.D
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-sm-5 offset-sm-1" style="font-size: 14px;line-height: 20px;">
+            Mauli Clinic Moti Nagar, Amravati Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <i class="fa fa-thumbs-up" style="font-size:18px;color:#01a400"></i> 96% (3673 Votes)
+        </div>
+        <div class="col-4" style="display: flex;justify-content: center;align-items: center;">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+        </div>
+        <div class="col-4"  style="display: flex;justify-content: center;font-size: 18px;align-items: center;">
+            Doctor Fee : ₹ 500
+        </div>
+    </div>
+</div>
+
+<mat-dialog-content class="mat-typography" style="border:5px solid #ececec !important;width:120vh">
+
+
+
+
+
+
+
+    <div class="row" style="margin-bottom: 20px;">
+    <div class="col-sm-6">
+        <div style="display: flex;justify-content: center;">
+            <h3 style="font-weight: 600;margin: 0px;" > Services </h3>
+        </div>
+        <div class="row">
+           <div class="col-6">
+            specialization 3
+           </div>
+           <div class="col-6">
+            specialization 1
+           </div>
+           <div class="col-6">
+            specialization 3
+           </div>
+           <div class="col-6">
+            specialization 1
+        </div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div style="display: flex;justify-content: center;">
+            <h3 style="font-weight: 600;margin: 0px" > Specializations </h3>
+        </div>
+        <div class="row">
+           <div class="col-6">
+            specialization 3
+           </div>
+           <div class="col-6">
+            specialization 1
+           </div>
+           <div class="col-6">
+            specialization 3
+           </div>
+           <div class="col-6">
+            specialization 1
+        </div>
+        </div>
+    </div>
+</div>
+<div class="row" style="margin-bottom: 20px;">
+    <div class="col-sm-12">
+        <h3 style="text-align: center;font-weight: 600;margin: 0px"> Awards and Recognitions:</h3>
+        <div class="row">
+           <div class="col-4">
+            specialization 3
+           </div>
+           <div class="col-4">
+            specialization 1
+           </div>
+           <div class="col-4">
+            specialization 3
+           </div>
+           <div class="col-4">
+            specialization 1
+        </div>
+        </div>
+    </div>
+</div>
+<div class="row" style="margin-bottom: 20px;">
+    <div class="col-sm-6">
+        <div style="display: flex;justify-content: center;">
+            <h3 style="font-weight: 600;margin: 0px" > Membership </h3>
+        </div>
+        <div class="row">
+           <div class="col-6">
+            specialization 3
+           </div>
+           <div class="col-6">
+            specialization 1
+           </div>
+           <div class="col-6">
+            specialization 3
+           </div>
+           <div class="col-6">
+            specialization 1
+        </div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div style="display: flex;justify-content: center;">
+            <h3 style="font-weight: 600;margin: 0px" > Education </h3>
+        </div>
+        <div class="row">
+           <div class="col-12">
+            specialization 3
+           </div>
+           <div class="col-12">
+            specialization 1
+           </div>
+           <div class="col-12">
+            specialization 3
+           </div>
+           <div class="col-12">
+            specialization 1
+        </div>
+        </div>
+    </div>
+</div>
+
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+</mat-dialog-actions> -->
