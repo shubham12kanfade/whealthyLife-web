@@ -15,11 +15,7 @@
             <div class="col-md-10">
               <div class="card-body mr-3">
                 <div class="row text-dark mb-0">
-<<<<<<< HEAD
-                  <h2 class="font-weight-bold mb-0" style="cursor: pointer">
-=======
                   <h2 class="font-weight-bold mb-0"  style="cursor: pointer;" (click)="openDialog()">
->>>>>>> 2be67bbe98641ad0007f6d543d5c4cb82c048736
                     Dr. {{ profileData?.firstName }} {{ profileData?.lastName }}
                     <span style="font-size: 12px" *ngFor="let deg of degree">
                       {{ deg.degree }}
@@ -207,11 +203,7 @@
                 <div class="card-body ml-3 mr-3">
               
                   <hr />
-<<<<<<< HEAD
                   <div class="row border-bottom my-2" *ngFor="let item of review |slice:1:2">
-=======
-                  <div class="row"  *ngFor="let item of review">
->>>>>>> 2be67bbe98641ad0007f6d543d5c4cb82c048736
                     <div class="col-2">
                       <div class="rounded-circle p-2 feebbackpro">
                         {{item?.userId?.firstName.charAt(0) | uppercase}}
@@ -227,10 +219,6 @@
                         </p>
                       </div>
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 2be67bbe98641ad0007f6d543d5c4cb82c048736
                       <div class="row">
                         <p>
                           {{ item?.review }}
@@ -259,11 +247,7 @@
           </div>
           <div class="card mb-3 mt-2" *ngIf="Qa.length!=0">
             <div class="row no-gutters">
-<<<<<<< HEAD
               <div class="col-md-12" *ngFor="let item of Qa |slice:1">
-=======
-              <div class="col-md-12" *ngFor="let item of Qa">
->>>>>>> 2be67bbe98641ad0007f6d543d5c4cb82c048736
                 <div class="card-body">
                   <div class="row">
                     <div class="col-2"><span class="dentist-icon"></span></div>
@@ -365,7 +349,6 @@
           </div>
         </div>
         <div class="card mb-3" *ngIf="active == 'Feedback'">
-<<<<<<< HEAD
           <div class="card mb-3 mt-2" *ngIf="review.length!=0">
             <div class="row no-gutters">
               <div class="col-md-12">
@@ -377,51 +360,6 @@
                       <div class="rounded-circle p-2 feebbackpro">
                         {{item?.userId?.firstName.charAt(0) | uppercase}}
                       </div>
-=======
-          <div class="row no-gutters">
-            <div class="col-md-12">
-              <div class="card-body ml-3 mr-3">
-
-                <hr />
-                <div class="row">
-                  <div class="col-2">
-                    <div class="rounded-circle p-2 feebbackpro">N</div>
-                  </div>
-                  <div class="col-8">
-                    <div class="row">
-                      <p>Nisha86 (Verified)</p>
-                    </div>
-                    <div class="row">
-                      <p class="h5 m-0 text-dark pl-1 pt-2 font-weight-bold">
-                        Visited For Tooth Extraction
-                      </p>
-                    </div>
-                    <div class="row">
-                      <p>
-                        <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>I
-                        recommend the doctor
-                      </p>
-                    </div>
-                    <div class="row">
-                      <p class="line-height">
-                        Happy with:
-                        <span class="feedback__context">Doctor</span>
-                        <span class="feedback__context">friendlinessExplanation of the health issue</span>
-                        <span class="feedback__context">Treatment satisfactionValue</span>
-                        <span class="feedback__context">for moneyWait time</span>
-                      </p>
-                    </div>
-                    <div class="row">
-                      <p>
-                        We as a family, have been visiting Dr. Pujari for
-                        different issues over the years. Based on our positive
-                        experience everytime, we now have complete faith in him.
-                        Because of a large number of cases he handles everyday,
-                        he is very well experienced and quite adept in all the
-                        procedures that are done in his clinic. Wish him and his
-                        team all the best!
-                      </p>
->>>>>>> 2be67bbe98641ad0007f6d543d5c4cb82c048736
                     </div>
                     <div class="col-8">
                       <div class="row">
@@ -573,13 +511,8 @@
                           </div>
                           <div class="row">
                             <div *ngFor="let mor of item.mrningSlots">
-<<<<<<< HEAD
                               <div class="col-3 p-0">
                                 <div class="btn border m-2">
-=======
-                              <div class="col-3">
-                                <div class="btn btn-outline-light mt-1 mb-1" >
->>>>>>> 2be67bbe98641ad0007f6d543d5c4cb82c048736
                                   {{ mor.strtTime }}
                                 </div>
                               </div>
@@ -623,13 +556,8 @@
                           </div>
                           <div class="row">
                             <div *ngFor="let mor of item.mrningSlots">
-<<<<<<< HEAD
                               <div class="col-3 p-0">
                                 <div class="btn border m-2">
-=======
-                              <div class="col-3">
-                                <div class="btn btn-outline-light mt-1 mb-1" >
->>>>>>> 2be67bbe98641ad0007f6d543d5c4cb82c048736
                                   {{ mor.strtTime }}
                                 </div>
                               </div>
@@ -647,13 +575,8 @@
                           </div>
                           <div class="row">
                             <div *ngFor="let eve of item.eveningSlots">
-<<<<<<< HEAD
                               <div class="col-3 p-0">
                                 <div class="btn border m-2">
-=======
-                              <div class="col-3">
-                                <div class="btn btn-outline-light mt-1 mb-1" >
->>>>>>> 2be67bbe98641ad0007f6d543d5c4cb82c048736
                                   {{ eve.strtTime }}
                                 </div>
                               </div>
