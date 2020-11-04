@@ -1,3 +1,4 @@
+import { ApiCallService } from './api/apicall.service';
 import { Router } from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';
 import { Injectable } from '@angular/core';
@@ -52,4 +53,8 @@ export class UserService {
     this.userInfo.next(null);
     this.Router.navigate([""])
   }
+
+
+
+
 }

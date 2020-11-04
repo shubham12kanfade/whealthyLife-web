@@ -621,12 +621,6 @@ body {
   font-style: normal;
 }
 
-.fa-award-alt:before {
-  content: "\f559";
-  font-family: "FontAwesome" !important;
-  font-style: normal;
-}
-
 .fa-chart-area:before {
   content: "\f1fe";
   font-family: "FontAwesome" !important;
@@ -642,9 +636,11 @@ body {
 .fa-tachometer:before {
   content: \f625;
   font-family: "FontAwesome";
+  font-style: normal;
 }
 
 .fa-broadcast-tower:before {
-  content: "\f519";
+  content: \f519;
   font-family: "FontAwesome";
+  font-style: normal;
 }

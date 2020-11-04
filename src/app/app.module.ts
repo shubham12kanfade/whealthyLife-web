@@ -1,3 +1,4 @@
+import { SharedModule } from 'src/app/shared/shared.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -23,6 +24,7 @@ import { ToastModule } from 'primeng/toast';
 
 
 
+
 const config = new AuthServiceConfig([
 
   {
@@ -44,6 +46,7 @@ export function provideConfig() {
     MyAppointmentsComponent,
     DesignComponent,
     NotificationPopupComponent,
+
   ],
   imports: [
     SocialLoginModule,
@@ -56,7 +59,7 @@ export function provideConfig() {
     AutocompleteLibModule,
     HttpClientModule,
     ToastModule,
-   
+
     AgmCoreModule.forRoot()
   ],
 
