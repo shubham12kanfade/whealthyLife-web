@@ -135,13 +135,9 @@
                       <div class="row">
                         <div class="starbgandcolor p-1" title="5">
                           <div class="">
-                            <span class="">5.0</span>
-                            <span class="">
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
+                            <span class=""> {{getNumberASRound(avgStar?.AverageStars)}} </span>
+                            <span class="" >
+                              <i *ngFor="let qwe of avgStar?.AverageStars.toFixed()" class="fa fa-star"></i>
                             </span>
                           </div>
                         </div>
@@ -197,7 +193,7 @@
               </div>
             </div>
           </div>
-          <div class="card mb-3 mt-2" *ngIf="review.length!=0">
+          <div class="card mb-3 mt-2" *ngIf="review?.length!=0">
             <div class="row no-gutters">
               <div class="col-md-12">
                 <div class="card-body ml-3 mr-3">
@@ -215,7 +211,7 @@
                       </div>
                       <div class="row">
                         <p class="h5 m-0 text-dark pl-1 pt-2 font-weight-bold">
-                          Visited For Tooth Extraction
+                         {{item?.title | titlecase}}
                         </p>
                       </div>
 
@@ -245,7 +241,7 @@
               </div>
             </div>
           </div>
-          <div class="card mb-3 mt-2" *ngIf="Qa.length!=0">
+          <div class="card mb-3 mt-2" *ngIf="Qa?.length!=0">
             <div class="row no-gutters">
               <div class="col-md-12" *ngFor="let item of Qa |slice:1">
                 <div class="card-body">
@@ -286,7 +282,7 @@
                     <div class="row border-bottom pb-2">
                       <div
                         class="col-sm-12 col-md-6 col-lg-4 b"
-                        *ngFor="let pro of profileData['specialitie']"
+                        *ngFor="let pro of profileData?.specialitie"
                       >
                         <li>{{ pro.fullName }}</li>
                       </div>
@@ -298,7 +294,7 @@
                         <div class="row pb-2">
                           <div
                             class="col-sm-12 b"
-                            *ngFor="let pro of profileData['specialitie']"
+                            *ngFor="let pro of profileData?.specialitie"
                           >
                             <li>{{ pro.fullName }}</li>
                           </div>
@@ -349,7 +345,7 @@
           </div>
         </div>
         <div class="card mb-3" *ngIf="active == 'Feedback'">
-          <div class="card mb-3 mt-2" *ngIf="review.length!=0">
+          <div class="card mb-3 mt-2" *ngIf="review?.length!=0">
             <div class="row no-gutters">
               <div class="col-md-12">
                 <div class="card-body ml-3 mr-3">
@@ -367,7 +363,7 @@
                       </div>
                       <div class="row">
                         <p class="h5 m-0 text-dark pl-1 pt-2 font-weight-bold">
-                          Visited For Tooth Extraction
+                         {{item?.title | titlecase}}
                         </p>
                       </div>
 
@@ -435,38 +431,19 @@
           </div>
         </div>
         <div class="card mb-3" *ngIf="active == 'Q&AHealthfeed'">
-          <div class="card p-2">
+          <div class="card p-2" *ngFor="let item of HFHelth">
             <img
               class="card-img-top"
-              src="https://www.practostatic.com/fit/a0684ea161613c0e81938d5b4ead63f4f8a82a99"
+              [src]="item.image[0]"
               alt="Card image cap"
             />
             <div class="card-body">
-              <h3>Myths and Facts About Orthodontic (Braces) Treatment</h3>
+              <h3>{{item?.title}}</h3>
               <p class="card-text">
-                A lifetime of happy smiles starts by knowing what’s fact and
-                what’s fiction when it comes to wearing braces. When new
-                patients come to our clinic, they often have lots of questions –
-                along with plenty of misconceptions about orthodontics. Read on
-                as we dispel 5 common myths about
+                {{item?.description}}
               </p>
             </div>
-            <div class="row m-2">
-              <a
-                data-qa-id="healthfeed-article-continue"
-                target="_blank"
-                href="https://www.practo.com/healthfeed/myths-and-facts-about-orthodontic-braces-treatment-28848/post"
-                class="u-primary-text u-d-block"
-              >
-                Continue Reading
-              </a>
-            </div>
-            <div class="row m-2">
-              <p>
-                <i class="fa fa-heart mr-2" aria-hidden="true"></i>9
-                <i class="fa fa-share-alt ml-4" aria-hidden="true"></i>
-              </p>
-            </div>
+         
           </div>
           <hr />
           <div class="card pl-2 pr-2">
