@@ -33,6 +33,13 @@ getDroctorMember(id){
   return this.apiCallService.getData('doctor/membership/by/'+id) 
 
 }
-
-
+getQa(id){
+  return this.apiCallService.getData('QA/by/doctor/'+id)
+}
+getReview(id){
+  return this.apiCallService.getData('customer/review/get/by/doctor/'+id)
+}
+getAvgStar(id){
+  return this.apiCallService.getData('doctor/averageStars/by/'+id)
+}
 }

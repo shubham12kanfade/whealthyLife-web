@@ -58,11 +58,7 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.router.events.subscribe((resData)=>{
-    console.log("HeaderComponent -> ngOnInit -> resData", resData)
- 
-
-    })
+   
 
 this.getProfileOnline();
 
