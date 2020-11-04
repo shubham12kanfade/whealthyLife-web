@@ -15,7 +15,7 @@
             <div class="col-md-10">
               <div class="card-body mr-3">
                 <div class="row text-dark mb-0">
-                  <h2 class="font-weight-bold mb-0" style="cursor: pointer">
+                  <h2 class="font-weight-bold mb-0"  style="cursor: pointer;" (click)="openDialog()">
                     Dr. {{ profileData?.firstName }} {{ profileData?.lastName }}
                     <span style="font-size: 12px" *ngFor="let deg of degree">
                       {{ deg.degree }}
