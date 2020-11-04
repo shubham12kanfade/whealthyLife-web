@@ -44,7 +44,15 @@ export class DoctorProfileComponent implements OnInit {
     public BookingPageService: BookingPageService, public dialog: MatDialog
   ) {
 
+
+
+
+    
     this.currentDate = new Date();
+ 
+    
+
+ 
   }
   // openDialog(): void {
   //   const dialogRef = this.dialog.open(FeedBackPopComponent, {
@@ -187,5 +195,9 @@ console.log("err", err)
     this.date.setDate(this.date.getDate() + val);
     return this.date
   }
+
+RiviweTime(id){
+  return moment([id]).fromNow()
+}
 
 }
