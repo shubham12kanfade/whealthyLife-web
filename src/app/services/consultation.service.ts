@@ -13,6 +13,10 @@ getDoctorUsingId(id){
   
   return this.api.getData('doctor/specialization/by/specialization/'+id);
 }
+getDoctFree(){
+  return this.api.getData('doctor/')
+}
+
   getDoctorlist() {
     return this.api.getData('doctor/list/for/consultation');
   }

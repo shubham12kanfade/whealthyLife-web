@@ -18,19 +18,23 @@
             />
           </div>
         </article>
-        <button mat-raised-button color="primary" class="m-3">
+       
+        <button mat-raised-button color="primary" class="m-3" style=" z-index: 1;
+        padding-left: 6px;
+        padding-right: 5px;">
           Consult Now
         </button>
+      
         <div class="row">
           <div class="col-sm-4 col-md-4 col-lg-4 m-3">
             <div class="media">
               <img
                 src="../../../assets/img/images.png"
-                class="mr-3 width-img"
+                class="mr-3 width-img txt"
                 alt=""
               />
-              <div class="media-body">
-                <h4 class="text-bold">Verified Doctors</h4>
+              <div class="media-body txt">
+                <h4 class="text-bold ">Verified Doctors</h4>
               </div>
             </div>
           </div>
@@ -38,11 +42,11 @@
             <div class="media">
               <img
                 src="../../../assets/img/download.jpeg"
-                class="mr-3 width-img"
+                class="mr-3 width-img txt"
                 alt=""
               />
-              <div class="media-body">
-                <h4 class="text-bold">Free Followup</h4>
+              <div class="media-body txt">
+                <h4 class="text-bold" style="margin-right: 10px;">Free Followup</h4>
               </div>
             </div>
           </div>
@@ -51,7 +55,7 @@
       <div class="col-sm-6 col-md-6 col-lg-6 pink">
         <img
           class="hero-image web"
-          src="../../../assets/img/homepage-hero-image-web-v1.png"
+          src="../../../assets/img/homepage-hero-image-web-v1.png" 
           alt=""
         />
       </div>
@@ -72,7 +76,7 @@
         <div class="card border" style="width: 18rem;">
           <img
             src="../../../assets/img/cough-cold-v1.jpg"
-            class="card-img-top"
+            class="card-img-top" style="    margin-left: 28px;"
             alt=""
           />
           <div class="card-body">
@@ -89,7 +93,7 @@
         <div class="card border" style="width: 18rem;">
           <img
             src="../../../assets/img/period-problems-v1.jpg"
-            class="card-img-top"
+            class="card-img-top" style="    margin-left: 28px;"
             alt=""
           />
           <div class="card-body">
@@ -106,7 +110,7 @@
         <div class="card border" style="width: 18rem;">
           <img
             src="../../../assets/img/performance-issues-bed-v1.jpg"
-            class="card-img-top"
+            class="card-img-top" style="    margin-left: 28px;"
             alt=""
           />
           <div class="card-body">
@@ -123,7 +127,7 @@
         <div class="card border" style="width: 18rem;">
           <img
             src="../../../assets/img/skin-problems-v1.jpg"
-            class="card-img-top"
+            class="card-img-top" style="    margin-left: 28px;"
             alt=""
           />
           <div class="card-body">
@@ -256,92 +260,93 @@
         </h2>
       </div>
       <div class="col-sm-12 col-md-12 col-lg-12">
+<div style="margin-left: 45px;">
         <owl-carousel-o [options]="customOptions3" #review2>
           <ng-template carouselSlide>
-        <div class="card" style="width: 18rem;">
+        <div class="card" style="width: 18rem; margin-left: 48px;">
           <img
             src="../../../assets/img/top-speciality-gynaecologist.svg"
             style="width: 30%;" class="ml-5"
             alt="..."
           />
           <div class="card-body">
-            <h4 class="heading">Gynaecology</h4>
-            <p>
+            <h4 class="heading" style="margin-left: 10px;">Gynaecology</h4>
+            <p style="margin-left: 10px;">
               ₹ 249
             </p>
           </div>
         </div>
       </ng-template>
       <ng-template carouselSlide>
-        <div class="card" style="width: 18rem;">
+        <div class="card" style="width: 18rem; margin-left: 48px;">
           <img
             src="../../../assets/img/top-speciality-gp.svg"
             style="width: 30%;" class="ml-5"
             alt="..."
           />
           <div class="card-body">
-            <h4 class="heading">General physician</h4>
-            <p>
+            <h4 class="heading" style=" margin-left: -14px;">General physician</h4>
+            <p style=" margin-left: -14px;">
               ₹ 199
             </p>
           </div>
         </div>
       </ng-template>
       <ng-template carouselSlide>
-        <div class="card" style="width: 18rem;">
+        <div class="card" style="width: 18rem; margin-left: 48px;">
           <img
             src="../../../assets/img/top-speciality-dermatologist.svg"
             style="width: 30%;" class="ml-5"
             alt="..."
           />
           <div class="card-body">
-            <h4 class="heading">Dermatology</h4>
-            <p>
+            <h4 class="heading" style="margin-left: 12px;">Dermatology</h4>
+            <p style="margin-left: 12px;">
               ₹ 199
             </p>
           </div>
         </div>
       </ng-template>
       <ng-template carouselSlide>
-        <div class="card" style="width: 18rem;">
+        <div class="card" style="width: 18rem; margin-left: 48px;">
           <img
             src="../../../assets/img/top-speciality-psychiatric.svg"
             style="width: 30%;" class="ml-5"
             alt="..."
           />
           <div class="card-body">
-            <h4 class="heading">Psychiatry</h4>
-            <p>
+            <h4 class="heading" style="margin-left: 22px;">Psychiatry</h4>
+            <p style="margin-left: 22px;">
               ₹ 249
             </p>
           </div>
         </div>
       </ng-template>
       <ng-template carouselSlide>
-        <div class="card" style="width: 18rem;">
+        <div class="card" style="width: 18rem; margin-left: 48px;">
           <img
             src="../../../assets/img/top-speciality-stomach.svg"
             style="width: 30%;" class="ml-5"
             alt="..."
           />
           <div class="card-body">
-            <h4 class="heading">Stomach and digestion</h4>
-            <p>
+            <h4 class="heading" style="margin-left: -30px;">Stomach and digestion</h4>
+            <p style="margin-left: -30px;">
               ₹ 299
             </p>
           </div>
         </div>
       </ng-template>
       <ng-template carouselSlide>
-        <div class="card" style="width: 18rem;">
+        <div class="card" style="width: 18rem; margin-left: 48px; display: block;">
           <img
             src="../../../assets/img/top-speciality-pediatric (1).svg"
             style="width: 30%;" class="ml-5"
             alt="..."
           />
           <div class="card-body">
-            <h4 class="heading">Pediatrics</h4>
-            <p>
+            <h4 class="heading" style="margin-left: 25px;">Pediatrics</h4>
+            <p style="margin-left: 25px;">
               ₹ 249
             </p>
           </div>
@@ -356,7 +361,7 @@
         <i class="fa fa-chevron-circle-right fa-3x" aria-hidden="true"></i>
       </div>
     </div>
-
+</div>
       </div>
     </div>
   </div>

@@ -10,6 +10,7 @@
   font-size: 24px;
   font-weight: 500;
   line-height: 1.42;
+  
 }
 
 .margintop{
@@ -49,6 +50,7 @@
 
 .hero-image.web {
   display: block;
+  width: 100%;
 }
 
 .homepage-section-heading {
@@ -67,6 +69,9 @@
   z-index: 999 !important;
   left: -30px !important;
   font-size: 10px !important;
+
+  z-index: 99999;
+  margin: 0 30px;
 }
 
 .rhs {
@@ -101,4 +106,22 @@
 }
 .yellow {
   background: #feba7f;
+}
+
+
+.txt{
+  z-index: 1;
+}
+
+// .h5{
+//   margin-right: 266px;
+//                 margin-left: -166px;
+//                 margin-top: 36px;
+// }
+
+
+@media screen and (min-width:375x)  {
+  .caro {
+    margin-left:45px;
+  }
 }
