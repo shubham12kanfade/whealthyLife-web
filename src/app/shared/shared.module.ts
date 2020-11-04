@@ -36,6 +36,7 @@ import {AutoCompleteModule} from 'primeng/autocomplete';
 import { NgxMatSelectSearchModule } from 'ngx-mat-select-search';
 import {MatIconModule} from '@angular/material/icon';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+
 // const material = [
 //   CommonModule,
 //   MatTabsModule,
@@ -74,6 +75,7 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 @NgModule({
   declarations: [],
   imports: [
+
     CommonModule,
     MatTabsModule,
     MatIconModule,
@@ -112,6 +114,7 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     MatSnackBarModule
   ],
   exports: [
+
     CommonModule,
     MatTabsModule,
     MatIconModule,

@@ -21,4 +21,9 @@ export class PaitentsService {
     return this.API.postData('appoinment/get/by/id',data);
   }
 
+  getProfileDetaile(data){
+    return this.API.getData('doctor/profile/details/',data);
+  }
+
+
 }

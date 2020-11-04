@@ -2,12 +2,19 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
 import { UserService } from 'src/app/services/user.service';
 import { MainService } from 'src/app/services/main.service';
+import { ChartOptions, ChartType, ChartDataSets } from 'chart.js';
+import { Label } from 'ng2-charts';
+
+
 @Component({
   selector: 'app-doctor-dashbord',
   templateUrl: './doctor-dashbord.component.html',
   styleUrls: ['./doctor-dashbord.component.scss']
 })
+
 export class DoctorDashbordComponent implements OnInit {
+
+
   userInfo: any;
   doctorInfo: any;
 
@@ -22,10 +29,10 @@ export class DoctorDashbordComponent implements OnInit {
   }
 
   gotoTop() {
-    window.scroll({ 
-      top: 0, 
-      left: 0, 
-      behavior: 'smooth' 
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
     });
   }
 
@@ -33,10 +40,10 @@ export class DoctorDashbordComponent implements OnInit {
 getDoctordata(){
 this.mainService.getProfile().then((resData)=>{
 this.doctorInfo=resData.data
-  
+
 }).catch((error)=>{
 console.log("DoctorDashbordComponent -> getDoctordata -> error", error)
-  
+
 })
 
 }
@@ -63,5 +70,4 @@ console.log("DoctorDashbordComponent -> getDoctordata -> error", error)
     //   }
     // })
   }
-
 }
