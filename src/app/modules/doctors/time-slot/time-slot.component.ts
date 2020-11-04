@@ -5,6 +5,8 @@ import { DoctorProfileService } from "src/app/services/doctor-profile.service";
 import { ConsultationService } from "src/app/services/consultation.service";
 import { Router, ActivatedRoute } from "@angular/router";
 import * as moment from "moment";
+import { BookingPageService } from './../../../services/booking-page.service';
+
 @Component({
   selector: "app-time-slot",
   templateUrl: "./time-slot.component.html",
@@ -23,12 +25,15 @@ export class TimeSlotComponent implements OnInit {
   cdate: string;
   calenderDate: any;
   slotbutton: any;
+  currentDate: Date;
+  slot2: any;
   constructor(
     private BookingService: BookingService,
     private CookieService: CookieService,
     private route: ActivatedRoute,
     public DoctorProfile: DoctorProfileService,
     public consultationService: ConsultationService,
+    public bookingPageService:BookingPageService,
     public router: Router
   ) {
     this.cdate = moment().format("llll");
@@ -47,14 +52,37 @@ export class TimeSlotComponent implements OnInit {
       oclock
     );
   }
-  onSelect(event) {
-    console.log("TimeSlotComponent -> onSelect -> event", event);
-    this.calenderDate = event;
-    // this.change.emit(event);
-  }
+  
+
   ngOnInit(): void {
     // this.showtime(this.profileData)
+    this.currentDate = new Date();
+    console.log("TimeSlotComponent -> ngOnInit -> this.currentDate", this.currentDate);
+    this.latestday();
+    // const data1 = moment().add(1, 'days').format('L');
   }
+
+  onSelect(event) {
+    console.log("TimeSlotComponent -> onSelect -> event", event);
+    // this.calenderDate = event;
+   
+      this.calenderDate =moment(event).add(1,'day').format('L');
+      this.bookingPageService.getDoctorSlotId(this.id, { date: event }).then((resData) => {
+        this.slot = resData.data;
+      }).catch((err) => {
+        console.log("DoctorProfileComponent -> ngOnInit -> err", err);
+      })
+    }
+
+  latestday(){
+    this.bookingPageService.getDoctorSlotId( this.id,{ date: this.currentDate } ).then(resData=>{
+      console.log("cdsbjcbhjbcbdsbcjk", resData);
+      this.slot = resData.data;
+      }).catch(error =>{
+      console.log("TimeSlotComponent -> ngOnInit -> error", error);
+      })
+  }
+
   getProfileDetails() {
     const data = {
       findId:this.id,

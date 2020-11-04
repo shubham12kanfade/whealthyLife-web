@@ -7,7 +7,13 @@ import { ActivatedRoute } from "@angular/router";
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { FeedBackPopComponent } from '../feed-back-pop/feed-back-pop.component';
 import csc from 'country-state-city';
+import { CheckingPopupComponent } from './../checking-popup/checking-popup.component';
 import * as moment from 'moment';
+
+
+// export interface DialogData {
+
+// }
 
 @Component({
   selector: "app-doctor-profile",
@@ -35,6 +41,11 @@ export class DoctorProfileComponent implements OnInit {
   review: any;
   Star: any;
 
+
+
+
+
+
   constructor(
     public mainService: MainService,
     public activatedRoutes: ActivatedRoute,
@@ -43,11 +54,29 @@ export class DoctorProfileComponent implements OnInit {
     public BookingPageService: BookingPageService, public dialog: MatDialog
   ) {
 
+
+
+
+    
     this.currentDate = new Date();
+ 
+    
+
+ 
   }
-  openDialog(): void {
-    const dialogRef = this.dialog.open(FeedBackPopComponent, {
-      width: '250px',
+  // openDialog(): void {
+  //   const dialogRef = this.dialog.open(FeedBackPopComponent, {
+  //     width: '250px',
+  //   });
+  // }
+
+  openDialog() {
+    const dialogRef = this.dialog.open(CheckingPopupComponent, {
+      data:this.id
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
     });
   }
   getCitys(id) {
@@ -69,6 +98,9 @@ export class DoctorProfileComponent implements OnInit {
 
 
     this.activatedRoutes.params.subscribe((params) => {
+
+    console.log("DoctorProfileComponent -> ngOnInit -> params", params);
+
       this.id = params["id"];
       this.getProfileDetails();
     });
@@ -130,14 +162,14 @@ this.BookingPageService.getReview(this.id).then((resData)=>{
 this.review=resData.data
 }).catch((err)=>{
 console.log("err", err)
-  
+
 })
 this.BookingPageService.getReview(this.id).then((resData)=>{
 console.log("resData", resData)
 this.Star=resData.data
 }).catch((err)=>{
 console.log("err", err)
-  
+
 })
   }
   getDocMember() {
@@ -178,5 +210,9 @@ console.log("err", err)
     this.date.setDate(this.date.getDate() + val);
     return this.date
   }
+
+RiviweTime(id){
+  return moment([id]).fromNow()
+}
 
 }

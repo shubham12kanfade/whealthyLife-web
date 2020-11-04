@@ -13,6 +13,7 @@ import { NotificationPopupComponent } from './notification-popup/notification-po
 import { ToastModule } from 'primeng/toast';
 import { TreatmentsComponent } from './treatments/treatments.component';
 import { FeedBackPopComponent } from './feed-back-pop/feed-back-pop.component';
+import { CheckingPopupComponent } from './checking-popup/checking-popup.component';
 
 
 
@@ -24,7 +25,8 @@ import { FeedBackPopComponent } from './feed-back-pop/feed-back-pop.component';
     TimeSlotComponent,
     NotificationPopupComponent,
     TreatmentsComponent,
-    FeedBackPopComponent
+    FeedBackPopComponent,
+    CheckingPopupComponent
   ],
   imports: [
     CommonModule,

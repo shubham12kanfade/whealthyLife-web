@@ -83,17 +83,21 @@
     <div class="container-fluid" >
       <div class="row"  >
         <div class="col-sm-6">
-            <div style="display: block; ">
-              <canvas baseChart style="height: 50% !important ;"
-                [datasets]="barChartData"
-                [labels]="barChartLabels"
-                [options]="barChartOptions"
-                [plugins]="barChartPlugins"
-                [legend]="barChartLegend"
-                [chartType]="barChartType">
-              </canvas>
-            </div>
+          <div style="display: block; height: 50%; width: 60%;
+          margin-left: 10%; margin-top: -33%; ">
+          <canvas baseChart
+          [datasets]="barChartData"
+          [labels]="barChartLabels"
+          [options]="barChartOptions"
+          [plugins]="barChartPlugins"
+          [legend]="barChartLegend"
+          [chartType]="barChartType">
+          </canvas>
+        </div>
         </div>
       </div>
     </div>
 </div>
+
+
+
