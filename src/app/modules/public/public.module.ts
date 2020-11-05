@@ -30,7 +30,6 @@ import { BookHealthCheckupsComponent } from '../book-health-checkups/book-health
     HeaderComponent,
     FooterComponent,
     PublicComponent,
-   
     LoginComponent,
     RegisterComponent,
     ContactUsComponent,
