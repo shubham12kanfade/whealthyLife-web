@@ -60,6 +60,7 @@ export class DoctorsComponent implements OnInit {
     
       this.doctorList = resData.data;
       this.tempArray = resData.data;
+      console.log("DoctorsComponent -> getDoctorList -> this.tempArray", this.tempArray)
       this.doctorList.forEach(ele => this.autoDoctList.push(ele.userId));
     }).catch(error => {
       console.log("DoctorsComponent -> getDoctorList -> error", error);
@@ -85,7 +86,7 @@ console.log("DoctorsComponent -> getfreeDocList -> err", err)
 }
   search(){
     this.doctorList = this.tempArray;
-    this.doctorList = this.tempArray.filter(ele => ele.userId.firstName.includes(this.searchText.toLowerCase()));
+    this.doctorList = this.tempArray.filter(ele => ele.doctorId.firstName.includes(this.searchText.toLowerCase()));
     console.log("DoctorsComponent -> search -> this.searchText", this.searchText)
     if (!this.searchText) {
       this.doctorList = this.tempArray;
@@ -108,7 +109,7 @@ console.log("DoctorsComponent -> getfreeDocList -> err", err)
   selectEvent(item) {
   }
   onChangeSearch(val: string) {
-  }c
+  }
   onFocused(e){
   }
   ngOnInit() {
@@ -122,9 +123,6 @@ console.log("DoctorsComponent -> getfreeDocList -> err", err)
         this.getfreeDocList()
       }
       this.getDoctorList()
-    
-    
-    
     
     })
   }
