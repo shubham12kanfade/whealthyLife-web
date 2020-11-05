@@ -82,8 +82,6 @@ export class CheckingPopupComponent implements OnInit {
     }
 
 
-    // alert(JSON.stringify(appointData)  )
-
     this.videoService.postAppointmentSlot(appointData).then(appointRes => {
       this._snackBar.open('Appointment Book Successfully On Date : '+ this.data.date.slice(0,10) ,'', {
         duration: 3600,
