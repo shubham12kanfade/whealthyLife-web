@@ -95,7 +95,7 @@ export class CheckingPopupComponent implements OnInit {
 
     }).catch(err => {
     console.log("CheckingPopupComponent -> postAppointment -> err", err);
-    this._snackBar.open('Please Login', '', {
+    this._snackBar.open('Something Went Wrong on Booking Appointment', '', {
       duration: 500,
       horizontalPosition: 'right',
       verticalPosition:'top',
