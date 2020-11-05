@@ -328,9 +328,9 @@
         </div>
         <div class="col-md-6">
           <div class="info" data-aos="fade-left">
-            <h2>
+            <h2 class="h2" style=" text-align: inherit;">
               All your medical records<br />
-              <strong>In one secure app.</strong>
+              <strong style=" text-align: inherit;">In one secure app.</strong>
             </h2>
             <ul>
               <li>256-bit end to end encryption</li>
@@ -439,9 +439,9 @@
       <div class="row">
         <div class="col-md-7">
           <div class="info" data-aos="fade-right">
-            <h2>
+            <h2 style="    text-align: inherit;">
               Leading Healthcare Providers.<br />
-              <strong>Trust us for Business</strong>
+              <strong style=" text-align: inherit;">Trust us for Business</strong>
             </h2>
             <ul>
               <li>Get seen by 25M+ patients on WhealthyLife</li>
@@ -709,7 +709,7 @@
                 <p class="testimonial">
                   {{item.review}}
                 </p>
-                <p class="overview"><b>{{item.userId.firstName}} {{item.userId.lastName}}</b>, {{item.userId.designation}}</p>
+                <p class="overview"><b>{{item?.userId?.firstName}} {{item?.userId?.lastName}}</b>, {{item?.userId?.designation}}</p>
               </div>
             </div>
            </div>
@@ -756,9 +756,15 @@
               <li>Store health records</li>
               <li>Read health tips</li>
             </ul>
-            <a href="#" class="app"
+           <div> <a href="#" class="app"
               ><img src="../assets/img/1_EiZrcN_DIapbZaxutxbZRA.png" alt="app"
             /></a>
+          </div>
+          <div>
+            <a href="#" class="app"
+            ><img src="./../../../assets/img/app-store.e30d53a6.png"  style="margin-top: 3px;" alt="app"
+          /></a>
+        </div>
           </div>
         </div>
       </div>

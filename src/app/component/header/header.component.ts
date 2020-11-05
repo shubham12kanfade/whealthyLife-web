@@ -29,7 +29,7 @@ export class HeaderComponent implements OnInit {
     private _snackBar: MatSnackBar
   ) {
     this.checkLogin()
- 
+
     this._snackBar.open('Please Login', '', {
       duration: 500,
       horizontalPosition: 'right',
@@ -37,8 +37,8 @@ export class HeaderComponent implements OnInit {
       panelClass: ['redNoMatch']
 
     });
-  
-  
+
+
   }
 
 
@@ -60,7 +60,7 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
     this.router.events.subscribe((resData)=>{
     console.log("HeaderComponent -> ngOnInit -> resData", resData)
- 
+
 
     })
 
@@ -75,7 +75,7 @@ this.getProfileOnline();
 this.MainService.getProfile().then((resData)=>{
   this.onlieProfile=resData.data
 }).catch((err)=>{
-  
+
 })
 
   }
