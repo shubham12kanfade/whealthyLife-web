@@ -70,7 +70,7 @@
                 <owl-carousel-o [options]="customOptions1" #healthc>
                     <ng-template carouselSlide *ngFor="let item of HelthCondition">
                         <div class="healthcondition" [routerLink]="['/order/Order_information',item._id]">
-                            <img src="{{item.icon}}" class="zoom">
+                            <img src="{{item.icon}}" [attr.src]="item.image?.url ? item.image.url : 'assets/img/no-picture-available-icon-1.jpg'" class="zoom">
                         </div>
                     </ng-template>
                   
