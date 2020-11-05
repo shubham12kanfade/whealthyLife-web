@@ -23,6 +23,12 @@ getDoctorSlotId(id,data){
   console.log("BookingPageService -> getDoctorSlotId -> data", data)
   return this.apiCallService.postData('slots/by/'+id,data)
 }
+getDoctorSlotId1(id,data){
+  console.log("BookingPageService -> getDoctorSlotId -> data", data)
+  const fdggd = data._i
+  console.log("BookingPageService -> getDoctorSlotId1 -> fdggd ", fdggd )
+  return this.apiCallService.postData('slots/by/'+id,data._i)
+}
 getDroctorAward(id){
   return this.apiCallService.getData('doctor/award/by/'+id) 
 

@@ -6,6 +6,8 @@ import { ConsultationService } from "src/app/services/consultation.service";
 import { Router, ActivatedRoute } from "@angular/router";
 import * as moment from "moment";
 import { BookingPageService } from './../../../services/booking-page.service';
+import { MatDialog } from '@angular/material/dialog';
+import { CheckingPopupComponent } from './../checking-popup/checking-popup.component';
 
 @Component({
   selector: "app-time-slot",
@@ -27,6 +29,7 @@ export class TimeSlotComponent implements OnInit {
   slotbutton: any;
   currentDate: Date;
   slot2: any;
+  dadad: moment.Moment;
   constructor(
     private BookingService: BookingService,
     private CookieService: CookieService,
@@ -34,7 +37,8 @@ export class TimeSlotComponent implements OnInit {
     public DoctorProfile: DoctorProfileService,
     public consultationService: ConsultationService,
     public bookingPageService:BookingPageService,
-    public router: Router
+    public router: Router,
+    public dialog: MatDialog
   ) {
     this.cdate = moment().format("llll");
     this.route.params.subscribe((params) => {
@@ -52,7 +56,16 @@ export class TimeSlotComponent implements OnInit {
       oclock
     );
   }
+
+  openDialog() {
+    const dialogRef = this.dialog.open(CheckingPopupComponent);
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
+  }
   
+
 
   ngOnInit(): void {
     // this.showtime(this.profileData)
@@ -63,16 +76,24 @@ export class TimeSlotComponent implements OnInit {
   }
 
   onSelect(event) {
-    console.log("TimeSlotComponent -> onSelect -> event", event);
-    // this.calenderDate = event;
-   
-      this.calenderDate =moment(event).add(1,'day').format('L');
-      this.bookingPageService.getDoctorSlotId(this.id, { date: event }).then((resData) => {
+  console.log("TimeSlotComponent -> onSelect -> event", event)
+    
+  if(event == this.minDate){
+    this.latestday();
+  }
+  else{
+    this.calenderDate =moment(event).add(1,'day') ;
+      this.bookingPageService.getDoctorSlotId(this.id, { date: this.calenderDate }).then((resData) => {
         this.slot = resData.data;
       }).catch((err) => {
         console.log("DoctorProfileComponent -> ngOnInit -> err", err);
       })
+  }
+    // this.calenderDate = event;
+    this.dadad=moment();
+    console.log("TimeSlotComponent -> onSelect -> this.dadad", this.dadad)
     }
+    
 
   latestday(){
     this.bookingPageService.getDoctorSlotId( this.id,{ date: this.currentDate } ).then(resData=>{
@@ -200,4 +221,10 @@ export class TimeSlotComponent implements OnInit {
   //     }
   //   });
   // }
+
+
+
+
+
+
 }
