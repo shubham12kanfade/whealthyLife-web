@@ -11,7 +11,7 @@
             <div class="col-md-10">
               <div class="card-body mr-3">
                 <div class="row text-dark mb-0">
-                  <h2 class="font-weight-bold mb-0"  style="cursor: pointer;" (click)="openDialog()">
+                  <h2 class="font-weight-bold mb-0"  style="cursor: pointer;" >
                     Dr. {{ profileData?.firstName }} {{ profileData?.lastName }}
                     <span style="font-size: 12px" *ngFor="let deg of degree">
                       {{ deg.degree }}
@@ -55,7 +55,7 @@
               </div>
               <div class="card-body">
                 <div class="row text-dark">
-                  <p (click)="openDialog()" class="text-right text-info textwidth mcursor">
+                  <p  class="text-right text-info textwidth mcursor">
                     Give Feedback
                   </p>
                 </div>
@@ -507,7 +507,7 @@
                           <div class="row">
                             <div *ngFor="let mor of item.mrningSlots">
                               <div class="col-3">
-                                <div class="btn btn-outline-light mt-1 mb-1" >
+                                <div class="btn btn-outline-light mt-1 mb-1" (click)="openDialog(mor.strtTime,mor.endTime,item.date, 'Morning Slots')" >
                                   {{ mor.strtTime }}
                                 </div>
                               </div>
@@ -526,7 +526,7 @@
                           <div class="row">
                             <div *ngFor="let eve of item.eveningSlots">
                               <div class="col-3">
-                                <div class="btn btn-outline-light mt-1 mb-1">
+                                <div class="btn btn-outline-light mt-1 mb-1" (click)="openDialog(eve.strtTime,eve.endTime,item.date, 'Evening Slots')">
                                   {{ eve.strtTime }}
                                 </div>
                               </div>
@@ -550,7 +550,7 @@
                           <div class="row">
                             <div *ngFor="let mor of item.mrningSlots">
                               <div class="col-3">
-                                <div class="btn btn-outline-light mt-1 mb-1" >
+                                <div class="btn btn-outline-light mt-1 mb-1" (click)="openDialog(mor.strtTime,mor.endTime,item.date, 'Morning Slots')" >
                                   {{ mor.strtTime }}
                                 </div>
                               </div>
@@ -569,7 +569,7 @@
                           <div class="row">
                             <div *ngFor="let eve of item.eveningSlots">
                               <div class="col-3">
-                                <div class="btn btn-outline-light mt-1 mb-1" >
+                                <div class="btn btn-outline-light mt-1 mb-1" (click)="openDialog(eve.strtTime,eve.endTime,item.date,'Evening Slots')" >
                                   {{ eve.strtTime }}
                                 </div>
                               </div>
@@ -593,7 +593,7 @@
                           <div class="row">
                             <div *ngFor="let mor of item.mrningSlots">
                               <div class="col-3">
-                                <div class="btn btn-outline-light mt-1 mb-1">
+                                <div class="btn btn-outline-light mt-1 mb-1" (click)="openDialog(mor.strtTime,mor.endTime,item.date, 'Moening Slots')" >
                                   {{ mor.strtTime }}
                                 </div>
                               </div>
@@ -612,7 +612,7 @@
                           <div class="row">
                             <div *ngFor="let eve of item.eveningSlots">
                               <div class="col-3">
-                                <div class="btn btn-outline-light mt-1 mb-1">
+                                <div class="btn btn-outline-light mt-1 mb-1" (click)="openDialog(eve.strtTime,eve.endTime,item.date, 'Evening Slots')" >
                                   {{ eve.strtTime }}
                                 </div>
                               </div>
@@ -636,7 +636,7 @@
                           <div class="row">
                             <div *ngFor="let mor of item.mrningSlots">
                               <div class="col-3">
-                                <div class="btn btn-outline-light mt-1 mb-1">
+                                <div class="btn btn-outline-light mt-1 mb-1" (click)="openDialog(mor.strtTime,mor.endTime,item.date,'Morning Slots')" >
                                   {{ mor.strtTime }}
                                 </div>
                               </div>
@@ -655,7 +655,7 @@
                           <div class="row">
                             <div *ngFor="let eve of item.eveningSlots">
                               <div class="col-3">
-                                <div class="btn btn-outline-light mt-1 mb-1">
+                                <div class="btn btn-outline-light mt-1 mb-1" (click)="openDialog(eve.strtTime,eve.endTime,item.date, 'Evening Slots')"  >
                                   {{ eve.strtTime }}
                                 </div>
                               </div>
@@ -679,8 +679,8 @@
                           <div class="row">
                             <div *ngFor="let mor of item.mrningSlots">
                               <div class="col-3">
-                                <div class="btn btn-outline-light mt-1 mb-1">
-                                  {{ mor.strtTime }}
+                                <div class="btn btn-outline-light mt-1 mb-1" (click)="openDialog(mor.strtTime,mor.endTime,item.date,'Mornig Slot')">
+                                  {{ mor.strtTime}}
                                 </div>
                               </div>
                             </div>
@@ -698,7 +698,7 @@
                           <div class="row">
                             <div *ngFor="let eve of item.eveningSlots">
                               <div class="col-3">
-                                <div class="btn btn-outline-light mt-1 mb-1">
+                                <div class="btn btn-outline-light mt-1 mb-1" (click)="openDialog(eve.strtTime,eve.endTime,item.date,'Evening Slot')" >
                                   {{ eve.strtTime }}
                                 </div>
                               </div>

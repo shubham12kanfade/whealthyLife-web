@@ -82,14 +82,17 @@
         <h2>Slot Information</h2>
           <div class="row">
               <div class="col-lg-4">
-                <h3>Date :- 23/10/2020 </h3>
+                <h3>Date :- {{data.Date.slice(0,10)}} </h3>
               </div>
               <div class="col-lg-4">
-                <h3>Time :- 11:00 AM </h3>
+                <h3>Time :- {{data.TimeS}} - {{data.TimeE}} </h3>
               </div>
               <div class="col-lg-4">
                 <h3>Duration :- 30 min </h3>
-            </div>
+              </div>
+              <div class="col-lg-4">
+                <h3>Slot :- {{data.slotType}} </h3>
+              </div>
           </div>
       </div>
   </mat-card>

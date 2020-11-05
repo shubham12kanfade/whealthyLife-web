@@ -34,28 +34,27 @@ export class CheckingPopupComponent implements OnInit {
   ngOnInit(): void {
 
     this.getProfileDetails()
-    this.BookingPageService.getDegree(this.data).then((resData) => {
+    this.BookingPageService.getDegree(this.data.ID).then((resData) => {
       this.degree = resData.data
     }).catch((err) => {
       console.log("DoctorProfileComponent -> ngOnInit -> err", err)
     })
 
-
     this.UserID =  this.userService.getUserInfo()
-
     this.paitentService.getProfileDetaile(this.UserID._id).then(CURUserRes => {
       this.CURUser = CURUserRes.data
     })
 
-
   }
 
   getProfileDetails() {
-    const data = { findId: this.data }
+    const data = { findId: this.data.ID }
 
     this.DoctorProfile.getDoctorProfile(data)
       .then((resData) => {
+
         this.profileData = resData.data;
+
       })
       .catch((error) => {
         console.log(
