@@ -276,9 +276,9 @@
                               <span class="icon-ic_user_system icon-user"></span><span
                                 class="u-t-regular u-inline-middle u-m-l-10">
                                 {{
-                                  item.userId.firstName +
+                                  item?.userId?.firstName +
                                     " " +
-                                    item.userId.lastName
+                                    item?.userId?.lastName
                                 }}
                               </span>
                             </div>
@@ -346,8 +346,8 @@
                 </div>
               </div>
               <div data-qa-id="consult-cta" class="u-m-t-25 u-d-inline-block">
-                <a class="c-button__redirect" href="/consult?product=fabric&amp;amp;attribution=Home_Details_Section"
-                  target="_blank">Chat now</a>
+                <a class="c-button__redirect" [routerLink]="[ '/consult']">
+                  Chat now</a>
               </div>
 
               <span class="c-consult__doctors_online u-t-grey"><span
@@ -380,9 +380,9 @@
                               <span class="icon-ic_user_system icon-user"></span><span
                                 class="u-t-regular u-inline-middle u-m-l-10">
                                 {{
-                                  item.userId.firstName +
+                                  item?.userId?.firstName +
                                     " " +
-                                    item.userId.lastName
+                                    item?.userId?.lastName
                                 }}
                               </span>
                             </div>
@@ -468,9 +468,9 @@
                               <span class="icon-ic_user_system icon-user"></span><span
                                 class="u-t-regular u-inline-middle u-m-l-10">
                                 {{
-                                  item.userId.firstName +
+                                  item?.userId?.firstName +
                                     " " +
-                                    item.userId.lastName
+                                    item?.userId?.lastName
                                 }}
                               </span>
                             </div>
@@ -541,7 +541,7 @@
             <div class="c-list-item">
               <div>
                 <span class="c-list-item__icon"><i class="c-list-item__icon icon-ic_done_open_system"></i></span>
-                <span>Get seen by </span><span class="u-t-bold">{{ Countdata.petientsCount }}+ </span><span>patients on
+                <span>Get seen by </span><span class="u-t-bold">{{ Countdata?.petientsCount }}+ </span><span>patients on
                   WhealthyLife.com</span>
               </div>
             </div>
@@ -586,9 +586,9 @@
                             <span class="icon-ic_user_system icon-user"></span><span
                               class="u-t-regular u-inline-middle u-m-l-10">
                               {{
-                                item.userId.firstName +
+                                item?.userId?.firstName +
                                   " " +
-                                  item.userId.lastName
+                                  item?.userId?.lastName
                               }}
                             </span>
                           </div>
