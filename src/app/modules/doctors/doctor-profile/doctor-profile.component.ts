@@ -59,12 +59,12 @@ export class DoctorProfileComponent implements OnInit {
 
 
 
-    
-    this.currentDate = new Date();
- 
-    
 
- 
+    this.currentDate = new Date();
+
+
+
+
   }
   // openDialog(): void {
   //   const dialogRef = this.dialog.open(FeedBackPopComponent, {
@@ -77,7 +77,7 @@ export class DoctorProfileComponent implements OnInit {
     console.log("DoctorProfileComponent -> openDialog -> slotStart, slotEnd, slotDate", slotStart, slotEnd, slotDate,slotType);
     console.log(": --------------------------------------------------------------------------------------------------");
     const dialogRef = this.dialog.open(CheckingPopupComponent, {
-      data:{ID: this.id, TimeS: slotStart, TimeE: slotEnd, Date: slotDate,slotType:slotType }
+      data:{doctor: this.id, time: slotStart, TimeE: slotEnd, date: slotDate, slotType:slotType }
     });
 
     dialogRef.afterClosed().subscribe(result => {
@@ -127,7 +127,7 @@ this.BookingPageService.getAvgStar(this.id).then((resData)=>{
   this.avgStar=resData.data[0]
 }).catch((err)=>{
 console.log("DoctorProfileComponent -> ngOnInit -> err", err)
-  
+
 })
 
     this.BookingPageService.getDegree(this.id).then((resData) => {

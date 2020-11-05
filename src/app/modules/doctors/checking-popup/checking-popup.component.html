@@ -81,10 +81,10 @@
         <h2>Slot Information</h2>
           <div class="row">
               <div class="col-lg-4">
-                <h3>Date :- {{data.Date.slice(0,10)}} </h3>
+                <h3>Date :- {{data.date.slice(0,10)}} </h3>
               </div>
               <div class="col-lg-4">
-                <h3>Time :- {{data.TimeS}} - {{data.TimeE}} </h3>
+                <h3>Time :- {{data.time}} - {{data.TimeE}} </h3>
               </div>
               <div class="col-lg-4">
                 <h3>Duration :- 30 min </h3>
@@ -99,8 +99,9 @@
 </mat-dialog-content>
 <mat-dialog-actions align="end">
   <button mat-button mat-dialog-close>Cancel</button>
-  <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Book</button>
+  <button mat-button [mat-dialog-close]="true" cdkFocusInitial (click)="bookappointment()" >Book</button>
 </mat-dialog-actions>
+
 
 
 
