@@ -633,17 +633,20 @@
 
   <section *ngIf="reviewdata">
     <div class="container">
-     <h2>Our Happy Customer</h2>
-      <div >
-       <owl-carousel-o [options]="customOptions5" #review>
-         <ng-template carouselSlide >
-           <div class="pr-2 pl-2">
-            <div class="carousel-inner">
-              <div class="item carousel-item active" *ngFor="let item of reviewdata; let k = index">
-                <p class="testimonial">
-                  {{item.review}}
-                </p>
-                <p class="overview"><b>{{item?.userId?.firstName}} {{item?.userId?.lastName}}</b>, {{item?.userId?.designation}}</p>
+      <h2>Our Happy Customer</h2>
+      <div>
+        <owl-carousel-o [options]="customOptions5" #review>
+          <ng-template carouselSlide>
+            <div class="pr-2 pl-2">
+              <div class="carousel-inner">
+                <div class="item carousel-item active" *ngFor="let item of reviewdata; let k = index">
+                  <p class="testimonial">
+                    {{ item.review }}
+                  </p>
+                  <p class="overview">
+                    <b>{{ item.userId.firstName }} {{ item.userId.lastName }}</b>, {{ item.userId.designation }}
+                  </p>
+                </div>
               </div>
             </div>
           </ng-template>
