@@ -9,7 +9,7 @@ import { AddToCartComponent } from './add-to-cart/add-to-cart.component';
 
 const routes: Routes = [
  {path:'',component : OrderComponent},
- { path : 'Order_information', component: OrderInformationComponent },
+ { path : 'Order_information/:id', component: OrderInformationComponent },
  { path : 'Product_Details/:id', component: DetailsProductComponent},
  { path : 'AddToCart/:id', component: AddToCartComponent},
  { path:  'Payment/:id' , component: OrderPaymentComponent}

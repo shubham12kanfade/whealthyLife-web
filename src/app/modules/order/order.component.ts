@@ -1,3 +1,4 @@
+import { MedicineService } from './../../services/medicine.service';
 import { Component, OnInit } from '@angular/core';
 import {OwlOptions} from 'ngx-owl-carousel-o';
 
@@ -8,8 +9,20 @@ import {OwlOptions} from 'ngx-owl-carousel-o';
   styleUrls: ['./order.component.scss']
 })
 export class OrderComponent implements OnInit {
+  HelthCondition: any;
 
-  constructor() { }
+  constructor(private MedicineService:MedicineService) {
+    this.MedicineService.getHelthCondtion().then((resData)=>{
+    console.log("OrderComponent -> constructor -> resData", resData)
+    
+this.HelthCondition=resData.data
+
+      
+    }).catch((err)=>{
+    console.log("OrderComponent -> constructor -> err", err)
+      
+    })
+   }
 
 
   customOptions: OwlOptions = {

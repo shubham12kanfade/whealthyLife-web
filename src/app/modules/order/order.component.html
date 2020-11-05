@@ -68,37 +68,12 @@
         <div class="row">
             <div class="col-sm-12">
                 <owl-carousel-o [options]="customOptions1" #healthc>
-                    <ng-template carouselSlide>
-                        <div class="healthcondition" [routerLink]="['/order/Order_information']">
-                            <img src="../../../assets/img/h-c-5.webp" class="zoom">
+                    <ng-template carouselSlide *ngFor="let item of HelthCondition">
+                        <div class="healthcondition" [routerLink]="['/order/Order_information',item._id]">
+                            <img src="{{item.icon}}" class="zoom">
                         </div>
                     </ng-template>
-                    <ng-template carouselSlide>
-
-                        <div class="healthcondition">
-                            <img src="../../../assets/img/h-c-6.webp" class="zoom">
-                        </div>
-                    </ng-template>
-                    <ng-template carouselSlide>
-                        <div class="healthcondition">
-                            <img src="../../../assets/img/h-c-7.webp" class="zoom">
-                        </div>
-                    </ng-template>
-                    <ng-template carouselSlide>
-                        <div class="healthcondition">
-                            <img src="../../../assets/img/h-c-4.webp" class="zoom">
-                        </div>
-                    </ng-template>
-                    <ng-template carouselSlide>
-                        <div class="healthcondition">
-                            <img src="../../../assets/img/h-c-2.webp" class="zoom">
-                        </div>
-                    </ng-template>
-                    <ng-template carouselSlide>
-                        <div class="healthcondition">
-                            <img src="../../../assets/img/h-c-1.webp" class="zoom">
-                        </div>
-                    </ng-template>
+                  
                 </owl-carousel-o>
                 <div class="row prev-next">
                     <div class="catlhs" (click)="healthc.prev()"> <i class="fa fa-chevron-circle-left fa-3x "
