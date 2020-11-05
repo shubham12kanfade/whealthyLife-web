@@ -40,6 +40,8 @@ export class DoctorProfileComponent implements OnInit {
   Qa: any;
   review: any;
   Star: any;
+  avgStar: any;
+  HFHelth: any;
 
 
 
@@ -106,6 +108,22 @@ export class DoctorProfileComponent implements OnInit {
     });
     this.getaword()
     this.getDocMember()
+
+this.BookingPageService.getHf(this.id).then((resData)=>{
+this.HFHelth=resData.data
+console.log("DoctorProfileComponent -> ngOnInit -> this.HFHelth", this.HFHelth)
+
+}).catch((err)=>{
+console.log("DoctorProfileComponent -> ngOnInit -> err", err)
+})
+
+this.BookingPageService.getAvgStar(this.id).then((resData)=>{
+  this.avgStar=resData.data[0]
+}).catch((err)=>{
+console.log("DoctorProfileComponent -> ngOnInit -> err", err)
+  
+})
+
     this.BookingPageService.getDegree(this.id).then((resData) => {
       this.degree = resData.data
     }).catch((err) => {
@@ -214,5 +232,8 @@ console.log("err", err)
 RiviweTime(id){
   return moment([id]).fromNow()
 }
+getNumberASRound(val){
 
+  return Math.round(val)
+}
 }
