@@ -413,7 +413,7 @@
             <a href="#">
               <div class="text-info">
                 <h3>
-                  <strong>{{ item.title }}</strong><br />{{ item.description }}
+                  <strong>{{ item?.title }}</strong><br />{{ item?.descriptiitem?.userId?.firstNameon }}
                 </h3>
                 <p>{{ item.buttonText }}</p>
               </div>
@@ -474,11 +474,11 @@
             <a href="#">
               <div class="text-info">
                 <h3>
-                  <strong>{{ item.title }}</strong><br />{{ item.description }}
+                  <strong>{{ item?.title }}</strong><br />{{ item?.description }}
                 </h3>
-                <p>{{ item.buttonText }}</p>
+                <p>{{ item?.buttonText }}</p>
               </div>
-              <img [src]="item.backImg" alt="checkup" />
+              <img [src]="item?.backImg" alt="checkup" />
             </a>
           </div>
         </div>
@@ -644,7 +644,7 @@
                     {{ item.review }}
                   </p>
                   <p class="overview">
-                    <b>{{ item.userId.firstName }} {{ item.userId.lastName }}</b>, {{ item.userId.designation }}
+                    <b>{{ item?.userId?.firstName }} {{ item?.userId?.lastName }}</b>, {{ item?.userId?.designation }}
                   </p>
                 </div>
               </div>
