@@ -7,7 +7,6 @@ import { Router, ActivatedRoute } from "@angular/router";
 import * as moment from "moment";
 import { BookingPageService } from './../../../services/booking-page.service';
 import { MatDialog } from '@angular/material/dialog';
-import { CheckingPopupComponent } from './../checking-popup/checking-popup.component';
 
 @Component({
   selector: "app-time-slot",
@@ -56,17 +55,7 @@ export class TimeSlotComponent implements OnInit {
       oclock
     );
   }
-
-  openDialog() {
-    const dialogRef = this.dialog.open(CheckingPopupComponent);
-
-    dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
-    });
-  }
   
-
-
   ngOnInit(): void {
     // this.showtime(this.profileData)
     this.currentDate = new Date();
@@ -221,10 +210,4 @@ export class TimeSlotComponent implements OnInit {
   //     }
   //   });
   // }
-
-
-
-
-
-
 }
