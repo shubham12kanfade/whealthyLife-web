@@ -60,17 +60,33 @@ export class DoctorsComponent implements OnInit {
     
       this.doctorList = resData.data;
       this.tempArray = resData.data;
+      console.log("DoctorsComponent -> getDoctorList -> this.tempArray", this.tempArray)
       this.doctorList.forEach(ele => this.autoDoctList.push(ele.userId));
     }).catch(error => {
       console.log("DoctorsComponent -> getDoctorList -> error", error);
     })
   }
+
+    getfreeDocList(){
+ 
+this.consultationService.getDoctFree().then((resData)=>{
+console.log("DoctorsComponent -> getfreeDocList -> resData", resData)
+  
+}).catch((err)=>{
+console.log("DoctorsComponent -> getfreeDocList -> err", err)
+  
+})
+     
+    }
+
+
+
   clear() {ActivatedRoute
     this.messageService.clear('myKey1');
 }
   search(){
     this.doctorList = this.tempArray;
-    this.doctorList = this.tempArray.filter(ele => ele.userId.firstName.includes(this.searchText.toLowerCase()));
+    this.doctorList = this.tempArray.filter(ele => ele.doctorId.firstName.includes(this.searchText.toLowerCase()));
     console.log("DoctorsComponent -> search -> this.searchText", this.searchText)
     if (!this.searchText) {
       this.doctorList = this.tempArray;
@@ -93,7 +109,7 @@ export class DoctorsComponent implements OnInit {
   selectEvent(item) {
   }
   onChangeSearch(val: string) {
-  }c
+  }
   onFocused(e){
   }
   ngOnInit() {
@@ -101,7 +117,13 @@ export class DoctorsComponent implements OnInit {
     
       this.DocID= params['id'];
       // console.log("DoctorsComponent -> ngOnInit -> this.DocID++++++++++++++++++++++++", this.DocID)
+      const free="free"
+    if(this.DocID==free.toString)
+      {
+        this.getfreeDocList()
+      }
       this.getDoctorList()
+    
     })
   }
   showtime(doctor) {

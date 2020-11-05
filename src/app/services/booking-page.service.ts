@@ -42,4 +42,7 @@ getReview(id){
 getAvgStar(id){
   return this.apiCallService.getData('doctor/averageStars/by/'+id)
 }
+getHf(id){
+  return this.apiCallService.getData('HF/HealthFeeds/by/'+id)
+}
 }

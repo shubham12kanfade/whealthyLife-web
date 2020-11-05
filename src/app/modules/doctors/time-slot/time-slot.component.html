@@ -63,7 +63,7 @@
         <div class="row">
             <div class="col-lg-4 col-12 pad">
                 <div class="card cardex2 ">
-                    <p-calendar [inline]="true" [minDate]="minDate" (onSelect)="onSelect($event)"></p-calendar>
+                    <p-calendar [inline]="true"  [minDate]="minDate" (onSelect)="onSelect($event)"></p-calendar>
                 </div>
             </div>
             <div class="col-lg-8 col-lg-8 col-12 slidetime">
@@ -76,13 +76,10 @@
                                 <div *ngFor="let bu of item.mrningSlots; let j = index">
                                     <button class="btn c-day-session__slot" (click)="selectSolot(bu.strtTime,'Morning Slots')">{{bu.strtTime}}</button>
                                 </div>
-
-
                             </div>
                             <hr class="hr1">
                             <h3 class="wei">Evening Slots </h3>
                             <div class="row adj1">
-
                                 <div *ngFor="let it of item.eveningSlots; let x = index">
                                     <button class="btn c-day-session__slot" (click)="selectSolot(it.strtTime,'Evening Slots')">{{it.strtTime}}</button>
                                 </div>

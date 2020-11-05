@@ -5,8 +5,12 @@
         <div class="card mb-3">
           <div class="row no-gutters">
             <div class="col-md-2 p-2 img">
-              <img [src]="profileData?.avatar" onerror="this.src='../assets/img/user.jpeg'" class="card-img"
-                alt="..." />
+              <img
+                [src]="profileData?.avatar"
+                onerror="this.src='../assets/img/user.jpeg'"
+                class="card-img"
+                alt="..."
+              />
             </div>
             <div class="col-md-10">
               <div class="card-body mr-3">
@@ -37,7 +41,10 @@
                 </div>
 
                 <div class="row text-dark">
-                  <i class="fa fa-thumbs-up text-success p-1" aria-hidden="true">
+                  <i
+                    class="fa fa-thumbs-up text-success p-1"
+                    aria-hidden="true"
+                  >
                     96%
                   </i>
                   <p>(3673 votes)</p>
@@ -65,26 +72,38 @@
         </div>
         <ul>
           <li>
-            <div class="a font-weight-bold mcursor" [ngClass]="{ selectActive: active == 'Info' }"
-              (click)="activefn('Info')">
+            <div
+              class="a font-weight-bold mcursor"
+              [ngClass]="{ selectActive: active == 'Info' }"
+              (click)="activefn('Info')"
+            >
               Info
             </div>
           </li>
           <li>
-            <div class="a font-weight-bold mcursor" [ngClass]="{ selectActive: active == 'Feedback' }"
-              (click)="activefn('Feedback')">
+            <div
+              class="a font-weight-bold mcursor"
+              [ngClass]="{ selectActive: active == 'Feedback' }"
+              (click)="activefn('Feedback')"
+            >
               Feedback
             </div>
           </li>
           <li>
-            <div class="a font-weight-bold mcursor" [ngClass]="{ selectActive: active == 'Consult' }"
-              (click)="activefn('Consult')">
+            <div
+              class="a font-weight-bold mcursor"
+              [ngClass]="{ selectActive: active == 'Consult' }"
+              (click)="activefn('Consult')"
+            >
               Consult
             </div>
           </li>
           <li>
-            <div class="a font-weight-bold mcursor" [ngClass]="{ selectActive: active == 'Q&AHealthfeed' }"
-              (click)="activefn('Q&AHealthfeed')">
+            <div
+              class="a font-weight-bold mcursor"
+              [ngClass]="{ selectActive: active == 'Q&AHealthfeed' }"
+              (click)="activefn('Q&AHealthfeed')"
+            >
               Q&AHealthfeed
             </div>
           </li>
@@ -104,20 +123,18 @@
                   <div class="row">
                     <div class="col-sm-12 col-md-4">
                       <div class="row text-dark">
-                        <p class="pl-1 pt-2 font-weight-bold text-left mcursor text-info text-decoration-underline">
+                        <p
+                          class="pl-1 pt-2 font-weight-bold text-left mcursor text-info text-decoration-underline"
+                        >
                           32 Smiles Multispeciality Dental Clinic
                         </p>
                       </div>
                       <div class="row">
                         <div class="starbgandcolor p-1" title="5">
                           <div class="">
-                            <span class="">5.0</span>
-                            <span class="">
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
+                            <span class=""> {{getNumberASRound(avgStar?.AverageStars)}} </span>
+                            <span class="" >
+                              <i *ngFor="let qwe of avgStar?.AverageStars.toFixed()" class="fa fa-star"></i>
                             </span>
                           </div>
                         </div>
@@ -159,7 +176,10 @@
                       </div>
                       <div class="row">
                         <p class="font-weight-bold checkprime">Prime</p>
-                        <i class="fa fa-check-circle p-1 checkprime" aria-hidden="true"></i>
+                        <i
+                          class="fa fa-check-circle p-1 checkprime"
+                          aria-hidden="true"
+                        ></i>
                         <p class="checkprime">
                           Max. 15 mins wait + Verified details
                         </p>
@@ -170,104 +190,76 @@
               </div>
             </div>
           </div>
-          <div class="card mb-3 mt-2">
+          <div class="card mb-3 mt-2" *ngIf="review?.length!=0">
             <div class="row no-gutters">
               <div class="col-md-12">
                 <div class="card-body ml-3 mr-3">
-                  <div class="row text-dark">
-                    <p class="h5 m-0 text-dark pl-1 pt-2 font-weight-bold">
-                      Feedback for Dr. M. R. Pujari
-                    </p>
-                    <p class="font-sizex-smalll pl-1">
-                      These are patient’s opinions and do not necessarily
-                      reflect the doctor’s medical capabilities. Read more
-                    </p>
-                  </div>
-                  <div class="row border">
-                    <div class="col-sm-12 col-md-8 col-lg-9">
-                      <p class="font-sizex-smalll p-2">
-                        Filter by health problem/treatment
-                      </p>
-                    </div>
-                    <div class="col-sm-12 col-md-4 col-lg-3">
-                      <select name="" id="" class="p-2 m-2">
-                        <option value="">Select option</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-sm-12 col-md-8 col-lg-9">
-                      <p class="font-sizex-smalll p-2">
-                        Filter by health problem/treatment
-                      </p>
-                    </div>
-                    <div class="col-sm-12 col-md-4 col-lg-3">
-                      <select name="" id="" class="p-2 m-2">
-                        <option value="">Select option</option>
-                      </select>
-                    </div>
-                  </div>
+
                   <hr />
-                  <div class="row"  *ngFor="let item of review">
+                  <div class="row border-bottom my-2" *ngFor="let item of review |slice:1:2">
                     <div class="col-2">
-                      <div class="rounded-circle p-2 feebbackpro">N</div>
+                      <div class="rounded-circle p-2 feebbackpro">
+                        {{item?.userId?.firstName.charAt(0) | uppercase}}
+                      </div>
                     </div>
                     <div class="col-8">
                       <div class="row">
-                        <p>Nisha86 (Verified)</p>
+                        <p>{{item?.userId?.firstName +" "+item?.userId?.lastName}}  </p>
                       </div>
                       <div class="row">
                         <p class="h5 m-0 text-dark pl-1 pt-2 font-weight-bold">
-                          Visited For Tooth Extraction
+                         {{item?.title | titlecase}}
                         </p>
                       </div>
-
 
                       <div class="row">
                         <p>
-                         {{item?.review}}
+                          {{ item?.review }}
                         </p>
                       </div>
-                      <div class="row">
+                      <div *ngIf="item?.feedbackId?.feedback" class="row">
                         <i class="fa fa-reply-all" aria-hidden="true"></i>
                         <h4 class="m-0 text-dark pl-1 pt-2 font-weight-bold">
-                          Dr. {{ profileData?.firstName }} {{ profileData?.lastName }}   <br />
+                          Dr. {{ profileData?.firstName }}
+                          {{ profileData?.lastName }} <br />
                         </h4>
 
                         <div class="col-12">
-                          <p>Thanks a lot for your feedback..</p>
+                          <p>{{item?.feedbackId?.feedback}}</p>
                         </div>
                       </div>
                     </div>
                     <div class="col-2">
-                      <p>4 days ago</p>
+                      <p>{{RiviweTime(item?.createdAt)}}</p>
                     </div>
+
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="card mb-3 mt-2">
+          <div class="card mb-3 mt-2" *ngIf="Qa?.length!=0">
             <div class="row no-gutters">
-              <div class="col-md-12" *ngFor="let item of Qa">
+              <div class="col-md-12" *ngFor="let item of Qa |slice:1">
                 <div class="card-body">
                   <div class="row">
                     <div class="col-2"><span class="dentist-icon"></span></div>
-                    <div class="col-10" >
-                      <h3 class="m-0">{{item?.questionId?.question}}</h3>
+                    <div class="col-10">
+                      <h3 class="m-0">{{ item?.questionId?.question }}</h3>
                       <p>
-                        {{item?.questionId?.description}}
+                        {{ item?.questionId?.description }}
                       </p>
                       <hr />
                       <div class="row">
                         <i class="fa fa-reply-all" aria-hidden="true"></i>
                         <h4 class="m-0 text-dark pl-1 pt-2 font-weight-bold">
-                          Dr. {{ profileData?.firstName }} {{ profileData?.lastName }}
+                          Dr. {{ profileData?.firstName }}
+                          {{ profileData?.lastName }}
                         </h4>
 
                         <div class="col-12">
                           <p>
-                            {{item?.answer}}
+                            {{ item?.answer }}
                           </p>
                         </div>
                       </div>
@@ -285,8 +277,11 @@
                     <h3>Services</h3>
 
                     <div class="row border-bottom pb-2">
-                      <div class="col-sm-12 col-md-6 col-lg-4 b" *ngFor="let pro of profileData['specialitie']">
-                        <li >{{ pro.fullName }}</li>
+                      <div
+                        class="col-sm-12 col-md-6 col-lg-4 b"
+                        *ngFor="let pro of profileData?.specialitie"
+                      >
+                        <li>{{ pro.fullName }}</li>
                       </div>
                     </div>
 
@@ -294,7 +289,10 @@
                       <div class="col-sm-12 col-md-6">
                         <h3>Specializations</h3>
                         <div class="row pb-2">
-                          <div class="col-sm-12 b" *ngFor="let pro of profileData['specialitie']">
+                          <div
+                            class="col-sm-12 b"
+                            *ngFor="let pro of profileData?.specialitie"
+                          >
                             <li>{{ pro.fullName }}</li>
                           </div>
                         </div>
@@ -322,7 +320,10 @@
                       <div class="col-sm-12 col-md-6 b">
                         <h3>Membership</h3>
                         <div class="row pb-2">
-                          <div class="col-sm-12 b" *ngFor="let pro of memberShip">
+                          <div
+                            class="col-sm-12 b"
+                            *ngFor="let pro of memberShip"
+                          >
                             <li>{{ pro?.membershipId?.descrioton }}</li>
                           </div>
                         </div>
@@ -341,68 +342,51 @@
           </div>
         </div>
         <div class="card mb-3" *ngIf="active == 'Feedback'">
-          <div class="row no-gutters">
-            <div class="col-md-12">
-              <div class="card-body ml-3 mr-3">
+          <div class="card mb-3 mt-2" *ngIf="review?.length!=0">
+            <div class="row no-gutters">
+              <div class="col-md-12">
+                <div class="card-body ml-3 mr-3">
 
-                <hr />
-                <div class="row">
-                  <div class="col-2">
-                    <div class="rounded-circle p-2 feebbackpro">N</div>
-                  </div>
-                  <div class="col-8">
-                    <div class="row">
-                      <p>Nisha86 (Verified)</p>
-                    </div>
-                    <div class="row">
-                      <p class="h5 m-0 text-dark pl-1 pt-2 font-weight-bold">
-                        Visited For Tooth Extraction
-                      </p>
-                    </div>
-                    <div class="row">
-                      <p>
-                        <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>I
-                        recommend the doctor
-                      </p>
-                    </div>
-                    <div class="row">
-                      <p class="line-height">
-                        Happy with:
-                        <span class="feedback__context">Doctor</span>
-                        <span class="feedback__context">friendlinessExplanation of the health issue</span>
-                        <span class="feedback__context">Treatment satisfactionValue</span>
-                        <span class="feedback__context">for moneyWait time</span>
-                      </p>
-                    </div>
-                    <div class="row">
-                      <p>
-                        We as a family, have been visiting Dr. Pujari for
-                        different issues over the years. Based on our positive
-                        experience everytime, we now have complete faith in him.
-                        Because of a large number of cases he handles everyday,
-                        he is very well experienced and quite adept in all the
-                        procedures that are done in his clinic. Wish him and his
-                        team all the best!
-                      </p>
-                    </div>
-                    <div class="row">
-                      <i class="fa fa-reply-all" aria-hidden="true"></i>
-                      <h4 class="m-0 text-dark pl-1 pt-2 font-weight-bold">
-                        Dr. M. R. Pujari replied<br />
-                      </h4>
-                      <div class="col-12">
-                        <p>Thanks a lot for your feedback..</p>
+                  <hr />
+                  <div class="row border-bottom my-2" *ngFor="let item of review ">
+                    <div class="col-2">
+                      <div class="rounded-circle p-2 feebbackpro">
+                        {{item?.userId?.firstName.charAt(0) | uppercase}}
                       </div>
                     </div>
-                  </div>
-                  <div class="col-2">
-                    <p>4 days ago</p>
+                    <div class="col-8">
+                      <div class="row">
+                        <p>{{item?.userId?.firstName +" "+item?.userId?.lastName}}  </p>
+                      </div>
+                      <div class="row">
+                        <p class="h5 m-0 text-dark pl-1 pt-2 font-weight-bold">
+                         {{item?.title | titlecase}}
+                        </p>
+                      </div>
+
+                      <div class="row">
+                        <p>
+                          {{ item?.review }}
+                        </p>
+                      </div>
+                      <div *ngIf="item?.feedbackId?.feedback" class="row">
+                        <i class="fa fa-reply-all" aria-hidden="true"></i>
+                        <h4 class="m-0 text-dark pl-1 pt-2 font-weight-bold">
+                          Dr. {{ profileData?.firstName }}
+                          {{ profileData?.lastName }} <br />
+                        </h4>
+
+                        <div class="col-12">
+                          <p>{{item?.feedbackId?.feedback}}</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-2">
+                      <p>{{RiviweTime(item?.createdAt)}}</p>
+                    </div>
+
                   </div>
                 </div>
-              </div>
-              <hr />
-              <div class="card pl-2 pr-2">
-                <p class="text-right pr-2 pl-2 text-danger" >Report an Error</p>
               </div>
             </div>
           </div>
@@ -444,32 +428,19 @@
           </div>
         </div>
         <div class="card mb-3" *ngIf="active == 'Q&AHealthfeed'">
-          <div class="card p-2">
-            <img class="card-img-top" src="https://www.practostatic.com/fit/a0684ea161613c0e81938d5b4ead63f4f8a82a99"
-              alt="Card image cap" />
+          <div class="card p-2" *ngFor="let item of HFHelth">
+            <img
+              class="card-img-top"
+              [src]="item.image[0]"
+              alt="Card image cap"
+            />
             <div class="card-body">
-              <h3>Myths and Facts About Orthodontic (Braces) Treatment</h3>
+              <h3>{{item?.title}}</h3>
               <p class="card-text">
-                A lifetime of happy smiles starts by knowing what’s fact and
-                what’s fiction when it comes to wearing braces. When new
-                patients come to our clinic, they often have lots of questions –
-                along with plenty of misconceptions about orthodontics. Read on
-                as we dispel 5 common myths about
+                {{item?.description}}
               </p>
             </div>
-            <div class="row m-2">
-              <a data-qa-id="healthfeed-article-continue" target="_blank"
-                href="https://www.practo.com/healthfeed/myths-and-facts-about-orthodontic-braces-treatment-28848/post"
-                class="u-primary-text u-d-block">
-                Continue Reading
-              </a>
-            </div>
-            <div class="row m-2">
-              <p>
-                <i class="fa fa-heart mr-2" aria-hidden="true"></i>9
-                <i class="fa fa-share-alt ml-4" aria-hidden="true"></i>
-              </p>
-            </div>
+
           </div>
           <hr />
           <div class="card pl-2 pr-2">
@@ -483,8 +454,11 @@
             <div class="col-sm-12">
               <div class="row">
                 <div class="col-2">
-                  <img src="//www.practostatic.com/web-assets/images/direct_consult.520d47dbea81.svg" class="m-auto p-2"
-                    data-reactid="187" />
+                  <img
+                    src="//www.practostatic.com/web-assets/images/direct_consult.520d47dbea81.svg"
+                    class="m-auto p-2"
+                    data-reactid="187"
+                  />
                 </div>
                 <div class="col-7 font-sizex-smalll text-dark p-2">
                   VIDEO CONSULTATION
@@ -493,7 +467,10 @@
                   <h2 class="">₹{{ profileData?.fees }}</h2>
                 </div>
               </div>
-              <mat-tab-group mat-stretch-tabs class="example-stretched-tabs mat-elevation-z4">
+              <mat-tab-group
+                mat-stretch-tabs
+                class="example-stretched-tabs mat-elevation-z4"
+              >
                 <mat-tab label="Today">
                   <div class="container">
                     <div class="row heightover">
@@ -501,7 +478,9 @@
                         <div class="col-sm-12">
                           <div class="row">
                             <div class="col-sm-12">
-                              <h4 class="font-weight-bold mb-1">Morning Slot</h4>
+                              <h4 class="font-weight-bold mb-1">
+                                Morning Slot
+                              </h4>
                             </div>
                           </div>
                           <div class="row">
@@ -544,7 +523,9 @@
                         <div class="col-sm-12">
                           <div class="row">
                             <div class="col-sm-12">
-                              <h4 class="font-weight-bold mb-1">Morning Slot</h4>
+                              <h4 class="font-weight-bold mb-1">
+                                Morning Slot
+                              </h4>
                             </div>
                           </div>
                           <div class="row">
@@ -580,14 +561,22 @@
                     </div>
                   </div>
                 </mat-tab>
-                <mat-tab [label]="(TimeSlot(3) |date:'dd')+ ' '+(TimeSlot(3) |date:'LLL')">
+                <mat-tab
+                  [label]="
+                    (TimeSlot(3) | date: 'dd') +
+                    ' ' +
+                    (TimeSlot(3) | date: 'LLL')
+                  "
+                >
                   <div class="container">
                     <div class="row heightover">
                       <div *ngFor="let item of slot3">
                         <div class="col-sm-12">
                           <div class="row">
                             <div class="col-sm-12">
-                              <h4 class="font-weight-bold mb-1">Morning Slot</h4>
+                              <h4 class="font-weight-bold mb-1">
+                                Morning Slot
+                              </h4>
                             </div>
                           </div>
                           <div class="row">
@@ -623,14 +612,22 @@
                     </div>
                   </div>
                 </mat-tab>
-                <mat-tab [label]="(TimeSlot(4) |date:'dd')+ ' '+(TimeSlot(4) |date:'LLL')">
+                <mat-tab
+                  [label]="
+                    (TimeSlot(4) | date: 'dd') +
+                    ' ' +
+                    (TimeSlot(4) | date: 'LLL')
+                  "
+                >
                   <div class="container">
                     <div class="row heightover">
                       <div *ngFor="let item of slot4">
                         <div class="col-sm-12">
                           <div class="row">
                             <div class="col-sm-12">
-                              <h4 class="font-weight-bold mb-1">Morning Slot</h4>
+                              <h4 class="font-weight-bold mb-1">
+                                Morning Slot
+                              </h4>
                             </div>
                           </div>
                           <div class="row">
@@ -666,14 +663,22 @@
                     </div>
                   </div>
                 </mat-tab>
-                <mat-tab [label]="(TimeSlot(5) |date:'dd')+ ' '+(TimeSlot(5) |date:'LLL')">
+                <mat-tab
+                  [label]="
+                    (TimeSlot(5) | date: 'dd') +
+                    ' ' +
+                    (TimeSlot(5) | date: 'LLL')
+                  "
+                >
                   <div class="container">
                     <div class="row heightover">
                       <div *ngFor="let item of slot">
                         <div class="col-sm-12">
                           <div class="row">
                             <div class="col-sm-12">
-                              <h4 class="font-weight-bold mb-1">Morning Slot</h4>
+                              <h4 class="font-weight-bold mb-1">
+                                Morning Slot
+                              </h4>
                             </div>
                           </div>
                           <div class="row">
