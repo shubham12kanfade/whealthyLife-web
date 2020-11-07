@@ -174,8 +174,8 @@
                             <div class="card">
                                 <img class="card-img-top" [src]="item?.additionalProductImage[0]" onError="this.src='./../../../assets/img/Empty Cart.png'" alt="Card image cap">
                                 <div class="card-body">
-                                    <h5 class="card-title">SHELCAL 500MG Tablet 15'S</h5>
-                                    <p class="card-text"><strong>₹76.50</strong></p>
+                                    <h5 class="card-title">{{item.productName}}</h5>
+                                    <p class="card-text"><strong>₹ {{item.yourPrice}}.00</strong></p>
                                 </div>
                             </div>
 
@@ -304,55 +304,50 @@
         <div class="row">
             <div class="col-sm-12">
                 <owl-carousel-o [options]="customOptions" #say>
-                    <ng-template carouselSlide>
+                    <ng-template carouselSlide *ngFor="let userss of usersays">
                         <div class="center-1">
-
-                            Beutiful application with elegent UI Design. I found this app very useful.Placed order
-                            for a few
-                            medicines and recieved in just two days.Some medicines costs me +100 from local shop.
-                            Recommended
-                            application.
-
+                            {{userss.review}}
                         </div>
                         <div class="center">
-                            <img src="../../../assets/img/avatar.png" alt="avatar" class="avtimg">
-                            <p>Ayush Verma</p>
-                            <span>Oct 5,2020 at 11:33 AM</span>
-                        </div>
-                    </ng-template>
-                    <ng-template carouselSlide>
-                        <div class="center-1">
-
-                            Beutiful application with elegent UI Design. I found this app very useful.Placed order
-                            for a few
-                            medicines and recieved in just two days.Some medicines costs me +100 from local shop.
-                            Recommended
-                            application.
-
-                        </div>
-                        <div class="center">
-                            <img src="../../../assets/img/avatar.png" alt="avatar" class="avtimg">
-                            <p>Ayush Verma</p>
-                            <span>Oct 5,2020 at 11:33 AM</span>
-                        </div>
-                    </ng-template>
-                    <ng-template carouselSlide>
-                        <div class="center-1">
-
-                            Beutiful application with elegent UI Design. I found this app very useful.Placed order
-                            for a few
-                            medicines and recieved in just two days.Some medicines costs me +100 from local shop.
-                            Recommended
-                            application.
-
-                        </div>
-                        <div class="center">
-                            <img src="../../../assets/img/avatar.png" alt="avatar" class="avtimg">
-                            <p>Ayush Verma</p>
-                            <span>Oct 5,2020 at 11:33 AM</span>
+                            <img src="../../../assets/img/avatar.png" onError="this.src='./../../../assets/img/Empty Cart.png'" alt="avatar" class="avtimg">
+                            <p style="text-transform: capitalize;">{{userss.userId.firstName}} {{userss.userId.lastName}}</p>
+                            <span>{{userss.createdAt}}</span>
                         </div>
                     </ng-template>
                 </owl-carousel-o>
+                    <!-- <ng-template carouselSlide>
+                        <div class="center-1">
+
+                            Beutiful application with elegent UI Design. I found this app very useful.Placed order
+                            for a few
+                            medicines and recieved in just two days.Some medicines costs me +100 from local shop.
+                            Recommended
+                            application.
+
+                        </div>
+                        <div class="center">
+                            <img src="../../../assets/img/avatar.png" alt="avatar" class="avtimg">
+                            <p>Ayush Verma</p>
+                            <span>Oct 5,2020 at 11:33 AM</span>
+                        </div>
+                    </ng-template>
+                    <ng-template carouselSlide>
+                        <div class="center-1">
+
+                            Beutiful application with elegent UI Design. I found this app very useful.Placed order
+                            for a few
+                            medicines and recieved in just two days.Some medicines costs me +100 from local shop.
+                            Recommended
+                            application.
+
+                        </div>
+                        <div class="center">
+                            <img src="../../../assets/img/avatar.png" alt="avatar" class="avtimg">
+                            <p>Ayush Verma</p>
+                            <span>Oct 5,2020 at 11:33 AM</span>
+                        </div>
+                    </ng-template> -->
+                
                 <div class="row prev-next">
                     <div class="catlhs" (click)="say.prev()"> <i class="fa fa-chevron-circle-left fa-3x "
                             aria-hidden="true"></i></div>
