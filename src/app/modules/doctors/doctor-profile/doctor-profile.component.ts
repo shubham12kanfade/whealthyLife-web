@@ -221,6 +221,9 @@ console.log("err", err)
     this.DoctorProfile.getDoctorProfile(data)
       .then((resData) => {
         this.profileData = resData.data;
+        console.log(": ---------------------------------------------------------");
+        console.log("getProfileDetails ->  this.profileData",  this.profileData);
+        console.log(": ---------------------------------------------------------");
       })
       .catch((error) => {
         console.log(
