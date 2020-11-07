@@ -8,10 +8,16 @@ export class MedicineService {
 
   constructor(private ApiCallService:ApiCallService) { }
   getHelthCondtion(){
-   return this.ApiCallService.getData('product/catagories/getAll')
+   return this.ApiCallService.getData('product/catagories/getAll/by/HealthCare')
   }
 
   getcategory(){
-    return this.ApiCallService.getData('product/by/catagory')
+    return this.ApiCallService.getData('product/catagories/getAll/by/Featured')
   }
+
+
+  getproductsdetail(){
+    return this.ApiCallService.getData('product/popular/product')
+  }
+
 }

@@ -10,6 +10,8 @@ import {OwlOptions} from 'ngx-owl-carousel-o';
 })
 export class OrderComponent implements OnInit {
   HelthCondition: any;
+  category: any;
+  productsdetail: any;
 
   constructor(private MedicineService:MedicineService) {
     this.MedicineService.getHelthCondtion().then((resData)=>{
@@ -22,7 +24,42 @@ this.HelthCondition=resData.data
     console.log("OrderComponent -> constructor -> err", err)
       
     })
+
+
+
+    this.MedicineService.getcategory().then((resData)=>{
+      console.log("OrderComponent -> constructor -> getcategory", resData)
+      
+  this.category=resData.data
+  
+        
+      }).catch((err)=>{
+      console.log("OrderComponent -> constructor -> err", err)
+        
+      })
+
+
+      
+    this.MedicineService.getproductsdetail().then((resData)=>{
+      console.log("OrderComponent -> constructor -> productsdetail", resData)
+      
+  this.productsdetail=resData.data
+  
+        
+      }).catch((err)=>{
+      console.log("OrderComponent -> constructor -> err", err)
+        
+      })
+
    }
+
+
+   
+   
+
+
+   
+   
 
 
   customOptions: OwlOptions = {

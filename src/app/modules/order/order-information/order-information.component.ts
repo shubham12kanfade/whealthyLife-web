@@ -88,4 +88,8 @@ export class OrderInformationComponent implements OnInit {
   });
   console.log(this.id);}
 
+  
+
+
+
 }
