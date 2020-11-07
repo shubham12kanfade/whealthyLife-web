@@ -75,11 +75,8 @@ console.log("DoctorsComponent -> getfreeDocList -> resData", resData)
 }).catch((err)=>{
 console.log("DoctorsComponent -> getfreeDocList -> err", err)
   
-})
-     
+})     
     }
-
-
 
   clear() {ActivatedRoute
     this.messageService.clear('myKey1');

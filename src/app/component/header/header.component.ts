@@ -61,11 +61,9 @@ export class HeaderComponent implements OnInit {
     this.router.events.subscribe((resData)=>{
     console.log("HeaderComponent -> ngOnInit -> resData", resData)
 
-
     })
 
 this.getProfileOnline();
-
     if (this.userInfo.designation === 'Doctor') {
       this.showToast('success', "sdsdsjds", "dsdsdsd");
     }

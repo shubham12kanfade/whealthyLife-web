@@ -7,6 +7,7 @@ import { Router, ActivatedRoute } from "@angular/router";
 import * as moment from "moment";
 import { BookingPageService } from './../../../services/booking-page.service';
 import { MatDialog } from '@angular/material/dialog';
+import { CheckingPopupComponent } from '../checking-popup/checking-popup.component';
 
 @Component({
   selector: "app-time-slot",
@@ -63,6 +64,20 @@ export class TimeSlotComponent implements OnInit {
     this.latestday();
     // const data1 = moment().add(1, 'days').format('L');
   }
+
+
+  openDialog(slotStart, slotEnd, slotDate,slotType) {
+  console.log("TimeSlotComponent -> openDialog -> slotStart, slotEnd, slotDate,slotType", slotStart, slotEnd, slotDate,slotType)
+  
+    const dialogRef = this.dialog.open(CheckingPopupComponent, {
+      data:{doctor: this.id, time: slotStart, TimeE: slotEnd, date: slotDate, slotType:slotType }
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
+  }
+
 
   onSelect(event) {
   console.log("TimeSlotComponent -> onSelect -> event", event)

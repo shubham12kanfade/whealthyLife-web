@@ -84,7 +84,7 @@ export class CheckingPopupComponent implements OnInit {
 
     this.videoService.postAppointmentSlot(appointData).then(appointRes => {
       this._snackBar.open('Appointment Book Successfully On Date : '+ this.data.date.slice(0,10) ,'', {
-        duration: 3600,
+        duration: 36000,
         horizontalPosition: 'right',
         verticalPosition:'top',
         panelClass: ['redNoMatch']
@@ -94,7 +94,7 @@ export class CheckingPopupComponent implements OnInit {
     }).catch(err => {
     console.log("CheckingPopupComponent -> postAppointment -> err", err);
     this._snackBar.open('Something Went Wrong on Booking Appointment', '', {
-      duration: 500,
+      duration: 36000,
       horizontalPosition: 'right',
       verticalPosition:'top',
       panelClass: ['redMatch']

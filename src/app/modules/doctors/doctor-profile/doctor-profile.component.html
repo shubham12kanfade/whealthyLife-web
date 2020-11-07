@@ -1,3 +1,29 @@
+<!-- <section>
+  <div class="comntainer">
+    <mat-card> 
+      <div class="row">
+        <div class="col-lg-4">
+          <img [src]="profileData?.avatar" onerror="this.src='../assets/img/user.jpeg'" class="card-img" alt="..."/>          
+        </div>
+        <div class="col-lg-4">
+
+        </div>
+        <div class="col-lg-4">
+
+        </div>
+      </div>
+    </mat-card>
+  </div>
+</section> -->
+
+
+
+
+
+
+
+
+
 <section style="background-color: #f0f0f5">
   <div class="container-lg mt-5">
     <div class="row mt-5">
@@ -22,8 +48,7 @@
                     </span>
                   </h2>
                 </div>
-                <p class="pl-1 pt-2 font-weight-bold">Profile is claimed</p>
-
+                <p class="pl-1 pt-2 font-weight-bold"> Profile is claimed </p>
                 <div class="row text-dark">
                   <span *ngFor="let prospec of profileData?.specialitie">{{
                     prospec?.fullName + ", "

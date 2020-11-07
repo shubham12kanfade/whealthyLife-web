@@ -69,19 +69,19 @@
             <div class="col-lg-8 col-lg-8 col-12 slidetime">
                 <div class="row">
                     <div *ngFor="let item of slot" class="card cad1 ">
-                        <h3 class="wei p-3  ">{{item.day}} </h3>
+                        <h3 class="wei p-3">{{item.day}} </h3>
                         <div class="card-body">
-                            <h3 class="wei">Morning Slots </h3>
+                            <h3 class="wei"> Morning Slots </h3>
                             <div class="row adj1">
                                 <div *ngFor="let bu of item.mrningSlots; let j = index">
-                                    <button class="btn c-day-session__slot" (click)="selectSolot(bu.strtTime,'Morning Slots')">{{bu.strtTime}}</button>
+                                    <button class="btn c-day-session__slot" (click)="selectSolot(bu.strtTime,'Morning Slots')" (click)="openDialog(bu.strtTime,bu.endTime,item.date,'Morning Slots')"> {{bu.strtTime}} </button>
                                 </div>
                             </div>
                             <hr class="hr1">
                             <h3 class="wei">Evening Slots </h3>
                             <div class="row adj1">
                                 <div *ngFor="let it of item.eveningSlots; let x = index">
-                                    <button class="btn c-day-session__slot" (click)="selectSolot(it.strtTime,'Evening Slots')">{{it.strtTime}}</button>
+                                    <button class="btn c-day-session__slot" (click)="selectSolot(it.strtTime,'Evening Slots')" (click)="openDialog(it.strtTime,it.endTime,item.date,'Evening Slots')">{{it.strtTime}}</button>
                                 </div>
                             </div>
                         </div>
