@@ -68,37 +68,13 @@
         <div class="row">
             <div class="col-sm-12">
                 <owl-carousel-o [options]="customOptions1" #healthc>
-                    <ng-template carouselSlide>
-                        <div class="healthcondition" [routerLink]="['/order/Order_information']">
-                            <img src="../../../assets/img/h-c-5.webp" class="zoom">
+                    <ng-template carouselSlide *ngFor="let item of HelthCondition">
+                        <div class="healthcondition" [routerLink]="['/order/Order_information',item._id]">
+                            <img src="{{item.icon}}" onError="this.src='./../../../assets/img/Empty Cart.png'" class="zoom">
                         </div>
                     </ng-template>
-                    <ng-template carouselSlide>
-
-                        <div class="healthcondition">
-                            <img src="../../../assets/img/h-c-6.webp" class="zoom">
-                        </div>
-                    </ng-template>
-                    <ng-template carouselSlide>
-                        <div class="healthcondition">
-                            <img src="../../../assets/img/h-c-7.webp" class="zoom">
-                        </div>
-                    </ng-template>
-                    <ng-template carouselSlide>
-                        <div class="healthcondition">
-                            <img src="../../../assets/img/h-c-4.webp" class="zoom">
-                        </div>
-                    </ng-template>
-                    <ng-template carouselSlide>
-                        <div class="healthcondition">
-                            <img src="../../../assets/img/h-c-2.webp" class="zoom">
-                        </div>
-                    </ng-template>
-                    <ng-template carouselSlide>
-                        <div class="healthcondition">
-                            <img src="../../../assets/img/h-c-1.webp" class="zoom">
-                        </div>
-                    </ng-template>
+                    
+                  
                 </owl-carousel-o>
                 <div class="row prev-next">
                     <div class="catlhs" (click)="healthc.prev()"> <i class="fa fa-chevron-circle-left fa-3x "
@@ -123,12 +99,13 @@
         <div class="row">
             <div class="col-sm-12">
                 <owl-carousel-o [options]="customOptions1" #categ>
-                    <ng-template carouselSlide>
-                        <div>
-                            <img src="../../../assets/img/cat-2.webp" class="zoom">
+                    <ng-template carouselSlide  *ngFor="let item of category">
+                        <div class="healthcondition">
+                            <img [src]="item?.icon[0]" onError="this.src='./../../../assets/img/Empty Cart.png'"  class="zoom">
                         </div>
                     </ng-template>
-                    <ng-template carouselSlide>
+                </owl-carousel-o>
+                    <!-- <ng-template carouselSlide>
 
                         <div>
                             <img src="../../../assets/img/cat-6.webp" class="zoom">
@@ -168,8 +145,8 @@
                         <div>
                             <img src="../../../assets/img/cat-5.webp" class="zoom">
                         </div>
-                    </ng-template>
-                </owl-carousel-o>
+                    </ng-template> -->
+               
                 <div class="row prev-next">
                     <div class="catlhs" (click)="categ.prev()"> <i class="fa fa-chevron-circle-left fa-3x "
                             aria-hidden="true"></i></div>
@@ -192,10 +169,10 @@
         <div class="row">
             <div class="col-sm-12">
                 <owl-carousel-o [options]="medicine" #med>
-                    <ng-template carouselSlide>
+                    <ng-template carouselSlide *ngFor="let item of productsdetail">
                         <div class="">
                             <div class="card">
-                                <img class="card-img-top" src="../../../assets/img/med1.jpg" alt="Card image cap">
+                                <img class="card-img-top" [src]="item?.icon[0]" onError="this.src='./../../../assets/img/Empty Cart.png'" alt="Card image cap">
                                 <div class="card-body">
                                     <h5 class="card-title">SHELCAL 500MG Tablet 15'S</h5>
                                     <p class="card-text"><strong>₹76.50</strong></p>
@@ -204,7 +181,8 @@
 
                         </div>
                     </ng-template>
-                    <ng-template carouselSlide>
+                </owl-carousel-o>
+                    <!-- <ng-template carouselSlide>
                         <div class="">
                             <div class="card">
                                 <img class="card-img-top" src="../../../assets/img/med2.jpeg" alt="Card image cap">
@@ -219,8 +197,8 @@
                                 </div>
                             </div>
                         </div>
-                    </ng-template>
-                    <ng-template carouselSlide>
+                    </ng-template> -->
+                    <!-- <ng-template carouselSlide>
                         <div class="card">
                             <img class="card-img-top" src="../../../assets/img/med4.jpeg" alt="Card image cap">
                             <div class="card-body">
@@ -231,8 +209,8 @@
 
                             </div>
                         </div>
-                    </ng-template>
-                    <ng-template carouselSlide>
+                    </ng-template> -->
+                    <!-- <ng-template carouselSlide>
                         <div class="">
                             <div class="card">
                                 <img class="card-img-top" src="../../../assets/img/med4.jpeg" alt="Card image cap">
@@ -245,8 +223,8 @@
                                 </div>
                             </div>
                         </div>
-                    </ng-template>
-                </owl-carousel-o>
+                    </ng-template> -->
+                
                 <div class="row prev-next">
                     <div class="medlhs" (click)="med.prev()"> <i class="fa fa-chevron-circle-left fa-3x "
                             aria-hidden="true"></i></div>
