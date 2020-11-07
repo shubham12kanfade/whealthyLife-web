@@ -116,7 +116,7 @@ export class TimeSlotComponent implements OnInit {
     this.DoctorProfile.getDoctorProfile(data)
       .then((resData) => {
         this.profileData = resData.data;
-        this.showtime(this.profileData);
+        // this.showtime(this.profileData);
       })
       .catch((error) => {
         console.log(

@@ -25,36 +25,32 @@
       </div>
 
       <div class="row" style="margin-top: 50px !important">
-        <div class="col-lg-6 offset-lg-3 col-12" style="
-            display: flex;
-            justify-content: space-evenly;
-            flex-wrap: wrap;
-            width: 100%;
-          ">
+        <div class="col-lg-6 offset-lg-3 col-12" style="display: flex;
+            justify-content: space-evenly;flex-wrap: wrap;width: 100%;">
           <div class="row hov">
             <div class="col-lg-4 col-6 hov2 changes12" [routerLink]="['/bookappointment']"
               routerLinkActive="router-link-active">
               <img src="../../../assets/img/Swati/Appointment.svg " alt="lab"
-                style="height: 60px; margin-bottom: 10px" />
-              <span class="sub-title">Book Appointment</span>
+                style="height: 60px; margin-bottom: 10px; cursor: pointer;" />
+              <span class="sub-title" style="cursor: pointer;">Book Appointment</span>
             </div>
             <div class="col-lg-4 col-6 changes12" [routerLink]="['/booktests']" routerLinkActive="router-link-active">
-              <img src="../../../assets/img/Swati/LabTest.svg" alt="lab" style="height: 60px; margin-bottom: 10px" />
-              <span class="sub-title">Lab Test</span>
+              <img src="../../../assets/img/Swati/LabTest.svg" alt="lab" style="height: 60px; margin-bottom: 10px; cursor: pointer;" />
+              <span class="sub-title" style=" cursor: pointer;">Lab Test</span>
             </div>
             <div class="col-lg-4 col-6 changes12" [routerLink]="['/']" routerLinkActive="router-link-active">
               <img src="../../../assets/img/Swati/OnlineReport.svg" alt="lab"
-                style="height: 60px; margin-bottom: 10px" />
-              <span class="sub-title">Online Reports</span>
+                style="height: 60px; margin-bottom: 10px; cursor: pointer;" />
+              <span class="sub-title" style=" cursor: pointer;">Online Reports</span>
             </div>
             <div class="col-lg-4 offset-lg-2 col-6 changes12" [routerLink]="['/']"
               routerLinkActive="router-link-active">
-              <img src="../../../assets/img/Swati/Medicine.svg" alt="lab" style="height: 60px; margin-bottom: 10px" />
-              <span class="sub-title">Order Medicine</span>
+              <img src="../../../assets/img/Swati/Medicine.svg" alt="lab" style="height: 60px; margin-bottom: 10px; cursor: pointer;" />
+              <span class="sub-title" style=" cursor: pointer;">Order Medicine</span>
             </div>
             <div class="col-lg-4 changes12" [routerLink]="['/']" routerLinkActive="router-link-active">
-              <img src="../../../assets/img/Swati/TrackOrder.svg" alt="lab" style="height: 60px; margin-bottom: 10px" />
-              <span class="sub-title">Track Your Order</span>
+              <img src="../../../assets/img/Swati/TrackOrder.svg" alt="lab" style="height: 60px; margin-bottom: 10px; cursor: pointer;" />
+              <span class="sub-title" style=" cursor: pointer;">Track Your Order</span>
             </div>
           </div>
         </div>
@@ -305,12 +301,14 @@
     <div class="container">
       <h2>TOP CATEGORIES</h2>
       <div>
-        <div class="row prev-next">
-          <div class="lhs" (click)="review1.prev()">
-            <i class="fa fa-chevron-circle-left fa-3x" aria-hidden="true"></i>
-          </div>
-          <div class="rhs" (click)="review1.next()">
-            <i class="fa fa-chevron-circle-right fa-3x" aria-hidden="true"></i>
+        <div class="row">
+          <div class="col-12" style="display: flex;justify-content: space-between;width: 100%;position:absolute;top:50%">
+            <div (click)="review1.prev()" style="z-index: 9;">
+              <i class="fa fa-chevron-circle-left fa-3x" aria-hidden="true"></i>
+            </div>
+            <div (click)="review1.next()" style="z-index: 9;">
+              <i class="fa fa-chevron-circle-right fa-3x" aria-hidden="true"></i>
+            </div>
           </div>
           <owl-carousel-o [options]="customOptions" #review1>
             <ng-template carouselSlide *ngFor="let item of Specialit">
@@ -318,11 +316,9 @@
                 <a [routerLink]="['/doctors/' + item._id]" routerLinkActive="router-link-active">
                   <div class="cat-content">
                     <div class="inner-cat-content">
-                      <h2>{{ item.fullName }}</h2>
+                      <h2> {{ item.fullName }} </h2>
                     </div>
-
-                    <img [src]="item.backImg" onError="this.src='./../../../assets/img/Swati/MedicalRecord.jpg'"
-                      alt="img" />
+                    <img [src]="item.backImg" onError="this.src='../../../assets/img/Empty Cart.png'" alt="img"/>
                   </div>
                 </a>
               </div>
@@ -417,7 +413,7 @@
                 </h3>
                 <p>{{ item.buttonText }}</p>
               </div>
-              <img [src]="item.backImg" alt="checkup" />
+              <img [src]="item.backImg" alt="checkup" onerror="this.src='../../../assets/img/Empty Cart.png'"/>
             </a>
           </div>
         </div>
@@ -478,7 +474,7 @@
                 </h3>
                 <p>{{ item?.buttonText }}</p>
               </div>
-              <img [src]="item?.backImg" alt="checkup" />
+              <img [src]="item?.backImg" alt="checkup"  onerror="this.src='../../../assets/img/Empty Cart.png'" />
             </a>
           </div>
         </div>
@@ -503,6 +499,7 @@
       </div>
       <div class="swiper-container">
         <div class="swiper-wrapper">
+          
           <owl-carousel-o [options]="customOptions1">
             <ng-template carouselSlide *ngFor="let item of Labdata; let a = index">
               <div class="swiper-slide">
