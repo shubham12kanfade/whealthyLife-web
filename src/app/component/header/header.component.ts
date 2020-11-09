@@ -26,7 +26,7 @@ export class HeaderComponent implements OnInit {
     public router: Router,
     public messageService: MessageService,
     private MainService:MainService,
-    private _snackBar: MatSnackBar
+    private _snackBar: MatSnackBar,
   ) {
     this.checkLogin()
 
@@ -55,6 +55,8 @@ export class HeaderComponent implements OnInit {
 
   checkLogin() {
     this.userInfo = this.userService.getUserInfo();
+
+    
   }
 
   ngOnInit() {
@@ -71,7 +73,9 @@ this.getProfileOnline();
 
   getProfileOnline(){
 this.MainService.getProfile().then((resData)=>{
-  this.onlieProfile=resData.data
+console.log("HeaderComponent -> getProfileOnline -> resData", resData)
+  this.onlieProfile = resData.data
+
 }).catch((err)=>{
 
 })

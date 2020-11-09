@@ -73,14 +73,14 @@
                  *ngIf="!userInfo">LOGIN</div>
               </li>
 
-              <li class="nav-item dropdown open" *ngIf="userInfo" style="position: relative; top: -5px">
+              <li class="nav-item dropdown open" *ngIf="userInfo" style="position: relative; top: -5px;">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                   aria-haspopup="true" aria-expanded="false" style="margin-top: 12px">
-                  <img [src]="onlieProfile?.avatar" onError="this.src='../../../assets/img/avatar.png'" class="avatar1"
-                    alt="" />
+                  <span style="font-weight: 600;margin-right: 5px;" > Hi </span>
                   {{ userInfo?.firstName }}
                 </a>
-                <ul class="dropdown-menu dropDown" aria-labelledby="navbarDropdown">
+                <ul class="dropdown-menu dropDown" aria-labelledby="navbarDropdown" style="position: absolute;left: -63px;
+                width: 200px;">
                   <li>
                     <a class="dropdown-item" style="display: flex; cursor: pointer" (click)="onProfile()">
                       <img [src]="onlieProfile?.avatar" onError="this.src='../../../assets/img/avatar.png'"

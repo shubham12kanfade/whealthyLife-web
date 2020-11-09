@@ -5,6 +5,7 @@ import { FormGroup, FormControl } from "@angular/forms";
 import { Component, OnInit } from "@angular/core";
 import { LoginService } from "src/app/services/login.service";
 import { MessageService } from "primeng/api";
+import * as firebase from 'firebase';
 
 @Component({
   selector: "app-login",
@@ -18,6 +19,7 @@ export class LoginComponent implements OnInit {
   });
   singIn: boolean = false;
   Fblogin: any;
+  devTok: string;
   constructor(
     private router: Router,
     public LoginService: LoginService,
@@ -38,6 +40,7 @@ export class LoginComponent implements OnInit {
 
     const data = {
       ...this.loginForm.value,
+      deviceToken : this.devTok
     };
     this.LoginService.loginUser(data)
       .then((resData: any) => {
@@ -59,7 +62,43 @@ export class LoginComponent implements OnInit {
         }
       });
   }
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    var firebaseConfig = {
+      apiKey: "AIzaSyDCFNCZ83Kv9Lz5QLoR-e2PaeQDMLqmpvw",
+      authDomain: "whealthylife-ae995.firebaseapp.com",
+      databaseURL: "https://whealthylife-ae995.firebaseio.com",
+      projectId: "whealthylife-ae995",
+      storageBucket: "whealthylife-ae995.appspot.com",
+      messagingSenderId: "802033719823",
+      appId: "1:802033719823:web:495681b8fafb7c5885a17a",
+      measurementId: "G-TB767VQ4NP"
+    };
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+
+    var message = firebase.messaging();
+    console.log("LoginComponent -> ngOnInit -> message", message)
+
+    message.getToken().then(rerData => {
+      console.log("AppComponent -> constructor -> getToken", rerData)
+      this.devTok=rerData
+      console.log("LoginComponent -> ngOnInit -> this.devTok", this.devTok)
+
+    }).catch(error => {
+      console.log("AppComponent -> constructor -> error", error)
+    })
+    message.onMessage((payload) => {
+      console.log('Message received. ', payload);
+      // ...
+    })
+
+
+
+
+
+
+
+  }
 
   showToast(type, messageType, message) {
     setTimeout(() => {
