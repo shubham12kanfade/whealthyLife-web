@@ -12,6 +12,7 @@ export class OrderComponent implements OnInit {
   HelthCondition: any;
   category: any;
   productsdetail: any;
+  usersays: any=[];
 
   constructor(private MedicineService:MedicineService) {
     this.MedicineService.getHelthCondtion().then((resData)=>{
@@ -44,6 +45,22 @@ this.HelthCondition=resData.data
       console.log("OrderComponent -> constructor -> productsdetail", resData)
       
   this.productsdetail=resData.data
+  
+        
+      }).catch((err)=>{
+      console.log("OrderComponent -> constructor -> err", err)
+        
+      })
+
+
+      
+    this.MedicineService.getusersays().then((resData)=>{
+      console.log("OrderComponent -> constructor -> usersays", resData)
+
+    
+      
+     this.usersays = resData.data
+     console.log("OrderComponent -> constructor -> this.usersays", this.usersays)
   
         
       }).catch((err)=>{

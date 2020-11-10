@@ -20,4 +20,9 @@ export class MedicineService {
     return this.ApiCallService.getData('product/popular/product')
   }
 
+
+  getusersays(){
+    return this.ApiCallService.getData('customer/review/get/by/type/AppUsers')
+  }
+
 }
