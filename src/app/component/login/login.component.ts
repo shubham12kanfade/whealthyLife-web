@@ -18,7 +18,7 @@ import { AngularFireMessaging } from '@angular/fire/messaging';
 })
 export class LoginComponent implements OnInit {
 
-  
+
 
   loginForm = new FormGroup({
     email: new FormControl(""),
@@ -84,42 +84,43 @@ export class LoginComponent implements OnInit {
     //   measurementId: "G-TB767VQ4NP"
     // };
 
-    var firebaseConfig = {
-      apiKey: "AIzaSyBBM6AZOA2OXjOEd2yYZSn2XvIABPiXMqU",
-      authDomain: "whealthy-life.firebaseapp.com",
-      databaseURL: "https://whealthy-life.firebaseio.com",
-      projectId: "whealthy-life",
-      storageBucket: "whealthy-life.appspot.com",
-      messagingSenderId: "307401641913",
-      appId: "1:307401641913:web:e609667c20e5032566f068",
-      measurementId: "G-FDH6V18HMD"
-    };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-    firebase.analytics();
+    // var firebaseConfig = {
+    //   apiKey: "AIzaSyBBM6AZOA2OXjOEd2yYZSn2XvIABPiXMqU",
+    //   authDomain: "whealthy-life.firebaseapp.com",
+    //   databaseURL: "https://whealthy-life.firebaseio.com",
+    //   projectId: "whealthy-life",
+    //   storageBucket: "whealthy-life.appspot.com",
+    //   messagingSenderId: "307401641913",
+    //   appId: "1:307401641913:web:e609667c20e5032566f068",
+    //   measurementId: "G-FDH6V18HMD"
+    // };
+    // // Initialize Firebase
+    // firebase.initializeApp(firebaseConfig);
+    // firebase.analytics();
 
-    
+
+
 
 
 
     // firebase.initializeApp(firebaseConfig);
     // firebase.analytics();
 
-    var message = firebase.messaging();
-    console.log("LoginComponent -> ngOnInit -> message", message)
+    // var message = firebase.messaging();
+    // console.log("LoginComponent -> ngOnInit -> message", message)
 
-    message.getToken().then(rerData => {
-      console.log("AppComponent -> constructor -> getToken", rerData)
-      this.devTok=rerData
-      console.log("LoginComponent -> ngOnInit -> this.devTok", this.devTok)
+    // message.getToken().then(rerData => {
+    //   console.log("AppComponent -> constructor -> getToken", rerData)
+    //   this.devTok=rerData
+    //   console.log("LoginComponent -> ngOnInit -> this.devTok", this.devTok)
 
-    }).catch(error => {
-      console.log("AppComponent -> constructor -> error", error)
-    })
-    message.onMessage((payload) => {
-      console.log('Message received. ', payload);
-      // ...
-    })
+    // }).catch(error => {
+    //   console.log("AppComponent -> constructor -> error", error)
+    // })
+    // message.onMessage((payload) => {
+    //   console.log('Message received. ', payload);
+    //   // ...
+    // })
 
   }
 
