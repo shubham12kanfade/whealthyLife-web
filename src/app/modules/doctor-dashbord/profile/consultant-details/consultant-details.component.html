@@ -33,7 +33,7 @@
                               (inputChanged)='onChangeSearch($event)'
                               (inputFocused)='onFocused($event)'
                               [itemTemplate]="itemTemplate"
-                              [notFoundTemplate]="notFoundTemplate">                                 
+                              [notFoundTemplate]="notFoundTemplate">  
                             </ng-autocomplete>
                              
                             <ng-template #itemTemplate let-item>
@@ -50,16 +50,43 @@
 
 
 
-                        <div class="form-group">
+                        <!-- <div class="form-group">
                             <label for="RegistrationNumber">Clinic Address</label>
                             <div class="row">
                                 <div class="col-sm-12">
-                                    <textarea type="text" class="form-control" formControlName="clinicAddress"
-                                    >
+                                    <textarea type="text" class="form-control" formControlName="clinicAddress">
                                 </textarea>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
+
+                        <div  style="margin: 0px 0px 25px 0px;padding: 0px;">
+                            <label for="RegistrationNumber">Clinic Name</label>
+                            <div class="ng-autocomplete" style="width: 100%;">
+                                <ng-autocomplete 
+                                  [data]="data"
+                                  [searchKeyword]="keyword1"
+                                  (selected)='selectEvent1($event)'
+                                  (inputChanged)='onChangeSearch1($event)'
+                                  (inputFocused)='onFocused1($event)'
+                                  [itemTemplate]="itemTemplate"
+                                  [notFoundTemplate]="notFoundTemplate"
+                                  >  
+                                  
+                                </ng-autocomplete>
+                                 
+                                <ng-template #itemTemplate let-item>
+                                <a [innerHTML]="item.name"></a>
+                                </ng-template>
+                                 
+                                <ng-template #notFoundTemplate let-notFound>
+                                <div [innerHTML]="notFound"></div>
+                                </ng-template>
+                                </div>
+                            </div>
+
+
+
                         <ng-container formArrayName="times">
                             <div *ngFor="let quantity of times(j).controls; let k=index" [formGroupName]="k">
 

@@ -1,24 +1,27 @@
-import { ApiCallService } from './api/apicall.service';
-import { Injectable } from '@angular/core';
+import { ApiCallService } from "./api/apicall.service";
+import { Injectable } from "@angular/core";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root",
 })
 export class SpecialityService {
+  constructor(public Api: ApiCallService) {}
 
-  constructor(public Api: ApiCallService) { }
-
-  getSpecialization(){
-    return this.Api.getData('specialization/get/all/');
+  getSpecialization() {
+    return this.Api.getData("specialization/get/all/");
   }
-  getSpecializationAll(){
-    return this.Api.getData('country/specialisations');
+  getSpecializationAll() {
+    return this.Api.getData("specialization/get/all");
   }
 
   getTestMaster() {
-    return this.Api.getData('tests/all');
+    return this.Api.getData("tests/all");
   }
-
-
-
+  getTopSpec() {
+    return this.Api.getData("specialization/get/top/counts");
+  }
+  getCount(){
+    return this.Api.getData("doctor/all/counts")
+  }
+  
 }

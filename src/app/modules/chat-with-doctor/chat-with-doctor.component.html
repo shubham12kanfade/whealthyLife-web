@@ -18,19 +18,23 @@
             />
           </div>
         </article>
-        <button mat-raised-button color="primary" class="m-3">
+       
+        <button mat-raised-button color="primary" class="m-3" style=" z-index: 1;
+        padding-left: 6px;
+        padding-right: 5px;">
           Consult Now
         </button>
+      
         <div class="row">
           <div class="col-sm-4 col-md-4 col-lg-4 m-3">
             <div class="media">
               <img
                 src="../../../assets/img/images.png"
-                class="mr-3 width-img"
+                class="mr-3 width-img txt"
                 alt=""
               />
-              <div class="media-body">
-                <h4 class="text-bold">Verified Doctors</h4>
+              <div class="media-body txt">
+                <h4 class="text-bold ">Verified Doctors</h4>
               </div>
             </div>
           </div>
@@ -38,11 +42,11 @@
             <div class="media">
               <img
                 src="../../../assets/img/download.jpeg"
-                class="mr-3 width-img"
+                class="mr-3 width-img txt"
                 alt=""
               />
-              <div class="media-body">
-                <h4 class="text-bold">Free Followup</h4>
+              <div class="media-body txt">
+                <h4 class="text-bold" style="margin-right: 10px;">Free Followup</h4>
               </div>
             </div>
           </div>
@@ -51,7 +55,7 @@
       <div class="col-sm-6 col-md-6 col-lg-6 pink">
         <img
           class="hero-image web"
-          src="../../../assets/img/homepage-hero-image-web-v1.png"
+          src="../../../assets/img/homepage-hero-image-web-v1.png" 
           alt=""
         />
       </div>
@@ -67,12 +71,22 @@
         </h2>
       </div>
       <div class="col-sm-12 col-md-12 col-lg-12">
+        <div class="row" style="position: absolute;width: 100%;justify-content: space-between;top: 70px;">
+          <span (click)="review.prev()" style="z-index: 9;">
+            <i class="fa fa-chevron-circle-left fa-3x" aria-hidden="true">
+            </i>
+          </span>
+          <span (click)="review.next()" style="z-index: 9;">
+            <i class="fa fa-chevron-circle-right fa-3x" aria-hidden="true">
+            </i>
+          </span>
+        </div>
         <owl-carousel-o [options]="customOptions" #review>
           <ng-template carouselSlide>
-        <div class="card border" style="width: 18rem;">
+        <div class="card border" style="width:100%;">
           <img
             src="../../../assets/img/cough-cold-v1.jpg"
-            class="card-img-top"
+            class="card-img-top"  style=" "
             alt=""
           />
           <div class="card-body">
@@ -86,10 +100,10 @@
         </div>
       </ng-template>
       <ng-template carouselSlide>
-        <div class="card border" style="width: 18rem;">
+        <div class="card border" style="width:100%;">
           <img
-            src="../../../assets/img/period-problems-v1.jpg"
-            class="card-img-top"
+            src="../../../assets/img/period-problems-v1.jpg" 
+            class="card-img-top" style=" "
             alt=""
           />
           <div class="card-body">
@@ -103,10 +117,10 @@
         </div>
       </ng-template>
       <ng-template carouselSlide>
-        <div class="card border" style="width: 18rem;">
+        <div class="card border" style="width:100%;">
           <img
             src="../../../assets/img/performance-issues-bed-v1.jpg"
-            class="card-img-top"
+            class="card-img-top" style=" "
             alt=""
           />
           <div class="card-body">
@@ -120,10 +134,10 @@
         </div>
       </ng-template>
       <ng-template carouselSlide>
-        <div class="card border" style="width: 18rem;">
+        <div class="card border" style="width:100%;">
           <img
             src="../../../assets/img/skin-problems-v1.jpg"
-            class="card-img-top"
+            class="card-img-top" style=" "
             alt=""
           />
           <div class="card-body">
@@ -137,230 +151,232 @@
         </div>
       </ng-template>
     </owl-carousel-o>
-    <div class="row prev-next">
-      <div class="lhs" (click)="review.prev()">
-        <i class="fa fa-chevron-circle-left fa-3x" aria-hidden="true"></i>
-      </div>
-      <div class="rhs" (click)="review.next()">
-        <i class="fa fa-chevron-circle-right fa-3x" aria-hidden="true"></i>
-      </div>
-    </div>
       </div>
     </div>
   </div>
 </section>
-<section>
+
+
+<section style="margin-top: 30px;">
   <div class="container">
-    <div class="row">
-      <div class="col-sm-12 col-md-12 col-lg-12">
-        <h2 class="homepage-section-heading horizontal-scroll">
-          Offers
-        </h2>
+
+    <h2>Offers</h2>
+    <div class="col-12">
+      <div class="row" style="position: absolute;width: 100%;justify-content: space-between;top: 140px;">
+        <span (click)="review1.prev()" style="z-index: 9;">
+          <i class="fa fa-chevron-circle-left fa-3x" aria-hidden="true">
+          </i>
+        </span>
+        <span (click)="review1.next()" style="z-index: 9;">
+          <i class="fa fa-chevron-circle-right fa-3x" aria-hidden="true">
+          </i>
+        </span>
       </div>
-      <div class="col-sm-12 col-md-12 col-lg-12">
-        <owl-carousel-o [options]="customOptions2" #review1>
-          <ng-template carouselSlide>
-        <div class="card green" style="width: 30rem;">
-          <div class="card-body">
-            <div class="media">
-              <div class="media-body">
-                <button mat-raised-button color="light" class="card-title">
-                  Offer
-                </button>
-                <h4 class="heading">
-                  Download the App &amp; get ₹100 HealthCash
-                </h4>
-                <h4 class="heading">
-                  Download App >
-                </h4>
-              </div>
-              <img
-                class="ml-3 mb-0"
-                src="../../../assets/img/offer-app-v1.png"
-                style="width: 30%;"
-                alt="Generic placeholder image"
-              />
+      <owl-carousel-o [options]="customOptions2" #review1>
+        <ng-template *ngFor="let item of Offers" carouselSlide>
+          <div style="margin: 0px 10px;">
+          <div class="card " style="border: 1px solid black !important;
+          box-shadow: 5px 5px 5px grey;">
+            <div style="display: flex;
+            justify-content: center;
+            align-items: center;">
+              <img class="" [src]="item?.backImg"  style="width: 150px;height: 150px;border: 2px solid #c5c1c1;border-radius: 50%;
+              margin: 10px;" alt="Generic placeholder image" onError="this.src='./../../../assets/img/briefcase.png'" />
+            </div>
+            <div class="card-body">
+              <div style="height: 100px;">
+              <h3 class="heading"> {{item?.title}}</h3>
+            </div>
+            <div class="card-footer"  style="display: flex;justify-content:center;align-items: flex-end">
+
+                <button mat-raised-button color="light" class="card-title" style="width: 100%;">
+                  {{ item?.buttonText}}
+                 </button>
+           
+            </div>
             </div>
           </div>
         </div>
-      </ng-template>
-      <ng-template carouselSlide>
-        <div class="card pink" style="width: 30rem;">
-          <div class="card-body">
-            <div class="media">
-              <div class="media-body">
-                <button mat-raised-button color="light" class="card-title">
-                  WhealthyLife PLUS
-                </button>
-                <h4 class="heading">
-                  Get unlimited consultations for a year for just ₹1999
-                </h4>
-                <h4 class="heading">
-                  Get Membership >
-                </h4>
-              </div>
-              <img
-                class="ml-3 mb-0"
-                src="../../../assets/img/offer-plus-plan-v1.png"
-                style="width: 30%;"
-                alt="Generic placeholder image"
-              />
+      <!-- <div class="card" style="width:100%;"  >
+        <div class="card-body">
+          <div class="media">
+            <div class="media-body">
+              <button mat-raised-button color="light" class="card-title">
+               {{ item?.buttonText}}
+              </button>
+              <h4 class="heading">
+              {{item?.title}}
+              </h4>
+              <h4 class="heading">
+                Download App >
+              </h4>
             </div>
+            <img
+              class="ml-3 mb-0"
+              [src]="item?.backImg" 
+              style="width: 30%;"
+              alt="Generic placeholder image"
+              onError="this.src='./../../../assets/img/briefcase.png'"
+            />
           </div>
         </div>
-      </ng-template>
-      <ng-template carouselSlide>
-        <div class="card yellow" style="width: 30rem;">
-          <div class="card-body">
-            <div class="media">
-              <div class="media-body">
-                <button mat-raised-button color="light" class="card-title">
-                  Offer
-                </button>
-                <h4 class="heading">
-                  Chat with specialists at just ₹199
-                </h4>
-                <h4 class="heading">
-                  Chat Now >
-                </h4>
-              </div>
-              <img
-                class="ml-3 mb-0"
-                src="./../../assets/img/offer-specialist-v1.png"
-                style="width: 30%;"
-                alt="Generic placeholder image"
-              />
-            </div>
-          </div>
-        </div>
-      </ng-template>
-    </owl-carousel-o>
-    <div class="row prev-next">
-      <div class="lhs" (click)="review1.prev()">
-        <i class="fa fa-chevron-circle-left fa-3x" aria-hidden="true"></i>
-      </div>
-      <div class="rhs" (click)="review1.next()">
-        <i class="fa fa-chevron-circle-right fa-3x" aria-hidden="true"></i>
-      </div>
-    </div>
-      </div>
+      </div> -->
+    </ng-template>
+  </owl-carousel-o>
     </div>
   </div>
 </section>
+
+
+
+
+
+
+
+
+
 <section>
   <div class="container">
     <div class="row">
-      <div class="col-sm-12 col-md-12 col-lg-12">
+      <div class="col-sm-12 col-md-12 col-lg-12 m-3">
         <h2 class="homepage-section-heading horizontal-scroll">
           Top Specialities
         </h2>
       </div>
       <div class="col-sm-12 col-md-12 col-lg-12">
-        <owl-carousel-o [options]="customOptions3" #review2>
+        <div class="row" style="position: absolute;width: 100%;justify-content: space-between;top: 70px;">
+          <span (click)="review2.prev()" style="z-index: 9;">
+            <i class="fa fa-chevron-circle-left fa-3x" aria-hidden="true">
+            </i>
+          </span>
+          <span (click)="review2.next()" style="z-index: 9;">
+            <i class="fa fa-chevron-circle-right fa-3x" aria-hidden="true">
+            </i>
+          </span>
+        </div>
+        <owl-carousel-o [options]="customOptions" #review2>
           <ng-template carouselSlide>
-        <div class="card" style="width: 18rem;">
+        <div class="card border" style="width:100%;">
           <img
-            src="../../../assets/img/top-speciality-gynaecologist.svg"
-            style="width: 30%;" class="ml-5"
-            alt="..."
+            src="../../../assets/img/Swati/ChatWithDoctor/Gynecologist.png"
+            class="card-img-top"  style=" height: 130px;
+            width: 145px;
+            align-self: center;"
+            alt=""
           />
           <div class="card-body">
-            <h4 class="heading">Gynaecology</h4>
-            <p>
+            <h4 class="heading" style="text-align: center;">Gynaecology</h4>
+            <p style="text-align: center;">
               ₹ 249
             </p>
           </div>
         </div>
       </ng-template>
       <ng-template carouselSlide>
-        <div class="card" style="width: 18rem;">
+        <div class="card border" style="width:100%;">
           <img
-            src="../../../assets/img/top-speciality-gp.svg"
-            style="width: 30%;" class="ml-5"
-            alt="..."
+            src="../../../assets/img/Swati/ChatWithDoctor/General physician.png" 
+            class="card-img-top" style=" height: 130px;
+            width: 145px;
+            align-self: center;"
+            alt=""
           />
           <div class="card-body">
-            <h4 class="heading">General physician</h4>
-            <p>
+            <h4 class="heading" style=" text-align: center;">General physician</h4>
+            <p style=" text-align: center;">
               ₹ 199
             </p>
           </div>
         </div>
       </ng-template>
       <ng-template carouselSlide>
-        <div class="card" style="width: 18rem;">
+        <div class="card border" style="width:100%;">
           <img
-            src="../../../assets/img/top-speciality-dermatologist.svg"
-            style="width: 30%;" class="ml-5"
-            alt="..."
+            src="../../../assets/img/Swati/ChatWithDoctor/Dermatologist.png"
+            class="card-img-top" style=" height: 130px;
+            width: 145px;
+            align-self: center;"
+            alt=""
           />
           <div class="card-body">
-            <h4 class="heading">Dermatology</h4>
-            <p>
+            <h4 class="heading" style="text-align: center;">Dermatology</h4>
+            <p style="text-align: center;">
               ₹ 199
             </p>
           </div>
         </div>
       </ng-template>
       <ng-template carouselSlide>
-        <div class="card" style="width: 18rem;">
+        <div class="card border" style="width:100%;">
           <img
-            src="../../../assets/img/top-speciality-psychiatric.svg"
-            style="width: 30%;" class="ml-5"
-            alt="..."
+            src="../../../assets/img/Swati/ChatWithDoctor/Psychiatrist.png"
+            class="card-img-top" style=" height: 130px;
+            width: 145px;
+            align-self: center;"
+            alt=""
           />
           <div class="card-body">
-            <h4 class="heading">Psychiatry</h4>
-            <p>
+            <h4 class="heading" style="text-align: center;">Psychiatry</h4>
+            <p style="text-align: center;">
               ₹ 249
             </p>
           </div>
         </div>
       </ng-template>
       <ng-template carouselSlide>
-        <div class="card" style="width: 18rem;">
+        <div class="card border" style="width:100%;">
           <img
-            src="../../../assets/img/top-speciality-stomach.svg"
-            style="width: 30%;" class="ml-5"
-            alt="..."
+            src="../../../assets/img/Swati/ChatWithDoctor/Stomach and Digestion.png"
+            class="card-img-top" style=" height: 130px;
+            width: 145px;
+            align-self: center;"
+            alt=""
           />
           <div class="card-body">
-            <h4 class="heading">Stomach and digestion</h4>
-            <p>
+            <h4 class="heading" style="text-align: center;">Stomach and digestion</h4>
+            <p style="text-align: center;">
               ₹ 299
             </p>
           </div>
         </div>
       </ng-template>
       <ng-template carouselSlide>
-        <div class="card" style="width: 18rem;">
+        <div class="card border" style="width:100%;">
           <img
-            src="../../../assets/img/top-speciality-pediatric (1).svg"
-            style="width: 30%;" class="ml-5"
-            alt="..."
+            src="../../../assets/img/Swati/ChatWithDoctor/Pediatrics.png"
+            class="card-img-top" style=" height: 130px;
+            width: 145px;
+            align-self: center;"
+            alt=""
           />
           <div class="card-body">
-            <h4 class="heading">Pediatrics</h4>
-            <p>
+            <h4 class="heading" style="text-align: center;">Pediatrics</h4>
+            <p style="text-align: center;">
               ₹ 249
             </p>
           </div>
         </div>
       </ng-template>
-    </owl-carousel-o>
-    <div class="row prev-next">
-      <div class="lhs" (click)="review2.prev()">
-        <i class="fa fa-chevron-circle-left fa-3x" aria-hidden="true"></i>
-      </div>
-      <div class="rhs" (click)="review2.next()">
-        <i class="fa fa-chevron-circle-right fa-3x" aria-hidden="true"></i>
-      </div>
-    </div>
 
+    </owl-carousel-o>
+    
       </div>
     </div>
   </div>
 </section>
+
+
+<section>
+  <div class="container">
+    <div class="col-12">
+
+       
+      </div>
+  </div>
+</section>
+
+
+
 <section>
   <div class="container">
     <div class="row">
@@ -370,15 +386,15 @@
         </h2>
       </div>
       <div class="col-sm-4 col-md-4 col-lg-4 cen">
-        <img src="../../../assets/img/download.jpeg" width="10%" alt="" />
+        <img src="../../../assets/img/Swati/ChatWithDoctor/TalkToDoctor.png" width="10%" alt="" />
         <p>Talk to a doctor online</p>
       </div>
       <div class="col-sm-4 col-md-4 col-lg-4 cen">
-        <img src="../../../assets/img/power.png" width="10%" alt="" />
+        <img src="../../../assets/img/Swati/ChatWithDoctor/MedicineDelivered.png" width="10%" alt="" />
         <p>Get medicines delivered to you</p>
       </div>
       <div class="col-sm-4 col-md-4 col-lg-4 cen">
-        <img src="../../../assets/img/smile.png" width="10%" alt="" />
+        <img src="../../../assets/img/Swati/ChatWithDoctor/Smiley.png" width="10%" alt="" />
         <p>Follow up with the doctor for free</p>
       </div>
     </div>
@@ -405,12 +421,12 @@
 <section>
   <div class="container">
     <div class="row">
-      <div class="col-sm-12 col-md-12 col-lg-12 cen">
+      <div class="col-sm-12 col-md-12 col-lg-4 cen">
         <h2 class="homepage-section-heading horizontal-scroll">
           What our users say
         </h2>
       </div>
-      <div class="col-sm-12 col-md-12 col-lg-12 cen">
+      <div class="col-sm-12 col-md-12 col-lg-4 cen">
         <owl-carousel-o [options]="customOptions4" #review3>
           <ng-template carouselSlide>
         <div class="card ml" style="width: 30rem;">

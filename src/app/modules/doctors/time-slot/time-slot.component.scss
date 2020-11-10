@@ -8,12 +8,11 @@
     color: #2d2d32;
     cursor: pointer;
     margin: 10px 0px;
-
   }
 
   .adj1{
     display: flex;
-     justify-content: space-between;
+     justify-content: space-evenly;
     vertical-align: middle;
   }
 
@@ -88,7 +87,7 @@
      margin: auto;
     }
     .pad{
-        padding: 0px;
+        padding: 10px;
     }
 }
 
@@ -102,4 +101,21 @@
          height: 35px;              
          width: 100%;
     }
+    // .changssss{
+    //     display: flex;
+    //     justify-content: center;
+    // }
+   
  }
+
+ @media screen and (max-width: 576px){
+    
+    .t-center{
+        text-align: center !important;
+    }
+
+ }
+
+ .ng-trigger.ng-trigger-overlayAnimation.ng-tns-c228-2.ng-animate-disabled.ui-datepicker.ui-widget.ui-widget-content.ui-helper-clearfix.ui-corner-all.ui-datepicker-inline.ng-star-inserted {
+    padding: 0px !important;
+}

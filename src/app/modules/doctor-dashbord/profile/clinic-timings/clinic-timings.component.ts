@@ -4,7 +4,6 @@ import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
 import { MainService } from '../../../../services/main.service';
 import { MessageService } from 'primeng/api';
 import { FormGroup, FormControlName, FormControl } from '@angular/forms';
-
 @Component({
   selector: 'app-clinic-timings',
   templateUrl: './clinic-timings.component.html',
@@ -19,14 +18,12 @@ export class ClinicTimingsComponent implements OnInit {
   dSA: boolean = false;
   dSU: boolean = false;
   TimeSloat: any[];
-
   @Input() stepper: any;
   timeSlot: FormGroup;
   timeSloats: any = [];
   TimeSloat2: any = [];
   doctorinfo: any;
   days: any;
-
   constructor(public mainService: MainService,
     public messageService: MessageService,
     public UserService:UserService,
@@ -37,16 +34,9 @@ export class ClinicTimingsComponent implements OnInit {
       session2Start: new FormControl('14:00'),
       session2End: new FormControl('23:30'),
     })
-
-  
-  
-
     this.getTime();
 this.doctorinfo=this.UserService.getUserInfo();
-
-
   }
-
   getTimeSlots() {
     this.mainService.getTimeSlot().then(resData => {
       if (resData.data && resData.data.slots.length > 0) {
@@ -59,7 +49,6 @@ this.doctorinfo=this.UserService.getUserInfo();
       console.log("ClinicTimingsComponent -> getTimeSlots -> error", error);
     })
   }
-
   onSave() {
     var data = this.getTimeSloatObject();
     if (data.length === 0) {
@@ -78,7 +67,6 @@ this.doctorinfo=this.UserService.getUserInfo();
       console.log("ClinicTimingsComponent -> onSave -> error", error)
     })
   }
-
   getTime() {
     this.TimeSloat = [];
     this.TimeSloat2 = [];
@@ -94,7 +82,6 @@ this.doctorinfo=this.UserService.getUserInfo();
       }
     }
   }
-
   MO() {
     this.dMO = !this.dMO
   }
@@ -126,62 +113,42 @@ this.DoctorProfileService.getSlot(this.doctorinfo._id).then((resData)=>{
 
 this.days=resData.data 
 console.log("ClinicTimingsComponent -> getProfile -> days", this.days)
-
-
-
-
-
 for (let i = 0; i < this.days.length; i++) {
   console.log("ClinicTimingsComponent -> getProfile -> this.days[i].day", this.days[i]?.day)
-
   if(this.days[i].day=="monday")
   {
     this.dMO = true;
-  
   }
   if(this.days[i].day=="tuesday")
   {
     this.dTU = true;
-    
   }
   if(this.days[i].day=="wednesday")
   {
     this.dWE = true;
-  
   }
   if(this.days[i].day=="thursday")
   {
     this.dTH = true;
- 
   }
   if(this.days[i].day=="friday")
   {
     this.dFR= true;
-   
   }
   if(this.days[i].day=="saturday")
   {
     this.dSA = true;
-    
   }
   if(this.days[i].day=="sunday")
   {
     this.dSU = true;
   }
-
-
 }
-
-
 }).catch((error)=>{
 console.log("ClinicTimingsComponent -> getProfile -> error", error)
-  
-
 })
   }
-
   change(){}
-
   getTimeSloatObject() {
     var data = [];
     if (this.dMO) {
@@ -207,7 +174,6 @@ console.log("ClinicTimingsComponent -> getProfile -> error", error)
     }
     return data;
   }
-
   setTime(day) {
     if (day == 'monday') {
       this.dMO = true;
@@ -232,11 +198,9 @@ console.log("ClinicTimingsComponent -> getProfile -> error", error)
     }
     return;
   }
-
   showToast(type, messageType, message) {
     setTimeout(() => {
       this.messageService.add({ severity: type, summary: messageType, detail: message });
     });
   }
-
 }

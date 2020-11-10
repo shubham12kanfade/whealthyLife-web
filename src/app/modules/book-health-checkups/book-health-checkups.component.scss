@@ -3,7 +3,14 @@
   overflow: auto;
 }
 
-
+svg.bi.bi-arrow-right-circle-fill {
+  width: 50px;
+  height: 50px;
+}
+svg.bi.bi-arrow-left-circle-fill {
+  width: 50px;
+  height: 50px;
+}
 
 .fever-img{
   display: block;
@@ -46,4 +53,87 @@
     display: flex;
       flex-direction: column !important;
   }
+  .slider-arroy{
+    display: none !important;
+  }
+}
+
+.slider-arroy{
+  color:#ce2224;
+  display:flex;
+  justify-content: space-between;
+  position: absolute;
+  z-index: 999;
+  margin: 0px;
+  width: 97%;
+  top: 25%;
+}
+
+.sliderr{
+  position: absolute;
+  top: 150;
+  display: flex !important;
+  justify-content: center !important;
+
+}
+.font-change{
+  color: black;
+  font-weight: 600;
+}
+
+.div-title{
+  position: absolute;
+  display: flex;
+  top:150px;
+  justify-content: center;
+  align-items: center;
+  width:100%
+}
+
+
+
+.card-title11{
+  color: white;
+  font-weight: 600;
+  width: 100%;
+}
+
+.card-style1{
+  box-shadow:5px 5px 5px darkgray !important;
+  border-radius:5px !important;
+  position: relative;
+  height: 200px;
+  // width: 100%;
+  // margin: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightgray;
+  margin: 0px 20px; 
+  // margin-right: 50px;
+}
+
+.card-style2{
+  box-shadow:5px 5px 5px darkgray !important;
+  border-radius:5px !important;
+  // position: relative;
+  height: 200px;
+  // width: 100%;
+  // margin: 30px;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  background-color: lightgray;
+  margin: 0px 20px; 
+  // margin-right: 50px;
+}
+
+.heading-style{
+
+  position: absolute;
+  display: flex;
+  top:150px;
+  justify-content: center;
+  align-items: center;
+  width:100%
 }

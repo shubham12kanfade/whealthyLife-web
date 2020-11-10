@@ -1,3 +1,4 @@
+import { BookingPageService } from './../../services/booking-page.service';
 import { Component, OnInit, NgZone, ViewChild, ElementRef } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { Router } from '@angular/router';
@@ -16,56 +17,94 @@ export class BookappoimentComponent implements OnInit {
 
   keyword = 'name';
   countries: any=[];
-  // public countries = [
-  //   {
-  //     id: 1,
-  //     name: 'Dentist',
-  //   },
-  //   {
-  //     id: 2,
-  //     name: 'Gynecologist/obstetrician',
-  //   },
-  //   {
-  //     id: 3,
-  //     name: 'General Physician',
-  //   },
-  //   {
-  //     id: 4,
-  //     name: 'General Dermatologist',
-  //   },
-  //   {
-  //     id: 5,
-  //     name: 'Ear-nose-throat (ent) Specialist',
-  //   },
-  //   {
-  //     id: 6,
-  //     name: 'Homoeopath',
-  //   },
-  //   {
-  //     id: 7,
-  //     name: 'Ayurveda',
-  //   }
-  // ];
+  appointmentC: any;
+  ChatC: any;
+  MedicineC: any;
+  HealthcareProvidersC: any;
+  topFour: any[];
+  Countdata: any;
 
   constructor(public router: Router, private mapsAPILoader: MapsAPILoader,
-    private ngZone: NgZone , public speciality: SpecialityService ) {
+    private ngZone: NgZone , public speciality: SpecialityService,public BookingPageService:BookingPageService ) {
+ 
 
-      // this.speciality.getSpecialization().then((resData:any)=>{
-      // console.log("BookappoimentComponent -> resData", resData)
-      // }).catrch(error=>{
-      // console.log("BookappoimentComponent -> error", error)
-      //})
+this.speciality.getCount().then((resData)=>{
 
+  this.Countdata=resData.data
+  console.log("BookappoimentComponent -> Countdata", this.Countdata)
+}).catch((err)=>{
+console.log("BookappoimentComponent -> err", err)
+
+})
+
+      this.speciality.getTopSpec().then((resData)=>{
+        this.topFour=resData.data
+      }).catch((err)=>{
+      console.log("BookappoimentComponent -> err", err)
+        
+      })
+     
      this.speciality.getSpecializationAll().then((resData:any)=>{
-     console.log("BookappoimentComponent -> resData", resData)
-       this.countries=resData.data;
+       this.countries=[]
+       const data=resData.data
+       data.forEach(element => {
+         element.fullName
+         
+         const data1={
+          name:element.fullName,
+          value:element._id
+         }
+         this.countries.push(data1)
+        });
+       
+       
+      //  resData.data
      }).catch(error=>{
      console.log("BookappoimentComponent -> error", error)
      })
 
+     this.appointmentCarousel();
+     this.chatCarousel();
+     this.medicinesCarousel();
+     this.HealthcareProvidersCarousel();
+
 
 
     }
+    HealthcareProvidersCarousel(){
+      this.BookingPageService.getCarousel('HCProviders').then((resData)=>{
+        this.HealthcareProvidersC=resData.data
+        }).catch((err)=>{
+        console.log("BookappoimentComponent -> appointmentCarousel -> err", err)
+  
+        })
+    }
+    medicinesCarousel(){
+      this.BookingPageService.getCarousel('Medicine').then((resData)=>{
+        this.MedicineC=resData.data
+        }).catch((err)=>{
+        console.log("BookappoimentComponent -> appointmentCarousel -> err", err)
+  
+        })
+    };
+    appointmentCarousel(){
+      this.BookingPageService.getCarousel('Appoinment').then((resData)=>{
+      this.appointmentC=resData.data
+      }).catch((err)=>{
+      console.log("BookappoimentComponent -> appointmentCarousel -> err", err)
+
+      })
+
+    }
+    chatCarousel(){
+
+      this.BookingPageService.getCarousel('Chat').then((resData)=>{
+        this.ChatC=resData.data
+        }).catch((err)=>{
+        console.log("BookappoimentComponent -> appointmentCarousel -> err", err)
+    // this.router.navigate(['/doctors']);
+        })
+    }getTopSpec
 
   customOptionsOne: OwlOptions = {
     loop: true,
@@ -78,13 +117,14 @@ export class BookappoimentComponent implements OnInit {
     responsive: {
       0: {
         items: 1
+
       },
       400: {
         items: 1
       },
       740: {
         items: 1
-      },
+      },  // this.router.navigate(['/doctors']);
       940: {
         items: 1
       },
@@ -102,9 +142,7 @@ export class BookappoimentComponent implements OnInit {
     touchDrag: true,
     pullDrag: true,
     dots: false,
-    autoplay: false,
-    navSpeed: 300,
-    navText: ["", ""],
+
 
     responsive: {
       0: {
@@ -189,32 +227,15 @@ export class BookappoimentComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.placesLoad();
-
+  
 
 
   }
 
-  placesLoad() {
-    this.mapsAPILoader.load().then(() => {
-      let autocomplete = new google.maps.places.Autocomplete(this.searchElementRef.nativeElement, {
-        types: ["(cities)"],
-        componentRestrictions: {country: 'in'}
-      });
-      autocomplete.addListener("place_changed", () => {
-        this.ngZone.run(() => {
-          let place: google.maps.places.PlaceResult = autocomplete.getPlace();
-          if (place.geometry === undefined || place.geometry === null) {
-            return;
-          }
-        });
-      });
-    });
-  }
 
 
   selectEvent(item) {
-    this.router.navigate(['/doctors']);
+    // this.router.navigate(['/doctors']);
   }
 
   onChangeSearch(search: string) {

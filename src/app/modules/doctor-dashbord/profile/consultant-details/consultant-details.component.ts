@@ -20,7 +20,7 @@ export class ConsultantDetailsComponent implements OnInit {
   profileData: any;
   TimeSloat: any[];
   data12: any[];
-  data:[];
+  data:any[];
 
   constructor(public mainService: MainService,
     public messageService: MessageService,
@@ -35,28 +35,23 @@ export class ConsultantDetailsComponent implements OnInit {
 
     this.getProfile();
 
-
     this.mainService.getAllClinic().then(AllClinicName =>{
     console.log("ConsultantDetailsComponent -> AllClinicName", AllClinicName);
 
     const dfgf= AllClinicName.data;
+    this.data = AllClinicName.data;
     console.log("ConsultantDetailsComponent -> dfgf", dfgf)
 
-    for(let i=0 ; i < dfgf.length ; i++ ){
-      this.data12.push(dfgf[i]);
-      
-
-      // this.data.push(dfgf[i]);
-    
-    }
-    console.log("ConsultantDetailsComponent ->  this.data12",  this.data12);
+    // for( let i=0 ; i < dfgf.length ; i++ ){
+    //   this.data12.push(dfgf[i]);
+    //   // this.data.push(dfgf[i]);
+    // }
+    // console.log("ConsultantDetailsComponent ->  this.data12",  this.data12);
     //  this.data12 = AllClinicName
 
     }).catch(error =>{
     console.log("ConsultantDetailsComponent -> error", error);
     })
-
-
   }
 
   ClinicDetails() {
@@ -67,7 +62,6 @@ export class ConsultantDetailsComponent implements OnInit {
     return this.fb.group({
       clinicName : [''],
       clinicAddress : [''],
-     
       times: this.fb.array([this.createtimes()]),
     });
   }
@@ -79,7 +73,6 @@ export class ConsultantDetailsComponent implements OnInit {
   deleteClinicDetails(j: number) {
     this.ClinicDetails().removeAt(j);
   }
-
 
   createtimes(): FormGroup {
     return this.fb.group({
@@ -108,6 +101,8 @@ export class ConsultantDetailsComponent implements OnInit {
 
 
 
+
+
   // data = [
   //    {
   //      id: 1,
@@ -121,18 +116,54 @@ export class ConsultantDetailsComponent implements OnInit {
  
  
   selectEvent(item) {
+    console.log("ConsultantDetailsComponent -> selectEvent -> item", item)
     // do something with selected item
   }
  
   onChangeSearch(val: string) {
+    console.log("ConsultantDetailsComponent -> onChangeSearch -> val", val)
     // fetch remote data from here
     // And reassign the 'data' which is binded to 'data' property.
   }
   
   onFocused(e){
+    console.log("ConsultantDetailsComponent -> onFocused -> e", e)
     // do something when input is focused
   }
 
+
+  keyword1 = 'name';
+
+  // getAddress(){
+  //   this.mainService.getAddressByClinic()
+  // }
+
+
+
+  // data = [
+  //    {
+  //      id: 1,
+  //      name: 'Usa'
+  //    },
+  //    {
+  //      id: 2,
+  //      name: 'England'
+  //    }
+  // ];
+ 
+ 
+  selectEvent1(item) {
+    // do something with selected item
+  }
+ 
+  onChangeSearch1(val: string) {
+    // fetch remote data from here
+    // And reassign the 'data' which is binded to 'data' property.
+  }
+  
+  onFocused1(e){
+    // do something when input is focused
+  }
 
 
 

@@ -170,8 +170,8 @@ ul.c {
 
 .heightover {
     overflow: initial;
-    min-height: 160px;
-    max-height: 170px;
+    min-height: 50vh;
+    max-height: 50vh;
 }
 
 .line-height-normal {
@@ -201,4 +201,11 @@ ul.c {
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
     background: #555; 
+  }
+  .mat-tab-body-wrapper{
+      height: 50vh !important;
+  }
+
+  .text-dark1{
+    margin-left: 10px;
   }

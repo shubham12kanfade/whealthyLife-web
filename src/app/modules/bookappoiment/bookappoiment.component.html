@@ -1,558 +1,623 @@
 <div class="c-jumbo__banner mt-80">
-    <div class="c-jumbo__header_container">
-        <h1 data-qa-id="jumbo-heading" class="c-jumbo__header">Your home for health</h1>
-    </div>
-    <div data-qa-id="jumbo-sub-heading" class="u-t-center u-t-white u-t-bold c-jumbo__subheading">Find and Book</div>
-    <div class="c-jumbo__omni_container">
-        <div class="c-omni-wrapper">
-            <div id="c-omni-container" class="c-omni-container--desktop">
-                <div class="c-omni u-clearfix">
-                    <div class="c-omni__wrapper u-clearfix c-omni__wrapper--locality dropdown" role="button">
-                        <div class="c-omni-searchbox_wrapper ">
-                            <span class="c-omni-searchbox__icon">
-                                <i class="icon-ic_location"></i>
-                            </span>
-                            <input data-qa-id="omni-searchbox-locality" class="c-omni-searchbox c-omni-searchbox--large dropdown-toggle" autocomplete="off" placeholder="Search location" #search><span class="c-omni-searchbox__button-container">
-                                <span class="c-omni-searchbox__button c-omni-searchbox__button"
-                                    data-qa-id="current_location">
-                                    <i class="icon-ic_gps_system"></i>
-                                    <span class="c-omni-searchbox__button__text">Detect</span>
-                            </span>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="c-omni__wrapper u-clearfix c-omni__wrapper--keyword dropdown" role="button">
-                        <div class="c-omni-searchbox_wrapper dropdown">
-                            <span class="c-omni-searchbox__icon">
-                                <i class="icon-ic_search"></i>
-                            </span>
-                            <div class="">
-                                <ng-autocomplete [data]="countries" class="" [searchKeyword]="keyword" placeHolder="Search  Clinics Heare !" (selected)='selectEvent($event)' (inputChanged)='onChangeSearch($event)' (inputFocused)='onFocused($event)' historyIdentifier="countries" [itemTemplate]="itemTemplate"
-                                    [notFoundTemplate]="notFoundTemplate">
-                                </ng-autocomplete>
+  <div class="c-jumbo__header_container">
+    <h1 data-qa-id="jumbo-heading" class="c-jumbo__header">
+      Your home for health
+    </h1>
+  </div>
+  <div data-qa-id="jumbo-sub-heading" class="u-t-center u-t-white u-t-bold c-jumbo__subheading">
+    Find and Book
+  </div>
+  <div class="c-jumbo__omni_container">
+    <div class="c-omni-wrapper">
+      <div class="c-omni__wrapper u-clearfix c-omni__wrapper--keyword dropdown" role="button">
+        <div class="c-omni-searchbox_wrapper dropdown">
+          <span class="c-omni-searchbox__icon">
+            <i class="icon-ic_search"></i>
+          </span>
+          <div class="">
+            <ng-autocomplete [data]="countries" class="" [searchKeyword]="keyword" placeHolder="Search  Clinics Heare !"
+              (selected)="selectEvent($event)" (inputChanged)="onChangeSearch($event)"
+              (inputFocused)="onFocused($event)" historyIdentifier="countries" [itemTemplate]="itemTemplate"
+              [notFoundTemplate]="notFoundTemplate">
+            </ng-autocomplete>
 
-                                <ng-template #itemTemplate let-item>
-                                    <a [innerHTML]="item.name"></a>
-                                </ng-template>
+            <ng-template #itemTemplate let-item>
+              <a [routerLink]="['/doctors', item.value]" routerLinkActive="router-link-active"
+                [innerHTML]="item.name"></a>
+            </ng-template>
 
-                                <ng-template #notFoundTemplate let-notFound>
-                                    <div [innerHTML]="notFound"></div>
-                                </ng-template>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="c-popular-searches">
-                <div class="col-md-12">
-                    <ul>
-                        <li data-qa-id="popular-searches"><strong style="color: #fff;">Popular searches:</strong></li>
-                        <li> <a data-qa-id="popular-search-item" href="/bangalore/dermatologist">Dermatologist</a></li>
-                        <li><a data-qa-id="popular-search-item" href="/bangalore/pediatrician">Pediatrician</a></li>
-                        <li><a data-qa-id="popular-search-item" href="/bangalore/gynecologist-obstetrician">Gynecologist/Obstetrician</a></li>
-                        <li><span class="c-popular-searches"><span data-qa-id="others-speciality">Others</span><i class="icon-ic_down_cheveron"></i></span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+            <ng-template #notFoundTemplate let-notFound>
+              <div [innerHTML]="notFound"></div>
+            </ng-template>
+          </div>
         </div>
-        <div class="mydoctors-tab-new">
-            <div class="c-my-doctors"></div>
+      </div>
+
+
+      <div class="row" style="margin-top: 30px;">
+        <div class="col-lg-12" style="display: flex;justify-content: center;">
+         <h3 style="color: white;"> Popular searches : </h3>
         </div>
+        
+        <div class=" col-md-3 col-6" *ngFor="let item of topFour" style="text-align: center;margin: 10px 0px;">
+          <a [routerLink]="['/doctors', item._id]" routerLinkActive="router-link-active"
+                data-qa-id="popular-search-item" style="color:white;cursor: pointer;"> {{item.fullName}}</a>
+        </div>
+      </div>
+
+     <!-- <div class="row">
+      <div class="c-popular-searches">
+        <div class="col-12">
+          <div style="display: flex; justify-content: center">
+            <div data-qa-id="popular-searches">
+              <strong  style="color: #fff">Popular searches :  </strong>
+            </div>
+            
+          
+              <div col-sm-3 col-md-3 col-lg-12> 
+                <div *ngFor="let item of topFour">
+           
+              <a [routerLink]="['/doctors', item._id]" routerLinkActive="router-link-active"
+                data-qa-id="popular-search-item" style="color:red"> {{ item.fullName }}</a>
+            </div>
+           </div> 
+          </div>
+        </div>
+      </div>
+     </div> -->
     </div>
-    <div class="c-icon-list mt-57 book-opp">
-        <div class="c-icon-list__list_wrapper">
-            <a data-qa-id="consult-icon" class="c-icon" [routerLink]="['./chatnow']" routerLinkActive="router-link-active">
-                <span class="icon-set tab-icon c-icon__img"><img src="../../../assets/img/chat-24px.svg"
-                        class="img-icon"></span>
-                <span>Chat with a doctor</span>
-            </a>
-            <a data-qa-id="order-icon" class="c-icon" [routerLink]="['/order']">
-                <span class="icon-set tab-icon c-icon__img"><img src="../../../assets/img/add_shopping_cart-24px.svg"
-                        class="img-icon"></span>
-                <span>Order Medicines</span>
-            </a>
-            <a data-qa-id="drive-icon" class="c-icon" href="https://drive.WhealthyLife.com?utm_source=WhealthyLife_home">
-                <span class="icon-set tab-icon c-icon__img">
-                    <img src="../../../assets/img/library_books-24px.svg" class="img-icon">
+    <div class="mydoctors-tab-new">
+      <div class="c-my-doctors"></div>
+    </div>
+  </div>
+
+<div class="row defOption" >
+  <div class="container">
+    <div class="row">
+      <div class=" col-6 col-md-4 col-lg-2">
+        <div data-qa-id="consult-icon" [routerLink]="['./chatnow']" style="text-decoration: none;">
+          <div class="row"><img src="../../../assets/img/Swati/BookAppointment/ChatWithDoctor.png" class="img-icon" style=" width: 40px; margin: auto; margin-top: 10px; cursor: pointer; background-color: aliceblue;
+            border-radius: 50%;
+            padding: 7px;
+        }"/></div>
+          <div class="row"><span  style="margin: auto; cursor: pointer; margin-top: 10px; color: white;"> Chat with a doctor</span></div>
+        </div>
+      </div>
+      <div class=" col-6 col-md-4 col-lg-2">
+        <div data-qa-id="order-icon" [routerLink]="['/order']" style="text-decoration: none; ">
+          <div class="row"><img src="../../../assets/img/Swati/BookAppointment/OrderMedicineIcon.png" class="img-icon" style=" width: 40px; margin: auto; margin-top: 10px; cursor: pointer; background-color: aliceblue;
+            border-radius: 50%;
+            padding: 7px;"/></div>
+          <div class="row"><span  style="margin: auto; cursor: pointer; margin-top: 10px; color: white;">Order Medicines</span></div>
+        </div>
+      </div>
+      <div class=" col-6 col-md-4 col-lg-2">
+        <div data-qa-id="drive-icon">
+          
+          <div class="row"><img src="../../../assets/img/Swati/BookAppointment/MedicalRecordIcon.png" class="img-icon" style=" width: 40px; margin: auto; margin-top: 10px; cursor: pointer; background-color: aliceblue;
+            border-radius: 50%;
+            padding: 7px;"/></div>
+          
+          <div class="row"><span  style="margin: auto; cursor: pointer; margin-top: 10px; color: white;">View medical records</span></div>
+        </div>
+      </div>
+      <div class=" col-6 col-md-4 col-lg-2">
+        <div data-qa-id="lab-icon">
+          <!-- <div class="tab-offer" style="position: relative; margin-bottom: 3mm"> -->
+            <div class="row"><img src="../../../assets/img/Swati/BookAppointment/BookTestIcon.png" class="img-icon" style=" width: 40px; margin: auto; margin-top: 10px; cursor: pointer; background-color: aliceblue;
+              border-radius: 50%;
+              padding: 7px;"/></div>
+          <!-- </div> -->
+          <div class="row"><span  style="margin: auto; cursor: pointer; margin-top: 10px; color: white;">Book test</span></div>
+        </div>
+      </div>
+
+      <div class=" col-6 col-md-4 col-lg-2">
+        <div data-qa-id="healthfeed-icon" >
+          <div class="row"><img src="../../../assets/img/Swati/BookAppointment/ReadArticlesIcon.png" class="img-icon" style=" width: 40px; margin: auto; margin-top: 10px; cursor: pointer; background-color: aliceblue;
+            border-radius: 50%;
+            padding: 7px;"/></div>
+          <div class="row"><span  style="margin: auto; cursor: pointer; margin-top: 10px; color: white;">Read articles</span></div>
+        </div>
+      </div>
+
+      <div class=" col-6 col-md-4 col-lg-2">
+        <div data-qa-id="providers-icon" >
+          <div class="row"><img src="../../../assets/img/Swati/BookAppointment/HealthCareProviderIcon.png" class="img-icon" style=" width: 40px; margin: auto; margin-top: 10px; cursor: pointer; background-color: aliceblue;
+            border-radius: 50%;
+            padding: 7px;"/></div>
+          <div class="row"><span  style="cursor: pointer; color: white; text-align: center; margin: auto; margin-top: 10px;">For healthcare providers</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <section class="first-sec book-appoiment">
+    <div class="container margin_120_95">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="c-section__highlights">
+            <div class="c-section__highlights_title">
+              <h2 style="    font-size: 22px;">
+                Safety of your data is our<br />
+                top priority.
+              </h2>
+            </div>
+            <div class="c-list-item">
+              <div>
+                <span class="c-icon__img">
+                  <img src="../../../assets/img/check-24px.svg" />
                 </span>
-                <span>View medical records</span>
-            </a>
-            <a data-qa-id="lab-icon" class="c-icon" href="/tests?utm_source=WhealthyLife_home">
-                <div class="tab-offer" style="position: relative; margin-bottom: 3mm;"><span class="icon-set tab-icon c-icon__img"><img
-                            src="../../../assets/img/opacity-24px.svg" class="img-icon"></span>
-                    <span class="c-offer-tag u-round-corner u-border-white u-t-bold u-t-white">New</span></div>
-                <span>Book test</span>
-            </a>
-            <a data-qa-id="healthfeed-icon" class="c-icon" href="/healthfeed?utm_source=WhealthyLife_home"><span class="icon-set tab-icon c-icon__img"><img
-                        src="../../../assets/img/menu_book-24px.svg" class="img-icon"></span>
-                <span>Read articles</span></a>
-            <a data-qa-id="providers-icon" class="c-icon" href="/providers?utm_source=WhealthyLife_home">
-                <span class="icon-set tab-icon c-icon__img"><img src="../../../assets/img/local_mall-24px.svg"
-                        class="img-icon"></span>
-                <span>For healthcare providers</span></a>
+                <span>Multi-level security checks</span>
+              </div>
+            </div>
+            <div class="c-list-item">
+              <div>
+                <span class="c-icon__img">
+                  <img src="../../../assets/img/check-24px.svg" />
+                </span>
+                <span>Multiple data backups</span>
+              </div>
+            </div>
+            <div class="c-list-item">
+              <div>
+                <span class="c-icon__img">
+                  <img src="../../../assets/img/check-24px.svg" />
+                </span>
+                <span>Stringent data privacy policies</span>
+              </div>
+            </div>
+            <div data-qa-id="security-cta" class="u-m-t-25 u-d-inline-block">
+              <a class="c-button__redirect" href="/company/security" target="_blank">Read more</a>
+            </div>
+          </div>
         </div>
-    </div>
 
-    <section class="first-sec book-appoiment">
-        <div class="container margin_120_95">
+        <div class="col-md-6 text-center">
+          <img src="../../../assets/img/Swati/BookAppointment/DataSefety.png" width="250" />
+        </div>
+      </div>
 
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="c-section__highlights">
-                        <div class="c-section__highlights_title">
-                            <h2>Safety of your data is our<br> top priority.
-                            </h2>
-                        </div>
-                        <div class="c-list-item">
+      <div class="row mt-50 mb-50">
+        <div class="col-md-3 col-sm-6 col-xs-12 bookapo-box">
+          <div class="inner-box">
+            <img src="../../../assets/img/Swati/BookAppointment/encryption.png" style="width: 100px;"/>
+
+            <div class="c-certificate__info">
+              <h3>256-bit</h3>
+              <h5>encryption</h5>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6 col-xs-12 bookapo-box">
+          <div class="inner-box">
+            <img src="../../../assets/img/Swati/BookAppointment/Certified.png" style="width: 100px;"/>
+            <div class="c-certificate__info">
+              <h3>ISO 27001</h3>
+              <h5>certified</h5>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6 col-xs-12 bookapo-box">
+          <div class="inner-box">
+            <img src="../../../assets/img/Swati/BookAppointment/HIPAA.png" style="width: 100px;"/>
+            <div class="c-certificate__info">
+              <h3>HIPAA</h3>
+              <h5>compliant data centers</h5>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6 col-xs-12 bookapo-box">
+          <div class="inner-box">
+            <img src="../../../assets/img/Swati/BookAppointment/DSCI.png" style="width: 100px;"/>
+            <div class="c-certificate__info">
+              <h3>DSCI</h3>
+              <h5>member</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-50 mb-50">
+        <div class="col-md-6">
+          <div class="row">
+            <div class="col-md-12">
+              <h2>Instant appointment with doctors. Guaranteed.</h2>
+              <div class="c-list-item">
+                <div>
+                  <span class="c-icon__img">
+                    <img src="../../../assets/img/check-24px.svg" />
+                  </span>
+                  <span> {{ Countdata?.totalDoctors }} Verified doctors</span>
+                </div>
+              </div>
+              <div class="c-list-item">
+                <div>
+                  <span class="c-icon__img"><img src="../../../assets/img/check-24px.svg" /></span>
+                  <span>3M+ Patient recommendations</span>
+                </div>
+              </div>
+              <div class="c-list-item">
+                <div>
+                  <span class="c-icon__img"><img src="../../../assets/img/check-24px.svg" /></span>
+                  <span>25M Patients/year</span>
+                </div>
+              </div>
+              <div data-qa-id="book-cta" class="u-m-t-25 u-d-inline-block">
+                <a class="c-button__redirect" href="/bangalore/doctors" target="_blank">Find me the right doctor</a>
+              </div>
+            </div>
+
+            <div class="col-md-12">
+              <div class="c-testimonial-list">
+                <div class="slick-slider slick-initialized" dir="ltr">
+                  <span class="c-testimonial-list__prev_arrow c-testimonial-list__arrow c-icon__img">
+                    <img class="prev-arrow" src="../../../assets/img/arrow_back_ios-24px.svg" />
+                  </span>
+                  <div class="slick-list">
+                    <owl-carousel-o class="slick-track" [options]="customOptionsOne">
+                      <ng-template *ngFor="let item of appointmentC" carouselSlide data-index="-1" tabindex="-1"
+                        class="slick-slide slick-cloned" style="width: 420px">
+                        <div>
+                          <div class="u-t-grey">
+                            <div class="c-testimonial__review_star u-m-b-10 u-t-green">
+                              <i class="icon-ic_star_solid icon-star"></i><i class="icon-ic_star_solid icon-star"></i><i
+                                class="icon-ic_star_solid icon-star"></i><i class="icon-ic_star_solid icon-star"></i><i
+                                class="icon-ic_star_solid icon-star"></i>
+                            </div>
+                            <div class="c-testimonial__review_text u-t-regular">
+                              {{ item.review }}
+                            </div>
                             <div>
-                                <span class="c-icon__img">
-                                    <img src="../../../assets/img/check-24px.svg">
-                                </span>
-                                <span>Multi-level security checks</span>
+                              <span class="icon-ic_user_system icon-user"></span><span
+                                class="u-t-regular u-inline-middle u-m-l-10">
+                                {{
+                                  item?.userId?.firstName +
+                                    " " +
+                                    item?.userId?.lastName
+                                }}
+                              </span>
                             </div>
+                          </div>
                         </div>
-                        <div class="c-list-item">
-                            <div><span class=""><i class="c-list-item__icon icon-ic_done_open_system"></i></span>
-                                <span>Multiple data
-                                    backups</span></div>
-                        </div>
-                        <div class="c-list-item">
-                            <div><span class=""><i class="c-list-item__icon icon-ic_done_open_system"></i></span>
-                                <span>Stringent data privacy
-                                    policies</span></div>
-                        </div>
-                        <div data-qa-id="security-cta" class="u-m-t-25 u-d-inline-block"><a class="c-button__redirect" href="/company/security" target="_blank">Read more</a></div>
-                    </div>
+                      </ng-template>
+                    </owl-carousel-o>
+                  </div>
+                  <span class="c-testimonial-list__next_arrow c-testimonial-list__arrow c-icon__img">
+                    <img class="next-arrow" src="../../../assets/img/arrow_forward_ios-24px.svg" />
+                  </span>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-                <div class="col-md-6 text-center">
-                    <img src="../../../assets/img/Swati/BookAppointment/DataSefety.png" width="250">
+        <div class="col-md-6 text-center">
+          <div class="rh5v-DefaultPlayer_component">
+            <video class="rh5v-DefaultPlayer_video"
+              poster="../../../assets/img/book.875ca26a3c4283c777660377e421e99b.png" loading="false" autoplay="" loop=""
+              width="250" height="480">
+              <source src="../../../assets/img/appointment.700ce682eaec91bf93b6574cb8f09cd0.webm" type="video/webm" />
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-50 mb-50">
+        <div class="col-md-6">
+          <div class="rh5v-DefaultPlayer_component">
+            <video class="rh5v-DefaultPlayer_video"
+              poster="../../../assets/img/consult.15f1b416f3f4c9383b780757d7293d00.png" loading="false" autoplay=""
+              loop="" width="250" height="480">
+              <source src="../../../assets/img/consult.099446892618434cc8a038d7844c4380.webm" type="video/webm" />
+            </video>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="row">
+            <div class="col-md-12">
+              <h2 class="u-d-inline">
+                Skip the waiting room. Chat with a doctor
+              </h2>
+              <div class="c-list-item">
+                <div>
+                  <span class="c-list-item__icon c-icon__img"><img
+                      src="../../../assets/img/check-24px.svg" /></span><span>Fees starting at </span><span
+                    class="u-t-bold">₹99</span>
                 </div>
+              </div>
+              <div class="c-list-item">
+                <div>
+                  <span class="c-list-item__icon c-icon__img"><img
+                      src="../../../assets/img/check-24px.svg" /></span><span>Verified doctors respond in </span><span
+                    class="u-t-bold">5 minutes</span>
+                </div>
+              </div>
+              <div class="c-list-item">
+                <div>
+                  <span class="c-list-item__icon c-icon__img"><img
+                      src="../../../assets/img/check-24px.svg" /></span><span class="u-t-bold">100% </span><span>Private
+                    and confidential</span>
+                </div>
+              </div>
+              <div data-qa-id="consult-cta" class="u-m-t-25 u-d-inline-block">
+                <a class="c-button__redirect" [routerLink]="[ '/consult']">
+                  Chat now</a>
+              </div>
+
+              <span class="c-consult__doctors_online u-t-grey"><span
+                  class="c-consult__doctors_pulse u-t-pulse left"></span><span class="u-t-bold">41623</span><span>
+                  doctors online</span>
+              </span>
             </div>
 
-            <div class="row mt-50 mb-50">
-                <div class="col-md-3 col-sm-6 col-xs-12 bookapo-box">
-                    <div class="inner-box">
-                        <img src="../../../assets/img/security_2.webp"> 
-                        
-                        <div class="c-certificate__info">
-                            <h3>256-bit</h3>
-                            <h5>encryption</h5>
+            <div class="col-md-12">
+              <div class="c-testimonial-list">
+                <div class="slick-slider slick-initialized" dir="ltr">
+                  <span class="c-testimonial-list__prev_arrow c-testimonial-list__arrow c-icon__img">
+                    <img class="prev-arrow" src="../../../assets/img/arrow_back_ios-24px.svg" />
+                  </span>
+                  <div class="slick-list">
+                    <owl-carousel-o class="slick-track" [options]="customOptionsOne">
+                      <ng-template *ngFor="let item of ChatC" carouselSlide data-index="-1" tabindex="-1"
+                        class="slick-slide slick-cloned" style="width: 420px">
+                        <div>
+                          <div class="u-t-grey">
+                            <div class="c-testimonial__review_star u-m-b-10 u-t-green">
+                              <i class="icon-ic_star_solid icon-star"></i><i class="icon-ic_star_solid icon-star"></i><i
+                                class="icon-ic_star_solid icon-star"></i><i class="icon-ic_star_solid icon-star"></i><i
+                                class="icon-ic_star_solid icon-star"></i>
+                            </div>
+                            <div class="c-testimonial__review_text u-t-regular">
+                              {{ item.review }}
+                            </div>
+                            <div>
+                              <span class="icon-ic_user_system icon-user"></span><span
+                                class="u-t-regular u-inline-middle u-m-l-10">
+                                {{
+                                  item?.userId?.firstName +
+                                    " " +
+                                    item?.userId?.lastName
+                                }}
+                              </span>
+                            </div>
+                          </div>
                         </div>
-                    </div>
+                      </ng-template>
+                    </owl-carousel-o>
+                  </div>
+                  <span class="c-testimonial-list__next_arrow c-testimonial-list__arrow c-icon__img">
+                    <img class="next-arrow" src="../../../assets/img/arrow_forward_ios-24px.svg" />
+                  </span>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-                <div class="col-md-3 col-sm-6 col-xs-12 bookapo-box">
-                    <div class="inner-box">
-                        <img src="../../../assets/img/security_3.webp">
-                        <div class="c-certificate__info">
-                            <h3>ISO 27001</h3>
-                            <h5>certified</h5>
+      <div class="row mt-50 mb-50">
+        <div class="col-md-6">
+          <div class="row">
+            <div class="col-md-12">
+              <h2 class="u-d-inline">
+                Get all your medicines. Everytime. On time.
+              </h2>
+              <div class="c-list-item">
+                <div>
+                  <span class="c-list-item__icon c-icon__img"><img src="../../../assets/img/check-24px.svg" /></span>
+                  <span>Guaranteed availability</span>
+                </div>
+              </div>
+              <div class="c-list-item">
+                <div>
+                  <span class="c-list-item__icon c-icon__img">
+                    <img src="../../../assets/img/check-24px.svg" /></span>
+
+                  <span>Over </span><span class="u-t-bold">{{ Countdata?.medicineCount }}+ </span><span> genuine
+                    medicines</span>
+                </div>
+              </div>
+              <div class="c-list-item">
+                <div>
+                  <span class="c-list-item__icon c-icon__img"><img src="../../../assets/img/check-24px.svg" /></span>
+                  <span>Home delivery in </span><span class="u-t-bold">24hrs </span>
+                </div>
+              </div>
+              <div>
+                <div data-qa-id="order-cta" class="u-m-t-25 u-d-inline-block">
+                  <a class="c-button__redirect" href="/order?utm_source=WhealthyLife_home" target="_blank">Order
+                    Medicines</a>
+                </div>
+                <div class="c-order__last_order_info">
+                  <div class="u-t-circle">
+                    <div class="u-t-triangle"></div>
+                  </div>
+                  <span class="c-order__last_order_text">Last order delivered
+                    <span class="u-t-bold"> few seconds </span>ago in C V Raman
+                    Nagar, Bengaluru</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="c-testimonial-list">
+                <div class="slick-slider slick-initialized" dir="ltr">
+                  <span class="c-testimonial-list__prev_arrow c-testimonial-list__arrow c-icon__img">
+                    <img class="prev-arrow" src="../../../assets/img/arrow_back_ios-24px.svg" />
+                  </span>
+                  <div class="slick-list">
+                    <owl-carousel-o class="slick-track" [options]="customOptionsOne">
+                      <ng-template *ngFor="let item of MedicineC" carouselSlide data-index="-1" tabindex="-1"
+                        class="slick-slide slick-cloned" style="width: 420px">
+                        <div>
+                          <div class="u-t-grey">
+                            <div class="c-testimonial__review_star u-m-b-10 u-t-green">
+                              <i class="icon-ic_star_solid icon-star"></i><i class="icon-ic_star_solid icon-star"></i><i
+                                class="icon-ic_star_solid icon-star"></i><i class="icon-ic_star_solid icon-star"></i><i
+                                class="icon-ic_star_solid icon-star"></i>
+                            </div>
+                            <div class="c-testimonial__review_text u-t-regular">
+                              {{ item.review }}
+                            </div>
+                            <div>
+                              <span class="icon-ic_user_system icon-user"></span><span
+                                class="u-t-regular u-inline-middle u-m-l-10">
+                                {{
+                                  item?.userId?.firstName +
+                                    " " +
+                                    item?.userId?.lastName
+                                }}
+                              </span>
+                            </div>
+                          </div>
                         </div>
-                    </div>
+                      </ng-template>
+                    </owl-carousel-o>
+                  </div>
+                  <span class="c-testimonial-list__next_arrow c-testimonial-list__arrow c-icon__img">
+                    <img class="next-arrow" src="../../../assets/img/arrow_forward_ios-24px.svg" />
+                  </span>
                 </div>
-
-
-                <div class="col-md-3 col-sm-6 col-xs-12 bookapo-box">
-                    <div class="inner-box">
-                        <img src="../../../assets/img/security_4.webp">
-                        <div class="c-certificate__info">
-                            <h3>HIPAA</h3>
-                            <h5>compliant data centers</h5>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-3 col-sm-6 col-xs-12 bookapo-box">
-                    <div class="inner-box">
-                        <img src="../../../assets/img/security_5.webp">
-                        <div class="c-certificate__info">
-                            <h3>DSCI</h3>
-                            <h5>member</h5>
-                        </div>
-                    </div>
-                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 text-center">
+          <div class="c-section__right">
+            <img style="max-width: 100%" height="300px" src="../../../assets/img/Swati/BookAppointment/Medicines.png" />
+          </div>
+        </div>
+      </div>
+      <div class="row mt-50 mb-50">
+        <div class="col-md-6">
+          <div class="c-section__right">
+            <img style="max-width: 100%" height="250px"
+              src="../../../assets/img/Swati/BookAppointment/MedicalRecords.png" />
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="c-section__highlights">
+            <div class="c-section__highlights_title">
+              <h2 class="u-d-inline">All your medical records</h2>
+              <h2 class="u-t-bold">In one secure app.</h2>
+            </div>
+            <div class="c-list-item">
+              <div>
+                <span class="c-list-item__icon"><i class="c-list-item__icon icon-ic_done_open_system"></i></span>
+                <span>256-bit end to end encryption</span>
+              </div>
+            </div>
+            <div class="c-list-item">
+              <div>
+                <span class="c-list-item__icon"><i class="c-list-item__icon icon-ic_done_openelement_system"></i></span>
+                <span>Records are accessible only by you</span>
+              </div>
+            </div>
+            <div class="c-list-item">
+              <div>
+                <span class="c-list-item__icon"><i class="c-list-item__icon icon-ic_done_open_system"></i></span>
+                <span>Access your records across</span><span class="u-t-bold"> 8000+ </span><span>centers</span>
+              </div>
+            </div>
+            <div data-qa-id="record-cta" class="u-m-t-25 u-d-inline-block">
+              <a class="c-button__redirect" href="//drive.WhealthyLife.com/login?utm_source=WhealthyLife_home"
+                target="_blank">Find out more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-80">
+        <div class="col-md-6">
+          <div class="c-section__highlights">
+            <div class="c-section__highlights_title">
+              <h2 class="u-d-inline">Leading Healthcare Providers.</h2>
+              <h2 class="u-t-bold">Trust us for Business</h2>
+            </div>
+            <div class="c-list-item">
+              <div>
+                <span class="c-list-item__icon"><i class="c-list-item__icon icon-ic_done_open_system"></i></span>
+                <span>Get seen by </span><span class="u-t-bold">{{ Countdata?.petientsCount }}+ </span><span>patients on
+                  WhealthyLife.com</span>
+              </div>
+            </div>
+            <div class="c-list-item">
+              <div>
+                <span class="c-list-item__icon"><i class="c-list-item__icon icon-ic_done_open_system"></i></span>
+                <span>The most advanced software for clinics and hospitals</span>
+              </div>
+            </div>
+            <div class="c-list-item">
+              <div>
+                <span class="c-list-item__icon"><i class="c-list-item__icon icon-ic_done_open_system"></i>
+                </span>
+                <span>State of the art business analytics for enterprises</span>
+              </div>
+            </div>
+            <div data-qa-id="provider-cta" class="u-m-t-25 u-d-inline-block">
+              <a class="c-button__redirect" href="/providers?utm_source=WhealthyLife_home" target="_blank">Learn
+                more</a>
             </div>
 
-
-            <div class="row mt-50 mb-50">
-                <div class="col-md-6">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <h2>Instant appointment with doctors. Guaranteed.
-                            </h2>
-                            <div class="c-list-item">
-                                <div>
-                                    <span class="c-icon__img">
-                                        <img src="../../../assets/img/check-24px.svg">
-                                    </span>
-                                    <span>100,000 Verified doctors</span>
-                                </div>
-                            </div>
-                            <div class="c-list-item">
-                                <div><span class="c-icon__img"><img src="../../../assets/img/check-24px.svg"></span>
-                                    <span>3M+ Patient recommendations</span></div>
-                            </div>
-                            <div class="c-list-item">
-                                <div><span class="c-icon__img"><img src="../../../assets/img/check-24px.svg"></span>
-                                    <span>25M Patients/year</span></div>
-                            </div>
-                            <div data-qa-id="book-cta" class="u-m-t-25 u-d-inline-block"><a class="c-button__redirect" href="/bangalore/doctors" target="_blank">Find me the right doctor</a>
-                            </div>
-                        </div>
-
-                        <div class="col-md-12">
-                            <div class="c-testimonial-list">
-                                <div class="slick-slider slick-initialized" dir="ltr"><span class="c-testimonial-list__prev_arrow c-testimonial-list__arrow c-icon__img">
-                                        <img class="prev-arrow" src="../../../assets/img/arrow_back_ios-24px.svg" />
-                                    </span>
-                                    <div class="slick-list">
-                                        <owl-carousel-o class="slick-track" [options]="customOptionsOne">
-                                            <ng-template carouselSlide data-index="-1" tabindex="-1" class="slick-slide slick-cloned" style="width: 420px;">
-                                                <div>
-                                                    <div class="u-t-grey">
-                                                        <div class="c-testimonial__review_star u-m-b-10 u-t-green">
-                                                            <i class="icon-ic_star_solid icon-star"></i><i class="icon-ic_star_solid icon-star"></i><i class="icon-ic_star_solid icon-star"></i><i class="icon-ic_star_solid icon-star"></i><i class="icon-ic_star_solid icon-star"></i>
-                                                        </div>
-                                                        <div class="c-testimonial__review_text u-t-regular">I had severe pain in chest as well blood in cough. I searched through a lot of pulmonologists based on rankings and feedbacks and finally settled to consult Dr Indu Bubna. She quickly diagnosed my
-                                                            disease as pulmonary embolism and I was admitted to ICU. Now its all fine. If i would have gotten late then I wouldn't be writing this. Thanks Whealthy Life!</div>
-                                                        <div><span class="icon-ic_user_system icon-user"></span><span class="u-t-regular u-inline-middle u-m-l-10">Anuupam
-                                                                Purohit</span></div>
-                                                    </div>
-                                                </div>
-                                            </ng-template>
-                                        </owl-carousel-o>
-                                    </div>
-                                    <span class="c-testimonial-list__next_arrow c-testimonial-list__arrow c-icon__img">
-                                        <img class="next-arrow" src="../../../assets/img/arrow_forward_ios-24px.svg">
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 text-center">
-                    <div class="rh5v-DefaultPlayer_component ">
-                        <video class="rh5v-DefaultPlayer_video" poster="../../../assets/img/book.875ca26a3c4283c777660377e421e99b.png" loading="false" autoplay="" loop="" width="250" height="480">
-                            <source src="../../../assets/img/appointment.700ce682eaec91bf93b6574cb8f09cd0.webm"
-                                type="video/webm"></video>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="row mt-50 mb-50">
-                <div class="col-md-6">
-                    <div class="rh5v-DefaultPlayer_component ">
-                        <video class="rh5v-DefaultPlayer_video" poster="../../../assets/img/consult.15f1b416f3f4c9383b780757d7293d00.png" loading="false" autoplay="" loop="" width="250" height="480">
-                            <source src="../../../assets/img/consult.099446892618434cc8a038d7844c4380.webm"
-                                type="video/webm">
-                        </video>
-                    </div>
-                </div>
-
-                <div class="col-md-6">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <h2 class="u-d-inline">Skip the waiting room. Chat with a doctor</h2>
-                            <div class="c-list-item">
-                                <div><span class="c-list-item__icon c-icon__img"><img
-                                            src="../../../assets/img/check-24px.svg"></span><span>Fees starting at
-                                    </span><span class="u-t-bold">₹99</span></div>
-                            </div>
-                            <div class="c-list-item">
-                                <div><span class="c-list-item__icon c-icon__img"><img
-                                            src="../../../assets/img/check-24px.svg"></span><span>Verified doctors
-                                        respond in
-                                    </span><span class="u-t-bold">5 minutes</span></div>
-                            </div>
-                            <div class="c-list-item">
-                                <div><span class="c-list-item__icon c-icon__img"><img
-                                            src="../../../assets/img/check-24px.svg"></span><span class="u-t-bold">100%
-                                    </span><span>Private and confidential</span></div>
-                            </div>
-                            <div data-qa-id="consult-cta" class="u-m-t-25 u-d-inline-block"><a class="c-button__redirect" href="/consult?product=fabric&amp;amp;attribution=Home_Details_Section" target="_blank">Chat
-                                    now</a>
-                            </div>
-
-                            <span class="c-consult__doctors_online u-t-grey"><span
-                                    class="c-consult__doctors_pulse u-t-pulse left"></span><span class="u-t-bold">41623</span><span> doctors online</span>
+            <div class="c-testimonial-list">
+              <div class="slick-slider slick-initialized" dir="ltr">
+                <span class="c-testimonial-list__prev_arrow c-testimonial-list__arrow c-icon__img">
+                  <img class="prev-arrow" src="../../../assets/img/arrow_back_ios-24px.svg" />
+                </span>
+                <div class="slick-list">
+                  <owl-carousel-o class="slick-track" [options]="customOptionsOne">
+                    <ng-template *ngFor="let item of HealthcareProvidersC" carouselSlide data-index="-1" tabindex="-1"
+                      class="slick-slide slick-cloned" style="width: 420px">
+                      <div>
+                        <div class="u-t-grey">
+                          <div class="c-testimonial__review_star u-m-b-10 u-t-green">
+                            <i class="icon-ic_star_solid icon-star"></i><i class="icon-ic_star_solid icon-star"></i><i
+                              class="icon-ic_star_solid icon-star"></i><i class="icon-ic_star_solid icon-star"></i><i
+                              class="icon-ic_star_solid icon-star"></i>
+                          </div>
+                          <div class="c-testimonial__review_text u-t-regular">
+                            {{ item.review }}
+                          </div>
+                          <div>
+                            <span class="icon-ic_user_system icon-user"></span><span
+                              class="u-t-regular u-inline-middle u-m-l-10">
+                              {{
+                                item?.userId?.firstName +
+                                  " " +
+                                  item?.userId?.lastName
+                              }}
                             </span>
+                          </div>
                         </div>
-
-                        <div class="col-md-12">
-                            <div class="c-testimonial-list">
-                                <div class="slick-slider slick-initialized" dir="ltr">
-                                    <span class="c-testimonial-list__prev_arrow c-testimonial-list__arrow c-icon__img">
-                                        <img class="prev-arrow" src="../../../assets/img/arrow_back_ios-24px.svg">
-                                    </span>
-                                    <div class="slick-list">
-                                        <owl-carousel-o class="slick-track" [options]="customOptionsOne">
-                                            <ng-template carouselSlide data-index="-1" tabindex="-1" class="slick-slide slick-cloned" style="width: 420px;">
-                                                <div>
-                                                    <div class="u-t-grey">
-                                                        <div class="c-testimonial__review_star u-m-b-10 u-t-green">
-                                                            <i class="icon-ic_star_solid icon-star"></i><i class="icon-ic_star_solid icon-star"></i><i class="icon-ic_star_solid icon-star"></i><i class="icon-ic_star_solid icon-star"></i><i class="icon-ic_star_solid icon-star"></i>
-                                                        </div>
-                                                        <div class="c-testimonial__review_text u-t-regular">I had severe pain in chest as well blood in cough. I searched through a lot of pulmonologists based on rankings and feedbacks and finally settled to consult Dr Indu Bubna. She quickly diagnosed my
-                                                            disease as pulmonary embolism and I was admitted to ICU. Now its all fine. If i would have gotten late then I wouldn't be writing this. Thanks Whealthy Life!</div>
-                                                        <div><span class="icon-ic_user_system icon-user"></span><span class="u-t-regular u-inline-middle u-m-l-10">Anuupam
-                                                                Purohit</span></div>
-                                                    </div>
-                                                </div>
-                                            </ng-template>
-                                        </owl-carousel-o>
-                                    </div>
-                                    <span class="c-testimonial-list__next_arrow c-testimonial-list__arrow c-icon__img">
-                                        <img class="next-arrow" src="../../../assets/img/arrow_forward_ios-24px.svg">
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                      </div>
+                    </ng-template>
+                  </owl-carousel-o>
                 </div>
+                <span class="c-testimonial-list__next_arrow c-testimonial-list__arrow c-icon__img">
+                  <img class="next-arrow" src="../../../assets/img/arrow_forward_ios-24px.svg" />
+                </span>
+              </div>
             </div>
-
-            <div class="row mt-50 mb-50">
-                <div class="col-md-6">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <h2 class="u-d-inline">Get all your medicines. Everytime. On time.</h2>
-                            <div class="c-list-item">
-                                <div>
-                                    <span class="c-list-item__icon c-icon__img"><img
-                                            src="../../../assets/img/check-24px.svg"></span>
-                                    <span>Guaranteed
-                                        availability</span></div>
-                            </div>
-                            <div class="c-list-item">
-                                <div>
-                                    <span class="c-list-item__icon c-icon__img">
-                                        <img src="../../../assets/img/check-24px.svg"></span>
-
-                                    <span>Over </span><span class="u-t-bold">130,000+ </span><span> genuine
-                                        medicines</span>
-                                </div>
-                            </div>
-                            <div class="c-list-item">
-                                <div>
-                                    <span class="c-list-item__icon c-icon__img"><img
-                                            src="../../../assets/img/check-24px.svg"></span>
-                                    <span>Home delivery in
-                                    </span><span class="u-t-bold">24hrs </span></div>
-                            </div>
-                            <div>
-                                <div data-qa-id="order-cta" class="u-m-t-25 u-d-inline-block"><a class="c-button__redirect" href="/order?utm_source=WhealthyLife_home" target="_blank">Order Medicines</a></div>
-                                <div class="c-order__last_order_info">
-                                    <div class="u-t-circle">
-                                        <div class="u-t-triangle"></div>
-                                    </div><span class="c-order__last_order_text">Last order delivered
-                                        <span class="u-t-bold">
-                                            few seconds
-                                        </span>ago in C V Raman Nagar, Bengaluru</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-12">
-                            <div class="c-testimonial-list">
-                                <div class="slick-slider slick-initialized" dir="ltr">
-                                    <span class="c-testimonial-list__prev_arrow c-testimonial-list__arrow c-icon__img">
-                                        <img class="prev-arrow" src="../../../assets/img/arrow_back_ios-24px.svg">
-                                    </span>
-                                    <div class="slick-list">
-                                        <owl-carousel-o class="slick-track" [options]="customOptionsOne">
-                                            <ng-template carouselSlide data-index="-1" tabindex="-1" class="slick-slide slick-cloned" style="width: 420px;">
-                                                <div>
-                                                    <div class="u-t-grey">
-                                                        <div class="c-testimonial__review_star u-m-b-10 u-t-green">
-                                                            <i class="icon-ic_star_solid icon-star"></i><i class="icon-ic_star_solid icon-star"></i><i class="icon-ic_star_solid icon-star"></i><i class="icon-ic_star_solid icon-star"></i><i class="icon-ic_star_solid icon-star"></i>
-                                                        </div>
-                                                        <div class="c-testimonial__review_text u-t-regular">I had severe pain in chest as well blood in cough. I searched through a lot of pulmonologists based on rankings and feedbacks and finally settled to consult Dr Indu Bubna. She quickly diagnosed my
-                                                            disease as pulmonary embolism and I was admitted to ICU. Now its all fine. If i would have gotten late then I wouldn't be writing this. Thanks Whealthy Life!</div>
-                                                        <div><span class="icon-ic_user_system icon-user"></span><span class="u-t-regular u-inline-middle u-m-l-10">Anuupam
-                                                                Purohit</span></div>
-                                                    </div>
-                                                </div>
-                                            </ng-template>
-                                        </owl-carousel-o>
-                                    </div>
-                                    <span class="c-testimonial-list__next_arrow c-testimonial-list__arrow c-icon__img">
-                                        <img class="next-arrow" src="../../../assets/img/arrow_forward_ios-24px.svg">
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 text-center">
-                    <div class="c-section__right"><img style="max-width: 100%;" height="300px" src="../../../assets/img/Swati/BookAppointment/Medicines.png">
-                    </div>
-                </div>
-            </div>
-            <div class="row mt-50 mb-50">
-                <div class="col-md-6">
-                    <div class="c-section__right">
-                        <img style="max-width: 100%;" height="250px"  src="../../../assets/img/Swati/BookAppointment/MedicalRecords.png">
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="c-section__highlights">
-                        <div class="c-section__highlights_title">
-                            <h2 class="u-d-inline">All your medical records</h2>
-                            <h2 class="u-t-bold">In one secure app.</h2>
-                        </div>
-                        <div class="c-list-item">
-                            <div> <span class="c-list-item__icon "><i
-                                        class="c-list-item__icon icon-ic_done_open_system"></i></span>
-                                <span>256-bit end to end
-                                    encryption</span></div>
-                        </div>
-                        <div class="c-list-item">
-                            <div> <span class="c-list-item__icon "><i
-                                        class="c-list-item__icon icon-ic_done_open_system"></i></span>
-                                <span>Records are accessible
-                                    only
-                                    by you</span></div>
-                        </div>
-                        <div class="c-list-item">
-                            <div> <span class="c-list-item__icon "><i
-                                        class="c-list-item__icon icon-ic_done_open_system"></i></span>
-                                <span>Access your records
-                                    across</span><span class="u-t-bold"> 8000+ </span><span>centers</span></div>
-                        </div>
-                        <div data-qa-id="record-cta" class="u-m-t-25 u-d-inline-block"><a class="c-button__redirect" href="//drive.WhealthyLife.com/login?utm_source=WhealthyLife_home" target="_blank">Find
-                                out more</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row mt-80">
-                <div class="col-md-6">
-                    <div class="c-section__highlights">
-                        <div class="c-section__highlights_title">
-                            <h2 class="u-d-inline">Leading Healthcare Providers.</h2>
-                            <h2 class="u-t-bold">Trust us for Business</h2>
-                        </div>
-                        <div class="c-list-item">
-                            <div> <span class="c-list-item__icon "><i
-                                        class="c-list-item__icon icon-ic_done_open_system"></i></span>
-                                <span>Get seen by
-                                </span><span class="u-t-bold">25M+ </span><span>patients on WhealthyLife.com</span>
-                            </div>
-                        </div>
-                        <div class="c-list-item">
-                            <div> <span class="c-list-item__icon "><i
-                                        class="c-list-item__icon icon-ic_done_open_system"></i></span>
-                                <span>The most advanced
-                                    software
-                                    for clinics and hospitals</span></div>
-                        </div>
-                        <div class="c-list-item">
-                            <div> <span class="c-list-item__icon "><i
-                                        class="c-list-item__icon icon-ic_done_open_system"></i>
-                                </span>
-                                <span>State of the art business analytics for enterprises</span>
-                            </div>
-                        </div>
-                        <div data-qa-id="provider-cta" class="u-m-t-25 u-d-inline-block"><a class="c-button__redirect" href="/providers?utm_source=WhealthyLife_home" target="_blank">Learn more</a></div>
-                        <div class="c-testimonial-list">
-                            <div class="slick-slider slick-initialized">
-                                <div class="slick-list">
-                                    <owl-carousel-o class="slick-track" [options]="customOptionsOne">
-                                        <ng-template carouselSlide data-index="-1" tabindex="-1" class="slick-slide slick-cloned" style="width: 420px;">
-                                            <div>
-                                                <div class="u-t-grey">
-                                                    <div class="c-testimonial__review_star u-m-b-10 u-t-green">
-                                                        <i class="icon-ic_star_solid icon-star"></i><i class="icon-ic_star_solid icon-star"></i><i class="icon-ic_star_solid icon-star"></i><i class="icon-ic_star_solid icon-star"></i><i class="icon-ic_star_solid icon-star"></i>
-                                                    </div>
-                                                    <div class="c-testimonial__review_text u-t-regular">I had severe pain in chest as well blood in cough. I searched through a lot of pulmonologists based on rankings and feedbacks and finally settled to consult Dr Indu Bubna. She quickly diagnosed my disease
-                                                        as pulmonary embolism and I was admitted to ICU. Now its all fine. If i would have gotten late then I wouldn't be writing this. Thanks Whealthy Life!</div>
-                                                    <div><span class="icon-ic_user_system icon-user"></span><span class="u-t-regular u-inline-middle u-m-l-10">Anuupam
-                                                            Purohit</span></div>
-                                                </div>
-                                            </div>
-                                        </ng-template>
-                                    </owl-carousel-o>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div><img class="u-w-100" src="../../../assets/img/appoi-doctor.png">
-                    </div>
-                </div>
-            </div>
-            <!-- <div class="row mt-80 mb-50">
-                <div class="col-md-6">
-                    <div class="c-section__right">
-                        <img class="c-download__section-pic" src="../../../assets/images/iphone.png">
-                    </div>
-                </div>
-
-                <div class="col-md-6">
-                    <div class="c-section__highlights">
-                        <div class="c-section__highlights_title">
-                            <h2 class="u-d-inline u-t-bold">Download the Whealthy Life app</h2>
-                        </div>
-                        <div class="c-download__list">
-                            <div class="c-list-item">
-                                <div> <span class="c-list-item__icon "><i _ngcontent-avg-c77=""
-                                            class="c-list-item__icon icon-ic_done_open_system"></i></span>
-                                    <span>Book appointments
-                                        and
-                                        lab tests</span></div>
-                            </div>
-                            <div class="c-list-item">
-                                <div> <span class="c-list-item__icon "><i _ngcontent-avg-c77=""
-                                            class="c-list-item__icon icon-ic_done_open_system"></i></span>
-                                    <span>Order
-                                        medicines</span>
-                                </div>
-                            </div>
-                            <div class="c-list-item">
-                                <div> <span class="c-list-item__icon "><i _ngcontent-avg-c77=""
-                                            class="c-list-item__icon icon-ic_done_open_system"></i></span>
-                                    <span>Consult doctors
-                                        online</span></div>
-                            </div>
-                            <div class="c-list-item">
-                                <div> <span class="c-list-item__icon "><i _ngcontent-avg-c77=""
-                                            class="c-list-item__icon icon-ic_done_open_system"></i></span>
-                                    <span>Set medicine
-                                        reminders</span></div>
-                            </div>
-                            <div class="c-list-item">
-                                <div> <span class="c-list-item__icon "><i _ngcontent-avg-c77=""
-                                            class="c-list-item__icon icon-ic_done_open_system"></i></span>
-                                    <span>Store health
-                                        records</span></div>
-                            </div>
-                            <div class="c-list-item">
-                                <div> <span class="c-list-item__icon "><i _ngcontent-avg-c77=""
-                                            class="c-list-item__icon icon-ic_done_open_system"></i></span>
-                                    <span>Read health
-                                        tips</span>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div> -->
+          </div>
         </div>
-    </section>
-    <div class="c-full-width">
-        <div class="c-section__container u-fill-white">
-            <div class="c-section__content">
-                <div class="u-w-50 u-f-left">
-
-                </div>
-                <div class="u-w-50 u-f-right">
-
-                </div>
-            </div>
+        <div class="col-md-6">
+          <div>
+            <img class="u-w-100" src="../../../assets/img/appoi-doctor.png" />
+          </div>
         </div>
+      </div>
     </div>
+  </section>
+  <div class="c-full-width">
+    <div class="c-section__container u-fill-white">
+      <div class="c-section__content">
+        <div class="u-w-50 u-f-left"></div>
+        <div class="u-w-50 u-f-right"></div>
+      </div>
+    </div>
+  </div>
+</div>

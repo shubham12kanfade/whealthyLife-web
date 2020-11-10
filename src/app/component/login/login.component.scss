@@ -5,7 +5,9 @@ body {
 .sidimg {
     img {
         height: 400px;
-        width: 400px;
+        width: 410px;
+        margin-left: -30px;
+
     }
 }
 .mt-120{
@@ -129,7 +131,7 @@ label[for="remember"] {
 
 .otp_flow input[type="checkbox"]:checked + label,
 .remember input[type="checkbox"]:checked + label {
-    background: #14bef0;
+    background: #22b10c  !important;
     border: 0;
 }
 .otp_flow input[type="checkbox"],
@@ -231,7 +233,7 @@ label {
     margin-top: 2px;
 }
 .WhealthyLife-btn {
-    background: #13bef0;
+    background: linear-gradient(to right bottom, #33f917, #2bd511, #22b10c, #1a9007, #126f04);
     color: #fff;
 }
 

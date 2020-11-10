@@ -84,7 +84,12 @@ export class OrderInformationComponent implements OnInit {
   ngOnInit() {
     this.activatedRoute.params.subscribe(paramsId => {
       this.id = paramsId;
+      console.log("OrderInformationComponent -> ngOnInit ->  this.id",  this.id)
   });
   console.log(this.id);}
+
+  
+
+
 
 }

@@ -12,6 +12,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NotificationPopupComponent } from './notification-popup/notification-popup.component';
 import { ToastModule } from 'primeng/toast';
 import { TreatmentsComponent } from './treatments/treatments.component';
+import { FeedBackPopComponent } from './feed-back-pop/feed-back-pop.component';
+import { CheckingPopupComponent } from './checking-popup/checking-popup.component';
 
 
 
@@ -22,7 +24,9 @@ import { TreatmentsComponent } from './treatments/treatments.component';
     DoctorProfileComponent,
     TimeSlotComponent,
     NotificationPopupComponent,
-    TreatmentsComponent
+    TreatmentsComponent,
+    FeedBackPopComponent,
+    CheckingPopupComponent
   ],
   imports: [
     CommonModule,

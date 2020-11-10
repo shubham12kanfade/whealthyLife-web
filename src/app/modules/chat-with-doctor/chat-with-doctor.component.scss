@@ -1,7 +1,3 @@
-.pink {
-  background-color: #f8e9e6;
-}
-
 .first-fold{
   font-size: 36px;
   line-height: 1.28;
@@ -10,8 +6,7 @@
   font-size: 24px;
   font-weight: 500;
   line-height: 1.42;
-}
-
+  }
 .margintop{
   margin-top: 7em;
 }
@@ -20,7 +15,6 @@
   font-size: 20px;
   line-height: 1.4;
 }
-
 .instant-doctors-card {
   margin-top: 22px;
 }
@@ -35,10 +29,8 @@
 .strip{
   border-radius: 50%;
 }
-
-
 .width-img{
-  width: 10%;
+  width: 15%;
 }
 .hero-image {
   position: absolute;
@@ -49,8 +41,8 @@
 
 .hero-image.web {
   display: block;
+  width: 100%;
 }
-
 .homepage-section-heading {
   font-size: 24px;
 }
@@ -60,15 +52,15 @@
   line-height: 1.5;
   padding-bottom: 12px;
 }
-
 .lhs {
   position: absolute;
   top: 30% !important;
   z-index: 999 !important;
   left: -30px !important;
   font-size: 10px !important;
+  z-index: 99999;
+  margin: 0 30px;
 }
-
 .rhs {
   position: absolute;
   top: 30% !important;
@@ -76,22 +68,13 @@
   right: 1px !important ;
   font-size: 10px !important;
 }
-.primary {
-  color: #14bef0;
-}
 .badge {
   color: #2e6f5a;
   font-size: large;
   font-weight: 700;
 }
-.green {
-  background: #96d3bf;
-}
 .cen{
   text-align: center;
-}
-.purple {
-  background-color: #a497c9;
 }
 .offer-img{
   width: 30%;
@@ -99,6 +82,15 @@
 .ml{
   margin-left: 25%;
 }
-.yellow {
-  background: #feba7f;
+.txt{
+  z-index: 1;
 }
+
+
+@media screen and (max-width:600px){
+  .heading{
+    font-size:20px !important;
+  }
+}
+
+

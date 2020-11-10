@@ -1,554 +1,93 @@
-<!-- <p-toast position="center" class="custom-toast" key="myKey1" [modal]="false" (onClose)="clear()" [baseZIndex]="5000" position="top-right" timeout='0'>
-    <ng-template let-message pTemplate="message">
-        <div class="p-col-12 marg1">
-            <div class="row">
-                <div class="col-4">
-                    <img src="" onerror="this.src='../../../assets/images/doc.jpg'" class="img-thumbnail imgt">
+<div class="container-fluid">
+    <div class="row" style="margin-top: 100px;">
+        <div class=" col-md-4 col-lg-3">
+            <div class="input-group mb-3" style="    display: block;">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1" style=""><i
+                            class="fa fa-search"></i></span>
+                    <input type="text" class="form-control" placeholder="Search Doctor Here !" aria-label="Username"
+                        aria-describedby="basic-addon1" [(ngModel)]="searchText" (input)="search()">
+
                 </div>
-                <div class="col-8">
-                    <p class="marg"><span> Styajeet Kolhe </span></p>
-                    <p class="marg"> Patient</p>
-                    <p class="marg"> 12-06-2020 11.00 </p>
+
+            </div>
+            <div class="input-group mb-3 shhh" style="display:block;">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1"><i
+                            class="fa fa-search"></i></span>
+                            <select class="form-control" >
+                                <option> --- Select Speciality --- </option>
+                                <option *ngFor="let speciality of specialityList"><a [routerLink]="['/doctors', speciality._id]" style="width: 100%;">{{speciality.fullName}}</a></option>
+                            </select>       
                 </div>
             </div>
-        </div>
-        <hr class="hr1">
-        <div class="acc">
-            <div class="acc1">
-            
-                Accept
-            </div>
-            <div class="rej" (click)="clear()">
-             
-                Reject
-            </div>
-        </div>
-     
 
-    </ng-template>
-</p-toast> -->
-
-
-<section class="se1">
-    <div class="container-fluid cont1">
-        <div class="row">
-            <div class="col-sm-3 mt-30">
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend" [formGroup]="searchForm">
-                        <span class="input-group-text" id="basic-addon1"><i class="fa fa-search"></i></span>
-                    </div>
-                    <input type="text" class="form-control" placeholder="Search Doctor Here !" aria-label="Username" aria-describedby="basic-addon1" [(ngModel)]="searchText" (input)="search()">
-                    <!-- <div class="ng-autocomplete">
-                            <ng-autocomplete 
-                              [data]="autoDoctList"
-                              [searchKeyword]="keyword"
-                              (selected)='selectEvent($event)'
-                              (inputChanged)='onChangeSearch($event)'
-                              (inputFocused)='onFocused($event)'
-                              [itemTemplate]="itemTemplate"
-                              [notFoundTemplate]="notFoundTemplate">                                 
-                            </ng-autocomplete>
-                             
-                            <ng-template #itemTemplate let-item>
-                            <a [innerHTML]="item.firstName"></a>
-                            </ng-template>
-                             
-                            <ng-template #notFoundTemplate let-notFound>
-                            <div [innerHTML]="notFound"></div>
-                            </ng-template>
-                            </div> -->
-
-                </div>
-                <div class="card cad1 hidd">
-                    <h2 class="hed1">
-                        <b>SPECIALITY</b>
-                    </h2>
-                    <ul class="list-group list-group-flush scroll1">
-                        <li class="list-group-item" *ngFor="let speciality of specialityList">{{speciality.fullName}}</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-sm-9 scroll1 aduj1 ">
-                <div class="col-sm-12">
-                    <div class="row">
-                        <div class="col-lg-4 col-sm-6 col-12" *ngFor="let doctor of doctorList">
-                            <div class="card cad2">
-                                <div class="card-header" style="padding: 0px;">
-                                    <div class="row">
-                                        <div class="col-4">
-                                            <img [src]="doctor?.avatar" onerror="this.src='../../../assets/images/doc.jpg'" alt="Avatar" class="img-thumbnail img2">
-                                        </div>
-                                        <div class="col-8">
-                                            <h2 class="hed3"><a [routerLink]="['/doctors/doctor_profile/',doctor?._id]">Dr.
-                                                    {{doctor?.firstName}}
-                                                    {{doctor?.lastName}}</a></h2>
-                                            <p style="margin: 0px;font-size: 12px;">{{doctor?.specialitie}}</p>
-                                            <p style="margin: 0px;font-size: 12px;">
-                                                <b>{{doctor?.experience}}</b> years experience overall</p>
-                                            <p><i class="fa fa-thumbs-up text-success"></i> 100%</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-body" style="padding: 10px;line-height: 10px;font-size: 12px;text-align: left; ">
-                                    <div class="col-12">
-                                        <p>
-                                            <b>{{doctor?.location?.landmark}}
-                                            </b>
-                                        </p>
-                                        <p><b>Rs. {{doctor?.fees}}</b> Consultation Fees</p>
-                                        <p> Available Today</p>
-                                    </div>
-                                </div>
-                                <div class="card-footer cdfot">
-                                    <button type="button" (click)="onConsultation(doctor?._id)" class="btn btn-outline-primary fsize">Video
-                                        Consultation</button>
-
-                                    <a> <button [routerLink]="['/doctors/timeSlot/',doctor?._id]" class="btn btn-primary fsize">Book Appointment
-                                        </button></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-sm-6 col-12 fweight" *ngIf="doctorList.length==''">
-                            No Doctor Found
-                        </div>
-                    </div>
-                </div>
+    
+            <div class="card cad1 hidd">
+                <h2 class="hed1">
+                    <b>SPECIALITY</b>
+                </h2>
+                <ul class="list-group list-group-flush ">
+                    <li class="list-group-item" style="cursor: pointer;" *ngFor="let speciality of specialityList"
+                        [routerLink]="['/doctors', speciality._id]" routerLinkActive="router-link-active">
+                        {{speciality.fullName}}</li>
+                </ul>
             </div>
         </div>
-    </div>
-</section>
-
-
-
-
-
-
-<!-- <section class="sectiona">
-    <div class="container-fluid ">
-        <div class="col-md-12">
-            <div class="row">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-8">
-                            <div class="input-group ingrp">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text" id=""><i class="fa fa-map-marker-alt"></i></span>
-                                </div>
-                                <input type="text" class="form-control" value="Pune">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text" id=""><i class='fas fa-search'></i></span>
-                                </div>
-                                <input type="text" class="form-control" Value="Dentist">
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <p class="pp"> Fed up of endless wait? </p>
-                            <h4>Look for clinic with <span class="blue">Prime</span> <span><i
-                                        class="fa fa-check-circle blue" aria-hidden="true"></i></span></h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section>
-    <div class="col-md-12 headerc sticky">
-        <button class="btn btnbar" (click)="avaialableclick()"><i class="fa fa-bars"></i></button>
-        <div class="asd row ">
-            <ul class="ullist">
-                <div class="inlflx">
-                    <li>
-                        <div class="form-group">
-                            <select class="form-control" id="exampleFormControlSelect1">
-                                <option> Availability</option>
-                                <option>Available Today</option>
-                                <option>Available Tomorrow</option>
-                                <option>Available in next 7 days</option>
-                            </select>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="liss">
-                            <mat-checkbox class="bringwhite"> </mat-checkbox>
-                            Online Booking
-                        </div>
-                      
-                    </li>
-                    <li>
-                        <div class="form-group">
-                            <select class="form-control" id="exampleFormControlSelect1">
-                                <option> All Filters</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                            </select>
-                        </div>
-                    </li>
-
-                    <li class="listd">
-                        <span class="sortby">Sort By</span>
-                        <div class="form-group">
-
-                            <select class="form-control" id="exampleFormControlSelect1">
-                                <option> Relevance</option>
-                                <option>Price-Low to High</option>
-                                <option>Price-High to Low</option>
-                                <option>Years of Experience </option>
-                                <option>Recommendation</option>
-                            </select>
-                        </div>
-                    </li>
-                </div>
-            </ul>
-        </div>
-        <div class="side row">
-            <ul class="ullist1">
-                <div class="flixin" *ngIf="aval">
-                    <li>
-                        <div class="form-group-sm">
-                            <select class="form-control" id="exampleFormControlSelect1">
-                                <option> Online Booking</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                            </select>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                            <label class="form-check-label" for="defaultCheck1">
-                                Default checkbox
-                            </label>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="form-group-sm">
-                            <select class="form-control" id="exampleFormControlSelect1">
-                                <option> All Filters</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                            </select>
-                        </div>
-                    </li>
-                    <li>
-                        <span class="sortby">Sort By</span>
-                        <div class="form-group-sm">
-                            <select class="form-control" id="exampleFormControlSelect1">
-                                <option> Relevance</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                            </select>
-                        </div>
-                    </li>
-                </div>
-            </ul>
-        </div>
-    </div>
-</section> -->
-
-<!-- <section>
-    <div class="gap11 container-fluid">
-        <div class="col-md-12">
-            <div class="row">
-                <div class="col-md-4" style="margin-bottom: 40px;">
-                  
-                    <div>
-                        <div class="col-md-12">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <h2>Book from {{doctorList?.length}} Doctors in Bangalore</h2>
-                                    <p>With predicted wait-time & verified details</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="card cardex2 ">
-                                <p-calendar [inline]="true" [minDate]="minDate"></p-calendar>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-8 firstcard">
-                    <div class="col-12" style="margin-top: 55px;">
-                        <div class="row">
-                            <div class="col-lg-4 col-sm-6 co-12" *ngFor="let doctor of doctorList">
-
-
-                                <div
-                                    style="border: 1px solid grey; border-radius:5px; padding: 10px 0px 0px 0Px;margin-top: 30px;">
-
-                                    <div class="row">
-                                        <div class="col-sm-5">
-
-                                            <img [src]="doctor?.userId?.avatar"
-                                                onerror="this.src='../assets/img/user.jpeg'" alt="Avatar"
-                                                style="display: block; margin: auto; width:100;height:100px ; border-radius: 50%;"
-                                                class="">
-                                        </div>
-                                        <div class="col-sm-7" style="display:block">
-                                            <div style="margin:0px 5px;">
-                                                <div class="bookingside">
-                                                    <p style="margin: 0px 0px; font-size: 12px;">
-                                                        <span class="availableicon">
-                                                            <i class="fa fa-calendar"></i>
-                                                        </span>
-                                                        Available Today
-                                                    </p>
-                                                </div>
-                                                <div class="">
-                                                    
-
-                                                    <button class="btn btn-primary btnbooking" (click)="addPractice()"
-                                                        style="height: 37px;
-                                                margin: 5px 0px;font-size: 12px;">Book
-                                                        Appointment
-                                                        <p class="nobooktext">Rs. {{doctor?.userId?.fees}}</p>
-                                                    </button>
-
-                                                   
-
-                                                    <button type="button" (click)="onConsultation(doctor?._id)"
-                                                        class="btn btn-outline-primary btnvideoconultation" style="height: 37px;
-                                                    margin: 5px 0px; font-size: 12px;">Video
-                                                        Consultation</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card-body" style="padding: 0px 10px; line-height: 10px; ">
-                                        <h2 style="margin: 0px;"><a [routerLink]="['/doctor_profile/','doctor?._id']"
-                                                style=" font-size: 16px;">Dr. {{doctor?.userId?.firstName}}
-                                                {{doctor?.userId?.lastName}}</a></h2>
-                                        <p>{{doctor?.userId?.specialitie}}</p>
-                                        <p>{{doctor?.userId?.experience}} years experience overall</p>
-                                        <p>
-                                            <strong><a href="">{{doctor?.userId?.location?.landmark}}</a>
-                                            </strong>
-                                        </p>
-
-                                    </div> -->
-<!-- <div class="card-footer" style="text-align:center ; margin:10px;">
-                                    <div class="bookingside">
-                                        <p>
-                                            <span class="availableicon">
-                                                <i class="fa fa-calendar"></i>
-                                            </span>
-                                            Available Today
-                                        </p>
-                                    </div>
-                                    <div class="" style="display:flex;">
-                                        <button class="btn btn-primary btnbooking" (click)=" showtime(doctor)">Book
-                                            Appointment
-                                            <p class="nobooktext">Rs. {{doctor?.userId?.fees}}</p>
-                                        </button>
-                                    
-                                        <button type="button" (click)="onConsultation(doctor?._id)"
-                                            class="btn btn-outline-primary btnvideoconultation">Video
-                                            Consultation</button>
-                                    </div>
-                                </div> -->
-<!-- </div> -->
-
-
-
-
-
-
-
-
-<!-- <div style="border: 1px solid grey; border-radius:5px; padding: 10px 0px 0px 0Px;margin-top: 30px;">
-
-                                    <img [src]="doctor?.userId?.avatar"
-                                        onerror="this.src='../assets/img/user.jpeg'" alt="Avatar"  style="display: block; margin: auto; width:100%;height: 200px;"
-                                        class="">
-                                <div class="card-body" style="padding: 0px 10px; line-height:7px;">
-                                    <h2><a [routerLink]="['/doctor_profile/','doctor?._id']" style="margin:0px 0px; " >Dr. {{doctor?.userId?.firstName}}
-                                        {{doctor?.userId?.lastName}}</a></h2>
-                                <p>{{doctor?.userId?.specialitie}}</p>
-                                <p>{{doctor?.userId?.experience}} years experience overall</p>
-                                <p>
-                                    <strong><a href="">{{doctor?.userId?.location?.landmark}}</a>
-                                    </strong>
-                                </p>
-                                
-                                </div>
-                                <div class="card-footer" style="text-align:center ; margin:10px;">
-                                    <div class="bookingside">
-                                        <p>
-                                            <span class="availableicon">
-                                                <i class="fa fa-calendar"></i>
-                                            </span>
-                                            Available Today
-                                        </p>
-                                    </div>
-                                    <div class="" style="display:flex;">
-                                        <button class="btn btn-primary btnbooking" (click)=" showtime(doctor)">Book
-                                            Appointment
-                                            <p class="nobooktext">Rs. {{doctor?.userId?.fees}}</p>
-                                        </button>
-                                    
-                                        <button type="button" (click)="onConsultation(doctor?._id)"
-                                            class="btn btn-outline-primary btnvideoconultation">Video
-                                            Consultation</button>
-                                    </div>
-                                </div>
-                                </div> -->
-<!-- </div>
-                        </div>
-                    </div> -->
-
-<!-- 
-                    <div class="card">
-                        <div class="card-body">
-
-                            <div class="col-sm-12" *ngFor="let doctor of doctorList">
- -->
-
-
-<!-- 
+        <div class="col-sm-12 col-md-8 col-lg-9 list-group1  aduj1">
+            <div class="col-sm-12">
+                <div class="row">
+                    <div class="col-lg-4 col-sm-6   col-12" *ngFor="let doctor of doctorList">
+                        <div class="card cad2">
+                            <div class="card-header" style="padding: 0px;">
                                 <div class="row">
-                                    <div class="col-md-2">
-                                        <div class="profimage">
-                                            <img [src]="doctor?.userId?.avatar"
-                                                onerror="this.src='../assets/img/user.jpeg'" alt="Avatar" width="200px"
-                                                class="">
-                                        </div>
-                                        <div class="vprofile">
-                                            <h2><a href="">Dr. {{doctor?.userId?.firstName}}
-                                                {{doctor?.userId?.lastName}}</a></h2>
-                                                
-                                        </div>  
+                                    <div class="col-4">
+                                        <img [routerLink]="['/doctors/doctor_profile/',doctor?.doctorId?._id]"
+                                            [src]="doctor?.doctorId?.avatar"
+                                            onerror="this.src='../../../assets/images/doc.jpg'" alt="Avatar"
+                                            class="img-thumbnail img2">
                                     </div>
-                                    <div class="col-md-7">
-                                        <div>
-                                            <h2><a href="">Dr. {{doctor?.userId?.firstName}}
-                                                    {{doctor?.userId?.lastName}}</a></h2>
-                                            <p>{{doctor?.userId?.specialitie}}</p>
-                                            <p>{{doctor?.userId?.experience}} years experience overall</p>
-                                            <p>
-                                                <strong><a href="">{{doctor?.userId?.location?.landmark}}</a>
-                                                </strong>
-                                            </p>
-                                        </div>
-                                        <hr>
-                                        <div class="col-sm-12">
-                                            <div class="row">
-                                                <div class="col-sm-4"></div>
-                                                <div class="col-sm-4">
-                                                    <p class="feedbacktext"><a href="">0 feedback</a></p>
-                                                </div>
-                                            </div>
-                                        </div>
+                                    <div class="col-8">
+                                        <h2 class="hed3"><a
+                                                [routerLink]="['/doctors/doctor_profile/',doctor?.doctorId?._id]">Dr.
+                                                {{doctor?.doctorId?.firstName}}
+                                                {{doctor?.doctorId?.lastName}}</a></h2>
+                                        <p style="margin: 0px;font-size: 12px;"><span
+                                                *ngFor="let spec of doctor?.doctorId?.specialitie | slice:0:2">
+                                                {{spec.fullName}}</span></p>
+                                        <p style="margin: 0px;font-size: 12px;">
+                                            <b>{{doctor?.doctorId?.registrationYear}}</b> years experience overall</p>
+                                        <p><i class="fa fa-thumbs-up text-success"></i> 100%</p>
                                     </div>
-                                    <div class="col-md-3">
-                                        <div class="bookingside">
-                                            <p>
-                                                <span class="availableicon">
-                                                    <i class="fa fa-calendar"></i>
-                                                </span>
-                                                Available Today
-                                            </p>
-                                        </div>
-                                        <div class="">
-                                            <button class="btn btn-primary btnbooking" (click)=" showtime(doctor)">Book
-                                                Appointment
-                                                <br><span class="nobooktext">Rs. {{doctor?.userId?.fees}}</span>
-                                            </button>
-                                        </div>
-                                        <br><br>
-                                        <div>
-                                            <button type="button" (click)="onConsultation(doctor?._id)"
-                                                class="btn btn-outline-primary btnvideoconultation">Video
-                                                Consultation</button>
-                                        </div>
-                                    </div>
-                                </div> -->
-<!-- <div *ngIf="show === doctor?._id">
-                                    <div class="col-md-12 col-sm-12 slidetime">
-                                        <div class="row">
-                                            <div class="col-sm-12">
-                                                <mat-tab-group>
-                                                    <mat-tab *ngFor="let item of doctor?.slots">
-                                                        <ng-template mat-tab-label>
-                                                            <div class="grp">
-                                                                <h4 class="text-capitalize">{{item?.day}}</h4>
-                                                                <p>{{evningSlot?.length + morningSlot?.length}} Slots
-                                                                    Available</p>
-                                                            </div>
-                                                        </ng-template>
-                                                        <div class="slotsavailable">
-                                                            <div class="row">
-                                                                <div class="col-sm-2">
-                                                                    <div>
-                                                                        <span><i class="fa fa-sun"></i></span>
-                                                                        Morning
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-sm-10 driven">
-                                                                    <div class="morningslot">
-                                                                        <div data-qa-id="slot_time"
-                                                                            (click)="onSelectSlot(item?.value)"
-                                                                            class="c-day-session__slot"
-                                                                            *ngFor="let item of morningSlot">
-                                                                            <span
-                                                                                [ngClass]="{selectedSloats: item?.value == selectedSlot}">{{item?.label}}</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <hr>
-                                                            <div class="row">
-                                                                <div class="col-sm-2">
-                                                                    <div>
-                                                                        <span><i class="fa fa-sun"></i></span>
-                                                                        Evening
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-sm-10 driven">
-                                                                    <div class="morningslot">
-                                                                        <div data-qa-id="slot_time"
-                                                                            class="c-day-session__slot"
-                                                                            (click)="onSelectSlot(item?.value)"
-                                                                            *ngFor="let item of evningSlot">
-                                                                            <span
-                                                                                [ngClass]="{selectedSloats: item?.value == selectedSlot}">{{item?.label}}</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </mat-tab>
-                                                </mat-tab-group>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> -->
-<!-- </div>
+                                </div>
+                            </div>
+                            <div class="card-body"
+                                style="padding: 10px;line-height: 10px;font-size: 12px;text-align: left; height: 100%;">
+                                <div class="col-12">
+                                    <p>
+                                        <b>{{doctor?.doctorId?.location?.landmark}}
+                                        </b>
+                                    </p>
+                                    <p><b>Rs. {{doctor?.doctorId?.fees}}</b> Consultation Fees</p>
+                                    <p> Available Today</p>
+                                </div>
+                            </div>
+                            <div class="">
+                               <div style="display:flex;justify-content: space-between;flex-wrap: wrap;">
+                                <button type="button" (click)="onConsultation(doctor?.doctorId?._id)"
+                                class="btn btn-outline-primary fsize"> Video Consultation </button>
+                                <button [routerLink]="['/doctors/timeSlot/',doctor?.doctorId?._id]"
+                                class="btn btn-primary fsize">Book Appointment</button>
+                               </div>
+                              </div>
                         </div>
+
                     </div>
-                </div> -->
-<!-- <div class="card don">
-                    <div class="row">
-                        <div class="col-7 cosevn">
-                            <h2>Free Online Consultations</h2>
-                            <p>Every Monday to Saturday,
-                                5pm to 6pm</p>
-                            <button class="btn btn-primary pmary">Know More</button>
-                        </div>
-                        <div class="col-5 disr">
-                            <img src="../../../assets/img/tracefinallogo.png">
-                        </div>
-                    </div>
-                </div> -->
-<!-- </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 col-12 fweight" *ngIf="doctorList.length==''">
+                    No Doctor Found
+                </div>
+            </div>
         </div>
     </div>
-</section> -->
+</div>

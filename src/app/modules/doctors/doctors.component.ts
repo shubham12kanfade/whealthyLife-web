@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
 import { ConsultationService } from 'src/app/services/consultation.service';
 import { UserService } from 'src/app/services/user.service';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { TimeSlotComponent } from './time-slot/time-slot.component';
 import { MatDialog } from '@angular/material/dialog';
 import { SpecialityService } from 'src/app/services/speciality.service';
@@ -24,32 +24,23 @@ export class DoctorsComponent implements OnInit {
   docId: any;
   specialityList: any;
   autoDoctList: any=[];
-  // countries: any=[];
   keyword = 'firstName';
   tempArray: any=[];
   showDatas: any;
   searchText: any;
   searchForm: FormGroup;
-//   data = [
-//     {
-//       id: 1,
-//       name: 'Usa'
-//     },
-//     {
-//       id: 2,
-//       name: 'England'
-//     }
-//  ];
+  DocID: any;
+
   constructor(public consultationService: ConsultationService,
     public userService: UserService,
     public router: Router,
     public dialog: MatDialog,
     public speciality :SpecialityService,
-    public messageService: MessageService
+    public messageService: MessageService,
+    private activatedRoute: ActivatedRoute,
   ) {
     this.getScroll();
     this.getDoctorList();
-    // this.placesLoad();
     this.speciality.getSpecializationAll().then((resData:any)=>{
     console.log("DoctorsComponent -> resData", resData)
     this.specialityList=resData.data;
@@ -64,52 +55,46 @@ export class DoctorsComponent implements OnInit {
     });
   }
   getDoctorList() {
-    this.consultationService.getDoctorlist().then(resData => {
-      console.log("DoctorsComponent -> getDoctorList -> resData", resData);
+    this.consultationService.getDoctorUsingId(this.DocID).then(resData => {
+    console.log("DoctorsComponent -> getDoctorList -> resData++++++++++++++++", resData)
+    
       this.doctorList = resData.data;
       this.tempArray = resData.data;
+      console.log("DoctorsComponent -> getDoctorList -> this.tempArray", this.tempArray)
       this.doctorList.forEach(ele => this.autoDoctList.push(ele.userId));
-      // this.messageService.add({key: 'myKey1', severity:'success', summary: 'Summary Text', detail: 'Order submitted',life:50000});
-      // setTimeout(() => {
-      //   this.messageService.add({key: 'myKey1', severity:'success', summary: 'Summary Text', detail: 'Detail Text'});
-      // });
     }).catch(error => {
       console.log("DoctorsComponent -> getDoctorList -> error", error);
     })
   }
-  clear() {
+
+    getfreeDocList(){
+ 
+this.consultationService.getDoctFree().then((resData)=>{
+console.log("DoctorsComponent -> getfreeDocList -> resData", resData)
+  
+}).catch((err)=>{
+console.log("DoctorsComponent -> getfreeDocList -> err", err)
+  
+})     
+    }
+
+  clear() {ActivatedRoute
     this.messageService.clear('myKey1');
 }
   search(){
     this.doctorList = this.tempArray;
-    this.doctorList = this.tempArray.filter(ele => ele.userId.firstName.includes(this.searchText.toLowerCase()));
+    this.doctorList = this.tempArray.filter(ele => ele.doctorId.firstName.includes(this.searchText.toLowerCase()));
     console.log("DoctorsComponent -> search -> this.searchText", this.searchText)
     if (!this.searchText) {
       this.doctorList = this.tempArray;
     }
   }
-  // placesLoad() {
-  //   this.mapsAPILoader.load().then(() => {
-  //     let autocomplete = new google.maps.places.Autocomplete(this.searchElementRef.nativeElement, {
-  //       types: ["(cities)"],
-  //       componentRestrictions: {country: 'in'}
-  //     });
-  //     autocomplete.addListener("place_changed", () => {
-  //       this.ngZone.run(() => {
-  //         let place: google.maps.places.PlaceResult = autocomplete.getPlace();
-  //         if (place.geometry === undefined || place.geometry === null) {
-  //           return;
-  //         }
-  //       });
-  //     });
-  //   });
-  // }
   onConsultation(id) {
     var data = {
       doctor: id
     }
     this.consultationService.createSession(data).then(resData => {
-      console.log("DoctorsComponent -> onConsultation -> resData", resData);
+      // console.log("DoctorsComponent -> onConsultation -> resData", resData);
       this.router.navigate(['/video-conference'])
     }).catch(error => {
       console.log("DoctorsComponent -> onConsultation -> error", error);
@@ -119,25 +104,33 @@ export class DoctorsComponent implements OnInit {
     this.selectedSlot = time;
   }
   selectEvent(item) {
-    // do something with selected item
   }
   onChangeSearch(val: string) {
-    // fetch remote data from here
-    // And reassign the 'data' which is binded to 'data' property.
   }
   onFocused(e){
-    // do something when input is focused
   }
-  ngOnInit(): void {
+  ngOnInit() {
+    this.activatedRoute.params.subscribe(params => {
+    
+      this.DocID= params['id'];
+      // console.log("DoctorsComponent -> ngOnInit -> this.DocID++++++++++++++++++++++++", this.DocID)
+      const free="free"
+    if(this.DocID==free.toString)
+      {
+        this.getfreeDocList()
+      }
+      this.getDoctorList()
+    
+    })
   }
   showtime(doctor) {
     this.show = doctor._id;
-    console.log("DoctorsComponent -> showtime -> doctor", doctor);
+    // console.log("DoctorsComponent -> showtime -> doctor", doctor);
     var session1Start = doctor.slots[0].session1Start.split(":");
     var session1End = doctor.slots[0].session1End.split(":");
     var session2Start = doctor.slots[0].session2Start.split(":");
     var session2End = doctor.slots[0].session2End.split(":");
-    console.log("DoctorsComponent -> showtime -> session1Start", session1Start, session1End, session2Start, session2End)
+    // console.log("DoctorsComponent -> showtime -> session1Start", session1Start, session1End, session2Start, session2End)
     this.morningSlot = [];
     this.evningSlot = [];
     for (var i = parseInt(session1Start[0]); i < parseInt(session1End[0]); i++) {
@@ -156,6 +149,7 @@ export class DoctorsComponent implements OnInit {
     }
   }
   avaialableclick() {
+    // this.placesLoad();
     this.aval = !this.aval;
   }
   getScroll() {
@@ -179,9 +173,5 @@ export class DoctorsComponent implements OnInit {
       }
     });
   }
-  // showToast(type, messageType, message) {
-  //   setTimeout(() => {
-  //     this.messageService.add({ severity: type, summary: messageType, detail: message });
-  //   });
-  // }
+  
 }

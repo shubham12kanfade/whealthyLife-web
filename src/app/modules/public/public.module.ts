@@ -22,13 +22,14 @@ import { VerifyOtpComponent } from 'src/app/component/verify-otp/verify-otp.comp
 import { SharedModule } from '../../shared/shared.module';
 import { PrivcyPolicyComponent } from './privcy-policy/privcy-policy.component';
 import { ToastModule } from 'primeng/toast';
+import { BookHealthCheckupsComponent } from '../book-health-checkups/book-health-checkups.component';
+
 
 @NgModule({
   declarations: [
     HeaderComponent,
     FooterComponent,
     PublicComponent,
-   
     LoginComponent,
     RegisterComponent,
     ContactUsComponent,
@@ -38,7 +39,8 @@ import { ToastModule } from 'primeng/toast';
     HealthMedicineshealthComponent,
     DoctorRegisterComponent,
     VerifyOtpComponent,
-    PrivcyPolicyComponent
+    PrivcyPolicyComponent,
+    BookHealthCheckupsComponent
   ],
   imports: [
     CommonModule,

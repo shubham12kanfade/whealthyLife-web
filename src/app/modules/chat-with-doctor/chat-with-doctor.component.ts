@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import { ConsultService } from './../../services/consult.service';
 @Component({
   selector: 'app-chat-with-doctor',
   templateUrl: './chat-with-doctor.component.html',
@@ -7,8 +8,16 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 })
 export class ChatWithDoctorComponent implements OnInit {
   f_list: any = [];
-  constructor() {
+  Offers: any;
+  constructor( private ConsultService:ConsultService) {
     this.f_list.length = 9;
+    this.ConsultService.getOffers().then((resData)=>{
+    console.log("ChatWithDoctorComponent -> constructor -> resData", resData)
+     this.Offers =resData.data
+    }).catch((err)=>{
+    console.log("ChatWithDoctorComponent -> constructor -> err", err)
+      
+    })
   }
   customOptions: OwlOptions = {
     loop:true,
@@ -62,10 +71,10 @@ export class ChatWithDoctorComponent implements OnInit {
         items: 2
       },
       940: {
-        items: 2
+        items: 3
       },
       1040: {
-        items: 2
+        items: 3
       }
     },
     nav: false

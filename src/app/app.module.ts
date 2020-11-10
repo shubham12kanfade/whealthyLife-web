@@ -1,3 +1,4 @@
+import { SharedModule } from 'src/app/shared/shared.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -19,6 +20,11 @@ import { MyAppointmentsComponent } from './component/my-appointments/my-appointm
 import { SocialLoginModule, AuthService } from 'angularx-social-login';
 import { AuthServiceConfig, GoogleLoginProvider, FacebookLoginProvider, LinkedInLoginProvider  } from 'angularx-social-login';
 import { ToastModule } from 'primeng/toast';
+import { AngularFireMessagingModule } from '@angular/fire/messaging';
+import { AngularFireModule } from '@angular/fire';
+import { environment } from './../environments/environment';
+
+
 
 
 
@@ -43,9 +49,11 @@ export function provideConfig() {
     MyAppointmentsComponent,
     DesignComponent,
     NotificationPopupComponent,
+
   ],
   imports: [
-    SocialLoginModule,
+ 
+SocialLoginModule,
     BrowserModule,
     AppRoutingModule,
     CarouselModule,
@@ -55,7 +63,8 @@ export function provideConfig() {
     AutocompleteLibModule,
     HttpClientModule,
     ToastModule,
-   
+    AngularFireMessagingModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
     AgmCoreModule.forRoot()
   ],
 
