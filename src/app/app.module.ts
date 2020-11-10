@@ -20,6 +20,9 @@ import { MyAppointmentsComponent } from './component/my-appointments/my-appointm
 import { SocialLoginModule, AuthService } from 'angularx-social-login';
 import { AuthServiceConfig, GoogleLoginProvider, FacebookLoginProvider, LinkedInLoginProvider  } from 'angularx-social-login';
 import { ToastModule } from 'primeng/toast';
+import { AngularFireMessagingModule } from '@angular/fire/messaging';
+import { AngularFireModule } from '@angular/fire';
+import { environment } from './../environments/environment';
 
 
 
@@ -49,7 +52,8 @@ export function provideConfig() {
 
   ],
   imports: [
-    SocialLoginModule,
+ 
+SocialLoginModule,
     BrowserModule,
     AppRoutingModule,
     CarouselModule,
@@ -59,7 +63,8 @@ export function provideConfig() {
     AutocompleteLibModule,
     HttpClientModule,
     ToastModule,
-
+    AngularFireMessagingModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
     AgmCoreModule.forRoot()
   ],
 
