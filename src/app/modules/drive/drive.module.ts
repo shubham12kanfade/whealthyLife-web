@@ -14,6 +14,7 @@ import { PaymentsComponent } from './payments/payments.component';
 import { SharedModule } from './../../shared/shared.module';
 import { UploadRecordsComponent } from './upload-records/upload-records.component';
 import { ChatsComponent } from './chats/chats.component';
+import { DoctorhistoryComponent } from './doctorhistory/doctorhistory.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { ChatsComponent } from './chats/chats.component';
     PaymentsComponent,
     UploadRecordsComponent,
     ChatsComponent,
+    DoctorhistoryComponent,
   ],
 
 
