@@ -71,7 +71,7 @@
         </h2>
       </div>
       <div class="col-sm-12 col-md-12 col-lg-12">
-        <div class="row" style="position: absolute;width: 100%;justify-content: space-between;top: 70px;">
+        <div class="row" style="position: absolute;width: 100%;justify-content: space-between;top: 100px;">
           <span (click)="review.prev()" style="z-index: 9;">
             <i class="fa fa-chevron-circle-left fa-3x" aria-hidden="true">
             </i>
@@ -83,68 +83,68 @@
         </div>
         <owl-carousel-o [options]="customOptions" #review>
           <ng-template carouselSlide>
-        <div class="card border" style="width:100%;">
+        <div class="card border" style="border-radius:15px !important; margin:10px !important;box-shadow: 0px 3px 5px lightgrey;">
           <img
             src="../../../assets/img/cough-cold-v1.jpg"
-            class="card-img-top"  style=" "
+            class="card-img-top"  style="border-radius: 15px 15px 0px 0px;"
             alt=""
           />
           <div class="card-body">
             <h4 class="card-text">
               Cough & Cold?
             </h4>
-            <h4 class="card-text primary">
+            <h4 class="card-text primary" style="color: rgb(105, 105, 240);cursor:pointer;font-weight: 600;">
               Consult Now >
             </h4>
           </div>
         </div>
       </ng-template>
       <ng-template carouselSlide>
-        <div class="card border" style="width:100%;">
+        <div class="card border" style="border-radius:15px !important; margin:10px !important;box-shadow: 0px 3px 5px lightgrey;">
           <img
             src="../../../assets/img/period-problems-v1.jpg" 
-            class="card-img-top" style=" "
+            class="card-img-top" style="border-radius: 15px 15px 0px 0px; "
             alt=""
           />
           <div class="card-body">
             <h4 class="card-text">
               Period problems?
             </h4>
-            <h4 class="card-text primary">
+            <h4 class="card-text primary" style="color: rgb(105, 105, 240);cursor:pointer;font-weight: 600;">
               Consult Now >
             </h4>
           </div>
         </div>
       </ng-template>
       <ng-template carouselSlide>
-        <div class="card border" style="width:100%;">
+        <div class="card border" style="border-radius:15px !important; margin:10px !important;box-shadow: 0px 3px 5px lightgrey;">
           <img
             src="../../../assets/img/performance-issues-bed-v1.jpg"
-            class="card-img-top" style=" "
+            class="card-img-top" style="border-radius: 15px 15px 0px 0px; "
             alt=""
           />
           <div class="card-body">
             <h4 class="card-text">
               Performance issues in bed?
             </h4>
-            <h4 class="card-text primary">
+            <h4 class="card-text primary" style="color: rgb(105, 105, 240);cursor:pointer;font-weight: 600;">
               Consult Now >
             </h4>
           </div>
         </div>
       </ng-template>
       <ng-template carouselSlide>
-        <div class="card border" style="width:100%;">
+        <div class="card border" style="border-radius:15px !important; margin:10px !important;box-shadow: 0px 3px 5px lightgrey;">
           <img
             src="../../../assets/img/skin-problems-v1.jpg"
-            class="card-img-top" style=" "
+            class="card-img-top" style="border-radius: 15px 15px 0px 0px; "
             alt=""
           />
           <div class="card-body">
             <h4 class="card-text">
               Skin problems?
             </h4>
-            <h4 class="card-text primary">
+            <h4 class="card-text primary" style="color: rgb(105, 105, 240);cursor:pointer;font-weight: 600;">
               Consult Now >
             </h4>
           </div>
@@ -276,11 +276,7 @@
         <div class="card border" style="width:100%;">
           <img
             src="../../../assets/img/Swati/ChatWithDoctor/General physician.png" 
-            class="card-img-top" style=" height: 130px;
-            width: 145px;
-            align-self: center;"
-            alt=""
-          />
+            class="card-img-top" style=" height: 130px;width: 145px;align-self: center;"alt=""/>
           <div class="card-body">
             <h4 class="heading" style=" text-align: center;">General physician</h4>
             <p style=" text-align: center;">
@@ -420,100 +416,94 @@
 </section>
 <section>
   <div class="container">
-    <div class="row">
-      <div class="col-sm-12 col-md-12 col-lg-4 cen">
-        <h2 class="homepage-section-heading horizontal-scroll">
-          What our users say
-        </h2>
-      </div>
-      <div class="col-sm-12 col-md-12 col-lg-4 cen">
+    <h2 class="homepage-section-heading horizontal-scroll">
+      What our users say
+    </h2>
+    <div class="row" >
+        <div class="col-12">
+          <div class="row" style="position: absolute;width: 100%;justify-content: space-between;top: 70px;">
+            <span (click)="review3.prev()" style="z-index: 9;">
+              <i class="fa fa-chevron-circle-left fa-3x" aria-hidden="true">
+              </i>
+            </span>
+            <span (click)="review3.next()" style="z-index: 9;">
+              <i class="fa fa-chevron-circle-right fa-3x" aria-hidden="true">
+              </i>
+            </span>
+          </div>
         <owl-carousel-o [options]="customOptions4" #review3>
-          <ng-template carouselSlide>
-        <div class="card ml" style="width: 30rem;">
-          <div class="card-body">
-            <div class="media">
-              <img
-                src="../../../assets/img/testimonial-abhy-v1.png"
-                style="width: 20%;"
-                class="mr-1"
-                alt="..."
-              />
-              <div class="media-body">
-                <h3 class="mt-0">Abhy</h3>
-                <h5>33 yr old IT Professional</h5>
-                <h5>
-                  I was really sick and
-                  <strong>couldn’t get out of bed.</strong> I talked to the
-                  doctor through WhealthyLife and he shared a
-                  <strong>prescription in 10 minutes.</strong> I even got the
-                  <strong>medicines delivered on the same day</strong> through
-                  WhealthyLife, just a WOW experience.
-                </h5>
+          <ng-template carouselSlide >
+            <div class="card" style="border: 1px solid lightgray !important;
+            box-shadow: 3px 3px 3px lightgrey !important;margin: 20px;">
+              <div class="card-header" style="background-color: #fff;
+              border-bottom: none;padding: 5px;">
+                <div class="row">
+                    <div class="col-3">
+                      <img src="../../../assets/img/testimonial-abhy-v1.png" />
+                    </div>
+                    <div class="col-9" style="text-align: left;">
+                      <h3 style="font-weight: 600;margin:0px ;"> Abhy </h3>
+                      <span>
+                        33 yr old IT Professional
+                      </span>
+                    </div>
+                </div>
               </div>
+              <div class="card-body" style="padding: 7px;">
+                <p style="margin: 0px;">I was really sick and <strong>couldn’t get out of bed.</strong> I talked to the doctor through Practo and he shared a <strong>prescription in 10 minutes.</strong> I even got the <strong>medicines delivered on the same day</strong> vdsvsdv cdscds.</p>
+              </div>
+
             </div>
+      </ng-template>
+      <ng-template carouselSlide>
+
+        <div class="card" style="border: 1px solid lightgray !important;
+        box-shadow: 3px 3px 3px lightgrey !important;margin: 20px;">
+          <div class="card-header" style="background-color: #fff;
+          border-bottom: none;padding: 5px;">
+            <div class="row">
+                <div class="col-3">
+                  <img src="../../../assets/img/testimonial-default-women-v1.png" />
+                </div>
+                <div class="col-9" style="text-align: left;">
+                  <h3 style="font-weight: 600;margin:0px ;"> Deepak </h3>
+                  <span>
+                    29 yr old traveller
+                  </span>
+                </div>
+            </div>
+          </div>
+          <div class="card-body" style="padding: 7px;">
+            <p style="margin: 0px;">I was travelling to a <strong>remote place</strong> for scuba
+              diving and <strong>injured myself.</strong> Tough to find doctors around, so did an<strong>online consultation</strong> on WhealthyLife and hey presto, I have my <strong>medicines.</strong> Disruptive. Convenient.</p>
           </div>
         </div>
       </ng-template>
       <ng-template carouselSlide>
-        <div class="card ml" style="width: 30rem;">
-          <div class="card-body">
-            <div class="media">
-              <img
-                src="../../../assets/img/testimonial-default-women-v1.png"
-                style="width: 20%;"
-                class="mr-1"
-                alt="..."
-              />
-              <div class="media-body">
-                <h3 class="mt-0">Deepak</h3>
-                <h5>29 yr old traveller</h5>
-                <h5>
-                  I was travelling to a <strong>remote place</strong> for scuba
-                  diving and <strong>injured myself.</strong> Tough to find
-                  doctors around, so did an
-                  <strong>online consultation</strong> on WhealthyLife and hey presto,
-                  I have my <strong>medicines.</strong> Disruptive. Convenient.
-                </h5>
-              </div>
+        <div class="card" style="border: 1px solid lightgray !important;
+        box-shadow: 3px 3px 3px lightgrey !important;margin: 20px;">
+          <div class="card-header" style="background-color: #fff;
+          border-bottom: none;padding: 5px;">
+            <div class="row">
+                <div class="col-3">
+                  <img src="../../../assets/img/testimonial-abhy-v1.png" />
+                </div>
+                <div class="col-9" style="text-align: left;">
+                  <h3 style="font-weight: 600;margin:0px ;"> Preeti </h3>
+                  <span>
+                    26 yr old Professional
+                  </span>
+                </div>
             </div>
           </div>
-        </div>
-      </ng-template>
-      <ng-template carouselSlide>
-        <div class="card ml" style="width: 30rem;">
-          <div class="card-body">
-            <div class="media">
-              <img
-                src="../../../assets/img/testimonial-abhy-v1.png"
-                style="width: 20%;"
-                class="mr-1"
-                alt="..."
-              />
-              <div class="media-body">
-                <h3 class="mt-0">Abhy</h3>
-                <h5>33 yr old IT Professional</h5>
-                <h5>
-                  I was really sick and
-                  <strong>couldn’t get out of bed.</strong> I talked to the
-                  doctor through WhealthyLife and he shared a
-                  <strong>prescription in 10 minutes.</strong> I even got the
-                  <strong>medicines delivered on the same day</strong> through
-                  WhealthyLife, just a WOW experience.
-                </h5>
-              </div>
-            </div>
+          <div class="card-body" style="padding: 7px;">
+            <p style="margin: 0px;">I was travelling to a <strong>remote place</strong> for scuba
+              diving and <strong>injured myself.</strong> Tough to find doctors around, so did an<strong>online consultation</strong> on WhealthyLife and hey presto, I have my <strong>medicines.</strong> Disruptive. Convenient.</p>
           </div>
         </div>
       </ng-template>
     </owl-carousel-o>
-    <div class="row prev-next">
-      <div class="lhs" (click)="review3.prev()">
-        <i class="fa fa-chevron-circle-left fa-3x" aria-hidden="true"></i>
-      </div>
-      <div class="rhs" (click)="review3.next()">
-        <i class="fa fa-chevron-circle-right fa-3x" aria-hidden="true"></i>
-      </div>
-    </div>
+   
       </div>
     </div>
   </div>
