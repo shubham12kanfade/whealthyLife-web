@@ -1,3 +1,4 @@
+import { HistoryComponent } from './history/history.component';
 import { ChatsComponent } from './chats/chats.component';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { PaymentsComponent } from './payments/payments.component';
@@ -23,6 +24,9 @@ const routes: Routes = [
       },
       {
         path: 'appointments', component: AppointmentsComponent
+      },
+      {
+        path: 'history', component: HistoryComponent
       },
       {
         path: 'Tests', component: TestsComponent

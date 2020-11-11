@@ -18,7 +18,7 @@ import { AngularFireMessaging } from '@angular/fire/messaging';
 })
 export class LoginComponent implements OnInit {
 
-  
+
 
   loginForm = new FormGroup({
     email: new FormControl(""),
@@ -94,16 +94,14 @@ export class LoginComponent implements OnInit {
       appId: "1:307401641913:web:e609667c20e5032566f068",
       measurementId: "G-FDH6V18HMD"
     };
+
+
+
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
     firebase.analytics();
 
-    
 
-
-
-    // firebase.initializeApp(firebaseConfig);
-    // firebase.analytics();
 
     var message = firebase.messaging();
     console.log("LoginComponent -> ngOnInit -> message", message)

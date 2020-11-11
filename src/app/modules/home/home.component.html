@@ -134,7 +134,7 @@
 
         <!-- <div class="col-md-3 col-sm-6 col-xs-12">
           <div class="division opt"  [routerLink]="['/PricesGuaranted']" routerLinkActive="router-link-active">
-            <img src="../../../assets/img/Swati/BestPrices.svg " alt="icon" 
+            <img src="../../../assets/img/Swati/BestPrices.svg " alt="icon"
             style="height: 34px;width:34px;border-radius:50%;"/>
             <h4 class="mb-0" >Best Prices Guaranteed</h4>
           </div>
@@ -151,9 +151,9 @@
             <div class="h2txt">
               <h2>Now <span style="color: cornflowerblue;"> Book an appointment </span> with
                 our doctors for free </h2>
-              
+
                 <h3 style=" width: 276px; font-family: Verdana, Geneva, Tahoma, sans-serif;">Enjoy peace of mind while giving sample with heighly skilled & friendly technicians at home or office</h3>
-                
+
                 <!-- <ul>
                   <li>Enjoy peace of mind while giving sample</li>
                   <li>with heighly skilled & friendly</li>
@@ -403,7 +403,7 @@
         <h1>Top deals and offers</h1>
         <h4>Hand-picked deals for a healthier you</h4>
       </div>
-      <div *ngIf="showmore" class="row">
+      <div *ngIf="!showmore" class="row">
         <div class="col-md-3" data-aos="fade-right" *ngFor="let item of offerData; let i = index">
           <div class="checkup-visual-containers">
             <a href="#">
@@ -418,7 +418,7 @@
           </div>
         </div>
         <div class="text-center mt-3 mb-3" data-aos="fade-down">
-          <a class="btn-main" (click)="showmoreFun1()">More Packages</a>
+          <a class="btn-main" (click)="showmoreFun()">More Packages</a>
         </div>
         <!-- <div class="col-md-3" data-aos="fade-up">
           <div class="checkup-visual-containers">
@@ -464,7 +464,7 @@
           </div>
         </div> -->
       </div>
-      <div *ngIf="!showmore" class="row">
+      <div *ngIf="showmore" class="row">
         <div class="col-md-3" data-aos="fade-right" *ngFor="let item of offerData">
           <div class="checkup-visual-containers">
             <a href="#">
@@ -479,7 +479,7 @@
           </div>
         </div>
         <div class="text-center mt-3 mb-3" data-aos="fade-down">
-          <a class="btn-main" (click)="showmoreFun1()">More Packages</a>
+          <a class="btn-main" (click)="showmoreFun()">More Packages</a>
         </div>
       </div>
     </div>
@@ -499,7 +499,7 @@
       </div>
       <div class="swiper-container">
         <div class="swiper-wrapper">
-          
+
           <owl-carousel-o [options]="customOptions1">
             <ng-template carouselSlide *ngFor="let item of Labdata; let a = index">
               <div class="swiper-slide">
@@ -750,5 +750,3 @@
   </div>
 </div>
 
-<!--
- -->

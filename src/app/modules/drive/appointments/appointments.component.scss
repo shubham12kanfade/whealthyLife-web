@@ -1,0 +1,28 @@
+table {
+  width: 100%;
+}
+
+.cdk-text-field-autofill-monitored:not(:-webkit-autofill) {
+  -webkit-animation: cdk-text-field-autofill-end 0s 1ms;
+  animation: cdk-text-field-autofill-end 0s 1ms;
+  margin-bottom: 1rem;
+}
+
+// // .doctor.ng-star-inserted {
+// //   width: 200%;
+// // }
+
+// // table.mat-table {
+// //   border-spacing: 0;
+// //   width: 132%;
+// // }
+
+// .row.bg-white {
+//   width: 200%;
+// }
+
+.h-100 {
+  height: 100% !important;
+  width: 219%;
+  padding-bottom: 17rem;
+}

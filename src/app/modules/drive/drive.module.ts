@@ -16,6 +16,7 @@ import { UploadRecordsComponent } from './upload-records/upload-records.componen
 import { ChatsComponent } from './chats/chats.component';
 import { HistoryComponent } from './history/history.component';
 
+
 @NgModule({
   declarations: [
     DriveComponent,
@@ -29,7 +30,8 @@ import { HistoryComponent } from './history/history.component';
     PaymentsComponent,
     UploadRecordsComponent,
     ChatsComponent,
-    HistoryComponent,
+    HistoryComponent
+
   ],
 
 
