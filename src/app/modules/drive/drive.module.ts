@@ -1,3 +1,4 @@
+import { HistoryComponent } from './history/history.component';
 import { DriveComponent } from './drive.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -14,7 +15,7 @@ import { PaymentsComponent } from './payments/payments.component';
 import { SharedModule } from './../../shared/shared.module';
 import { UploadRecordsComponent } from './upload-records/upload-records.component';
 import { ChatsComponent } from './chats/chats.component';
-import { HistoryComponent } from './history/history.component';
+
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { HistoryComponent } from './history/history.component';
     PaymentsComponent,
     UploadRecordsComponent,
     ChatsComponent,
-    HistoryComponent,
+    HistoryComponent
+
   ],
 
 

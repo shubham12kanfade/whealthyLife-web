@@ -100,9 +100,6 @@ export class HomeComponent implements OnInit {
 
           for(let i = 0; i < OfferData.data.length; i++){
             this.offerData[i] = OfferData.data[i]
-            // console.log(": -------------------------------------------------------");
-            // console.log("HomeComponent -> this.offerData[i] ", this.offerData[i] );
-            // console.log(": -------------------------------------------------------");
           }
 
           }).catch(error => {
@@ -121,9 +118,9 @@ export class HomeComponent implements OnInit {
     this.showmore =! this.showmore
   }
 
-  showmoreFun1(){
-    this.showmore1 =! this.showmore1
-  }
+  // showmoreFun1(){
+  //   this.showmore1 =! this.showmore1
+  // }
 
   customOptions: OwlOptions = {
     loop: true,
