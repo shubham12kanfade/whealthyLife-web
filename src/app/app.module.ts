@@ -64,7 +64,7 @@ SocialLoginModule,
     HttpClientModule,
     ToastModule,
     AngularFireMessagingModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireModule,
     AgmCoreModule.forRoot()
   ],
 
