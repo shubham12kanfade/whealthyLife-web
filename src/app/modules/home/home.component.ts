@@ -47,6 +47,7 @@ export class HomeComponent implements OnInit {
 
       SpecialityService.getSpecialization().then((resData)=>{
           this.Specialit=resData.data
+          console.log("HomeComponent -> this.Specialit", this.Specialit)
         }).catch((error)=>{
           console.log("HomeComponent -> constructor -> error", error)
         })
@@ -158,7 +159,7 @@ export class HomeComponent implements OnInit {
     mouseDrag: false,
     touchDrag: false,
     pullDrag: false,
-    dots: true,
+    dots: false,
     autoplay: true,
     // autoplaySpeed:100,
     margin: 10,
