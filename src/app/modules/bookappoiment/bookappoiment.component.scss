@@ -1,3 +1,14 @@
+ @media screen and (max-width:500){
+  .textc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+ }
+ 
+ 
+ 
  video {
     opacity: 100;
     top: 1250px;
