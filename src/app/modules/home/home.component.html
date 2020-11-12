@@ -197,11 +197,11 @@
                 <p>{{ item.subHeading }}</p>
               </div>
               <div class="p-body">
-                <div class="sec-content">
+                <div class="sec-content" style="height: 70px;">
                   <img src="../assets/img/micro.svg" alt="icon" class="icon-left" />
                   <ul class="sec-content-ul">
                     <li classs="truncate-overflow">
-                      <strong  >{{ item.discription }}</strong>
+                      <strong  class="truncate">{{ item.discription }}</strong>
                     </li>
                   </ul>
                 </div>
@@ -214,10 +214,13 @@
                   </ul>
                 </div>
               </div>
-              <div class="p-footer">
+              <div class="p-footer" style="display: flex;justify-content: space-between;height: 70px;align-items: center;">
+                <span>
                 <span class="tag">% off</span>
                 <span class="price"><i class="fa fa-inr"></i>999
-                  <small><del><i class="fa fa-inr"></i></del></small></span>
+                  <!-- <small><del><i class="fa fa-inr"></i></del></small> -->
+                </span>
+              </span>
                 <a href="#" class="btn-border">View More</a>
               </div>
             </div>
@@ -236,11 +239,11 @@
                 <p>{{ item.subHeading }}</p>
               </div>
               <div class="p-body">
-                <div class="sec-content">
+                <div class="sec-content" style="height: 70px;">
                   <img src="../assets/img/micro.svg" alt="icon" class="icon-left" />
-                  <ul class="sec-content-ul" *ngIf="item.discription && item.discription.length > 0">
-                    <li>
-                      <strong>{{ item.discription }}</strong>
+                  <ul class="sec-content-ul">
+                    <li classs="truncate-overflow">
+                      <strong  class="truncate">{{ item.discription }}</strong>
                     </li>
                   </ul>
                 </div>
@@ -253,10 +256,13 @@
                   </ul>
                 </div>
               </div>
-              <div class="p-footer">
+              <div class="p-footer" style="display: flex;justify-content: space-between;height: 70px;align-items: center;">
+                <span>
                 <span class="tag">% off</span>
                 <span class="price"><i class="fa fa-inr"></i>999
-                  <small><del><i class="fa fa-inr"></i></del></small></span>
+                  <!-- <small><del><i class="fa fa-inr"></i></del></small> -->
+                </span>
+              </span>
                 <a href="#" class="btn-border">View More</a>
               </div>
             </div>
@@ -296,6 +302,15 @@
   </section>
 
   <!-- //site breack / -->
+
+
+  
+
+
+
+
+
+
 
   <section *ngIf="Specialit">
     <div class="container">

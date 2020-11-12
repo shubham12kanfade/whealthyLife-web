@@ -25,6 +25,10 @@ const routes: Routes = [
       {
         path: 'appointments', component: AppointmentsComponent
       },
+
+      // {
+      //   path: 'history', component: DoctorhistoryComponent
+      // },
       {
         path: 'history', component: HistoryComponent
       },
