@@ -377,7 +377,7 @@
                       </div>
                     </div>
                   </li>
-  
+
                   <li class="list-group-item">
                     <p class="h6 text-bold">Ldl Cholesterol Test</p>
                     <p>Also known as</p>
@@ -476,7 +476,7 @@
       </div>
       <owl-carousel-o [options]="customOptions321" #review321>
         <ng-template carouselSlide *ngFor="let slide of curosalArray">
-          <div class="card card-style">
+          <div class="card card-style" [routerLink]="['pop-health']" routerLinkActive="active" >
             <div class="card" style="width:100%;border: 1px solid #dedcdc !important;">
               <div style="height:175px;">
                 <img class="card-img-top" src="{{slide.image}}" alt="Card image cap" style="height:175px;">
@@ -489,7 +489,7 @@
                     years</span> </p>
                 <button type="button" class="btn btns1" style="margin: 0px;">60 tests included</button>
               </div>
-          <div class="card-footer">
+            <div class="card-footer">
             <div class="row">
               <div class="col-lg-8">
                 <div ><span style="font-size: 20px;font-weight: 600;"> ₹ 749 </span> <s> ₹ 749 </s><span style="color: #00a500;"> 35% off</span></div>
