@@ -1,3 +1,6 @@
+import { PaumentCartComponent } from './../cart/paument-cart/paument-cart.component';
+import { OrderSummaryComponent } from './../cart/order-summary/order-summary.component';
+import { CartComponent } from './../cart/cart.component';
 import { PublicComponent } from './public.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -23,7 +26,6 @@ import { SharedModule } from '../../shared/shared.module';
 import { PrivcyPolicyComponent } from './privcy-policy/privcy-policy.component';
 import { ToastModule } from 'primeng/toast';
 import { BookHealthCheckupsComponent } from '../book-health-checkups/book-health-checkups.component';
-import { CartComponent } from '../cart/cart.component';
 
 
 @NgModule({
@@ -42,7 +44,9 @@ import { CartComponent } from '../cart/cart.component';
     VerifyOtpComponent,
     PrivcyPolicyComponent,
     BookHealthCheckupsComponent,
-    CartComponent
+    CartComponent,
+    OrderSummaryComponent,
+    PaumentCartComponent
   ],
   imports: [
     CommonModule,
