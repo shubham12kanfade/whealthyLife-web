@@ -11,13 +11,13 @@
   font-weight: 500;
   // border-right: 3px solid;
   padding-right: 10px;
-  font-family: Camphor, verdana !important;;
+  font-family: Camphor, verdana !important;
   cursor: pointer;
 }
 
-.imp{
-    display: flex;
-    align-items: center;
+.imp {
+  display: flex;
+  align-items: center;
 }
 
 .font-custome1 {
@@ -56,9 +56,8 @@
 }
 
 a {
-  color:rgb(29, 28, 28) !important;
+  color: rgb(29, 28, 28) !important;
   text-decoration: none;
-  
 }
 
 .fixed-popup a {
@@ -161,7 +160,7 @@ a {
     > a {
       color: #1e1e1e !important;
       font-size: 14px;
-      font-family: Camphor,verdana !important;
+      font-family: Camphor, verdana !important;
       line-height: 2;
     }
   }
@@ -184,7 +183,6 @@ a#navbarDropdown {
 .dropdown-item {
   padding: 3px 3rem 3px 1rem;
   cursor: pointer;
-
 }
 
 .dropdown-item.active,
@@ -1126,18 +1124,31 @@ b {
   border-radius: 50% !important;
 }
 .sdiv:hover {
-  color:dodgerblue;
-}
-
-
-.constC{
   color: dodgerblue;
 }
-::ng-deep .redNoMatch
-{
+
+.constC {
+  color: dodgerblue;
+}
+::ng-deep .redNoMatch {
   font-size: 30px !important;
-  color:white;
-  background: #F44336 !important;
- 
+  color: white;
+  background: #f44336 !important;
 }
 
+.styles-cart-counter {
+  display: inline-block;
+  text-align: center;
+  min-width: 80px;
+}
+
+.style-desktop-view img {
+  width: 23px;
+  height: 24px;
+  vertical-align: middle;
+}
+
+.fa-shopping-cart:before {
+  content: "\f07a";
+  font-size: 17px;
+}

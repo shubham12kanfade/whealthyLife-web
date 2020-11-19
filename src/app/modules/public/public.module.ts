@@ -23,6 +23,7 @@ import { SharedModule } from '../../shared/shared.module';
 import { PrivcyPolicyComponent } from './privcy-policy/privcy-policy.component';
 import { ToastModule } from 'primeng/toast';
 import { BookHealthCheckupsComponent } from '../book-health-checkups/book-health-checkups.component';
+import { CartComponent } from '../cart/cart.component';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import { BookHealthCheckupsComponent } from '../book-health-checkups/book-health
     DoctorRegisterComponent,
     VerifyOtpComponent,
     PrivcyPolicyComponent,
-    BookHealthCheckupsComponent
+    BookHealthCheckupsComponent,
+    CartComponent
   ],
   imports: [
     CommonModule,

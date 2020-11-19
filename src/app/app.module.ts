@@ -28,6 +28,7 @@ import { environment } from './../environments/environment';
 
 
 
+
 const config = new AuthServiceConfig([
 
   {
@@ -52,7 +53,7 @@ export function provideConfig() {
 
   ],
   imports: [
- 
+
 SocialLoginModule,
     BrowserModule,
     AppRoutingModule,

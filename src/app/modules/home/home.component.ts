@@ -249,6 +249,18 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
 
+    this.LabAll()
+
+  }
+
+
+  LabAll(){
+    this.MainService.getAllLab().then(LabRes => {
+    console.log(": -----------------------------------------");
+    console.log("HomeComponent -> LabAll -> LabRes", LabRes);
+    console.log(": -----------------------------------------");
+
+    })
   }
 
 }

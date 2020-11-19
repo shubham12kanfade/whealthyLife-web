@@ -107,9 +107,7 @@ export class DoctorProfileComponent implements OnInit {
     console.log("DoctorProfileComponent -> ngOnInit -> params", params);
 
       this.id = params["id"];
-      console.log(": --------------------------------------------------------");
-      console.log("DoctorProfileComponent -> ngOnInit ->  this.id",  this.id);
-      console.log(": --------------------------------------------------------");
+
       this.getProfileDetails();
     });
     this.getaword()
@@ -139,7 +137,7 @@ console.log("DoctorProfileComponent -> ngOnInit -> err", err)
 
     this.BookingPageService.getDoctorSlotId(this.id, { date: this.currentDate }).then((resData) => {
       this.slot = resData.data
-      console.log("DoctorProfileComponent -> ngOnInit -> this.slot", this.slot);
+
     }).catch((err) => {
       console.log("DoctorProfileComponent -> ngOnInit -> err", err)
     })
@@ -147,7 +145,7 @@ console.log("DoctorProfileComponent -> ngOnInit -> err", err)
     const data1 = moment().add(1, 'days').format('L');
     this.BookingPageService.getDoctorSlotId(this.id, { date: data1 }).then((resData) => {
       this.slot2 = resData.data
-      console.log("DoctorProfileComponent -> this.slot2", this.slot2);
+
     }).catch((err) => {
       console.log("DoctorProfileComponent -> ngOnInit -> err", err)
     })
@@ -155,7 +153,7 @@ console.log("DoctorProfileComponent -> ngOnInit -> err", err)
     const data2 = moment().add(3, 'days').format('L');
     this.BookingPageService.getDoctorSlotId(this.id, { date: data2 }).then((resData) => {
       this.slot3 = resData.data
-      console.log("this.slot3", this.slot3);
+
     }).catch((err) => {
       console.log("DoctorProfileComponent -> ngOnInit -> err", err)
     })
@@ -165,7 +163,7 @@ console.log("DoctorProfileComponent -> ngOnInit -> err", err)
     const data3 = moment().add(4, 'days').format('L');
     this.BookingPageService.getDoctorSlotId(this.id, { date: data3 }).then((resData) => {
       this.slot4 = resData.data
-      console.log("this.slot4", this.slot4);
+
     }).catch((err) => {
       console.log("DoctorProfileComponent -> ngOnInit -> err", err)
     })
@@ -174,7 +172,7 @@ console.log("DoctorProfileComponent -> ngOnInit -> err", err)
     const data4 = moment().add(5, 'days').format('L');
     this.BookingPageService.getDoctorSlotId(this.id, { date: data4 }).then((resData) => {
       this.slot5 = resData.data
-      console.log("this.slot5", this.slot5);
+
     }).catch((err) => {
       console.log("DoctorProfileComponent -> ngOnInit -> err", err)
     })
@@ -221,9 +219,6 @@ console.log("err", err)
     this.DoctorProfile.getDoctorProfile(data)
       .then((resData) => {
         this.profileData = resData.data;
-        console.log(": ---------------------------------------------------------");
-        console.log("getProfileDetails ->  this.profileData",  this.profileData);
-        console.log(": ---------------------------------------------------------");
       })
       .catch((error) => {
         console.log(

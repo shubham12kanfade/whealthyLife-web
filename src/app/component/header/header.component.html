@@ -123,15 +123,19 @@
                 </ul>
               </li>
 
-              <!-- <div class="styles__cart-counter___2nq62">
-                <div id="labs-cart" class="style__desktop-view___1tgnQ">
-                  <a href="/cart">
+              <div class="styles-cart-counter">
+                <div id="labs-cart" class="style-desktop-view" >
+                  <a [routerLink]="['cart']" [routerLinkActive]="['active']">
                     <div>
-                      <img src="/images/header/cart-icon-rebrand.svg" alt="add to cart">
+                      <p>
+                        <span matBadge="4" matBadgeOverlap="false">
+                          <i class="fal fa-shopping-cart" aria-hidden="true"></i>
+                        </span>
+                      </p>
                     </div>
                   </a>
                 </div>
-              </div> -->
+              </div>
 
             </ul>
           </div>

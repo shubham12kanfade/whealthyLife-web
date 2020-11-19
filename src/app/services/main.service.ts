@@ -86,7 +86,9 @@ export class MainService {
     // http://whealthylife.in:3311/api/v1/clinic/location/by/clinicId/:clinicId
   }
 
-  
+  getAllLab(){
+    return this.api.getData('lab/get/all');
+  }
 
 
 

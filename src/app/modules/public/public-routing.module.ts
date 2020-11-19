@@ -10,6 +10,7 @@ import { LoginComponent } from 'src/app/component/login/login.component';
 import { RegisterComponent } from 'src/app/component/register/register.component';
 import { DoctorRegisterComponent } from 'src/app/component/doctor-register/doctor-register.component';
 import { VerifyOtpComponent } from 'src/app/component/verify-otp/verify-otp.component';
+import { CartComponent } from '../cart/cart.component';
 
 const routes: Routes = [
   {
@@ -36,6 +37,7 @@ const routes: Routes = [
       { path: 'order',loadChildren: ()=> import('../../modules/order/order.module').then(or => or.OrderModule)},
       { path: 'privcyPolicy', component: PrivcyPolicyComponent
     },
+    {path : 'cart',component: CartComponent}
 
     ]
   }
