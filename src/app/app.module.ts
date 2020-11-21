@@ -52,8 +52,6 @@ export function provideConfig() {
     MyAppointmentsComponent,
     DesignComponent,
     NotificationPopupComponent,
-  
-  
     AddressPopupComponent,
 
   ],

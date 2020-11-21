@@ -474,17 +474,18 @@
           </i>
         </span>
       </div>
-      <owl-carousel-o [options]="customOptions321" #review321>
+      <owl-carousel-o [options]="customOptions321" #review321 *ngFor="let pack of Package" >
         <ng-template carouselSlide *ngFor="let slide of curosalArray">
-          <div class="card card-style" >
-            <div class="card" [routerLink]="['pop-health']" [routerLinkActive]="['active']" style="width:100%;border: 1px solid #dedcdc !important;">
+          <div class="card card-style"  >
+            <div class="card" [routerLink]="['pop-health']" [routerLinkActive]="['active']"
+            style="width:100%;border: 1px solid #dedcdc !important;"  >
               <div style="height:175px;">
-                <img class="card-img-top" src="{{slide.image}}" alt="Card image cap" style="height:175px;">
+                <img class="card-img-top" src="{{pack.icon}}" alt="Card image cap" style="height:175px;">
                 <div class="asdd"> </div>
               </div>
               <!-- <div style="position: absolute;"></div> -->
               <div class="card-body">
-                <h2 class="card-title" style="margin: 0px;font-weight: 600;">Young Indian Health Checkup</h2>
+                <h2 class="card-title" style="margin: 0px;font-weight: 600;">{{pack.title}}</h2>
                 <p class="card-text">Ideal for individuals aged <span style="font-weight:600;font-size: 14px;"> 20 - 40
                     years</span> </p>
                 <button type="button" class="btn btns1" style="margin: 0px;">60 tests included</button>
@@ -492,7 +493,7 @@
               <div class="card-footer">
                 <div class="row">
                   <div class="col-lg-8">
-                    <div ><span style="font-size: 20px;font-weight: 600;"> ₹ 749 </span> <s> ₹ 749 </s><span style="color: #00a500;"> 35% off</span></div>
+                    <div ><span style="font-size: 20px;font-weight: 600;"> {{pack.mrp}}</span> <s>{{pack.yourPrice}} </s><span style="color: #00a500;"> {{pack.offerPercent}}% off</span></div>
                     <p style="color: #4ece4e;"> + 10% Health cashback* T&C</p>
                   </div>
                   <div class="col-lg-4" style="display: flex; justify-content: center;">

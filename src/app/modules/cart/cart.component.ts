@@ -16,8 +16,13 @@ export class CartComponent implements OnInit {
   constructor(public dialog: MatDialog) { }
 
   openDialog() {
-    this.dialog.open(AddressPopupComponent);
+    const dialogRef = this.dialog.open(AddressPopupComponent);
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
   }
+
 
   ngOnInit(): void {
   }
