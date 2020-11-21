@@ -97,8 +97,10 @@ export class MainService {
   getallPackage(){
     return this.api.getData('labs/packages/all');
   }
-
-
+getAllDtailsLabs(id)
+{
+  return this.api.getData('labs/packages/by/packageId/'+id) 
+}
 
 
 }
