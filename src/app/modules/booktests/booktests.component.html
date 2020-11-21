@@ -477,7 +477,7 @@
       <owl-carousel-o [options]="customOptions321" #review321  >
         <ng-template carouselSlide *ngFor="let slide of curosalArray">
           <div class="card card-style"  >
-            <div class="card" [routerLink]="['pop-health']" [routerLinkActive]="['active']"
+            <div class="card" [routerLink]="['pop-health/'+pack._id]" [routerLinkActive]="['active']"
             style="width:100%;border: 1px solid #dedcdc !important;" *ngFor="let pack of Package; let i = index" >
               <div style="height:175px;">
                 <img class="card-img-top" src="{{pack.icon}}" alt="Card image cap" style="height:175px;">
