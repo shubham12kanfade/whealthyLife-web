@@ -1,3 +1,4 @@
+import { WalletsComponent } from './../cart/paument-cart/wallets/wallets.component';
 import { PaumentCartComponent } from './../cart/paument-cart/paument-cart.component';
 import { OrderSummaryComponent } from './../cart/order-summary/order-summary.component';
 import { CartComponent } from './../cart/cart.component';
@@ -41,7 +42,8 @@ const routes: Routes = [
     },
     {path: 'cart', component: CartComponent},
     {path: 'order-summary', component: OrderSummaryComponent},
-    {path: 'payment',component: PaumentCartComponent}
+    {path: 'payment',component: PaumentCartComponent},
+    {path: 'wallets',component: WalletsComponent}
     ]
   }
 ];

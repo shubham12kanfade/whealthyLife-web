@@ -73,6 +73,20 @@
                  *ngIf="!userInfo">LOGIN</div>
               </li>
 
+              <div class="styles-cart-counter">
+                <div id="labs-cart" class="style-desktop-view" >
+                  <a [routerLink]="['cart']" [routerLinkActive]="['active']">
+                    <div>
+                      <p>
+                        <span matBadge="4" matBadgeOverlap="false">
+                          <i class="fal fa-shopping-cart" aria-hidden="true"></i>
+                        </span>
+                      </p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
               <li class="nav-item dropdown open" *ngIf="userInfo" style="position: relative; top: -5px;">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                   aria-haspopup="true" aria-expanded="false" style="margin-top: 12px">
@@ -122,20 +136,6 @@
                   </li>
                 </ul>
               </li>
-
-              <div class="styles-cart-counter">
-                <div id="labs-cart" class="style-desktop-view" >
-                  <a [routerLink]="['cart']" [routerLinkActive]="['active']">
-                    <div>
-                      <p>
-                        <span matBadge="4" matBadgeOverlap="false">
-                          <i class="fal fa-shopping-cart" aria-hidden="true"></i>
-                        </span>
-                      </p>
-                    </div>
-                  </a>
-                </div>
-              </div>
             </ul>
           </div>
         </nav>

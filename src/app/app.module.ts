@@ -23,6 +23,7 @@ import { ToastModule } from 'primeng/toast';
 import { AngularFireMessagingModule } from '@angular/fire/messaging';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from './../environments/environment';
+import { AddressPopupComponent } from './modules/cart/address-popup/address-popup.component';
 
 
 
@@ -50,6 +51,7 @@ export function provideConfig() {
     MyAppointmentsComponent,
     DesignComponent,
     NotificationPopupComponent,
+    AddressPopupComponent,
 
   ],
   imports: [

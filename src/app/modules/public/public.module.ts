@@ -1,3 +1,4 @@
+import { WalletsComponent } from './../cart/paument-cart/wallets/wallets.component';
 import { PaumentCartComponent } from './../cart/paument-cart/paument-cart.component';
 import { OrderSummaryComponent } from './../cart/order-summary/order-summary.component';
 import { CartComponent } from './../cart/cart.component';
@@ -46,7 +47,8 @@ import { BookHealthCheckupsComponent } from '../book-health-checkups/book-health
     BookHealthCheckupsComponent,
     CartComponent,
     OrderSummaryComponent,
-    PaumentCartComponent
+    PaumentCartComponent,
+    WalletsComponent
   ],
   imports: [
     CommonModule,
