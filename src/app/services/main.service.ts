@@ -99,7 +99,11 @@ export class MainService {
   }
 getAllDtailsLabs(id)
 {
-  return this.api.getData('labs/packages/by/packageId/'+id) 
+  return this.api.getData('labs/packages/by/packageId/'+id)
+}
+
+getCustReview(id){
+  return this.api.getData('customer/review/get/by/lab/:id'+id);
 }
 
 

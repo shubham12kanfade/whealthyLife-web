@@ -59,5 +59,14 @@ export class PopHealthComponent implements OnInit {
           console.log("PopHealthComponent -> ngOnInit -> err", err);
         });
     });
+
+
+    this.MainService.getCustReview(this.labPack.labId).then(ReviewRes => {
+    console.log(": ------------------------------------------------------");
+    console.log("PopHealthComponent -> ngOnInit -> ReviewRes", ReviewRes);
+    console.log(": ------------------------------------------------------");
+
+    })
+
   }
 }
