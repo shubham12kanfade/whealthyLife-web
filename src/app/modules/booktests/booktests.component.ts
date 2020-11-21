@@ -25,19 +25,7 @@ export class BooktestsComponent implements OnInit {
   constructor(public dialog: MatDialog,public mainService :MainService) {
     this.f_list.length = 9;
 
-    this.curosalArray=[
-      {image : '../../../assets/booktests/img1.jpg' },
-      {image : '../../../assets/booktests/img2.jpg' },
-      {image : '../../../assets/booktests/img3.jpg' },
-      {image : '../../../assets/booktests/img4.jpg' }
-    ]
 
-    this.curosalArray1=[
-      {image : '../../../assets/booktests/img3.jpg' },
-      {image : '../../../assets/booktests/img4.jpg' },
-      {image : '../../../assets/booktests/img5.jpg' },
-      {image : '../../../assets/booktests/img6.jpg' }
-    ]
 
   }
 

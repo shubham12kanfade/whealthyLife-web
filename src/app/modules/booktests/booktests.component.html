@@ -462,8 +462,11 @@
       <button type="button" [ngClass]="{'btns3': !health}" class="btn btns" (click)="healthCheck()"> Men's Health
       </button>
     </div>
+
+
+
+
     <div class="col-12" *ngIf="health">
-      <!-- <div class="row"> -->
       <div class="row" style="position: absolute;z-index: 9;width: 100%;justify-content: space-between;top: 100px;">
         <span (click)="review321.prev()">
           <i class="fa fa-chevron-circle-left fa-3x" aria-hidden="true">
@@ -475,15 +478,15 @@
         </span>
       </div>
       <owl-carousel-o [options]="customOptions321" #review321  >
-        <ng-template carouselSlide *ngFor="let slide of curosalArray">
+        <ng-template carouselSlide *ngFor="let pack of Package;let i = index">
           <div class="card card-style"  >
             <div class="card" [routerLink]="['pop-health/'+pack._id]" [routerLinkActive]="['active']"
-            style="width:100%;border: 1px solid #dedcdc !important;" *ngFor="let pack of Package; let i = index" >
+            style="width:100%;border: 1px solid #dedcdc !important;"  >
               <div style="height:175px;">
                 <img class="card-img-top" src="{{pack.icon}}" alt="Card image cap" style="height:175px;">
                 <div class="asdd"> </div>
               </div>
-              <!-- <div style="position: absolute;"></div> -->
+            
               <div class="card-body">
                 <h2 class="card-title" style="margin: 0px;font-weight: 600;">{{pack.title}}</h2>
                 <p class="card-text">Ideal for individuals aged <span style="font-weight:600;font-size: 14px;"> 20 - 40
@@ -500,16 +503,7 @@
                     <button class="btn btn-primary" style="height: 40px;"> Book Now </button>
                   </div>
                 </div>
-                <!-- <div class="row">
-                  <div class="col-lg-8">
-                    <div style="font-size: 20px;font-weight: 600;"> ₹ 749 </span> <span><s> ₹ 749  </s></span> <span style="color: #00a500;"> 35% off</div>
-                      <p style="color: #00a500;"> + 10% Health cashback* T&C</p>
-
-                  </div>
-                  <div class="col-lg-4">
-                    <button class="btn btn-primary"> Book Now </button>
-                  </div>
-                </div> -->
+               
                     <div>
                     </div>
                     <div>
@@ -521,6 +515,14 @@
         </ng-template>
       </owl-carousel-o>
     </div>
+
+
+
+
+
+
+
+
     <div class="col-12" *ngIf="!health">
       <div class="row" style="position: absolute;z-index: 9;width: 100%;justify-content: space-between;top: 100px;">
         <span (click)="review321a.prev()">
@@ -533,43 +535,37 @@
         </span>
       </div>
       <owl-carousel-o [options]="customOptions321" #review321a>
-        <ng-template carouselSlide *ngFor="let slide of curosalArray1">
-          <div class="card card-style">
-            <div class="card" style="width:100%;border: 1px solid #dedcdc !important;">
+        <ng-template carouselSlide *ngFor="let pack of Package;let i = index">
+          <div class="card card-style"  >
+            <div class="card" [routerLink]="['pop-health/'+pack._id]" [routerLinkActive]="['active']"
+            style="width:100%;border: 1px solid #dedcdc !important;"  >
               <div style="height:175px;">
-                <img class="card-img-top" src="{{slide.image}}" alt="Card image cap" style="height:175px;">
+                <img class="card-img-top" src="{{pack.icon}}" alt="Card image cap" style="height:175px;">
                 <div class="asdd"> </div>
               </div>
-              <!-- <div style="position: absolute;"></div> -->
+            
               <div class="card-body">
-                <h2 class="card-title" style="margin: 0px;font-weight: 600;">Young Indian Health Checkup</h2>
+                <h2 class="card-title" style="margin: 0px;font-weight: 600;">{{pack.title}}</h2>
                 <p class="card-text">Ideal for individuals aged <span style="font-weight:600;font-size: 14px;"> 20 - 40
                     years</span> </p>
                 <button type="button" class="btn btns1" style="margin: 0px;">60 tests included</button>
               </div>
-            <div class="card-footer">
-              <div class="row">
-                <div class="col-lg-8">
-                  <div ><span style="font-size: 20px;font-weight: 600;"> ₹ 749 </span> <s> ₹ 749 </s><span style="color: #00a500;"> 35% off</span></div>
-                  <p style="color: #4ece4e;"> + 10% Health cashback* T&C</p>
+              <div class="card-footer">
+                <div class="row">
+                  <div class="col-lg-8">
+                    <div ><span style="font-size: 20px;font-weight: 600;"> {{pack.mrp}}</span> <s>{{pack.yourPrice}} </s><span style="color: #00a500;"> {{pack.offerPercent}}% off</span></div>
+                    <p style="color: #4ece4e;"> + 10% Health cashback* T&C</p>
+                  </div>
+                  <div class="col-lg-4" style="display: flex; justify-content: center;">
+                    <button class="btn btn-primary" style="height: 40px;"> Book Now </button>
+                  </div>
                 </div>
-                <div class="col-lg-4" style="display: flex; justify-content: center;">
-                  <button class="btn btn-primary" style="height: 40px;"> Book Now </button>
-                </div>
-              </div>
-            <!-- <div class="row">
-              <div class="col-lg-8">
-                <div style="font-size: 20px;font-weight: 600;"> ₹ 749 </span> <span><s> ₹ 749  </s></span> <span style="color: #00a500;"> 35% off</div>
-                  <p style="color: #00a500;"> + 10% Health cashback* T&C</p>
-              </div>
-              <div class="col-lg-4">
-                <button class="btn btn-primary"> Book Now </button>
-              </div>
-              </div> -->
-                <div>
-                </div>
-                <div>
-                </div>
+               
+                    <div>
+                    </div>
+                    <div>
+
+                    </div>
               </div>
             </div>
           </div>
@@ -578,14 +574,6 @@
     </div>
   </div>
 </section>
-
-
-
-
-
-
-
-
 <section>
   <div class="container">
 
@@ -739,14 +727,7 @@
           </div>
         </ng-template>
       </owl-carousel-o>
-      <!-- <div class="row prev-next">
-          <div class="lhs1" (click)="review2.prev()">
-            <i class="fa fa-chevron-circle-left fa-3x" aria-hidden="true"></i>
-          </div>
-          <div class="rhs" (click)="review2.next()">
-            <i class="fa fa-chevron-circle-right fa-3x" aria-hidden="true"></i>
-          </div>
-        </div> -->
+   
 
     </div>
   </div>
