@@ -1,10 +1,14 @@
 import { ForgotOtpComponent } from './../../component/forgot-otp/forgot-otp.component';
+import { WalletsComponent } from './../cart/paument-cart/wallets/wallets.component';
+import { PaumentCartComponent } from './../cart/paument-cart/paument-cart.component';
+import { OrderSummaryComponent } from './../cart/order-summary/order-summary.component';
+import { CartComponent } from './../cart/cart.component';
 import { BookingAuthGuard } from './../../guard/booking-auth.guard';
 import { PrivcyPolicyComponent } from './privcy-policy/privcy-policy.component';
 import { MyAppointmentsComponent } from './../../component/my-appointments/my-appointments.component';
 import { ForgotPasswordComponent } from './../../component/forgot-password/forgot-password.component';
 import { PublicComponent } from './public.component';
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { BookHealthCheckupsComponent } from '../book-health-checkups/book-health-checkups.component';
 import { LoginComponent } from 'src/app/component/login/login.component';
@@ -39,7 +43,10 @@ const routes: Routes = [
       { path: 'order',loadChildren: ()=> import('../../modules/order/order.module').then(or => or.OrderModule)},
       { path: 'privcyPolicy', component: PrivcyPolicyComponent
     },
-
+    {path: 'cart', component: CartComponent},
+    {path: 'order-summary', component: OrderSummaryComponent},
+    {path: 'payment',component: PaumentCartComponent},
+    {path: 'wallets',component: WalletsComponent}
     ]
   }
 ];

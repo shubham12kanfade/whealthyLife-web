@@ -1,7 +1,7 @@
-import { Router, NavigationEnd } from '@angular/router';
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { CookieService } from 'ngx-cookie-service';
-import * as firebase from "firebase";
+// import * as firebase from "firebase-admin";
 
 @Component({
   selector: 'app-root',

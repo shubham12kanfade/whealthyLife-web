@@ -24,6 +24,9 @@ import { AngularFireMessagingModule } from '@angular/fire/messaging';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from './../environments/environment';
 import { CngPasswordComponent } from './component/cng-password/cng-password.component';
+import { AddressPopupComponent } from './modules/cart/address-popup/address-popup.component';
+
+
 
 
 
@@ -51,10 +54,11 @@ export function provideConfig() {
     NotificationPopupComponent,
   
   
+    AddressPopupComponent,
 
   ],
   imports: [
- 
+
 SocialLoginModule,
     BrowserModule,
     AppRoutingModule,

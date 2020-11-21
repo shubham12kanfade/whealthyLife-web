@@ -1,5 +1,9 @@
 import { CngPasswordComponent } from './../../component/cng-password/cng-password.component';
 import { ForgotOtpComponent } from './../../component/forgot-otp/forgot-otp.component';
+import { WalletsComponent } from './../cart/paument-cart/wallets/wallets.component';
+import { PaumentCartComponent } from './../cart/paument-cart/paument-cart.component';
+import { OrderSummaryComponent } from './../cart/order-summary/order-summary.component';
+import { CartComponent } from './../cart/cart.component';
 import { PublicComponent } from './public.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -44,7 +48,11 @@ import { BookHealthCheckupsComponent } from '../book-health-checkups/book-health
     PrivcyPolicyComponent,
     BookHealthCheckupsComponent,
     ForgotOtpComponent,
-    CngPasswordComponent
+    CngPasswordComponent,
+    CartComponent,
+    OrderSummaryComponent,
+    PaumentCartComponent,
+    WalletsComponent
   ],
   imports: [
     CommonModule,
