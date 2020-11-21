@@ -1,3 +1,4 @@
+import { MedicineService } from './../../services/medicine.service';
 import { MainService } from './../../services/main.service';
 import { Component, OnInit, HostListener } from '@angular/core';
 import * as $ from 'jquery';
@@ -21,12 +22,14 @@ export class HeaderComponent implements OnInit {
   openMenu: any = false;
   userInfo: any;
   onlieProfile: any;
+  CartLength: any;
 
   constructor(public userService: UserService,
     public router: Router,
     public messageService: MessageService,
     private MainService:MainService,
     private _snackBar: MatSnackBar,
+    private MedicineService:MedicineService,
   ) {
     this.checkLogin()
 
@@ -54,8 +57,12 @@ export class HeaderComponent implements OnInit {
 
 
   checkLogin() {
-    this.userInfo = this.userService.getUserInfo();
+    this.userService.getUserLoginStatus().subscribe((resData)=>{
+      this.userInfo = this.userService.getUserInfo();
+      console.log("HeaderComponent -> checkLogin -> userInfo", this.userInfo)
 
+    })
+  
     
   }
 
@@ -69,7 +76,26 @@ this.getProfileOnline();
     if (this.userInfo.designation === 'Doctor') {
       this.showToast('success', "sdsdsjds", "dsdsdsd");
     }
+    this.getCartLength()
+this.MedicineService.checkPackage.subscribe((resData)=>{
+  this.getCartLength()
+  console.warn("sub Check")
+})
+
+
   }
+
+
+  getCartLength(){
+    this.MedicineService.getPackageInCart().then((resData)=>{
+    console.log("HeaderComponent -> getCartLength -> resData", resData)
+    this.CartLength=resData.data.length
+    }).catch((err)=>{
+    console.log("HeaderComponent -> getCartLength -> err", err)
+      
+    })
+  }
+
 
   getProfileOnline(){
 this.MainService.getProfile().then((resData)=>{

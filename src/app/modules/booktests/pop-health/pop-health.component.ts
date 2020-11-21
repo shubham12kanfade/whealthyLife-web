@@ -1,3 +1,4 @@
+import { MedicineService } from './../../../services/medicine.service';
 import { DataSecurityComponent } from './../../doctor-dashbord/settings/data-security/data-security.component';
 import { MainService } from "src/app/services/main.service";
 import { ActivatedRoute, Router } from "@angular/router";
@@ -19,7 +20,8 @@ export class PopHealthComponent implements OnInit {
   constructor(
     public dialog: MatDialog,
     private Router: ActivatedRoute,
-    private MainService: MainService
+    private MainService: MainService,
+    private MedicineService:MedicineService
   ) {}
 
   openDialog() {
@@ -69,4 +71,11 @@ export class PopHealthComponent implements OnInit {
     })
 
   }
+
+  AddTocart(val,val2){
+  console.log("PopHealthComponent -> AddTocart -> val", val)
+this.MedicineService.PostPackageInCart({"ammount": val2,"packageId ": val, "type": "Test"})
+
+
+}
 }

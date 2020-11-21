@@ -1,11 +1,12 @@
 import { ApiCallService } from './api/apicall.service';
 import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MedicineService {
-
+  checkPackage = new BehaviorSubject(null);
   constructor(private ApiCallService:ApiCallService) { }
   getHelthCondtion(){
    return this.ApiCallService.getData('product/catagories/getAll/by/HealthCare')
@@ -24,5 +25,13 @@ export class MedicineService {
   getusersays(){
     return this.ApiCallService.getData('customer/review/get/by/type/AppUsers')
   }
+  PostPackageInCart(data){
+    this.checkPackage.next(data);
 
+    return this.ApiCallService.postData('userCart',data)
+  }
+ getPackageInCart(){
+  return this.ApiCallService.getData('userCart/package/userId')
+ 
+ }
 }
