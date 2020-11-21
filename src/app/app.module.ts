@@ -21,7 +21,7 @@ import { SocialLoginModule, AuthService } from 'angularx-social-login';
 import { AuthServiceConfig, GoogleLoginProvider, FacebookLoginProvider, LinkedInLoginProvider  } from 'angularx-social-login';
 import { ToastModule } from 'primeng/toast';
 import { AngularFireMessagingModule } from '@angular/fire/messaging';
-import { AngularFireModule } from '@angular/fire';
+// import { AngularFireModule } from '@angular/fire';
 import { environment } from './../environments/environment';
 import { CngPasswordComponent } from './component/cng-password/cng-password.component';
 import { AddressPopupComponent } from './modules/cart/address-popup/address-popup.component';
@@ -68,7 +68,7 @@ SocialLoginModule,
     HttpClientModule,
     ToastModule,
     AngularFireMessagingModule,
-    AngularFireModule,
+    // AngularFireModule,
     AgmCoreModule.forRoot()
   ],
 

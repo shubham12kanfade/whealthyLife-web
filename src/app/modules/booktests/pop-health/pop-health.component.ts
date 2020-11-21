@@ -1,3 +1,4 @@
+import { DataSecurityComponent } from './../../doctor-dashbord/settings/data-security/data-security.component';
 import { MainService } from "src/app/services/main.service";
 import { ActivatedRoute, Router } from "@angular/router";
 import { Component, OnInit } from "@angular/core";
@@ -13,6 +14,7 @@ import { NABLComponent } from "./nabl/nabl.component";
 export class PopHealthComponent implements OnInit {
   id: any;
   LabId: any;
+  labPack: any=[];
 
   constructor(
     public dialog: MatDialog,
@@ -43,6 +45,13 @@ export class PopHealthComponent implements OnInit {
 
       this.MainService.getAllDtailsLabs(this.LabId)
         .then((resData) => {
+
+          for(let i = 0; i< resData.data.length; i++){
+            this.labPack[i] = resData.data[i]
+          console.log("PopHealthComponent -> ngOnInit -> this.labPack[i]", this.labPack[i]);
+          }
+
+
           console.log("PopHealthComponent -> ngOnInit -> resData", resData.data);
 
         })
