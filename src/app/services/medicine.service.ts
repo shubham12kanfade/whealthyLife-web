@@ -34,4 +34,9 @@ export class MedicineService {
   return this.ApiCallService.getData('userCart/package/userId')
  
  }
+ DelePackageInCart(id){
+  this.checkPackage.next(null);
+  return this.ApiCallService.deleteData('userCart/'+id)
+
+ }
 }
