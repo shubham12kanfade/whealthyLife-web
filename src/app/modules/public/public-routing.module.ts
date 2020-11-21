@@ -1,3 +1,4 @@
+import { ForgotOtpComponent } from './../../component/forgot-otp/forgot-otp.component';
 import { BookingAuthGuard } from './../../guard/booking-auth.guard';
 import { PrivcyPolicyComponent } from './privcy-policy/privcy-policy.component';
 import { MyAppointmentsComponent } from './../../component/my-appointments/my-appointments.component';
@@ -20,6 +21,8 @@ const routes: Routes = [
       { path: 'register', component: RegisterComponent },
       { path: 'doctor_signup', component: DoctorRegisterComponent },
       { path: 'verify_otp/:mobile', component: VerifyOtpComponent },
+      { path: 'verify_otp_reg/:data', component: ForgotOtpComponent },
+      { path: 'PassCgn/:data/:data2', component: ForgotOtpComponent },
       { path: 'doctors', loadChildren: () => import('../../modules/doctors/doctors.module').then(dd => dd.DoctorsModule) ,canActivate:[BookingAuthGuard]},
       { path: 'doctors/:id', loadChildren: () => import('../../modules/doctors/doctors.module').then(dd => dd.DoctorsModule) ,canActivate:[BookingAuthGuard]},
       { path: 'accounts', loadChildren: () => import('../../modules/user-accounts/user-accounts.module').then(us => us.UserAccountsModule) },

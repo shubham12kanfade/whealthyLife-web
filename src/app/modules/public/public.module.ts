@@ -1,3 +1,5 @@
+import { CngPasswordComponent } from './../../component/cng-password/cng-password.component';
+import { ForgotOtpComponent } from './../../component/forgot-otp/forgot-otp.component';
 import { PublicComponent } from './public.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -40,7 +42,9 @@ import { BookHealthCheckupsComponent } from '../book-health-checkups/book-health
     DoctorRegisterComponent,
     VerifyOtpComponent,
     PrivcyPolicyComponent,
-    BookHealthCheckupsComponent
+    BookHealthCheckupsComponent,
+    ForgotOtpComponent,
+    CngPasswordComponent
   ],
   imports: [
     CommonModule,

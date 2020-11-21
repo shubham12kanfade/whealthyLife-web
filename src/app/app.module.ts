@@ -23,7 +23,7 @@ import { ToastModule } from 'primeng/toast';
 import { AngularFireMessagingModule } from '@angular/fire/messaging';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from './../environments/environment';
-
+import { CngPasswordComponent } from './component/cng-password/cng-password.component';
 
 
 
@@ -49,6 +49,8 @@ export function provideConfig() {
     MyAppointmentsComponent,
     DesignComponent,
     NotificationPopupComponent,
+  
+  
 
   ],
   imports: [

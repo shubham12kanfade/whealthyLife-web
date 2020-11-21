@@ -13,4 +13,11 @@ export class RegistrationService {
   registarUser(data) {
     return this.Ap.postData('authentication/register', data);
   }
+forOtp(data){
+  return this.Ap.postData('authentication/forgot/password',data)
+}
+CheckOtp(data){
+  return this.Ap.postData('authentication/verify/otp',data)
+}
+
 }

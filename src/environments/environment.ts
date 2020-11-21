@@ -5,7 +5,8 @@ export const environment = {
   // apiUrl:"http://192.168.0.178:3311/api/v1/"
   // apiUrl:"http://localhost:3311/api/v1/",
   //apiUrl:"https://api.whealthylife.in/api/v1/",
-   apiUrl:"http://localhost:3311/api/v1/",
+  //  apiUrl:"http://localhost:3311/api/v1/",
+  apiUrl:"http://3.128.207.146:3322/api/v1/",
   // apiUrl:"http://3.128.207.146:3322/api/v1/",
 
 
@@ -18,5 +19,5 @@ export const environment = {
       messagingSenderId: "307401641913",
       appId: "1:307401641913:web:e609667c20e5032566f068",
       measurementId: "G-FDH6V18HMD"
-    }
+    },
 };
