@@ -53,7 +53,7 @@ export class ForgotOtpComponent implements OnInit {
               panelClass: ['redMatch']
             });
 
-
+this.router.navigate(['PassCgn/'+this.mobileNumber+'/'+this.otp])
           }
         }).catch(error => {
           console.log("VerifyOtpComponent -> onVerify -> error", error)

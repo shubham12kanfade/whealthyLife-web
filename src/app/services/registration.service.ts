@@ -19,5 +19,8 @@ forOtp(data){
 CheckOtp(data){
   return this.Ap.postData('authentication/verify/otp',data)
 }
+cgnPAss(data){
+  return this.Ap.postData('authentication/update/password',data)
+}
 
 }

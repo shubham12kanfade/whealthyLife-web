@@ -1,3 +1,4 @@
+import { CngPasswordComponent } from './../../component/cng-password/cng-password.component';
 import { ForgotOtpComponent } from './../../component/forgot-otp/forgot-otp.component';
 import { WalletsComponent } from './../cart/paument-cart/wallets/wallets.component';
 import { PaumentCartComponent } from './../cart/paument-cart/paument-cart.component';
@@ -26,7 +27,7 @@ const routes: Routes = [
       { path: 'doctor_signup', component: DoctorRegisterComponent },
       { path: 'verify_otp/:mobile', component: VerifyOtpComponent },
       { path: 'verify_otp_reg/:data', component: ForgotOtpComponent },
-      { path: 'PassCgn/:data/:data2', component: ForgotOtpComponent },
+      { path: 'PassCgn/:data/:data2', component: CngPasswordComponent },
       { path: 'doctors', loadChildren: () => import('../../modules/doctors/doctors.module').then(dd => dd.DoctorsModule) ,canActivate:[BookingAuthGuard]},
       { path: 'doctors/:id', loadChildren: () => import('../../modules/doctors/doctors.module').then(dd => dd.DoctorsModule) ,canActivate:[BookingAuthGuard]},
       { path: 'accounts', loadChildren: () => import('../../modules/user-accounts/user-accounts.module').then(us => us.UserAccountsModule) },
