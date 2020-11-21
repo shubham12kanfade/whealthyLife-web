@@ -1,7 +1,9 @@
+import { MainService } from './../../services/main.service';
 import { Component, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { MatDialog } from '@angular/material/dialog';
 import { SelectCityComponent} from './select-city/select-city.component'
+import { promise } from 'protractor';
 
 @Component({
   selector: 'app-booktests',
@@ -13,10 +15,14 @@ export class BooktestsComponent implements OnInit {
   curosalArray :any[];
   health : boolean =true;
   curosalArray1:any[];
+  AllLab: Promise<any>;
+  Labid: any;
+  Package: Promise<any>;
 
 
 
-  constructor(public dialog: MatDialog) {
+
+  constructor(public dialog: MatDialog,public mainService :MainService) {
     this.f_list.length = 9;
 
     this.curosalArray=[
@@ -32,6 +38,7 @@ export class BooktestsComponent implements OnInit {
       {image : '../../../assets/booktests/img5.jpg' },
       {image : '../../../assets/booktests/img6.jpg' }
     ]
+
   }
 
   healthCheck(){
@@ -198,6 +205,48 @@ export class BooktestsComponent implements OnInit {
 
 
   ngOnInit(): void {
+
+
+
+    // this.Labid = this.AllLab.__zone_symbol__value && this.AllLab.__zone_symbol__value.data && this.AllLab.__zone_symbol__value.data._id
+    // console.log(": -----------------------------------------------------------");
+    // console.log("BooktestsComponent -> constructor -> this.Labid", this.Labid);
+    // console.log(": -----------------------------------------------------------");
+
+    // this.getAllLab();
+    this.getAllPackage();
+
+
+  }
+
+  // getAllLab(){
+  //  this.mainService.getAllLab().then(resData => {
+
+  //   this.AllLab = resData.data._id
+  //   console.log(": -----------------------------------------------------------");
+  //   console.log("BooktestsComponent -> getAllLab -> this.AllLab", this.AllLab);
+  //   console.log(": -----------------------------------------------------------");
+  //  })
+
+  //   // this.Labid = this.AllLab.__zone_symbol__value && this.AllLab.__zone_symbol__value.data && this.AllLab.__zone_symbol__value.data._id
+  //   // console.log(": ---------------------------------------------------------");
+  //   // console.log("BooktestsComponent -> getAllLab -> this.Labid", this.Labid);
+  //   // console.log(": ---------------------------------------------------------");
+
+  // }
+
+  getAllPackage(){
+    this.mainService.getallPackage().then(PAckageData => {
+
+      for(let i = 0; i < PAckageData.data.length; i++){
+        this.Package = PAckageData.data
+        console.log(": -----------------------------------------------------------------");
+        console.log("BooktestsComponent -> getAllPackage -> this.Package", this.Package);
+        console.log(": -----------------------------------------------------------------");
+
+      }
+    })
+
   }
 
   modalopen() {

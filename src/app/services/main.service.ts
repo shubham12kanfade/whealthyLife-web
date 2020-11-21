@@ -90,6 +90,13 @@ export class MainService {
     return this.api.getData('lab/get/all');
   }
 
+  getPackageByLab(){
+    return this.api.getData('labs/packages/by/labId/:id');
+  }
+
+  getallPackage(){
+    return this.api.getData('labs/packages/all');
+  }
 
 
 
