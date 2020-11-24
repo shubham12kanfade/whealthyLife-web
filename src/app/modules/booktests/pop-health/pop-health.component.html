@@ -75,7 +75,6 @@
   </div>
 </div> -->
 
-
 <div class="container-fluid" style="padding: 0px; min-height: 660px;">
   <div class="container style-view">
     <div class="row style-package-detail-wrapper" *ngFor="let item of labPack; let i = index">
@@ -248,8 +247,8 @@
                     </div>
                   </li>
 
-                  <li class="coll-style style-accordion undefined style-coll-style dropdown">
-                    <div class="collapsible-header style-accordion undefined style-collapsible-header style-pointer ">
+                  <li class="coll-style style-accordion undefined style-coll-style dropdown" >
+                    <div class="collapsible-header style-accordion undefined style-collapsible-header style-pointer " data-toggle="dropdown">
                       <span class="undefined undefined">
                         Complete Blood Count
                       </span>
@@ -261,7 +260,7 @@
                       </span>
                     </div>
                     <div class="collapsible-body style-collapsible-body" style="max-height:0px">
-                      <div class="sub-coll-body style-accordion undefined style-sub-coll-body dropdown-content">
+                      <div class="sub-coll-body style-accordion undefined style-sub-coll-body dropdown-menu">
                         <div>
                           <p>Differential leucocyte Count (includes 6 tests)</p>
                           <p>Absolute Monocyte Counts</p>
@@ -466,15 +465,15 @@
               <div class="style-accred-div">
                 <div class="style-desktop-view-5">
                   <div class="row style-logos">
-                    <div class="col-lg-2 col-xs-3 style-logo-dimension">
-                      <!-- <img role="presentation" class="style-logo-params" src=""> -->
-                      <p class="style-accreditation-aboutLab" (click)="openDialog()">
+                    <div class="col-lg-2 col-xs-3 style-logo-dimension" (click)="openDialog()">
+                      <img role="presentation" class="style-logo-params" src="https://s3.ap-south-1.amazonaws.com/stag-1mg-auto-resize-image/pharmacy-production-rxs/2b6e1cd8-afac-4fe8-a88a-1ac5e3621633.png" style="width: 50px; height: 50px;">
+                      <p class="style-accreditation-aboutLab" >
                         ISO
                       </p>
                     </div>
-                    <div class="col-lg-2 col-xs-3 style-logo-dimension">
-                      <!-- <img role="presentation" class="style__logo-params___1x1Mf" src=""> -->
-                      <p class="style-accreditation-aboutLab" (click)="openDialog2()">
+                    <div class="col-lg-2 col-xs-3 style-logo-dimension" (click)="openDialog2()">
+                      <img role="presentation" class="style__logo-params___1x1Mf" src="https://s3.ap-south-1.amazonaws.com/stag-1mg-auto-resize-image/pharmacy-production-rxs/f2cf720d-6833-4133-af52-47619e3315a7.png" style="width: 50px; height: 50px;">
+                      <p class="style-accreditation-aboutLab" >
                         NABL
                       </p>
                     </div>
@@ -594,3 +593,5 @@
       <div class="style__cap-wrap___38IWm"></div>
     </div>
   </div>
+
+

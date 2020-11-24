@@ -17,6 +17,8 @@ export class PopHealthComponent implements OnInit {
   LabId: any;
   labPack: any=[];
 
+
+
   constructor(
     public dialog: MatDialog,
     private Router: ActivatedRoute,
@@ -73,9 +75,10 @@ export class PopHealthComponent implements OnInit {
   }
 
   AddTocart(val,val2){
-  console.log("PopHealthComponent -> AddTocart -> val", val)
-this.MedicineService.PostPackageInCart({"ammount": val2,"packageId ": val, "type": "Test"})
+    console.log("PopHealthComponent -> AddTocart -> val", val)
+    this.MedicineService.PostPackageInCart({"ammount": val2,"packageId ": val, "type": "Test"})
+  }
 
 
-}
+
 }

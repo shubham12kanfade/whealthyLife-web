@@ -242,13 +242,14 @@
   background-color: #f8f8f8;
   margin-top: 36px;
   padding: 20px;
+  margin-left: 10px;
 }
 
 .style-wrapper-order-1 {
   font-size: 14px;
   border: 1px solid #d4d6d7;
   background-color: #fff;
-  padding: 5px 15px 15px;
+  padding: 6px 21px 17px;
   font-family: Clear Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
@@ -315,6 +316,7 @@
 }
 .style-pt-10 {
   padding-top: 10px;
+  width: 133%;
 }
 .style-background-green {
   background-color: #e4f8e9;
@@ -358,4 +360,10 @@
 
 .sum-a {
   color: #ff6f61 !important;
+}
+
+.style-desktop-view-summary .style-d-mt-0,
+.style-mt-0 {
+  margin-top: 0;
+  margin-left: 10px;
 }

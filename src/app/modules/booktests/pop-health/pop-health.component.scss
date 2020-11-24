@@ -139,6 +139,7 @@
 }
 .style-opaque {
   padding-right: 8px;
+  text-decoration: line-through;
 }
 
 .style-mrp,
@@ -575,6 +576,8 @@ hr {
 
 .style-desktop-view-5 .style-logo-params {
   width: 60px;
+  // border: 1px solid;
+  // border-radius: 50px;
 }
 
 .style-accreditation-aboutLab {
@@ -1054,3 +1057,17 @@ a.button-text.style-lab-link {
   vertical-align: middle;
   color: red;
 }
+
+// .example-headers-align .mat-expansion-panel-header-title,
+// .example-headers-align .mat-expansion-panel-header-description {
+//   flex-basis: 0;
+// }
+
+// .example-headers-align .mat-expansion-panel-header-description {
+//   justify-content: space-between;
+//   align-items: center;
+// }
+
+// .example-headers-align .mat-form-field + .mat-form-field {
+//   margin-left: 8px;
+// }
