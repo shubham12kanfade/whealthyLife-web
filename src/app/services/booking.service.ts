@@ -12,4 +12,8 @@ addBooking(data){
   return this.ApiCallService.postData('appoinment/add', data)
 }
 
+getAllTestApi(){
+  return this.ApiCallService.getData('tests/all')
+}
+
 }
