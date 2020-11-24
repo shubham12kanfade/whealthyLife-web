@@ -20,7 +20,7 @@ import { MyAppointmentsComponent } from './component/my-appointments/my-appointm
 import { SocialLoginModule, AuthService } from 'angularx-social-login';
 import { AuthServiceConfig, GoogleLoginProvider, FacebookLoginProvider, LinkedInLoginProvider  } from 'angularx-social-login';
 import { ToastModule } from 'primeng/toast';
-import { AngularFireMessagingModule } from '@angular/fire/messaging';
+// import { AngularFireMessagingModule } from '@angular/fire/messaging';
 // import { AngularFireModule } from '@angular/fire';
 import { environment } from './../environments/environment';
 import { CngPasswordComponent } from './component/cng-password/cng-password.component';
@@ -67,7 +67,7 @@ SocialLoginModule,
     AutocompleteLibModule,
     HttpClientModule,
     ToastModule,
-    AngularFireMessagingModule,
+    // AngularFireMessagingModule,
     // AngularFireModule,
     AgmCoreModule.forRoot()
   ],
