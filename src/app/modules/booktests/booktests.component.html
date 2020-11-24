@@ -1,7 +1,7 @@
 <section style="margin-top: 100px;">
   <div class="container">
     <div class="col-sm-12">
-    
+
       <div class="row">
         <div class="col-lg-6 col-md-8 col-sm-12" style="margin-bottom:10px ;">
           <div class="input-group">
@@ -27,7 +27,7 @@
             </div>
           </div>
         </div>
-       
+
       </div>
 
       <div class="row" style="margin-top: 30px;">
@@ -63,14 +63,14 @@
             </span>
           </div>
           <owl-carousel-o [options]="customOptions" #review12>
-            <ng-template carouselSlide>
+            <ng-template carouselSlide *ngFor="let prof of Profile; let k = index">
               <div class="card card-style cad1">
                 <div class="card-body">
-                  <h3 class="card-title truncate fw-600">Thyroid Profile (T3, T4, TSH)</h3>
+                  <h3 class="card-title truncate fw-600">{{prof.title}}</h3>
                   <div style="height: 50%;">
-                    <p class="card-text"> Known as Thyroid Profile Total Blood </p>
+                    <p class="card-text"> {{prof.description}} </p>
                   </div>
-                  <h2 class="fw-600" style="margin: 0px;"> ₹ 500 </h2>
+                  <h2 class="fw-600" style="margin: 0px;"> ₹ {{prof.yourPrice}} </h2>
                 </div>
                 <div class="card-footer fw-600"
                   style="color:#14bef0;font-weight: 600;text-align: center;background: white;">
@@ -79,7 +79,7 @@
               </div>
             </ng-template>
 
-            <ng-template carouselSlide>
+            <!-- <ng-template carouselSlide>
               <div class="card card-style cad1">
                 <div class="card-body">
                   <h3 class="card-title truncate fw-600">Complete Blood Count</h3>
@@ -159,9 +159,9 @@
                   ADD
                 </div>
               </div>
-            </ng-template>
+            </ng-template> -->
           </owl-carousel-o>
-         
+
         </div>
       </div>
       <div class="row" style="margin-top: 30px;">
@@ -178,13 +178,13 @@
             </span>
           </div>
           <owl-carousel-o [options]="customOptions2" #review25>
-            <ng-template carouselSlide *ngFor="let item of GetAll"> 
+            <ng-template carouselSlide *ngFor="let item of GetAll">
               <img [src]="item?.icon"  alt="image" onError="this.src='../../../assets/img/Swati/BookHeathCheckup/Cancer.png'" class="banner1" />
               <h4 class="m-2 text-bold">{{item?.title}}</h4>
             </ng-template>
-           
+
           </owl-carousel-o>
-         
+
         </div>
       </div>
     </div>
@@ -227,7 +227,7 @@
                 <img class="card-img-top" src="{{pack.icon}}" alt="Card image cap" style="height:175px;">
                 <div class="asdd"> </div>
               </div>
-            
+
               <div class="card-body">
                 <h2 class="card-title" style="margin: 0px;font-weight: 600;">{{pack.title}}</h2>
                 <p class="card-text">Ideal for individuals aged <span style="font-weight:600;font-size: 14px;"> 20 - 40
@@ -244,7 +244,7 @@
                     <button class="btn btn-primary" style="height: 40px;"> Book Now </button>
                   </div>
                 </div>
-               
+
                     <div>
                     </div>
                     <div>
@@ -284,7 +284,7 @@
                 <img class="card-img-top" src="{{pack.icon}}" alt="Card image cap" style="height:175px;">
                 <div class="asdd"> </div>
               </div>
-            
+
               <div class="card-body">
                 <h2 class="card-title" style="margin: 0px;font-weight: 600;">{{pack.title}}</h2>
                 <p class="card-text">Ideal for individuals aged <span style="font-weight:600;font-size: 14px;"> 20 - 40
@@ -301,7 +301,7 @@
                     <button class="btn btn-primary" style="height: 40px;"> Book Now </button>
                   </div>
                 </div>
-               
+
                     <div>
                     </div>
                     <div>
@@ -468,7 +468,7 @@
           </div>
         </ng-template>
       </owl-carousel-o>
-   
+
 
     </div>
   </div>
@@ -637,7 +637,7 @@
             </div>
           </ng-template>
         </owl-carousel-o>
-      
+
       </div>
     </div>
   </div>

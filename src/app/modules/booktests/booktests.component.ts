@@ -19,9 +19,10 @@ export class BooktestsComponent implements OnInit {
   curosalArray1: any[];
   AllLab: Promise<any>;
   Labid: any;
-  Package: Promise<any>;
+  Package: any=[];
   locatdata: { lat: number; lng: number };
   GetAll: any;
+  Profile: any=[];
 
   constructor(
     public dialog: MatDialog,
@@ -179,21 +180,12 @@ this.getAllTest();
   };
   ngOnInit(): void {
     this.getAllPackage();
+    this.getProfileAll();
   }
   getAllPackage() {
     this.mainService.getallPackage().then((PAckageData) => {
       for (let i = 0; i < PAckageData.data.length; i++) {
-        this.Package = PAckageData.data;
-        console.log(
-          ": -----------------------------------------------------------------"
-        );
-        console.log(
-          "BooktestsComponent -> getAllPackage -> this.Package",
-          this.Package
-        );
-        console.log(
-          ": -----------------------------------------------------------------"
-        );
+        this.Package[i] = PAckageData.data[i];
       }
     });
   }
@@ -206,12 +198,26 @@ this.getAllTest();
   }
 getAllTest(){
   this.BookingService.getAllTestApi().then((resData)=>{
-  console.log("🚀 ~ file: booktests.component.ts ~ line 208 ~ BooktestsComponent ~ this.BookingService.getAllTestApi ~ resData", resData)
     this.GetAll=resData.data
   }).catch((err)=>{
   console.log("🚀 ~ file: booktests.component.ts ~ line 213 ~ BooktestsComponent ~ this.BookingService.getAllTestApi ~ err", err)
-    
+
   })
+}
+
+getProfileAll()
+{
+  this.mainService.getAllProfile().then(ProfRes =>{
+
+    for(let i = 0; i < ProfRes.data.length; i++){
+      this.Profile[i] = ProfRes.data[i]
+    }
+
+  }).catch(err => {
+    console.log("🚀 ~ file: booktests.component.ts ~ line 232 ~ BooktestsComponent ~ this.mainService.getAllProfile ~ err", err);
+  })
+
+
 }
 
 
