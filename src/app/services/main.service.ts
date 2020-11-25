@@ -110,5 +110,9 @@ getAllProfile(){
   return this.api.getData('profile/all');
 }
 
+getProfileById(id){
+  return this.api.getData('profile/by/profileId/:id'+id)
+}
+
 
 }

@@ -6,6 +6,7 @@ import { OwlOptions } from "ngx-owl-carousel-o";
 import { MatDialog } from "@angular/material/dialog";
 import { SelectCityComponent } from "./select-city/select-city.component";
 import { promise } from "protractor";
+import { CustomerReviewService } from 'src/app/services/customer-review.service';
 
 @Component({
   selector: "app-booktests",
@@ -23,11 +24,13 @@ export class BooktestsComponent implements OnInit {
   locatdata: { lat: number; lng: number };
   GetAll: any;
   Profile: any=[];
+  Labdata: any=[];
 
   constructor(
     public dialog: MatDialog,
     public mainService: MainService,
-  private BookingService:BookingService
+  private BookingService:BookingService,
+  public CRService: CustomerReviewService
   ) {
     this.f_list.length = 9;
 
@@ -65,6 +68,36 @@ this.getAllTest();
     },
     nav: false,
   };
+
+
+  customOptions1: OwlOptions = {
+    loop: true,
+    mouseDrag: false,
+    touchDrag: false,
+    pullDrag: false,
+    dots: false,
+    autoplay: true,
+    // autoplaySpeed:100,
+    margin: 10,
+    navSpeed: 100,
+    navText: ['', ''],
+    responsive: {
+      0: {
+        items: 1
+      },
+      400: {
+        items: 3
+      },
+      740: {
+        items: 4
+      },
+      940: {
+        items: 6
+      }
+    },
+    nav: true
+  };
+
   customOptions2: OwlOptions = {
     loop: true,
     mouseDrag: true,
@@ -181,6 +214,21 @@ this.getAllTest();
   ngOnInit(): void {
     this.getAllPackage();
     this.getProfileAll();
+
+
+    this.CRService.getFeaturedLab().then(LabData => {
+
+      for(let i = 0; i < LabData.data.length; i++){
+        this.Labdata[i] = LabData.data[i]
+
+      }
+
+      }).catch(error => {
+      console.log("HomeComponent -> error", error);
+
+      })
+
+
   }
   getAllPackage() {
     this.mainService.getallPackage().then((PAckageData) => {
@@ -209,16 +257,29 @@ getProfileAll()
 {
   this.mainService.getAllProfile().then(ProfRes =>{
 
-    for(let i = 0; i < ProfRes.data.length; i++){
-      this.Profile[i] = ProfRes.data[i]
-    }
+      for(let i = 0; i < ProfRes.data.length; i++){
+        this.Profile[i] = ProfRes.data[i]
+        console.log("🚀 ~ file: booktests.component.ts ~ line 219 ~ BooktestsComponent ~ this.mainService.getAllProfile ~ this.Profile[i]", this.Profile[i]);
 
-  }).catch(err => {
-    console.log("🚀 ~ file: booktests.component.ts ~ line 232 ~ BooktestsComponent ~ this.mainService.getAllProfile ~ err", err);
-  })
+        this.mainService.getProfileById(this.Profile[i]._id).then(resProfile => {
+          console.log("🚀 ~ file: booktests.component.ts ~ line 222 ~ BooktestsComponent ~ this.mainService.getProfileById ~ resProfile", resProfile)
+          }).catch(err => {
+          console.log("🚀 ~ file: booktests.component.ts ~ line 229 ~ BooktestsComponent ~ this.mainService.getProfileById ~ err", err);
+          })
+
+
+      }
+
+    }).catch(err => {
+      console.log("🚀 ~ file: booktests.component.ts ~ line 232 ~ BooktestsComponent ~ this.mainService.getAllProfile ~ err", err);
+    })
+
+
+
+  }
+
+
 
 
 }
 
-
-}
