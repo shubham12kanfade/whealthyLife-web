@@ -139,6 +139,7 @@
 }
 .style-opaque {
   padding-right: 8px;
+  text-decoration: line-through;
 }
 
 .style-mrp,
@@ -575,6 +576,8 @@ hr {
 
 .style-desktop-view-5 .style-logo-params {
   width: 60px;
+  // border: 1px solid;
+  // border-radius: 50px;
 }
 
 .style-accreditation-aboutLab {

@@ -106,5 +106,13 @@ getCustReview(id){
   return this.api.getData('customer/review/get/by/lab/:id'+id);
 }
 
+getAllProfile(){
+  return this.api.getData('profile/all');
+}
+
+getProfileById(id){
+  return this.api.getData('profile/by/profileId/:id'+id)
+}
+
 
 }
