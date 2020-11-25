@@ -16,7 +16,7 @@ export class PopHealthComponent implements OnInit {
   id: any;
   LabId: any;
   labPack: any=[];
-
+  panelOpenState = false;
   constructor(
     public dialog: MatDialog,
     private Router: ActivatedRoute,

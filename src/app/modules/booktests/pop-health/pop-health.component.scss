@@ -1054,3 +1054,6 @@ a.button-text.style-lab-link {
   vertical-align: middle;
   color: red;
 }
+.mat-expansion-panel:not([class*='mat-elevation-z']) {
+  box-shadow: none;
+}
