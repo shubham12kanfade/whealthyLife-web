@@ -83,7 +83,7 @@
           <div class="col-lg-12 col-sm-12 style-card-wrapper">
             <div class="row style-margin-top style-margin-bottom">
               <div class="col-lg-7 col-sm-7">
-                <h1 class="style-test-package-name">{{item.title}}</h1>
+                <h1 class="style-test-package-name">{{item.packageProfiles.title}}</h1>
                 <div class="row style-include-tests">
                   <div class="col-lg-12 col-sm-12">
                     <div class="style-abbreviation">
@@ -102,58 +102,57 @@
                             <span>
                               ₹
                               <span>
-                                {{item.yourPrice}}
+                                {{item.packageProfiles.yourPrice}}
                               </span>
                             </span>
                           </span>
                           <span class="style-mrp">
                             ₹
                             <span>
-                              {{item.mrp}}
+                              {{item.packageProfiles.mrp}}
                             </span>
                           </span>
                         </div>
-                        </div>
                       </div>
                     </div>
-                    <div>
-                      <div class="text-right style-price-section">
-                        <div>
-                          <div class="style-pointer" data-tip="true" data-for="2763" currentitem="false">
-                            <span class="style-discount-percent">
-                              <span>
-                                {{item.offerPercent}}% Off
-                              </span>
-                              + 50% Coupon
-                              <span class="fa-stack style-info-icon">
-                                <i class="fa fa-circle-thin fa-stack-2x"></i>
-                                <i class="fa fa-info fa-stack-1x"></i>
-                              </span>
+                  </div>
+                  <div>
+                    <div class="text-right style-price-section">
+                      <div>
+                        <div class="style-pointer" data-tip="true" data-for="2763" currentitem="false">
+                          <span class="style-discount-percent">
+                            <span>
+                              {{item.packageProfiles.offerPercent}}% Off
                             </span>
-                          </div>
-                          <div class="react-component-tooltip place-right type-light style-tooltip" data-id="tooltip"
-                            style="left: 733px; top: 181px;">
-                            <div class="style-container">
-                              <div class="style-description">
-                                <div>
-                                  Coupon code
-                                  <b>
-                                    <font color="#1aab2a">
-                                      COMP
-                                    </font>
-                                  </b>
-                                  applied. You have received an additional discount of 50%.
-                                </div>
+                            + 50% Coupon
+                            <span class="fa-stack style-info-icon">
+                              <i class="fa fa-circle-thin fa-stack-2x"></i>
+                              <i class="fa fa-info fa-stack-1x"></i>
+                            </span>
+                          </span>
+                        </div>
+                        <div class="react-component-tooltip place-right type-light style-tooltip" data-id="tooltip"
+                          style="left: 733px; top: 181px;">
+                          <div class="style-container">
+                            <div class="style-description">
+                              <div>
+                                Coupon code
+                                <b>
+                                  <font color="#1aab2a">
+                                    COMP
+                                  </font>
+                                </b>
+                                applied. You have received an additional discount of 50%.
                               </div>
-                              <div class="row">
-                                <div class="col-xs-6 style-total-savings">
-                                  Total Savings
-                                </div>
-                                <div class="col-xs-6 style-price">
-                                  <span>
-                                    ₹9761
-                                  </span>
-                                </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-xs-6 style-total-savings">
+                                Total Savings
+                              </div>
+                              <div class="col-xs-6 style-price">
+                                <span>
+                                  ₹9761
+                                </span>
                               </div>
                             </div>
                           </div>
@@ -161,6 +160,7 @@
                       </div>
                     </div>
                   </div>
+                </div>
               </div>
             </div>
 
@@ -188,7 +188,8 @@
               <div class="col-lg-12 col-sm-12 text-right-add style-add-to-card">
                 <span>
                   <span>
-                    <span (click)="AddTocart(LabId,item.mrp)" class="style-text-button style-desktop-view">
+                    <span (click)="AddTocart(LabId,item.packageProfiles.mrp)"
+                      class="style-text-button style-desktop-view">
                       ADD TO CART
                     </span>
                   </span>
@@ -202,15 +203,15 @@
         <div>
           <div class="style-desktop-view-2">
             <h2 class="style-header">
-              Overview of {{item.title}}
+              Overview of {{item.packageProfiles.title}}
             </h2>
             <div class="row style-overview-block-wrapper" id="Overview">
               <div class="col-xs-12 style-packages-desc-wrapper">
                 <h3 class="style-sub-header">
-                  How {{item.title}} helps you?
+                  How {{item.packageProfiles.title}} helps you?
                 </h3>
                 <div class="style-text">
-                  {{item.description}}
+                  {{item.packageProfiles.description}}
                 </div>
               </div>
               <div class="col-xs-12 style-precautions-wrapper">
@@ -218,7 +219,7 @@
                   Precautions
                 </h3>
                 <p class="style-precautions">
-                  {{item.precaution}}
+                  {{item.packageProfiles.precaution}}
                 </p>
               </div>
             </div>
@@ -228,7 +229,7 @@
         <div>
           <div class="row style-included-tests-wrapper">
             <h2 class="style-header">
-              Package Tests Included in {{item.title}}
+              Package Tests Included in {{item.packageProfiles.title}}
               <span class="style-included-tests">
                 (92 tests)
               </span>
@@ -247,8 +248,9 @@
                     </div>
                   </li>
 
-                  <li class="coll-style style-accordion undefined style-coll-style dropdown" >
-                    <div class="collapsible-header style-accordion undefined style-collapsible-header style-pointer " data-toggle="dropdown">
+                  <li class="coll-style style-accordion undefined style-coll-style dropdown">
+                    <div class="collapsible-header style-accordion undefined style-collapsible-header style-pointer "
+                      data-toggle="dropdown">
                       <span class="undefined undefined">
                         Complete Blood Count
                       </span>
@@ -466,14 +468,18 @@
                 <div class="style-desktop-view-5">
                   <div class="row style-logos">
                     <div class="col-lg-2 col-xs-3 style-logo-dimension" (click)="openDialog()">
-                      <img role="presentation" class="style-logo-params" src="https://s3.ap-south-1.amazonaws.com/stag-1mg-auto-resize-image/pharmacy-production-rxs/2b6e1cd8-afac-4fe8-a88a-1ac5e3621633.png" style="width: 50px; height: 50px;">
-                      <p class="style-accreditation-aboutLab" >
+                      <img role="presentation" class="style-logo-params"
+                        src="https://s3.ap-south-1.amazonaws.com/stag-1mg-auto-resize-image/pharmacy-production-rxs/2b6e1cd8-afac-4fe8-a88a-1ac5e3621633.png"
+                        style="width: 50px; height: 50px;">
+                      <p class="style-accreditation-aboutLab">
                         ISO
                       </p>
                     </div>
                     <div class="col-lg-2 col-xs-3 style-logo-dimension" (click)="openDialog2()">
-                      <img role="presentation" class="style__logo-params___1x1Mf" src="https://s3.ap-south-1.amazonaws.com/stag-1mg-auto-resize-image/pharmacy-production-rxs/f2cf720d-6833-4133-af52-47619e3315a7.png" style="width: 50px; height: 50px;">
-                      <p class="style-accreditation-aboutLab" >
+                      <img role="presentation" class="style__logo-params___1x1Mf"
+                        src="https://s3.ap-south-1.amazonaws.com/stag-1mg-auto-resize-image/pharmacy-production-rxs/f2cf720d-6833-4133-af52-47619e3315a7.png"
+                        style="width: 50px; height: 50px;">
+                      <p class="style-accreditation-aboutLab">
                         NABL
                       </p>
                     </div>
@@ -521,7 +527,8 @@
                           Nilesh Wanjari
                         </div>
                         <div class="Reviews-reviewer-remark">
-                          Collection person was exellent in his work,painless collection,well groomed,i'm satisfied by your service.
+                          Collection person was exellent in his work,painless collection,well groomed,i'm satisfied by
+                          your service.
                         </div>
                       </div>
                     </div>
@@ -583,15 +590,13 @@
     </div>
     <div class="style-input-box">
       <form>
-        <input type="tel" id="phoneNumber" class="style-input-phone" placeholder="Enter Phone Number"
-          maxlength="10" autocomplete="off" value="" pattern="[6-9]\d{9}" title="Please enter valid 10 digits" required="">
-          <button type="submit" class="style-next-button">
-            Send Link
-          </button>
-        </form>
-      </div>
-      <div class="style__cap-wrap___38IWm"></div>
+        <input type="tel" id="phoneNumber" class="style-input-phone" placeholder="Enter Phone Number" maxlength="10"
+          autocomplete="off" value="" pattern="[6-9]\d{9}" title="Please enter valid 10 digits" required="">
+        <button type="submit" class="style-next-button">
+          Send Link
+        </button>
+      </form>
     </div>
+    <div class="style__cap-wrap___38IWm"></div>
   </div>
-
-
+</div>

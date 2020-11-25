@@ -26,13 +26,12 @@ export class MedicineService {
     return this.ApiCallService.getData('customer/review/get/by/type/AppUsers')
   }
   PostPackageInCart(data){
-    this.checkPackage.next(data);
+    this.checkPackage.next(null);
 
     return this.ApiCallService.postData('userCart',data)
   }
  getPackageInCart(){
   return this.ApiCallService.getData('userCart/package/userId')
- 
  }
  DelePackageInCart(id){
   this.checkPackage.next(null);

@@ -75,8 +75,9 @@ export class PopHealthComponent implements OnInit {
   }
 
   AddTocart(val,val2){
-    console.log("PopHealthComponent -> AddTocart -> val", val)
-    this.MedicineService.PostPackageInCart({"ammount": val2,"packageId ": val, "type": "Test"})
+  console.log("🚀 ~ file: pop-health.component.ts ~ line 78 ~ PopHealthComponent ~ AddTocart ~ val,val2", val,val2);
+
+    this.MedicineService.PostPackageInCart({labId: val, "ammount": val2 , "type": "Test"})
   }
 
 
