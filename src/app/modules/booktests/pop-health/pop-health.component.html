@@ -1,12 +1,89 @@
+<!-- <div class="style-city-searchbar-wrapper">
+  <div class="col-xs-12 col-lg-3 col-sm-3 style-location-container">
+    <div id="labs-location" class="style-wrapper style-desktop-view-search">
+      <div>
+        <div>
+          <div id="cities-popup">
+            <div class="text-left-search style-cities-content">
+              <div class="style-input-field">
+                <span class="style-location-icon">
+                  <i class="fa fa-map-marker" aria-hidden="true"></i>
+                </span>
+                <input type="text" id="autocomplete" autocomplete="off" class="style-autocomplete-bar"
+                placeholder="Enter your City" value="New Delhi">
+                <span class="style-icon-detect">
+                  <img id="img-locator" src="/src/assets/img/Swati/iconfinder_location-on_430104.svg" alt="locator icon" style="display: inline-block;">
+                  <img id="loader-city-detect" class="style-loader-city-detect style-hide"
+                  src="" alt="locator icon" style="display: none;">
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-xs-12 col-lg-8 col-sm-9 style-search-bar style-bottom-middle">
+    <div class="style-wrapper style-desktop-view-search">
+      <div>
+        <div class="style-labs-select">
+          <div class="style-wrapper-s">
+            <div>
+              <div class="style-select style-desktop-view-s1">
+                <div class="style-filter">
+                  <div>
+                    <span class="style-display-text">
+                      All Labs
+                    </span>
+                  </div>
+                </div>
+                <div class="style-action">
+                  <div class="svg-image undefined" style="position: relative; float: right;">
+                    <svg width="10px" height="5px" viewBox="0 0 10 5">
+                      <defs></defs>
+                      <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.54">
+                        <g id="Use-Case-11-drop-down-for-varients" transform="translate(-775.000000, -454.000000)" fill="#000000">
+                          <g id="medicine-buying-card" transform="translate(685.000000, 314.000000)">
+                            <g id="Group-9">
+                              <g id="Material/Icons-black/arrow-drop-down" transform="translate(83.000000, 130.000000)">
+                                <polygon id="Shape" points="7 10 12 15 17 10"></polygon>
+                              </g>
+                            </g>
+                          </g>
+                        </g>
+                      </g>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="style-test-search style-desktopStyle">
+          <div class="style-wrapper-s1" id="test-search-bar">
+            <div>
+              <div class="style-desktop-view-s2">
+                <span class="style-input-s1 style-fs-12">
+                  <input type="text" placeholder="Search for Tests (CBC, MRI, etc.)" id="search-tests-input" autocomplete="off">
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
 <div class="container-fluid" style="padding: 0px; min-height: 660px;">
   <div class="container style-view">
-    <div class="row style-package-detail-wrapper" >
+    <div class="row style-package-detail-wrapper">
       <div class="col-lg-7 col-sm-12 style-desktop-view">
         <div class="row style-package-card-wrapper">
           <div class="col-lg-12 col-sm-12 style-card-wrapper">
             <div class="row style-margin-top style-margin-bottom">
               <div class="col-lg-7 col-sm-7">
-                <h1 class="style-test-package-name">{{labPack[0].title}}</h1>
+                <h1 class="style-test-package-name">{{labPack[0].packageProfiles.title}}</h1>
                 <div class="row style-include-tests">
                   <div class="col-lg-12 col-sm-12">
                     <div class="style-abbreviation">
@@ -25,58 +102,57 @@
                             <span>
                               ₹
                               <span>
-                                {{labPack[0].yourPrice}}
+                                {{labPack[0].packageProfiles.yourPrice}}
                               </span>
                             </span>
                           </span>
                           <span class="style-mrp">
                             ₹
                             <span>
-                              {{labPack[0].mrp}}
+                              {{labPack[0].packageProfiles.mrp}}
                             </span>
                           </span>
                         </div>
-                        </div>
                       </div>
                     </div>
-                    <div>
-                      <div class="text-right style-price-section">
-                        <div>
-                          <div class="style-pointer" data-tip="true" data-for="2763" currentitem="false">
-                            <span class="style-discount-percent">
-                              <span>
-                                {{labPack[0].offerPercent}}% Off
-                              </span>
-                              + 50% Coupon
-                              <span class="fa-stack style-info-icon">
-                                <i class="fa fa-circle-thin fa-stack-2x"></i>
-                                <i class="fa fa-info fa-stack-1x"></i>
-                              </span>
+                  </div>
+                  <div>
+                    <div class="text-right style-price-section">
+                      <div>
+                        <div class="style-pointer" data-tip="true" data-for="2763" currentitem="false">
+                          <span class="style-discount-percent">
+                            <span>
+                              {{labPack[0].packageProfiles.offerPercent}}% Off
                             </span>
-                          </div>
-                          <div class="react-component-tooltip place-right type-light style-tooltip" data-id="tooltip"
-                            style="left: 733px; top: 181px;">
-                            <div class="style-container">
-                              <div class="style-description">
-                                <div>
-                                  Coupon code
-                                  <b>
-                                    <font color="#1aab2a">
-                                      COMP
-                                    </font>
-                                  </b>
-                                  applied. You have received an additional discount of 50%.
-                                </div>
+                            + 50% Coupon
+                            <span class="fa-stack style-info-icon">
+                              <i class="fa fa-circle-thin fa-stack-2x"></i>
+                              <i class="fa fa-info fa-stack-1x"></i>
+                            </span>
+                          </span>
+                        </div>
+                        <div class="react-component-tooltip place-right type-light style-tooltip" data-id="tooltip"
+                          style="left: 733px; top: 181px;">
+                          <div class="style-container">
+                            <div class="style-description">
+                              <div>
+                                Coupon code
+                                <b>
+                                  <font color="#1aab2a">
+                                    COMP
+                                  </font>
+                                </b>
+                                applied. You have received an additional discount of 50%.
                               </div>
-                              <div class="row">
-                                <div class="col-xs-6 style-total-savings">
-                                  Total Savings
-                                </div>
-                                <div class="col-xs-6 style-price">
-                                  <span>
-                                    ₹9761
-                                  </span>
-                                </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-xs-6 style-total-savings">
+                                Total Savings
+                              </div>
+                              <div class="col-xs-6 style-price">
+                                <span>
+                                  ₹9761
+                                </span>
                               </div>
                             </div>
                           </div>
@@ -84,6 +160,7 @@
                       </div>
                     </div>
                   </div>
+                </div>
               </div>
             </div>
 
@@ -111,7 +188,8 @@
               <div class="col-lg-12 col-sm-12 text-right-add style-add-to-card">
                 <span>
                   <span>
-                    <span (click)="AddTocart(LabId,labPack[0].mrp)" class="style-text-button style-desktop-view">
+                    <span (click)="AddTocart(LabId,labPack[0].packageProfiles.mrp)"
+                      class="style-text-button style-desktop-view">
                       ADD TO CART
                     </span>
                   </span>
@@ -125,15 +203,15 @@
         <div>
           <div class="style-desktop-view-2">
             <h2 class="style-header">
-              Overview of {{labPack[0].title}}
+              Overview of {{labPack[0].packageProfiles.title}}
             </h2>
             <div class="row style-overview-block-wrapper" id="Overview">
               <div class="col-xs-12 style-packages-desc-wrapper">
                 <h3 class="style-sub-header">
-                  How {{labPack[0].title}} helps you?
+                  How {{labPack[0].packageProfiles.title}} helps you?
                 </h3>
                 <div class="style-text">
-                  {{labPack[0].description}}
+                  {{labPack[0].packageProfiles.description}}
                 </div>
               </div>
               <div class="col-xs-12 style-precautions-wrapper">
@@ -141,7 +219,7 @@
                   Precautions
                 </h3>
                 <p class="style-precautions">
-                  {{labPack[0].precaution}}
+                  {{labPack[0].packageProfiles.precaution}}
                 </p>
               </div>
             </div>
@@ -151,48 +229,210 @@
         <div>
           <div class="row style-included-tests-wrapper">
             <h2 class="style-header">
-              Package Tests Included in {{labPack[0].title}}
+              Package Tests Included in {{labPack[0].packageProfiles.title}}
               <span class="style-included-tests">
                 (92 tests)
               </span>
             </h2>
             <div class="col-xs-13 col-sm-12 style-accordion-wrapper">
-               <mat-accordion>
-              <mat-expansion-panel hideToggle disabled>
-                <mat-expansion-panel-header class="text-dark">
-                  <mat-panel-title>
-                    This is the expansion title
-                  </mat-panel-title>
-                 
-                </mat-expansion-panel-header>
-                
-              </mat-expansion-panel>
-              <mat-expansion-panel (opened)="panelOpenState = true"
-                                   (closed)="panelOpenState = false">
-                <mat-expansion-panel-header>
-                  <mat-panel-title>
-                    Self aware panel
-                  </mat-panel-title>
-                  <mat-panel-description>
-                    {{panelOpenState ? 'open' : 'closed'}}
-                  </mat-panel-description>
-                </mat-expansion-panel-header>
-                <p>I'm visible because I am open</p>
-              </mat-expansion-panel>
-              <mat-expansion-panel (opened)="panelOpenState = true"
-                                   (closed)="panelOpenState = false">
-                <mat-expansion-panel-header>
-                  <mat-panel-title>
-                    Self aware panel
-                  </mat-panel-title>
-                  <mat-panel-description>
-                   {{panelOpenState ? 'open' : 'closed'}}
-                  </mat-panel-description>
-                </mat-expansion-panel-header>
-                <p>I'm visible because I am open</p>
-              </mat-expansion-panel>
-              
-            </mat-accordion>
+              <div class="style-accordion undefined style-desktop-view-3">
+                <ul class="style-accordion undefined undefined style-collapsible" data-collapsible="expandable">
+                  <li class="coll-style style-accordion undefined style-coll-style">
+                    <div class="collapsible-header style-accordion undefined style-collapsible-header">
+                      <span class="undefined undefined">
+                        Amylase
+                      </span>
+                    </div>
+                    <div class="collapsible-body style-collapsible-body" style="max-height:0px">
+                      <div class="sub-coll-body style-accordion undefined style-sub-coll-body"></div>
+                    </div>
+                  </li>
+
+                  <li class="coll-style style-accordion undefined style-coll-style dropdown">
+                    <div class="collapsible-header style-accordion undefined style-collapsible-header style-pointer "
+                      data-toggle="dropdown">
+                      <span class="undefined undefined">
+                        Complete Blood Count
+                      </span>
+                      <span class="style-sub-title">
+                        (includes 24 tests)
+                      </span>
+                      <span>
+                        <i class="fa fa-angle-down undefined style-right style-m-pt-4" aria-hidden="true"></i>
+                      </span>
+                    </div>
+                    <div class="collapsible-body style-collapsible-body" style="max-height:0px">
+                      <div class="sub-coll-body style-accordion undefined style-sub-coll-body dropdown-menu">
+                        <div>
+                          <p>Differential leucocyte Count (includes 6 tests)</p>
+                          <p>Absolute Monocyte Counts</p>
+                          <p>RDW SD</p>
+                          <p>Red Blood Cell Count</p>
+                          <p>Platelet Count</p>
+                          <p>Packed Cell Volume</p>
+                          <p>Hemoglobin</p>
+                          <p>Total Leucocyte Count</p>
+                          <p>Red Cell Distribution Width</p>
+                          <p>Mean Corpuscular Volume</p>
+                          <p>Mean Corpuscular Hemoglobin</p>
+                          <p>Mean Corpuscular Hemoglobin Concentration</p>
+                          <p>Mean Platelet Volume</p>
+                          <p>Absolute Leucocyte Count (includes 6 tests)</p>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li class="coll-style style-accordion undefined style-coll-style dropdown">
+                    <div class="collapsible-header style-accordion undefined style-collapsible-header style-pointer ">
+                      <span class="undefined undefined">
+                        Kidney Function Test
+                      </span>
+                      <span class="style-sub-title">
+                        (includes 3 tests)
+                      </span>
+                      <span>
+                        <i class="fa fa-angle-down undefined style-right style-m-pt-4" aria-hidden="true"></i>
+                      </span>
+                    </div>
+                    <div class="collapsible-body style-collapsible-body" style="max-height:0px">
+                      <div class="sub-coll-body style-accordion undefined style-sub-coll-body dropdown-content">
+                        <div>
+                          <p>Urea</p>
+                          <p>Creatinine</p>
+                          <p>Uric Acid</p>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li class="coll-style style-accordion undefined style-coll-style dropdown">
+                    <div class="collapsible-header style-accordion undefined style-collapsible-header style-pointer ">
+                      <span class="undefined undefined">
+                        Liver Function Test
+                      </span>
+                      <span class="style-sub-title">
+                        (includes 10 tests)
+                      </span>
+                      <span>
+                        <i class="fa fa-angle-down undefined style-right style-m-pt-4" aria-hidden="true"></i>
+                      </span>
+                    </div>
+                    <div class="collapsible-body style-collapsible-body" style="max-height:0px">
+                      <div class="sub-coll-body style-accordion undefined style-sub-coll-body dropdown-content">
+                        <div>
+                          <p>Alanine Transaminase</p>
+                          <p>Aspartate Aminotransferase</p>
+                          <p>Protein Total, Serum (includes 4 tests)</p>
+                          <p>Alkaline Phosphatase</p>
+                          <p>Bilirubin (Total, Direct and Indirect) (includes 3 tests)</p>
+                          <p>Packed Cell Volume</p>
+                          <p>Hemoglobin</p>
+                          <p>Total Leucocyte Count</p>
+                          <p>Red Cell Distribution Width</p>
+                          <p>Mean Corpuscular Volume</p>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li class="coll-style style-accordion undefined style-coll-style">
+                    <div class="collapsible-header style-accordion undefined style-collapsible-header">
+                      <span class="undefined undefined">
+                        HDL / LDL Cholesterol Ratio
+                      </span>
+                    </div>
+                    <div class="collapsible-body style-collapsible-body" style="max-height:0px">
+                      <div class="sub-coll-body style-accordion undefined style-sub-coll-body"></div>
+                    </div>
+                  </li>
+
+                  <li class="coll-style style-accordion undefined style-coll-style">
+                    <div class="collapsible-header style-accordion undefined style-collapsible-header">
+                      <span class="undefined undefined">
+                        Glycosylated Hemoglobin
+                      </span>
+                    </div>
+                    <div class="collapsible-body style-collapsible-body" style="max-height:0px">
+                      <div class="sub-coll-body style-accordion undefined style-sub-coll-body"></div>
+                    </div>
+                  </li>
+
+                  <li class="coll-style style-accordion undefined style-coll-style">
+                    <div class="collapsible-header style-accordion undefined style-collapsible-header">
+                      <span class="undefined undefined">
+                        Nitrites
+                      </span>
+                    </div>
+                    <div class="collapsible-body style-collapsible-body" style="max-height:0px">
+                      <div class="sub-coll-body style-accordion undefined style-sub-coll-body"></div>
+                    </div>
+                  </li>
+
+                  <li class="coll-style style-accordion undefined style-coll-style">
+                    <div class="collapsible-header style-accordion undefined style-collapsible-header">
+                      <span class="undefined undefined">
+                        Microalbumin Random
+                      </span>
+                    </div>
+                    <div class="collapsible-body style-collapsible-body" style="max-height:0px">
+                      <div class="sub-coll-body style-accordion undefined style-sub-coll-body"></div>
+                    </div>
+                  </li>
+
+                  <li class="coll-style style-accordion undefined style-coll-style">
+                    <div class="collapsible-header style-accordion undefined style-collapsible-header">
+                      <span class="undefined undefined">
+                        Vitamin B12
+                      </span>
+                    </div>
+                    <div class="collapsible-body style-collapsible-body" style="max-height:0px">
+                      <div class="sub-coll-body style-accordion undefined style-sub-coll-body"></div>
+                    </div>
+                  </li>
+
+                  <li class="coll-style style-accordion undefined style-coll-style">
+                    <div class="collapsible-header style-accordion undefined style-collapsible-header">
+                      <span class="undefined undefined">
+                        Peripheral Smear Examination
+                      </span>
+                    </div>
+                    <div class="collapsible-body style-collapsible-body" style="max-height:0px">
+                      <div class="sub-coll-body style-accordion undefined style-sub-coll-body"></div>
+                    </div>
+                  </li>
+
+                  <li class="coll-style style-accordion undefined style-coll-style dropdown">
+                    <div class="collapsible-header style-accordion undefined style-collapsible-header style-pointer ">
+                      <span class="undefined undefined">
+                        Urine Routine & Microscopy
+                      </span>
+                      <span class="style-sub-title">
+                        (includes 9 tests)
+                      </span>
+                      <span>
+                        <i class="fa fa-angle-down undefined style-right style-m-pt-4" aria-hidden="true"></i>
+                      </span>
+                    </div>
+                    <div class="collapsible-body style-collapsible-body" style="max-height:0px">
+                      <div class="sub-coll-body style-accordion undefined style-sub-coll-body dropdown-content">
+                        <div>
+                          <p>RBCs Urine</p>
+                          <p>Colour</p>
+                          <p>Epithelial Cell</p>
+                          <p>Urobilinogen</p>
+                          <p>Leucocytes</p>
+                          <p>Ketone</p>
+                          <p>Protein Urine</p>
+                          <p>Pus Cell</p>
+                          <p>Crystals</p>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -228,14 +468,18 @@
                 <div class="style-desktop-view-5">
                   <div class="row style-logos">
                     <div class="col-lg-2 col-xs-3 style-logo-dimension" (click)="openDialog()">
-                      <img role="presentation" class="style-logo-params" src="https://s3.ap-south-1.amazonaws.com/stag-1mg-auto-resize-image/pharmacy-production-rxs/2b6e1cd8-afac-4fe8-a88a-1ac5e3621633.png" style="width: 50px; height: 50px;">
-                      <p class="style-accreditation-aboutLab" >
+                      <img role="presentation" class="style-logo-params"
+                        src="https://s3.ap-south-1.amazonaws.com/stag-1mg-auto-resize-image/pharmacy-production-rxs/2b6e1cd8-afac-4fe8-a88a-1ac5e3621633.png"
+                        style="width: 50px; height: 50px;">
+                      <p class="style-accreditation-aboutLab">
                         ISO
                       </p>
                     </div>
                     <div class="col-lg-2 col-xs-3 style-logo-dimension" (click)="openDialog2()">
-                      <img role="presentation" class="style__logo-params___1x1Mf" src="https://s3.ap-south-1.amazonaws.com/stag-1mg-auto-resize-image/pharmacy-production-rxs/f2cf720d-6833-4133-af52-47619e3315a7.png" style="width: 50px; height: 50px;">
-                      <p class="style-accreditation-aboutLab" >
+                      <img role="presentation" class="style__logo-params___1x1Mf"
+                        src="https://s3.ap-south-1.amazonaws.com/stag-1mg-auto-resize-image/pharmacy-production-rxs/f2cf720d-6833-4133-af52-47619e3315a7.png"
+                        style="width: 50px; height: 50px;">
+                      <p class="style-accreditation-aboutLab">
                         NABL
                       </p>
                     </div>
@@ -245,7 +489,7 @@
               <div class="style-lab-description">
                 <div class="style-lab-detail-pad">
                   <div class="style-lab-detail">
-                    {{labPack[0].description}}
+                    {{labPack[0].packageProfiles.description}}
                   </div>
                 </div>
               </div>
@@ -283,7 +527,8 @@
                           Nilesh Wanjari
                         </div>
                         <div class="Reviews-reviewer-remark">
-                          Collection person was exellent in his work,painless collection,well groomed,i'm satisfied by your service.
+                          Collection person was exellent in his work,painless collection,well groomed,i'm satisfied by
+                          your service.
                         </div>
                       </div>
                     </div>
@@ -345,15 +590,13 @@
     </div>
     <div class="style-input-box">
       <form>
-        <input type="tel" id="phoneNumber" class="style-input-phone" placeholder="Enter Phone Number"
-          maxlength="10" autocomplete="off" value="" pattern="[6-9]\d{9}" title="Please enter valid 10 digits" required="">
-          <button type="submit" class="style-next-button">
-            Send Link
-          </button>
-        </form>
-      </div>
-      <div class="style__cap-wrap___38IWm"></div>
+        <input type="tel" id="phoneNumber" class="style-input-phone" placeholder="Enter Phone Number" maxlength="10"
+          autocomplete="off" value="" pattern="[6-9]\d{9}" title="Please enter valid 10 digits" required="">
+        <button type="submit" class="style-next-button">
+          Send Link
+        </button>
+      </form>
     </div>
+    <div class="style__cap-wrap___38IWm"></div>
   </div>
-
-
+</div>
