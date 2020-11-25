@@ -197,7 +197,8 @@
           </div>
           <owl-carousel-o [options]="customOptions2" #review25>
             <ng-template carouselSlide *ngFor="let item of GetAll">
-              <img [src]="item?.icon" alt="image"
+              <img [src]="item.icon" alt="image" [routerLink]="['pop-health/getAll',item._id]"
+              routerLinkActive="router-link-active"
                 onError="this.src='../../../assets/img/Swati/BookHeathCheckup/Cancer.png'" class="banner1" />
               <h4 class="m-2 text-bold">{{ item?.title }}</h4>
             </ng-template>
@@ -239,7 +240,8 @@
       <owl-carousel-o [options]="customOptions321" #review321>
         <ng-template carouselSlide *ngFor="let pack of Package; let i = index">
           <div class="card card-style">
-            <div class="card" [routerLink]="['pop-health/' + pack._id]" [routerLinkActive]="['active']"
+            <div class="card" [routerLink]="['pop-health/' + pack._id]" [routerLink]="['pop-health/package',pack._id]"
+            routerLinkActive="router-link-active"
               style="width: 100%; border: 1px solid #dedcdc !important">
               <div style="height: 175px">
                 <img class="card-img-top" src="{{ pack.icon }}" alt="Card image cap" style="height: 175px" />
