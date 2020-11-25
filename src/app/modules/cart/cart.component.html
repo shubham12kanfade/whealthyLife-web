@@ -5,7 +5,7 @@
         <div>
           <div class="container style-wrapper style-desktop-view">
             <div>
-              <div class="row style-mt-0">
+              <div class="row style-mt-0" *ngFor="let item of CartData; let i = index">
                 <div class="col-lg-8 col-xs-12">
                   <div class="row style-d-mt-0 style-center-align">
                     <div class="col-xs-6">
@@ -35,7 +35,7 @@
                               <div class="col-lg-9 col-xs-8">
                                 <h3 class="style-fs-16 style-m-fs-14">
                                   <b>
-                                    1mglabs
+                                    {{item?.labId?.name}}
                                   </b>
                                 </h3>
                               </div>
@@ -44,11 +44,11 @@
                           <div class="style-body">
                             <div class="row style-mt-0 style-d-flex">
                               <div class="col-xs-12 col-lg-8">
-                                <div *ngFor="let item of CartData">
+                                <div>
                                   <div class="row style-test-summary">
                                     <div class="col-lg-9 col-xs-8 style-pl-0 style-test-name style-m-pl-15">
                                       <b>
-                                        Comprehensive Full Body Checkup
+                                        {{item?.packageId?.title}}
                                       </b>
                                       <div class="style-tat-cart">
                                         E-Reports with in 72 hours post sample collection
@@ -56,16 +56,16 @@
                                     </div>
                                     <div class="col-lg-3 col-xs-4 text-right-order">
                                       <div class="style-font-bold style-test-price">
-                                        ₹ 2399
+                                        ₹{{item?.packageId?.mrp}}
                                       </div>
                                       <div class="style-test-mrp style-fs-12 style-m-fs-11 style-text-gray">
-                                        ₹ 10960
+                                        ₹ {{item?.packageId?.yourPrice}}
                                       </div>
                                     </div>
                                     <div
                                       class="col-xs-12 style-pl-0 style-show-remove style-mt-0 style-fs-12 style-m-fs-11 style-m-pl-15">
                                       <span class="style-pointer">
-                                        <span (click)="removeAt(item._id)">
+                                        <span (click)="removeAt(item?._id)">
                                           <span class="style-text-gray">
                                             <i class="fa fa-trash-o"></i>
                                             Remove
@@ -112,7 +112,7 @@
                             <b>
                               COMP:
                             </b>
-                            Flat 50% off
+                            Flat {{item?.packageId?.offerPercent}}% off
                           </div>
                           <div class="col-xs-12 style-fs-12">
                             <div class="style-mt-15 style-pt-15 style-border-top-summary">

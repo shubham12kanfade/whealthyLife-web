@@ -47,14 +47,17 @@ export class PopHealthComponent implements OnInit {
 
       this.MainService.getAllDtailsLabs(this.LabId)
         .then((resData) => {
-
-          for(let i = 0; i< resData.data.length; i++){
-            this.labPack[i] = resData.data[i]
-          console.log("PopHealthComponent -> ngOnInit -> this.labPack[i]", this.labPack[i]);
-          }
-
-
           console.log("PopHealthComponent -> ngOnInit -> resData", resData.data);
+
+          this.labPack = resData.data
+          console.log("PopHealthComponent -> ngOnInit -> this.labPack", this.labPack);
+
+          // for(let i = 0; i< resData.data.length; i++){
+
+          // }
+
+
+
 
         })
         .catch((err) => {
@@ -70,11 +73,19 @@ export class PopHealthComponent implements OnInit {
 
     })
 
+    this.MainService.getallPackage().then(packRes => {
+    console.log("🚀 ~ file: pop-health.component.ts ~ line 74 ~ PopHealthComponent ~ this.MainService.getallPackage ~ packRes", packRes);
+
+    }).catch(err => {
+    console.log("🚀 ~ file: pop-health.component.ts ~ line 79 ~ PopHealthComponent ~ this.MainService.getallPackage ~ err", err)
+    })
+
+
   }
 
-  AddTocart(val,val2){
-    console.log("PopHealthComponent -> AddTocart -> val", val)
-    this.MedicineService.PostPackageInCart({"ammount": val2,"packageId ": val, "type": "Test"})
+  AddTocart(val,val2,val3){
+    console.log("PopHealthComponent -> AddTocart -> val,val2,val3", val,val2,val3)
+    this.MedicineService.PostPackageInCart({packageId: val, ammount: val2, "type": "Test", labId: val3})
   }
 
 
