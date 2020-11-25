@@ -77,13 +77,13 @@
 
 <div class="container-fluid" style="padding: 0px; min-height: 660px;">
   <div class="container style-view">
-    <div class="row style-package-detail-wrapper" *ngFor="let item of labPack; let i = index">
+    <div class="row style-package-detail-wrapper">
       <div class="col-lg-7 col-sm-12 style-desktop-view">
         <div class="row style-package-card-wrapper">
           <div class="col-lg-12 col-sm-12 style-card-wrapper">
             <div class="row style-margin-top style-margin-bottom">
               <div class="col-lg-7 col-sm-7">
-                <h1 class="style-test-package-name">{{item.packageProfiles.title}}</h1>
+                <h1 class="style-test-package-name">{{labPack[0].packageProfiles.title}}</h1>
                 <div class="row style-include-tests">
                   <div class="col-lg-12 col-sm-12">
                     <div class="style-abbreviation">
@@ -102,14 +102,14 @@
                             <span>
                               ₹
                               <span>
-                                {{item.packageProfiles.yourPrice}}
+                                {{labPack[0].packageProfiles.yourPrice}}
                               </span>
                             </span>
                           </span>
                           <span class="style-mrp">
                             ₹
                             <span>
-                              {{item.packageProfiles.mrp}}
+                              {{labPack[0].packageProfiles.mrp}}
                             </span>
                           </span>
                         </div>
@@ -122,7 +122,7 @@
                         <div class="style-pointer" data-tip="true" data-for="2763" currentitem="false">
                           <span class="style-discount-percent">
                             <span>
-                              {{item.packageProfiles.offerPercent}}% Off
+                              {{labPack[0].packageProfiles.offerPercent}}% Off
                             </span>
                             + 50% Coupon
                             <span class="fa-stack style-info-icon">
@@ -188,7 +188,7 @@
               <div class="col-lg-12 col-sm-12 text-right-add style-add-to-card">
                 <span>
                   <span>
-                    <span (click)="AddTocart(LabId,item.packageProfiles.mrp)"
+                    <span (click)="AddTocart(LabId,labPack[0].packageProfiles.mrp)"
                       class="style-text-button style-desktop-view">
                       ADD TO CART
                     </span>
@@ -203,15 +203,15 @@
         <div>
           <div class="style-desktop-view-2">
             <h2 class="style-header">
-              Overview of {{item.packageProfiles.title}}
+              Overview of {{labPack[0].packageProfiles.title}}
             </h2>
             <div class="row style-overview-block-wrapper" id="Overview">
               <div class="col-xs-12 style-packages-desc-wrapper">
                 <h3 class="style-sub-header">
-                  How {{item.packageProfiles.title}} helps you?
+                  How {{labPack[0].packageProfiles.title}} helps you?
                 </h3>
                 <div class="style-text">
-                  {{item.packageProfiles.description}}
+                  {{labPack[0].packageProfiles.description}}
                 </div>
               </div>
               <div class="col-xs-12 style-precautions-wrapper">
@@ -219,7 +219,7 @@
                   Precautions
                 </h3>
                 <p class="style-precautions">
-                  {{item.packageProfiles.precaution}}
+                  {{labPack[0].packageProfiles.precaution}}
                 </p>
               </div>
             </div>
@@ -229,7 +229,7 @@
         <div>
           <div class="row style-included-tests-wrapper">
             <h2 class="style-header">
-              Package Tests Included in {{item.packageProfiles.title}}
+              Package Tests Included in {{labPack[0].packageProfiles.title}}
               <span class="style-included-tests">
                 (92 tests)
               </span>
@@ -489,7 +489,7 @@
               <div class="style-lab-description">
                 <div class="style-lab-detail-pad">
                   <div class="style-lab-detail">
-                    {{item.description}}
+                    {{labPack[0].packageProfiles.description}}
                   </div>
                 </div>
               </div>
