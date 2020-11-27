@@ -247,6 +247,8 @@ this.getAllTest();
 getAllTest(){
   this.BookingService.getAllTestApi().then((resData)=>{
     this.GetAll=resData.data
+    console.log("🚀 ~ file: booktests.component.ts ~ line 254 ~ BooktestsComponent ~ this.BookingService.getAllTestApi ~  this.GetAll",  this.GetAll)
+
   }).catch((err)=>{
   console.log("🚀 ~ file: booktests.component.ts ~ line 213 ~ BooktestsComponent ~ this.BookingService.getAllTestApi ~ err", err)
 

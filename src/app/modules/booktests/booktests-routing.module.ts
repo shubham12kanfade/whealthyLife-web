@@ -9,7 +9,7 @@ const routes: Routes = [
 
   {path :'',component:BooktestsComponent},
   {path :'select-city',component:SelectCityComponent},
-  {path : 'pop-health/:id',component: PopHealthComponent},
+  {path : 'pop-health/:type/:id',component: PopHealthComponent},
 
 ];
 
