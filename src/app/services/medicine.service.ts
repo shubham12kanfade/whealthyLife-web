@@ -32,7 +32,7 @@ export class MedicineService {
   }
  getPackageInCart(){
   return this.ApiCallService.getData('userCart/package/userId')
- 
+
  }
  DelePackageInCart(id){
   this.checkPackage.next(null);
