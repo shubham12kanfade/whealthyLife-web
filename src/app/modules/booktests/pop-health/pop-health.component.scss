@@ -1060,3 +1060,6 @@ a.button-text.style-lab-link {
 .mat-expansion-panel:not([class*='mat-elevation-z']) {
   box-shadow: none;
 }
+.mat-expansion-panel-header[aria-disabled=true] .mat-expansion-panel-header-title, .mat-expansion-panel-header[aria-disabled=true] .mat-expansion-panel-header-description {
+  color: black;
+}

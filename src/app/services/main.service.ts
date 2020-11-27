@@ -111,7 +111,7 @@ getAllProfile(){
 }
 
 getProfileById(id){
-  return this.api.getData('profile/by/profileId/:id'+id)
+  return this.api.getData('profile/by/profileId/'+id)
 }
 
 
