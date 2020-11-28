@@ -114,5 +114,9 @@ getProfileById(id){
   return this.api.getData('profile/by/profileId/'+id)
 }
 
+getTestById(id){
+  return this.api.getData('tests/by/labTest/'+id)
+}
+
 
 }

@@ -66,8 +66,31 @@ if(this.packType=="package")
 else if(this.packType=="profile"){
   this.getProfileApi();
 }
+else if(this.packType=="test"){
+  this.getTESTApi();
+
+}
     
     this.getRew();
+  }
+
+  getTESTApi(){
+    this.MainService.getTestById(this.LabId).then((resData)=>{
+    console.log("🚀 ~ file: pop-health.component.ts ~ line 79 ~ PopHealthComponent ~ this.MainService.getTestById ~ resData", resData)
+    this.labPack = resData.data;
+    this.title=this.labPack[0].title
+    this.length=this.labPack?.packageProfiles?.length
+    this.price=this.labPack[0].yourPrice
+    this.mrp=this.labPack[0].mrp
+    this.offerPercent=this.labPack[0].offerPercent
+    this.lName=this.labPack?.package?.labId?.name
+    this.discription=this.labPack?.package?.description
+    this.precaution=this.labPack?.package?.precaution
+    this.PProfile=this.labPack.packageProfiles
+    }).catch((err)=>{
+    console.log("🚀 ~ file: pop-health.component.ts ~ line 99 ~ PopHealthComponent ~ this.MainService.getTestById ~ err", err)
+      
+    })
   }
   getProfileApi(){
     this.TestDetails=[]
