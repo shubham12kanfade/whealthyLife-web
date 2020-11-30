@@ -12,8 +12,10 @@ addBooking(data){
   return this.ApiCallService.postData('appoinment/add', data)
 }
 
-getAllTestApi(){
-  return this.ApiCallService.getData('tests/all')
+getAllTestApi(city){
+  return this.ApiCallService.getData('tests/labTest/by/'+city)
 }
-
+getAllLabsCity(){
+  return this.ApiCallService.getData('lab/get/cities')
+}
 }

@@ -115,7 +115,7 @@
             </span>
           </div>
           <owl-carousel-o [options]="customOptions2" #review25>
-            <ng-template carouselSlide *ngFor="let item of GetAll">
+            <ng-template carouselSlide *ngFor="let item of GetAll; let i = index">
               <img [src]="item.icon" alt="image" [routerLink]="['pop-health/test',item._id]"
                 routerLinkActive="router-link-active"
                 onError="this.src='../../../assets/img/Swati/BookHeathCheckup/Cancer.png'" class="banner1" />

@@ -1,3 +1,4 @@
+import { CurrentLocIpService } from './../../services/current-loc-ip.service';
 import { BookingService } from './../../services/booking.service';
 import { LocationService } from "./../../services/location.service";
 import { MainService } from "./../../services/main.service";
@@ -25,16 +26,32 @@ export class BooktestsComponent implements OnInit {
   GetAll: any;
   Profile: any=[];
   Labdata: any=[];
+  city: any;
+  TestAll: any=[];
 
   constructor(
     public dialog: MatDialog,
     public mainService: MainService,
   private BookingService:BookingService,
-  public CRService: CustomerReviewService
+  public CRService: CustomerReviewService,
+  public CurrentLocIpService:CurrentLocIpService
   ) {
+
+
+    this.getAllTest('Mumbai');
+
+    this.CurrentLocIpService.getData().then((resData)=>{
+    this.city=resData.city
+    console.log("🚀 ~ file: booktests.component.ts ~ line 45 ~ BooktestsComponent ~ this.CurrentLocIpService.getData ~ this.city", this.city)
+
+    }).catch((err)=>{
+    console.log("🚀 ~ file: booktests.component.ts ~ line 62 ~ BooktestsComponent ~ this.CurrentLocIpService.getData ~ err", err)
+
+    })
+
     this.f_list.length = 9;
 
-this.getAllTest();
+
 
   }
   healthCheck() {
@@ -216,7 +233,7 @@ this.getAllTest();
 
     this.getAllPackage();
     this.getProfileAll();
-    this.getAllTest();
+
 
 
     this.CRService.getFeaturedLab().then(LabData => {
@@ -239,6 +256,8 @@ this.getAllTest();
         this.Package[i] = PAckageData.data[i];
       }
     });
+
+
   }
   modalopen() {
     const dialogRef = this.dialog.open(SelectCityComponent);
@@ -246,17 +265,26 @@ this.getAllTest();
     dialogRef.afterClosed().subscribe((result) => {
       console.log(`Dialog result: ${result}`);
     });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log("🚀 ~ file: booktests.component.ts ~ line 262 ~ BooktestsComponent ~ dialogRef.afterClosed ~ result", result)
+      console.log('The dialog was closed');
+      this.city = result;
+      this.getAllTest(this.city);
+    });
+
   }
-getAllTest(){
-  this.BookingService.getAllTestApi().then((TestresData)=>{
-    console.log("🚀 ~ file: booktests.component.ts ~ line 249 ~ BooktestsComponent ~ this.BookingService.getAllTestApi ~ TestresData", TestresData);
-    this.GetAll=TestresData.data
-    console.log("🚀 ~ file: booktests.component.ts ~ line 254 ~ BooktestsComponent ~ this.BookingService.getAllTestApi ~  this.GetAll",  this.GetAll)
+getAllTest(val){
+  this.BookingService.getAllTestApi(val).then((resData)=>{
+    this.GetAll=resData.data[0].tests
+    console.log("🚀 ~ file: booktests.component.ts ~ line 285 ~ BooktestsComponent ~ this.BookingService.getAllTestApi ~ this.GetAll", this.GetAll);
 
   }).catch((err)=>{
   console.log("🚀 ~ file: booktests.component.ts ~ line 213 ~ BooktestsComponent ~ this.BookingService.getAllTestApi ~ err", err)
 
   });
+
+
 }
 
 getProfileAll()
@@ -265,10 +293,8 @@ getProfileAll()
 
       for(let i = 0; i < ProfRes.data.length; i++){
         this.Profile[i] = ProfRes.data[i]
-        console.log("🚀 ~ file: booktests.component.ts ~ line 219 ~ BooktestsComponent ~ this.mainService.getAllProfile ~ this.Profile[i]", this.Profile[i]);
 
         this.mainService.getProfileById(this.Profile[i]._id).then(resProfile => {
-          console.log("🚀 ~ file: booktests.component.ts ~ line 222 ~ BooktestsComponent ~ this.mainService.getProfileById ~ resProfile", resProfile)
           }).catch(err => {
           console.log("🚀 ~ file: booktests.component.ts ~ line 229 ~ BooktestsComponent ~ this.mainService.getProfileById ~ err", err);
           })
