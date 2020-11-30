@@ -1,3 +1,4 @@
+import { CurrentLocIpService } from './services/current-loc-ip.service';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
@@ -73,7 +74,7 @@ SocialLoginModule,
 
 
 
-  providers: [ApiCallService, CookieService, MessageService,AuthService ,
+  providers:[CurrentLocIpService, ApiCallService, CookieService, MessageService,AuthService ,
 
     {
       provide: AuthServiceConfig,

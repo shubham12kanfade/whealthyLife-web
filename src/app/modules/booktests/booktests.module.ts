@@ -6,6 +6,7 @@ import { SelectCityComponent } from './select-city/select-city.component';
 import { PopHealthComponent } from './pop-health/pop-health.component';
 import { ISOComponent } from './pop-health/iso/iso.component';
 import { NABLComponent } from './pop-health/nabl/nabl.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -20,7 +21,7 @@ import { NABLComponent } from './pop-health/nabl/nabl.component';
   imports: [
     CommonModule,
     BooktestsRoutingModule,
-    SharedModule
+    SharedModule,ReactiveFormsModule
   ]
 })
 export class BooktestsModule { }

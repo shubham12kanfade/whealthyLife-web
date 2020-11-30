@@ -15,5 +15,7 @@ addBooking(data){
 getAllTestApi(){
   return this.ApiCallService.getData('tests/all')
 }
-
+getAllLabsCity(){
+  return this.ApiCallService.getData('lab/get/cities')
+}
 }

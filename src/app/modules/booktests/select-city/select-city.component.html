@@ -4,7 +4,13 @@
         <div class="container">
           <div class="row">
             <div class="col-md-12 col-sm-12 col-lg-12">
-              <input type="text" placeholder="Search for city" class="c-search__input" value="">
+              <input type="text" [formControl]="myControl"  (blur)="ValGet()"  [matAutocomplete]="auto"   placeholder="Search for city" class="c-search__input" >
+          
+              <mat-autocomplete #auto="matAutocomplete">
+                <mat-option  (click)="ValGet()" *ngFor="let option of filteredOptions | async" [value]="option">
+                  {{option}}
+                </mat-option>
+              </mat-autocomplete>
             </div>
             <div class="col-md-12 col-sm-12 col-lg-12">
               <p class="m-3">Top city</p>
@@ -33,93 +39,13 @@
               <img src="../../../../assets/img/Kolkata.svg" alt="">
               <p class="mt-2" >Kolkata</p>
             </div>
-            <div class="col-md-12 col-sm-12 col-lg-12">
+            <div  class="col-md-12 col-sm-12 col-lg-12">
               <hr>
             </div>
-            <div class=" col-md-3 col-sm-3 col-lg-3">
-              <p>Delhi</p>
+            <div class=" col-md-3 col-sm-3 col-lg-3" *ngFor="let item of citys">
+              <p style="cursor: pointer;" (click)="ValGetS(item._id)">{{item._id}}</p>
             </div>
-            <div class=" col-md-3 col-sm-3 col-lg-3">
-              <p>Mumbai</p>
-            </div>
-            <div class=" col-md-3 col-sm-3 col-lg-3">
-              <p>Noida</p>
-            </div>
-            <div class=" col-md-3 col-sm-3 col-lg-3">
-              <p>Navi Mumbai</p>
-            </div>
-            <div class=" col-md-3 col-sm-3 col-lg-3">
-              <p>Faridabad</p>
-            </div>
-            <div class=" col-md-3 col-sm-3 col-lg-3">
-              <p>Ahmedabad</p>
-            </div>
-            <div class=" col-md-3 col-sm-3 col-lg-3">
-              <p>Jodhpur</p>
-            </div>
-            <div class=" col-md-3 col-sm-3 col-lg-3">
-              <p>Ludhiana</p>
-            </div>
-            <div class=" col-md-3 col-sm-3 col-lg-3">
-              <p>Visakhapatnam</p>
-            </div>
-            <div class=" col-md-3 col-sm-3 col-lg-3">
-              <p>Nagpur</p>
-            </div>
-            <div class=" col-md-3 col-sm-3 col-lg-3">
-              <p>Karnal</p>
-            </div>
-            <div class=" col-md-3 col-sm-3 col-lg-3">
-              <p>Surat</p>
-            </div>
-            <div class=" col-md-3 col-sm-3 col-lg-3">
-              <p>Raigarh</p>
-            </div>
-            <div class=" col-md-3 col-sm-3 col-lg-3">
-              <p>Gurgaon</p>
-            </div>
-            <div class=" col-md-3 col-sm-3 col-lg-3">
-              <p>Thane</p>
-            </div>
-            <div class=" col-md-3 col-sm-3 col-lg-3">
-              <p>Hyderabad</p>
-            </div>
-            <div class=" col-md-3 col-sm-3 col-lg-3">
-              <p>Chennai</p>
-            </div>
-            <div class=" col-md-3 col-sm-3 col-lg-3">
-              <p>Bhubaneswar</p>
-            </div>
-            <div class=" col-md-3 col-sm-3 col-lg-3">
-              <p>Indore</p>
-            </div>
-            <div class=" col-md-3 col-sm-3 col-lg-3">
-              <p>Lucknow</p>
-            </div>
-            <div class=" col-md-3 col-sm-3 col-lg-3">
-              <p>Patna</p>
-            </div>
-            <div class=" col-md-3 col-sm-3 col-lg-3">
-              <p>Ernakulam</p>
-            </div>
-            <div class=" col-md-3 col-sm-3 col-lg-3">
-              <p>Aurangabad</p>
-            </div>
-            <div class=" col-md-3 col-sm-3 col-lg-3">
-              <p>Bhopal</p>
-            </div>
-            <div class=" col-md-3 col-sm-3 col-lg-3">
-              <p>Krishna</p>
-            </div>
-            <div class=" col-md-3 col-sm-3 col-lg-3">
-              <p>Medak</p>
-            </div>
-            <div class=" col-md-3 col-sm-3 col-lg-3">
-              <p>Mohali</p>
-            </div>
-            <div class=" col-md-3 col-sm-3 col-lg-3">
-              <p>Salem</p>
-            </div>
+          
       </div>
         </div>
 </mat-dialog-content>
