@@ -149,7 +149,7 @@
           </div>
         </div>
 
-        <div>
+        <div *ngIf="packType!='test'">
           <div class="row style-included-tests-wrapper">
             <h2 class="style-header">
               {{ packType |titlecase }} Tests Included in {{title}}
