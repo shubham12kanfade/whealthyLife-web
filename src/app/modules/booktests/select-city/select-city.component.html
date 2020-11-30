@@ -4,7 +4,7 @@
         <div class="container">
           <div class="row">
             <div class="col-md-12 col-sm-12 col-lg-12">
-              <input type="text" [formControl]="myControl"  (blur)="ValGet()"  [matAutocomplete]="auto"   placeholder="Search for city" class="c-search__input" >
+              <input type="text" [formControl]="myControl"  (blur)="ValGetBL()"  [matAutocomplete]="auto"   placeholder="Search for city" class="c-search__input" >
           
               <mat-autocomplete #auto="matAutocomplete">
                 <mat-option  (click)="ValGet()" *ngFor="let option of filteredOptions | async" [value]="option">

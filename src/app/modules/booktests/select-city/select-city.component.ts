@@ -7,6 +7,11 @@ import { BookingService } from './../../../services/booking.service';
 import { Component, Inject, OnInit } from '@angular/core';
 import { map } from 'rxjs/internal/operators/map';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import {
+  MatSnackBar,
+  MatSnackBarHorizontalPosition,
+  MatSnackBarVerticalPosition,
+} from '@angular/material/snack-bar';
 @Component({
   selector: 'app-select-city',
   templateUrl: './select-city.component.html',
@@ -18,9 +23,13 @@ export class SelectCityComponent implements OnInit {
   myControl = new FormControl();
   options: string[] = [];
   filteredOptions: Observable<string[]>;
-  constructor( public dialogRef: MatDialogRef<BooktestsComponent> 
+
+  horizontalPosition: MatSnackBarHorizontalPosition = 'end';
+  verticalPosition: MatSnackBarVerticalPosition = 'top';
+
+  constructor(private _snackBar: MatSnackBar, public dialogRef: MatDialogRef<BooktestsComponent> 
     ,private BookingService:BookingService,private CurrentLocIpService:CurrentLocIpService,) { 
-   
+     
     
     this.CurrentLocIpService.getData().then((resData)=>{
       this.city=resData.city
@@ -56,6 +65,24 @@ console.log("🚀 ~ file: select-city.component.ts ~ line 31 ~ SelectCityCompone
    _filter(value: string): string[] {
     const filterValue = value.toLowerCase();
     return this.options.filter(option => option.toLowerCase().includes(filterValue));
+  }
+  ValGetBL(){
+    
+    console.log("🚀 ~ file: select-city.component.ts ~ line 71 ~ SelectCityComponent ~ ValGet ~ this.myControl.value", this.myControl.value)
+  const data =  this.options.filter(x => x==this.myControl.value );
+if(data.length!=0){
+  this.dialogRef.close(this.myControl.value);
+}else{
+  this._snackBar.open('Please Enter A Valid City', '', {
+    duration: 2000,
+    horizontalPosition: this.horizontalPosition,
+    verticalPosition: this.verticalPosition,
+    panelClass: ['redMatch']
+  });
+
+}
+
+    
   }
   ValGet(){
     this.dialogRef.close(this.myControl.value);

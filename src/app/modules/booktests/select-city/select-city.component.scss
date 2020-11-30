@@ -11,3 +11,10 @@
 .cen{
   text-align: center;
 }
+::ng-deep .redMatch
+{
+  font-size: 30px !important;
+  color:white;
+  background: #a70000 !important;
+ 
+}
