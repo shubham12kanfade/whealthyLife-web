@@ -212,8 +212,11 @@ this.getAllTest();
     nav: false,
   };
   ngOnInit(): void {
+
+
     this.getAllPackage();
     this.getProfileAll();
+    this.getAllTest();
 
 
     this.CRService.getFeaturedLab().then(LabData => {
@@ -245,14 +248,15 @@ this.getAllTest();
     });
   }
 getAllTest(){
-  this.BookingService.getAllTestApi().then((resData)=>{
-    this.GetAll=resData.data
+  this.BookingService.getAllTestApi().then((TestresData)=>{
+    console.log("🚀 ~ file: booktests.component.ts ~ line 249 ~ BooktestsComponent ~ this.BookingService.getAllTestApi ~ TestresData", TestresData);
+    this.GetAll=TestresData.data
     console.log("🚀 ~ file: booktests.component.ts ~ line 254 ~ BooktestsComponent ~ this.BookingService.getAllTestApi ~  this.GetAll",  this.GetAll)
 
   }).catch((err)=>{
   console.log("🚀 ~ file: booktests.component.ts ~ line 213 ~ BooktestsComponent ~ this.BookingService.getAllTestApi ~ err", err)
 
-  })
+  });
 }
 
 getProfileAll()

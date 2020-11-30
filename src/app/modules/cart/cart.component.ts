@@ -36,12 +36,6 @@ export class CartComponent implements OnInit {
 
     })
 
-
-    // this.saveRupee =  (this.CartData?.packageId?.yourPrice * (this.CartData?.packageId?.offerPercent / 100))
-    // console.log("🚀 --------------------------------------------------------------------------------------------------");
-    // console.log("🚀 ~ file: cart.component.ts ~ line 40 ~ CartComponent ~ ngOnInit ~ this.saveRupee", this.saveRupee);
-    // console.log("🚀 --------------------------------------------------------------------------------------------------");
-
   }
   removeAt(id){
       console.log("CartComponent -> removeAt -> id", id)
