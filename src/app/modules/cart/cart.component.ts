@@ -12,7 +12,14 @@ import { AddressPopupComponent } from './address-popup/address-popup.component';
 })
 export class CartComponent implements OnInit {
   CartData: any;
-  saveRupee: Number;
+  // saveRupee: Number;
+  amount: any;
+  offer: any;
+  name: any;
+  tile: any;
+  mrp: any;
+  saveAmount: number;
+  quantity: any;
 
 
 
@@ -28,15 +35,30 @@ export class CartComponent implements OnInit {
 
 
   ngOnInit() {
-    this.MedicineService.getPackageInCart().then((resData)=>{
-      this.CartData=resData.data
-      console.log("🚀 ~ file: cart.component.ts ~ line 37 ~ CartComponent ~ this.MedicineService.getPackageInCart ~ this.CartData", this.CartData);
-    }).catch((err)=>{
-    console.log("CartComponent -> ngOnInit -> err", err)
-
-    })
+    this.getCartData();
 
   }
+
+
+  getCartData(){
+    this.MedicineService.getPackageInCart().then((resData)=>{
+      this.CartData=resData.data.tests
+      console.log("🚀 ~ file: cart.component.ts ~ line 37 ~ CartComponent ~ this.MedicineService.getPackageInCart ~ this.CartData", this.CartData);
+
+      this.amount = this.CartData[0].ammount,
+      this.offer = this.CartData[0].testId?.discountOffer,
+      this.name = this.CartData[0].labId?.name,
+      this.tile = this.CartData[0].testId?.title,
+      this.mrp = this.CartData[0].testId?.mrp,
+      this.quantity = this.CartData[0].quantity
+
+      this.saveAmount = parseInt(this.mrp) * parseInt(this.offer) /100
+    }).catch((err)=>{
+    console.log("CartComponent -> ngOnInit -> err", err)
+    });
+
+  }
+
   removeAt(id){
       console.log("CartComponent -> removeAt -> id", id)
       this.MedicineService.DelePackageInCart(id).then((resData)=>{

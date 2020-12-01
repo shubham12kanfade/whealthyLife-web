@@ -1,3 +1,4 @@
+import { PopHealthComponent } from './modules/booktests/pop-health/pop-health.component';
 import { CurrentLocIpService } from './services/current-loc-ip.service';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -74,7 +75,7 @@ SocialLoginModule,
 
 
 
-  providers:[CurrentLocIpService, ApiCallService, CookieService, MessageService,AuthService ,
+  providers:[PopHealthComponent,CurrentLocIpService, ApiCallService, CookieService, MessageService,AuthService ,
 
     {
       provide: AuthServiceConfig,

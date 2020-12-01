@@ -6,6 +6,7 @@ import { Component, OnInit } from "@angular/core";
 import { MatDialog } from "@angular/material/dialog";
 import { ISOComponent } from "./iso/iso.component";
 import { NABLComponent } from "./nabl/nabl.component";
+import { Subject } from 'rxjs';
 
 @Component({
   selector: "app-pop-health",
@@ -29,6 +30,9 @@ export class PopHealthComponent implements OnInit {
   PProfile: any;
   TestDetails: any;
   lAbout: any;
+  yourPrice: number;
+  discount: number;
+  addCheck: Subject<String> = new Subject();
   constructor(
     public dialog: MatDialog,
     private Router: ActivatedRoute,
@@ -68,22 +72,22 @@ export class PopHealthComponent implements OnInit {
   }
   getTESTApi() {
     this.MainService.getTestById(this.LabId).then((resData) => {
-      console.log("🚀 ~ file: pop-health.component.ts ~ line 79 ~ PopHealthComponent ~ this.MainService.getTestById ~ resData", resData)
       this.labPack = resData.data;
-      console.log("🚀 ~ file: pop-health.component.ts ~ line 84 ~ PopHealthComponent ~ this.MainService.getTestById ~ this.labPack", this.labPack);
       this.title = this.labPack[0].testId?.title
       this.length = this.labPack[0].length
-      this.price = this.labPack[0].testId?.yourPrice
+      // this.price = this.labPack[0].testId?.yourPrice
       this.mrp = this.labPack[0].mrp
       this.offerPercent = this.labPack[0].discountOffer
       this.lName = this.labPack[0].labId?.name
       this.lAbout = this.labPack[0].labId?.about
       this.discription =  this.labPack[0].description
       this.precaution = this.labPack[0].testId?.precautions
-      // this.PProfile = this.labPack.packageProfiles
+      this.discount = parseInt(this.mrp) * parseInt(this.offerPercent) /100
+      this.price = parseInt(this.mrp) - this.discount
     }).catch((err) => {
       console.log("🚀 ~ file: pop-health.component.ts ~ line 99 ~ PopHealthComponent ~ this.MainService.getTestById ~ err", err)
     })
+
 
   }
   getProfileApi() {
@@ -103,7 +107,6 @@ export class PopHealthComponent implements OnInit {
         element?.testId
         this.TestDetails.push(element?.testId)
       });
-      console.log("🚀 ~ file: pop-health.component.ts ~ line 89 ~ PopHealthComponent ~ this.MainService.getProfileById ~ this.TestDetails", this.TestDetails)
     }).catch((err) => {
       console.log("🚀 ~ file: pop-health.component.ts ~ line 68 ~ PopHealthComponent ~ this.MainService.getDataFormProfile ~ err", err)
     })
@@ -129,23 +132,22 @@ export class PopHealthComponent implements OnInit {
   }
   getRew() {
     this.MainService.getCustReview(this.labPack.labId).then((ReviewRes) => {
-      console.log(": ------------------------------------------------------");
-      console.log("PopHealthComponent -> ngOnInit -> ReviewRes", ReviewRes);
-      console.log(": ------------------------------------------------------");
     });
   }
-  AddTocart(val, val2, val3) {
-    console.log(
-      "PopHealthComponent -> AddTocart -> val,val2,val3",
-      val,
-      val2,
-      val3
-    );
-    this.MedicineService.PostPackageInCart({
-      packageId: val,
-      ammount: val2,
-      type: "Test",
-      labId: val3,
-    });
+  AddTocart(val2, val3) {
+    console.log("PopHealthComponent -> AddTocart -> val2,val3",val2,val3);
+    let data4;
+    this.packType=='test'?data4={testId:this.LabId}: this.packType=='profile'?data4={profiledId:this.LabId}: this.packType=='package'?data4={packageId:this.LabId}:'null'
+    const data5 ={
+        ...data4,
+        ammount: val2,
+        labId: val3,
+        type:   this.packType=='test'?'Test': this.packType=='profile'?'Profile': this.packType=='package'?'Package':'Package',
+    }
+    this.MedicineService.PostPackageInCart(data5).then((resData)=>{
+      this.addCheck.next(resData)
+    }).catch((err)=>{
+    console.log("🚀 ~ file: pop-health.component.ts ~ line 156 ~ PopHealthComponent ~ this.MedicineService.PostPackageInCart ~ err", err);
+    })
   }
 }

@@ -25,14 +25,14 @@
                             <span>
                               ₹
                               <span>
-                                {{price}}
+                                {{mrp}}
                               </span>
                             </span>
                           </span>
                           <span class="style-mrp">
                             ₹
                             <span>
-                              {{mrp}}
+                              {{price}}
                             </span>
                           </span>
                         </div>
@@ -111,8 +111,7 @@
               <div class="col-lg-12 col-sm-12 text-right-add style-add-to-card">
                 <span>
                   <span>
-                    <span (click)="AddTocart(LabId,labPack?.package.mrp,labPack?.package.labId)"
-                      class="style-text-button style-desktop-view">
+                    <span (click)="AddTocart(price,labPack[0].labId._id)" class="style-text-button style-desktop-view">
                       ADD TO CART
                     </span>
                   </span>
