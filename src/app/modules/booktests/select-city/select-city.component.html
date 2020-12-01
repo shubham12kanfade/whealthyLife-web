@@ -4,13 +4,15 @@
         <div class="container">
           <div class="row">
             <div class="col-md-12 col-sm-12 col-lg-12">
-              <input type="text" [formControl]="myControl"  (blur)="ValGetBL()"  [matAutocomplete]="auto"   placeholder="Search for city" class="c-search__input" >
+              <input type="text" [formControl]="myControl"    [matAutocomplete]="auto"   placeholder="Search for city" class="c-search__input" >
           
               <mat-autocomplete #auto="matAutocomplete">
-                <mat-option  (click)="ValGet()" *ngFor="let option of filteredOptions | async" [value]="option">
+                <mat-option   (click)="ValGet()"  *ngFor="let option of filteredOptions | async" [value]="option">
                   {{option}}
                 </mat-option>
               </mat-autocomplete>
+
+              <button (click)="ValGetBL()" class="btn btn-light" style="height: 50px;">Confirm</button>
             </div>
             <div class="col-md-12 col-sm-12 col-lg-12">
               <p class="m-3">Top city</p>
@@ -43,7 +45,7 @@
               <hr>
             </div>
             <div class=" col-md-3 col-sm-3 col-lg-3" *ngFor="let item of citys">
-              <p style="cursor: pointer;" (click)="ValGetS(item._id)">{{item._id}}</p>
+              <p style="cursor: pointer;"  (click)="ValGetS(item._id)" >{{item._id}}</p>
             </div>
           
       </div>

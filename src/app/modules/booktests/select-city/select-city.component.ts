@@ -20,6 +20,7 @@ import {
 export class SelectCityComponent implements OnInit {
   city: any;
   citys: any;
+  val:boolean=true;
   myControl = new FormControl();
   options: string[] = [];
   filteredOptions: Observable<string[]>;
@@ -51,7 +52,6 @@ this.citys.forEach(element => {
     console.log("🚀 ~ file: select-city.component.ts ~ line 23 ~ SelectCityComponent ~ this.BookingService.getAllLabsCity ~ err", err)
       
     })
-console.log("🚀 ~ file: select-city.component.ts ~ line 31 ~ SelectCityComponent ~ this.BookingService.getAllLabsCity ~ this.citys", this.citys)
     
   }
 
@@ -67,22 +67,30 @@ console.log("🚀 ~ file: select-city.component.ts ~ line 31 ~ SelectCityCompone
     return this.options.filter(option => option.toLowerCase().includes(filterValue));
   }
   ValGetBL(){
-    
-    console.log("🚀 ~ file: select-city.component.ts ~ line 71 ~ SelectCityComponent ~ ValGet ~ this.myControl.value", this.myControl.value)
-  const data =  this.options.filter(x => x==this.myControl.value );
-if(data.length!=0){
-  this.dialogRef.close(this.myControl.value);
-}else{
-  this._snackBar.open('Please Enter A Valid City', '', {
+   const data2 =this.myControl.value
+  const data =  this.options.filter(x => x.toLowerCase().includes(data2) );
+
+  if(data.length)
+{
+  this.dialogRef.close(data2);
+}
+else{
+  this._snackBar.open('Please Enter Valid City', '', {
     duration: 2000,
     horizontalPosition: this.horizontalPosition,
     verticalPosition: this.verticalPosition,
-    panelClass: ['redMatch']
+    panelClass: ['redNoMatch']
   });
 
 }
 
+
+
+
     
+  }
+  valFun(val){
+    this.val=val
   }
   ValGet(){
     this.dialogRef.close(this.myControl.value);
