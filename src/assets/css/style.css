@@ -136,7 +136,7 @@ body {
   font-size: 14px;
   font-size: 0.875rem;
   line-height: 1.4;
-    font-family: Camphor,verdana !important;
+  font-family: Camphor,verdana !important;
   color: #555;
 }
 
@@ -5255,13 +5255,13 @@ line-height: 1.25; font-size: 16px; font-weight: 400;display: inline-block;}
 .sec-content.mini { border: 0;}
 .p-footer { padding: 15px; background: #ecf5f8; height: 52px; position: absolute; bottom: 0; width: 100%;}
 .btn-border { border-radius: 2px; padding: 5px 8px; background: transparent; color: #163fbb; border:1px solid #163fbb;}
-.tag {color: #fff; border-radius: 2px; padding: 5px; background: #047904;}
+.tag {color: #fff; border-radius: 2px; padding: 5px; background: #45A29E;}
 .price { margin: 0 5px; font-weight:bold; font-size: 16px; }
 .third-sec { background: #fff;}
 .info h2 { line-height: 1.5; font-size: 36px;}
-.info ul { list-style: none; margin-bottom:15px; padding: 0; overflow: hidden;}
+.info ul { list-style: none; margin-bottom:30px; padding: 0; overflow: hidden;}
 .info ul li {font-size: 16px; position: relative; line-height:2;}
-.info ul li::before {content: '\f00c'; font-family: FontAwesome; padding-right: 8px; color:#0BA114; }
+.info ul li::before {content: '\f00c'; font-family: FontAwesome; padding-right: 8px; color:#45A29E; }
 .pic-middle img { max-width: 500px; width: 100%; margin:0 auto;}
 .c-logo img { height: 100px; width: 100%; max-width: 100%; object-fit: contain;}
 .c-logo { border:1px solid #ddd; padding: 5px;}
@@ -5356,7 +5356,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 #contact-popup { max-width: 600px; width: 100%; display: none;}
 .img-popup { max-width: 100%; width: 100%; object-fit: cover; height: 100%;}
 .inner-popup h4 { text-align: center; margin-bottom:30px;}
-.bottom-sec {background: #0BA114; padding: 12px 0; width: 100%; }
+.bottom-sec {background: #45A29E; padding: 12px 0; width: 100%; }
 .division { border-right: 1px solid #ddd; overflow: hidden;}
 .division img { float: left;
   margin-right: 10px;
@@ -5633,6 +5633,10 @@ background: #fff; border-radius: 2px !important; min-width: 155px;}
 
   .carousel-control.left, .carousel-control.right{background-image: none !important;}
 
-
+  .info ul li {
+    font-size: 18px !important;
+    position: relative;
+    line-height: 2;
+}
 
 
