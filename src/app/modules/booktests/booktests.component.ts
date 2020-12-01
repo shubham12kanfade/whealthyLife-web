@@ -28,6 +28,7 @@ export class BooktestsComponent implements OnInit {
   Labdata: any=[];
   city: any;
   TestAll: any=[];
+  TestId: any;
 
   constructor(
     public dialog: MatDialog,
@@ -38,7 +39,7 @@ export class BooktestsComponent implements OnInit {
   ) {
 
 
-    this.getAllTest('Mumbai');
+    this.getAllTest('Amravati');
 
     this.CurrentLocIpService.getData().then((resData)=>{
     this.city=resData.city
@@ -270,7 +271,7 @@ export class BooktestsComponent implements OnInit {
       console.log("🚀 ~ file: booktests.component.ts ~ line 262 ~ BooktestsComponent ~ dialogRef.afterClosed ~ result", result)
       console.log('The dialog was closed');
       this.city = result;
-      this.getAllTest(this.city);
+      // this.getAllTest(this.city);
     });
 
   }
@@ -278,11 +279,11 @@ getAllTest(val){
   this.BookingService.getAllTestApi(val).then((resData)=>{
     this.GetAll=resData.data[0].tests
     console.log("🚀 ~ file: booktests.component.ts ~ line 285 ~ BooktestsComponent ~ this.BookingService.getAllTestApi ~ this.GetAll", this.GetAll);
-
   }).catch((err)=>{
   console.log("🚀 ~ file: booktests.component.ts ~ line 213 ~ BooktestsComponent ~ this.BookingService.getAllTestApi ~ err", err)
 
   });
+
 
 
 }
@@ -293,6 +294,9 @@ getProfileAll()
 
       for(let i = 0; i < ProfRes.data.length; i++){
         this.Profile[i] = ProfRes.data[i]
+        console.log("🚀 -------------------------------------------------------------------------------------------------------------------------------------");
+        console.log("🚀 ~ file: booktests.component.ts ~ line 308 ~ BooktestsComponent ~ this.mainService.getAllProfile ~ this.Profile[i]", this.Profile[i]);
+        console.log("🚀 -------------------------------------------------------------------------------------------------------------------------------------");
 
         this.mainService.getProfileById(this.Profile[i]._id).then(resProfile => {
           }).catch(err => {
@@ -305,6 +309,7 @@ getProfileAll()
     }).catch(err => {
       console.log("🚀 ~ file: booktests.component.ts ~ line 232 ~ BooktestsComponent ~ this.mainService.getAllProfile ~ err", err);
     })
+
 
 
 

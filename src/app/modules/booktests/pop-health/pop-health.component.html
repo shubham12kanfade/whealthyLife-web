@@ -9,7 +9,7 @@
                 <h1 class="style-test-package-name">{{title}}</h1>
                 <div class="row style-include-tests">
                   <div class="col-lg-12 col-sm-12">
-                    <div class="style-abbreviation">
+                    <div class="style-abbreviation" *ngIf="packType != 'test' ">
                       (Includes {{length}} Tests)
                     </div>
                   </div>
@@ -340,7 +340,7 @@
     </div>
   </div>
   <div class="style-border-btm"></div>
-  <div class="style-flex-box style-down-bar">
+  <!-- <div class="style-flex-box style-down-bar">
     <div class="style-free-text style-f20">
       Get the link to download App
     </div>
@@ -354,5 +354,5 @@
       </form>
     </div>
     <div class="style__cap-wrap___38IWm"></div>
-  </div>
+  </div> -->
 </div>

@@ -28,6 +28,7 @@ export class PopHealthComponent implements OnInit {
   precaution: any;
   PProfile: any;
   TestDetails: any;
+  lAbout: any;
   constructor(
     public dialog: MatDialog,
     private Router: ActivatedRoute,
@@ -69,18 +70,21 @@ export class PopHealthComponent implements OnInit {
     this.MainService.getTestById(this.LabId).then((resData) => {
       console.log("🚀 ~ file: pop-health.component.ts ~ line 79 ~ PopHealthComponent ~ this.MainService.getTestById ~ resData", resData)
       this.labPack = resData.data;
-      this.title = this.labPack[0].title
-      this.length = this.labPack?.packageProfiles?.length
-      this.price = this.labPack[0].yourPrice
+      console.log("🚀 ~ file: pop-health.component.ts ~ line 84 ~ PopHealthComponent ~ this.MainService.getTestById ~ this.labPack", this.labPack);
+      this.title = this.labPack[0].testId?.title
+      this.length = this.labPack[0].length
+      this.price = this.labPack[0].testId?.yourPrice
       this.mrp = this.labPack[0].mrp
-      this.offerPercent = this.labPack[0].offerPercent
-      this.lName = this.labPack?.package?.labId?.name
-      this.discription = this.labPack?.package?.description
-      this.precaution = this.labPack?.package?.precaution
-      this.PProfile = this.labPack.packageProfiles
+      this.offerPercent = this.labPack[0].discountOffer
+      this.lName = this.labPack[0].labId?.name
+      this.lAbout = this.labPack[0].labId?.about
+      this.discription =  this.labPack[0].description
+      this.precaution = this.labPack[0].testId?.precautions
+      // this.PProfile = this.labPack.packageProfiles
     }).catch((err) => {
       console.log("🚀 ~ file: pop-health.component.ts ~ line 99 ~ PopHealthComponent ~ this.MainService.getTestById ~ err", err)
     })
+
   }
   getProfileApi() {
     this.TestDetails = []

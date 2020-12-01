@@ -115,7 +115,7 @@ getProfileById(id){
 }
 
 getTestById(id){
-  return this.api.getData('tests/by/testId/'+id)
+  return this.api.getData('tests/by/labTest/'+id)
 }
 
 

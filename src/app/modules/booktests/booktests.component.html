@@ -71,7 +71,7 @@
           </div>
           <owl-carousel-o [options]="customOptions" #review12>
             <ng-template carouselSlide *ngFor="let prof of Profile; let k = index">
-              <div class="card card-style cad1" [routerLink]="['pop-health/profile',prof._id]"
+              <div class="card card-style cad1" [routerLink]="['pop-health/profile/',prof._id]"
                 routerLinkActive="router-link-active">
                 <div class="card-body">
                   <h3 class="card-title truncate fw-600">{{ prof.title }}</h3>
