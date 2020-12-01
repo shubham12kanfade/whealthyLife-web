@@ -69,9 +69,32 @@ $Praco-Site-theme: mat-light-theme(
 /* You can add global styles to this file, and also import other style files */
 
 * {
-  //   font-family: Camphor,verdana !important;
-  font-family: FontAwesome !important;
+  font-family: Camphor,verdana !important;
+  //font-family: FontAwesome !important;
   font-style: normal;
+}
+
+body {
+  background: #fff;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.4;
+  font-family: Camphor,verdana !important;
+  color: #555;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #333;
+  font-family: Camphor,verdana !important;
+}
+
+p {
+  margin-bottom: 30px;
+  font-family: Camphor,verdana !important;
 }
 
 .start-header {
@@ -644,3 +667,5 @@ body {
   font-family: "FontAwesome";
   font-style: normal;
 }
+
+

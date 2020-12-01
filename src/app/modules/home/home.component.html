@@ -228,21 +228,20 @@
   </div>
 
   <section class="first-sec">
-    <div class="container margin_120_95">
+    <div class="container margin_120_95 pt-pb-80">
       <div class="row">
-        <div class="col-md-7">
+        <div class="col-md-6">
           <div class="main_title" data-aos="fade-right">
-            <div class="h2txt">
+            <div class="h2txt mainSectionTitle">
               <h2>
                 Now
-                <span style="color: cornflowerblue"> Book an appointment </span>
+                <strong style="color: cornflowerblue"> Book an appointment </strong>
                 with our doctors for free
               </h2>
 
               <h3
                 style="
-                  width: 276px;
-                  font-family: Verdana, Geneva, Tahoma, sans-serif;
+                 font-family: Verdana, Geneva, Tahoma, sans-serif !important;
                 "
               >
                 Enjoy peace of mind while giving sample with heighly skilled &
@@ -273,7 +272,7 @@
             >
           </div>
         </div>
-        <div class="col-md-5">
+        <div class="col-md-6">
           <img
             src="../../../assets/img/Swati/BookAppointment.jpg"
             alt="WhealthyLife"
@@ -287,9 +286,9 @@
   <!-- /container -->
 
   <section class="home-package">
-    <div class="container-fluid margin_60_35">
-      <div class="main_title mb-5" data-aos="fade-down">
-        <h2>Affordable full body <strong>health checkups</strong> at home</h2>
+    <div class="container-fluid margin_60_35 pt-pb-80">
+      <div class="main_title mb-5 mainSectionTitle" data-aos="fade-down">
+        <h2 style="text-align: center !important;">Affordable full body <strong>health checkups</strong> at home</h2>
       </div>
       <div *ngIf="showmore" class="mx-auto packs">
         <div class="form-row">
@@ -421,7 +420,7 @@
   </section>
 
   <section class="third-sec">
-    <div class="container margin_60_35">
+    <div class="container margin_60_35 pt-pb-80">
       <div class="row">
         <div class="col-md-6">
           <div class="pic-middle" data-aos="fade-right">
@@ -433,10 +432,10 @@
           </div>
         </div>
         <div class="col-md-6">
-          <div class="info" data-aos="fade-left">
-            <h2 class="h2" style="text-align: inherit">
+          <div class="h2txt info mainSectionTitle" data-aos="fade-left">
+            <h2 class="h2">
               All your medical records<br />
-              <strong style="text-align: inherit">In one secure app.</strong>
+              <strong>In one secure app.</strong>
             </h2>
             <ul>
               <li>256-bit end to end encryption</li>
@@ -452,10 +451,9 @@
 
   <!-- //site breack / -->
 
-  <section>
-    <div class="container">
-      <h2>TOP CATEGORIES</h2>
-
+  <section class="topCategoriesSect">
+    <div class="container mainSectionTitle pt-pb-80">
+      <h2 style="text-align: center !important;">Top Categories</h2>
       <div class="col-12">
         <div
           class="row"
@@ -464,7 +462,7 @@
             justify-content: space-between;
             width: 100%;
             position: absolute;
-            top: 60px;
+            top: 45%;
           "
         >
           <div (click)="review1.prev()" style="z-index: 9">
@@ -483,9 +481,7 @@
               <div
                 class="card"
                 style="
-                  border-radius: 11px !important;
-                  background: black !important;
-                  height: 150px;
+                  height: auto;
                   width: 100%;
                 "
               >
@@ -493,27 +489,11 @@
                   [src]="Specialitss.backImg"
                   onerror="this.src='../../../assets/imag/doctor.png'"
                   style="
-                    height: 100%;
-                    width: 100%;
-                    opacity: 0.7 !important;
-                    position: absolute;
-                    background: white;
-                    border-radius: 11px !important;
+                    height: auto;
+                    width: 250px;
                   "
                 />
-                <div
-                  style="
-                    position: relative;
-                    height: 200px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: flex-end;
-                    font-size: 20px;
-                    font-weight: 700;
-                    color: white;
-                    padding-bottom: 10px;
-                  "
-                >
+                <div class="specialityName">
                   {{ Specialitss.fullName }}
                 </div>
               </div>
@@ -601,13 +581,13 @@
   </section> -->
 
   <section class="clients">
-    <div class="container margin_60_35">
+    <div class="container margin_60_35 pt-pb-80">
       <div class="row">
-        <div class="col-md-7">
-          <div class="info" data-aos="fade-right">
-            <h2 style="text-align: inherit">
+        <div class="col-md-6">
+          <div class="info mainSectionTitle" data-aos="fade-right">
+            <h2>
               Leading Healthcare Providers.<br />
-              <strong style="text-align: inherit">Trust us for Business</strong>
+              <strong>Trust us for Business</strong>
             </h2>
             <ul>
               <li>Get seen by 25M+ patients on WhealthyLife</li>
@@ -617,7 +597,7 @@
             <a href="#" class="btn-main">Learn more</a>
           </div>
         </div>
-        <div class="col-md-5">
+        <div class="col-md-6">
           <img
             src="../../../assets/img/Swati/HealthCareProvider.png"
             alt="WhealthyLife"
@@ -630,10 +610,10 @@
   </section>
 
   <section class="v-packages deal-offer">
-    <div class="container margin_60_35">
+    <div class="container margin_60_35 mainSectionTitle pt-pb-80">
       <div class="title-left">
-        <h1>Top deals and offers</h1>
-        <h4>Hand-picked deals for a healthier you</h4>
+        <h2 style="text-align: center !important;">Top deals and offers<br>
+        <strong>Hand-picked deals for a healthier you</strong></h2>
       </div>
       <div *ngIf="showmore" class="row">
         <div
@@ -744,18 +724,15 @@
   </section>
 
   <section class="lab-slide" *ngIf="Labdata">
-    <div class="container margin_60_35">
+    <div class="container margin_60_35 mainSectionTitle pt-pb-80">
       <div class="main_title">
         <div class="row">
-          <div class="col">
-            <h2>Featured Labs</h2>
-          </div>
-          <div class="col">
-            <a href="#" class="btn-link text-right float-right">View All</a>
+          <div class="col-md-12">
+            <h2 style="text-align: center !important;margin-bottom: 0px !important;">Featured Labs</h2>
           </div>
         </div>
       </div>
-      <div class="swiper-container">
+      <div class="swiper-container mb-3">
         <div class="swiper-wrapper">
           <div *ngIf="Labdata.length > 4">
             <owl-carousel-o [options]="customOptions1">
@@ -769,7 +746,7 @@
                     [src]="item.icon"
                     alt="logo-client"
                     onerror="this.src='../../../assets/imag/Doctor-And-Patient.png'"
-                    style="height: 100px; border: 1px solid"
+                    style="height: auto;"
                   />
                 </div>
               </ng-template>
@@ -787,7 +764,8 @@
                     [src]="item.icon"
                     alt="logo-client"
                     onerror="this.src='../../../assets/imag/Doctor-And-Patient.png'"
-                    style="height: 100px; border: 1px solid"
+                    style="height: 250px;
+                    width: 250px; box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;"
                   />
                 </div>
               </div>
@@ -795,6 +773,10 @@
           </div>
         </div>
       </div>
+      <div class="col-md-12 text-center">
+        <a href="#" class="btn-main">View All</a>
+      </div>
+      
     </div>
   </section>
 
@@ -887,13 +869,13 @@
   </section> -->
 
   <section *ngIf="reviewdata">
-    <div class="container">
-      <h2>Our Happy Customer</h2>
+    <div class="container margin_60_35 mainSectionTitle pt-pb-80">
+      <h2 style="text-align: center !important;">Our Happy Customer</h2>
       <div>
         <owl-carousel-o [options]="customOptions5" #review>
           <ng-template carouselSlide>
             <div class="pr-2 pl-2">
-              <div class="carousel-inner">
+              <div class="carousel-inner testimonialSlider">
                 <div
                   class="item carousel-item active"
                   *ngFor="let item of reviewdata; let k = index"
@@ -901,11 +883,14 @@
                   <p class="testimonial">
                     {{ item.review }}
                   </p>
-                  <p class="overview">
-                    <b
-                      >{{ item?.userId?.firstName }}
-                      {{ item?.userId?.lastName }}</b
-                    >, {{ item?.userId?.designation }}
+                  <p class="overview mt-5">
+                    <img src='../../../assets/images/unknownUser.png'> 
+                     <span class="userName">FirstName LastName</span>,
+                      <span class="userDesignation">Designation</span>
+                    <!-- <b
+                      >{{ item.userId.firstName }}
+                      {{ item.userId.lastName }}</b
+                    >, {{ item.userId.designation }} -->
                   </p>
                 </div>
               </div>
@@ -949,7 +934,7 @@
   </section>
 
   <section class="app-download-sec">
-    <div class="container margin_120_95">
+    <div class="container margin_60_35 mainSectionTitle pt-pb-80">
       <div class="row">
         <div class="col-md-6 col-12 d-none d-md-block">
           <div class="pic-middle aos-init aos-animate" data-aos="fade-right">
@@ -957,7 +942,7 @@
               src="../assets/imag/app-screen1.png"
               alt="WhealthyLife"
               class="img-fluid"
-              style="max-width: 250px"
+              style="max-width: 60%"
             />
           </div>
         </div>
@@ -972,21 +957,19 @@
               <li>Store health records</li>
               <li>Read health tips</li>
             </ul>
-            <div>
-              <a href="#" class="app"
+            <ul class="appDownload">
+              <li><a href="#" class="app"
                 ><img
                   src="../assets/img/1_EiZrcN_DIapbZaxutxbZRA.png"
                   alt="app"
-              /></a>
-            </div>
-            <div>
-              <a href="#" class="app"
+              /></a></li>
+              <li><a href="#" class="app"
                 ><img
                   src="./../../../assets/img/app-store.e30d53a6.png"
                   style="margin-top: 3px"
                   alt="app"
-              /></a>
-            </div>
+              /></a></li>
+            </ul>
           </div>
         </div>
       </div>
