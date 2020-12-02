@@ -1,3 +1,4 @@
+import { BehaviorSubject } from 'rxjs';
 import { ApiCallService } from './api/apicall.service';
 import { Injectable } from '@angular/core';
 
@@ -5,8 +6,11 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class MedicineService {
 
+
+
+export class MedicineService {
+  checkCart = new BehaviorSubject(null);
   constructor(private ApiCallService:ApiCallService) { }
   getHelthCondtion(){
    return this.ApiCallService.getData('product/catagories/getAll/by/HealthCare')
@@ -35,13 +39,16 @@ export class MedicineService {
 
  }
  DelePackageInCart(id){
-
   return this.ApiCallService.deleteData('userCart/'+id)
-
  }
 
  addQuantity(data){
-   return this.ApiCallService.postData('userCart/add/quantity',data)
+   return this.ApiCallService.postData('userCart/change/quantity',data)
+ }
+
+ Check(val){
+this.checkCart.next(val)
+console.log("🚀 ~ file: medicine.service.ts ~ line 46 ~ MedicineService ~ Check ~ this.checkCart", this.checkCart)
  }
 
 }

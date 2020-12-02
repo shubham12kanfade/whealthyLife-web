@@ -25,6 +25,8 @@ export class CartComponent implements OnInit {
   quantity: any;
   LabId: any;
   packType: any;
+  DicQuantity: any;
+  x: any;
 
 
 
@@ -59,7 +61,7 @@ export class CartComponent implements OnInit {
       this.name = this.CartData[0].labId?.name,
       this.tile = this.CartData[0].testId?.testId?.title,
       this.mrp = this.CartData[0].testId?.mrp,
-      this.quantity = this.CartData[0].quantity
+      this.x = this.CartData[0].quantity
 
       this.saveAmount = parseInt(this.mrp) * parseInt(this.offer) /100
     }).catch((err)=>{
@@ -69,26 +71,60 @@ export class CartComponent implements OnInit {
   }
 
 
-  // addCartValue(){
+  PlusCartValue(){
 
-  //   const dataQua = {
-  //     ammountPro = this.amount,
-  //     quantity = this.quantity
-  //   }
+    const dataQua = {
+      ammount: this.amount,
+      quantity: this.quantity,
+      id: this.CartData[0]._id
+
+    }
+
+    this.MedicineService.addQuantity(dataQua).then(QuaRes => {
+      this.incrementchoc();
+      this.MedicineService.Check(QuaRes)
+      console.log("🚀 ~ file: cart.component.ts ~ line 73 ~ CartComponent ~ this.MainService.addQuantity ~ QuaRes", QuaRes);
+
+    })
+  }
+
+  MinusCartValue(){
+
+    const dataQua = {
+      ammount: -this.amount,
+      quantity: -this.quantity,
+      id: this.CartData[0]._id
+    }
+
+    this.MedicineService.addQuantity(dataQua).then(QuaRes => {
+      this.decrementchoc();
+      this.MedicineService.Check(QuaRes)
+      console.log("🚀 ~ file: cart.component.ts ~ line 73 ~ CartComponent ~ this.MainService.addQuantity ~ QuaRes", QuaRes);
+
+    })
+  }
+
+  incrementchoc(){
+   ++this.x
+  }
+
+  decrementchoc(){
+    --this.x
+    if(this.x<1){
+      this.MedicineService.DelePackageInCart(this.CartData[0]._id).then(resDaTA => {
+      console.log("🚀 ~ file: cart.component.ts ~ line 126 ~ CartComponent ~ this.MedicineService.DelePackageInCart ~ resDaTA", resDaTA);
+
+      })
+    }
+  }
 
 
-  //   this.MainService.addQuantity().then(QuaRes => {
-  //   console.log("🚀 ------------------------------------------------------------------------------------------------------");
-  //   console.log("🚀 ~ file: cart.component.ts ~ line 73 ~ CartComponent ~ this.MainService.addQuantity ~ QuaRes", QuaRes);
-  //   console.log("🚀 ------------------------------------------------------------------------------------------------------");
-
-  //   })
-  // }
 
   removeAt(id){
       console.log("CartComponent -> removeAt -> id", id)
       this.MedicineService.DelePackageInCart(id).then((resData)=>{
       console.log("CartComponent -> removeAt -> resData", resData)
+      this.MedicineService.Check(resData)
       this.ngOnInit()
   }).catch((err)=>{
     console.log("CartComponent -> removeAt -> err", err)

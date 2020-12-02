@@ -145,7 +145,7 @@ export class PopHealthComponent implements OnInit {
         type:   this.packType=='test'?'Test': this.packType=='profile'?'Profile': this.packType=='package'?'Package':'Package',
     }
     this.MedicineService.PostPackageInCart(data5).then((resData)=>{
-     
+     this.MedicineService.Check(resData)
     }).catch((err)=>{
     console.log("🚀 ~ file: pop-health.component.ts ~ line 156 ~ PopHealthComponent ~ this.MedicineService.PostPackageInCart ~ err", err);
     })
