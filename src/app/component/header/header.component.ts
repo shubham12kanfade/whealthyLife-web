@@ -30,6 +30,7 @@ export class HeaderComponent implements OnInit {
     private MainService:MainService,
     private _snackBar: MatSnackBar,
     private MedicineService:MedicineService,
+  
   ) {
     this.checkLogin()
 
@@ -62,11 +63,16 @@ export class HeaderComponent implements OnInit {
       console.log("HeaderComponent -> checkLogin -> userInfo", this.userInfo)
 
     })
-  
-    
+
+
   }
 
   ngOnInit() {
+
+    this.getCartLength()
+
+  this.getCartLength()
+
     this.router.events.subscribe((resData)=>{
     console.log("HeaderComponent -> ngOnInit -> resData", resData)
 
@@ -77,10 +83,7 @@ this.getProfileOnline();
       this.showToast('success', "sdsdsjds", "dsdsdsd");
     }
     this.getCartLength()
-this.MedicineService.checkPackage.subscribe((resData)=>{
-  this.getCartLength()
-  console.warn("sub Check")
-})
+
 
 
   }
@@ -92,7 +95,7 @@ this.MedicineService.checkPackage.subscribe((resData)=>{
     this.CartLength=resData.data.length
     }).catch((err)=>{
     console.log("HeaderComponent -> getCartLength -> err", err)
-      
+
     })
   }
 

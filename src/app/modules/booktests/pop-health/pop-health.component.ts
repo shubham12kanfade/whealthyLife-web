@@ -32,7 +32,7 @@ export class PopHealthComponent implements OnInit {
   lAbout: any;
   yourPrice: number;
   discount: number;
-  addCheck: Subject<String> = new Subject();
+ 
   constructor(
     public dialog: MatDialog,
     private Router: ActivatedRoute,
@@ -145,7 +145,7 @@ export class PopHealthComponent implements OnInit {
         type:   this.packType=='test'?'Test': this.packType=='profile'?'Profile': this.packType=='package'?'Package':'Package',
     }
     this.MedicineService.PostPackageInCart(data5).then((resData)=>{
-      this.addCheck.next(resData)
+     
     }).catch((err)=>{
     console.log("🚀 ~ file: pop-health.component.ts ~ line 156 ~ PopHealthComponent ~ this.MedicineService.PostPackageInCart ~ err", err);
     })

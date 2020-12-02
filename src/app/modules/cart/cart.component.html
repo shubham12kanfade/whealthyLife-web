@@ -35,7 +35,7 @@
                               <div class="col-lg-9 col-xs-8">
                                 <h3 class="style-fs-16 style-m-fs-14">
                                   <b>
-                                    1mglabs
+                                    {{name}}
                                   </b>
                                 </h3>
                               </div>
@@ -44,11 +44,11 @@
                           <div class="style-body">
                             <div class="row style-mt-0 style-d-flex">
                               <div class="col-xs-12 col-lg-8">
-                                <div *ngFor="let item of CartData">
+                                <div>
                                   <div class="row style-test-summary">
                                     <div class="col-lg-9 col-xs-8 style-pl-0 style-test-name style-m-pl-15">
                                       <b>
-                                        Comprehensive Full Body Checkup
+                                        {{tile}}
                                       </b>
                                       <div class="style-tat-cart">
                                         E-Reports with in 72 hours post sample collection
@@ -56,16 +56,27 @@
                                     </div>
                                     <div class="col-lg-3 col-xs-4 text-right-order">
                                       <div class="style-font-bold style-test-price">
-                                        ₹ 2399
+                                        ₹{{amount}}
                                       </div>
                                       <div class="style-test-mrp style-fs-12 style-m-fs-11 style-text-gray">
-                                        ₹ 10960
+                                        ₹ {{mrp}}
                                       </div>
                                     </div>
+
+                                    <div class="row no-gutters">
+                                      <div class="col-2 example-button-row">
+                                        <button mat-button>-</button>
+                                      </div>
+                                      <div class="col text-center">{{quantity}} in cart</div>
+                                      <div class="col-2 example-button-row">
+                                        <button mat-button>+</button>
+                                      </div>
+                                    </div>
+
                                     <div
                                       class="col-xs-12 style-pl-0 style-show-remove style-mt-0 style-fs-12 style-m-fs-11 style-m-pl-15">
                                       <span class="style-pointer">
-                                        <span (click)="removeAt(item._id)">
+                                        <span (click)="removeAt(CartData[0]._id)">
                                           <span class="style-text-gray">
                                             <i class="fa fa-trash-o"></i>
                                             Remove
@@ -105,14 +116,15 @@
                             <i class="fa fa-check-circle style-text-blue"></i>
                             You saved
                             <span class="style-text-green">
-                              ₹1200
+                              ₹{{saveAmount}}
                             </span>
                           </div>
                           <div class="col-xs-12 style-text-gray style-fs-12 style-mt-15  style-m-ml-0">
                             <b>
                               COMP:
                             </b>
-                            Flat 50% off
+                            Flat {{offer}}% off
+                            <!-- {{item?.packageId?.offerPercent}} -->
                           </div>
                           <div class="col-xs-12 style-fs-12">
                             <div class="style-mt-15 style-pt-15 style-border-top-summary">
