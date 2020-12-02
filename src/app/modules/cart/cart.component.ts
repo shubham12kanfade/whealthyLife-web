@@ -1,3 +1,4 @@
+import { MainService } from 'src/app/services/main.service';
 import { PopHealthComponent } from './../booktests/pop-health/pop-health.component';
 import { MedicineService } from './../../services/medicine.service';
 import { Component, OnInit } from '@angular/core';
@@ -66,6 +67,23 @@ export class CartComponent implements OnInit {
     });
 
   }
+
+
+  // addCartValue(){
+
+  //   const dataQua = {
+  //     ammountPro = this.amount,
+  //     quantity = this.quantity
+  //   }
+
+
+  //   this.MainService.addQuantity().then(QuaRes => {
+  //   console.log("🚀 ------------------------------------------------------------------------------------------------------");
+  //   console.log("🚀 ~ file: cart.component.ts ~ line 73 ~ CartComponent ~ this.MainService.addQuantity ~ QuaRes", QuaRes);
+  //   console.log("🚀 ------------------------------------------------------------------------------------------------------");
+
+  //   })
+  // }
 
   removeAt(id){
       console.log("CartComponent -> removeAt -> id", id)
