@@ -39,4 +39,9 @@ export class MedicineService {
   return this.ApiCallService.deleteData('userCart/'+id)
 
  }
+
+ addQuantity(data){
+   return this.ApiCallService.postData('userCart/add/quantity',data)
+ }
+
 }
