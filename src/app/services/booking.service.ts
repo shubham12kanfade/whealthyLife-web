@@ -19,4 +19,11 @@ getAllTestApi(city){
 getAllLabsCity(){
   return this.ApiCallService.getData('lab/get/cities')
 }
+getBookingPageRev(){
+  return this.ApiCallService.getData('customer/review/get/all/best')
+}
+searchAllProduct(city){
+  return this.ApiCallService.getData('tests/labTest/by/'+city)
+}
+
 }

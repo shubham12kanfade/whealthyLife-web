@@ -1,7 +1,9 @@
+import { PopHealthComponent } from './../booktests/pop-health/pop-health.component';
 import { MedicineService } from './../../services/medicine.service';
 import { Component, OnInit } from '@angular/core';
 import {MatDialog} from '@angular/material/dialog';
 import { AddressPopupComponent } from './address-popup/address-popup.component';
+import { ActivatedRoute, Router } from "@angular/router";
 
 
 @Component({
@@ -20,10 +22,14 @@ export class CartComponent implements OnInit {
   mrp: any;
   saveAmount: number;
   quantity: any;
+  LabId: any;
+  packType: any;
 
 
 
-  constructor(public dialog: MatDialog, private MedicineService:MedicineService) { }
+  constructor(public dialog: MatDialog,
+    private MedicineService:MedicineService,
+    ) { }
 
   openDialog() {
     const dialogRef = this.dialog.open(AddressPopupComponent);
@@ -35,6 +41,8 @@ export class CartComponent implements OnInit {
 
 
   ngOnInit() {
+
+
     this.getCartData();
 
   }
@@ -48,7 +56,7 @@ export class CartComponent implements OnInit {
       this.amount = this.CartData[0].ammount,
       this.offer = this.CartData[0].testId?.discountOffer,
       this.name = this.CartData[0].labId?.name,
-      this.tile = this.CartData[0].testId?.title,
+      this.tile = this.CartData[0].testId?.testId?.title,
       this.mrp = this.CartData[0].testId?.mrp,
       this.quantity = this.CartData[0].quantity
 

@@ -3,7 +3,7 @@
     <div class="col-sm-12">
       <div class="row">
         <div class="col-lg-6 col-md-8 col-sm-12" style="margin-bottom: 10px">
-          <div class="input-group">
+          <div class="input-group" [formGroup]="reg">
             <input type="text" class="form-control" (click)="modalopen()" placeholder="Select any city or locality" />
             <div class="input-group-append">
               <span class="input-group-text"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-trash"
@@ -14,7 +14,18 @@
                     d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4L4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
                 </svg></span>
             </div>
-            <input type="text" class="form-control" placeholder="Search for Tests and Profiles" />
+            <input type="text" class="form-control" placeholder="Search for Tests and Profiles" matInput
+              formControlName="title" [matAutocomplete]="auto" />
+
+            <mat-autocomplete #auto="matAutocomplete">
+              <mat-option *ngFor="let option of filteredOptions" [value]="option.name"
+                [routerLink]="['/booktests/pop-health/'+option.type+'/'+option.id]">
+                {{option.name}}
+              </mat-option>
+            </mat-autocomplete>
+
+
+
             <div class="input-group-append">
               <span class="input-group-text"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search"
                   fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -50,7 +61,7 @@
           </div>
         </div>
       </div>
-      <div class="row" style="margin-top: 30px">
+      <div class="row" style="margin-top: 30px" *ngIf="Profile?.length!=0">
         <h2 style="font-weight: 600">Top Booked Diagnostic Tests</h2>
         <div class="col-sm-12 col-md-12 col-lg-12 cen">
           <div class="row" style="
@@ -96,8 +107,8 @@
           </owl-carousel-o>
         </div>
       </div>
-      <div class="row" style="margin-top: 30px">
-        <h2 style="font-weight: 600">Health Checkups and Screenings For</h2>
+      <div class="row" style="margin-top: 30px" *ngIf="GetAll?.length">
+        <h2 style="font-weight: 600"> Health Checkups and Screenings For</h2>
         <div class="col-sm-12 col-md-12 col-lg-12 cen">
           <div class="row" style="
               position: absolute;
@@ -128,7 +139,7 @@
   </div>
 </section>
 
-<section style="margin-top: 30px">
+<section style="margin-top: 30px" *ngIf="Package?.length!=0">
   <div class="container">
     <h2 style="font-weight: 600">Popular Health Checkup Packages</h2>
     <div style="display: flex; flex-wrap: wrap; justify-content: flex-start">
@@ -379,7 +390,7 @@
   </div>
 </section>
 
-<section class="lab-slide" *ngIf="Labdata">
+<section class="lab-slide" *ngIf="Labdata.length">
   <div class="container margin_60_35">
     <div class="main_title">
       <div class="row">
@@ -421,7 +432,7 @@
   </div>
 </section>
 
-<section>
+<section *ngIf="review?.length">
   <div class="container">
     <div class="row">
       <div class="col-sm-12 col-md-12 col-lg-12 text-center m-2 mt-5">
@@ -442,33 +453,15 @@
           </span>
         </div>
         <owl-carousel-o [options]="customOptions4" #reviewlast>
-          <ng-template carouselSlide>
+          <ng-template carouselSlide *ngFor="let item of review">
             <div>
               <p>
-                Everything went very well and smoothly. Technician was right on
-                time. Really happy with the service.
+                {{item?.review}}
               </p>
               <p class="mt-4">Ashish Garnaik</p>
             </div>
           </ng-template>
-          <ng-template carouselSlide>
-            <div>
-              <p>
-                Good service, WhealthyLife is avoiding to stand in que for
-                health checkup.
-              </p>
-              <p class="mt-4">Lalita Hegde</p>
-            </div>
-          </ng-template>
-          <ng-template carouselSlide>
-            <div>
-              <p>
-                Very professional phlebo. Excellent job in collecting the
-                sample. No pain at all. Got my report also within 24 hours.
-              </p>
-              <p class="mt-4">Malathi Ganapathy</p>
-            </div>
-          </ng-template>
+
         </owl-carousel-o>
       </div>
     </div>
