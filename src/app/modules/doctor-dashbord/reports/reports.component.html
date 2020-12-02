@@ -1,0 +1,423 @@
+<section>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="h3 text-gray-800">Report</div>
+            <!-- <span class="h4 pl-3 text-gray-800 dnamep">Doctor name</span> -->
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-sm-12 col-md-3 col-lg-2 pt-2">
+                <select class="custom-select" id="inputGroupSelect01" #mySelect
+                    (change)='onOptionsSelected(mySelect.value)'>
+                    <option value="Invoiced Income">Invoiced Income</option>
+                    <option value="Payments">Payments</option>
+                    <option value="New Patients"> New Patients</option>
+                    <option value="Appointments"> Appointments</option>
+                    <option value="Communications">Communications</option>
+                    <option value="Billing Summary">Billing Summary</option>
+                    <option value="Amount Due">Amount Due</option>
+                </select>
+            </div>
+            <div class="col-sm-12 col-md-3 col-lg-2 pt-2">
+                <select class="custom-select" id="inputGroupSelect02" #mySelect2
+                    (change)='onOptionsSelected2(mySelect2.value)' [disabled]="selectTwo">
+                    <option *ngFor="let item of items" [value]="item.value">{{item.name}}</option>
+                </select>
+            </div>
+
+            <div
+                class="offset-lg-6 offset-md-3  col-lg-2 col-md-3 text-sm-center text-xs-center text-md-right pt-sm-2 pt-xs-2">
+                <i class="fa fa-envelope p-3 border mx-1 pointer" aria-hidden="true"></i>
+                <i class="fa fa-print p-3 border mx-1 pointer" aria-hidden="true"></i>
+                <i (click)="filter(!filtertype)" class="fa fa-filter p-3 border mx-1 pointer" aria-hidden="true"
+                    [ngClass]="{filterpress: !filtertype}"></i>
+            </div>
+        </div>
+        <div class="row">
+            <div class="card mt-3">
+                <div class="card-body" *ngIf="firstSelect=='Invoiced Income' && !filtertype">
+                    <div class="form-row">
+                        <div class="form-group col-md-3">
+                            <label for="one">Doctors</label>
+                            <input type="text" class="form-control" id="one" placeholder="">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="two">Referrer</label>
+                            <input type="text" class="form-control" id="two" placeholder="">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="three">Discount</label>
+                            <input type="text" class="form-control" id="three" placeholder="">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="four">Procedure Categories
+                            </label>
+                            <input type="text" class="form-control" id="four" placeholder="">
+                        </div>
+
+
+                        <div class="form-group col-md-3">
+                            <label for="Patient Groups">Patient Groups</label>
+                            <input type="text" class="form-control" id="Patient Groups" placeholder="">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="Payment Vendors">Payment Vendors</label>
+                            <input type="text" class="form-control" id="Payment Vendors" placeholder="">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="Taxes">Taxes</label>
+                            <input type="text" class="form-control" id="Taxes" placeholder="">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="Cancelled">Cancelled
+                            </label>
+                            <input type="text" class="form-control" id="Cancelled" placeholder="">
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="card-body" *ngIf="firstSelect=='Payments' && !filtertype">
+                    <div class="form-row">
+                        <div class="form-group col-md-3">
+                            <label for="one">Show</label>
+                            <input type="text" class="form-control" id="one" placeholder="">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="two">Doctors</label>
+                            <input type="text" class="form-control" id="two" placeholder="">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="three">Referrer</label>
+                            <input type="text" class="form-control" id="three" placeholder="">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="four">Discount
+                            </label>
+                            <input type="text" class="form-control" id="four" placeholder="">
+                        </div>
+
+                        <div class="form-group col-md-3">
+                            <label for="Patient Groups"> Patient Groups</label>
+                            <input type="text" class="form-control" id="Patient Groups" placeholder="">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="Payment Vendors">Payment Vendors</label>
+                            <input type="text" class="form-control" id="Payment Vendors" placeholder="">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="Taxes">Taxes</label>
+                            <input type="text" class="form-control" id="Taxes" placeholder="">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="Cancelled">Cancelled
+                            </label>
+                            <input type="text" class="form-control" id="Cancelled" placeholder="">
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="card-body" *ngIf="firstSelect=='New Patients' && !filtertype">
+                    <div class="form-row">
+                        <div class="form-group col-md-3">
+                            <label for="one">Referrer</label>
+                            <input type="text" class="form-control" id="one" placeholder="">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="two">Patient Groups</label>
+                            <input type="text" class="form-control" id="two" placeholder="">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="three">Blood Group</label>
+                            <input type="text" class="form-control" id="three" placeholder="">
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="card-body" *ngIf="firstSelect=='Appointments' && !filtertype">
+                    <div class="form-row">
+                        <div class="form-group col-md-3">
+                            <label for="one"> Doctors</label>
+                            <input type="text" class="form-control" id="one" placeholder="">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="two">Appointment Categories</label>
+                            <input type="text" class="form-control" id="two" placeholder="">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="three">Cancelled</label>
+                            <input type="text" class="form-control" id="three" placeholder="">
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="card-body" *ngIf="firstSelect=='Communications' && !filtertype">
+                    <div class="form-row">
+                        <div class="form-group col-md-3">
+                            <label for="one"> Recipient</label>
+                            <input type="text" class="form-control" id="one" placeholder="">
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="card-body" *ngIf="firstSelect=='Billing Summary' && !filtertype">
+                    <div class="form-row">
+                        <div class="form-group col-md-3">
+                            <label for="one"> Doctors</label>
+                            <input type="text" class="form-control" id="one" placeholder="">
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <div class="card-body" *ngIf="firstSelect=='Amount Due' && !filtertype">
+                    <div class="form-row">
+                        <div class="form-group col-md-3">
+                            <label for="one"> Patient Groups</label>
+                            <input type="text" class="form-control" id="one" placeholder="">
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="card mt-3">
+
+
+
+                <div class="card-body" *ngIf="firstSelect=='Invoiced Income'">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-2 text-center">
+                            <p class="h4   text-gray-800 "> COST (₹)</p>
+                            <p class="font-weight-bold  h4 mb-2 text-gray-800 ">0.00</p>
+                        </div>
+                        <div class="col-sm-12 col-md-2 text-center">
+                            <p class="h4   text-gray-800 "> DISCOUNT (₹)</p>
+                            <p class="font-weight-bold  h4 mb-2 text-gray-800 ">0.00</p>
+                        </div>
+                        <div class="col-sm-12 col-md-4 text-center">
+                            <p class="h4   text-gray-800 "> INCOME AFTER DISCOUNT (₹)</p>
+                            <p class="font-weight-bold  h4 mb-2 text-gray-800 ">0.00</p>
+                        </div>
+                        <div class="col-sm-12 col-md-2 text-center">
+                            <p class="h4   text-gray-800 "> TAX (₹)</p>
+                            <p class="font-weight-bold  h4 mb-2 text-gray-800 ">0.00</p>
+                        </div>
+                        <div class="col-sm-12 col-md-2 text-center">
+                            <p class="h4   text-gray-800 "> INVOICE AMOUNT (₹)</p>
+                            <p class="font-weight-bold  h4 mb-2 text-gray-800 ">0.00</p>
+                        </div>
+                    </div>
+
+
+
+                </div>
+                <div class="card-body" *ngIf="firstSelect==='Payments' && selectTwoValue=='All' ">
+                    <div class="row">
+
+
+                        <div class="col-sm-6 col-md-6 text-center">
+                            <p class="h4   text-gray-800 "> TOTAL PAYMENTS (₹)</p>
+                            <p class="font-weight-bold  h4 mb-2 text-gray-800 ">0.00</p>
+                        </div>
+                        <div class="col-sm-6 col-md-6 text-center">
+                            <p class="h4   text-gray-800 "> TOTAL ADVANCE PAYMENTS (₹)</p>
+                            <p class="font-weight-bold  h4 mb-2 text-gray-800 ">0.00</p>
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+                <div class="card-body" *ngIf="firstSelect==='Payments' && selectTwoValue=='Mode Of Payments' ">
+                    <div class="row">
+
+
+
+
+
+
+                        <div class="col-sm-12 col-md-4 text-center">
+                            <p class="h4   text-gray-800 "> TOTAL PAYMENT (₹)</p>
+                            <p class="font-weight-bold  h4 mb-2 text-gray-800 ">0.00</p>
+                        </div>
+                        <div class="col-sm-12 col-md-4 text-center">
+                            <p class="h4   text-gray-800 "> TOTAL VENDOR FEES (₹)</p>
+                            <p class="font-weight-bold  h4 mb-2 text-gray-800 ">0.00</p>
+                        </div>
+                        <div class="col-sm-12 col-md-4 text-center">
+                            <p class="h4   text-gray-800 "> NET PAYMENT (₹)</p>
+                            <p class="font-weight-bold  h4 mb-2 text-gray-800 ">0.00</p>
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+                <div class="card-body" *ngIf="firstSelect==='New Patients'  ">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12 text-center">
+                            <p class="h4   text-gray-800 "> TOTAL PATIENTS</p>
+                            <p class="font-weight-bold  h4 mb-2 text-gray-800 ">0</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body" *ngIf="firstSelect==='Appointments'  ">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12 text-center">
+                            <p class="h4   text-gray-800 "> TOTAL APPOINTMENTS</p>
+                            <p class="font-weight-bold  h4 mb-2 text-gray-800 ">0</p>
+                        </div>
+                    </div>
+
+
+
+                </div>
+                <div class="card-body" *ngIf="firstSelect==='Communications' && selectTwoValue=='Transactional SMS' ">
+                    <div class="row">
+
+                        <div class="col-sm-6 col-md-6 text-center">
+                            <p class="h4   text-gray-800 "> Total SMS Delivered</p>
+                            <p class="font-weight-bold  h4 mb-2 text-gray-800 ">0</p>
+                        </div>
+                        <div class="col-sm-6 col-md-6 text-center">
+                            <p class="h4   text-gray-800 "> Total SMS Initiated</p>
+                            <p class="font-weight-bold  h4 mb-2 text-gray-800 ">0</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body" *ngIf="firstSelect==='Communications' && selectTwoValue=='Promotional SMS' ">
+                    <div class="row">
+
+                        <div class="col-sm-4 col-md-4 text-center">
+                            <p class="h4   text-gray-800 "> Total SMS Delivered</p>
+                            <p class="font-weight-bold  h4 mb-2 text-gray-800 ">0</p>
+                            <p class="h4   text-gray-800 "> out of 0 SMS</p>
+                        </div>
+                        <div class="col-sm-4 col-md-4 text-center">
+                            <p class="h4   text-gray-800 "> Total Deductions (₹)</p>
+                            <p class="font-weight-bold  h4 mb-2 text-gray-800 ">0</p>
+                            <p class="h4   text-gray-800 "> Total SMS Delivered</p>
+                        </div>
+                        <div class="col-sm-4 col-md-4 text-center">
+                            <p class="h4   text-gray-800 "> Total Deductions (₹)</p>
+                            <p class="font-weight-bold  h4 mb-2 text-gray-800 "> 100.00</p>
+                            <p class="h4   text-gray-800 ">333 SMS left</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body" *ngIf="firstSelect==='Communications' && selectTwoValue=='Transactional Email' ">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-6 text-center">
+                            <p class="h4   text-gray-800 "> Total Emails Delivered</p>
+                            <p class="font-weight-bold  h4 mb-2 text-gray-800 ">0</p>
+                        </div>
+                        <div class="col-sm-6 col-md-6 text-center">
+                            <p class="h4   text-gray-800 "> TYPES OF EMAIL EMAIL DELIVERED </p>
+                            <p class="font-weight-bold  h4 mb-2 text-gray-800 ">0</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body" *ngIf="firstSelect==='Communications' && selectTwoValue=='SMS Credit Usage'">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-6 text-center">
+                            <p class="h4   text-gray-800 "> Total Emails Delivered</p>
+                            <p class="font-weight-bold  h4 mb-2 text-gray-800 ">0</p>
+                        </div>
+                        <div class="col-sm-6 col-md-6 text-center">
+                            <p class="h4   text-gray-800 "> TYPES OF EMAIL EMAIL DELIVERED </p>
+                            <p class="font-weight-bold  h4 mb-2 text-gray-800 ">0</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body" *ngIf="firstSelect==='Billing Summary' ">
+                    <div class="row">
+                        <div class="col-sm-4 col-md-2 text-center">
+                            <p class="h4   text-gray-800 "> COST (₹)</p>
+                            <p class="font-weight-bold  h4 mb-2 text-gray-800 ">0</p>
+                        </div>
+                        <div class="col-sm-4 col-md-2 text-center">
+                            <p class="h4   text-gray-800 "> DISCOUNT (₹)</p>
+                            <p class="font-weight-bold  h4 mb-2 text-gray-800 ">0</p>
+                        </div>
+                        <div class="col-sm-4 col-md-2 text-center">
+                            <p class="h4   text-gray-800 "> TAX (₹)</p>
+                            <p class="font-weight-bold  h4 mb-2 text-gray-800 ">0</p>
+                        </div>
+                        <div class="col-sm-6 col-md-3 text-center">
+                            <p class="h4   text-gray-800 ">INVOICED INCOME (₹)</p>
+                            <p class="font-weight-bold  h4 mb-2 text-gray-800 ">0</p>
+                        </div>
+                        <div class="col-sm-6 col-md-3 text-center">
+                            <p class="h4   text-gray-800 "> AMOUNT PAID (₹)</p>
+                            <p class="font-weight-bold  h4 mb-2 text-gray-800 ">0</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body" *ngIf="firstSelect==='Amount Due' ">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12 text-center">
+                            <p class="h4   text-gray-800 "> COST (₹)</p>
+                            <p class="font-weight-bold  h4 mb-2 text-gray-800 ">0</p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div class="card mt-3" *ngIf="firstSelect==='Communications' && selectTwoValue=='Transactional Email' ">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-6 ">
+                            <p class="h4   text-gray-800 ">TYPES OF EMAIL</p>
+
+                        </div>
+                        <div class="col-sm-6 col-md-6 ">
+                            <p class="h4   text-gray-800 ">EMAIL DELIVERED </p>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- <div class="card shadow mb-4">
+  
+    <a href="#collapseCardExample" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExample">
+        <h6 class="m-0 font-weight-bold text-primary">Collapsable Card Example</h6>
+    </a>
+
+    <div class="collapse show" id="collapseCardExample">
+        <div class="card-body">
+            This is a collapsable card example using Bootstrap's built in collapse functionality. <strong>Click on the card header</strong> to see the card body collapse and expand!
+        </div>
+    </div>
+</div> -->

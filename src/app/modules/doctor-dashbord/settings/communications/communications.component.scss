@@ -1,0 +1,100 @@
+.text-primary{
+    font-size: 2.2rem;
+    display: flex;
+    font-weight: 400;
+    
+}
+// .second,.nav{
+//     display: flex !important;
+//   justify-content: center !important;
+//   align-items: center;
+  
+//  >.nav-item{
+//      font-size: 1.4rem !important;  
+//      border:1px solid black;
+//     //  border-radius: 50%;
+//  }
+// }
+// .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+//     color: #fff !important;
+//     background-color: #777 !important;
+// }
+
+// // .text1{
+// //     font-size: 1.7rem !important;
+// // }
+
+// .btnadd{
+//     // height: 30%;
+//     // width: 35%;
+//     font-size: 15px;
+//     float: right;
+    
+// }
+.card-header{
+    margin-top:4%;
+}
+.first{
+    margin-top: -3%;
+}
+// .second{
+//     margin-top: -3%;
+// }
+// .third{
+//     margin-top: -3%;
+//     float: right;
+// }
+
+.mm{
+    left: 10%;
+}
+.alert{
+    font-size: 12px;
+    text-align: center;
+}
+*{
+    font-size: 12px;
+}
+
+// .btn-light:hover{
+//     color: white;
+// }
+.mtitle{
+    font-size: 0.5rem !important;
+    // top: 10%;
+}
+// .modal{
+//     padding: 30px 70px 30px 70px;
+// }
+.cols{
+    font-size: 1.1rem;
+}
+
+.header{
+margin-top: 34px;
+margin-left: 20px;
+// height: 30%;
+z-index: 1;
+background: white;
+}
+.modal-body{
+    padding: 60px;
+    margin-top:-52px ;
+    // margin-bottom: -40px;
+    // overflow: scroll;
+    height: 80vh;
+    overflow-y: scroll;
+}
+// .redstar{
+//     color: red;
+// }
+#myModal{
+    margin-left: 23%;
+    top: 5%;
+    // padding-bottom: -20%;
+    display: block;
+    
+}
+table {
+    width: 100%;
+}

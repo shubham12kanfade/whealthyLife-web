@@ -1,0 +1,416 @@
+<section>
+    <div class="container">
+        <div class="row" style="margin-top: 20px;">
+            <div class="col-md-5 col-lg-5 offset-md-1">
+                <div class="">
+                    <form [formGroup] = "memberForm">
+                        <ng-container formArrayName="ClinicDetails" *ngFor="let quantity of ClinicDetails().controls; let j=index"  >
+                        <div  [formGroupName]="j" style="border: 2px solid ; border-radius: 5px;padding: 20px;">
+                           
+                            <div class="col-12" style="display: flex;justify-content: flex-end;padding: 0px;">
+                                  <button type="button" class="btn" style="color: red;cursor: pointer;" (click)=" deleteClinicDetails(j)" *ngIf="j > 0"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-dash-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                    <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+                                  </svg></button>
+                            </div>
+
+                        <!-- <div class="form-group">
+                            <label for="RegistrationNumber">Clinic Name</label>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <input type="text" class="form-control" formControlName="clinicName"
+                                         placeholder="eg. Ram Clinic" >
+                                </div>
+                            </div>
+                        </div> -->
+                        <div  style="margin: 0px 0px 25px 0px;padding: 0px;">
+                        <label for="RegistrationNumber">Clinic Name</label>
+                        <div class="ng-autocomplete" style="width: 100%;">
+                            <ng-autocomplete 
+                              [data]="data"
+                              [searchKeyword]="keyword"
+                              (selected)='selectEvent($event)'
+                              (inputChanged)='onChangeSearch($event)'
+                              (inputFocused)='onFocused($event)'
+                              [itemTemplate]="itemTemplate"
+                              [notFoundTemplate]="notFoundTemplate">  
+                            </ng-autocomplete>
+                             
+                            <ng-template #itemTemplate let-item>
+                            <a [innerHTML]="item.name"></a>
+                            </ng-template>
+                             
+                            <ng-template #notFoundTemplate let-notFound>
+                            <div [innerHTML]="notFound"></div>
+                            </ng-template>
+                            </div>
+                        </div>
+
+
+
+
+
+                        <!-- <div class="form-group">
+                            <label for="RegistrationNumber">Clinic Address</label>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <textarea type="text" class="form-control" formControlName="clinicAddress">
+                                </textarea>
+                                </div>
+                            </div>
+                        </div> -->
+
+                        <div  style="margin: 0px 0px 25px 0px;padding: 0px;">
+                            <label for="RegistrationNumber">Clinic Name</label>
+                            <div class="ng-autocomplete" style="width: 100%;">
+                                <ng-autocomplete 
+                                  [data]="data"
+                                  [searchKeyword]="keyword1"
+                                  (selected)='selectEvent1($event)'
+                                  (inputChanged)='onChangeSearch1($event)'
+                                  (inputFocused)='onFocused1($event)'
+                                  [itemTemplate]="itemTemplate"
+                                  [notFoundTemplate]="notFoundTemplate"
+                                  >  
+                                  
+                                </ng-autocomplete>
+                                 
+                                <ng-template #itemTemplate let-item>
+                                <a [innerHTML]="item.name"></a>
+                                </ng-template>
+                                 
+                                <ng-template #notFoundTemplate let-notFound>
+                                <div [innerHTML]="notFound"></div>
+                                </ng-template>
+                                </div>
+                            </div>
+
+
+
+                        <ng-container formArrayName="times">
+                            <div *ngFor="let quantity of times(j).controls; let k=index" [formGroupName]="k">
+
+                            <div style="border: 2px solid ; border-radius: 5px;padding: 20px;"> 
+                            <div class="col-12" style="display: flex;justify-content: flex-end;padding: 0px;">
+                                  <button type="button" class="btn" style="color: red;cursor: pointer;" (click)="deleteTime(j,k)" *ngIf="k > 0"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-dash-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                    <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+                                  </svg></button>
+                            </div>
+                            <div class="form-group">
+                                <label for="RegistrationNumber">Select Day</label>
+                                <select class="form-control" formControlName="timeday">
+                                    <option value="Monday"> Monday </option>
+                                    <option value="Tuesday"> Tuesday </option>
+                                    <option value="Wednesday"> Wednesday </option>
+                                    <option value="Thursday"> Thursday </option>
+                                    <option value="Friday"> Friday </option>
+                                    <option value="Saturday"> Saturday </option>
+                                    <option value="Sunday"> Sunday </option>
+                                </select>
+                            </div>
+                        <div class="form-group" >
+                            <label for="RegistrationNumber">Timming</label>
+                            <div class="row">
+                            <div class="form-group col-md-6">
+                                <label for="startSession"> Start</label>
+                                <select class="form-control" formControlName="session1Start">
+                                    <option *ngFor="let item of TimeSloat" [value]="item?.value">{{item?.value}}</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="startSession"> End</label>
+                                <select class="form-control"  formControlName="session1End">
+                                    <option *ngFor="let item of TimeSloat" [value]="item?.value">{{item?.value}}</option>
+                                </select>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div style="display: flex;justify-content: flex-end;">
+                        <button type="button" class="btn " style="color: green;cursor: pointer;" (click)="addTime(j)"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-plus-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                            <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                          </svg></button>
+                        </div>
+
+                        </ng-container>
+                     </div>
+                    </ng-container>
+                    <div style=" display: flex; justify-content: flex-end; ">
+                    <button type="button" class="btn " style="color: green;cursor: pointer;" (click)="addClinicDetails()"  ><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-plus-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                        <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                      </svg></button>
+                    </div>
+                        <div class="form-group ">
+                            <label for="startSession"> Fees </label>
+                            <input type="number" class="form-control" formControlName="fees"
+                            placeholder="Enter your consultation charges" aria-label="Username"
+                            aria-describedby="basic-addon1" />
+                        </div>
+                        <div class="form-group">
+                            <label for="startSession">Doctor’s hours</label>
+                            <mat-radio-group aria-label="Select an option" formControlName="establishmentHour">
+                                <div class="form-group-sm border py-2 pl-2">
+                                    <mat-radio-button value="sameAsEstablishmentHour">Same as establishment hours</mat-radio-button>
+                                </div>
+                                <div class="form-group-sm border py-2 pl-2">
+                                    <mat-radio-button value="diffrentAsEstablishmentHour">Different from establishment hours
+                                    </mat-radio-button>
+                                </div>
+                            </mat-radio-group>
+                        </div>
+                        <div class="row">
+                            <button mat-raised-button matStepperPrevious>
+                                <mat-icon aria-hidden="false" aria-label="Example home icon">chevron_left</mat-icon>
+                                Back
+                            </button>
+                            <button style="position: absolute; right: 0;" mat-raised-button color="warn" (click)="onSave()">
+                                Save and contnue
+                                <mat-icon aria-hidden="false" aria-label="Example home icon">chevron_right</mat-icon>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-5 col-lg-4 offset-md-1">
+                <div class="d-none d-sm-none d-md-block col-md-12 col-lg-8 mt-5 ml-5 pr-0 pl-0"
+                style="border: 1px solid #14aa9b;">
+                <div class="bg p-4 textcol">
+                    <div>
+                        <i class="fa fa-lightbulb-o fa-lg" aria-hidden="true"></i>
+                    </div>
+                    <p class="stext font-weight-bold">
+                        Establishments with more doctors get more visibility on whealthylife.in
+                    </p>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<!-- <section>
+    <div class="row">
+        <div class="col-md-5 col-lg-3 offset-md-2">
+            <form [formGroup]="empForm" >
+                <div *ngFor="let employee of employees().controls; let empIndex=index">
+                    <div class="" [formGroupName]="empIndex">
+
+                        <div class="form-group">
+                            <label for="RegistrationNumber">Clinic Name</label>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <input type="text" class="form-control" formControlName="clinicName"
+                                         placeholder="eg. Ram Clinic" >
+                                </div>
+                            </div>
+                        </div>
+                        <button (click)="removeEmployee(empIndex)">Remove</button>
+
+                        <div formArrayName="skills">
+                            <div *ngFor="let skill of employeeSkills(empIndex).controls; let skillIndex=index">
+                                <div [formGroupName]="skillIndex">
+                                    <div class="form-group">
+                                        <label for="RegistrationNumber">Timming</label>
+                                        <div class="row">
+                                        <div class="form-group col-md-6">
+                                            <label for="startSession"> Start</label>
+                                            <select class="form-control"    formControlName="session1Start">
+                                                <option *ngFor="let item of TimeSloat" [value]="item?.value">{{item?.value}}</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="startSession"> End</label>
+                                            <select class="form-control"  formControlName="session1End">
+                                                <option *ngFor="let item of TimeSloat" [value]="item?.value">{{item?.value}}</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                                <button (click)="removeEmployeeSkill(empIndex,skillIndex)">Remove</button>
+                            </div>
+                            <button type="button" (click)="addEmployeeSkill(empIndex)">Add Skill</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <p>
+            <button type="button" (click)="addEmployee()">Add Employee</button>
+          </p>
+        <div class="col-md-3 col-lg-5 offset-md-1">
+
+        </div>
+    </div>
+</section> -->
+
+
+
+<!-- <section>
+    <div class="row">
+        <div class="col-md-5 col-lg-3 offset-md-2">
+            <form [formGroup]="empForm" >
+                <div formArrayName="addresssOne" *ngFor="let quantity of addresssOne().controls; let j=index" >
+                    <div class="" [formGroupName]="j">
+
+                        <div class="form-group">
+                            <label for="RegistrationNumber">Clinic Name</label>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <input type="text" class="form-control" formControlName="clinicName"
+                                         placeholder="eg. Ram Clinic" >
+                                </div>
+                            </div>
+                        </div>
+              
+
+                        <div formArrayName="Plots">
+                            <div *ngFor="let quantity of Plots(j).controls; let p = index" [formGroupName]="p">
+                                    <div class="form-group">
+                                        <label for="RegistrationNumber">Timming</label>
+                                        <div class="row">
+                                        <div class="form-group col-md-6">
+                                            <label for="startSession"> Start</label>
+                                            <select class="form-control"    formControlName="session1Start">
+                                                <option *ngFor="let item of TimeSloat" [value]="item?.value">{{item?.value}}</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="startSession"> End</label>
+                                            <select class="form-control"  formControlName="session1End">
+                                                <option *ngFor="let item of TimeSloat" [value]="item?.value">{{item?.value}}</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <span class="material-icons" style="color: red;cursor: pointer;" (click)="deletePlots(j,p)" *ngIf="p > 0" >
+                                            remove_circle
+                                        </span>
+                                        <span class="material-icons" style="color: green;cursor: pointer;" (click)="addPlots(j)"  *ngIf="p == 0" >
+                                            add_circle
+                                        </span>
+                                    </div>
+                                    </div>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="material-icons " style="color: red;cursor: pointer;" *ngIf="j > 0" (click)="deleteAddresssOne(j)">
+                                remove_circle_outline
+                            </span>
+                            <span class="material-icons " style="color: green;cursor: pointer;" *ngIf="j == 0" (click)="addAddresssOne()"> 
+                                add_circle_outline
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <p>
+            <button type="button" (click)="addEmployee()">Add Employee</button>
+          </p>
+        <div class="col-md-3 col-lg-5 offset-md-1">
+
+        </div>
+    </div>
+</section> -->
+
+
+
+
+
+
+
+<!-- <section class="bg-white p-sm-3">
+    <div class="row">
+        <div class="col-md-5 col-lg-3 offset-md-2" [formGroup]="empForm">
+
+           
+            <div class="form-group">
+                <label for="RegistrationNumber">Clinic Name</label>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <input type="text" class="form-control" formControlName="clinicName"
+                             placeholder="eg. Ram Clinic" >
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="RegistrationNumber">Timming</label>
+                <div class="row">
+                <div class="form-group col-md-6">
+                    <label for="startSession"> Start</label>
+                    <select class="form-control"    formControlName="session1Start">
+                        <option *ngFor="let item of TimeSloat" [value]="item?.value">{{item?.value}}</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="startSession"> End</label>
+                    <select class="form-control"  formControlName="session1End">
+                        <option *ngFor="let item of TimeSloat" [value]="item?.value">{{item?.value}}</option>
+                    </select>
+                </div>
+            </div>
+            </div>
+
+
+            <label for="RegistrationNumber">Consultation Fees</label>
+            <div class="input-group sm mb-2">
+                <div class="input-group-prepend">
+                    <span class="input-group-text bg-white" id="basic-addon1">Fees</span>
+                </div>
+                <input type="number" class="form-control" formControlName="fees"
+                    placeholder="Enter your consultation charges" aria-label="Username"
+                    aria-describedby="basic-addon1" />
+            </div>
+            
+
+
+            <p>Doctor’s hours</p>
+            <div class="form-group">
+                <mat-radio-group aria-label="Select an option" formControlName="establishmentHour">
+                    <div class="form-group-sm border py-2 pl-2">
+                        <mat-radio-button value="sameAsEstablishmentHour">Same as establishment hours</mat-radio-button>
+                    </div>
+                    <div class="form-group-sm border py-2 pl-2">
+                        <mat-radio-button value="diffrentAsEstablishmentHour">Different from establishment hours
+                        </mat-radio-button>
+                    </div>
+                </mat-radio-group>
+            </div>
+            <p>Note: you can add more doctors later.</p>
+            <hr class="mt-5 mb-5" />
+            <div class="row">
+                <button mat-raised-button matStepperPrevious>
+                    <mat-icon aria-hidden="false" aria-label="Example home icon">chevron_left</mat-icon>
+                    Back
+                </button>
+                <button style="position: absolute; right: 0;" mat-raised-button color="warn" (click)="onSave()">
+                    Save and contnue
+                    <mat-icon aria-hidden="false" aria-label="Example home icon">chevron_right</mat-icon>
+                </button>
+            </div>
+        </div>
+        <div class="col-md-3 col-lg-5 offset-md-1">
+            <div class="d-none d-sm-none d-md-block col-md-12 col-lg-8 mt-5 ml-5 pr-0 pl-0"
+                style="border: 1px solid #14aa9b;">
+                <div class="bg p-4 textcol">
+                    <div>
+                        <i class="fa fa-lightbulb-o fa-lg" aria-hidden="true"></i>
+                    </div>
+                    <p class="stext font-weight-bold">
+                        Establishments with more doctors get more visibility on whealthylife.in
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->

@@ -1,0 +1,211 @@
+.font-weight-bold {
+    font-weight: 500 !important;
+}
+
+p {
+    text-align: justify;
+    display: inline;
+}
+
+h1 {
+    line-height: 28px;
+    display: inline-block;
+}
+
+.textwidth {
+    width: 100%;
+}
+
+.text-decoration-underline {
+    text-decoration: underline;
+}
+
+.mcursor {
+    cursor: pointer;
+}
+
+@media (min-width: 768) {
+    .img {
+        height: 300px;
+        background-position: center;
+        background-repeat: inherit;
+        background-size: cover;
+    }
+}
+
+.cardrd {
+    border: 1px solid #ffffff !important;
+    border-radius: 15px !important;
+}
+
+.mat-tab-label {
+    height: 48px;
+    padding: 0 24px;
+    cursor: pointer;
+    box-sizing: border-box;
+    opacity: .6;
+    min-width: 50px !important;
+    text-align: center;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    position: relative;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #f0f0f5;
+    width: 100%;
+}
+
+li {
+    float: left;
+}
+
+li .a {
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li .a:hover:not(.selectActive) {
+    background-color: #f0f0f5;
+}
+
+.selectActive {
+    background-color: white;
+    color: blue;
+}
+
+.starbgandcolor {
+    color: #01a400;
+    background-color: #f0f0f5;
+}
+
+.fontsizesmall {
+    font-size: small;
+}
+
+.checkprime {
+    color: #8a45e6;
+}
+
+.buttonlineh {
+    line-height: 14px;
+    right: 37px;
+    position: absolute;
+    margin: -39px 0 0 0;
+}
+
+.font-sizex-smalll {
+    font-size: small
+}
+
+.font-sizex-small {
+    font-size: x-small
+}
+
+.font-sizexx-small {
+    font-size: xx-small;
+}
+
+.feebbackpro {
+    text-align: center;
+    background-color: #7575cd82;
+    width: 36px;
+}
+
+.feedback__context {
+    margin: 5px 2px;
+    padding: 2px 4px;
+    background-color: #d8f2fc;
+    border: 1px solid #b3e2f4;
+}
+
+.line-height {
+    line-height: 200%;
+}
+
+n,
+.dentist-icon {
+    background: url(//www.practo.com/consult/bundles/cwipage/images/specialities-v4.svg) no-repeat;
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+}
+
+.dentist-icon {
+    background-position: 0 0;
+}
+
+ul.b {
+    list-style-position: inside;
+    list-style: inside!important;
+    background-color: white;
+}
+
+ul.c {
+    list-style-position: inside;
+    list-style: inside !important;
+    background-color: #f0f0f5;
+}
+
+::ng-deep.mat-tab-label,
+ ::ng-deep.mat-tab-label-active {
+    min-width: 0!important;
+    padding: 3px!important;
+    margin: 3px!important;
+}
+
+.btn-outline-light {
+    color: #666c7d;
+    border-color: #c8c9cc;
+}
+
+.heightover {
+    overflow: initial;
+    min-height: 50vh;
+    max-height: 50vh;
+}
+
+.line-height-normal {
+    line-height: normal;
+}
+
+.bgcolor {
+    color: #8a6d3b;
+    background-color: #fcf8e3;
+    border-color: #faebcc;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+  .mat-tab-body-wrapper{
+      height: 50vh !important;
+  }
+
+  .text-dark1{
+    margin-left: 10px;
+  }

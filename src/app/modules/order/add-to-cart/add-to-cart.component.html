@@ -1,0 +1,184 @@
+<section class="sec1">
+    <div class="container-fluid">
+        <div class="row" style="padding-top:20px" *ngFor="let product of ProductData">
+            <div class="col-lg-8 col-md-8 col-sm-12 col-12">
+                <div class="card marbott" >
+                    <div class="card-header cdh">
+                        <div class="">
+                            <h2>My Cart (1)</h2>
+                        </div>
+                        <div class="">
+                            <input matInput type="text" placeholder="Enter Your Pincode">
+                        </div>
+                    </div>
+                    <div class="card-body" >
+                        <div class="row">
+                            <div class="col-12 Adj1">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="row">
+                                            <div class="col-lg-3 col-md-3 col-sm-12 col-12">
+
+                                                <div class="col-12 " style="text-align: center;">
+                                                    <img class="img-fluid imge1 " src="{{product.avtar}}"
+                                                        alt="Card image cap">
+                                                </div>
+
+                                            </div>
+                                            <div class="col-lg-5 col-md-5 col-sm-6 col-12 ">
+                                                <div class="col-12 maxH">
+                                                    <h4>{{product.name }}</h4>
+                                                    <p>Available offers</p>
+                                                    <h1>₹{{product.price}}</h1>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-md-4 col-sm-6 dis">
+                                                <h4>Delivery by Mon Jul 6 | Free₹80</h4>
+                                                <p>7 Days Replacement Policy</p>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="row">
+                                            <div class="col-lg-3 col-md-3 col-sm-6 col-12">
+                                                <form>
+                                                <div class="col-12 flec1 as">
+                                                    <div>
+                                                        <div class="sdsdd" (click)="subtract()"> - </div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="sdsssd" >{{product.quantity}}</div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="sdsdd" (click)="addition()"> + </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                            </div>
+                                            <div class="col-lg-5 col-md-5 col-sm-6 col-12">
+                                                <div class="col-12 flec2">
+                                                    <div  class="fontS">
+                                                        <h3 >SAVE FOR LATER</h3>
+                                                    </div>
+                                                    <div  class="fontS">
+                                                        <h3>REMOVE</h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr class="hgcdsbjb">
+                            <div class="col-12 Adj1">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="row">
+                                            <div class="col-lg-3 col-md-3 col-sm-12 col-12">
+
+                                                <div class="col-12 " style="text-align: center;">
+                                                    <img class="img-fluid imge1 " src="{{product.avtar}}"
+                                                        alt="Card image cap">
+                                                </div>
+
+                                            </div>
+                                            <div class="col-lg-5 col-md-5 col-sm-6 col-12 ">
+                                                <div class="col-12 maxH">
+                                                    <h4>{{product.name }}</h4>
+                                                    <p>Available offers</p>
+                                                    <h1>₹{{product.price}}</h1>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-md-4 col-sm-6 dis">
+                                                <h4>Delivery by Mon Jul 6 | Free₹80</h4>
+                                                <p>7 Days Replacement Policy</p>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="row">
+                                            <div class="col-lg-3 col-md-3 col-sm-6 col-12">
+                                                <div class="col-12 flec1 as">
+                                                    <div>
+                                                        <div class="sdsdd"> - </div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="sdsssd"> 2 </div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="sdsdd"> + </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-5 col-md-5 col-sm-6 col-12">
+                                                <div class="col-12 flec2">
+                                                    <div  class="fontS">
+                                                        <h3 >SAVE FOR LATER</h3>
+                                                    </div>
+                                                    <div  class="fontS">
+                                                        <h3>REMOVE</h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer bordertop">
+                        <div class="offset-lg-8 col-lg-4 offset-6 col-6">
+                            <a [routerLink]="['/order/Payment/', product.id]" style="text-decoration: none;">
+                                <button mat-stroked-button color="accent" class="btu">
+                                    <span> PLACE ORDER</span>
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-12">
+                <div class="card">
+                    <div class="card-header cdh">
+                        <div class="">
+                            <h2>PRICE DETAILS</h2>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-6">
+                                <h3>Price (1 items)</h3>
+                            </div>
+                            <div class="col-6 TextAl">
+                                <h3>₹{{product.price}}</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <h3> Delivery Fee </h3>
+                            </div>
+                            <div class="col-6 TextAl">
+                                <h3>FREE</h3>
+                            </div>
+                        </div>
+                        <hr class="hr12">
+                        <div class="row">
+                            <div class="col-6">
+                                <h3>Total Amount</h3>
+                            </div>
+                            <div class="col-6 TextAl">
+                                <h3> ₹{{product.price}}</h3>
+                            </div>
+                        </div>
+                        <hr class="hr12">
+                        <div>
+                            You will save ₹0 on this order
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

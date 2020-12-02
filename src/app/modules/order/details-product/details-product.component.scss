@@ -1,0 +1,48 @@
+
+button.mat-focus-indicator.mat-stroked-button.mat-button-base.mat-accent {
+    min-width: 100% !important;
+    min-height: 50px;
+    background-color: orange;
+    color: white;
+}
+
+
+button.mat-focus-indicator.mat-button.mat-button-base.mat-warn {
+    min-width: 100% !important;
+    min-height: 50px;
+    background-color:#f44336;
+    color: white;
+}
+
+.btu{
+    display: block;
+    margin: auto;
+    font-size: 17px;
+}
+.bord{
+    border: 1px solid lightgray !important;
+}
+ 
+.stuck {
+    position: fixed;
+    top: 112px;
+    left: 10px;
+    bottom: 10px;
+    width: 180px;
+    overflow-y: scroll;
+    max-height: 100%;
+    width: 50%;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+  }
+
+#f {
+    background: #fff;
+    padding: 20px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}

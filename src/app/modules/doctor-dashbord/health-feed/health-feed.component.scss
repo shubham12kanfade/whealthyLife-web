@@ -1,0 +1,258 @@
+// .carousel-caption {
+//     right: 0;
+//     left: 0;
+//     padding-bottom: 65px;
+// }
+
+// .carousel-caption {
+//     position: absolute;
+//     right: 15%;
+//     bottom: 20px;
+//     left: 15%;
+//     z-index: 10;
+//     padding-top: 20px;
+//     padding-bottom: 20px;
+//     color: #fff;
+//     text-align: center;
+//     text-shadow: 0 1px 2px rgba(0,0,0,.6);
+// }
+
+
+.hd-title {
+    text-shadow: none;
+    font-size: 40px;
+    letter-spacing: -1px;
+    line-height: 50px;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+   
+}
+
+.active-div{
+   
+    background-color: #28328D;
+    height: 400px;
+}
+
+
+
+ .submit-btn-mat {
+    background-color: #ffa000 !important;
+    width: 200px;
+    font-weight: 500;
+    padding: 10px;
+    font-size: 18px;
+    line-height: 24px;
+    color: #ffffff !important;
+}
+
+.p-text {
+    margin: 0 0 10px;
+    color: white;
+    text-align: center;
+    font-size: 25px;
+
+    
+}
+
+.corosal-opt{
+    padding: 8%;
+}
+
+.why-title{
+
+    text-shadow: none;
+    font-size: 40px;
+    letter-spacing: -1px;
+    line-height: 50px;
+    font-weight: 500;
+    color: black;
+    text-align: center  !important;
+}
+
+.img-circle{
+    width: 140px;
+    height: 140px;
+    text-align: center;
+}
+    
+
+.why-head-main{
+    font-weight: 500;
+    font-size: 25px;
+    color: black;
+    padding: 20px;
+}
+
+
+hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid #eee;
+    border-color: #e0e0e5;
+}
+
+
+.carousel-inner img {       
+    display:block;
+    height: auto; 
+    max-width: 100%;
+ }
+
+
+ .lhs {
+    left: 0px;
+    z-index: 100037;
+    position: absolute;
+    right: 0;
+    font-size: 9px;
+    margin-top: -130px;
+    margin-left: 144px;
+}
+
+.rhs {
+    z-index: 100037;
+    position: absolute;
+    right: 0;
+    font-size: 9px;
+  
+    margin-top: -130px;
+    margin-right: 144px;
+}
+
+
+
+
+.testimonial .carousel-caption-custome .ptext-m {
+    color: #414146;
+    align-content: center;
+    
+    margin-top: 30px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    padding-left: 7%;
+    padding-right: 7%;
+    display: block;
+
+    text-align: center !important; 
+    font-size: 18px !important;
+   
+    width: 100% !important;
+   
+}
+
+@media (max-width: 979px) and (min-width: 768px){
+.container, .navbar-static-top .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
+    width: 724px;
+}
+
+}
+
+.carousel-inner{
+    margin:auto;
+width:100%
+}
+
+
+
+.footer-text{
+    background-color: #28328D;
+    width: 100%;
+    padding: 70px;
+    color: #ffffff;
+    margin-top: 80px;
+    text-align: -webkit-center;
+    font-size: 45px;
+}
+
+
+
+
+
+.text-f{
+    font-size: 45px;
+    color: white;
+    font-weight: 600;
+}
+
+.footer .stats {
+    width: 50%;
+    float: left;
+    font-size: 48px;
+}
+
+
+.stats-spec-right {
+    display: block;
+    font-size: 18px;
+    font-weight: 400;
+    float: right;
+    margin-right: 35px;
+}
+
+
+.img-article{
+    text-align: center;
+}
+
+.head-Our{
+    text-align: center;  font-size: 46px; font-weight: 600; color: white;
+}
+
+.card-b{
+    padding-top: 0px;
+    padding-right: 10px;
+    padding-left: 10px; 
+}
+
+
+.doc-name{
+    text-align: center;
+    color: black;
+    font-size: 20px;
+}
+
+
+.ng-binding .ptext-m{
+    font-size: 19px !important;
+    color: black !important;
+    text-align: center !important;
+    width: 100% !important;
+}
+
+
+.mtp{
+    font-size: 19px !important;
+    color: black !important;
+    text-align: center !important;
+    width: 100% !important;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .rhs[_ngcontent-pcj-c230] {
+        z-index: 100037;
+        position: absolute;
+        right: 0;
+        font-size: 9px;
+        margin-top: -183px;
+        
+    }
+
+    .lhs {
+        left: 0px;
+        z-index: 100037;
+        position: absolute;
+        right: 0;
+        font-size: 9px;
+        margin-top: -183px;
+      
+    }
+  }
+
+  .spec{
+      color: gray;
+      font-size: 14px;
+  }

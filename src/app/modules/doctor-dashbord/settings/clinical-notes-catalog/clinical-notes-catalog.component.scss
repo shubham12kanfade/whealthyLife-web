@@ -1,0 +1,93 @@
+.text-primary{
+    font-size: 2.2rem;
+    display: flex;
+    font-weight: 400;
+    
+}
+.second,.nav{
+    display: flex !important;
+  justify-content: center !important;
+  align-items: center;
+  
+ >.nav-item{
+     font-size: 1.4rem !important;  
+     border:1px solid black;
+    //  border-radius: 50%;
+    cursor: pointer;
+ }
+}
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff !important;
+    background-color: #777 !important;
+}
+
+// .text1{
+//     font-size: 1.7rem !important;
+// }
+
+.btnadd{
+    // height: 30%;
+    // width: 35%;
+    font-size: 15px;
+    float: right;
+    
+}
+.card-header{
+    margin-top:4%;
+}
+.first{
+    margin-top: -3%;
+}
+.second{
+    margin-top: -3%;
+}
+.third{
+    margin-top: -3%;
+    float: right;
+}
+.sorting{
+    font-size: 1.5rem;
+}
+.odd{
+    td{
+        font-size: 1.2rem;
+        
+    }
+}
+.table-responsive{
+    overflow-x: hidden;
+    border: none;
+}
+.staffspan{
+    justify-content: center;
+    span{
+        font-size: 1.5rem;
+       
+    }
+}
+.btn-light:hover{
+    color: white;
+}
+.cdc{
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+}
+.fourteen{
+    font-size: 16px;
+}
+table {
+    width: 100%;
+}
+
+
+
+.mat-button{
+    background-color: #ffa000;
+    color: #fff;
+  
+    width: 100px!important;
+      min-width: unset!important;
+       float: right;
+    font-size: 12px;
+}

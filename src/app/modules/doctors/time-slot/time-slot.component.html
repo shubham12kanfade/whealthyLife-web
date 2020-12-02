@@ -1,0 +1,254 @@
+<section style="margin-top: 115px;">
+    <div class="container">
+        <div class="col-12" style="padding: 0px;">
+           
+                    <div class="card" style="box-shadow:0px 0px 10px #c5c4c4;padding: 15px;">
+                        <div class="row">
+                            <div class="col-lg-2 col-sm-4 col-12">
+                                <img [src]="profileData.avatar" onerror="this.src='../assets/img/user.jpeg'" class="img-thumbnail im1" alt="...">
+                            </div>
+                            <div class="col-lg-6 col-sm-8 col-12">
+                                <h2 class="t-center font-weight-bold mb-0 ">
+                                    Dr. {{profileData.firstName}} {{profileData.lastName}}</h2>
+                                <p class="m-0">
+                                    {{profileData.degree}} - <span *ngFor="let item of profileData.specialitie">{{item.fullName}}</span>
+                                </p>
+                                <p>
+                                    {{profileData?.experience}} Years Experience Overall ({{profileData?.experience}} years as specialist)
+                                </p>
+                                <p style="margin-left: 10px;"> 
+                                    <i class="fa fa-thumbs-up text-success p-1" aria-hidden="true"> 96 % </i>
+                                    <span> ( 3673 votes ) </span>
+                                </p>
+                             
+                            </div>
+                            <div class="col-lg-2" style="display: flex;justify-content: center;">
+                                <h1 class=" font-weight-bold mt-3 mb-0 text-success">
+                                    Rs. {{profileData.fees}}</h1>
+                            </div>
+                            <div class="col-lg-2" style="margin: auto;">
+                                <button mat-raised-button class="bt1" (click)="onConsultation(profileData?._id)"> Video
+                                    Consultation</button>
+                                <button mat-raised-button color="primary" class="bt1" (click)=" showtime(profileData)">Book Appointment</button>
+                            </div>
+                        </div>
+                    </div>
+           
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- 
+<section class="se1">
+    <div class="container ">
+        <div class="card cpad">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="row">
+                        <div class="col-lg-3 col-sm-4 col-12">
+
+                            <img [src]="profileData.avatar" onerror="this.src='../assets/img/user.jpeg'" class="img-thumbnail im1" alt="...">
+                        </div>
+                        <div class="col-lg-9 col-sm-8 col-12">
+                            <h2 class=" font-weight-bold mb-0">
+                                Dr. {{profileData.firstName}} {{profileData.lastName}}</h2>
+                            <p class="m-0">
+                                {{profileData.degree}} - <span *ngFor="let item of profileData.specialitie">{{item.fullName}}</span>
+                            </p>
+                            <p>
+
+                                {{profileData?.experience}} Years Experience Overall ({{profileData?.experience}} years as specialist)
+                            </p>
+                            <div class="row text-dark">
+                                <i class="fa fa-thumbs-up text-success p-1" aria-hidden="true"> 96% </i>
+                                <p>(3673 votes)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col-12 col-lg-8 talign">
+                            <h1 class=" font-weight-bold mt-3 mb-0 text-success">
+                                Rs. {{profileData.fees}}</h1>
+                        </div>
+                        <div class="col-12 col-lg-4">
+                            <div class="btun">
+                                <button mat-raised-button class="bt1" (click)="onConsultation(profileData?._id)"> Video
+                                    Consultation</button>
+                                <button mat-raised-button color="primary" class="bt1" (click)=" showtime(profileData)">Book Appointment</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+
+<!-- <section class="se2">
+    <div class="container cont1">
+        <div class="col-12">
+            <h2 class="hedi2">Description</h2>
+            <div class="row">
+
+            </div>
+        </div>
+    </div>
+</section> -->
+
+<section style="">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-12 " style="padding: 40px 0px 0px 0px;" >
+                <div class="card cardex2 ">
+                    <p-calendar [inline]="true"  [minDate]="minDate" (onSelect)="onSelect($event)" style="padding: 0px;"></p-calendar>
+                </div>
+            </div>
+            <div class="col-lg-8 col-lg-8 col-12 slidetime" style="padding: 40px 30px;">
+                <div class="row">
+                    <div *ngFor="let item of slot" class="card cad1 " style="width: 100%;">
+                        <h3 class="wei p-3" style="margin:0px;">{{item.day | uppercase}} </h3>
+                        <div class="card-body">
+                            <h3 class="wei" style="margin:0px;"> Morning Slots </h3>
+                            <div class="row adj1">
+                                <div *ngFor="let bu of item.mrningSlots; let j = index">
+                                    <!-- (click)="selectSolot(bu.strtTime,'Morning Slots')" -->
+                                    <button class="btn c-day-session__slot"  (click)="openDialog(bu.strtTime,bu.endTime,item.date,'Morning Slots')"> {{bu.strtTime}} </button>
+                                </div>
+                            </div>
+                            <hr class="hr1">
+                            <h3 class="wei" style="margin:0px;">Evening Slots </h3>
+                            <div class="row adj1">
+                                <div *ngFor="let it of item.eveningSlots; let x = index">
+                                    <!-- (click)="selectSolot(it.strtTime,'Evening Slots')" -->
+                                    <button class="btn c-day-session__slot"  (click)="openDialog(it.strtTime,it.endTime,item.date,'Evening Slots')">{{it.strtTime}}</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <mat-tab-group>
+                            <mat-tab *ngFor="let item of profileData?.slots">
+                                <ng-template mat-tab-label>
+                                    <div class="grp">
+                                        <h4 class="text-capitalize">{{item?.day}}</h4>
+                                        <p>{{evningSlot?.length + morningSlot?.length}} Slots Available
+                                        </p>
+                                    </div>
+                                </ng-template>
+                                <div class="slotsavailable">
+                                    <div class="row">
+                                        <div class="col-sm-2">
+                                            <div>
+                                                <span><i class="fa fa-sun"></i></span> Morning
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-10 driven">
+                                            <div class="morningslot">
+                                                <div data-qa-id="slot_time" (click)="onSelectSlot(item?.value)" class="c-day-session__slot" *ngFor="let item of morningSlot">
+                                                    <span [ngClass]="{selectedSloats: item?.value == selectedSlot}">{{item?.label}}</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-sm-2">
+                                            <div>
+                                                <span><i class="fa fa-sun"></i></span> Evening
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-10 driven">
+                                            <div class="morningslot">
+                                                <div data-qa-id="slot_time" class="c-day-session__slot" (click)="onSelectSlot(item?.value)" *ngFor="let item of evningSlot">
+                                                    <span [ngClass]="{selectedSloats: item?.value == selectedSlot}">{{item?.label}}</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </mat-tab>
+                        </mat-tab-group>
+                    </div>
+                </div>
+                <!-- <div class="col-12">
+                <div class="row">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3>Morning Slots </h3>
+                            <div class="row" >
+                                <div class="col-3">
+                                    <button class="btn">10:00</button>
+                                </div>
+                                <div class="col-3">
+                                    <button class="btn">10:30</button>
+                                </div>
+                                <div class="col-3">
+                                    <button class="btn">11:00</button>
+                                </div>
+                                <div class="col-3">
+                                    <button class="btn">11:30</button>
+                                </div>
+                                <div class="col-3">
+                                    <button class="btn">12:00</button>
+                                </div>
+                                <div class="col-3">
+                                    <button class="btn">12:30</button>
+                                </div>
+                                <div class="col-3">
+                                    <button class="btn">13:00</button>
+                                </div>
+                                <div class="col-3">
+                                    <button class="btn">13:30</button>
+                                </div>
+                                
+                            </div>
+                            <h3>Evening Slots </h3>
+                            <div class="row" >
+                                <div class="col-3 c-day-session__slot">
+                                    <button class="btn">15:00</button>
+                                </div>
+                                <div class="col-3 c-day-session__slot">
+                                    <button class="btn">15:30</button>
+                                </div>
+                                <div class="col-3">
+                                    <button class="btn">16:00</button>
+                                </div>
+                                <div class="col-3">
+                                    <button class="btn">16:30</button>
+                                </div>
+                                <div class="col-3">
+                                    <button class="btn">17:00</button>
+                                </div>
+                                <div class="col-3">
+                                    <button class="btn">17:30</button>
+                                </div>
+                                <div class="col-3">
+                                    <button class="btn">18:00</button>
+                                </div>
+                                <div class="col-3">
+                                    <button class="btn">18:30</button>
+                                </div>
+                                <div class="col-3">
+                                    <button class="btn">19:00</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+
+            </div> -->
+
+
+            </div>
+        </div>
+    </div>
+</section>

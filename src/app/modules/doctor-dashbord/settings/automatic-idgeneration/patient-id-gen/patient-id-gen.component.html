@@ -1,0 +1,49 @@
+<div  class="container-fludic">
+<div mat-dialog-title>Patient ID Generation</div>
+<mat-dialog-content class="mat-typography mt-4 " >
+    <div class="col-md-12 col-sm-12">
+        <div class="row">
+
+
+            <div class="col-sm-6">
+
+              <div class="form-group">
+                <label class="l-b-p">Patient ID (Prefix)</label>
+                <input type="email" class="form-control" value="P" id="exampleInputEmail1" aria-describedby="emailHelp">
+
+              </div>
+
+            </div>
+
+
+            <div class="col-sm-6">
+
+              <div class="form-group">
+                <label class="l-b-p">Numeric Only <span  class="sp">*</span></label>
+                <input type="email" class="form-control" value="1" id="exampleInputEmail1" aria-describedby="emailHelp">
+
+              </div>
+
+            </div>
+
+            <div class="row">
+
+              <div class="col-sm-12">
+
+                <label class="labl">We can assign patient numbers to all your existing contacts</label>
+                <div class="form-check">
+                  <mat-checkbox>Override IDs for 0 patients</mat-checkbox>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+    </div>
+</mat-dialog-content>
+<mat-dialog-actions align="end" >
+    <button mat-button mat-dialog-close>Cancel</button>
+    <button  class="mat-button-t" mat-button [mat-dialog-close]="true" cdkFocusInitial>Apply</button>
+</mat-dialog-actions>
+
+</div>

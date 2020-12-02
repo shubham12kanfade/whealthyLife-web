@@ -1,0 +1,125 @@
+<section style="overflow: hidden;">
+    <div class="container-fluid cf">
+        <div class="col-12">
+            <div class="row hei">
+                <div class="col-lg-3 col-md-4 col-sm-12 ">
+                    <ul class="navbar-nav bg-white text-dark sidebar accordion" id="settingSidebar">
+                        <a class="sidebar-brand d-flex align-items-center justify-content-center" routerLink="dashboard">
+                            <div class="sidebar-brand-text"> MASSAGES</div>
+                        </a>
+                        <hr class="sidebar-divider my-0">
+
+                        <li class="nav-item" *ngFor="let patient of Patiets">
+                            <a class="nav-link flec1" (click)="sendId(patient.id)">
+
+                                <span><img src='{{patient.avtar}}' class="Adj2">
+                                     <span
+                                        class="lef">{{patient.name}}</span>
+                                </span>
+                                <span matBadge="{{patient.massages}}"></span></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-9 col-md-8 col-sm-12 ">
+                    <div class="col-12 bg">
+                        <div class="row" *ngIf="headAvtar">
+                            <div class="col-lg-12 col-sm-12 col-12">
+                                <div class="adj1">
+                                    <h2> <img src='{{headAvtar}}' class="Adj2"><span class="lef"> {{headName }}dAFgADFzxfadfxzcaf</span>
+                                    </h2>
+                                    <hr>
+                                    <div class="col-12" style="position: relative;">
+                                        <div class="row">
+                                            <div class="col-12 Adj3 ">
+                                                <div class="col-7">
+                                                    <div class="card cardLeft">
+                                                        <span class="padd12">
+                                                            Hello, Sunita
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-7">
+                                                    <div class="card cardLeft">
+                                                        <span class="padd12">
+                                                            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                                            Perspiciatis fugiat alias facere odit aut necessitatibus
+                                                            ipsam eligendi harum, sapiente dolore, deleniti atque,
+                                                            veritatis reiciendis error rerum quidem ipsa! Illo, id!
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-7 offset-5">
+                                                    <div class="card cardRight">
+                                                        <span class="padd12">
+                                                            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                                            Perspiciatis fugiat alias facere odit aut necessitatibus
+                                                            ipsam eligendi harum, sapiente dolore, deleniti atque,
+                                                            veritatis reiciendis error rerum quidem ipsa! Illo, id!
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-7 offset-5">
+                                                    <div class="card cardRight">
+                                                        <span class="padd12">
+                                                            Lorem ipsum, dolor sit
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-7">
+                                                    <div class="card cardLeft">
+                                                        <span class="padd12">
+                                                            Hello, Sunita
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-7">
+                                                    <div class="card cardLeft">
+                                                        <span class="padd12">
+                                                            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                                            Perspiciatis fugiat alias facere odit aut necessitatibus
+                                                            ipsam eligendi harum, sapiente dolore, deleniti atque,
+                                                            veritatis reiciendis error rerum quidem ipsa! Illo, id!
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-7 offset-5">
+                                                    <div class="card cardRight">
+                                                        <span class="padd12">
+                                                            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                                            Perspiciatis fugiat alias facere odit aut necessitatibus
+                                                            ipsam eligendi harum, sapiente dolore, deleniti atque,
+                                                            veritatis reiciendis error rerum quidem ipsa! Illo, id!
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-7 offset-5">
+                                                    <div class="card cardRight">
+                                                        <span class="padd12">
+                                                            Lorem ipsum, dolor sit
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 Padd11">
+                                                <div class="flec2 ">
+                                                    <div class="input-group mb-3">
+                                                        <input type="text" class="form-control bord-rad" placeholder="Type your massage" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                                    </div>
+                                                    <div style="padding: 9px;">
+                                                        <span class="material-icons">
+                                                            send
+                                                            </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

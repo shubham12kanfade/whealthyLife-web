@@ -1,0 +1,97 @@
+.card-header{
+    margin-top:4%;
+}
+.first{
+    margin-top: -3%;
+}
+.text-primary{
+    font-size: 2.2rem;
+    display: flex;
+    font-weight: 400;
+    
+}
+// .second{
+//     margin-top: -3%;
+// }
+.third{
+    margin-top: -3%;
+    float: right;
+}
+.btnadd{
+    float: right;
+    font-size: 12px;
+}
+.cdb{
+    font-size: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mtitle{
+    font-size: 0.5rem !important;
+    // top: 10%;
+}
+// .modal{
+//     padding: 30px 70px 30px 70px;
+// }
+.cols{
+    font-size: 1.1rem;
+}
+
+.header{
+margin-top: 34px;
+margin-left: 20px;
+// height: 30%;
+z-index: 1;
+background: white;
+}
+.modal-body{
+    padding: 60px;
+    margin-top:-52px ;
+    // margin-bottom: -40px;
+    // overflow: scroll;
+    height: 80vh;
+    overflow-y: scroll;
+}
+.redstar{
+    color: red;
+}
+#myModal{
+    margin-left: 23%;
+    top: 5%;
+    // padding-bottom: -20%;
+    display: block;
+    
+}
+.btnm{
+    // float: right;
+    font-size: 16px;
+}
+.anchorbtn{
+    color:#14bef0;
+    text-decoration: none;
+    cursor: pointer;
+}
+.anchorbtn:hover{
+    color:#14bef0 !important;
+    // text-decoration: none;
+    // cursor: pointer;
+}
+thead{
+    th{
+        font-size: 12px;
+    }
+}
+table {
+    width: 100%;
+} 
+
+
+.mat-button{
+    background-color: #ffa000;
+    color: #fff;
+  
+    width: 100px!important;
+      min-width: unset!important;
+}

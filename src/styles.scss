@@ -1,0 +1,671 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@import "~@angular/material/theming";
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$Praco-Site-primary: mat-palette($mat-indigo);
+$Praco-Site-accent: mat-palette($mat-pink, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$Praco-Site-warn: mat-palette($mat-red);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$Praco-Site-theme: mat-light-theme(
+  (
+    color: (
+      primary: $Praco-Site-primary,
+      accent: $Praco-Site-accent,
+      warn: $Praco-Site-warn,
+    ),
+  )
+);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($Praco-Site-theme);
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@import "~@angular/material/theming";
+
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$Praco-Site-primary: mat-palette($mat-indigo);
+$Praco-Site-accent: mat-palette($mat-pink, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$Praco-Site-warn: mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$Praco-Site-theme: mat-light-theme(
+  $Praco-Site-primary,
+  $Praco-Site-accent,
+  $Praco-Site-warn
+);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($Praco-Site-theme);
+
+/* You can add global styles to this file, and also import other style files */
+
+* {
+  font-family: Camphor,verdana !important;
+  //font-family: FontAwesome !important;
+  font-style: normal;
+}
+
+body {
+  background: #fff;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.4;
+  font-family: Camphor,verdana !important;
+  color: #555;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #333;
+  font-family: Camphor,verdana !important;
+}
+
+p {
+  margin-bottom: 30px;
+  font-family: Camphor,verdana !important;
+}
+
+.start-header {
+  opacity: 1;
+  transform: translateY(0);
+  padding: 0px 0;
+  box-shadow: 0 10px 30px 0 rgba(138, 155, 165, 0.15);
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.scroll-on {
+  box-shadow: 0 5px 10px 0 rgba(138, 155, 165, 0.15);
+  padding: 5px 0;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  margin-top: -30px !important;
+}
+.scroll-on .navbar-brand img {
+  height: 28px;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.navigation-wrap {
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  left: 0;
+  z-index: 1000;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.start-header .navbar {
+  padding: 0;
+  margin: 0;
+}
+.start-header .navbar-brand img {
+  height: 52px;
+  width: auto;
+  display: block;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.start-header .navbar ul li a {
+  font-size: 16px;
+  // font-weight: 600;
+}
+
+.start-header .navbar ul li a:hover {
+  color: #073967 !important;
+  // font-weight: 600;
+}
+
+.start-header .navbar ul li {
+  margin-left: 20px !important;
+}
+
+.start-header .navbar ul li a img {
+  margin-right: 6px;
+  width: 27px;
+  border: 1px solid #ccc;
+  padding: 3px;
+  border-radius: 50%;
+}
+
+.navbar-toggler {
+  float: right;
+  border: none;
+  padding-right: 0;
+}
+.navbar-toggler:active,
+.navbar-toggler:focus {
+  outline: none;
+}
+.navbar-light .navbar-toggler-icon {
+  width: 24px;
+  height: 17px;
+  background-image: none;
+  position: relative;
+  border-bottom: 1px solid #000;
+  transition: all 300ms linear;
+}
+.navbar-light .navbar-toggler-icon:after,
+.navbar-light .navbar-toggler-icon:before {
+  width: 24px;
+  position: absolute;
+  height: 1px;
+  background-color: #000;
+  top: 0;
+  left: 0;
+  content: "";
+  z-index: 2;
+  transition: all 300ms linear;
+}
+.navbar-light .navbar-toggler-icon:after {
+  top: 8px;
+}
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:after {
+  transform: rotate(45deg);
+}
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
+  transform: translateY(8px) rotate(-45deg);
+}
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+  border-color: transparent;
+}
+.nav-link {
+  color: #212121 !important;
+  // font-weight: 500;
+  transition: all 200ms linear;
+}
+.nav-item:hover .nav-link {
+  color: #8167a9 !important;
+}
+.nav-item.active .nav-link {
+  color: #777 !important;
+}
+.nav-link {
+  position: relative;
+  padding: 5px 0 !important;
+  display: inline-block;
+}
+
+.nav-item:hover:after {
+  bottom: 0;
+  opacity: 1;
+}
+.nav-item.active:hover:after {
+  opacity: 0;
+}
+.nav-item {
+  position: relative;
+  transition: all 200ms linear;
+}
+
+.bg-light {
+  background-color: #fff !important;
+}
+
+@media only screen and (max-width: 768px) {
+  .navigation-wrap {
+    top: 0px;
+  }
+
+  .start-header .navbar ul li {
+    margin-bottom: 20px;
+    margin-left: 0px;
+  }
+}
+
+@font-face {
+  font-family: Camphor, verdana !important;
+  src: url(assets/webfonts/practicon.woff2) format("woff2"),
+    url(assets/webfonts/practicon.woff) format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+.autocomplete-container .input-container input {
+  height: 50px !important;
+}
+
+.autocomplete-container .input-container .x {
+  top: 63% !important;
+}
+
+#videos {
+  // position: relative;
+  width: 100%;
+  // height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#subscriber {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+
+#publisher {
+  position: absolute;
+  width: 360px;
+  height: 240px;
+  bottom: 10px;
+  left: 10px;
+  z-index: 99999999;
+  border: 3px solid white;
+  border-radius: 3px;
+}
+
+// .OT_mirrored {
+// 	height: 100vh !important;
+// }
+
+.shadow {
+  box-shadow: 0 0rem 0rem 0 rgba(58, 59, 69, 0.15) !important;
+}
+
+.card {
+  border: 1px solid #ffffff !important;
+  border-radius: 0px !important;
+}
+
+small,
+.small {
+  font-size: 57% !important;
+}
+
+.badge {
+  font-size: 47% !important;
+}
+
+.modal-content {
+  border: none !important;
+  border-radius: 0.3rem !important;
+  top: 3rem !important;
+  left: 18% !important;
+  overflow: hidden !important;
+  box-shadow: 0px 0px 47px 0px #d6d6d67d !important;
+}
+
+.text-primary {
+  font-size: 1.5rem !important;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 0 !important;
+}
+
+#wrapper #content-wrapper {
+  background-color: #f0f0f5 !important;
+}
+
+#scrollbar::-webkit-scrollbar {
+  width: 5px;
+}
+
+#scrollbar::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+#scrollbar::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Camphor, verdana !important;
+}
+
+.mt-3rem {
+  margin-top: -3.9rem;
+  > mat-tab-header.mat-tab-header {
+    margin-bottom: 1.5rem;
+  }
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Camphor, verdana !important;
+}
+
+b,
+strong {
+  font-weight: 400;
+}
+
+.categories h2 {
+  font-weight: 500 !important;
+}
+
+.hero_home .content h3 {
+  font-weight: 300 !important;
+}
+
+.mat-typography {
+  // border: 1px solid lightgray;
+}
+
+mat-dialog-actions {
+  > button {
+    background: transparent;
+    border: 1px solid #676767;
+    padding: 4px 11px;
+    margin: 0px 5px;
+  }
+}
+
+.fc-unthemed .fc-divider,
+.fc-unthemed .fc-popover,
+.fc-unthemed .fc-row,
+.fc-unthemed tbody,
+.fc-unthemed td,
+.fc-unthemed th,
+.fc-unthemed thead {
+  border-color: #e7e7e7 !important;
+}
+
+.mat-dialog-content {
+  padding: 24px 24px !important;
+  margin: 0px 0px !important;
+  border: 1px solid lightgrey !important;
+}
+
+button:focus {
+  outline: none !important;
+}
+
+.mat-dialog-title {
+  margin: 0px !important;
+}
+
+.mat-elevation-z8 {
+  // border: 1px solid lightgrey !important;
+  width: 100% !important;
+  box-shadow: none !important;
+  margin-top: -1rem;
+}
+
+.ui-inputtext {
+  display: block;
+  width: 100%;
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem !important;
+  font-size: 1rem !important;
+  min-height: 40px;
+  font-weight: 400 !important;
+  line-height: 1.5;
+  color: #6e707e !important;
+  background-color: #fff !important;
+  background-clip: padding-box !important;
+  border: 1px solid #d1d3e2 !important;
+  border-radius: 0rem !important;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out !important;
+}
+
+span.ng-tns-c205-0.ui-calendar {
+  width: 100% !important;
+}
+
+body .ui-inputtext:enabled:focus:not(.ui-state-error) {
+  outline: 0 !important;
+  box-shadow: 0 0 0 0.2em #ffffff00 !important;
+}
+
+.ui-toast .ui-toast-message.ui-toast-message-success {
+  background-color: #00f800 !important;
+  border: 0 none !important;
+  color: #000000 !important;
+}
+
+.ui-toast .ui-toast-message.ui-toast-message-error {
+  background-color: #ff0606 !important;
+  border: 0 none !important;
+  color: #ffffff !important;
+}
+
+.ui-toast .ui-toast-message.ui-toast-message-error .ui-toast-close-icon {
+  color: #ffffff !important;
+}
+
+.ui-messages.ui-messages-success .ui-messages-close {
+  color: #212121 !important;
+  font-size: 12px !important;
+  padding: 4px !important;
+}
+
+.ui-messages.ui-messages-warn .ui-messages-close {
+  color: #212121 !important;
+  font-size: 12px !important;
+  padding: 4px !important;
+}
+
+.ui-messages.ui-messages-error .ui-messages-close {
+  color: #212121 !important;
+  font-size: 12px !important;
+  padding: 4px !important;
+}
+
+.ui-messages.ui-messages-success .ui-messages-icon {
+  display: none !important;
+}
+
+.ui-messages.ui-messages-warn .ui-messages-icon {
+  display: none !important;
+}
+
+.ui-messages.ui-messages-error .ui-messages-icon {
+  display: none !important;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.ui-datepicker {
+  border: 0px solid #d4d0d0 !important ;
+}
+.cardex2 {
+  border: 1px solid #d4d0d0 !important ;
+}
+
+@keyframes ui-progress-spinner-color {
+  100%,
+  0% {
+    stroke: #d62d20;
+  }
+  40% {
+    stroke: #0057e7;
+  }
+  66% {
+    stroke: #008744;
+  }
+  80%,
+  90% {
+    stroke: #ffa700;
+  }
+}
+
+.ui-calendar {
+  width: 100%;
+}
+
+// ng-autocomplete.ng-autocomplete.form-control {
+//     height: 37px !important;
+// }
+
+// input.ng-pristine.ng-valid.ng-touched {
+//     height: 2rem !important;
+// }
+
+// input.ng-untouched.ng-pristine.ng-valid {
+//     height: 40px !important;
+//     width: 100% !important;
+// }
+
+input.ng-untouched.ng-pristine.ng-valid {
+  border: 1px solid lightgray;
+  height: 50px !important;
+}
+.autocomplete-container .input-container input {
+  height: 50px !important;
+}
+input.ng-pristine.ng-valid.ng-touched {
+  border: 1px solid lightgray;
+  height: 50px !important;
+}
+
+input.ng-valid.ng-touched.ng-dirty {
+  border: 1px solid lightgray;
+  height: 41px !important;
+}
+
+.mat-form-field-appearance-legacy .mat-form-field-infix {
+  padding: 0em 0 !important;
+}
+
+.mat-form-field-appearance-legacy .mat-form-field-underline {
+  background-color: transparent;
+}
+
+.ng-tns-c277-2.ui-multiselect.ui-widget.ui-state-default.ui-corner-all {
+  display: block;
+  width: 100%;
+  height: calc(1.5em + 0.75rem + 2px);
+  font-size: 1rem !important;
+  font-weight: 400 !important;
+  line-height: 1.5 !important;
+  color: #6e707e !important;
+  background-color: #fff !important;
+  background-clip: padding-box !important;
+  border: 1px solid #d1d3e2 !important;
+  border-radius: 0rem !important;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out !important;
+}
+body .ui-multiselect {
+  display: block;
+  width: 100%;
+  height: calc(1.5em + 0.75rem + 2px);
+  font-size: 1rem !important;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #6e707e;
+  background-color: #fff !important;
+  background-clip: padding-box !important;
+  border: 1px solid #d1d3e2 !important;
+  border-radius: 0rem !important;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out !important;
+}
+::ng-deep .mat-step-header .mat-step-icon-selected {
+  background-color: #0ba114 !important;
+}
+
+.mat-step-header .mat-step-icon-selected,
+.mat-step-header .mat-step-icon-state-done,
+.mat-step-header .mat-step-icon-state-edit {
+  background-color: #09a113 !important;
+}
+
+.ui-autocomplete {
+  overflow-y: inherit !important;
+  overflow-x: inherit !important;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Camphor, verdana !important;
+}
+*[ng-reflect-router-link]:focus {
+  outline: none;
+}
+
+.fa-broadcast-tower:before {
+  content: "\f519";
+  font-family: "FontAwesome" !important;
+  font-style: normal;
+}
+
+.fa-user:before {
+  content: "\f007";
+  font-family: "FontAwesome" !important;
+  font-style: normal;
+}
+
+.fa-chart-area:before {
+  content: "\f1fe";
+  font-family: "FontAwesome" !important;
+  font-style: normal;
+}
+
+.fa-calendar-alt:before {
+  content: "\f073";
+  font-family: "FontAwesome" !important;
+  font-style: normal;
+}
+
+.fa-tachometer:before {
+  content: \f625;
+  font-family: "FontAwesome";
+  font-style: normal;
+}
+
+.fa-broadcast-tower:before {
+  content: \f519;
+  font-family: "FontAwesome";
+  font-style: normal;
+}
+
+

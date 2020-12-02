@@ -1,0 +1,300 @@
+<p-toast class="custom-error" [showTransformOptions]="'translateX(100%)'"></p-toast>
+<div class="card shadow mb-4">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="card-header">
+                <div class="row">
+                    <div class="col-sm-3 first">
+                        <h2 class="font-weight-bold text-primary">Accounts</h2>
+                    </div>
+                    <div class="col-sm-9">
+                        <button mat-raised-button color="warn" class="float-right" (click)="onSave()">Save
+                            Changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="row" [formGroup]="profileForm">
+                <div class="col-md-12 col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-6  maincol">
+                            <div class="row">
+                                <div class="col-sm-6">
+
+                                    <div class="row">
+
+                                        <div class="col-sm-6 m-auto containerq">
+                                            <img [src]="avatar"
+                                                onerror="this.src='./../../../../../assets/images/doc.jpg'"
+                                                (click)="image.click()" class="profile-avtar " style="cursor: pointer;">
+                                            <input type="file" style="display: none;" #image
+                                                (change)="browseFile($event)">
+
+                                            <div class="overlay profile-avtar " (click)="image.click()"
+                                                style="margin: auto;text-align: center; cursor: pointer;"><span
+                                                    style="margin-top: 86px;" class="material-icons">cloud_upload</span>
+                                            </div>
+                                            <div style="margin: auto;
+                                            text-align: center;">Profile photo</div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <hr class="bodhr">
+                                <div class="col-sm-6 ">
+                                    <div class="form-group">
+                                        <label for="firstname">First Name<span>*</span></label>
+                                        <input type="text" formControlName="firstName" class="form-control"
+                                            id="firstname">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="lastName">Last Name<span>*</span></label>
+                                        <input type="text" formControlName="lastName" class="form-control"
+                                            id="lastName">
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6  mt-4">
+                                    <div class="form-group">
+                                        <label for="Specialization">Phone number</label>
+                                        <!-- <a style="float: right ;color:blue">Edit</a> -->
+                                        <input type="number" formControlName="mobileNumber" class="form-control"
+                                            readonly id="Contact" (input)="onChangeSpec($event)"
+                                            (onChange)="onChangeSpec($event)">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6  mt-4">
+                                    <div class="form-group">
+                                        <label for="gstin">Email Address</label>
+                                        <!-- <a style="float: right; color:blue">Edit</a> -->
+                                        <input type="email" formControlName="email" class="form-control" readonly
+                                            id="gstin">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="gender">Gender</label>
+                                        <select class="form-control" formControlName="gender" id="gender">
+                                            <option>Male</option>
+                                            <option>Female</option>
+                                            <option>Other</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="website">Date of birth</label><br />
+                                        <p-calendar formControlName="dob" placeholder="mm/dd/yyyy"></p-calendar>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="Specialisations">Specialisations</label>
+                                     
+                                            <mat-select formControlName="specialitie" placeholder="Serach" class="form-control" (selectionChange)="onChange($event)" multiple>
+                                              <mat-option>
+                                                <ngx-mat-select-search  placeholderLabel="Search"  (input)="onInput($event)"></ngx-mat-select-search>
+                                              </mat-option>
+                                              <mat-option *ngIf="addOption" (click)="onAddNew(addOption)"> 
+                                                  {{addOption}}
+                                              </mat-option>
+                                              <mat-option *ngFor="let spec of speciality" [value]="spec">
+                                                {{spec.fullName}}
+                                              </mat-option>
+                                            </mat-select>
+                                          
+                                        <!-- <p-multiSelect formControlName="specialitie" defaultLabel="Select Specialities"
+                                            [options]="speciality" [filter]="true" filterBy="fullName"
+                                            [showToggleAll]="false" optionLabel="fullName"
+                                            (onFilter)="getResult($event)" (onChange)="getTreatment($event)">
+                                            <ng-template let-it pTemplate="item">
+                                                <span>{{it.fullName}}</span>
+                                            </ng-template>
+                                            <ng-template let-sitem pTemplate="selectedItems">
+                                                <span *ngFor="let item of sitem;last as isLast">
+                                                    <span>{{item.fullName}}</span>
+                                                </span>
+                                            </ng-template>
+                                        </p-multiSelect> -->
+                                    </div>
+                                </div>
+
+
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="Treatment">Treatment</label>
+                                     
+                                            <mat-select id="Treatment" formControlName="treatment"  placeholder="Serach" class="form-control" (selectionChange)="onChanget($event)" multiple>
+                                              <mat-option>
+                                                <ngx-mat-select-search  placeholderLabel="Search"  (input)="onInput1($event)" ></ngx-mat-select-search>
+                                              </mat-option>
+                                              <mat-option *ngIf="addOption1" (click)="onAddNew1(addOption1)"> 
+                                                  {{addOption1}}
+                                              </mat-option>
+                                              <mat-option *ngFor="let spec of treatment1" [value]="spec">
+                                                {{spec.fullName}}
+                                              </mat-option>
+                                            </mat-select>
+                                          
+                                    
+                                    </div>
+                                </div>
+
+                                <!-- <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="treatment">Treatment Types</label>
+                                        <p-multiSelect formControlName="treatment" [options]="treatment"
+                                            [showToggleAll]="false" optionLabel="fullName">
+                                        </p-multiSelect>
+                                    </div>
+                                </div> -->
+
+                                <hr style="border-top: 1px solid lightgray;">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="bloodGroup"> Blood group</label>
+                                        <select class="form-control" id="bloodGroup" formControlName="bloodGroup"
+                                            placeholder="Select an Option">
+                                            <option>O+</option>
+                                            <option>O-</option>
+                                            <option>A+</option>
+                                            <option>A-</option>
+                                            <option>B+</option>
+                                            <option>B-</option>
+                                            <option>AB+</option>
+                                            <option>AB-</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="timezone"> Time Zone</label>
+                                        <select class="form-control" id="timezone" formControlName="timeZone"
+                                            placeholder="Select an Option">
+                                            <option *ngFor="let time of timeZone" [value]="time?.name">{{time?.value}}
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="bodhr">
+                    <div class="row">
+                        <div class="col-sm-6  maincol ">
+                            <div class="mainhed">Address</div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="Specialization">
+                                            House No./ Street Name/ Area</label>
+                                        <input type="text" formControlName="address" class="form-control" id="Contact">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="Specialization">
+                                            Colony / Street / Locality</label>
+                                        <input type="text" formControlName="landmark" class="form-control" id="Contact">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="country">
+                                            Country<span>
+                                                *
+                                            </span></label>
+                                        <select class="form-control" id="country" formControlName="country"
+                                            (change)="getState()">
+                                            <option *ngFor="let country of countryList" [value]="country?.id">
+                                                {{country?.name}}</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6 ">
+                                    <div class="form-group">
+                                        <label for="Specialization">
+                                            State
+                                        </label>
+                                        <select class="form-control" id="state" formControlName="state"
+                                            (change)="getCity()">
+                                            <option *ngFor="let state of stateList" [value]="state?.id">
+                                                {{state?.name}}</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="city">City</label>
+                                        <select class="form-control" id="city" formControlName="city">
+                                            <option *ngFor="let city of cityList" [value]="city?.id">
+                                                {{city?.name}}</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="form-group">
+                                                <label for="Specialization">
+                                                    Pincode</label>
+                                                <input type="text" maxlength="6" formControlName="pincode"
+                                                    id="onlynumber" class="form-control" id="Contact">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="bodhr">
+                </div>
+
+                <div class="col-sm-6  maincol">
+                    <div class="mainhed">Other information</div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="Specialization">
+                                    Extra phone numbers</label>
+                                <input type="text" formControlName="extraPhoneNumber" maxlength="10"
+                                    class="form-control" id="Contact">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="country">Language</label>
+                                <!-- <p-multiSelect formControlName="language" [options]="languages" class="form-control">
+                                </p-multiSelect> -->
+
+                                <mat-form-field style="width: 100%;">
+                                    <mat-select formControlName="language" multiple class="form-control">
+                                        <mat-option *ngFor="let language of languages" [value]="language.label">
+                                            {{language.label}}
+                                        </mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+
+                                <!-- <select formControlName="language" class="form-control" id="language">
+                                    <option>English</option>
+                                    <option>Marathi</option>
+                                    <option>Hindi</option>
+                                    <option>Telgu</option>
+                                </select> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

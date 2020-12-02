@@ -1,0 +1,212 @@
+<div class="card shadow mb-4">
+    <div class="card-header">
+        <div class="row">
+            <div class="col-sm-10 first">
+                <h2 class="font-weight-bold text-primary">Charting Templates</h2>
+            </div>
+            <div class="col-sm-2 third">
+                <button type="button" class="btn btn-warning btnadd" (click)="chartingtemplate()">Add</button>
+            </div>
+        </div>
+    </div>
+    <div class="card-body">
+        <div class="row tbs">
+            <div class="mat-elevation-z8">
+                <table mat-table [dataSource]="dataSource">
+                    <ng-container matColumnDef="position">
+                        <th mat-header-cell *matHeaderCellDef> TEMPLATE NAME </th>
+                        <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="NAME">
+                        <th mat-header-cell *matHeaderCellDef>DIAGNOSES</th>
+                        <td mat-cell *matCellDef="let element"> {{element.NAME}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="TYPE">
+                        <th mat-header-cell *matHeaderCellDef> CONSTITUENTS</th>
+                        <td mat-cell *matCellDef="let element"> {{element.TYPE}} </td>
+                    </ng-container>
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                </table>
+                <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- modal1 add Template -->
+<div class="modal" id="myModal" *ngIf="chart">
+    <div class="modal-lg dialog">
+        <div class="modal-content">
+            <div class="row">
+                <div class="col-sm-8">
+                    <div class="header">
+                        <h1 class="modal-title mtitl">Add Procedure</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="col-md-12 col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <label class="diagnose" for="Diagnoses">Diagnoses<span class="redstar">*</span></label>
+                            <!-- <div class="input-group md-form form-sm form-1 pl-0">
+                            </div> -->
+                            <input class="form-control my-0 py-1" type="text" placeholder="Diagnoses"
+                                aria-label="Search">
+                        </div>
+                        <div class="col-sm-6">
+                            <label class="template" for="Template Name">Template Name<span
+                                    class="redstar">*</span></label>
+                            <!-- <div class="input-group md-form form-sm form-1 pl-0">
+                            </div> -->
+                            <input class="form-control my-0 py-1" type="text" placeholder="Template Name"
+                                aria-label="Search">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 bg-gray-300 btntop">
+                    <div class="row">
+                        <span class="ads">Add to template </span>
+                        <a class="btn btn-light btn-icon-split" (click)="prescriptionbtn()" *ngIf="!pres">
+                            <span class="icon text-gray-600">
+                                <i class="fas fa-plus"></i>
+                            </span>
+                            <span class="text">Prescription</span>
+                        </a>
+                        <a class="btn btn-light btn-icon-split" (click)="laborderbtn()" *ngIf="!labord">
+                            <span class="icon text-gray-600">
+                                <i class="fas fa-plus"></i>
+                            </span>
+                            <span class="text">Lab Orders</span>
+                        </a>
+                        <a class="btn btn-light btn-icon-split" (click)="followup()" *ngIf="!folow">
+                            <span class="icon text-gray-600">
+                                <i class="fas fa-plus"></i>
+                            </span>
+                            <span class="text">Followup</span>
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="col-sm-12 thirdrow" *ngIf="pres">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <h4>Prescription</h4>
+                            <span class="redremove"><a (click)="prescriptionbtn()">Remove</a></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <table class="table">
+                                <thead class="thed">
+                                    <tr>
+                                        <th class="thh">DRUG</th>
+                                        <th class="thh">DOSAGE & FREQUENCY</th>
+                                        <th class="thh">INTAKE</th>
+                                        <th class="thh">DURATION</th>
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div>
+                                                <input class="form-control my-0 py-1" type="text"
+                                                    placeholder="Diagnoses" aria-label="Search">
+                                            </div>
+                                        </td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 thirdrow" *ngIf="labord">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <h4>Lab Orders</h4>
+                            <span class="redremove"><a (click)="laborderbtn()">Remove</a></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <table class="table">
+                                <thead class="thed">
+                                    <tr>
+                                        <th class="thh">LAB TEST</th>
+                                        <th class="thh">INSTRUCTION</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="form-group">
+                                                <label for="country"></label>
+                                                <select class="form-control" id="country">
+                                                    <option>India</option>
+                                                    <option>America</option>
+                                                    <option>Africa</option>
+                                                    <option>Norvey</option>
+                                                </select>
+                                            </div>
+                                        </td>
+                                        <td></td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 thirdrow" *ngIf="folow">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <h4>Follow-Up</h4>
+                            <span class="redremove"><a (click)="followup()">Remove</a></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <h5>
+                                        Schedule next visit after
+                                    </h5>
+                                </div>
+                                <div class="col-sm-2">
+                                    <input class="form-control my-0 py-1" type="text" placeholder="Diagnoses">
+                                </div>
+                                <div class="col-sm-3">
+                                        <select class="form-control" id="days">
+                                            <option>days</option>   
+                                        </select>
+                                </div>
+                                <!-- <span>for</span> -->
+                                <div class="col-sm-3">
+                                        <select class="form-control" id="followup">
+                                            <option>Folow-up Consultation</option>
+                                            <option>Reviewing lab result</option>
+                                        </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-light btnm" data-dismiss="modal"
+                    (click)="chartingtemplate()">Cancel</button>
+                <button type="button" class="btn btn-warning btnm">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,119 @@
+.text-primary {
+    font-size: 2.2rem;
+    display: flex;
+    font-weight: 400;
+}
+.second,
+.nav {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center;
+
+    > .nav-item {
+        cursor: pointer;
+    }
+}
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+    color: #fff !important;
+    background-color: #4c71de !important;
+}
+
+.btnadd {
+    font-size: 15px;
+    float: right;
+    z-index: 999;
+}
+.card-header {
+    margin-top: 4%;
+}
+.first {
+    margin-top: -3%;
+}
+.second {
+    margin-top: -3%;
+}
+.third {
+    margin-top: -3%;
+    float: right;
+}
+
+.table-responsive {
+    overflow-x: hidden;
+    border: none;
+}
+.staffspan {
+    justify-content: center;
+}
+.btn-light:hover {
+    color: white;
+}
+
+.header {
+    margin-top: 34px;
+    margin-left: 20px;
+    z-index: 1;
+    background: white;
+}
+.modal-body {
+    padding: 60px;
+    margin-top: -52px;
+    height: 80vh;
+    overflow-y: scroll;
+}
+.redstar {
+    color: red;
+}
+#myModal {
+    margin-left: 23%;
+    top: 5%;
+    display: block;
+}
+
+.rad {
+    margin-left: 10%;
+}
+.fchk {
+    position: relative;
+    display: flex;
+    padding-left: 1.25rem;
+}
+.btnmodal {
+    float: right;
+}
+.href {
+    color: blue;
+}
+
+ul.nav.nav-pills {
+    border: 1px solid #4e72df;
+    border-radius: 10px;
+    > li {
+        > a {
+            padding-left: 10px !important;
+            padding-right: 10px !important;
+        }
+    }
+}
+
+.active-one {
+    border-bottom-left-radius: 10px !important;
+    border-top-left-radius: 10px !important;
+    border-top-right-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+}
+
+.active-two {
+    border-bottom-left-radius: 0px !important;
+    border-top-left-radius: 0px !important;
+    border-top-right-radius: 10px !important;
+    border-bottom-right-radius: 10px !important;
+}
+
+
+.card-header{
+    border: none !important;
+}
+table {
+    width: 100%;
+}

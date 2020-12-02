@@ -1,0 +1,65 @@
+<section class="bgcolor">
+    <div class="container-md" style="padding-top: 85px;">
+        <div class="row">
+            <div class="col-sm-12 col-md-8 p-md-4 pt-sm-3 ">
+                <div class="row bg-white p-3 shadow">
+                    <div>
+                        <h1 class="lybText--big lybText--bold lybMar-top-btm lybText--capitalize" itemprop="headline">
+                            Child Nutrition: Treatment, Procedure, Cost and Side Effects</h1>
+                        <div *ngFor="let treatment of treatments;let i =index" id="navbar-example2 " class="ly-header-table-content text-secondary">
+                            <span class="pointer" (click)="scroll(treatment.shortName)">
+                            {{treatment.fullName}}
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row bg-white p-3 mt-3 shadow">
+                    <div>
+                        <div data-spy="scroll" data-target="#navbar-example2" data-offset="0">
+                            <span *ngFor="let treatment of treatments;let i =index">
+                                <h2 [id]="treatment.shortName">{{treatment.fullName}}</h2>
+                                <div class="lybMar-btm lybMar-top">
+                                    <p>
+                                        {{treatment.discription}}
+                                    </p>
+                                </div>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4 p-md-4 pt-sm-3 shadow p-sm-3">
+                <div class="row bg-white p-3">
+                    <div class="card cad2">
+                        <div class="card-header" style="padding: 0px;">
+                            <div class="row">
+                                <div class="col-4">
+                                    <img [src]="doctor?.avatar" onerror="this.src='../../../assets/images/doc.jpg'" alt="Avatar" class="img-thumbnail img2">
+                                </div>
+                                <div class="col-8">
+                                    <h2 class="hed3"><a [routerLink]="['/doctors/doctor_profile/',doctor?._id]">Dr.
+                                            {{doctor?.firstName}}
+                                            {{doctor?.lastName}}</a></h2>
+                                    <p style="margin: 0px;font-size: 12px;">{{doctor?.specialitie}}</p>
+                                    <p style="margin: 0px;font-size: 12px;">
+                                        <b>{{doctor?.experience}}</b> years experience overall</p>
+                                    <p><i class="fa fa-thumbs-up text-success"></i> 100%</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body" style="padding: 10px;line-height: 10px;font-size: 12px;text-align: left; ">
+                            <div class="col-12">
+                                <p>
+                                    <b>{{doctor?.location?.landmark}}
+                                    </b>
+                                </p>
+                                <p><b>Rs. {{doctor?.fees}}</b> Consultation Fees</p>
+                                <p> Available Today</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

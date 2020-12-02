@@ -1,0 +1,190 @@
+<div class="layer"></div>
+<!-- Mobile menu overlay mask -->
+
+<div id="contact-popup">
+  <div class="row no-gutters">
+    <div class="col-md-5 equal-height hidden-xs">
+      <img src="../assets/img/why-healthcheck.jpg" alt="img-popup" class="img-popup" />
+    </div>
+    <div class="col-md-7">
+      <form class="equal-height inner-popup">
+        <h4>Get in Touch</h4>
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Your Name" />
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <input type="email" class="form-control" placeholder="Your Email" />
+          </div>
+          <div class="form-group col-md-6">
+            <input type="text" class="form-control" placeholder="Your Phone" />
+          </div>
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Your Subject" />
+        </div>
+        <div class="form-group">
+          <textarea class="form-control" rows="4" placeholder="Your Message"></textarea>
+        </div>
+        <div class="form-group text-center">
+          <input type="submit" class="btn btn-main" value="Submit" />
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="navigation-wrap bg-light start-header start-style">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <nav class="navbar navbar-expand-md navbar-light">
+          <div id="logo_home" data-aos="fade-up">
+            <h1>
+              <a [routerLink]="['']" routerLinkActive="router-link-active" title="WhealthyLife"><img
+                  src="../assets/img/tracefinallogo.png" class="log" alt="logo" style="width: 60px;height: 70px;"/></a>
+            </h1>
+          </div>
+
+          <button class="navbar-toggler" type="button" (click)="onMenu(true)">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto py-4 py-md-0 imp">
+
+              <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 font-custome">
+                <div class="sdiv" [routerLink]="['']" routerLinkActive="constC">Home</div>
+              </li>
+
+              <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 font-custome">
+                <div class="sdiv" [routerLink]="['/booktests']" routerLinkActive="constC" >Lab Test</div>
+              </li>
+
+
+              <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 font-custome">
+                <div class="sdiv" [routerLink]="['/about']" routerLinkActive="constC" >About Us</div>
+              </li>
+
+              <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 font-custome">
+                <div class="sdiv" [routerLink]="['/bookcheckup']" routerLinkActive="constC">Book Health & Checkups</div>
+              </li>
+              <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 font-custome1">
+                <div class="sdiv" [routerLink]="['/contact']" routerLinkActive="constC">Contact Us </div>
+              </li>
+
+              <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 font-custome1">
+                <div class="sdiv" [routerLink]="['/login']" routerLinkActive="constC"
+                 *ngIf="!userInfo">LOGIN</div>
+              </li>
+
+
+
+              <li class="nav-item dropdown open" *ngIf="userInfo" style="position: relative; top: -5px;">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false" style="margin-top: 10px;">
+                  <span style="font-weight: 600;margin-right: 5px;" > Hi </span>
+                  {{ userInfo?.firstName }}
+                </a>
+                <ul class="dropdown-menu dropDown" aria-labelledby="navbarDropdown" style="position: absolute;left: -63px;
+                width: 200px;">
+                  <li>
+                    <a class="dropdown-item" style="display: flex; cursor: pointer" (click)="onProfile()">
+                      <img [src]="onlieProfile?.avatar" onError="this.src='../../../assets/img/avatar.png'"
+                        class="avatar" alt="" />
+                      <p class="mb-0" style="margin-top: 10px">
+                        {{ userInfo?.firstName }} {{ userInfo?.lastName }}
+                      </p>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" [routerLink]="['/my/appointments']">My Appointment</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" [routerLink]="['/my/history']">My History</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" [routerLink]="['/my/Tests']">My Test</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" [routerLink]="['/my/Orders']">My Medicine Orders</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" [routerLink]="['/my/record']">My Medical Records</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" [routerLink]="['/my/Consultations']">My Online consultations</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" [routerLink]="['/my/Feedback']">My Feedback</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" [routerLink]="['/my/']">View / Update Profile</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" [routerLink]="['/Settings']">Settings</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" (click)="onLogOut()">Logout</a>
+                  </li>
+                </ul>
+              </li>
+
+              <div class="styles-cart-counter" *ngIf="userInfo">
+                <div id="labs-cart" class="style-desktop-view" >
+                  <a [routerLink]="['cart']" [routerLinkActive]="['active']">
+                    <div>
+                      <p class="mb-0">
+
+                        <span [matBadge]="CartLength" matBadgeOverlap="false">
+                          <i class="fal fa-shopping-cart" aria-hidden="true"></i>
+                        </span>
+                      </p>
+
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="mySidenav" class="sidenav sidebar-left-nav" *ngIf="openMenu">
+  <a class="closebtn" (click)="onMenu(false)">&times;</a>
+  <a [routerLink]="['']" (click)="onMenu(false)" routerLinkActive="router-link-active" class="border">
+    <img src="../assets/img/home.png" (click)="onMenu(false)" alt="icon" />Home</a>
+  <a [routerLink]="['/about']" (click)="onMenu(false)" class="border"><img src="../assets/img/doctor.png"
+      alt="icon" />About us</a>
+  <a [routerLink]="['/bookcheckup']" (click)="onMenu(false)" class="border" routerLinkActive="router-link-active">
+    <img src="../assets/img/syringe2.png" (click)="onMenu(false)" alt="icon" />Book Health & Checkups</a>
+  <a [routerLink]="['/contact']" (click)="onMenu(false)" class="border"><img src="../assets/img/cardiogram.png"
+      alt="icon" />Contact us
+  </a>
+</div>
+
+<p-toast position="center" class="custom-toast" key="myKey2" [modal]="false" (onClose)="clear()" [baseZIndex]="5000"
+  position="top-right" timeout="0">
+  <ng-template let-message pTemplate="message">
+    <div class="p-col-12 marg1">
+      <div class="row">
+        <div class="col-4">
+          <img src="" onerror="this.src='../../../assets/images/doc.jpg'" class="img-thumbnail imgt" />
+        </div>
+        <div class="col-8">
+          <p class="marg"><span> Styajeet Kolhe </span></p>
+          <p class="marg">Patient</p>
+          <p class="marg">12-06-2020 11.00</p>
+        </div>
+      </div>
+    </div>
+    <hr class="hr1" />
+    <div class="acc">
+      <div class="acc1">Accept</div>
+      <div class="rej" (click)="clear()">Reject</div>
+    </div>
+  </ng-template>
+</p-toast>

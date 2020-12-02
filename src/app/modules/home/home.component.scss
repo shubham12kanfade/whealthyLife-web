@@ -1,0 +1,544 @@
+.truncate {
+  display: block;
+    display: -webkit-box;
+    max-width: 200px;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.pharmacyimg {
+  img {
+    height: 150px !important;
+    width: 100% !important;
+  }
+}
+
+.btnn{
+      width: 100%;
+      height: 45px;
+      // border:1px solid #d81730;
+      // border-radius:0px 5px 5px 0px;
+      background-color: #d81730; 
+}
+
+.flecs1 {
+  margin-top: 120px;
+  display: flex;
+  justify-content: center;
+}
+
+.flecs2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  // cursor: pointer;
+}
+
+.marTop-30 {
+  margin-top: 30px;
+}
+
+.opt{
+  cursor: pointer;
+  border: none;
+}
+
+.head1{
+  z-index: 999;
+  color: #ffffff;
+  font-size: 45px;
+  font-weight: 500;
+}
+
+input#exampleInputEmail1 {
+  height: 45px;
+  border-radius: 5px 0px 0px 5px;
+}
+
+.text-center {
+  text-align: center;
+  cursor: pointer;
+}
+
+.sub-title {
+  color: white;
+  font-size: 12px;font-weight: 600;
+  cursor: pointer;
+}
+
+.mar-30{
+ margin-top:30px;
+//  cursor: pointer;
+}
+
+.mar-50 {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.flec1 {
+  width: 100%;
+  display: flex;
+  margin: 0% 30%;
+  justify-content: center;
+}
+
+.wid-80 {
+  width: 75% !important;
+  height: 30px;
+}
+
+.wid-25 {
+  width: 25% !important;
+  height: 30px;
+}
+
+.changes12{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 30px;
+  flex-grow: 1;
+}
+
+// .changes12:hover{
+//   flex-grow: 3;
+// }
+
+ .hov2 >img:hover{
+  // padding-top: 30px;
+  flex-grow: 2;
+  display: flex;
+  flex-grow: 2;
+  transition: ease-in;
+  padding: -30px !important ;
+}
+
+@media screen and (max-width: 767.98px) {
+  .wid-80 {
+    width: 100%;
+    margin-bottom: 100px !important;
+
+  }
+
+  .adj-mar{
+    // height: 45px;
+    border-radius: 5px !important;
+    margin-bottom: 15px !important;
+    margin-top: -30px !important;
+  }
+
+  .wid-25 {
+    width: 100% !important;
+    display: flex;
+    justify-content: center;
+  }
+
+  .flec1 {
+    display: block;
+    margin: 10%;
+  }
+
+  .head1 {
+    z-index: 999;
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 30px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+.ng-autocomplete {
+  width: 100%;
+  max-width: 600px;
+  display: table;
+  margin: 0 auto;
+}
+
+// .custom-search-input[_ngcontent-gfd-c122] input[type=submit][_ngcontent-gfd-c122] {
+//   font-size: 16px !important;
+// }
+
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+  // background-color: #f1f3ff;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+// .example-form {
+//   min-width: 90px;
+//   max-width: 500px;
+//   width: 100%;
+// }
+
+// .example-full-width {
+//   width: 100%;
+//   font-size: small;
+// }
+
+.adj {
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+}
+
+.adj2 {
+  height: 371px !important;
+}
+#custom-search-input .search-query {
+  width: 77.7%;
+  padding-left: inherit;
+}
+
+#custom-search-input .btn_search {
+  margin-top: 11px;
+}
+
+.labsimg {
+  img {
+    height: 150px !important;
+    width: 100% !important;
+  }
+}
+
+.modal-content {
+  height: 85%;
+}
+
+.pharmacy {
+  color: red;
+  font-size: 22px;
+}
+
+.labs {
+  color: red;
+}
+
+.lb {
+  font-size: 22px;
+}
+
+.modal-title {
+  color: black !important;
+  font-weight: 800;
+}
+
+hr {
+  border: 1px solid;
+}
+
+.bbt {
+  width: 170px;
+  margin-left: 30%;
+  margin-bottom: 9px;
+  margin-top: 35px;
+  height: 56px;
+  float: right;
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+#custom-search-input input[type="submit"] {
+  font-size: 16px !important;
+}
+
+#custom-search-input {
+  margin: 0;
+  top: 0 !important;
+  padding: 0;
+  width: 911px;
+  margin: auto;
+  position: relative;
+}
+
+// .mat-form-field-wrapper {
+//   position: relative;
+//   top: 41px;
+// }
+
+a {
+  // color: #337ab7;
+  text-decoration: none;
+}
+
+.search-deivde {
+  border-left: 3px solid !important;
+  padding-left: 10px;
+}
+
+.btn-main {
+  border-radius: 8px;
+  padding: 10px 30px !important;
+  background-color: #45A29E;
+  cursor: pointer;
+  color: white !important;
+  text-align: center;
+  line-height: 1.5;
+  font-size: 16px;
+  font-weight: 400;
+  display: inline-block;
+  z-index: 1;
+  position: ab;
+}
+
+.categories h2 {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.categories .prev-next {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  cursor: pointer;
+}
+
+.categories .prev-next i {
+  color: #0880c4;
+  margin: 0 3px;
+}
+.categories .prev-next i:hover {
+  color: #000;
+  margin: 0 3px;
+}
+
+.fixed {
+  top: 13%;
+  width: 95%;
+}
+
+@media (max-width: 786px) {
+  .lb {
+    font-size: 16px;
+  }
+  .pharmacy {
+    font-size: 16px;
+  }
+  .pharmacyimg img {
+    height: 98px !important;
+    width: 76% !important;
+  }
+  .labsimg img {
+    height: 93px !important;
+    width: 76% !important;
+  }
+  .bbt {
+    width: 152px;
+    margin-bottom: 9px;
+    margin-top: 17px;
+    height: 44px;
+    font-size: 15px;
+    float: right;
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: 575px) {
+  .pharmacyimg img {
+    height: 98px !important;
+    width: 48% !important;
+    margin: 0px 22%;
+  }
+  .labsimg img {
+    height: 93px !important;
+    width: 48% !important;
+    margin: 0px 22%;
+  }
+}
+
+.modal-header .close {
+  padding: 1rem 1rem;
+  margin: -1.5rem -1rem -1rem auto;
+  font-size: 29px;
+}
+
+.lhs {
+  position: absolute;
+  top: 54%;
+  z-index: 999;
+  left: 16px;
+  font-size: 10px;
+}
+
+.rhs {
+  position: absolute;
+  top: 54%;
+  z-index: 999;
+  right: 16px;
+  font-size: 10px;
+}
+
+.categories .prev-next i {
+  color: #f1f3ff;
+  margin: 0 3px;
+}
+
+@media (max-width: 768px) {
+  .lab-slide .main_title h2 p {
+    text-align: left;
+    margin-bottom: 5px;
+    font-size: 22px;
+    font-weight: 300;
+  }
+}
+
+.app-download-sec .pic-middle img {
+  max-width: 151px;
+}
+
+.app-download-sec .info h2 {
+  font-size: 29px;
+}
+
+.testimonial h1 {
+  font-size: 1.8em;
+}
+
+.h2-size {
+  font-size: 1.5rem;
+}
+
+.container.margin_120_95 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.container h2 {
+  text-align: center;
+}
+
+.deal-offer h1 {
+  font-size: 1.8em;
+}
+
+.deal-offer h4 {
+  font-size: 1rem;
+}
+
+.element:before {
+  content: "\f000";
+  font-family: Camphor, verdana;
+}
+
+div#myCarousel {
+  padding: 0px !important;
+}
+
+.item.carousel-item.active.ng-star-inserted {
+  text-align: center;
+  font-family: Camphor, Verdana !important;
+  font-size: 15px;
+}
+
+p.testimonial {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  font-family: Camphor, Verdana !important;
+}
+
+.title-left {
+  text-align: center;
+}
+
+.h2txt{
+ font-family: Verdana, Geneva, Tahoma, sans-serif;
+ text-align: left;
+ margin-right: 45px;
+}
+
+/*Swapnil-UICSS*/
+.mainSectionTitle h2 {
+  font-size: 32px !important;
+    line-height: 40px !important;
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+    text-align: left !important;
+    color: #414146 !important;
+    text-transform: initial !important;
+    margin-bottom: 30px;
+}
+.h2txt.mainSectionTitle h2 {
+  margin-top: 10%;
+}
+.flecs1 .head1 {
+  z-index: 999;
+  text-align: center !important;
+  font-size: 35px !important;
+  color: #fff !important;
+  font-weight: 500 !important;
+}
+.mainSectionTitle strong {
+  font-weight: 600 !important;
+}
+.pt-pb-80{
+  padding-top:80px !important;
+  padding-bottom:80px !important;
+}
+.topCategoriesSect .fa {
+  font-family: 'FontAwesome' !important;
+}
+.topCategoriesSect .card {
+  border-radius: 4px !important;
+  background: transparent !important;
+}
+.topCategoriesSect .card:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px !important;
+}
+.specialityName {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0,0,0,0.5);
+  width: 100%;
+  color: #ffffff;
+  text-align: center;
+  font-size: 18px;
+  padding: 12px 5px;
+  text-transform: capitalize;
+}
+p.testimonial {
+  font-size: 22px !important;
+  line-height: 36px !important;
+}
+p.testimonial::before{
+  content:"\f10d" !important;
+  font-family: "Fontawesome" !important;
+  font-size: 28px;
+}
+
+// p.testimonial::after{
+//   content:"\f10e" !important;
+//   font-family: "Fontawesome" !important;
+//   font-size: 28px;
+// }
+.carousel-inner.testimonialSlider i {
+  font-family: 'FontAwesome' !important;
+  margin-right: 12px;
+  font-size: 28px;
+}
+.carousel-inner.testimonialSlider p.overview img {
+  width: 55px;
+  margin: 0 15px;
+  display: inline;
+}
+ul.appDownload li {
+  list-style: none !important;
+  display: inline-block;
+}
+ul.appDownload li::before{
+  content:" " !important;
+}

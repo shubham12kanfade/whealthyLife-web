@@ -1,0 +1,1380 @@
+<div style="background-color: #f0f0f5">
+<section style="margin-top:80px; padding-top: 20px;">
+  <div class="container">
+    <div class="col-12">
+     <div class="row">
+        <div class="col-lg-8" >
+          <div class="card" style="box-shadow:0px 0px 10px #c5c4c4;padding: 15px;">
+            <div class="row">
+                <div class="col-lg-3 col-sm-4 col-12">
+                    <img [src]="profileData?.avatar" onerror="this.src='../assets/img/user.jpeg'" class="card-img" alt="..." style="border: 1px solid lightgray;border-radius: 50%;">
+                </div>
+                <div class="col-lg-9  col-sm-8 col-12">
+                  <div style="margin: 0px 15px;">
+                    <h2 style="margin: 0px;"> Dr. {{ profileData?.firstName }} {{ profileData?.lastName }} </h2>
+                    <span style="font-size: 12px" *ngFor="let deg of degree">
+                      {{ deg.degree }}
+                    </span>
+                    <p class="pl-1  font-weight-bold" style="display: block;width: 100%;margin: 10px 0px;"> Profile is claimed :- </p>
+                    <span *ngFor="let prospec of profileData?.specialitie" style="font-weight: 600;"> 
+                      {{ prospec?.fullName + ", " }} 
+                    </span>
+                    <p style="display: block;margin-top: 20px;">
+                      {{ profileData?.experience }} Years Experience Overall ({{
+                        profileData?.experience
+                      }}
+                      years as specialist)
+                    </p>
+                    <div class="row text-dark1">
+                      <i class="fa fa-thumbs-up text-success p-1" aria-hidden="true"> 96% </i>
+                      <p>(3673 votes)</p>
+                    </div>
+                    <p>
+                      Dr. {{ profileData?.firstName }} {{ profileData?.lastName }}
+                      is highly qualified and highly experienced doctor with {{ profileData?.experience }} years
+                      of vast experience.
+                    </p>
+                    <button class="btn" style="float: right;margin-top: 30px;" >
+                      Give Feedback
+                    </button>
+                  </div>
+              </div>
+            </div>
+        </div>
+        </div>
+        <div class="col-lg-4" >
+              <div class="bg-white mb-3">
+                <div class="row">
+                  <div class="col-sm-12">
+                    <div class="row">
+                      <div class="col-2">
+                        <img
+                          src="//www.practostatic.com/web-assets/images/direct_consult.520d47dbea81.svg"
+                          class="m-auto p-2" data-reactid="187" style="border: 1px solid lightgray;border-radius: 50%;"/>
+                      </div>
+                      <div class="col-7 font-sizex-smalll text-dark p-2">
+                        VIDEO CONSULTATION
+                      </div>
+                      <div class="col-3">
+                        <h2 class="">₹ {{ profileData?.fees }}</h2>
+                      </div>
+                    </div>
+                    <mat-tab-group mat-stretch-tabs class="example-stretched-tabs mat-elevation-z4" style="height: 286px;">
+                      <mat-tab label="Today">
+                        <div class="container">
+                          <div class="row heightover" style="max-height: 180px;">
+                            <div *ngFor="let item of slot">
+                              <div class="col-sm-12">
+                                <div class="row">
+                                  <div class="col-sm-12">
+                                    <h4 class="font-weight-bold mb-1">
+                                      Morning Slot
+                                    </h4>
+                                  </div>
+                                </div>
+                                <div class="row" >
+                                  <div *ngFor="let mor of item.mrningSlots" style="display: flex;justify-content: space-evenly;margin: auto;">
+                                      <div class="btn btn-outline-light" (click)="openDialog(mor.strtTime,mor.endTime,item.date, 'Morning Slots')" style="margin: 10px 5px;">
+                                        {{ mor.strtTime }}
+                                      </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-sm-12">
+                                <div class="row">
+                                  <div class="col-sm-12">
+                                    <h4 class="font-weight-bold mb-1">
+                                      Evening Slots
+                                    </h4>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div *ngFor="let eve of item.eveningSlots" style="display: flex;justify-content: space-evenly;margin: auto;">
+                                      <div class="btn btn-outline-light mt-1 mb-1" (click)="openDialog(eve.strtTime,eve.endTime,item.date, 'Evening Slots')" style="margin: 10px 5px;">
+                                        {{ eve.strtTime }}
+                                      </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </mat-tab>
+                      <mat-tab label="Tomorrow">
+                        <div class="container">
+                          <div class="row heightover">
+                            <div *ngFor="let item of slot2">
+                              <div class="col-sm-12">
+                                <div class="row">
+                                  <div class="col-sm-12">
+                                    <h4 class="font-weight-bold mb-1">
+                                      Morning Slot
+                                    </h4>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div *ngFor="let mor of item.mrningSlots" style="display: flex;justify-content: space-evenly;margin: auto;">
+                                      <div class="btn btn-outline-light mt-1 mb-1" (click)="openDialog(mor.strtTime,mor.endTime,item.date, 'Morning Slots')" style="margin: 10px 5px;">
+                                        {{ mor.strtTime }}
+                                      </div>
+                                  </div>
+                                </div>
+                              </div>
+      
+                              <div class="col-sm-12">
+                                <div class="row">
+                                  <div class="col-sm-12">
+                                    <h4 class="font-weight-bold mb-1">
+                                      Evening Slots
+                                    </h4>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div *ngFor="let eve of item.eveningSlots" style="display: flex;justify-content: space-evenly;margin: auto;">
+                                      <div class="btn btn-outline-light mt-1 mb-1" (click)="openDialog(eve.strtTime,eve.endTime,item.date,'Evening Slots')" style="margin: 10px 5px;">
+                                        {{ eve.strtTime }}
+                                      </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </mat-tab>
+                      <mat-tab
+                        [label]="
+                          (TimeSlot(3) | date: 'dd') +
+                          ' ' +
+                          (TimeSlot(3) | date: 'LLL')
+                        "
+                      >
+                        <div class="container">
+                          <div class="row heightover">
+                            <div *ngFor="let item of slot3">
+                              <div class="col-sm-12">
+                                <div class="row">
+                                  <div class="col-sm-12">
+                                    <h4 class="font-weight-bold mb-1">
+                                      Morning Slot
+                                    </h4>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div *ngFor="let mor of item.mrningSlots" style="display: flex;justify-content: space-evenly;margin: auto;">
+                                      <div class="btn btn-outline-light mt-1 mb-1" (click)="openDialog(mor.strtTime,mor.endTime,item.date, 'Moening Slots')" style="margin: 10px 5px;">
+                                        {{ mor.strtTime }}
+                                      </div>
+                                  </div>
+                                </div>
+                              </div>
+      
+                              <div class="col-sm-12">
+                                <div class="row">
+                                  <div class="col-sm-12">
+                                    <h4 class="font-weight-bold mb-1">
+                                      Evening Slots
+                                    </h4>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div *ngFor="let eve of item.eveningSlots" style="display: flex;justify-content: space-evenly;margin: auto;">
+                                      <div class="btn btn-outline-light mt-1 mb-1" (click)="openDialog(eve.strtTime,eve.endTime,item.date, 'Evening Slots')" style="margin: 10px 5px;">
+                                        {{ eve.strtTime }}
+                                      </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </mat-tab>
+                      <mat-tab
+                        [label]="
+                          (TimeSlot(4) | date: 'dd') +
+                          ' ' +
+                          (TimeSlot(4) | date: 'LLL')
+                        "
+                      >
+                        <div class="container">
+                          <div class="row heightover">
+                            <div *ngFor="let item of slot4">
+                              <div class="col-sm-12">
+                                <div class="row">
+                                  <div class="col-sm-12">
+                                    <h4 class="font-weight-bold mb-1">
+                                      Morning Slot
+                                    </h4>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div *ngFor="let mor of item.mrningSlots" style="display: flex;justify-content: space-evenly;margin: auto;">
+                                      <div class="btn btn-outline-light mt-1 mb-1" (click)="openDialog(mor.strtTime,mor.endTime,item.date,'Morning Slots')" style="margin: 10px 5px;">
+                                        {{ mor.strtTime }}
+                                      </div>
+                                  </div>
+                                </div>
+                              </div>
+      
+                              <div class="col-sm-12">
+                                <div class="row">
+                                  <div class="col-sm-12">
+                                    <h4 class="font-weight-bold mb-1">
+                                      Evening Slots
+                                    </h4>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div *ngFor="let eve of item.eveningSlots" style="display: flex;justify-content: space-evenly;margin: auto;">
+                                      <div class="btn btn-outline-light mt-1 mb-1" (click)="openDialog(eve.strtTime,eve.endTime,item.date, 'Evening Slots')"  style="margin: 10px 5px;">
+                                        {{ eve.strtTime }}
+                                      </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </mat-tab>
+                      <mat-tab
+                        [label]="
+                          (TimeSlot(5) | date: 'dd') +
+                          ' ' +
+                          (TimeSlot(5) | date: 'LLL')
+                        "
+                      >
+                        <div class="container">
+                          <div class="row heightover">
+                            <div *ngFor="let item of slot">
+                              <div class="col-sm-12">
+                                <div class="row">
+                                  <div class="col-sm-12">
+                                    <h4 class="font-weight-bold mb-1">
+                                      Morning Slot
+                                    </h4>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div *ngFor="let mor of item.mrningSlots" style="display: flex;justify-content: space-evenly;margin: auto;">
+                                      <div class="btn btn-outline-light mt-1 mb-1" (click)="openDialog(mor.strtTime,mor.endTime,item.date,'Mornig Slot')" style="margin: 10px 5px;">
+                                        {{ mor.strtTime}}
+                                      </div>
+                                  </div>
+                                </div>
+                              </div>
+      
+                              <div class="col-sm-12">
+                                <div class="row">
+                                  <div class="col-sm-12">
+                                    <h4 class="font-weight-bold mb-1">
+                                      Evening Slots
+                                    </h4>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div *ngFor="let eve of item.eveningSlots" style="display: flex;justify-content: space-evenly;margin: auto;">
+                                      <div class="btn btn-outline-light mt-1 mb-1" (click)="openDialog(eve.strtTime,eve.endTime,item.date,'Evening Slot')" style="margin: 10px 5px;">
+                                        {{ eve.strtTime }}
+                                      </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </mat-tab>
+                    </mat-tab-group>
+                  </div>
+                </div>
+              </div>
+        </div>
+     </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="col-12">
+      <div class="row">
+        <div class="col-lg-8">
+
+          <div  style="display: flex;justify-content: flex-start;align-items: center;">
+            <div  [ngClass]="{ selectActive: active == 'Info' }" (click)="activefn('Info')" style="height: 30px;width:100px; display:flex;justify-content: center;align-items: center;">
+              Info
+            </div>
+            <div  [ngClass]="{ selectActive: active == 'Feedback' }" (click)="activefn('Feedback')" style="height: 30px;width:100px; display:flex;justify-content: center;align-items: center;">
+              Feedback
+            </div>
+            <div  [ngClass]="{ selectActive: active == 'Consult' }" (click)="activefn('Consult')" style="height: 30px;width:100px; display:flex;justify-content: center;align-items: center;">
+              Consult
+            </div>
+            <div  [ngClass]="{ selectActive: active == 'Q&AHealthfeed' }" (click)="activefn('Q&AHealthfeed')" style="height: 30px;width:100px; display:flex;justify-content: center;align-items: center;">
+              Q&AHealthfeed
+            </div>
+
+          </div>
+
+
+          <!-- <ul>
+            <li>
+              <div class="a font-weight-bold mcursor" [ngClass]="{ selectActive: active == 'Info' }" (click)="activefn('Info')">
+                Info
+              </div>
+            </li>
+            <li>
+              <div
+                class="a font-weight-bold mcursor" [ngClass]="{ selectActive: active == 'Feedback' }"
+                (click)="activefn('Feedback')">
+                Feedback
+              </div>
+            </li>
+            <li>
+              <div class="a font-weight-bold mcursor"
+                [ngClass]="{ selectActive: active == 'Consult' }" (click)="activefn('Consult')">
+                Consult
+              </div>
+            </li>
+            <li>
+              <div class="a font-weight-bold mcursor"
+                [ngClass]="{ selectActive: active == 'Q&AHealthfeed' }" (click)="activefn('Q&AHealthfeed')">
+                Q&AHealthfeed
+              </div>
+            </li>
+          </ul> -->
+          <div *ngIf="active == 'Info'">
+            <div class="card mb-3">
+              <div class="row no-gutters">
+                <div class="col-md-12">
+                  <div class="card-body ml-3 mr-3">
+                    <div class="row text-dark">
+                      <p class="pl-1 pt-2 font-weight-bold">
+                        {{ getCitys(profileData?.location?.city) }} ,
+                        {{ getStates(profileData?.location?.state) }} ,
+                        {{ getCountrys(profileData?.location?.country) }}
+                      </p>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-12 col-md-4">
+                        <div class="row text-dark">
+                          <p class="pl-1 pt-2 font-weight-bold text-left mcursor text-info text-decoration-underline">
+                            32 Smiles Multispeciality Dental Clinic
+                          </p>
+                        </div>
+                        <div class="row">
+                          <div class="starbgandcolor p-1" title="5">
+                            <div class="">
+                              <span class=""> {{getNumberASRound(avgStar?.AverageStars)}} </span>
+                              <span class="" >
+                                <i *ngFor="let qwe of avgStar?.AverageStars.toFixed()" class="fa fa-star"></i>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <p class="text-left pr-3 text-dark fontsizesmall">
+                            {{ profileData?.location?.address }}
+                            {{ profileData?.location?.landmark }}
+                            {{ getCitys(profileData?.location?.city) }} ,
+                            {{ getStates(profileData?.location?.state) }} ,
+                            {{ getCountrys(profileData?.location?.country) }}
+                            {{ profileData?.location?.pincode }}
+                          </p>
+                        </div>
+                        <div class="row">
+                          <p class="text-info font-weight-bold">Get Directions</p>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-4">
+                        <div class="row text-dark">
+                          <p class="pl-1 pt-2 font-weight-bold">Mon - Sun</p>
+                        </div>
+                        <div class="row">
+                          <div class="col-sm-12">
+                            <p class="text-dark fontsizesmall">
+                              09:00 AM - 02:00 PM
+                            </p>
+                          </div>
+                          <div class="col-sm-12">
+                            <p class="text-dark fontsizesmall">
+                              09:00 AM - 02:00 PM
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-4">
+                        <div class="row text-dark">
+                          <p class="pl-1 pt-2">200</p>
+                        </div>
+                        <div class="row">
+                          <p class="font-weight-bold checkprime">Prime</p>
+                          <i
+                            class="fa fa-check-circle p-1 checkprime"
+                            aria-hidden="true"
+                          ></i>
+                          <p class="checkprime">
+                            Max. 15 mins wait + Verified details
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card mb-3 mt-2" *ngIf="review?.length!=0">
+              <div class="row no-gutters">
+                <div class="col-md-12">
+                  <div class="card-body ml-3 mr-3">
+                    <hr />
+                    <div class="row border-bottom my-2" *ngFor="let item of review |slice:1:2">
+                      <div class="col-2">
+                        <div class="rounded-circle p-2 feebbackpro">
+                          {{item?.userId?.firstName.charAt(0) | uppercase}}
+                        </div>
+                      </div>
+                      <div class="col-8">
+                        <div class="row">
+                          <p>{{item?.userId?.firstName +" "+item?.userId?.lastName}}  </p>
+                        </div>
+                        <div class="row">
+                          <p class="h5 m-0 text-dark pl-1 pt-2 font-weight-bold">
+                           {{item?.title | titlecase}}
+                          </p>
+                        </div>
+                        <div class="row">
+                          <p>
+                            {{ item?.review }}
+                          </p>
+                        </div>
+                        <div *ngIf="item?.feedbackId?.feedback" class="row">
+                          <i class="fa fa-reply-all" aria-hidden="true"></i>
+                          <h4 class="m-0 text-dark pl-1 pt-2 font-weight-bold">
+                            Dr. {{ profileData?.firstName }}
+                            {{ profileData?.lastName }} <br />
+                          </h4>
+                          <div class="col-12">
+                            <p>{{item?.feedbackId?.feedback}}</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-2">
+                        <p>{{RiviweTime(item?.createdAt)}}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card mb-3 mt-2" *ngIf="Qa?.length!=0">
+              <div class="row no-gutters">
+                <div class="col-md-12" *ngFor="let item of Qa |slice:1">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-2"><span class="dentist-icon"></span></div>
+                      <div class="col-10">
+                        <h3 class="m-0">{{ item?.questionId?.question }}</h3>
+                        <p>
+                          {{ item?.questionId?.description }}
+                        </p>
+                        <hr />
+                        <div class="row">
+                          <i class="fa fa-reply-all" aria-hidden="true"></i>
+                          <h4 class="m-0 text-dark pl-1 pt-2 font-weight-bold">
+                            Dr. {{ profileData?.firstName }}
+                            {{ profileData?.lastName }}
+                          </h4>
+                          <div class="col-12">
+                            <p>
+                              {{ item?.answer }}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card mb-3 mt-2">
+              <div class="row no-gutters">
+                <div class="col-md-12">
+                  <div class="card-body">
+                    <div class="row p-3">
+                      <h3>Services</h3>
+                      <div class="row border-bottom pb-2">
+                        <div class="col-sm-12 col-md-6 col-lg-4 b"
+                          *ngFor="let pro of profileData?.specialitie">
+                          <li>{{ pro.fullName }}</li>
+                        </div>
+                      </div>
+  
+                      <div class="row pt-2 pb-2 border-bottom">
+                        <div class="col-sm-12 col-md-6">
+                          <h3>Specializations</h3>
+                          <div class="row pb-2">
+                            <div class="col-sm-12 b"
+                              *ngFor="let pro of profileData?.specialitie">
+                              <li>{{ pro.fullName }}</li>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6 b">
+                          <h3>Awards and Recognitions</h3>
+                          <div class="row pb-2">
+                            <div class="col-sm-12 b" *ngFor="let pro of Awards">
+                              <li>{{ pro?.awardId?.title }}</li>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row pt-2 pb-2">
+                        <div class="col-sm-12 col-md-6">
+                          <h3>Education</h3>
+                          <div class="row pb-2">
+                            <div class="col-sm-12 b" *ngFor="let item of degree">
+                              <li>
+                                {{ item?.degree }}-{{ item?.completionYear }}
+                              </li>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6 b">
+                          <h3>Membership</h3>
+                          <div class="row pb-2">
+                            <div class="col-sm-12 b" *ngFor="let pro of memberShip">
+                              <li>{{ pro?.membershipId?.descrioton }}</li>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <hr />
+                  <div class="card pl-2 pr-2">
+                    <p class="text-right pr-2 pl-2 text-danger">
+                      Report an Error
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card mb-3" *ngIf="active == 'Feedback'">
+            <div class="card mb-3 mt-2" *ngIf="review?.length!=0">
+              <div class="row no-gutters">
+                <div class="col-md-12">
+                  <div class="card-body ml-3 mr-3">
+                    <hr />
+                    <div class="row border-bottom my-2" *ngFor="let item of review ">
+                      <div class="col-lg-1 col-md-2">
+                        <div class="rounded-circle p-2 feebbackpro">
+                          {{item?.userId?.firstName.charAt(0) | uppercase}}
+                        </div>
+                      </div>
+                      <div class="col-lg-8 col-md-6">
+                        <div class="row">
+                          <p>{{item?.userId?.firstName +" "+item?.userId?.lastName}}  </p>
+                        </div>
+                        <div class="row">
+                          <p class="h5 m-0 text-dark pl-1 pt-2 font-weight-bold">
+                           {{item?.title | titlecase}}
+                          </p>
+                        </div>
+                        <div class="row">
+                          <p>
+                            {{ item?.review }}
+                          </p>
+                        </div>
+                        <div *ngIf="item?.feedbackId?.feedback" class="row">
+                          <i class="fa fa-reply-all" aria-hidden="true"></i>
+                          <h4 class="m-0 text-dark pl-1 pt-2 font-weight-bold">
+                            Dr. {{ profileData?.firstName }}
+                            {{ profileData?.lastName }} <br />
+                          </h4>
+                          <div class="col-12">
+                            <p>{{item?.feedbackId?.feedback}}</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-2">
+                        <p>{{RiviweTime(item?.createdAt)}}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card mb-3" *ngIf="active == 'Consult'">
+            <div class="row no-gutters">
+              <div class="col-md-12">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-2"><span class="dentist-icon"></span></div>
+                    <div class="col-10">
+                      <h3 class="m-0">Unable to open mouth</h3>
+                      <p>
+                        Hi Doctor, I was having gotka from past 1year aproxy For
+                        Wich I am not able to open my mouth completely. Please
+                        suggest me any medicen Thanks
+                      </p>
+                      <hr />
+                      <div class="row">
+                        <i class="fa fa-reply-all" aria-hidden="true"></i>
+                        <h4 class="m-0 text-dark pl-1 pt-2 font-weight-bold">
+                          Dr. M. R. Pujari answered
+                        </h4>
+                        <div class="col-12">
+                          <p>
+                            Hi..it is oral submucosal fibrosis. It can be cured
+                            with injections only. Medicines cannot help...
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <hr />
+                <div class="card pl-2 pr-2">
+                  <p class="text-right pr-2 pl-2 text-danger">Report an Error</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card mb-3" *ngIf="active == 'Q&AHealthfeed'">
+            <div class="card p-2" *ngFor="let item of HFHelth">
+              <img
+                class="card-img-top"
+                [src]="item.image[0]"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h3>{{item?.title}}</h3>
+                <p class="card-text">
+                  {{item?.description}}
+                </p>
+              </div>
+  
+            </div>
+            <hr />
+            <div class="card pl-2 pr-2">
+              <p class="text-right pr-2 pl-2 text-danger">Report an Error</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- <section>
+
+</section> -->
+
+
+<!-- <section style="background-color: #f0f0f5">
+  <div class="container-lg mt-5">
+    <div class="row mt-5">
+      <div class="col-sm-12 col-md-8 mt-5">
+        <div class="card mb-3">
+          <div class="row no-gutters">
+            <div class="col-md-2 p-2 img">
+              <img [src]="profileData?.avatar" onerror="this.src='../assets/img/user.jpeg'" class="card-img" alt="..."/>
+            </div>
+            <div class="col-md-10">
+              <div class="card-body mr-3">
+                <div class="row text-dark mb-0">
+                  <h2 class="font-weight-bold mb-0"  style="cursor: pointer;margin: 0px;" >
+                    Dr. {{ profileData?.firstName }} {{ profileData?.lastName }}
+                    <span style="font-size: 12px" *ngFor="let deg of degree">
+                      {{ deg.degree }}
+                    </span>
+                  </h2>
+                </div>
+                <p class="pl-1 pt-2 font-weight-bold"> Profile is claimed </p>
+                <div class="row text-dark">
+                  <span *ngFor="let prospec of profileData?.specialitie">{{
+                    prospec?.fullName + ", "
+                  }}</span>
+                </div>
+                <div class="row text-dark">
+                  <p>
+                    {{ profileData?.experience }} Years Experience Overall ({{
+                      profileData?.experience
+                    }}
+                    years as specialist)
+                  </p>
+                </div>
+
+                <div>
+                  <i class="fa fa-thumbs-up text-success p-1" aria-hidden="true"> 96% </i>
+                  <p>(3673 votes)</p>
+                </div>
+                <div >
+                  <p> Dr. {{ profileData?.firstName }}
+                    {{ profileData?.lastName }} is highly qualified and highly
+                    experienced doctor with {{ profileData?.experience }} years
+                    of vast experience.
+                 
+                  </p>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="row text-dark">
+                  <p  class="text-right text-info textwidth mcursor">
+                    Give Feedback
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <ul>
+          <li>
+            <div class="a font-weight-bold mcursor" [ngClass]="{ selectActive: active == 'Info' }" (click)="activefn('Info')">
+              Info
+            </div>
+          </li>
+          <li>
+            <div
+              class="a font-weight-bold mcursor"
+              [ngClass]="{ selectActive: active == 'Feedback' }"
+              (click)="activefn('Feedback')"
+            >
+              Feedback
+            </div>
+          </li>
+          <li>
+            <div
+              class="a font-weight-bold mcursor"
+              [ngClass]="{ selectActive: active == 'Consult' }"
+              (click)="activefn('Consult')"
+            >
+              Consult
+            </div>
+          </li>
+          <li>
+            <div
+              class="a font-weight-bold mcursor"
+              [ngClass]="{ selectActive: active == 'Q&AHealthfeed' }"
+              (click)="activefn('Q&AHealthfeed')"
+            >
+              Q&AHealthfeed
+            </div>
+          </li>
+        </ul>
+        <div *ngIf="active == 'Info'">
+          <div class="card mb-3">
+            <div class="row no-gutters">
+              <div class="col-md-12">
+                <div class="card-body ml-3 mr-3">
+                  <div class="row text-dark">
+                    <p class="pl-1 pt-2 font-weight-bold">
+                      {{ getCitys(profileData?.location?.city) }} ,
+                      {{ getStates(profileData?.location?.state) }} ,
+                      {{ getCountrys(profileData?.location?.country) }}
+                    </p>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-12 col-md-4">
+                      <div class="row text-dark">
+                        <p
+                          class="pl-1 pt-2 font-weight-bold text-left mcursor text-info text-decoration-underline"
+                        >
+                          32 Smiles Multispeciality Dental Clinic
+                        </p>
+                      </div>
+                      <div class="row">
+                        <div class="starbgandcolor p-1" title="5">
+                          <div class="">
+                            <span class=""> {{getNumberASRound(avgStar?.AverageStars)}} </span>
+                            <span class="" >
+                              <i *ngFor="let qwe of avgStar?.AverageStars.toFixed()" class="fa fa-star"></i>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <p class="text-left pr-3 text-dark fontsizesmall">
+                          {{ profileData?.location?.address }}
+                          {{ profileData?.location?.landmark }}
+                          {{ getCitys(profileData?.location?.city) }} ,
+                          {{ getStates(profileData?.location?.state) }} ,
+                          {{ getCountrys(profileData?.location?.country) }}
+                          {{ profileData?.location?.pincode }}
+                        </p>
+                      </div>
+                      <div class="row">
+                        <p class="text-info font-weight-bold">Get Directions</p>
+                      </div>
+                    </div>
+                    <div class="col-sm-12 col-md-4">
+                      <div class="row text-dark">
+                        <p class="pl-1 pt-2 font-weight-bold">Mon - Sun</p>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-12">
+                          <p class="text-dark fontsizesmall">
+                            09:00 AM - 02:00 PM
+                          </p>
+                        </div>
+                        <div class="col-sm-12">
+                          <p class="text-dark fontsizesmall">
+                            09:00 AM - 02:00 PM
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-12 col-md-4">
+                      <div class="row text-dark">
+                        <p class="pl-1 pt-2">200</p>
+                      </div>
+                      <div class="row">
+                        <p class="font-weight-bold checkprime">Prime</p>
+                        <i
+                          class="fa fa-check-circle p-1 checkprime"
+                          aria-hidden="true"
+                        ></i>
+                        <p class="checkprime">
+                          Max. 15 mins wait + Verified details
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card mb-3 mt-2" *ngIf="review?.length!=0">
+            <div class="row no-gutters">
+              <div class="col-md-12">
+                <div class="card-body ml-3 mr-3">
+
+                  <hr />
+                  <div class="row border-bottom my-2" *ngFor="let item of review |slice:1:2">
+                    <div class="col-2">
+                      <div class="rounded-circle p-2 feebbackpro">
+                        {{item?.userId?.firstName.charAt(0) | uppercase}}
+                      </div>
+                    </div>
+                    <div class="col-8">
+                      <div class="row">
+                        <p>{{item?.userId?.firstName +" "+item?.userId?.lastName}}  </p>
+                      </div>
+                      <div class="row">
+                        <p class="h5 m-0 text-dark pl-1 pt-2 font-weight-bold">
+                         {{item?.title | titlecase}}
+                        </p>
+                      </div>
+
+                      <div class="row">
+                        <p>
+                          {{ item?.review }}
+                        </p>
+                      </div>
+                      <div *ngIf="item?.feedbackId?.feedback" class="row">
+                        <i class="fa fa-reply-all" aria-hidden="true"></i>
+                        <h4 class="m-0 text-dark pl-1 pt-2 font-weight-bold">
+                          Dr. {{ profileData?.firstName }}
+                          {{ profileData?.lastName }} <br />
+                        </h4>
+
+                        <div class="col-12">
+                          <p>{{item?.feedbackId?.feedback}}</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-2">
+                      <p>{{RiviweTime(item?.createdAt)}}</p>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card mb-3 mt-2" *ngIf="Qa?.length!=0">
+            <div class="row no-gutters">
+              <div class="col-md-12" *ngFor="let item of Qa |slice:1">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-2"><span class="dentist-icon"></span></div>
+                    <div class="col-10">
+                      <h3 class="m-0">{{ item?.questionId?.question }}</h3>
+                      <p>
+                        {{ item?.questionId?.description }}
+                      </p>
+                      <hr />
+                      <div class="row">
+                        <i class="fa fa-reply-all" aria-hidden="true"></i>
+                        <h4 class="m-0 text-dark pl-1 pt-2 font-weight-bold">
+                          Dr. {{ profileData?.firstName }}
+                          {{ profileData?.lastName }}
+                        </h4>
+
+                        <div class="col-12">
+                          <p>
+                            {{ item?.answer }}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card mb-3 mt-2">
+            <div class="row no-gutters">
+              <div class="col-md-12">
+                <div class="card-body">
+                  <div class="row p-3">
+                    <h3>Services</h3>
+
+                    <div class="row border-bottom pb-2">
+                      <div
+                        class="col-sm-12 col-md-6 col-lg-4 b"
+                        *ngFor="let pro of profileData?.specialitie"
+                      >
+                        <li>{{ pro.fullName }}</li>
+                      </div>
+                    </div>
+
+                    <div class="row pt-2 pb-2 border-bottom">
+                      <div class="col-sm-12 col-md-6">
+                        <h3>Specializations</h3>
+                        <div class="row pb-2">
+                          <div
+                            class="col-sm-12 b"
+                            *ngFor="let pro of profileData?.specialitie"
+                          >
+                            <li>{{ pro.fullName }}</li>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-6 b">
+                        <h3>Awards and Recognitions</h3>
+                        <div class="row pb-2">
+                          <div class="col-sm-12 b" *ngFor="let pro of Awards">
+                            <li>{{ pro?.awardId?.title }}</li>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row pt-2 pb-2">
+                      <div class="col-sm-12 col-md-6">
+                        <h3>Education</h3>
+                        <div class="row pb-2">
+                          <div class="col-sm-12 b" *ngFor="let item of degree">
+                            <li>
+                              {{ item?.degree }}-{{ item?.completionYear }}
+                            </li>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-6 b">
+                        <h3>Membership</h3>
+                        <div class="row pb-2">
+                          <div
+                            class="col-sm-12 b"
+                            *ngFor="let pro of memberShip"
+                          >
+                            <li>{{ pro?.membershipId?.descrioton }}</li>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <hr />
+                <div class="card pl-2 pr-2">
+                  <p class="text-right pr-2 pl-2 text-danger">
+                    Report an Error
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card mb-3" *ngIf="active == 'Feedback'">
+          <div class="card mb-3 mt-2" *ngIf="review?.length!=0">
+            <div class="row no-gutters">
+              <div class="col-md-12">
+                <div class="card-body ml-3 mr-3">
+
+                  <hr />
+                  <div class="row border-bottom my-2" *ngFor="let item of review ">
+                    <div class="col-2">
+                      <div class="rounded-circle p-2 feebbackpro">
+                        {{item?.userId?.firstName.charAt(0) | uppercase}}
+                      </div>
+                    </div>
+                    <div class="col-8">
+                      <div class="row">
+                        <p>{{item?.userId?.firstName +" "+item?.userId?.lastName}}  </p>
+                      </div>
+                      <div class="row">
+                        <p class="h5 m-0 text-dark pl-1 pt-2 font-weight-bold">
+                         {{item?.title | titlecase}}
+                        </p>
+                      </div>
+
+                      <div class="row">
+                        <p>
+                          {{ item?.review }}
+                        </p>
+                      </div>
+                      <div *ngIf="item?.feedbackId?.feedback" class="row">
+                        <i class="fa fa-reply-all" aria-hidden="true"></i>
+                        <h4 class="m-0 text-dark pl-1 pt-2 font-weight-bold">
+                          Dr. {{ profileData?.firstName }}
+                          {{ profileData?.lastName }} <br />
+                        </h4>
+
+                        <div class="col-12">
+                          <p>{{item?.feedbackId?.feedback}}</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-2">
+                      <p>{{RiviweTime(item?.createdAt)}}</p>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card mb-3" *ngIf="active == 'Consult'">
+          <div class="row no-gutters">
+            <div class="col-md-12">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-2"><span class="dentist-icon"></span></div>
+                  <div class="col-10">
+                    <h3 class="m-0">Unable to open mouth</h3>
+                    <p>
+                      Hi Doctor, I was having gotka from past 1year aproxy For
+                      Wich I am not able to open my mouth completely. Please
+                      suggest me any medicen Thanks
+                    </p>
+                    <hr />
+                    <div class="row">
+                      <i class="fa fa-reply-all" aria-hidden="true"></i>
+                      <h4 class="m-0 text-dark pl-1 pt-2 font-weight-bold">
+                        Dr. M. R. Pujari answered
+                      </h4>
+                      <div class="col-12">
+                        <p>
+                          Hi..it is oral submucosal fibrosis. It can be cured
+                          with injections only. Medicines cannot help...
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <hr />
+              <div class="card pl-2 pr-2">
+                <p class="text-right pr-2 pl-2 text-danger">Report an Error</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card mb-3" *ngIf="active == 'Q&AHealthfeed'">
+          <div class="card p-2" *ngFor="let item of HFHelth">
+            <img
+              class="card-img-top"
+              [src]="item.image[0]"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h3>{{item?.title}}</h3>
+              <p class="card-text">
+                {{item?.description}}
+              </p>
+            </div>
+
+          </div>
+          <hr />
+          <div class="card pl-2 pr-2">
+            <p class="text-right pr-2 pl-2 text-danger">Report an Error</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-4 mt-5">
+        <div class="bg-white mb-3">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="row">
+                <div class="col-2">
+                  <img
+                    src="//www.practostatic.com/web-assets/images/direct_consult.520d47dbea81.svg"
+                    class="m-auto p-2"
+                    data-reactid="187"
+                  />
+                </div>
+                <div class="col-7 font-sizex-smalll text-dark p-2">
+                  VIDEO CONSULTATION
+                </div>
+                <div class="col-3">
+                  <h2 class="">₹{{ profileData?.fees }}</h2>
+                </div>
+              </div>
+              <mat-tab-group
+                mat-stretch-tabs
+                class="example-stretched-tabs mat-elevation-z4"
+              >
+                <mat-tab label="Today">
+                  <div class="container">
+                    <div class="row heightover">
+                      <div *ngFor="let item of slot">
+                        <div class="col-sm-12">
+                          <div class="row">
+                            <div class="col-sm-12">
+                              <h4 class="font-weight-bold mb-1">
+                                Morning Slot
+                              </h4>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div *ngFor="let mor of item.mrningSlots">
+                              <div class="col-3">
+                                <div class="btn btn-outline-light mt-1 mb-1" (click)="openDialog(mor.strtTime,mor.endTime,item.date, 'Morning Slots')" >
+                                  {{ mor.strtTime }}
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-sm-12">
+                          <div class="row">
+                            <div class="col-sm-12">
+                              <h4 class="font-weight-bold mb-1">
+                                Evening Slots
+                              </h4>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div *ngFor="let eve of item.eveningSlots">
+                              <div class="col-3">
+                                <div class="btn btn-outline-light mt-1 mb-1" (click)="openDialog(eve.strtTime,eve.endTime,item.date, 'Evening Slots')">
+                                  {{ eve.strtTime }}
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </mat-tab>
+                <mat-tab label="Tomorrow">
+                  <div class="container">
+                    <div class="row heightover">
+                      <div *ngFor="let item of slot2">
+                        <div class="col-sm-12">
+                          <div class="row">
+                            <div class="col-sm-12">
+                              <h4 class="font-weight-bold mb-1">
+                                Morning Slot
+                              </h4>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div *ngFor="let mor of item.mrningSlots">
+                              <div class="col-3">
+                                <div class="btn btn-outline-light mt-1 mb-1" (click)="openDialog(mor.strtTime,mor.endTime,item.date, 'Morning Slots')" >
+                                  {{ mor.strtTime }}
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-sm-12">
+                          <div class="row">
+                            <div class="col-sm-12">
+                              <h4 class="font-weight-bold mb-1">
+                                Evening Slots
+                              </h4>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div *ngFor="let eve of item.eveningSlots">
+                              <div class="col-3">
+                                <div class="btn btn-outline-light mt-1 mb-1" (click)="openDialog(eve.strtTime,eve.endTime,item.date,'Evening Slots')" >
+                                  {{ eve.strtTime }}
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </mat-tab>
+                <mat-tab
+                  [label]="
+                    (TimeSlot(3) | date: 'dd') +
+                    ' ' +
+                    (TimeSlot(3) | date: 'LLL')
+                  "
+                >
+                  <div class="container">
+                    <div class="row heightover">
+                      <div *ngFor="let item of slot3">
+                        <div class="col-sm-12">
+                          <div class="row">
+                            <div class="col-sm-12">
+                              <h4 class="font-weight-bold mb-1">
+                                Morning Slot
+                              </h4>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div *ngFor="let mor of item.mrningSlots">
+                              <div class="col-3">
+                                <div class="btn btn-outline-light mt-1 mb-1" (click)="openDialog(mor.strtTime,mor.endTime,item.date, 'Moening Slots')" >
+                                  {{ mor.strtTime }}
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-sm-12">
+                          <div class="row">
+                            <div class="col-sm-12">
+                              <h4 class="font-weight-bold mb-1">
+                                Evening Slots
+                              </h4>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div *ngFor="let eve of item.eveningSlots">
+                              <div class="col-3">
+                                <div class="btn btn-outline-light mt-1 mb-1" (click)="openDialog(eve.strtTime,eve.endTime,item.date, 'Evening Slots')" >
+                                  {{ eve.strtTime }}
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </mat-tab>
+                <mat-tab
+                  [label]="
+                    (TimeSlot(4) | date: 'dd') +
+                    ' ' +
+                    (TimeSlot(4) | date: 'LLL')
+                  "
+                >
+                  <div class="container">
+                    <div class="row heightover">
+                      <div *ngFor="let item of slot4">
+                        <div class="col-sm-12">
+                          <div class="row">
+                            <div class="col-sm-12">
+                              <h4 class="font-weight-bold mb-1">
+                                Morning Slot
+                              </h4>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div *ngFor="let mor of item.mrningSlots">
+                              <div class="col-3">
+                                <div class="btn btn-outline-light mt-1 mb-1" (click)="openDialog(mor.strtTime,mor.endTime,item.date,'Morning Slots')" >
+                                  {{ mor.strtTime }}
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-sm-12">
+                          <div class="row">
+                            <div class="col-sm-12">
+                              <h4 class="font-weight-bold mb-1">
+                                Evening Slots
+                              </h4>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div *ngFor="let eve of item.eveningSlots">
+                              <div class="col-3">
+                                <div class="btn btn-outline-light mt-1 mb-1" (click)="openDialog(eve.strtTime,eve.endTime,item.date, 'Evening Slots')"  >
+                                  {{ eve.strtTime }}
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </mat-tab>
+                <mat-tab
+                  [label]="
+                    (TimeSlot(5) | date: 'dd') +
+                    ' ' +
+                    (TimeSlot(5) | date: 'LLL')
+                  "
+                >
+                  <div class="container">
+                    <div class="row heightover">
+                      <div *ngFor="let item of slot">
+                        <div class="col-sm-12">
+                          <div class="row">
+                            <div class="col-sm-12">
+                              <h4 class="font-weight-bold mb-1">
+                                Morning Slot
+                              </h4>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div *ngFor="let mor of item.mrningSlots">
+                              <div class="col-3">
+                                <div class="btn btn-outline-light mt-1 mb-1" (click)="openDialog(mor.strtTime,mor.endTime,item.date,'Mornig Slot')">
+                                  {{ mor.strtTime}}
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-sm-12">
+                          <div class="row">
+                            <div class="col-sm-12">
+                              <h4 class="font-weight-bold mb-1">
+                                Evening Slots
+                              </h4>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div *ngFor="let eve of item.eveningSlots">
+                              <div class="col-3">
+                                <div class="btn btn-outline-light mt-1 mb-1" (click)="openDialog(eve.strtTime,eve.endTime,item.date,'Evening Slot')" >
+                                  {{ eve.strtTime }}
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </mat-tab>
+              </mat-tab-group>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->

@@ -1,0 +1,160 @@
+<div ui-view="" class="ng-scope">
+    <section class="new-direct-steps ng-scope">
+
+        <section class="step-content clearfix">
+            <!-- <i class="icon-ic_cross" ></i> -->
+            <img class="  cross icon-ic_cross " (click)="exitVisible()" src="../../../assets/img/cancel.png" alt="">
+            <!-- uiView: -->
+            <div ui-view="" class="ng-scope">
+                <div class="problem-details-page clearfix ng-scope">
+                    <div class="flow-form-left">
+                        <header>
+                            <!-- ngIf: isMobile -->
+                            <h2 class="heading mobile-white-header ng-binding">Chat with a Doctor</h2>
+                        </header>
+
+                        <div class="form-wrapper">
+                            <!-- ngIf: isMobile -->
+                            <form name="problemForm"
+                                class="ng-isolate-scope ng-invalid ng-valid-maxlength ng-submitted ng-dirty ng-valid-parse ng-invalid-required ng-invalid-minlength">
+
+
+                                <div>
+
+                                    <div class="search-problem-area">
+
+                                        <div class="input-container clearfix ng-scope" ng-if="!problemAreaToRestrict">
+                                            <label ng-if="!isVariationSymptomsMinimal" for="detailed-description"
+                                                class="form-label ng-scope">
+                                                Tell us your symptom or health problem
+                                            </label><!-- end ngIf: !isVariationSymptomsMinimal -->
+                                            <!-- ngIf: isVariationSymptomsMinimal -->
+
+                                            <div class="problem-input">
+                                                <!-- ngIf: isVariationSymptomsMinimal -->
+                                                <textarea name="detailedDescription"
+                                                    ng-model="model.detailedDescription" maxlength="500"
+                                                    ng-disabled="model.topProblemArea"
+                                                    ng-required="!model.topProblemArea"
+                                                    placeholder="Eg: fever, headache" minlength="4" required="required"
+                                                    id="detailed-description"
+                                                    class="ng-invalid ng-valid-maxlength ng-dirty ng-valid-parse ng-touched has-error ng-empty ng-invalid-required ng-valid-minlength">        </textarea>
+                                            </div>
+                                            <label class="validation-field pull-left"
+                                                ng-class="{ 'has-error': form.detailedDescription.$touched &amp;&amp; form.detailedDescription.$dirty &amp;&amp; form.detailedDescription.$error.minlength }">
+                                                Min 4 characters
+                                            </label>
+                                            <!-- ngIf:  form.detailedDescription.$viewValue.length >= 500 -->
+                                        </div><!-- end ngIf: !problemAreaToRestrict -->
+
+                                        <!-- ngIf: !model.topProblemArea -->
+                                        <div class="restrict-width ng-scope" ng-if="!model.topProblemArea">
+                                            <!-- ngIf: !problemAreaTags && !isVariationSymptomsMinimal -->
+                                            <p class="padder loading-speciality ng-scope"
+                                                ng-if="!problemAreaTags &amp;&amp; !isVariationSymptomsMinimal">A
+                                                relevant speciality will be shown below...</p>
+                                            <!-- end ngIf: !problemAreaTags && !isVariationSymptomsMinimal -->
+                                            <!-- ngIf: problemAreaTags -->
+                                        </div><!-- end ngIf: !model.topProblemArea -->
+                                    </div>
+
+                                </div>
+
+
+
+                                <div ng-class="{
+                        'fixed-bottom-section padder-bottom-mobile': isVariationSymptomsMinimal,
+                        'no-mobile-number-tip': isLoggedIn
+                     }">
+
+                                    <div class="mobile-submit-form">
+                                        <div class="restrict-width">
+                                            <div ng-if="visibleFields.mobile" class="input-container clear ng-scope"
+                                                ng-class="{ 'has-error': form.mobile.$invalid &amp;&amp; form.mobileInteraction.$touched &amp;&amp; form.mobileInteraction.$dirty }">
+                                                <label class="form-label" for="mobile">Mobile number</label>
+                                                <div class="intl-tel-input allow-dropdown">
+                                                    <div class="flag-container">
+                                                        <div class="selected-flag" role="combobox"
+                                                            aria-owns="country-listbox" tabindex="0"
+                                                            title="India (भारत): +91">
+                                                            <div class="iti-flag in"></div>
+                                                            <div class="iti-arrow"></div>
+                                                        </div>
+                                                        <ul class="country-list hide" id="country-listbox"
+                                                            aria-expanded="false" role="listbox"
+                                                            aria-activedescendant="iti-item-in">
+                                                            <li class="country preferred" tabindex="-1" id="iti-item-us"
+                                                                role="option" data-dial-code="1" data-country-code="us">
+                                                                <div class="flag-box">
+                                                                    <div class="iti-flag us"></div>
+                                                                </div><span class="country-name">United
+                                                                    States</span><span class="dial-code">+1</span>
+                                                            </li>
+                                                            <li class="country preferred" tabindex="-1" id="iti-item-gb"
+                                                                role="option" data-dial-code="44"
+                                                                data-country-code="gb">
+                                                                <div class="flag-box">
+                                                                    <div class="iti-flag gb"></div>
+                                                                </div><span class="country-name">United
+                                                                    Kingdom</span><span class="dial-code">+44</span>
+                                                            </li>
+                                                            <li class="divider" role="separator" aria-disabled="true">
+                                                            </li>
+                                                            <li class="country standard" tabindex="-1" id="iti-item-af"
+                                                                role="option" data-dial-code="93"
+                                                                data-country-code="af">
+                                                                <div class="flag-box">
+                                                                    <div class="iti-flag af"></div>
+                                                                </div><span class="country-name">Afghanistan
+                                                                    (&#8235;افغانستان&#8236;&lrm;)</span><span
+                                                                    class="dial-code">+93</span>
+                                                            </li>
+                                                        </ul>
+                                                    </div><input type="tel" intl-tel-input="model"
+                                                        placeholder="Enter mobile number" id="mobile"
+                                                        class="ng-pristine ng-valid ng-isolate-scope ng-empty ng-touched"
+                                                        autocomplete="off" data-intl-tel-input-id="0">
+                                                </div>
+                                                <input name="mobile" type="text" required=""
+                                                    class="hidden ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-minlength ng-valid-maxlength">
+                                                <!-- ngIf: !isLoggedIn -->
+                                                <p class="hint-text ng-scope" ng-if="!isLoggedIn">A verification
+                                                    code will be sent to this number.</p>
+
+                                            </div>
+                                        </div>
+                                        <div class="continue-btn-container padder-top">
+                                            <button class=" btn-blue  continue-btn disabled">Continue</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- ngIf: !isMobile -->
+                    <div class="ng-scope ng-isolate-scope">
+
+                        <img class="userslide" src="../../../assets/img/direct-list-desktop-v2.jpg">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+</div>
+
+<div *ngIf="isExitModalVisible" class="ng-scope">
+    <div class="chat-global-modal chat-modal ng-scope">
+        <div class="content">
+            <div class="cancel-consultation">
+                <img width="16" height="16" class="grey-cross pull-right"
+                    alt="Canel Consultation Popup" src="../../../assets/img/cancel.png" (click)="toggleExitModal(true)">
+                <h4 class="main-heading">Are you sure?</h4>
+                <p class="text">If you leave now, the information you have entered will be lost.</p>
+
+                <button class="btn-blue">Yes, Quit</button>
+            </div>
+        </div>
+    </div>
+    <div class="loaderBg ng-scope"></div>
+</div>

@@ -1,0 +1,222 @@
+
+<div  class="container-fluid">
+
+  <div class="card">
+    <h1 class="card-header">Automatic ID Generation</h1>
+    <div class="card-body">
+      
+      <div  class="row">
+
+        <div class="section-heading-main" >
+          <div class="ui-checkbox">
+            
+              <mat-checkbox class="example-margin">Patient ID Generation</mat-checkbox>
+          </div>
+          <p class=" desc-text">
+             WhealthyLife lets you automatically assign Patient IDs for newly added patients to your records. You can also assign Patient IDs to all your existing patients.
+          </p>
+        <h3 class="body-normal-grey " >Current Pattern: P <span>{{</span>PATIENT-NUMBER<span>}}</span> <a (click)="modalopen()"> edit</a>
+          </h3>
+      </div>
+      </div>
+
+      <div  class="row mt-4">
+
+        <div class="section-heading-main" >
+          <div class="ui-checkbox">
+            
+              <mat-checkbox class="example-margin">Invoice ID Generation</mat-checkbox>
+          </div>
+          <p class=" desc-text">
+            You need to select an Initial Value. You can choose an alphanumeric prefix (will not be increment), and a numeric part which will be automatically incremented for every new bill.
+          </p>
+        <h3 class="body-normal-grey " >Current Pattern: INV <span>{{</span>INVOICE-NUMBER<span>}}</span> <a  (click)="InvoiceModalOpen()" > edit</a>
+          </h3>
+      </div>
+
+      </div>
+      <div  class="row mt-4">
+
+        <div class="section-heading" >
+          <div class="ui-checkbox">
+            
+              <mat-checkbox class="example-margin">Receipt ID Generation</mat-checkbox>
+          </div>
+          <p class=" desc-text">
+            You need to select an Initial Value. You can choose an alphanumeric prefix (will not be increment), and a numeric part which will be automatically incremented for every new receipt.
+          </p>
+        <h3 class="body-normal-grey " >Current Pattern:  RCPT <span>{{</span>RECEIPT-NUMBER<span>}}</span> <a (click)=" RecieptModalOpen()"> edit</a>
+          </h3>
+      </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+
+<!-- first -->
+
+<div class="modal  " id="myModal" *ngIf="show">
+  <div class="modal-xl dialog   modal-dialog-centered ">
+    <div class="modal-content">
+
+
+      <div class="modal-header">
+        <h2 class="modal-title" id="exampleModalLongTitle">
+          Patient ID Generation</h2>
+
+      </div>
+
+      <div class="modal-body">
+
+
+        <div class="container">
+
+
+          <div class="row">
+
+
+            <div class="col-sm-6">
+
+              <div class="form-group">
+                <label>Patient ID (Prefix)</label>
+                <input type="email" class="form-control" value="P" id="exampleInputEmail1" aria-describedby="emailHelp">
+
+              </div>
+
+            </div>
+
+
+            <div class="col-sm-6">
+
+              <div class="form-group">
+                <label>Numeric Only *</label>
+                <input type="email" class="form-control" value="1" id="exampleInputEmail1" aria-describedby="emailHelp">
+
+              </div>
+
+            </div>
+
+            <div class="row">
+
+              <div class="col-sm-12">
+
+                <label class="labl">We can assign patient numbers to all your existing contacts</label>
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label frmchk" for="exampleCheck1">Override IDs for 0
+                    patients</label>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-light btnmodal" (click)="PatientID()">Cancel</button>
+        <button type="button" class="btn btn-warning btnmodal">Apply</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 
+second -->
+<div class="modal  " id="myModal" *ngIf="showInvoice">
+  <div class="modal-xl dialog   modal-dialog-centered ">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="exampleModalLongTitle">
+          Invoice ID Generation</h2>
+
+      </div>
+      <div class="modal-body">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6">
+
+              <div class="form-group">
+                <label>Invoice Number (Prefix)</label>
+                <input type="email" class="form-control" value="INV" id="exampleInputEmail1"
+                  aria-describedby="emailHelp">
+              </div>
+            </div>
+            <div class="col-sm-6">
+
+              <div class="form-group">
+                <label>Numeric Only *</label>
+                <input type="email" class="form-control" value="1" id="exampleInputEmail1" aria-describedby="emailHelp">
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-light btnmodal" (click)="InvoiceID()">Cancel</button>
+        <button type="button" class="btn btn-warning btnmodal">Apply</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- third -->
+
+<div class="modal" id="myModal" *ngIf="showReceipt">
+  <div class="modal-xl dialog   modal-dialog-centered ">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="exampleModalLongTitle">
+          Receipt ID Generation</h2>
+      </div>
+      <div class="modal-body">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6">
+
+              <div class="form-group">
+                <label>Receipt Number (Prefix)</label>
+                <input type="email" class="form-control" value="RCPT" id="exampleInputEmail1"
+                  aria-describedby="emailHelp">
+              </div>
+            </div>
+            <div class="col-sm-6">
+
+              <div class="form-group">
+                <label>Numeric Only *</label>
+                <input type="email" class="form-control" value="1" id="exampleInputEmail1" aria-describedby="emailHelp">
+
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-light btnmodal" (click)="ReceiptID()">Cancel</button>
+        <button type="button" class="btn btn-warning btnmodal">Apply</button>
+      </div>
+
+
+    </div>
+  </div>
+
+</div>
+
+
+
+

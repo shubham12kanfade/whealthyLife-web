@@ -1,0 +1,119 @@
+.avatar-wrapper {
+	position: relative;
+	height: 104px;
+	width: 105px;
+	margin: 50px auto;
+	border-radius: 50%;
+	overflow: hidden;
+	box-shadow: 1px 1px 15px -5px black;
+	transition: all 0.3s ease;
+	&:hover {
+		transform: scale(1.05);
+		cursor: pointer;
+	}
+	&:hover .profile-pic {
+		opacity: 0.5;
+	}
+	.profile-pic {
+		height: 100%;
+		width: 100%;
+		transition: all 0.3s ease;
+		&:after {
+			font-family: FontAwesome;
+			content: "\f007";
+			top: 0;
+			left: 0;
+			height: 10%;
+			width: 100%;
+			position: absolute;
+			font-size: 72px;
+			background: #ecf0f1;
+			color: #34495e;
+			text-align: center;
+		}
+	}
+	.upload-button {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		.fa-arrow-circle-up {
+			position: absolute;
+			top: 15px;
+			left: 12px;
+			text-align: center;
+			opacity: 0;
+			transition: all 0.3s ease;
+			color: #34495e;
+		}
+		&:hover .fa-arrow-circle-up {
+			opacity: 0.9;
+		}
+	}
+}
+.jumbotron {
+	margin-bottom: -21px;
+	background: white;
+	padding: 18px;
+}
+
+.btnwarn {
+	float: right !important;
+	margin-right: 7%;
+	margin-top: 3%;
+}
+
+.c-button--primary {
+	background-color: #14bef0;
+	color: white;
+
+	float: right;
+	height: 40px;
+}
+
+.maincol {
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+.bodhr {
+	border-top: 1px solid lightgray;
+}
+
+.mainhed {
+	font-size: 16px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.profile-avtar {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	border: 1px solid;
+	outline: none;
+}
+
+.overlay {
+	position: absolute; 
+	top: 0;
+	background: rgb(0, 0, 0);
+	background: rgba(0, 0, 0, 0.5); /* Black see-through */
+	color: #f1f1f1; 
+	width: 150px;
+	transition: .5s ease;
+	opacity:0;
+	color: white;
+	font-size: 20px;
+	padding: 20px;
+	text-align: center;
+  }
+  
+  .containerq:hover .overlay {
+	opacity: 1;
+  }
+
+// .overlay {
+// 	opacity: 1;
+//   }

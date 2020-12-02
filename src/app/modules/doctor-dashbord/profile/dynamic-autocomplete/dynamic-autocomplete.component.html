@@ -1,0 +1,6 @@
+<input type="text" style="width: 100%;" class="form-control" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto" (keyup.enter)="enter()">
+<mat-autocomplete #auto="matAutocomplete" (optionSelected)="optionSelected($event.option)">
+    <mat-option *ngFor="let option of filteredOptions | async" [value]="option.shortName">
+        {{option.shortName}}
+    </mat-option>
+</mat-autocomplete>

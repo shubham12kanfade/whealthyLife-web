@@ -1,0 +1,39 @@
+.bgcolor {
+    background-color: #f0f0f5;
+    // height: 96vh;
+    
+}
+
+.mousecursor {
+    cursor: pointer;
+}
+
+.navactive {
+    background-color: #e7e7e7!important;
+    border-left-style: solid !important;
+    border-left-width: 3px !important;
+   
+    color: black;
+}
+.navactive1 {
+    background-color: #59697f!important;
+    color: #fff!important;
+    border-left-style: solid !important;
+    border-left-width: 3px !important;
+}
+.hb {
+    background-color: white;
+  
+}
+.colsm-4-h{
+    // height: 75vh;
+}
+.colsm-8-h{
+    // height: 75vh;
+}
+@media screen and (max-width: 767px) {
+    .colsm-4-h{
+        // height: auto ;
+    }
+  }
+ 

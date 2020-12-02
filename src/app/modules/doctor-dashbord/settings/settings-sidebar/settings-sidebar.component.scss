@@ -1,0 +1,43 @@
+#settingSidebar {
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 80vh;
+}
+
+ul li:hover {
+    background: #f0f0f0;
+    color: white;
+}
+
+// .sidebar {
+//     width: 20rem !important;
+// }
+// ul li a span {
+//     font-size: 1.5rem;
+//     display: inline;
+// }
+// .sidebar-heading {
+//     font-size: 1.5rem;
+// }
+// .sidebar-brand-text {
+//     font-size: 2rem;
+// }
+// .sidebar .nav-item .nav-link {
+//     width: 19rem;
+// }
+
+// .sidebar-brand-text {
+//     font-size: 1.5rem !important;
+// }
+
+.sidebar {
+    width: 100% !important;
+}
+
+#settingSidebar {
+    > li {
+        > a {
+            padding-left: 1.4rem !important;
+        }
+    }
+}

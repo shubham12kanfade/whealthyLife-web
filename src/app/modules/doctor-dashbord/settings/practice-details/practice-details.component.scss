@@ -1,0 +1,95 @@
+.avatar-wrapper{
+	position: relative;
+	height: 104px;
+    width: 105px;
+	margin: 50px auto;
+	border-radius: 50%;
+	overflow: hidden;
+	box-shadow: 1px 1px 15px -5px black;
+	transition: all .3s ease;
+	&:hover{
+		transform: scale(1.05);
+		cursor: pointer;
+	}
+	&:hover .profile-pic{
+		opacity: .5;
+	}
+	.profile-pic {
+    height: 100%;
+		width: 100%;
+		transition: all .3s ease;
+		&:after{
+			font-family: FontAwesome;
+			content: "\f007";
+			top: 0; left: 0;
+			height: 10%;
+            width: 100%;
+			position: absolute;
+			font-size: 72px;
+			background: #ecf0f1;
+			color: #34495e;
+			text-align: center;
+		}
+	}
+	.upload-button {
+		position: absolute;
+		top: 0; left: 0;
+		height: 100%;
+		width: 100%;
+		.fa-arrow-circle-up{
+			position: absolute;
+			// font-size: 80px;
+			top: 15px;
+			left: 12px;
+			text-align: center;
+			opacity: 0;
+			transition: all .3s ease;
+			color: #34495e;
+		}
+		&:hover .fa-arrow-circle-up{
+			opacity: .9;
+		}
+	}
+}
+.jumbotron{
+    // height: 40%;
+	margin-bottom: -21px;
+	background: white;
+	padding: 18px;
+}
+.ccla{
+    // margin-top: 10%;
+}
+// label{
+// 	font-size: 1.23rem;
+// }
+// input{
+// 	font-size: 1.20rem;
+// }
+// #Specialization{
+// 	font-size: 1.20rem;
+// }
+// #country{
+// 	font-size: 1.20rem;
+// }
+// #state{
+// 	font-size: 1.20rem;
+// }
+.btnwarn{
+	float: right !important;
+	margin-right: 7%;
+	margin-top: 3%;
+} 
+// .text{
+// 	font-size: 1.60rem;
+// }
+
+.mat-button{
+    background-color: #ffa000;
+    color: #fff;
+  
+    width: 100px!important;
+      min-width: unset!important;
+       float: right;
+    font-size: 12px;
+}

@@ -1,0 +1,33 @@
+.img-set1 {
+  width: 75px;
+  height: 75px;
+  border: 5px solid #ececec;
+  border-radius: 50%;
+}
+.flecx1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+.starbgandcolor {
+  color: #01a400;
+  background-color: #f0f0f5;
+}
+
+.checked {
+  color: orange;
+}
+
+::ng-deep .redNoMatch {
+  font-size: 30px !important;
+  color: white;
+  background: #01a400 !important;
+}
+
+::ng-deep .redMatch {
+  font-size: 30px !important;
+  color: white;
+  background: #f44336 !important;
+}

@@ -1,0 +1,52 @@
+<section>
+    <div class="container-fluid cf" >
+        <div class="row">
+         
+            <div class="col-sm-3">
+                <ul class="navbar-nav bg-white text-dark sidebar accordion" id="settingSidebar" *ngIf="Allpaitent != 0">
+                    <a class="sidebar-brand d-flex align-items-center justify-content-center" routerLink="dashboard">
+                        <div class="sidebar-brand-text"> PATIENTS </div>
+                    </a>
+                    <hr class="sidebar-divider my-0">
+                    <li class="nav-item" *ngFor=" let paitents of alllPaitent" style="border-bottom: 2px solid; cursor: pointer;" >
+                        <a class="nav-link" >
+                            <span> {{paitents.firstName}} {{paitents.lastName}} </span></a>
+                            <h3 *ngIf="Allpaitent == 0">No Paitent Available</h3>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-sm-9">
+                <div class="card shadow mb-4">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="card-header">
+                                <div class="col-sm-3 first">
+                                    <h2 class="font-weight-bold text-primary" style=" width: 120px;">Calendar</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-body" style="padding-right: 50px; font-size: 11px; ">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <p-fullCalendar [events]="events" #fc [options]="options"></p-fullCalendar>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+   
+    </div>
+</section>
+
+
+
+
+
+
+
+

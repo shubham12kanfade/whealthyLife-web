@@ -1,0 +1,88 @@
+<section class="bg-white p-sm-3">
+    <div class="container-fluid">
+        <div class="row">
+        </div>
+        <div class="row">
+            <div class="col-md-5 col-lg-3 offset-md-2 paddingonxs">
+                <div class="row">
+                    <div style="text-align:center">
+                        <button mat-mini-fab (click)="MO()" class="unselect m-3" [ngClass]="{'selected': dMO}">
+                            MO
+                        </button>
+                        <button mat-mini-fab (click)="TU()" class="unselect m-3" [ngClass]="{'selected': dTU}">
+                            TU
+                        </button>
+                        <button mat-mini-fab (click)="WE()" class="unselect m-3" [ngClass]="{'selected': dWE}">
+                            WE
+                        </button>
+                        <button mat-mini-fab (click)="TH()" class="unselect m-3" [ngClass]="{'selected': dTH}">
+                            TH
+                        </button>
+                        <button mat-mini-fab (click)="FR()" class="unselect m-3" [ngClass]="{'selected': dFR}">
+                            FR
+                        </button>
+                        <button mat-mini-fab (click)="SA()" class="unselect m-3" [ngClass]="{'selected': dSA}">
+                            ST
+                        </button>
+                        <button mat-mini-fab (click)="SU()" class="unselect m-3" [ngClass]="{'selected': dSU}">
+                            SU
+                        </button>
+                    </div>
+                </div>
+                <div>
+                    <div class="row mt-5" [formGroup]="timeSlot">
+                        <div class="form-group col-md-6">
+                            <label for="startSession">Sessions 1 Start</label>
+                            <select class="form-control"  id="session1s" id="startSession"  formControlName="session1Start">
+                                <option *ngFor="let item of TimeSloat" [value]="item?.value">{{item?.value}}</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="startSession">Sessions 1 End</label>
+                            <select class="form-control"  id="session1e" id="startSession" formControlName="session1End">
+                                <option *ngFor="let item of TimeSloat" [value]="item?.value">{{item?.value}}</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="startSession">Sessions 2 Start</label>
+                            <select class="form-control"  id="session2s" id="startSession" formControlName="session2Start">
+                                <option *ngFor="let item of TimeSloat2" [value]="item?.value">{{item?.value}}</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="startSession">Sessions 2 End</label>
+                            <select class="form-control"  id="session2e" id="startSession" formControlName="session2End">
+                                <option *ngFor="let item of TimeSloat2" [value]="item?.value">{{item?.value}}</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <hr class="mt-5 mb-3" />
+                <div class="row">
+                    <button mat-raised-button matStepperPrevious>
+                        <mat-icon aria-hidden="false" aria-label="Example home icon">chevron_left</mat-icon>
+                        Back
+                    </button>
+                    <button style="position: absolute; right: 0;" mat-raised-button color="warn" (click)="onSave()">
+                        Save and contnue
+                        <mat-icon aria-hidden="false" aria-label="Example home icon">chevron_right</mat-icon>
+                    </button>
+                </div>
+            </div>
+            <div class="col-md-3 col-lg-5 offset-md-1">
+                <div class="d-none d-sm-none d-md-block col-md-12 col-lg-8 mt-5 ml-5 pr-0 pl-0"
+                    style="border: 1px solid #14aa9b;">
+                    <div class="bg p-4 textcol">
+                        <div>
+                            <i class="fa fa-lightbulb-o fa-lg" aria-hidden="true"></i>
+                        </div>
+                        <p class="stext font-weight-bold">
+                            Correct operating hours will help patients in booking appointments only during your
+                            availability
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

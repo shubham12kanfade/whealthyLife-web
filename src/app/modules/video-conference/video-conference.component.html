@@ -1,0 +1,18 @@
+<p-toast class="custom-error" [showTransformOptions]="'translateX(100%)'"></p-toast>
+<div id="videos">
+    <div id="subscriber"></div>
+    <div id="publisher"></div>
+    <div id="endcall"><button mat-flat-button color="warn" (click)="endSession()">End call</button></div>
+    <div id="timer">{{min}} : {{remSec}}</div>
+    <div id="addPrescription"> <button mat-raised-button>
+            <mat-icon>dynamic_feed</mat-icon>add prescription
+        </button></div>
+    <div id="addMedicine"> <button mat-raised-button>
+            <mat-icon>note_add</mat-icon>add medicine
+        </button></div>
+    <div id="addMedia">
+        <button mat-raised-button>
+            <mat-icon>perm_media</mat-icon> add media
+        </button>
+    </div>
+</div>

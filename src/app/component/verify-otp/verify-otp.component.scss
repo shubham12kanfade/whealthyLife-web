@@ -1,0 +1,63 @@
+.center-align {
+    width: 400px;
+    display: block;
+    margin: 0 auto;
+}
+
+.submitBtn {
+    color: white;
+    background-color: #14bef0;
+    margin-top: 20px;
+    width: 100%;
+    font-size: 18px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    height: 40px;
+}
+.center {
+   
+    width: 100%;
+    border: 1px solid lightgray;
+    padding: 10px;
+  }
+
+  .forminput{
+      padding: 10px;
+  }
+
+  .fortitle{
+      font-size: 19px;
+  }
+
+  .head-forgot{
+    margin:0px 10px; margin: 0px 10px;
+    min-width: 263px;
+    display: flex;
+    justify-content: space-around;
+  }
+
+
+  .text-head{
+      color: black;
+  }
+
+  .divide-line{
+    border-bottom: 1px solid lightgray; width: 100%;
+  }
+
+  .row-forgot{
+    margin-top: 70px;  justify-content: center;
+  }
+
+
+  .sect-top{
+   margin-top: 100px;
+  }
+
+  .input-otp{
+      font-size: 14px;
+  }
+
+  .card-body{
+    padding: 0.25rem;
+  }

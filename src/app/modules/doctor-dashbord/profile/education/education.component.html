@@ -1,0 +1,117 @@
+<section class="bg-white p-sm-3">
+  <div class="row">
+    <div class="col-md-5 col-lg-3 offset-md-2">
+      <div [formGroup]="reg">
+        <div formArrayName="qualificationArray">
+          <div
+            *ngFor="
+              let ite of getControlName('qualificationArray');
+              let fo = index
+            "
+            [formGroupName]="fo"
+          >
+            <div class="form-group-sm mb-3">
+              <label for="RegistrationNumber">Degree</label>
+              <input
+                type="text"
+                placeholder="Enter Degree"
+                formControlName="degree"
+                #box
+                (keyup)="EnterValu(box.value)"
+                class="form-control"
+                [matAutocomplete]="auto"
+              />
+              <mat-autocomplete #auto="matAutocomplete">
+                <mat-option
+                  *ngFor="let street of Degree"
+                  [value]="street.degree"
+                >
+                  {{ street.degree }}
+                </mat-option>
+
+                <mat-option (click)="AddDegree(box.value)" *ngIf="Degree.length == 0" [value]="box.value">{{box.value +" "}} Click to add Degree </mat-option>
+              </mat-autocomplete>
+            </div>
+            <div class="form-group">
+              <label for="RegistrationCouncil">College</label>
+              <input
+                type="text"
+                class="form-control"
+                id="registrationNumber"
+                formControlName="college"
+                placeholder="Enter your council"
+              />
+            </div>
+            <div class="form-group">
+              <label for="RegistrationYear">Registration Year</label>
+              <select
+                id="completionYear"
+                class="form-control"
+                formControlName="completionYear"
+              >
+                <option
+                  *ngFor="let item of ylength; let i = index"
+                  [value]="year - i"
+                >
+                  {{ year - i }}
+                </option>
+              </select>
+            </div>
+            <div class="col-12 mb-5">
+              <button
+                *ngIf="getControlName('qualificationArray').length > 1"
+                mat-mini-fab
+                color="warn"
+                (click)="remDegree(fo)"
+                class="mx-2 float-right"
+                aria-label="Example icon button with a menu icon"
+              >
+              <i class="fa fa-minus text-white" aria-hidden="true"></i></button>
+              <button
+                mat-mini-fab
+                color="primary"
+                (click)="addPostService()"
+                class="mx-2 float-right"
+                aria-label="Example icon button with a menu icon"
+              >
+                <i class="fa fa-plus text-white" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <hr class="mt-5 mb-3" />
+
+        <div class="row">
+          <button class="mr-2" mat-raised-button matStepperPrevious>
+            <mat-icon aria-hidden="false" aria-label="Example home icon"
+              >chevron_left
+            </mat-icon>
+            Back
+          </button>
+          <button class="ml-2" mat-raised-button color="warn" (click)="save()">
+            Save and Contnue
+            <mat-icon aria-hidden="false" aria-label="Example home icon"
+              >chevron_right
+            </mat-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 col-lg-5 offset-md-1">
+      <div
+        class="d-none d-sm-none d-md-block col-md-12 col-lg-8 mt-5 ml-5 pr-0 pl-0"
+        style="border: 1px solid #14aa9b"
+      >
+        <div class="bg p-4 textcol">
+          <div><i class="fa fa-lightbulb-o fa-lg" aria-hidden="true"></i></div>
+          <p class="stext font-weight-bold">
+            On WhealthyLife, doctors are listed under the relevant
+            specializations based on their academic degrees. Both, education and
+            years of experience, showcase doctor’s expertise and are among the
+            top 3 things that patients consider while making their decision
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

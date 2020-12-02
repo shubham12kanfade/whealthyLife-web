@@ -1,0 +1,127 @@
+<mat-dialog-content class="mat-typography md-dialog-container  "  >
+    <div class="container-fluid">
+        <div class="row m-auto">
+            <div class="m-auto row  ">
+                <div class="pt-2 pb-2 px-5 border  mousecursor "  (click)="onClick('Import')" [ngClass]="{'navactive1': import=='Import','navactive': import!=='Import'}" >Import</div>
+                <div class="pt-2 pb-2 px-5 border  mousecursor " (click)="onClick('Export')" [ngClass]="{'navactive1': import=='Export','navactive': import!=='Export' }" >Export</div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-12 " *ngIf="import=='Import'">
+               
+
+                <div class="form-row">
+                 
+                    <div class="col-sm-12">
+    
+                    
+                        <h3>Export your WhealthyLife Ray data to Excel.</h3>
+
+                    <div class="form-check mt-3">
+                      <label class="valid-lable" for="validationServer01"><span>1.</span> Upload <span class="sp">*</span></label>
+                      <input type="file" class="form-control " placeholder="First name" value="Mark" required>
+                      <div class=" explaintext">
+                        Only Excel (.xls / .xlsx / .xlsb ), MySQL (.sql), Access (.mdb), CSV(.csv), Compressed(.zip,.rar) and
+                        Saral(.srl) files with a max limit of 16MB are allowed.
+                      </div>
+                    </div>
+      
+                    <div class="form-check   mt-3">
+                      <label  class="valid-lable" for="validationServer01"><span>2.</span> Which software is this data coming from?</label>
+                      <input type="text" class="form-control " placeholder="software name" value="" required>
+      
+                    </div>
+                    <div class="form-check   mt-3">
+                      <label  class="valid-lable" for="validationServer01"><span>3.</span> Instructions</label>
+                      <textarea class="form-control "></textarea>
+      
+                    </div>
+                    <div class="form-check  mt-3">
+                      <label  class="valid-lable" for="validationServer01"><span>3.</span>Correspondence Email ID <span class="sp">*</span></label>
+                      <input type="text" class="form-control " placeholder="maroti@gmail.com" value="" required>
+      
+                      <div class="explaintext mt-2">
+      
+                        We will be sending an email with the updates on the progress of your data
+                      </div>
+                    </div>
+      
+                    
+                  </div>
+
+     
+            </div>
+            
+            </div>
+            <div class="col-md-12"  *ngIf="import=='Export'">
+                
+
+
+
+                <div class="form-row">
+
+                    <div  class="col-sm-8 mt-1">
+                       <div><span>1.</span> Select the type(s) of data you want to export <span class="sp">*</span></div>
+    
+                       <div class="form-check mt-2">
+                        <mat-checkbox>Patients</mat-checkbox>
+    
+                      </div>
+    
+                      <div class="form-check ">
+                        <mat-checkbox>Appointments</mat-checkbox>
+    
+                      </div>
+                      <div class="form-check ">
+                        <mat-checkbox>Treatments</mat-checkbox>
+    
+                      </div>
+    
+                      <div class="form-check ">
+                        <mat-checkbox>Procedure Catalog</mat-checkbox>
+    
+                      </div>
+    
+                      <div class="form-check ">
+                        <mat-checkbox>Prescriptions</mat-checkbox>
+    
+                      </div>
+    
+                      <div class="form-check ">
+                        <mat-checkbox>Clinical Notes</mat-checkbox>
+    
+                      </div>                  
+                      <div class="form-check ">
+                        <mat-checkbox>Files</mat-checkbox>
+    
+                      </div>
+                      <div class="form-check ">
+                        <mat-checkbox>Billing</mat-checkbox>
+    
+                      </div>
+    
+                      <div class="form-check">
+                        <mat-checkbox>Treatment Plans</mat-checkbox>
+    
+                      </div>
+                      
+                      <div class="form-check ">
+                        <mat-checkbox>Expenses</mat-checkbox>
+    
+                      </div>
+    
+                    </div>
+                  
+                </div>
+
+                <div  class="mt-2" style="margin-left: -12;">This data will be exported and sent to practice owner's email address maroti@gmail.com (dev)</div>
+            </div>
+
+        </div>
+    </div>
+</mat-dialog-content>
+<mat-dialog-actions align="end"  >
+    <button mat-button mat-dialog-close>Cancel</button>
+    <button mat-button [mat-dialog-close]="true"  *ngIf="import=='Import'" class="mat-bt" cdkFocusInitial>Request Import</button>
+    <button mat-button [mat-dialog-close]="true" *ngIf="import=='Export'" class="mat-bt" cdkFocusInitial>Request Export</button>
+  </mat-dialog-actions>

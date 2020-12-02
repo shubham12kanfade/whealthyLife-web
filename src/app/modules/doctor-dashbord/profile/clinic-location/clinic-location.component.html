@@ -1,0 +1,65 @@
+<p-toast class="custom-error" [showTransformOptions]="'translateX(100%)'"></p-toast>
+<section>
+    <mat-horizontal-stepper labelPosition="bottom" #stepper>
+        <mat-step>
+            <ng-template matStepLabel>Location</ng-template>
+            <section class="bg-white p-sm-3">
+                <div class="row" [formGroup]="profileForm">
+                    <div class="col-md-5 col-lg-3 offset-md-2">
+                        <p class="mb-2 " style="font-size: 15px;">
+                            Dr. {{profileData?.firstName}} {{profileData?.lastName}}</p>
+                        <div class="form-group">
+                            <label for="RegistrationNumber">Phone number</label>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <input type="text" class="form-control" formControlName="mobileNumber"
+                                        id="RegistrationNumber" placeholder="+91 8989788988" disabled="true"></div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="text" class="form-control" formControlName="email" id="email" disabled="true"
+                                placeholder="example@gmail.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="landmark">Street address</label>
+                            <input type="text" class="form-control" id="landmark" formControlName="landmark"
+                                placeholder="Enter your address">
+                        </div>
+                        <hr class="mt-5 mb-5">
+                        <div class="row">
+                            <button mat-raised-button [routerLink]="['/Doctor/Profile']">
+                                <mat-icon aria-hidden="false" aria-label="Example home icon">chevron_left</mat-icon>
+                                Back
+                            </button>
+                            <button style="position: absolute; right: 0;" mat-raised-button color="warn" (click)="onSave(stepper)">
+                                Save and contnue
+                                <mat-icon aria-hidden="false" aria-label="Example home icon">chevron_right</mat-icon>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-lg-4 offset-md-1">
+                        <div class=" d-none d-sm-none d-md-block col-md-12 col-lg-8 mt-5 ml-5 pr-0 pl-0"
+                            style="border: 1px solid #14aa9b;">
+                            <div class=" bg p-4 textcol">
+                                <div><i class="fa fa-lightbulb-o fa-lg" aria-hidden="true"></i> </div>
+                                <p class="stext font-weight-bold">
+                                    This will help your patients to reach your establishment easily.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </mat-step>
+        <mat-step>
+            <ng-template matStepLabel>Establishment Timings</ng-template>
+            <app-clinic-timings [stepper]="stepper"></app-clinic-timings>
+            <div>
+            </div>
+        </mat-step>
+        <mat-step>
+            <ng-template matStepLabel>Details of consultant doctor</ng-template>
+            <app-consultant-details [stepper]="stepper"></app-consultant-details>
+        </mat-step>
+    </mat-horizontal-stepper>
+</section>

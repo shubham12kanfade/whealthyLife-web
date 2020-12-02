@@ -1,0 +1,38 @@
+<section class="bgcolor" style="height: 100vh;">
+    <div class=" ">
+        <div class="row  " style="height: 100vh;">
+           
+            <div class="col-sm-12 col-md-3 col-lg-2 hb border colsm-4-h" >
+                <div class="row border bg-white "   >
+                    <div class="p-3 "><h1>Integrations</h1> 
+                      <p>rajesh</p>  
+                        
+                        </div>
+                </div>
+                <div class="row border bg-white mousecursor navactive"   >
+                    <div class="p-3 text-center"> WhealthyLife.COM
+                        
+                        </div>
+                </div>
+                <div class="row border bg-white mousecursor" (click)="navigation('drive')"  [ngClass]="{navactive1: router.url == '/Doctor/Integrations/drive'}"  >
+                    <div class="p-3 text-center "> Drive
+                        
+                    </div>
+                </div>
+                <div class="row border bg-white mousecursor" (click)="navigation('consult')"  [ngClass]="{navactive1: router.url == '/Doctor/Integrations/consult'}"    >
+                    <div class="p-3  text-center">
+                        Online follow-up
+                    </div>
+                </div>
+                <div class="row border bg-white mousecursor  " (click)="navigation('prime')"  [ngClass]="{navactive1: router.url == '/Doctor/Integrations/prime'}"  >
+                    <div class="p-3  text-center "> 
+                        WhealthyLife Prime
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-9 col-lg-10 hb colsm-8-h">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+</section> 

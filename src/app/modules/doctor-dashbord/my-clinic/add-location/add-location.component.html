@@ -1,0 +1,87 @@
+  
+
+<section>
+  <div class="container">
+    <div class="col-12">
+      <div class="row"  style="display: flex;justify-content: space-between;align-items: center;">
+          <h2 style="color: #007ad9;">MY CLINIC</h2>
+          <button _ngcontent-ose-c259="" type="button" class="btn btn-light butt"   (click)="onSave()" >Save</button>
+      </div>
+      <div class="row" style="overflow: auto;height: 76vh;">
+        <form [formGroup]="AddClinic">
+
+            <div class="col-lg-5 form-group" style="margin: 0px 0px 47px 0px;padding: 0px;"  >
+              <label class="lab">Cline Name</label>
+              <ng-autocomplete   type="text"  [data]="countries"  [searchKeyword]="keyword"
+                   placeHolder="Search doctors, clinics, hospitals etc"
+                  (selected)='selectEvent($event)' (inputChanged)='onChangeSearch($event)'
+                  (inputFocused)='onFocused($event)' historyIdentifier="countries"
+                  [itemTemplate]="itemTemplate" [notFoundTemplate]="notFoundTemplate" >
+              </ng-autocomplete>
+              <ng-template #itemTemplate let-item>
+                  <a [innerHTML]="item.name"></a>
+              </ng-template>
+              <ng-template #notFoundTemplate let-notFound>
+                  <div [innerHTML]="notFound"></div>
+                  <!-- <button mat-raised-button class="ad">Add</button> -->
+              </ng-template>
+
+          </div>
+          <ng-container formArrayName="location">
+            <div *ngFor="let quantity of location().controls; let i=index" [formGroupName]="i" >
+              <div *ngIf="i == 0" style="display: flex;justify-content: flex-end;margin:10px;font-size: 30px;color: green;">
+                <svg  (click)="addQuantity()" width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-plus-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                  <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                </svg>
+              </div>
+          <div class="col-12" style="border: 1px solid ;padding: 10px;margin: 30px 0px;" >
+            <div class="row" style="display: flex;justify-content: flex-end;margin: 0px 0px;font-size: 30px;color: red;">
+              <svg *ngIf="i > 0" (click)="removeQuantity(i)"  width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-dash-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+              </svg>
+            </div>
+            <div class="row" style="margin:10px">
+              <div class="form-group col-lg-4 fg"  >
+                <label for="exampleInputEmail1">Street</label>
+                <input type="type" class="form-control" id="exampleInputEmail1" style="margin-bottom: 30px;" formControlName="address" >
+              </div>
+              <div class="form-group col-lg-4 fg" >
+                <label for="exampleInputEmail1">Landmark</label>
+                <input type="type" class="form-control" id="exampleInputEmail1" formControlName="landmark" >
+              </div>
+              <div class="form-group col-lg-4 fg" >
+                <label for="exampleInputEmail1">Country</label>
+                <!-- <input type="type"> -->
+<select  class="form-control" id="exampleInputEmail1"  formControlName="country">
+  <option *ngFor="let cun of countryList" [value]="cun.id">{{cun.name}}</option>
+</select>
+
+              </div>
+              <div class="form-group col-lg-4 fg" >
+                <label for="exampleInputEmail1">State</label>
+                <select  class="form-control" id="exampleInputEmail1"  formControlName="state"> 
+                  <option *ngFor="let cun of FnArrofState(i)" [value]="cun.id">{{cun.name}}</option>
+                </select>
+             
+              </div>
+              <div class="form-group col-lg-4 fg" >
+                <label for="exampleInputEmail1">City</label>
+                <input type="type" class="form-control" id="exampleInputEmail1"  formControlName="city">
+              </div>
+
+              <div class="form-group col-lg-4 fg" >
+                <label for="exampleInputEmail1">Pincode</label>
+                <input type="email" class="form-control" id="exampleInputEmail1"  formControlName="pincode">
+              </div>
+            </div>
+          </div>
+        </div>
+        </ng-container>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+

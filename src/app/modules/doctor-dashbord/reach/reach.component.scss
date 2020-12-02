@@ -1,0 +1,87 @@
+.sizefont {
+    font-size: 36px;
+}
+
+.secondheading {
+    font-size: 15px;
+    margin-top: 40px;
+    font-weight: normal;
+}
+
+.secondheading2 {
+    font-size: 15px;
+    margin-top: 20px;
+    font-weight: normal;
+}
+
+.sign-up-now-button {
+    border: 1px solid #ffa000;
+    font-size: 15px;
+    line-height: 15px;
+    font-weight: bold;
+    color: #FFF;
+    background-color: #ffa000;
+    padding: 10px 22px;
+    border-radius: 3px;
+    float: left;
+    cursor: pointer;
+}
+
+.reach-btn-orange:hover {
+    background-color: #f59a00 !important;
+}
+
+.tell-me-more-button {
+    border: 1px solid #ffa000;
+    font-size: 15px;
+    line-height: 15px;
+    font-weight: bold;
+    color: #FFF;
+    background-color: #ffa000;
+    padding: 10px 22px;
+    border-radius: 3px;
+    float: left;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+.provider_illustration.reach.i1 {
+    background-position: -37px -140px;
+    width: 400px;
+    height: 400px;
+}
+
+.provider_illustration.reach {
+    background: url(https://www.practo.com/bundles/practopractoapp/images/provider_reach.svg) no-repeat;
+    display: block;
+}
+
+.provider_illustration.reach.i2 {
+    background-position: -116px -625px;
+    width: 457px;
+    height: 210px;
+    float: right;
+}
+
+.provider_illustration.reach.i3 {
+    background-position: -90px -1018px;
+    width: 400px;
+    height: 400px;
+    float: right;
+}
+
+.line-h {
+    line-height: 2;
+}
+
+.provider_illustration.reach.i4 {
+    background-position: -70px -1536px;
+    width: 400px;
+    height: 400px;
+    float: right;
+}
+
+.img {
+    height: 325px;
+    width: 470px;
+}

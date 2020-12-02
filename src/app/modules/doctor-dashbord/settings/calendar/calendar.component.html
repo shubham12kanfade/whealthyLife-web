@@ -1,0 +1,175 @@
+<div class="card shadow mb-4">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="card-header">
+                <div class="col-sm-3 first">
+                    <h2 class="font-weight-bold text-primary">Calender</h2>
+                </div>
+                <div class="col-sm-3 third">
+                    <button type="button" class="btn btn-light btnadd">Subsrcibe</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card-body">
+        <div class="row second">
+            <div class="col-sm-4">
+                <div class="form-check fchk">
+                    <label class="form-check-label fcl">
+                        <mat-checkbox> Always show today as first day on my calendar</mat-checkbox>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="row forth">
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label for="Duration">Default Appointment Duration</label>
+                    <select class="form-control" id="Duration">
+                        <option>5 minutes</option>
+                        <option>10 minutes</option>
+                        <option>15 minutes</option>
+                        <option>20 minutes</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <table mat-table [dataSource]="dataSource">
+                    <ng-container matColumnDef="NAME">
+                      <th mat-header-cell *matHeaderCellDef> RACTICE AND DOCTORS </th>
+                      <td mat-cell *matCellDef="let element"> {{element.NAME}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="TYPE">
+                      <th mat-header-cell *matHeaderCellDef> WORK TIMINGS </th>
+                      <td mat-cell *matCellDef="let element"> {{element.TYPE}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="STREANGTH">
+                      <th mat-header-cell *matHeaderCellDef></th>
+                      <td mat-cell *matCellDef="let element"> <button  mat-stroked-button (click)="calendermodal()" >{{element.STREANGTH}}</button>  </td>
+                     
+                    </ng-container>
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                  </table>
+                  <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- modal1 add doctor -->
+<div class="modal" id="myModal" *ngIf="calender">
+    <div class="modal-lg dialog">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="header">
+                <h1 class="modal-title mtitl">Edit Practice Timings</h1>
+            </div>
+            <!-- Modal body -->
+            <div class="modal-body">
+                <div class="col-md-12 col-sm-12">
+                    <div class="row">
+                        <div class="inpt">
+                            <mat-checkbox  id="Sunday" name="Sunday" > Sunday</mat-checkbox>
+                            <mat-checkbox id="Monday" name="Monday" class="ml-1"> Monday</mat-checkbox>
+                            <mat-checkbox id="Tuesaday" name="Tuesaday" class="ml-1" > Tuesaday</mat-checkbox>
+                            <mat-checkbox id="Wednesday" name="Wednesday" class="ml-1"> Wednesday</mat-checkbox>
+                            <mat-checkbox id="Thursday" name="Thursday" class="ml-1"> Thursday</mat-checkbox>
+                            <mat-checkbox id="Friday" name="Friday" class="ml-1"> Friday</mat-checkbox>
+                            <mat-checkbox  id="Saturday" name="Saturday" class="ml-1"> Saturday</mat-checkbox>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="sess2">Session2<span class="redstar">*</span></div>
+                            <div>Session1<span class="redstar">*</span>
+
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <div class="form-group">
+                                            <label for="Starttime">Start time</label>
+                                            <select class="form-control" id="Starttime">
+                                                <option>9:00AM</option>
+                                                <option>9:00AM</option>
+                                                <option>9:00AM</option>
+                                                <option>9:00AM</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="form-group">
+                                            <label for="Endtime">End time</label>
+                                            <select class="form-control" id="Endtime">
+                                                <option>9:00AM</option>
+                                                <option>9:00AM</option>
+                                                <option>9:00AM</option>
+                                                <option>9:00AM</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-3">
+                                        <div class="form-group">
+                                            <label for="Starttime">Start time</label>
+                                            <select class="form-control" id="Starttime">
+                                                <option>9:00AM</option>
+                                                <option>9:00AM</option>
+                                                <option>9:00AM</option>
+                                                <option>9:00AM</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="form-group">
+                                            <label for="Endtime">End time</label>
+                                            <select class="form-control" id="Endtime">
+                                                <option>9:00AM</option>
+                                                <option>9:00AM</option>
+                                                <option>9:00AM</option>
+                                                <option>9:00AM</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <!-- <div >
+                    <table>
+                    <tbody>
+                    <tr>
+                      <td>
+                         <input >
+                      </td>
+                      
+                      <td>
+                        <button >Remove</button>
+                      </td>
+                    </tr>
+                        </tbody>
+                    </table>
+                </div> -->
+              
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div div class="addtiming" >
+                                <a class="btn">Add more timings</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-light btnm" (click)="calendermodal()">Cancel</button>
+                        <button type="button" class="btn btn-warning btnm">Save</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>

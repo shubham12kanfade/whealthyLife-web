@@ -1,0 +1,357 @@
+<div class="container-fluid" style="padding: 0px; min-height: 660px;">
+  <div class="container style-view">
+    <div class="row style-package-detail-wrapper">
+      <div class="col-lg-7 col-sm-12 style-desktop-view">
+        <div class="row style-package-card-wrapper">
+          <div class="col-lg-12 col-sm-12 style-card-wrapper">
+            <div class="row style-margin-top style-margin-bottom">
+              <div class="col-lg-7 col-sm-7">
+                <h1 class="style-test-package-name">{{title}}</h1>
+                <div class="row style-include-tests">
+                  <div class="col-lg-12 col-sm-12">
+                    <div class="style-abbreviation" *ngIf="packType != 'test' ">
+                      (Includes {{length}} Tests)
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-sm-5 style-right-align">
+                <div>
+                  <div class="row style-price-info style-display-inline">
+                    <div class="col-lg-12 col-sm-12 text-right style-right-align style-payable-wrapper">
+                      <div>
+                        <div class="style-pointer" data-tip="true" data-for="2763" currentitem="false">
+                          <span class="style-opaque">
+                            <span>
+                              ₹
+                              <span>
+                                {{mrp}}
+                              </span>
+                            </span>
+                          </span>
+                          <span class="style-mrp">
+                            ₹
+                            <span>
+                              {{price}}
+                            </span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="text-right style-price-section">
+                      <div>
+                        <div class="style-pointer" data-tip="true" data-for="2763" currentitem="false">
+                          <span class="style-discount-percent">
+                            <span>
+                              {{offerPercent}}% Off
+                            </span>
+                            + 50% Coupon
+                            <span class="fa-stack style-info-icon">
+                              <i class="fa fa-circle-thin fa-stack-2x"></i>
+                              <i class="fa fa-info fa-stack-1x"></i>
+                            </span>
+                          </span>
+                        </div>
+                        <div class="react-component-tooltip place-right type-light style-tooltip" data-id="tooltip"
+                          style="left: 733px; top: 181px;">
+                          <div class="style-container">
+                            <div class="style-description">
+                              <div>
+                                Coupon code
+                                <b>
+                                  <font color="#1aab2a">
+                                    COMP
+                                  </font>
+                                </b>
+                                applied. You have received an additional discount of 50%.
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-xs-6 style-total-savings">
+                                Total Savings
+                              </div>
+                              <div class="col-xs-6 style-price">
+                                <span>
+                                  ₹9761
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-xs-8 col-lg-12 col-sm-12 style-lab-name">
+                <a class="button-text style-lab-link" href="">
+                  {{lName}}
+                </a>
+              </div>
+              <div class="col-xs-12 col-sm-12">
+                <div class="style-star-rating-font">
+                  <div class="StarRating-rating-5-0 StarRating-star-rating-card StarRating-desktop-view">
+                    4.9<div class="StarRating-star-icon">
+                      <i class="fa fa-star StarRating-rating-star" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="style-accreditation style-accreditation-desktop">
+                    ISO, NABL
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row style-margin-top-cart">
+              <div class="col-lg-12 col-sm-12 text-right-add style-add-to-card">
+                <span>
+                  <span>
+                    <span (click)="AddTocart(price,labPack[0].labId._id)" class="style-text-button style-desktop-view">
+                      ADD TO CART
+                    </span>
+                  </span>
+                </span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div>
+          <div class="style-desktop-view-2">
+            <h2 class="style-header">
+              Overview of {{title}}
+            </h2>
+            <div class="row style-overview-block-wrapper" id="Overview">
+              <div class="col-xs-12 style-packages-desc-wrapper">
+                <h3 class="style-sub-header">
+                  How {{title}} helps you?
+                </h3>
+                <div class="style-text">
+                  {{discription}}
+                </div>
+              </div>
+              <div class="col-xs-12 style-precautions-wrapper">
+                <h3 class="style-sub-header style-precautions-sub-header">
+                  Precautions
+                </h3>
+                <p class="style-precautions">
+                  {{precaution}}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div *ngIf="packType!='test'">
+          <div class="row style-included-tests-wrapper">
+            <h2 class="style-header">
+              {{ packType |titlecase }} Tests Included in {{title}}
+              <span class="style-included-tests">
+                (92 tests)
+              </span>
+            </h2>
+            <div class="col-xs-13 col-sm-12 style-accordion-wrapper">
+              <mat-accordion>
+                <div *ngIf="packType=='profile'">
+                  <mat-expansion-panel *ngFor="let item of this.TestDetails " hideToggle disabled>
+                    <mat-expansion-panel-header>
+                      <mat-panel-title class="text-black">
+                        <img [src]="item.icon" style="width:30px; height:30px; border-radius: 50%;" alt=""> <span
+                          style="padding-left: 10px;"> {{item.title}}</span>
+                      </mat-panel-title>
+                      <mat-panel-description>
+
+                      </mat-panel-description>
+                    </mat-expansion-panel-header>
+
+                  </mat-expansion-panel>
+                </div>
+                <div *ngIf="packType=='package'">
+                  <mat-expansion-panel *ngFor="let item of PProfile" (opened)="panelOpenState = true"
+                    (closed)="panelOpenState = false">
+                    <mat-expansion-panel-header>
+                      <mat-panel-title>
+                        <img [src]="item.icon" style="width: 30px;height: 30px;border-radius: 50%;" alt=""> <span
+                          style="padding-left: 10px;"> {{item?.precaution}}</span>
+                      </mat-panel-title>
+                      <mat-panel-description>
+
+                      </mat-panel-description>
+                    </mat-expansion-panel-header>
+                    <p *ngFor="let it of item.profileTests">{{it.title |titlecase}}</p>
+                  </mat-expansion-panel>
+                </div>
+              </mat-accordion>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col-lg-5 style-provided-by-header">
+        <div class="style-desktop-view-4">
+          <div class="style-provided-package-by-wrapper">
+            <div class="style-lab-detail-wrapper">
+              <div class="row style-name-img-wrapper">
+                <div class="col-lg-12 col-sm-12 style-lab-name-locality">
+                  <a class="style-lab-star" href="/new-delhi/diagnostic-centers/1mglabs-95">
+                    <h2 class="style-lab-name">
+                      <span>
+                        About
+                      </span>
+                      {{lName}}
+                    </h2>
+                  </a>
+                  <div class="style-star-wrapper">
+                    <div class="StarRating-rating-5-0 StarRating-star-rating StarRating-desktop-view">
+                      4.9
+                      <div class="StarRating-star-icon">
+                        <i class="fa fa-star StarRating-rating-star" aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <hr class="style-hr-m">
+              <div class="style-accred-div">
+                <div class="style-desktop-view-5">
+                  <div class="row style-logos">
+                    <div class="col-lg-2 col-xs-3 style-logo-dimension" (click)="openDialog()">
+                      <img role="presentation" class="style-logo-params"
+                        src="https://s3.ap-south-1.amazonaws.com/stag-1mg-auto-resize-image/pharmacy-production-rxs/2b6e1cd8-afac-4fe8-a88a-1ac5e3621633.png"
+                        style="width: 50px; height: 50px;">
+                      <p class="style-accreditation-aboutLab">
+                        ISO
+                      </p>
+                    </div>
+                    <div class="col-lg-2 col-xs-3 style-logo-dimension" (click)="openDialog2()">
+                      <img role="presentation" class="style__logo-params___1x1Mf"
+                        src="https://s3.ap-south-1.amazonaws.com/stag-1mg-auto-resize-image/pharmacy-production-rxs/f2cf720d-6833-4133-af52-47619e3315a7.png"
+                        style="width: 50px; height: 50px;">
+                      <p class="style-accreditation-aboutLab">
+                        NABL
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="style-lab-description">
+                <div class="style-lab-detail-pad">
+                  <div class="style-lab-detail">
+                    {{discription}}
+                  </div>
+                </div>
+              </div>
+              <a class="style-know-more" href="">
+                Know More
+              </a>
+            </div>
+            <div class="style-review-wrapper">
+              <div class="style-lab-detail-wrapper style-ser-reviews-wrapper">
+                <div class="style-lab-name">
+                  User Reviews
+                </div>
+                <hr class="style-hr-m-0">
+                <div class="Reviews-desktop-view">
+                  <div class="Reviews-lab-review-container">
+                    <div class="Reviews-review-box">
+                      <div class="Reviews-review-init" style="background-color: rgb(74, 163, 223);">
+                        S
+                      </div>
+                      <div class="Reviews-review-remark">
+                        <div class="Reviews-reviewer-name">
+                          Suraj Chauham
+                        </div>
+                        <div class="Reviews-reviewer-remark">
+                          Phlebo approached timely and reports also received timely.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="Reviews-review-box">
+                      <div class="Reviews-review-init" style="background-color: rgb(231, 76, 60);">
+                        N
+                      </div>
+                      <div class="Reviews-review-remark">
+                        <div class="Reviews-reviewer-name">
+                          Nilesh Wanjari
+                        </div>
+                        <div class="Reviews-reviewer-remark">
+                          Collection person was exellent in his work,painless collection,well groomed,i'm satisfied by
+                          your service.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <a href="">
+                  <div class="style-lab-reviews-see-more">
+                    <div>
+                      +more
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="style-top-bar">
+  <div class="style-top-head-">
+    <h2>
+      INDIA’S LARGEST HEALTHCARE PLATFORM
+    </h2>
+  </div>
+  <div class="style-flex-box style-stats-bar">
+    <div>
+      <div class="style-stats-num">
+        150M+
+      </div>
+      <div class="style-stats-text">
+        Visitors
+      </div>
+    </div>
+    <div>
+      <div class="style-stats-num">
+        25M+
+      </div>
+      <div class="style-stats-text">
+        Orders Delivered
+      </div>
+    </div>
+    <div>
+      <div class="style-stats-num">
+        1000+
+      </div>
+      <div class="style-stats-text">
+        Cities
+      </div>
+    </div>
+  </div>
+  <div class="style-border-btm"></div>
+  <div class="style-flex-box style-down-bar">
+    <div class="style-free-text style-f20">
+      Get the link to download App
+    </div>
+    <div class="style-input-box">
+    
+        <input type="tel" id="phoneNumber" class="style-input-phone" placeholder="Enter Phone Number" maxlength="10"
+          autocomplete="off" value="" pattern="[6-9]\d{9}" title="Please enter valid 10 digits" required="">
+        <button type="submit" class="style-next-button">
+          Send Link
+        </button>
+    
+    </div>
+    <div class="style__cap-wrap___38IWm"></div>
+  </div>
+</div>

@@ -1,0 +1,177 @@
+.wrapperimage{
+    img{
+        height: 50vh;
+        width: 100%;
+    }
+}
+#imgwrap1{
+    background: #e7f1f7;
+}
+#imgwrap2{
+    background: #eeebf8;
+}
+#imgwrap3{
+    background: #f7e8e6;
+}
+#imgwrap4{
+    background: #e4f2eb;
+}
+.chatdoctorwrapper{
+    img{
+    height: 40%;
+    width: 100%;
+}
+}
+h1{
+    a{
+        text-decoration: none;
+        color: black;
+    }
+}
+.center{
+    text-align: center;
+}
+.center-1{
+    text-align:center; 
+    width: 100%;
+    font-size: 18px;
+    font-weight: 400;
+}
+.avtimg{
+    border-radius: 50%;
+    height: 3% !important;
+    width: 3% !important;
+    margin-left: 48%;
+}
+.imgappstore{
+    img{
+        width: 80%;
+    }
+}
+.firstsection{
+    margin-top: 100px;
+}
+.fitstbtn{
+    float:right
+}
+.thirdsection{
+    background:#ADD8E6; 
+    margin-top: 5%;
+}
+.commonsection{
+    margin-top: 5%;
+
+}
+.secndsection{
+    background: #f8f8fb;
+    margin-top: 5%;
+}
+.WealtyhLifeapp{
+    margin-top: 7%;
+}
+.bannerimg{
+    height: 80%;
+    width: 70%;
+}
+.card:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.card{
+    img{
+        height: 50%;
+        width: 50%;
+    }
+    padding: 10px;
+    margin: 10px;
+}
+.strikthrough{
+    text-decoration: line-through;
+    margin: 10px;
+}
+.greentext{
+    color: green;
+}
+.card img {
+    height:30%;
+    width: 30%;
+    margin: auto;
+}
+.card-body {
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 1.25rem;
+    margin: auto;
+}
+.prev-next{
+    justify-content: space-between;
+}
+.medlhs{
+    margin-top: -13%;
+    z-index: 1;
+}
+.medrhs{
+    margin-top: -13%;
+    z-index: 1;
+}
+.catlhs{
+    margin-top: -10%;
+    z-index: 1;
+}
+.catrhs{
+    margin-top: -10%;
+    z-index: 1;
+}
+@media screen and (max-width:437px){
+    .medlhs{
+        margin-top: -44%;
+        z-index: 1;
+    }
+    .medrhs{
+        margin-top: -44%;
+        z-index: 1;
+    }
+    .catlhs{
+        margin-top: -36%;
+        z-index: 1;
+    }
+    .catrhs{
+        margin-top: -36%;
+        z-index: 1;
+    }
+        // .bannerimg {
+        //     height: 80%;
+        //     width: 70%;
+        //     margin: 50px;
+        // }
+    .WealtyhLifeapp {
+        margin-top: 7%;
+        text-align: center;
+    }
+    .imgappstore img{
+        width: 32%;
+        margin: 10px;
+    }
+    .wrapperimage img {
+        height: auto !important;
+        width: 100%;
+        margin-top: 13px !important;
+    }
+}
+
+.zoom {
+    transition: transform .2s; /* Animation */
+  }
+  .zoom:hover {
+    transform: scale(1.1);
+  }
+  .title{
+    color: black;
+     font-weight: 400; 
+     font-size: 16px;
+  }
+  .readsection{
+    padding: 75px;
+  }
+  .ulcall{
+    list-style-type: circle;
+  }
