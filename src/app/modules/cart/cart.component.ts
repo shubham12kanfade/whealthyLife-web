@@ -5,7 +5,6 @@ import {MatDialog} from '@angular/material/dialog';
 import { AddressPopupComponent } from './address-popup/address-popup.component';
 import { ActivatedRoute, Router } from "@angular/router";
 
-
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
@@ -32,11 +31,7 @@ export class CartComponent implements OnInit {
     ) { }
 
   openDialog() {
-    const dialogRef = this.dialog.open(AddressPopupComponent);
-
-    dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
-    });
+  
   }
 
 
