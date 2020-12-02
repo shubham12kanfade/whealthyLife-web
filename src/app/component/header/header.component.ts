@@ -70,8 +70,10 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
 
     this.getCartLength()
-
+this.MedicineService.checkCart.subscribe((resData)=>{
   this.getCartLength()
+})
+  
 
     this.router.events.subscribe((resData)=>{
     console.log("HeaderComponent -> ngOnInit -> resData", resData)
@@ -83,46 +85,31 @@ this.getProfileOnline();
       this.showToast('success', "sdsdsjds", "dsdsdsd");
     }
     this.getCartLength()
-
-
-
   }
-
-
   getCartLength(){
     this.MedicineService.getPackageInCart().then((resData)=>{
     console.log("HeaderComponent -> getCartLength -> resData", resData)
     this.CartLength=resData.data.packages.length+resData.data.profiles.length+resData.data.tests.length
-     
     }).catch((err)=>{
     console.log("HeaderComponent -> getCartLength -> err", err)
-
     })
   }
-
-
   getProfileOnline(){
 this.MainService.getProfile().then((resData)=>{
 console.log("HeaderComponent -> getProfileOnline -> resData", resData)
   this.onlieProfile = resData.data
-
 }).catch((err)=>{
-
 })
-
   }
-
   onLogOut() {
     if (window.confirm('are you really want to logout ?')) {
       this.userService.logOut();
       this.checkLogin();
     }
   }
-
   onMenu(type) {
     this.openMenu = type;
   }
-
   scrollUp() {
     $(window).scroll(function () {
       if ($(window).scrollTop() >= 5) {
@@ -135,13 +122,10 @@ console.log("HeaderComponent -> getProfileOnline -> resData", resData)
       this.checkLogin();
     })
   }
-
   NavigationCancel
-
   clear() {
     this.messageService.clear('myKey2');
   }
-
   showToast(type, messageType, message) {
     console.log("HeaderComponent -> showToast -> type, messageType, message", type, messageType, message)
     setTimeout(() => {
