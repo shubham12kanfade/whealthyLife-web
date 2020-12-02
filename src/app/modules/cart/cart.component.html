@@ -20,7 +20,7 @@
                     </div>
                   </div>
                   <div>
-                    <div class="row style-overview-block">
+                    <div class="row style-overview-block" *ngFor="let item of CartData; let i = index">
                       <div class="col-xs-12">
                         <div class="style-desktop-view1 style-wrapper">
                           <div class="style-header-1">
@@ -35,7 +35,7 @@
                               <div class="col-lg-9 col-xs-8">
                                 <h3 class="style-fs-16 style-m-fs-14">
                                   <b>
-                                    {{name}}
+                                    {{item.labId?.name}}
                                   </b>
                                 </h3>
                               </div>
@@ -48,7 +48,7 @@
                                   <div class="row style-test-summary">
                                     <div class="col-lg-9 col-xs-8 style-pl-0 style-test-name style-m-pl-15">
                                       <b>
-                                        {{tile}}
+                                        {{item.testId?.testId?.title}}
                                       </b>
                                       <div class="style-tat-cart">
                                         E-Reports with in 72 hours post sample collection
@@ -56,10 +56,10 @@
                                     </div>
                                     <div class="col-lg-3 col-xs-4 text-right-order">
                                       <div class="style-font-bold style-test-price">
-                                        ₹{{amount}}
+                                        ₹{{item.ammount}}
                                       </div>
                                       <div class="style-test-mrp style-fs-12 style-m-fs-11 style-text-gray">
-                                        ₹ {{mrp}}
+                                        ₹ {{item.testId?.mrp}}
                                       </div>
                                     </div>
 
@@ -67,7 +67,7 @@
                                       <div class="col-2 example-button-row">
                                         <button mat-button>-</button>
                                       </div>
-                                      <div class="col text-center">{{quantity}} in cart</div>
+                                      <div class="col text-center">{{item.quantity}} in cart</div>
                                       <div class="col-2 example-button-row">
                                         <button mat-button>+</button>
                                       </div>
