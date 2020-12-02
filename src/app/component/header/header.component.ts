@@ -92,7 +92,8 @@ this.getProfileOnline();
   getCartLength(){
     this.MedicineService.getPackageInCart().then((resData)=>{
     console.log("HeaderComponent -> getCartLength -> resData", resData)
-    this.CartLength=resData.data.length
+    this.CartLength=resData.data.packages.length+resData.data.profiles.length+resData.data.tests.length
+     
     }).catch((err)=>{
     console.log("HeaderComponent -> getCartLength -> err", err)
 
