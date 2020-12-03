@@ -7,7 +7,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 })
 export class OrderSummaryComponent implements OnInit {
   @Output() Eve = new EventEmitter<number>();
-
+  address:any[] 
   constructor() { }
 
   ngOnInit(): void {
