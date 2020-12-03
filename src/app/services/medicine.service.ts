@@ -41,6 +41,11 @@ export class MedicineService {
  DelePackageInCart(id){
   return this.ApiCallService.deleteData('userCart/'+id)
  }
+
+ addQuantity(data){
+   return this.ApiCallService.postData('userCart/change/quantity',data)
+ }
+
  Check(val){
 this.checkCart.next(val)
 console.log("🚀 ~ file: medicine.service.ts ~ line 46 ~ MedicineService ~ Check ~ this.checkCart", this.checkCart)
