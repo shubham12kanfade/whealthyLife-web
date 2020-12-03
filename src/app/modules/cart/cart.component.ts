@@ -3,7 +3,7 @@ import { PopHealthComponent } from './../booktests/pop-health/pop-health.compone
 import { MedicineService } from './../../services/medicine.service';
 import { Component, OnInit } from '@angular/core';
 import {MatDialog} from '@angular/material/dialog';
-import { AddressPopupComponent } from './address-popup/address-popup.component';
+
 import { ActivatedRoute, Router } from "@angular/router";
 
 @Component({
