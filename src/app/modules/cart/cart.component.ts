@@ -29,6 +29,7 @@ export class CartComponent implements OnInit {
   DicQuantity: any;
   x: any;
   y: number;
+  MRPPrice: number;
 
 
 
@@ -62,10 +63,6 @@ export class CartComponent implements OnInit {
       this.quantity = this.CartData[0].quantity
       this.x = this.CartData[0].quantity
       this.y = this.CartData[0].ammount
-        this.saveAmount = parseInt(this.mrp) * parseInt(this.offer) /100
-        console.log("🚀 ----------------------------------------------------------------------------------------------------------------------------------");
-        console.log("🚀 ~ file: cart.component.ts ~ line 118 ~ CartComponent ~ this.MedicineService.getPackageInCart ~ this.saveAmount", this.saveAmount);
-        console.log("🚀 ----------------------------------------------------------------------------------------------------------------------------------");
       }).catch((err)=>{
       console.log("CartComponent -> ngOnInit -> err", err)
       });
@@ -75,26 +72,20 @@ export class CartComponent implements OnInit {
 
 
   PlusCartValue(){
-
     const dataQua = {
       ammount: this.amount,
       quantity: this.quantity,
       id: this.CartData[0]._id
-
     }
 
     this.MedicineService.addQuantity(dataQua).then(QuaRes => {
-
       this.MedicineService.Check(QuaRes)
-      console.log("🚀 ~ file: cart.component.ts ~ line 73 ~ CartComponent ~ this.MainService.addQuantity ~ QuaRes", QuaRes);
-
     }).catch((err)=>{
       console.log(err)
     })
   }
 
   MinusCartValue(){
-
     const dataQua = {
       ammount: -this.amount,
       quantity: -this.quantity,
@@ -102,24 +93,26 @@ export class CartComponent implements OnInit {
     }
     this.MedicineService.addQuantity(dataQua).then(QuaRes => {
       this.MedicineService.Check(QuaRes)
-      console.log("🚀 ~ file: cart.component.ts ~ line 73 ~ CartComponent ~ this.MainService.addQuantity ~ QuaRes", QuaRes);
-
     })
   }
 
   incrementchoc(){
    ++this.x
-   this.y =  parseInt(this.amount) * parseInt(this.x)
    this.PlusCartValue()
+   this.y =  parseInt(this.amount) * parseInt(this.x)
+   this.saveAmount = parseInt(this.mrp) * parseInt(this.offer) /100
+   console.log("SaveAmount++++++++++",)
+   this.MRPPrice = parseInt(this.mrp) * parseInt(this.quantity)
   }
 
   decrementchoc(){
     --this.x
+    this.MinusCartValue()
     this.y =  parseInt(this.amount) * parseInt(this.x)
+    this.saveAmount = parseInt(this.mrp) * parseInt(this.offer) /100
+    this.MRPPrice = parseInt(this.mrp) * parseInt(this.quantity)
     if(this.x==0){
       this.MedicineService.DelePackageInCart(this.CartData[0]._id).then(resDaTA => {
-
-      console.log("🚀 ~ file: cart.component.ts ~ line 126 ~ CartComponent ~ this.MedicineService.DelePackageInCart ~ resDaTA", resDaTA);
       this.MedicineService.Check(resDaTA)
       this.ngOnInit()
       }).catch((err)=>{
@@ -127,7 +120,6 @@ export class CartComponent implements OnInit {
 
       })
     }
-    this.MinusCartValue()
   }
 
 
