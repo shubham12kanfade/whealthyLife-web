@@ -1,6 +1,6 @@
 <section>
-  <mat-tab-group mat-align-tabs="start">
-    <mat-tab label="My Cart" #tab>
+  <mat-tab-group [selectedIndex]="selected" (selectedIndexChange)="selected=$event">
+    <mat-tab label="My Cart" >
       <div class="container-fluid" style="padding:0px;min-height:660px" id="body-container">
         <div>
           <div class="container style-wrapper style-desktop-view">
@@ -62,7 +62,7 @@
                                         ₹ {{item.testId?.mrp}}
                                       </div>
                                     </div>
-
+    
                                     <div class="row no-gutters">
                                       <div class="col-2 example-button-row">
                                         <button mat-button>-</button>
@@ -72,7 +72,7 @@
                                         <button mat-button>+</button>
                                       </div>
                                     </div>
-
+    
                                     <div
                                       class="col-xs-12 style-pl-0 style-show-remove style-mt-0 style-fs-12 style-m-fs-11 style-m-pl-15">
                                       <span class="style-pointer">
@@ -84,7 +84,7 @@
                                         </span>
                                       </span>
                                     </div>
-
+    
                                   </div>
                                   <hr>
                                 </div>
@@ -182,7 +182,7 @@
                     </div>
                   </div>
                   <div class="row style-mt-0">
-                    <button class="btn style-schedule-button style-button-summary style-info " (click)="openDialog()">
+                    <button class="btn style-schedule-button style-button-summary style-info " (click)="nextCart(1)">
                       SCHEDULE
                     </button>
                   </div>
@@ -219,11 +219,11 @@
 
 
     <mat-tab label="Order Summary">
-      <app-order-summary [tabIndex]="tab"></app-order-summary>
+      <app-order-summary (Eve)="receiveMessage($event)"></app-order-summary>
     </mat-tab>
 
     <mat-tab label="Payment">
-      <app-paument-cart [tabIndex]="tab"></app-paument-cart>
+      <app-paument-cart (Eve)="receiveMessage($event)"></app-paument-cart>
     </mat-tab>
 
   </mat-tab-group>

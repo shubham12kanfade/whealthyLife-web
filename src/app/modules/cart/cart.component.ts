@@ -23,6 +23,8 @@ export class CartComponent implements OnInit {
   quantity: any;
   LabId: any;
   packType: any;
+  message: any;
+  selected: number=0;
 
 
 
@@ -71,6 +73,14 @@ export class CartComponent implements OnInit {
     console.log("CartComponent -> removeAt -> err", err)
 
   })
+  }
+  nextCart(val){
+    this.selected=val
+  }
+  receiveMessage($event){
+    this.message = $event
+   
+    this.selected=this.message
   }
 
 }
