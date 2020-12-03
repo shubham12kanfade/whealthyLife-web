@@ -95,9 +95,8 @@ export class CartComponent implements OnInit {
       quantity: -this.quantity,
       id: this.CartData[0]._id
     }
-
+    this.decrementchoc();
     this.MedicineService.addQuantity(dataQua).then(QuaRes => {
-      this.decrementchoc();
       this.MedicineService.Check(QuaRes)
       console.log("🚀 ~ file: cart.component.ts ~ line 73 ~ CartComponent ~ this.MainService.addQuantity ~ QuaRes", QuaRes);
 
@@ -110,9 +109,13 @@ export class CartComponent implements OnInit {
 
   decrementchoc(){
     --this.x
-    if(this.x<1){
+    if(this.x==0){
       this.MedicineService.DelePackageInCart(this.CartData[0]._id).then(resDaTA => {
       console.log("🚀 ~ file: cart.component.ts ~ line 126 ~ CartComponent ~ this.MedicineService.DelePackageInCart ~ resDaTA", resDaTA);
+      this.MedicineService.Check(resDaTA)
+      this.ngOnInit()
+      }).catch((err)=>{
+        console.log("CartComponent -> removeAt -> err", err)
 
       })
     }
