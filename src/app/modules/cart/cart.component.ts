@@ -61,28 +61,28 @@ export class CartComponent implements OnInit {
       this.mrp = this.CartData[0].testId?.mrp,
       this.quantity = this.CartData[0].quantity
       this.x = this.CartData[0].quantity
-      this.y = this.CartData[0].quantity
+      this.y = this.CartData[0].ammount
+        this.saveAmount = parseInt(this.mrp) * parseInt(this.offer) /100
+        console.log("🚀 ----------------------------------------------------------------------------------------------------------------------------------");
+        console.log("🚀 ~ file: cart.component.ts ~ line 118 ~ CartComponent ~ this.MedicineService.getPackageInCart ~ this.saveAmount", this.saveAmount);
+        console.log("🚀 ----------------------------------------------------------------------------------------------------------------------------------");
+      }).catch((err)=>{
+      console.log("CartComponent -> ngOnInit -> err", err)
+      });
 
-
-
-
-      this.saveAmount = parseInt(this.mrp) * parseInt(this.offer) /100
-    }).catch((err)=>{
-    console.log("CartComponent -> ngOnInit -> err", err)
-    });
 
   }
 
 
   PlusCartValue(){
-   
+
     const dataQua = {
       ammount: this.amount,
       quantity: this.quantity,
       id: this.CartData[0]._id
 
     }
-   
+
     this.MedicineService.addQuantity(dataQua).then(QuaRes => {
 
       this.MedicineService.Check(QuaRes)
@@ -109,15 +109,16 @@ export class CartComponent implements OnInit {
 
   incrementchoc(){
    ++this.x
-   this.y = this.y + parseInt(this.amount)
+   this.y =  parseInt(this.amount) * parseInt(this.x)
    this.PlusCartValue()
   }
 
   decrementchoc(){
     --this.x
-    this.y = this.CartData[0].ammount - parseInt(this.amount)
+    this.y =  parseInt(this.amount) * parseInt(this.x)
     if(this.x==0){
       this.MedicineService.DelePackageInCart(this.CartData[0]._id).then(resDaTA => {
+
       console.log("🚀 ~ file: cart.component.ts ~ line 126 ~ CartComponent ~ this.MedicineService.DelePackageInCart ~ resDaTA", resDaTA);
       this.MedicineService.Check(resDaTA)
       this.ngOnInit()
@@ -147,7 +148,7 @@ export class CartComponent implements OnInit {
   }
   receiveMessage($event){
     this.message = $event
-   
+
     this.selected=this.message
   }
 
