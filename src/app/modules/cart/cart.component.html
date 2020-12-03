@@ -1,6 +1,6 @@
 <section>
   <mat-tab-group [selectedIndex]="selected" (selectedIndexChange)="selected=$event">
-    <mat-tab label="My Cart" >
+    <mat-tab label="My Cart">
       <div class="container-fluid" style="padding:0px;min-height:660px" id="body-container">
         <div>
           <div class="container style-wrapper style-desktop-view">
@@ -56,13 +56,13 @@
                                     </div>
                                     <div class="col-lg-3 col-xs-4 text-right-order">
                                       <div class="style-font-bold style-test-price">
-                                        ₹{{item.ammount}}
+                                        ₹{{y}}
                                       </div>
                                       <div class="style-test-mrp style-fs-12 style-m-fs-11 style-text-gray">
                                         ₹ {{item.testId?.mrp}}
                                       </div>
                                     </div>
-    
+
                                     <div class="row no-gutters">
                                       <div class="col-2 example-button-row">
                                         <button mat-button (click)="decrementchoc()">-</button>
@@ -72,7 +72,7 @@
                                         <button mat-button (click)="incrementchoc()">+</button>
                                       </div>
                                     </div>
-    
+
                                     <div
                                       class="col-xs-12 style-pl-0 style-show-remove style-mt-0 style-fs-12 style-m-fs-11 style-m-pl-15">
                                       <span class="style-pointer">
@@ -84,7 +84,7 @@
                                         </span>
                                       </span>
                                     </div>
-    
+
                                   </div>
                                   <hr>
                                 </div>
