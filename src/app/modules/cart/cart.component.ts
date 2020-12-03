@@ -26,6 +26,7 @@ export class CartComponent implements OnInit {
   packType: any;
   DicQuantity: any;
   x: any;
+  y: number;
 
 
 
@@ -34,7 +35,7 @@ export class CartComponent implements OnInit {
     ) { }
 
   openDialog() {
-  
+
   }
 
 
@@ -51,12 +52,17 @@ export class CartComponent implements OnInit {
       this.CartData=resData.data.tests
       console.log("🚀 ~ file: cart.component.ts ~ line 37 ~ CartComponent ~ this.MedicineService.getPackageInCart ~ this.CartData", this.CartData);
 
-      this.amount = this.CartData[0].ammount,
+      this.amount = this.CartData[0].ammount
       this.offer = this.CartData[0].testId?.discountOffer,
       this.name = this.CartData[0].labId?.name,
       this.tile = this.CartData[0].testId?.testId?.title,
       this.mrp = this.CartData[0].testId?.mrp,
+      this.quantity = this.CartData[0].quantity
       this.x = this.CartData[0].quantity
+      this.y = this.CartData[0].quantity
+
+
+
 
       this.saveAmount = parseInt(this.mrp) * parseInt(this.offer) /100
     }).catch((err)=>{
@@ -76,7 +82,7 @@ export class CartComponent implements OnInit {
     }
 
     this.MedicineService.addQuantity(dataQua).then(QuaRes => {
-      this.incrementchoc();
+
       this.MedicineService.Check(QuaRes)
       console.log("🚀 ~ file: cart.component.ts ~ line 73 ~ CartComponent ~ this.MainService.addQuantity ~ QuaRes", QuaRes);
 
@@ -90,7 +96,6 @@ export class CartComponent implements OnInit {
       quantity: -this.quantity,
       id: this.CartData[0]._id
     }
-    this.decrementchoc();
     this.MedicineService.addQuantity(dataQua).then(QuaRes => {
       this.MedicineService.Check(QuaRes)
       console.log("🚀 ~ file: cart.component.ts ~ line 73 ~ CartComponent ~ this.MainService.addQuantity ~ QuaRes", QuaRes);
@@ -100,10 +105,13 @@ export class CartComponent implements OnInit {
 
   incrementchoc(){
    ++this.x
+   this.y = this.y + parseInt(this.amount)
+   this.PlusCartValue()
   }
 
   decrementchoc(){
     --this.x
+    this.y = this.CartData[0].ammount - parseInt(this.amount)
     if(this.x==0){
       this.MedicineService.DelePackageInCart(this.CartData[0]._id).then(resDaTA => {
       console.log("🚀 ~ file: cart.component.ts ~ line 126 ~ CartComponent ~ this.MedicineService.DelePackageInCart ~ resDaTA", resDaTA);
@@ -114,6 +122,7 @@ export class CartComponent implements OnInit {
 
       })
     }
+    this.MinusCartValue()
   }
 
 
