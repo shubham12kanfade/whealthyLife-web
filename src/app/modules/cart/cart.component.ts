@@ -24,14 +24,11 @@ export class CartComponent implements OnInit {
   quantity: any;
   LabId: any;
   packType: any;
-<<<<<<< HEAD
   message: any;
   selected: number=0;
-=======
   DicQuantity: any;
   x: any;
   y: number;
->>>>>>> 51fb1374b3bd33f81efe90a8c9a26d8a4e6ca8d5
 
 
 
@@ -78,19 +75,21 @@ export class CartComponent implements OnInit {
 
 
   PlusCartValue(){
-
+   
     const dataQua = {
       ammount: this.amount,
       quantity: this.quantity,
       id: this.CartData[0]._id
 
     }
-
+   
     this.MedicineService.addQuantity(dataQua).then(QuaRes => {
 
       this.MedicineService.Check(QuaRes)
       console.log("🚀 ~ file: cart.component.ts ~ line 73 ~ CartComponent ~ this.MainService.addQuantity ~ QuaRes", QuaRes);
 
+    }).catch((err)=>{
+      console.log(err)
     })
   }
 
