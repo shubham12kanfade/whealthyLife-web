@@ -2,7 +2,7 @@ import { MainService } from 'src/app/services/main.service';
 import { PopHealthComponent } from './../booktests/pop-health/pop-health.component';
 import { MedicineService } from './../../services/medicine.service';
 import { Component, OnInit } from '@angular/core';
-import {MatDialog} from '@angular/material/dialog';
+import { MatDialog } from '@angular/material/dialog';
 
 import { ActivatedRoute, Router } from "@angular/router";
 
@@ -13,28 +13,18 @@ import { ActivatedRoute, Router } from "@angular/router";
 
 })
 export class CartComponent implements OnInit {
-  CartData: any;
-  // saveRupee: Number;
-  amount: any;
-  offer: any;
-  name: any;
-  tile: any;
-  mrp: any;
-  saveAmount: number;
-  quantity: any;
-  LabId: any;
-  packType: any;
   message: any;
-  selected: number=0;
-  DicQuantity: any;
-  x: any;
-  y: number;
+  selected: number = 0;
+  CartData: any;
+  TestData: any;
+  AllData: any[]=[];
 
 
 
-  constructor(public dialog: MatDialog,
-    private MedicineService:MedicineService,
-    ) { }
+
+  constructor(
+    private MedicineService: MedicineService,
+  ) { }
 
   openDialog() {
 
@@ -49,107 +39,73 @@ export class CartComponent implements OnInit {
   }
 
 
-  getCartData(){
-    this.MedicineService.getPackageInCart().then((resData)=>{
-      this.CartData=resData.data.tests
-      console.log("🚀 ~ file: cart.component.ts ~ line 37 ~ CartComponent ~ this.MedicineService.getPackageInCart ~ this.CartData", this.CartData);
-
-      this.amount = this.CartData[0].ammount
-      this.offer = this.CartData[0].testId?.discountOffer,
-      this.name = this.CartData[0].labId?.name,
-      this.tile = this.CartData[0].testId?.testId?.title,
-      this.mrp = this.CartData[0].testId?.mrp,
-      this.quantity = this.CartData[0].quantity
-      this.x = this.CartData[0].quantity
-      this.y = this.CartData[0].ammount
-        this.saveAmount = parseInt(this.mrp) * parseInt(this.offer) /100
-        console.log("🚀 ----------------------------------------------------------------------------------------------------------------------------------");
-        console.log("🚀 ~ file: cart.component.ts ~ line 118 ~ CartComponent ~ this.MedicineService.getPackageInCart ~ this.saveAmount", this.saveAmount);
-        console.log("🚀 ----------------------------------------------------------------------------------------------------------------------------------");
-      }).catch((err)=>{
-      console.log("CartComponent -> ngOnInit -> err", err)
+  getCartData() {
+    this.AllData=[]
+    this.MedicineService.getPackageInCart().then((resData) => {
+      const TestData1 = resData.data.tests
+      TestData1.forEach(element => {
+        const data = {
+          amount: element.ammount,
+          offer: element.testId?.discountOffer,
+          name: element.labId?.name,
+          title: element.testId?.testId?.title,
+          mrp: element.testId?.mrp,
+          quantity: element.quantity,
+          x: element.quantity,
+          y: element.ammount,
+          cartID:element._id,
+          type:element.type
+        }
+        console.log("🚀 ~ file: cart.component.ts ~ line 56 ~ CartComponent ~ this.MedicineService.getPackageInCart ~ data", data)
+        this.AllData.push(data)
       });
-
-
-  }
-
-
-  PlusCartValue(){
-
-    const dataQua = {
-      ammount: this.amount,
-      quantity: this.quantity,
-      id: this.CartData[0]._id
-
-    }
-
-    this.MedicineService.addQuantity(dataQua).then(QuaRes => {
-
-      this.MedicineService.Check(QuaRes)
-      console.log("🚀 ~ file: cart.component.ts ~ line 73 ~ CartComponent ~ this.MainService.addQuantity ~ QuaRes", QuaRes);
-
-    }).catch((err)=>{
-      console.log(err)
     })
-  }
-
-  MinusCartValue(){
-
-    const dataQua = {
-      ammount: -this.amount,
-      quantity: -this.quantity,
-      id: this.CartData[0]._id
-    }
-    this.MedicineService.addQuantity(dataQua).then(QuaRes => {
-      this.MedicineService.Check(QuaRes)
-      console.log("🚀 ~ file: cart.component.ts ~ line 73 ~ CartComponent ~ this.MainService.addQuantity ~ QuaRes", QuaRes);
-
-    })
-  }
-
-  incrementchoc(){
-   ++this.x
-   this.y =  parseInt(this.amount) * parseInt(this.x)
-   this.PlusCartValue()
-  }
-
-  decrementchoc(){
-    --this.x
-    this.y =  parseInt(this.amount) * parseInt(this.x)
-    if(this.x==0){
-      this.MedicineService.DelePackageInCart(this.CartData[0]._id).then(resDaTA => {
-
-      console.log("🚀 ~ file: cart.component.ts ~ line 126 ~ CartComponent ~ this.MedicineService.DelePackageInCart ~ resDaTA", resDaTA);
-      this.MedicineService.Check(resDaTA)
-      this.ngOnInit()
-      }).catch((err)=>{
-        console.log("CartComponent -> removeAt -> err", err)
-
-      })
-    }
-    this.MinusCartValue()
+    console.log("🚀 ~ file: cart.component.ts ~ line 59 ~ CartComponent ~ this.MedicineService.getPackageInCart ~  this.AllData",  this.AllData)
   }
 
 
-
-  removeAt(id){
-      console.log("CartComponent -> removeAt -> id", id)
-      this.MedicineService.DelePackageInCart(id).then((resData)=>{
-      console.log("CartComponent -> removeAt -> resData", resData)
-      this.MedicineService.Check(resData)
-      this.ngOnInit()
-  }).catch((err)=>{
-    console.log("CartComponent -> removeAt -> err", err)
-
+mini(type,id,amount,qunt,i){
+  const dataQua = {
+    ammount: -amount,
+    quantity: -1,
+    id: id
+  }
+  this.MedicineService.addQuantity(dataQua).then(QuaRes => {
+    this.MedicineService.Check(QuaRes)
+   
+    const data=this.AllData.filter((x)=>x.cartID==id )
+    console.log("🚀 ~ file: cart.component.ts ~ line 77 ~ CartComponent ~ this.MedicineService.addQuantity ~ data", data)
   })
+}
+add(type,id,amount,qunt,i){
+  console.log("🚀 ~ file: cart.component.ts ~ line 81 ~ CartComponent ~ add ~ id", id,this.AllData)
+
+  const dataQua = {
+    ammount: amount,
+    quantity: 1,
+    id: id
   }
-  nextCart(val){
-    this.selected=val
+  this.MedicineService.addQuantity(dataQua).then(QuaRes => {
+   
+    const data= this.AllData.filter((x)=>x.cartID==id)
+    console.log("🚀 ~ file: cart.component.ts ~ line 91 ~ CartComponent ~ this.MedicineService.addQuantity ~ data", data)
+ ++this.AllData[i].quantity
+//  =parseInt(this.AllData[i].quantity)+1
+ console.log("🚀 ~ file: cart.component.ts ~ line 93 ~ CartComponent ~ this.MedicineService.addQuantity ~ this.AllData", this.AllData)
+ 
+  })
+}
+  DataManage() {
+
   }
-  receiveMessage($event){
+
+  nextCart(val) {
+    this.selected = val
+  }
+  receiveMessage($event) {
     this.message = $event
 
-    this.selected=this.message
+    this.selected = this.message
   }
 
 }
