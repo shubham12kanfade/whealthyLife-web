@@ -21,7 +21,7 @@
                   </div>
                   <div>
                     <div class="row style-overview-block" *ngFor="let item of AllData; let i = index">
-                      <div class="col-xs-12">
+                      <div *ngIf=" 0 <item?.quantity" class="col-xs-12">
                         <div class="style-desktop-view1 style-wrapper">
                           <div class="style-header-1">
                             <div class="row">
@@ -48,7 +48,7 @@
                                   <div class="row style-test-summary">
                                     <div class="col-lg-9 col-xs-8 style-pl-0 style-test-name style-m-pl-15">
                                       <b>
-                                        {{item.title}}
+                                        {{item.title}}   ₹({{item.mrp}})
                                       </b>
                                       <div class="style-tat-cart">
                                         E-Reports with in 72 hours post sample collection
@@ -59,7 +59,7 @@
                                         ₹{{item.y}}
                                       </div>
                                       <div class="style-test-mrp style-fs-12 style-m-fs-11 style-text-gray">
-                                        ₹ {{item.mrp}}
+                                        ₹ {{item.totalMrp}}
                                       </div>
                                     </div>
     
@@ -110,35 +110,7 @@
                 </div>
                 <div class="col-lg-4 col-xs-12">
                   <div class="row style-price-block">
-                    <div>
-                      <div class="style-wrapper-order-1 style-desktop-view-order-1">
-                        <div class="row">
-                          <div class="col-xs-12">
-                            <i class="fa fa-check-circle style-text-blue"></i>
-                            You saved
-                            <span class="style-text-green">
-                              <!-- ₹{{saveAmount}} -->
-                            </span>
-                          </div>
-                          <div class="col-xs-12 style-text-gray style-fs-12 style-mt-15  style-m-ml-0">
-                            <b>
-                              COMP:
-                            </b>
-                            <!-- Flat {{offer}}% off -->
-                            <!-- {{item?.packageId?.offerPercent}} -->
-                          </div>
-                          <div class="col-xs-12 style-fs-12">
-                            <div class="style-mt-15 style-pt-15 style-border-top-summary">
-                              <div class="col-xs-3">
-                                <button class="button-text style-button-text style-text-gray">
-                                  REMOVE
-                                </button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                    
                     <div class="style-mt-20 style-m-mt-0 style-wrapper-summary">
                       <div class="row style-text-gray style-fs-12-summary style-item-summary">
                         <div class="col-xs-6">
@@ -157,12 +129,7 @@
                         </div>
                       </div>
                       <div class="row style-text-gray style-fs-12-summary style-item-summary">
-                        <div class="col-xs-6">
-                          Coupon Discount
-                        </div>
-                        <div class="col-xs-6 text-right-summary">
-                          - ₹1200
-                        </div>
+                       
                       </div>
                       <div class="row text-right-summary style-font-bold-summary">
                         <div class="col-xs-6">
