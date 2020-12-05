@@ -20,7 +20,7 @@
                     </div>
                   </div>
                   <div>
-                    <div class="row style-overview-block" *ngFor="let item of CartData; let i = index">
+                    <div class="row style-overview-block" *ngFor="let item of AllData; let i = index">
                       <div class="col-xs-12">
                         <div class="style-desktop-view1 style-wrapper">
                           <div class="style-header-1">
@@ -35,7 +35,7 @@
                               <div class="col-lg-9 col-xs-8">
                                 <h3 class="style-fs-16 style-m-fs-14">
                                   <b>
-                                    {{item.labId?.name}}
+                                    {{item.name}}
                                   </b>
                                 </h3>
                               </div>
@@ -48,7 +48,7 @@
                                   <div class="row style-test-summary">
                                     <div class="col-lg-9 col-xs-8 style-pl-0 style-test-name style-m-pl-15">
                                       <b>
-                                        {{item.testId?.testId?.title}}
+                                        {{item.title}}
                                       </b>
                                       <div class="style-tat-cart">
                                         E-Reports with in 72 hours post sample collection
@@ -56,27 +56,30 @@
                                     </div>
                                     <div class="col-lg-3 col-xs-4 text-right-order">
                                       <div class="style-font-bold style-test-price">
-                                        ₹{{y}}
+                                        ₹{{item.y}}
                                       </div>
                                       <div class="style-test-mrp style-fs-12 style-m-fs-11 style-text-gray">
-                                        ₹ {{item.testId?.mrp}}
+                                        ₹ {{item.mrp}}
                                       </div>
                                     </div>
 
                                     <div class="row no-gutters">
                                       <div class="col-2 example-button-row">
-                                        <button mat-button (click)="decrementchoc()">-</button>
+                                        <button mat-button
+                                          (click)="mini(item?.type,item?.cartID,item?.amount,item?.quantity,i)">-</button>
                                       </div>
-                                      <div class="col text-center">{{x}} in cart</div>
+                                      <div class="col text-center"> {{item.quantity}}in cart</div>
+
                                       <div class="col-2 example-button-row">
-                                        <button mat-button (click)="incrementchoc()">+</button>
+                                        <button mat-button
+                                          (click)="add(item?.type,item?.cartID,item?.amount,item?.quantity,i)">+</button>
                                       </div>
                                     </div>
 
                                     <div
                                       class="col-xs-12 style-pl-0 style-show-remove style-mt-0 style-fs-12 style-m-fs-11 style-m-pl-15">
                                       <span class="style-pointer">
-                                        <span (click)="removeAt(CartData[0]._id)">
+                                        <span>
                                           <span class="style-text-gray">
                                             <i class="fa fa-trash-o"></i>
                                             Remove
@@ -116,14 +119,14 @@
                             <i class="fa fa-check-circle style-text-blue"></i>
                             You saved
                             <span class="style-text-green">
-                              ₹{{saveAmount}}
+                              <!-- ₹{{saveAmount}} -->
                             </span>
                           </div>
                           <div class="col-xs-12 style-text-gray style-fs-12 style-mt-15  style-m-ml-0">
                             <b>
                               COMP:
                             </b>
-                            Flat {{offer}}% off
+                            <!-- Flat {{offer}}% off -->
                             <!-- {{item?.packageId?.offerPercent}} -->
                           </div>
                           <div class="col-xs-12 style-fs-12">
@@ -144,7 +147,7 @@
                           M.R.P. Total
                         </div>
                         <div class="col-xs-6 text-right-summary">
-                          ₹{{MRPPrice}}
+                          ₹10960
                         </div>
                       </div>
                       <div class="row style-text-gray style-fs-12-summary style-item-summary">
@@ -152,30 +155,30 @@
                           Price Discount
                         </div>
                         <div class="col-xs-6 text-right-summary">
-                          - ₹{{saveAmount}}
+                          - ₹8561
                         </div>
                       </div>
-                      <!-- <div class="row style-text-gray style-fs-12-summary style-item-summary">
+                      <div class="row style-text-gray style-fs-12-summary style-item-summary">
                         <div class="col-xs-6">
                           Coupon Discount
                         </div>
                         <div class="col-xs-6 text-right-summary">
                           - ₹1200
                         </div>
-                      </div> -->
+                      </div>
                       <div class="row text-right-summary style-font-bold-summary">
                         <div class="col-xs-6">
                           Total
                         </div>
                         <div class="col-xs-6 text-right-summary">
-                          ₹{{y}}
+                          ₹1199
                         </div>
                       </div>
                       <div class="row style-background-green style-pt-10 style-item-summary-1">
                         <div class="col-xs-12">
                           Total Savings
                           <span class="style-text-green-summary style-font-bold-summary">
-                            ₹{{saveAmount}}
+                            ₹9761
                           </span>
                         </div>
                       </div>
