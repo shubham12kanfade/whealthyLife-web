@@ -5638,5 +5638,284 @@ background: #fff; border-radius: 2px !important; min-width: 155px;}
     position: relative;
     line-height: 2;
 }
+.citySearch {
+  background: #f7f9fc;
+  padding: 15px;
+}
+.citySearch input.form-control, .citySearch input[type="text"] {
+  border: 1px solid #ebebeb !important;
+  font-size: 12px !important;
+  border-right: none !important;
+}
+.citySearch .input-group-append span {
+  background: #ffffff !important;
+  border: 1px solid #ebebeb !important;
+  padding: 5px 14px !important;
+  line-height: 13px !important;
+  font-size: 14px !important;
+  height: 40px !important;
+  border-left: none !important;
+}
+.citySearch {
+  background: #f7f9fc;
+  padding: 16px 8px 8px;
+}
+.citySearch input.form-control:focus, .citySearch input[type="text"]:focus {
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.25) !important;
+}
+.sliderOfferSection img {
+  width: 100%;
+  height: auto;
+}
+.p-l-0{
+  padding-left:0px !important;
+}
+.p-r-0{
+  padding-right:0px !important;
+}
+h4.customHeading4 {
+  font-size: 20px !important;
+  font-weight: 600 !important;
+  font-family: Camphor, verdana !important;
+  line-height: 26px !important;
+}
+p.subHeadingSet {
+  font-size: 16px !important;
+  color: #646464 !important;
+  margin-bottom: 15px !important;
+  line-height: 20px !important;
+}
+ul.mainHighlightsPoints li {
+  list-style: none;
+  display: inline-block;
+  width: 19%;
+  text-align: center;
+  margin-top: 15px;
+  margin-right: 5px;
+  border-right: 1px solid #c7c7c7;
+}
+ul.mainHighlightsPoints li img {
+  width: 45px;
+  height: auto;
+}
+ul.mainHighlightsPoints li p.iconText {
+  font-size: 13px;
+  margin-top: 10px;
+}
+.chooseBenefitsSets {
+  padding-top: 25px;
+}
+ul.mainHighlightsPoints li:last-child{
+  margin-right: 0px !important;
+  border-right: none !important;
+}
+.listedBoxSet {
+  border: 1px solid #ebebeb;
+  padding: 25px 25px 10px !important;
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+}
+.listedBoxSet.leftBox {
+  border-right: none;
+}
+.listedBoxSet i:before {
+  font-family: Fontawesome;
+  font-size: 18px;
+  margin-right: 15px;
+}
+ul.labTestingListing li {
+  list-style: none;
+  display: inline-block;
+  width: 50%;
+  margin-bottom: 20px;
+}
+ul.labTestingListing li a {
+  color: #646464 !important;
+}
+ul.labTestingListing li a::before {
+  content: "\f196";
+  font-family: Fontawesome;
+  font-size: 16px;
+  margin-right: 10px;
+}
+ul.labTestingListing {
+  margin-top: 30px;
+}
+.bookAlabTestOffer img {
+  width: 100%;
+}
+button.btn.btnFindYourTest {
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+  border: 1px solid #ebebeb;
+  padding: 10px 15px;
+  border-radius: 20px;
+  position: relative;
+  bottom: 23px;
+  background: #ffffff;
+  color: #45A29E;
+  font-weight: 600;
+  font-size: 14px;
+}
+button.btn.btnFindYourTest i::before {
+  font-family: 'FontAwesome';
+}
+button.btn.btnFindYourTest i {
+  color: #45A29E;
+}
+/*Swapnil-UICSS*/
+.mainSectionTitle h2 {
+  font-size: 32px !important;
+    line-height: 40px !important;
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+    text-align: left !important;
+    color: #414146 !important;
+    text-transform: initial !important;
+    margin-bottom: 30px;
+}
+.h2txt.mainSectionTitle h2 {
+  margin-top: 10%;
+}
+.flecs1 .head1 {
+  z-index: 999;
+  text-align: center !important;
+  font-size: 35px !important;
+  color: #fff !important;
+  font-weight: 500 !important;
+}
+.mainSectionTitle strong {
+  font-weight: 600 !important;
+}
+.pt-pb-80{
+  padding-top:80px !important;
+  padding-bottom:80px !important;
+}
+.topCategoriesSect .fa {
+  font-family: 'FontAwesome' !important;
+}
+.topCategoriesSect .card {
+  border-radius: 4px !important;
+  background: transparent !important;
+}
+.topCategoriesSect .card:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px !important;
+}
+.specialityName {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0,0,0,0.5);
+  width: 100%;
+  color: #ffffff;
+  text-align: center;
+  font-size: 18px;
+  padding: 12px 5px;
+  text-transform: capitalize;
+}
+p.testimonial {
+  font-size: 22px !important;
+  line-height: 36px !important;
+}
+p.testimonial::before{
+  content:"\f10d" !important;
+  font-family: "Fontawesome" !important;
+  font-size: 28px;
+}
 
 
+.testimonialSlider i {
+  font-family: 'FontAwesome' !important;
+  margin-right: 12px;
+  font-size: 28px;
+}
+.testimonialSlider p.overview img {
+  width: 55px;
+  margin: 0 15px;
+  display: inline;
+}
+ul.appDownload li {
+  list-style: none !important;
+  display: inline-block;
+}
+ul.appDownload li::before{
+  content:" " !important;
+}
+p.testimonial.noBgTestimonial {
+  background: transparent !important;
+}
+section.enquireSection, .lab-slide {
+  background: #f7f9fc !important;
+}
+.lab-test-section-grid .productMedicineGrid {
+  border: 1px solid #cccccc;
+  padding: 10px 10px 20px;
+}
+
+.lab-test-section-grid .productMedicineGrid .style__safe {
+  position: absolute;
+  right: 5px;
+  top: 10px;
+  background: #e8a87c;
+  color: #555555;
+  font-weight: 600;
+  font-size: 12px;
+  padding: 5px;
+}
+.lab-test-section-grid .productMedicineGrid h3.style__package-name {
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 18px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+.lab-test-section-grid .productMedicineGrid p {
+  font-size: 12px !important;
+  color:#c7c7c7;
+}
+.lab-test-section-grid .productMedicineGrid img {
+  width: 20px;
+}
+.lab-test-section-grid .productMedicineGrid a:hover {
+  text-decoration: none;
+}
+.lab-test-section-grid .productMedicineGrid ul.imgBoxStar li {
+  display: inline-block;
+  margin-right:15px;
+}
+.lab-test-section-grid .productMedicineGrid ul.imgBoxStar li img {
+  width: 75px;
+  height: 62px;
+  border: 1px solid #cccccc;
+  padding: 5px;
+}
+.lab-test-section-grid .productMedicineGrid ul.imgBoxStar li .starRatingLab {
+  background: green;
+  padding: 5px;
+  color: #ffffff;
+  font-weight: 600;
+}
+.lab-test-section-grid .productMedicineGrid ul.imgBoxStar li .starRatingLab i::before{
+  font-family: Fontawesome;
+}
+.lab-test-section-grid .productMedicineGrid span.style__composition-more {
+  font-weight: 600;
+  color: #333333;
+}
+.moreInfor {
+  margin-bottom: 15px;
+}
+.prodPriceLbl span.style__payable {
+  font-size: 21px;
+  color: #333333;
+  margin-right: 15px;
+}
+.prodPriceLbl {
+  margin-bottom: 30px;
+}
+.prodPriceLbl span.style__mrp {
+  text-decoration: line-through;
+  color: #999999;
+  font-size: 21px;
+}
+.offPercentages span.style__discount {
+  border: 1px dashed green;
+  color: green;
+  padding: 6px;
+}
