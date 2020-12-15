@@ -1,6 +1,6 @@
-<div class="container-fluid" style="padding: 0px; min-height: 660px;">
+<div class="container-fluid labdetailedSet" style="padding: 0px; min-height: 660px;">
   <div class="container style-view">
-    <div class="row style-package-detail-wrapper">
+    <div class="row style-package-detail-wrapper tery">
       <div class="col-lg-7 col-sm-12 style-desktop-view">
         <div class="row style-package-card-wrapper">
           <div class="col-lg-12 col-sm-12 style-card-wrapper">
@@ -87,7 +87,7 @@
               </div>
             </div>
 
-            <div class="row">
+            <div class="row ">
               <div class="col-xs-8 col-lg-12 col-sm-12 style-lab-name">
                 <a class="button-text style-lab-link" href="">
                   {{lName}}
@@ -130,15 +130,15 @@
             <div class="row style-overview-block-wrapper" id="Overview">
               <div class="col-xs-12 style-packages-desc-wrapper">
                 <h3 class="style-sub-header">
-                  How {{title}} helps you?
+                  <strong>How {{title}} helps you?</strong>
                 </h3>
                 <div class="style-text">
-                  {{discription}}
+                  <p>{{discription}}</p>
                 </div>
               </div>
               <div class="col-xs-12 style-precautions-wrapper">
                 <h3 class="style-sub-header style-precautions-sub-header">
-                  Precautions
+                  <strong>Precautions</strong>
                 </h3>
                 <p class="style-precautions">
                   {{precaution}}
@@ -148,15 +148,56 @@
           </div>
         </div>
 
-        <div *ngIf="packType!='test'">
+        <!-- <div *ngIf="packType!='test'"> -->
           <div class="row style-included-tests-wrapper">
             <h2 class="style-header">
-              {{ packType |titlecase }} Tests Included in {{title}}
+              Package Tests Included in {{title}}
               <span class="style-included-tests">
                 (92 tests)
               </span>
             </h2>
-            <div class="col-xs-13 col-sm-12 style-accordion-wrapper">
+            <div class="col-xs-12 col-sm-12 style-accordion-wrapper">
+              <div id="accordion" class="labTestCollapse">
+                <div class="card">
+                  <div class="card-header">
+                    <a class="card-link" data-toggle="collapse" href="#collapseOne">
+                      Complete Blood Count
+                    </a>
+                  </div>
+                  <div id="collapseOne" class="collapse show" data-parent="#accordion">
+                    <div class="card-body">
+                      <div><p>Differential leucocyte Count (includes 6 tests)</p><p>Absolute Monocyte Counts</p><p>RDW SD</p><p>Red Blood Cell Count</p><p>Platelet Count</p><p>Packed Cell Volume</p><p>Hemoglobin</p><p>Total Leucocyte Count</p><p>Red Cell Distribution Width</p><p>Mean Corpuscular Volume</p><p>Mean Corpuscular Hemoglobin</p><p>Mean Corpuscular Hemoglobin Concentration</p><p>Mean Platelet Volume</p><p>Absolute Leucocyte Count (includes 6 tests)</p></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
+                      Kidney Function Test
+                  </a>
+                  </div>
+                  <div id="collapseTwo" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                      <div><p>Urea</p><p>Creatinine</p><p>Uric Acid</p></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
+                      Liver Function Test
+                    </a>
+                  </div>
+                  <div id="collapseThree" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                      <div><p>Alanine Transaminase</p><p>Aspartate Aminotransferase</p><p>Protein Total, Serum (includes 4 tests)</p><p>Alkaline Phosphatase</p><p>Bilirubin (Total, Direct and Indirect) (includes 3 tests)</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
               <mat-accordion>
                 <div *ngIf="packType=='profile'">
                   <mat-expansion-panel *ngFor="let item of this.TestDetails " hideToggle disabled>
@@ -190,7 +231,7 @@
               </mat-accordion>
             </div>
           </div>
-        </div>
+        <!-- </div> -->
 
       </div>
 

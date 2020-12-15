@@ -5919,3 +5919,22 @@ section.enquireSection, .lab-slide {
   color: green;
   padding: 6px;
 }
+.labdetailedSet i::before {
+  font-family: 'FontAwesome';
+}
+.setFooterMain.ft-footer {
+  box-shadow: rgba(255, 255, 255, 0.05) 0px 1px 0px, rgba(255, 255, 255, 0.1) 0px 0px 8px;
+  border-top: 1px solid rgba(255,255,255,0.3);
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+.setFooterMain.ft-footer h3 {
+  color: #000000;
+  font-weight: 500;
+  font-size: 26px;
+}
+div#accordion.labTestCollapse a.card-link {
+    color: #212121;
+}
+div#accordion.labTestCollapse .card-header {
+  padding: 10px 5px 4px;
+}
