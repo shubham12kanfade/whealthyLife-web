@@ -168,29 +168,13 @@
   font-weight: 500;
 }
 
-// .btns:focus{
-//   border-radius: 25px;
-//   margin: 20px;
-//   background-color: #3f51b5 !important;
-//   background-color: transparent;
-//   color: black;
-// }
-
 .btns3 {
   border-radius: 25px;
   font-weight: 500;
   margin: 20px 10px;
-  // background-color: #3f51b5 !important;
   background-color: transparent;
   color: black;
-  background-image: linear-gradient(
-    to right bottom,
-    #33f917,
-    #2bd511,
-    #22b10c,
-    #1a9007,
-    #126f04
-  );
+  background-image: linear-gradient(to right bottom, #33f917, #2bd511, #22b10c, #1a9007, #126f04);
 }
 
 .btns1 {
@@ -204,12 +188,7 @@
 
 .asdd {
   position: relative;
-  background-image: -webkit-linear-gradient(
-    top,
-    hsla(0, 0%, 100%, 0),
-    hsla(0, 0%, 100%, 0.85) 55%,
-    #fff
-  );
+  background-image: -webkit-linear-gradient(top, hsla(0, 0%, 100%, 0), hsla(0, 0%, 100%, 0.85) 55%, #fff);
   z-index: 999;
   height: 50px;
   top: -50px;
@@ -237,7 +216,7 @@
 .btn-main {
   border-radius: 8px;
   padding: 10px 30px !important;
-  background-color: #45A29E;
+  background-color: #45a29e;
   cursor: pointer;
   color: white !important;
   text-align: center;
@@ -247,4 +226,16 @@
   display: inline-block;
   z-index: 1;
   position: ab;
+}
+
+.recent_lab_image {
+  height: 250px;
+  width: 250px;
+  // box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+.booktest_input {
+  height: 40px !important;
+  margin-left: 5px !important;
+  margin-top: 1px !important;
 }
