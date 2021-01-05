@@ -5755,7 +5755,7 @@ button.btn.btnFindYourTest {
   font-weight: 600;
   font-size: 14px;
 }
-button.btn.btnFindYourTest i::before {
+button.btn.btnFindYourTest i::before, .populatedLabTest i::before {
   font-family: 'FontAwesome';
 }
 button.btn.btnFindYourTest i {
@@ -5937,4 +5937,25 @@ div#accordion.labTestCollapse a.card-link {
 }
 div#accordion.labTestCollapse .card-header {
   padding: 10px 5px 4px;
+  font-size: 14px;
+  font-weight: 600;
 }
+html, body {
+  width: 100%;
+}
+.tabSectionforLab .style-lab-detail-wrapper {
+  padding: 0 !important;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+}
+.tabSectionforLab .style-lab-detail-wrapper .sectionTabSet {
+  padding: 15px;
+  border-bottom: 1px solid #ebebeb;
+}
+.tabSectionforLab .style-lab-detail-wrapper .sectionTabSet h4.tabHeading {
+  margin-bottom: 0;
+}
+/* @media (min-width: 1200px){
+.container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 1250px !important;
+}
+} */

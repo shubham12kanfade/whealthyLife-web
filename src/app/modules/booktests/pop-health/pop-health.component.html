@@ -1,7 +1,27 @@
 <div class="container-fluid labdetailedSet" style="padding: 0px; min-height: 660px;">
   <div class="container style-view">
     <div class="row style-package-detail-wrapper tery">
-      <div class="col-lg-7 col-sm-12 style-desktop-view">
+      <div class="col-lg-3 style-provided-by-header tabSectionforLab">
+        <div class="style-desktop-view-4">
+          <div class="style-provided-package-by-wrapper">
+            <div class="style-lab-detail-wrapper">
+              <div class="sectionTabSet testDetails">
+                <h4 class="tabHeading activeSection">Test Details</h4>
+              </div>
+              <div class="sectionTabSet overview">
+                <h4 class="tabHeading">Overview</h4>
+              </div>
+              <div class="sectionTabSet InterpretingResult">
+                <h4 class="tabHeading">Interpreting Results</h4>
+              </div>
+              <div class="sectionTabSet testInclude">
+                <h4 class="tabHeading">Tests Included</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-sm-12 style-desktop-view">
         <div class="row style-package-card-wrapper">
           <div class="col-lg-12 col-sm-12 style-card-wrapper">
             <div class="row style-margin-top style-margin-bottom">
@@ -235,7 +255,7 @@
 
       </div>
 
-      <div class="col-lg-5 style-provided-by-header">
+      <div class="col-lg-3 style-provided-by-header">
         <div class="style-desktop-view-4">
           <div class="style-provided-package-by-wrapper">
             <div class="style-lab-detail-wrapper">
@@ -249,6 +269,13 @@
                       {{lName}}
                     </h2>
                   </a>
+                  <div class="style-lab-name">
+                    <span>
+                      About
+                    </span>
+                    {{lName}}
+                  </div>
+                  <hr class="style-hr-m-0">
                   <div class="style-star-wrapper">
                     <div class="StarRating-rating-5-0 StarRating-star-rating StarRating-desktop-view">
                       4.9
@@ -342,6 +369,7 @@
           </div>
         </div>
       </div>
+
     </div>
   </div>
 </div>
