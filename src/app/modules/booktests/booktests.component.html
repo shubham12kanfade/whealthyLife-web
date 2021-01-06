@@ -1,219 +1,205 @@
 <section style="margin-top: 100px">
   <div class="container">
-      <div class="row citySearch">
-        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" style="margin-bottom: 10px">
-          <div class="input-group" [formGroup]="reg">
-            <input type="text" class="form-control" (click)="modalopen()" placeholder="Enter your city" />
-            <div class="input-group-append">
-              <span class="input-group-text">
-                <svg width="1em" height="1em" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-<g>
-	<g>
-		<path d="M256,0C161.896,0,85.333,76.563,85.333,170.667c0,28.25,7.063,56.26,20.49,81.104L246.667,506.5
-			c1.875,3.396,5.448,5.5,9.333,5.5s7.458-2.104,9.333-5.5l140.896-254.813c13.375-24.76,20.438-52.771,20.438-81.021
-			C426.667,76.563,350.104,0,256,0z M256,256c-47.052,0-85.333-38.281-85.333-85.333c0-47.052,38.281-85.333,85.333-85.333
-			s85.333,38.281,85.333,85.333C341.333,217.719,303.052,256,256,256z"/>
-	</g>
-</g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
-              </span>
-            </div>
-            <input type="text" class="form-control" placeholder="Enter tests and profiles" matInput
-              formControlName="title" [matAutocomplete]="auto" style="height: 40px !important; margin-left: 5px !important; margin-top: 1px !important;" />
-
-            <mat-autocomplete #auto="matAutocomplete">
-              <mat-option *ngFor="let option of filteredOptions" [value]="option.name" [routerLink]="['/booktests/pop-health/'+option.type+'/'+option.id]">
-                {{option.name}}
-              </mat-option>
-            </mat-autocomplete>
-
-
-
-            <div class="input-group-append">
-              <span class="input-group-text" style="margin-top: 1px;"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search"
-                  fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd"
-                    d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z" />
-                  <path fill-rule="evenodd"
-                    d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
-                </svg></span>
-            </div>
+    <div class="row citySearch">
+      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" style="margin-bottom: 10px">
+        <div class="input-group" [formGroup]="reg">
+          <!-- <input type="text" class="form-control" (click)="modalopen()" placeholder="Enter your city" /> -->
+          <!-- <ng-select class="form-control">
+            <ng-option *ngFor="let lab_city of labCities" [value]="lab_city._id">{{lab_city._id}}</ng-option>
+          </ng-select> -->
+          <div class="input-group-append">
+            <span class="input-group-text">
+              <img src="../../../assets/svs/back.svg" alt="">
+            </span>
+          </div>
+          <input type="text" class="form-control booktest_input" placeholder="Enter tests and profiles" matInput
+            formControlName="title" [matAutocomplete]="auto" style="height: 40px !important;" />
+          <mat-autocomplete #auto="matAutocomplete">
+            <mat-option *ngFor="let option of filteredOptions" [value]="option.name"
+              [routerLink]="['/booktests/pop-health/'+option.type+'/'+option.id]">
+              {{option.name}}
+            </mat-option>
+          </mat-autocomplete>
+          <div class="input-group-append">
+            <span class="input-group-text" style="margin-top: 1px;">
+              <img src='../../../assets/svs/input_group.svg'>
+            </span>
           </div>
         </div>
       </div>
+    </div>
 
-      <div class="labTestSect mb-5 mt-5 row">
-        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12 sliderOfferSection" >
-          <img src='../../../assets/images/labImages.jpg'>
-        </div>
-        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12 chooseBenefitsSets">
-          <h4 class="customHeading4">Lab Test From The Comfort Of Your Home</h4>
-          <p class="subHeadingSet">15,00,000+ lab tests booked | 4,00,000+ satisfied customers</p>
-          <ul class="mainHighlightsPoints">
-            <li>
-              <img src='../../../assets/images/safeAndHygin.png'>
-              <p class="iconText">100% Safe & Hygenic</p>
-            </li>
-            <li>
-              <img src='../../../assets/images/homeDelivery.png'>
-              <p class="iconText">Home Sample Pick Up</p>
-            </li>
-            <li>
-              <img src='../../../assets/images/onlineTestReport.png'>
-              <p class="iconText">View Reports Online</p>
-            </li>
-            <li>
-              <img src='../../../assets/images/laboratorySpecialist.png'>
-              <p class="iconText">Free Doctor Consultation</p>
-            </li>
-            <li>
-              <img src='../../../assets/images/pathOffers.png'>
-              <p class="iconText">Best Prices Guaranteed</p>
-            </li>
-          </ul>
-        </div>
+    <div class="labTestSect mb-5 mt-5 row">
+      <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12 sliderOfferSection">
+        <img src='../../../assets/images/labImages.jpg'>
       </div>
-
-      <div class="bookAlabTest mb-5 mt-5 row">
-        <h4 class="customHeading4 col-12">Book A Lab Test</h4>
-        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12 listedBoxSet leftBox">
-          <p class="subHeadingSet"><i class="fa fa-home"></i> HEALTH TEST AT YOUR HOME</p>
-          <ul class="labTestingListing">
-              <li><a href="#">Coronavirus, Sars-Cov-2,</a></li>
-              <li><a href="#">Dengue Antigen NS1, IgG & IgM</a></li>
-              <li><a href="#">Urine R/M</a></li>
-              <li><a href="#">HbA1c</a></li>
-              <li><a href="#">TSH</a></li>
-              <li><a href="#">KFT</a></li>
-          </ul>
-        </div>
-        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12 listedBoxSet rightBox">
-          <p class="subHeadingSet"><i class="fa fa-flask" aria-hidden="true"></i> VISIT A LAB NEAR YOU</p>
-          <ul class="labTestingListing">
-            <li><a href="#">Coronavirus, Sars-Cov-2,</a></li>
-            <li><a href="#">Dengue Antigen NS1, IgG & IgM</a></li>
-            <li><a href="#">Urine R/M</a></li>
-            <li><a href="#">HbA1c</a></li>
-            <li><a href="#">TSH</a></li>
-            <li><a href="#">KFT</a></li>
-          </ul>
-        </div>
-        <div class="col-12 text-center">
-          <button class="btn btnFindYourTest"><i class="fa fa-search" aria-hidden="true"></i> Find Your Test</button>
-        </div>
+      <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12 chooseBenefitsSets">
+        <h4 class="customHeading4">Lab Test From The Comfort Of Your Home</h4>
+        <p class="subHeadingSet">15,00,000+ lab tests booked | 4,00,000+ satisfied customers</p>
+        <ul class="mainHighlightsPoints">
+          <li>
+            <img src='../../../assets/images/safeAndHygin.png'>
+            <p class="iconText">100% Safe & Hygenic</p>
+          </li>
+          <li>
+            <img src='../../../assets/images/homeDelivery.png'>
+            <p class="iconText">Home Sample Pick Up</p>
+          </li>
+          <li>
+            <img src='../../../assets/images/onlineTestReport.png'>
+            <p class="iconText">View Reports Online</p>
+          </li>
+          <li>
+            <img src='../../../assets/images/laboratorySpecialist.png'>
+            <p class="iconText">Free Doctor Consultation</p>
+          </li>
+          <li>
+            <img src='../../../assets/images/pathOffers.png'>
+            <p class="iconText">Best Prices Guaranteed</p>
+          </li>
+        </ul>
       </div>
+    </div>
 
-      <div class="bookAlabTestOffer mb-5 mt-5 row">
-        <img src='../../../assets/images/bookNowLab.jpg'>
+    <div class="bookAlabTest mb-5 mt-5 row">
+      <h4 class="customHeading4 col-12">Book A Lab Test</h4>
+      <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12 listedBoxSet leftBox">
+        <p class="subHeadingSet"><i class="fa fa-home"></i> HEALTH TEST AT YOUR HOME</p>
+        <ul class="labTestingListing">
+          <li><a href="#">Coronavirus, Sars-Cov-2,</a></li>
+          <li><a href="#">Dengue Antigen NS1, IgG & IgM</a></li>
+          <li><a href="#">Urine R/M</a></li>
+          <li><a href="#">HbA1c</a></li>
+          <li><a href="#">TSH</a></li>
+          <li><a href="#">KFT</a></li>
+        </ul>
       </div>
+      <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12 listedBoxSet rightBox">
+        <p class="subHeadingSet"><i class="fa fa-flask" aria-hidden="true"></i> VISIT A LAB NEAR YOU</p>
+        <ul class="labTestingListing">
+          <li><a href="#">Coronavirus, Sars-Cov-2,</a></li>
+          <li><a href="#">Dengue Antigen NS1, IgG & IgM</a></li>
+          <li><a href="#">Urine R/M</a></li>
+          <li><a href="#">HbA1c</a></li>
+          <li><a href="#">TSH</a></li>
+          <li><a href="#">KFT</a></li>
+        </ul>
+      </div>
+      <div class="col-12 text-center">
+        <button class="btn btnFindYourTest"><i class="fa fa-search" aria-hidden="true"></i> Find Your Test</button>
+      </div>
+    </div>
 
-      <section class="mb-5 lab-test-section-grid">
-        <div class="container margin_60_35 pt-pb-80">
-          <h4 class="customHeading4 col-12">Health Checkups at Home</h4>
-          <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 productMedicineGrid">
-              <a href="#">
-                <h3 class="style__package-name">Comprehensive Full Body Checkup</h3>
-                <div class="style__safe">
-                  <img class="style__safe-tag___DEH5F" src="../../../assets/images/safeAndHygin.png" alt="Safe">
-                  <span>SAFE</span>
-                </div>
-                <p class="subHeadingSet">Includes 61 tests</p>
-                <ul class="imgBoxStar">
-                  <li><img src="../../../assets/images/testLab.png" alt="Lab"/></li>
-                  <li>
-                    <div class="starRatingLab">
-                      <span class="ratingCount">4.8</span> <i class="fa fa-star StarRating__rating" aria-hidden="true"></i>
-                    </div>
-                  </li>
-                </ul>
-                <div class="labTestListing">
-                    <p class="subHeadingSet">Complete Blood Count</p>
-                    <p class="subHeadingSet">Glycosylated Hemoglobin</p>
-                    <p class="subHeadingSet">Urine Routine & Microscopy</p>
-                </div>
-                <div class="moreInfor"><span class="style__composition-more">+ More</span></div>
-                <div class="prodPriceLbl">
-                  <span class="style__payable">₹<span>1399</span></span>
-                  <span class="style__mrp">₹<span>2000</span></span>
-                </div>
-                <div class="offPercentages">
-                  <span class="style__discount">30% Off</span>
-                </div>
-                <div class="col-md-12 text-center mt-5">
-                  <a href="#" class="btn-main">Add to cart</a>
-                </div>
-              </a>
-          </div>
-        </div>
-      </section>
+    <div class="bookAlabTestOffer mb-5 mt-5 row">
+      <img src='../../../assets/images/bookNowLab.jpg'>
+    </div>
 
-      <div class="row" style="margin-top: 30px">
-        <img src="../../../assets/img/corona.png" alt="Free Home Sample" style="position: relative" class="banner"
-          style="height: 300px" />
-        <div class="row" style="position: absolute">
-          <div class="col-lg-6 col-md-8 setPadForThis" style="margin: 10px;padding: 50px 25px 25px;text-align: center;">
-            <h1 class="customHeading4" style="text-align: center; font-weight: 600">
-              Get lab tests and full body checkups from the comfort of your
-              home.
-            </h1>
-            <span class="u-font-bold o-font-size--24 text-success">Upto 45% OFF</span>
-            <span class="text-success"> + </span>
-            <span class="text-success">Get 10% Health Cashback</span>
-            <span class="text-success">*</span>
-            <span class="text-success u-pointeru-pointer"> T&amp;C</span>
-            <div style="margin-top: 20px; text-align: center">
-              <button mat-raised-button color="primary">
-                See all Packages
-              </button>
+    <section class="mb-5 lab-test-section-grid">
+      <div class="container margin_60_35 pt-pb-80">
+        <h4 class="customHeading4 col-12">Health Checkups at Home</h4>
+        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 productMedicineGrid">
+          <a href="#">
+            <h3 class="style__package-name">Comprehensive Full Body Checkup</h3>
+            <div class="style__safe">
+              <img class="style__safe-tag___DEH5F" src="../../../assets/images/safeAndHygin.png" alt="Safe">
+              <span>SAFE</span>
             </div>
+            <p class="subHeadingSet">Includes 61 tests</p>
+            <ul class="imgBoxStar">
+              <li><img src="../../../assets/images/testLab.png" alt="Lab" /></li>
+              <li>
+                <div class="starRatingLab">
+                  <span class="ratingCount">4.8</span> <i class="fa fa-star StarRating__rating" aria-hidden="true"></i>
+                </div>
+              </li>
+            </ul>
+            <div class="labTestListing">
+              <p class="subHeadingSet">Complete Blood Count</p>
+              <p class="subHeadingSet">Glycosylated Hemoglobin</p>
+              <p class="subHeadingSet">Urine Routine & Microscopy</p>
+            </div>
+            <div class="moreInfor"><span class="style__composition-more">+ More</span></div>
+            <div class="prodPriceLbl">
+              <span class="style__payable">₹<span>1399</span></span>
+              <span class="style__mrp">₹<span>2000</span></span>
+            </div>
+            <div class="offPercentages">
+              <span class="style__discount">30% Off</span>
+            </div>
+            <div class="col-md-12 text-center mt-5">
+              <a href="#" class="btn-main">Add to cart</a>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="row" style="margin-top: 30px">
+      <img src="../../../assets/img/corona.png" alt="Free Home Sample" style="position: relative" class="banner"
+        style="height: 300px" />
+      <div class="row" style="position: absolute">
+        <div class="col-lg-6 col-md-8 setPadForThis" style="margin: 10px;padding: 50px 25px 25px;text-align: center;">
+          <h1 class="customHeading4" style="text-align: center; font-weight: 600">
+            Get lab tests and full body checkups from the comfort of your
+            home.
+          </h1>
+          <span class="u-font-bold o-font-size--24 text-success">Upto 45% OFF</span>
+          <span class="text-success"> + </span>
+          <span class="text-success">Get 10% Health Cashback</span>
+          <span class="text-success">*</span>
+          <span class="text-success u-pointeru-pointer"> T&amp;C</span>
+          <div style="margin-top: 20px; text-align: center">
+            <button mat-raised-button color="primary">
+              See all Packages
+            </button>
           </div>
         </div>
       </div>
-      <div class="row" style="margin-top: 30px" *ngIf="Profile?.length!=0">
-        <h2 style="font-weight: 600">Top Booked Diagnostic Tests</h2>
-        <div class="col-sm-12 col-md-12 col-lg-12 cen">
-          <div class="row" style="
+    </div>
+    <div class="row" style="margin-top: 30px" *ngIf="Profile?.length!=0">
+      <h2 style="font-weight: 600">Top Booked Diagnostic Tests</h2>
+      <div class="col-sm-12 col-md-12 col-lg-12 cen">
+        <div class="row" style="
               position: absolute;
               z-index: 9;
               width: 100%;
               justify-content: space-between;
               top: 70px;
             ">
-            <span (click)="review12.prev()">
-              <i class="fa fa-chevron-circle-left fa-3x" aria-hidden="true">
-              </i>
-            </span>
-            <span (click)="review12.next()">
-              <i class="fa fa-chevron-circle-right fa-3x" aria-hidden="true">
-              </i>
-            </span>
-          </div>
-          <owl-carousel-o [options]="customOptions" #review12>
-            <ng-template carouselSlide *ngFor="let prof of Profile; let k = index">
-              <div class="card card-style cad1" [routerLink]="['pop-health/profile/',prof._id]"
-                routerLinkActive="router-link-active">
-                <div class="card-body">
-                  <h3 class="card-title truncate fw-600">{{ prof.title }}</h3>
-                  <div style="height: 50%">
-                    <p class="card-text">{{ prof.description }}</p>
-                  </div>
-                  <h2 class="fw-600" style="margin: 0px">
-                    ₹ {{ prof.yourPrice }}
-                  </h2>
+          <span (click)="review12.prev()">
+            <i class="fa fa-chevron-circle-left fa-3x" aria-hidden="true">
+            </i>
+          </span>
+          <span (click)="review12.next()">
+            <i class="fa fa-chevron-circle-right fa-3x" aria-hidden="true">
+            </i>
+          </span>
+        </div>
+        <owl-carousel-o [options]="customOptions" #review12>
+          <ng-template carouselSlide *ngFor="let prof of Profile; let k = index">
+            <div class="card card-style cad1" [routerLink]="['pop-health/profile/',prof._id]"
+              routerLinkActive="router-link-active">
+              <div class="card-body">
+                <h3 class="card-title truncate fw-600">{{ prof.title }}</h3>
+                <div style="height: 50%">
+                  <p class="card-text">{{ prof.description }}</p>
                 </div>
-                <div class="card-footer fw-600" style="
+                <h2 class="fw-600" style="margin: 0px">
+                  ₹ {{ prof.yourPrice }}
+                </h2>
+              </div>
+              <div class="card-footer fw-600" style="
                     color: #14bef0;
                     font-weight: 600;
                     text-align: center;
                     background: white;
                   ">
-                  ADD
-                </div>
+                ADD
               </div>
-            </ng-template>
+            </div>
+          </ng-template>
 
-          </owl-carousel-o>
-        </div>
+        </owl-carousel-o>
       </div>
       <div class="row populatedLabTest" style="margin-top: 30px" *ngIf="GetAll?.length">
         <h2 style="font-weight: 600"> Health Checkups and Screenings For</h2>
@@ -224,33 +210,32 @@
               justify-content: space-between;
               top: 20px;
             ">
-            <span (click)="review25.prev()" style="z-index: 9">
-              <i class="fa fa-chevron-circle-left fa-3x" aria-hidden="true">
-              </i>
-            </span>
-            <span (click)="review25.next()" style="z-index: 9">
-              <i class="fa fa-chevron-circle-right fa-3x" aria-hidden="true">
-              </i>
-            </span>
-          </div>
-          <owl-carousel-o [options]="customOptions2" #review25>
-            <ng-template carouselSlide *ngFor="let item of GetAll; let i = index">
-              <img [src]="item.icon" alt="image" [routerLink]="['pop-health/test',item._id]"
-                routerLinkActive="router-link-active"
-                onError="this.src='../../../assets/img/Swati/BookHeathCheckup/Cancer.png'" class="banner1" />
-              <h4 class="m-2 text-bold">{{ item?.title }}</h4>
-            </ng-template>
-          </owl-carousel-o>
+          <span (click)="review25.prev()" style="z-index: 9">
+            <i class="fa fa-chevron-circle-left fa-3x" aria-hidden="true">
+            </i>
+          </span>
+          <span (click)="review25.next()" style="z-index: 9">
+            <i class="fa fa-chevron-circle-right fa-3x" aria-hidden="true">
+            </i>
+          </span>
         </div>
+        <owl-carousel-o [options]="customOptions2" #review25>
+          <ng-template carouselSlide *ngFor="let item of GetAll; let i = index">
+            <img [src]="item.icon" alt="image" [routerLink]="['pop-health/test',item._id]"
+              routerLinkActive="router-link-active"
+              onError="this.src='../../../assets/img/Swati/BookHeathCheckup/Cancer.png'" class="banner1" />
+            <h4 class="m-2 text-bold">{{ item?.title }}</h4>
+          </ng-template>
+        </owl-carousel-o>
       </div>
+    </div>
   </div>
+</div>
 </section>
-
 <section style="margin-top: 30px" *ngIf="Package?.length!=0">
   <div class="container">
     <h2 style="font-weight: 600">Popular Health Checkup Packages</h2>
     <div style="display: flex; flex-wrap: wrap; justify-content: flex-start">
-      <!-- <button type="button" class="btn btns"> Featured Checkups </button> -->
       <button type="button" [ngClass]="{ btns3: health }" class="btn btns" (click)="healthCheck()">
         Women's Health
       </button>
@@ -379,7 +364,6 @@
                     </button>
                   </div>
                 </div>
-
                 <div></div>
                 <div></div>
               </div>
@@ -502,7 +486,9 @@
     <div class="main_title">
       <div class="row">
         <div class="col text-center">
-          <h2 class="cus" style="text-align: center !important;margin-bottom: 0px !important;text-transform: initial !important;">Rencently Added Labs</h2>
+          <h2 class="cus"
+            style="text-align: center !important;margin-bottom: 0px !important;text-transform: initial !important;">
+            Rencently Added Labs</h2>
         </div>
       </div>
     </div>
@@ -514,13 +500,12 @@
               style="margin: 10px; border: 1px solid">
               <div class="card">
                 <img [src]="item.icon" alt="logo-client"
-                  onerror="this.src='../../../assets/imag/Doctor-And-Patient.png'"
-                  style="height: 250px; width: 250px; box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;" />
+                  onerror="this.src='../../../assets/imag/Doctor-And-Patient.png'" class="recent_lab_image" />
               </div>
             </ng-template>
           </owl-carousel-o>
         </div>
-        <div class="row">
+        <!-- <div class="row">
           <div class="col-3" *ngFor="let item of Labdata; let a = index" style="margin: 10px">
             <div>
               <div class="card">
@@ -530,7 +515,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
     <div class="col-md-12 text-center mt-5">
@@ -566,9 +551,9 @@
                 {{item?.review}}
               </p>
               <p class="overview mt-5">
-                <img src='../../../assets/images/unknownUser.png'> 
-                 <span class="userName">Ashish Garnaik</span>,
-                  <span class="userDesignation">Designation</span>
+                <img src='../../../assets/images/unknownUser.png'>
+                <span class="userName">Ashish Garnaik</span>,
+                <span class="userDesignation">Designation</span>
               </p>
             </div>
           </ng-template>
@@ -592,12 +577,7 @@
     <div class="row">
       <div class="col-md-6 col-12 d-none d-md-block">
         <div class="pic-middle aos-init aos-animate" data-aos="fade-right">
-          <img
-            src="../assets/imag/app-screen1.png"
-            alt="WhealthyLife"
-            class="img-fluid"
-            style="max-width: 60%"
-          />
+          <img src="../assets/imag/app-screen1.png" alt="WhealthyLife" class="img-fluid" style="max-width: 60%" />
         </div>
       </div>
       <div class="col-md-6 col-12">
@@ -612,17 +592,9 @@
             <li>Read health tips</li>
           </ul>
           <ul class="appDownload">
-            <li><a href="#" class="app"
-              ><img
-                src="../assets/img/1_EiZrcN_DIapbZaxutxbZRA.png"
-                alt="app"
-            /></a></li>
-            <li><a href="#" class="app"
-              ><img
-                src="./../../../assets/img/app-store.e30d53a6.png"
-                style="margin-top: 3px"
-                alt="app"
-            /></a></li>
+            <li><a href="#" class="app"><img src="../assets/img/1_EiZrcN_DIapbZaxutxbZRA.png" alt="app" /></a></li>
+            <li><a href="#" class="app"><img src="./../../../assets/img/app-store.e30d53a6.png" style="margin-top: 3px"
+                  alt="app" /></a></li>
           </ul>
         </div>
       </div>

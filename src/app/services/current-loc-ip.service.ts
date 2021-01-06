@@ -12,7 +12,6 @@ export class CurrentLocIpService {
    public getData(): Promise<any> {
     return new Promise((resolve, reject) => {
       const request: string = 'http://ip-api.com/json';
-      // // console.log('data', request);
       this.http
         .get(request)
         .subscribe(
