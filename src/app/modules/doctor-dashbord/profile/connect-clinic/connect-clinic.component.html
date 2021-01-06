@@ -4,10 +4,10 @@
             <p style="font-size: 15px;">Please select any one of the following:</p>
             <div class="form-group" [formGroup]="profileform">
                 <mat-radio-group aria-label="Select an option" formControlName="typeOfEstablishment">
-                    <div class="row border py-2 pl-2">
+                    <div class="row py-2 pl-2">
                         <mat-radio-button value="OwnEstablishment">I own a establishment</mat-radio-button>
                     </div>
-                    <div class="row border py-2 pl-2">
+                    <div class="row py-2 pl-2">
                         <mat-radio-button value="VisitEstablishment">I visit a establishment</mat-radio-button>
                     </div>
                 </mat-radio-group>
@@ -15,14 +15,12 @@
             <hr class="mt-5 mb-5">
             <div class="row">
                 <button mat-raised-button matStepperPrevious>
-                    <mat-icon aria-hidden="false" aria-label="Example home icon">chevron_left
-                    </mat-icon>
+                    <i class="fa fa-caret-left" aria-hidden="true"></i>
                     Back
                 </button>
-                <button style="position: absolute !important; right: 0 !important;"  mat-raised-button color="warn" (click)="onSave()" routerLinkActive="router-link-active">
-                    Save and Contnue
-                    <mat-icon aria-hidden="false" aria-label="Example home icon">chevron_right
-                    </mat-icon>
+                <button class="themeColorBtn" style="margin-left: 10px !important;"  mat-raised-button color="warn" (click)="onSave()" routerLinkActive="router-link-active">
+                    Save and Continue
+                    <i class="fa fa-caret-right" aria-hidden="true"></i>
                 </button>
             </div>
         </div>

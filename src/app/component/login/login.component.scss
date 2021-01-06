@@ -131,7 +131,7 @@ label[for="remember"] {
 
 .otp_flow input[type="checkbox"]:checked + label,
 .remember input[type="checkbox"]:checked + label {
-    background: #22b10c  !important;
+    background: #45a29e  !important;
     border: 0;
 }
 .otp_flow input[type="checkbox"],
@@ -353,28 +353,35 @@ label {
 }
 
 .login-area .nav-pills .nav-link {
-    color: #000 !important;
+    color: #000 ;
     padding: 10px 15px !important;
     border-radius: 0;
     font-size: 15px;
-}
-
-.login-area .nav-pills .nav-link.active {
-    color: #000 !important;
+  }
+  
+  .login-area .nav-pills .nav-link.active {
+    color: #000 ;
     background-color: #ebebeb;
     padding: 10px 15px !important;
     border-radius: 0;
     font-size: 15px;
-}
-
-.login-area .nav > li > a:focus,
-.nav > li > a:hover {
-    color: #fff !important;
-    background-color: #13bef0;
+  }
+  
+  .login-area .nav > li > a:focus,
+  .nav > li > a:hover {
+    color: #45a29e !important;
+    background: transparent !important;
     padding: 10px 15px !important;
     border-radius: 0;
     font-size: 15px;
-}
+  }
+  
+  a.nav-link.active.activeRLState {
+    color: #45a29e !important;
+    background: transparent !important;
+    border-bottom: 3px solid #45a29e !important;
+    font-weight: 400;
+  }
 
 .login-area .outer-space {
     padding: 30px;

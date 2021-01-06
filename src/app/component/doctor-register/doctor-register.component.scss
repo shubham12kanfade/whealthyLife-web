@@ -39,10 +39,10 @@
 .box-header {
   font-size: 18px;
   padding: 12.5px 25px;
-  border-bottom: solid 1px linear-gradient(to right top, #9e2724, #aa2624, #b62524, #c22424, #ce2224, #ce2224, #ce2224, #ce2224, #c22424, #b62524, #aa2624, #9e2724) !important;
+  border-bottom: solid 1px linear-gradient(to right top, #9e2724, #aa2624, #b62524, #c22424, #ce2224, #ce2224, #ce2224, #ce2224, #c22424, #b62524, #aa2624, #9e2724) ;
   height: 60px;
   width: 100%;
-  background-image: linear-gradient(to right top, #9e2724, #aa2624, #b62524, #c22424, #ce2224, #ce2224, #ce2224, #ce2224, #c22424, #b62524, #aa2624, #9e2724) !important;
+  background-image: linear-gradient(to right top, #9e2724, #aa2624, #b62524, #c22424, #ce2224, #ce2224, #ce2224, #ce2224, #c22424, #b62524, #aa2624, #9e2724) ;
 }
 
 #joinWhealthyLife {
@@ -245,7 +245,7 @@ p {
 
 .otp_flow input[type="checkbox"]:checked + label,
 .remember input[type="checkbox"]:checked + label {
-  background-color:   #22b10c !important;
+  background-color:   #45a29e !important;
   border: 0;
 }
 
@@ -447,27 +447,34 @@ textarea {
 }
 
 .login-area .nav-pills .nav-link {
-  color: #000 !important;
-  padding: 10px 15px !important;
+  color: #000 ;
+  padding: 10px 15px !important;;
   border-radius: 0;
   font-size: 15px;
 }
 
 .login-area .nav-pills .nav-link.active {
-  color: #000 !important;
+  color: #000 ;
   background-color: #ebebeb;
-  padding: 10px 15px !important;
+  padding: 10px 15px !important;;
   border-radius: 0;
   font-size: 15px;
 }
 
 .login-area .nav > li > a:focus,
 .nav > li > a:hover {
-  color: #fff !important;
-  background-color: #13bef0;
+  color: #45a29e !important;
+  background: transparent !important;
   padding: 10px 15px !important;
   border-radius: 0;
   font-size: 15px;
+}
+
+a.nav-link.active.activeRLState {
+  color: #45a29e !important;
+  background: transparent !important;
+  border-bottom: 3px solid #45a29e !important;
+  font-weight: 400;
 }
 
 .login-area .outer-space {

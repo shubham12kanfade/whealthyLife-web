@@ -40,13 +40,11 @@
                             <hr class="mt-5 mb-3" />
                             <div class="row">
                                 <button class="mr-2" mat-raised-button  [routerLink]="['/Doctor/Profile']">
-                                    <mat-icon aria-hidden="false" aria-label="Example home icon">chevron_left
-                                    </mat-icon>
+                                    <i class="fa fa-caret-left" aria-hidden="true"></i>
                                     Back
                                 </button>
-                                <button  class="ml-2" mat-raised-button color="warn"  (click)="onSave(stepper)">Save and Contnue
-                                    <mat-icon aria-hidden="false" aria-label="Example home icon" >chevron_right
-                                    </mat-icon>
+                                <button  class="ml-2 themeColorBtn" mat-raised-button color="warn"  (click)="onSave(stepper)">Save and Continue
+                                    <i class="fa fa-caret-right" aria-hidden="true"></i>
                                 </button>
                                 <!-- <button class="save" mat-stroked-button color="primary" [disabled]="dynamicForm.invalid || filtersFormArray.controls.length < 1" (click)="save()">
                                 Save

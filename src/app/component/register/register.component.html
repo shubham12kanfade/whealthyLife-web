@@ -4,8 +4,8 @@
         <div class="row">
         </div>
         <div class="row">
-            <div class="col-sm-6 sidimg d-none d-sm-block">
-                <img src="../assets/img/Whealthy Life-05.png">
+            <div class="col-sm-6 sidimg d-none d-sm-block ">
+                <img src="../assets/img/reg2.jpg" class="w100">
             </div>
             <div class="col-sm-6 box margin-toprm">
                 <div class="row">
@@ -15,7 +15,7 @@
                                 <a class="nav-link" data-toggle="pill" routerLink="/login">Login</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" data-toggle="pill" href="#Register">Register</a>
+                                <a class="nav-link active activeRLState" data-toggle="pill" href="#Register">Register</a>
                             </li>
                         </ul>
                         <div class="tab-content">
@@ -26,7 +26,7 @@
                     <div class="col-md-12">
                         <form [formGroup]="register" (ngSubmit)="onSubmit()">
                             <div class="outer-box">
-                                <div class="box-header">
+                                <div class="box-header themeColorBtn">
                                     <div>
                                         <div class="row" style=" text-align: center !important;
                                         display: block;;">
@@ -217,7 +217,7 @@
                                                 <div id="recaptcha-container-register"
                                                     data-sitekey="6LcgVBgUAAAAANU9A74W9CtzZ3NeJdhbGIoUbDXG"
                                                     data-size="invisible"></div>
-                                                <button class="btn btn-lg common-btn WhealthyLife-btn" type="submit">
+                                                <button class="btn btn-lg common-btn WhealthyLife-btn themeColorBtn" type="submit">
                                                     Send OTP <p-progressSpinner *ngIf="sending" class="progress-bar12"
                                                         [style]="{width: '23px', height: '23px'}" strokeWidth="3"
                                                         animationDuration="1.5s">

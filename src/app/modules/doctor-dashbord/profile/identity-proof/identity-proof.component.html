@@ -81,12 +81,12 @@
                         <div class="row">
                             <button mat-raised-button [routerLink]="['/Doctor/Profile']"
                                 routerLinkActive="router-link-active">
-                                <i class="fa fa-chevron-left" aria-hidden="true"></i> Back
+                                <i class="fa fa-caret-left" aria-hidden="true"></i> Back
                             </button>
-                            <button style="position: absolute;  right: 0;" mat-raised-button (click)="onSave(stepper)" color="warn">
-                                Save and contnue
-                                <mat-icon aria-hidden="false" aria-label="Example home icon">chevron_right
-                                </mat-icon>
+                            <button style="margin-left: 10px;" mat-raised-button (click)="onSave(stepper)" color="warn" class=
+                            "themeColorBtn">
+                              Save and continue
+                              <i class="fa fa-caret-right" aria-hidden="true"></i>
                             </button>
                         </div>
                     </div>

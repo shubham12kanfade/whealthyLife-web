@@ -3,14 +3,14 @@
     <div class="container pt-5">
         <div class="row">
             <div class="col-sm-6 sidimg d-none d-sm-block">
-                <img src="../assets/img/Whealthy Life-07.jpg">
+                <img src="../assets/img/bg.jpg">
             </div>
             <div class="col-md-6 margin-toprm">
                 <div class="row">
                     <div class="col-sm-12 ">
                         <ul class="nav nav-pills">
                             <li class="nav-item">
-                                <a class="nav-link active" data-toggle="pill" href="#Login">Login</a>
+                                <a class="nav-link active activeRLState" data-toggle="pill" href="#Login">Login</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" data-toggle="pill" routerLink="/register">Register</a>
@@ -64,7 +64,7 @@
 
                                                     </div>
                                                     <div class="forget-pasword">
-                                                        <a routerLink="/forgot_password" id="forgotPassword">Forgot password?</a>
+                                                        <a routerLink="/forgot_password" id="forgotPassword" class="themeTxtColour">Forgot password?</a>
                                                     </div>
                                                     <div style="clear:both"></div>
                                                 </div>
@@ -90,7 +90,7 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="">
-                                                <button (click)="onSubmit()" class="btn  btn-lg common-btn WhealthyLife-btn" id="login">
+                                                <button (click)="onSubmit()" class="btn  btn-lg common-btn WhealthyLife-btn themeColorBtn" id="login">
                                                     Login
                                                 </button>
                                             </div>
@@ -107,7 +107,7 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <button mat-stroked-button class="w-100 fb" (click)="signInWithFB()">
-                                                <i class="social_facebook"></i>
+                                                <i class="fa fa-facebook-square" aria-hidden="true"></i>
                                                 Login with Facebook
                                             </button>
                                         </div>

@@ -60,12 +60,13 @@
                 <hr class="mt-5 mb-3" />
                 <div class="row">
                     <button mat-raised-button matStepperPrevious>
-                        <mat-icon aria-hidden="false" aria-label="Example home icon">chevron_left</mat-icon>
+                        <i class="fa fa-caret-left" aria-hidden="true"></i>
                         Back
                     </button>
-                    <button style="position: absolute; right: 0;" mat-raised-button color="warn" (click)="onSave()">
-                        Save and contnue
-                        <mat-icon aria-hidden="false" aria-label="Example home icon">chevron_right</mat-icon>
+                    <button style="position: absolute; right: 0;" mat-raised-button color="warn" (click)="onSave()" class=
+                    "themeColorBtn">
+                      Save and continue
+                      <i class="fa fa-caret-right" aria-hidden="true"></i>
                     </button>
                 </div>
             </div>
