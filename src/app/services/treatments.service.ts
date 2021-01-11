@@ -16,9 +16,9 @@ getTreatmentUsingSpecializetionsID(specialization){
   return this.ApiCallService.postData('treatment/get/by/specializations', specialization)
 }
 
-getDoctorTreatmentbyid(data){
-  return this.ApiCallService.postData('treatment/get/all/by/specialization',data)
-}
+// getDoctorTreatmentbyid(data){
+//   return this.ApiCallService.postData('treatment/get/all',data)
+// }
 addDoctorspec(data){
   return this.ApiCallService.postData('doctor/specialization/add',data)
 
@@ -32,5 +32,8 @@ addDoctorTreatment(data){
   return this.ApiCallService.postData('doctor/treatments/add',data)
 }
 
+getAllTreatment(){
+  return this.ApiCallService.getData('treatment/get/all')
+}
 
 }

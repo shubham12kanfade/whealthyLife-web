@@ -18,5 +18,10 @@ export class LoginService {
   verifyOtp(data) {
     return this.ApiCallService.getData('authentication/verify/mobile/' + data.mobile + '/' + data.otp);
   }
+
+  resendOtp(data) {
+    return this.ApiCallService.getData('authentication/resend/otp/' + data.mobile);
+  }
+
 }
   

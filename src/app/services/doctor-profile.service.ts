@@ -16,4 +16,9 @@ export class DoctorProfileService {
     console.log("DoctorProfileService -> getDoctorProfile -> data"+data)
     return this.ApiCallService.getData('doctor/' + data);
   }
+
+  getDocSlots(id){
+    return this.ApiCallService.getData('slots/'+id);
+  }
+
 }

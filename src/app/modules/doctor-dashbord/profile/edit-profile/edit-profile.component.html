@@ -61,8 +61,7 @@
                                         <label for="Specialization">Phone number</label>
                                         <!-- <a style="float: right ;color:blue">Edit</a> -->
                                         <input type="number" formControlName="mobileNumber" class="form-control"
-                                            readonly id="Contact" (input)="onChangeSpec($event)"
-                                            (onChange)="onChangeSpec($event)">
+                                            readonly id="Contact">
                                     </div>
                                 </div>
                                 <div class="col-sm-6  mt-4">
@@ -95,14 +94,14 @@
                                     <div class="form-group">
                                         <label for="Specialisations">Specialisations</label>
                                      
-                                            <mat-select formControlName="specialitie" placeholder="Serach" class="form-control" (selectionChange)="onChange($event)" multiple>
+                                            <mat-select formControlName="specialitie" placeholder="Serach" class="form-control" multiple>
                                               <mat-option>
-                                                <ngx-mat-select-search  placeholderLabel="Search"  (input)="onInput($event)"></ngx-mat-select-search>
+                                                <ngx-mat-select-search  placeholderLabel="Search"   (input)="onInput($event)" ></ngx-mat-select-search>
                                               </mat-option>
-                                              <mat-option *ngIf="addOption" (click)="onAddNew(addOption)"> 
+                                              <!-- <mat-option *ngIf="addOption" > 
                                                   {{addOption}}
-                                              </mat-option>
-                                              <mat-option *ngFor="let spec of speciality" [value]="spec">
+                                              </mat-option> -->
+                                              <mat-option *ngFor="let spec of speciality " [value]="spec._id">
                                                 {{spec.fullName}}
                                               </mat-option>
                                             </mat-select>
@@ -128,15 +127,15 @@
                                     <div class="form-group">
                                         <label for="Treatment">Treatment</label>
                                      
-                                            <mat-select id="Treatment" formControlName="treatment"  placeholder="Serach" class="form-control" (selectionChange)="onChanget($event)" multiple>
+                                            <mat-select id="Treatment" formControlName="treatment"  placeholder="Serach" class="form-control"  multiple>
                                               <mat-option>
                                                 <ngx-mat-select-search  placeholderLabel="Search"  (input)="onInput1($event)" ></ngx-mat-select-search>
                                               </mat-option>
-                                              <mat-option *ngIf="addOption1" (click)="onAddNew1(addOption1)"> 
+                                              <!-- <mat-option *ngIf="addOption1" > 
                                                   {{addOption1}}
-                                              </mat-option>
-                                              <mat-option *ngFor="let spec of treatment1" [value]="spec">
-                                                {{spec.fullName}}
+                                              </mat-option> -->
+                                              <mat-option *ngFor="let treat of treatment1" [value]="treat._id">
+                                                {{treat.fullName}}
                                               </mat-option>
                                             </mat-select>
                                           

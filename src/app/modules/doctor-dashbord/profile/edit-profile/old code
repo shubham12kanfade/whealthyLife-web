@@ -1,0 +1,117 @@
+getTreatment(id) {
+    console.log("EditProfileComponent -> getTreatment -> id", id.value);
+    var data = {
+      specializations: [],
+    };
+    id.value.forEach((element) => {
+      data.specializations.push(element._id);
+    });
+
+    this.TreatmentsService.getTreatmentUsingSpecializetionsID(data).then(
+      (ResData) => {
+        console.log("EditProfileComponent -> getTreatment -> ResData", ResData);
+        this.treatment = ResData.data;
+        this.tempData1=ResData.data;
+
+      }
+    );
+  }
+
+
+  add(event: MatChipInputEvent): void {
+    const input = event.input;
+    const value = event.value;
+
+    // Add our fruit
+    if ((value || "").trim()) {
+      this.fruits.push({ shortName: value.trim() });
+    }
+
+    // Reset the input value
+    if (input) {
+      input.value = "";
+    }
+
+    this.fruitCtrl.setValue(null);
+  }
+
+  remove(fruit: string): void {
+    const index = this.fruits.indexOf(fruit);
+
+    if (index >= 0) {
+      this.fruits.splice(index, 1);
+    }
+  }
+
+  selected(event: MatAutocompleteSelectedEvent): void {
+    this.fruits.push({ shortName: event.option.viewValue });
+    this.fruitInput.nativeElement.value = "";
+    this.fruitCtrl.setValue(null);
+  }
+
+  private _filter(value: string): string[] {
+    const filterValue = value.toLowerCase();
+
+    return this.allFruits.filter(
+      (fruit) => fruit.toLowerCase().indexOf(filterValue) === 0
+    );
+  }
+
+
+  onAddNew(value) {
+    console.log("EditProfileComponent -> onAddNew -> value", value);
+
+    this.TreatmentsService.newaddspecialization({ fullName: value })
+      .then((resData) => {
+        console.log("EditProfileComponent -> onAddNew -> resData", resData);
+        this.getSpeciality();
+      })
+      .catch((erre) => {
+        console.log("EditProfileComponent -> onAddNew -> erre", erre);
+      });
+  }
+
+
+  onAddNew1(value) {
+    console.log("EditProfileComponent -> onAddNew -> value", value);
+
+
+  }
+
+
+  onChangeSpec(e) {}
+
+
+  this.TreatmentsService.addDoctorspec(data1)
+      .then((resData) => {
+        console.log("file: edit-profile.component.ts ~ line 403 ~ EditProfileComponent ~ .then ~ resData", resData)
+        this.TreatmentsService.getAllTreatment()
+          .then((resdata) => {
+            console.log("file: edit-profile.component.ts ~ line 426 ~ EditProfileComponent ~ .then ~ resdata", resdata)
+            this.treatment1 = resdata.data;
+            console.log("file: edit-profile.component.ts ~ line 406 ~ EditProfileComponent ~ .then ~ this.treatment1", this.treatment1)
+            this.tempData1=resdata.data
+            console.log("file: edit-profile.component.ts ~ line 408 ~ EditProfileComponent ~ .then ~ this.tempData1", this.tempData1)
+          })
+          .catch((err) => {
+            console.log("EditProfileComponent -> onChange -> err", err);
+          });
+      })
+      .catch((error) => {
+        console.log("EditProfileComponent -> onChange -> error", error);
+      });
+
+
+      getResult(event) {
+        console.log("EditProfileComponent -> getResult -> event", event);
+      }
+    
+
+      this.TreatmentsService.addDoctorTreatment(data1)
+      .then((resData) => {
+      console.log("EditProfileComponent -> onChanget -> resData", resData)
+
+      })
+      .catch((error) => {
+        console.log("EditProfileComponent -> onChange -> error", error);
+      });

@@ -10,17 +10,29 @@ import { UserService } from 'src/app/services/user.service';
   styleUrls: ['./verify-otp.component.scss']
 })
 export class VerifyOtpComponent implements OnInit {
+
+  public settings = {
+    length: 4,
+    numbersOnly: true,
+    timer: 120,
+    limit: 10
+  }
+
+ 
   mobileNumber: any;
   msgs: any = [];
   msgsWarn: any = [];
   otp: number;
   error: any = false;
+  timerOn = true;
+  OTPLen: any;
 
   constructor(public activateRouter: ActivatedRoute,
     public messageService: MessageService,
     public userService: UserService,
     public router: Router,
     public loginService: LoginService) { }
+
 
   ngOnInit(): void {
 
@@ -35,8 +47,43 @@ export class VerifyOtpComponent implements OnInit {
     })
   }
 
+  public onInputChange(e) {
+    console.log("file: verify-otp.component.ts ~ line 50 ~ VerifyOtpComponent ~ onInputChange ~ e", e)
+    console.log(e);
+    this.otp = e;
+    this.OTPLen =e
+    console.log("file: verify-otp.component.ts ~ line 52 ~ VerifyOtpComponent ~ onInputChange ~ this.otp", this.otp)
+    if(e.length == this.settings.length) {
+      console.log("file: verify-otp.component.ts ~ line 55 ~ VerifyOtpComponent ~ onInputChange ~ e.length", e.length)
+      // e will emit values entered as otp and,
+      console.log('otp is', e);
+    }else if(e == -1) {
+      // if e == -1, timer has stopped
+      console.log(e, 'resend button enables');
+
+    }else if(e == -2) {
+      // e == -2, button click handle
+      console.log('resend otp');
+      this.loginService.resendOtp({mobile: this.mobileNumber}).then(resend => {
+        console.log("file: verify-otp.component.ts ~ line 99 ~ VerifyOtpComponent ~ this.loginService.resendOtp ~ resend", resend)
+        if(resend.code == 200){
+          this.showToast('success', 'OTP', resend.data.messgae);
+          this.userService.addUserInfo(resend.data);
+          this.router.navigate(["/verify_otp", this.mobileNumber])
+        }
+      }).catch(error => {
+          console.log("file: verify-otp.component.ts ~ line 68 ~ VerifyOtpComponent ~ this.loginService.resendOtp ~ error", error)
+          if (error && error.error.code == 301) {
+            this.showToast('error', 'OTP', error.error.message)
+          } else {
+            this.showToast('error', 'OTP', error.message)
+          }
+      })
+    }
+  }
+  
   onVerify() {
-    if (this.otp.toString().trim().length === 4) {
+    if (this.OTPLen.length == this.settings.length) {
       this.error = false;
       this.loginService.verifyOtp({ mobile: this.mobileNumber, otp: this.otp })
         .then(resData => {
@@ -65,12 +112,15 @@ export class VerifyOtpComponent implements OnInit {
   }
 
   validate() {
-    if (this.otp.toString().trim().length === 4) {
+    if (this.otp === this.settings.length) {
       this.error = false;
     } else {
       this.error = 'Please enter correct otp'
     }
   }
+
+  
+
 
   show(type, msg) {
     this.msgs.push({ severity: type, detail: msg });
@@ -94,4 +144,5 @@ export class VerifyOtpComponent implements OnInit {
       this.messageService.add({ key: 'otperror', severity: type, summary: messageType, detail: message });
     });
   }
+
 }

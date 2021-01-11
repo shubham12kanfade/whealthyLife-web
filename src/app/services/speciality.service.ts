@@ -14,6 +14,10 @@ export class SpecialityService {
     return this.Api.getData("specialization/get/all");
   }
 
+  addSpecialization(data){
+    return this.Api.postData('doctor/specialization/add',data)
+  }
+
   getTestMaster() {
     return this.Api.getData("tests/all");
   }
@@ -22,6 +26,10 @@ export class SpecialityService {
   }
   getCount(){
     return this.Api.getData("doctor/all/counts")
+  }
+
+  getDoctorSpecility(){
+    return this.Api.getData('doctor/specialization/all');
   }
   
 }

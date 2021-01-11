@@ -484,3 +484,22 @@ a.nav-link.active.activeRLState {
 .margin-toprm {
   margin: 0rem 0px;
 }
+
+
+.container>div .group2 {
+	display: block;
+	height: 40px;
+	text-align: left;
+	padding-left: 70px;
+	padding-top: 10px;
+	font: 22px sans-serif;
+	position: relative;
+	top: 0;
+	left: 0;
+}
+.container>div .group2>i {
+	position: absolute;
+	right: 80px;
+	bottom: 51px;
+	cursor: pointer
+}

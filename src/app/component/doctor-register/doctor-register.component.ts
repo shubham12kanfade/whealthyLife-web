@@ -16,6 +16,7 @@ export class DoctorRegisterComponent implements OnInit {
   submitted = false;
   sending = false;
   locatdata: any;
+  hide: boolean = false;
 
   constructor(public rs: RegistrationService,
     public LocationService: LocationService,

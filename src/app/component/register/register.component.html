@@ -143,7 +143,10 @@
                                                 <div class="padding-top-8">
                                                     <input class="form-control email-text" id="password" name="password"
                                                         placeholder="Password" type="password"
-                                                        formControlName="password" value="" />
+                                                        formControlName="password" value="" [type]="hide ? 'password' : 'text'"  />
+                                                        <i  Suffix (click)="hide = !hide" class="fa fa-eye-slash">
+                                                            {{hide ? 'visibility_off' : 'visibility'}}
+                                                        </i>
                                                     <div *ngIf="submitted && f.password.errors"
                                                         class="error-block display-block">
                                                         <div *ngIf="f.password.errors.required">Password is required
@@ -164,7 +167,10 @@
                                                 <div class="padding-top-8">
                                                     <input class="form-control email-text" id="password" name="password"
                                                         placeholder="Confirm Password" type="password"
-                                                        formControlName="Conpassword" value="" />
+                                                        formControlName="Conpassword" value="" [type]="hide ? 'password' : 'text'"/>
+                                                        <i  Suffix (click)="hide = !hide" class="fa fa-eye-slash">
+                                                            {{hide ? 'visibility_off' : 'visibility'}}
+                                                        </i>
                                                     <div *ngIf="submitted && f.Conpassword.errors"
                                                         class="error-block display-block">
                                                         <div *ngIf="f.Conpassword.errors.required">Confirm Password is

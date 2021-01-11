@@ -1,7 +1,7 @@
 <p-toast class="custom-error" [showTransformOptions]="'translateX(100%)'"></p-toast>
 <section>
-    <mat-horizontal-stepper labelPosition="bottom" #stepper >
-        <mat-step>
+    <mat-horizontal-stepper linear #stepper>
+          <mat-step [stepControl]="firstFormGroup" >
             <ng-template matStepLabel> Medical Registration</ng-template>
             <section class="bg-white p-sm-3">
                 <div class="container-fluid">
@@ -43,16 +43,14 @@
                                     <i class="fa fa-caret-left" aria-hidden="true"></i>
                                     Back
                                 </button>
-                                <button  class="ml-2 themeColorBtn" mat-raised-button color="warn"  (click)="onSave(stepper)">Save and Continue
+                                <button  class="ml-2 themeColorBtn" mat-raised-button  color="warn" 
+                                [disabled]="!profileform.valid" (click)="onSave(stepper)">Save and Continue
                                     <i class="fa fa-caret-right" aria-hidden="true"></i>
                                 </button>
-                                <!-- <button class="save" mat-stroked-button color="primary" [disabled]="dynamicForm.invalid || filtersFormArray.controls.length < 1" (click)="save()">
+                                 <!-- <button class="save" mat-stroked-button color="primary" [disabled]="dynamicForm.invalid || filtersFormArray.controls.length < 1" (click)="save()">
                                 Save
-                              </button> -->
+                              </button>  -->
                             </div>
-
-
-
 
                         </div>
                         <div class="col-md-3 col-lg-5 offset-md-1">
@@ -75,14 +73,24 @@
                     </div>
                 </div>
             </section>
-        </mat-step>
-        <mat-step>
-            <ng-template matStepLabel>Education Qualification</ng-template>
-            <app-education [stepper]="stepper"></app-education>
-        </mat-step>
-        <mat-step>
+          </mat-step>
+          <mat-step [stepControl]="secondFormGroup">
+            <form>
+              <ng-template matStepLabel>Education Qualification</ng-template>
+                <app-education  [stepper]="stepper"></app-education>
+            </form>
+          </mat-step>
+          <mat-step>
             <ng-template matStepLabel>Connect a practice</ng-template>
-            <app-connect-clinic [stepper]="stepper"></app-connect-clinic>
-        </mat-step>
-    </mat-horizontal-stepper>
+                <app-connect-clinic [stepper]="stepper"></app-connect-clinic>
+          </mat-step>
+        </mat-horizontal-stepper>
 </section>
+
+
+
+
+
+
+
+  

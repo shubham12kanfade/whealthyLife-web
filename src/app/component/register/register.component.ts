@@ -17,6 +17,7 @@ export class RegisterComponent implements OnInit {
   submitted = false;
   locatdata: any;
   sending: boolean = false;
+  hide = true;
 
   constructor(public rs: RegistrationService,
     public LocationService: LocationService,
@@ -98,4 +99,6 @@ export class RegisterComponent implements OnInit {
       this.messageService.add({ severity: type, summary: messageType, detail: message });
     });
   }
+
+
 }

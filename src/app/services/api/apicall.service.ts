@@ -4,12 +4,13 @@ import { ApiConfiguration } from './configuration';
 import { BehaviorSubject } from 'rxjs';
 import { UserService } from '../user.service';
 
+
 @Injectable()
 export class ApiCallService extends ApiConfiguration {
   token: any = {};
   uploadSub = new BehaviorSubject<any>(0);
 
-  constructor(private http: HttpClient, public userService: UserService) {
+  constructor(private https: HttpClient, public userService: UserService) {
     super();
   }
 
@@ -31,7 +32,7 @@ export class ApiCallService extends ApiConfiguration {
     return new Promise((resolve, reject) => {
       const request: string = this.baseUrl + subUrl;
       // // console.log('data', request);
-      this.http
+      this.https
         .get(request,
           token ? this.getHeader() : {})
         .subscribe(
@@ -46,7 +47,7 @@ export class ApiCallService extends ApiConfiguration {
       // console.log('Token :', token);
       // console.log('Data :', this.getHeader());
       const request: string = this.baseUrl + subUrl;
-      this.http.post(request, data, token ? this.getHeader() : {})
+      this.https.post(request, data, token ? this.getHeader() : {})
         .subscribe(
           res => resolve(res),
           error => {
@@ -61,7 +62,7 @@ export class ApiCallService extends ApiConfiguration {
     // console.log('putdata call');
     return new Promise((resolve, reject) => {
       const request: string = this.baseUrl + subUrl;
-      this.http
+      this.https
         .put(request,
           data,
           token ? this.getHeader() : {})
@@ -75,7 +76,7 @@ export class ApiCallService extends ApiConfiguration {
   public deleteData(subUrl: string, token = true): Promise<any> {
     return new Promise((resolve, reject) => {
       const request: string = this.baseUrl + subUrl;
-      this.http
+      this.https
         .delete(request,
           token ? this.getHeader() : {})
         .subscribe(
@@ -91,10 +92,10 @@ export class ApiCallService extends ApiConfiguration {
     return new Promise((resolve, reject) => {
       const uploadData = new FormData();
       for(var i = 0; i < file.length; i++) {
-        uploadData.append('myFile'+i, file[i], file[i].name);
+        uploadData.append('myfile'+i, file[i], file[i].name);
       }
       this.uploadSub.next(0);
-      const request = this.http
+      const request = this.https
         .post(url,
           uploadData,
           token ? { ...this.getHeader(), reportProgress: true, observe: 'events' } : { reportProgress: true, observe: 'events' })

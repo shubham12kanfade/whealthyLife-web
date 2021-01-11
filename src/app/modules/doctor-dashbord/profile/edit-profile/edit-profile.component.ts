@@ -14,6 +14,7 @@ import {
 import { MatChipInputEvent } from "@angular/material/chips";
 import { Observable } from "rxjs";
 import { map, startWith, filter } from "rxjs/operators";
+import { Router } from '@angular/router';
 
 @Component({
   selector: "app-edit-profile",
@@ -50,7 +51,7 @@ export class EditProfileComponent implements OnInit {
 
   @ViewChild("fruitInput") fruitInput: ElementRef<HTMLInputElement>;
   @ViewChild("auto") matAutocomplete: MatAutocomplete;
-  treatment: any;
+  treatment: any[]=[];
   addedValue: any;
   tempData: any;
   addOption: any = false;
@@ -59,25 +60,28 @@ export class EditProfileComponent implements OnInit {
   element2: any[];
   addOption1: boolean;
   tempData1: any=[];
+  specialitie: any[]=[];
+  specializationArray: any[]=[];
+  treatmentArray: any[]=[];
+  data1:any;
+  data2:any;
+  specialityFilter: any[]=[];
 
   constructor(
     public mainService: MainService,
     public uploadService: UploadService,
     public messageService: MessageService,
     public SpecialityService: SpecialityService,
-    public TreatmentsService: TreatmentsService
+    public TreatmentsService: TreatmentsService,
+    public  router:Router
   ) {
-    this.filteredFruits = this.fruitCtrl.valueChanges.pipe(
-      startWith(null),
-      map((fruit: string | null) =>
-        fruit ? this._filter(fruit) : this.allFruits.slice()
-      )
-    );
-    this.SpecialityService.getSpecialization().then((resData) => {
-      console.log("EditProfileComponent -> resData", resData);
-      //
-      // this.fruits=resData.data
-    });
+    // this.filteredFruits = this.fruitCtrl.valueChanges.pipe(
+    //   startWith(null),
+    //   map((fruit: string | null) =>
+    //     fruit ? this._filter(fruit) : this.allFruits.slice()
+    //   )
+    // );
+    
 
     this.profileForm = new FormGroup({
       firstName: new FormControl(""),
@@ -101,59 +105,53 @@ export class EditProfileComponent implements OnInit {
     });
   }
 
+  ngOnInit(): void {
+    this.getProfile();
+    this.getSpeciality();
+    this.treatmentAll();
+    this.getCountry();
+    this.getTimeZone();
+  }
+
   browseFile(event) {
+    console.log("file: edit-profile.component.ts ~ line 105 ~ EditProfileComponent ~ browseFile ~ event", event)
     const file = event.target.files;
+    console.log("file: edit-profile.component.ts ~ line 107 ~ EditProfileComponent ~ browseFile ~ file", file)
     this.uploadService
       .upload(file)
       .then((res) => {
-        this.avatar = res.files[0];
+        console.log("file: edit-profile.component.ts ~ line 111 ~ EditProfileComponent ~ .then ~ res", res)
+        this.avatar = res.file;
+        console.log("file: edit-profile.component.ts ~ line 113 ~ EditProfileComponent ~ .then ~ this.avatar", this.avatar)
       })
       .catch((error) => {
         console.error("error", error);
       });
   }
 
-  onSave() {
-    console.log("+++++++++++++++++", this.profileForm.value.dob);
-    var data = {
-      ...this.profileForm.value,
-      avatar: this.avatar,
-      dob: this.profileForm.value.dob,
-      location: {
-        address: this.profileForm.value.address,
-        landmark: this.profileForm.value.landmark,
-        state: this.profileForm.value.state,
-        city: this.profileForm.value.city,
-        pincode: this.profileForm.value.pincode,
-        country: this.profileForm.value.country,
-      },
-    };
-    this.mainService
-      .updateUserprofile(data)
-      .then((resData) => {
-        console.log("EditProfileComponent -> onSave -> resData", resData);
-        this.showToast("success", "Profile", "Profile updated successfully");
-      })
-      .catch((error) => {
-        console.log("EditProfileComponent -> onSave -> error", error);
-      });
-    console.log("EditProfileComponent -> onSave -> data", data);
-  }
-
-  ngOnInit(): void {
-    this.getCountry();
-    this.getSpeciality();
-    this.getTimeZone();
-    this.getProfile();
-  }
-
   getProfile() {
     this.mainService
       .getProfile()
       .then((resData) => {
-        console.log("EditProfileComponent -> getProfile -> resData", resData);
+        console.log("file: edit-profile.component.ts ~ line 134 ~ EditProfileComponent ~ .then ~ resData", resData)
+        for(let i= 0; i < resData.data.specialitie.length; i++){
+          this.specialitie[i] = resData.data.specialitie[i]
+          console.log("file: edit-profile.component.ts ~ line 113 ~ EditProfileComponent ~ .then ~ this.specialitie[i]", this.specialitie[i])
+          
+        }
+
+        for(let i= 0; i < resData.data.treatment.length; i++){
+          this.treatment[i] = resData.data?.treatment[i]?._id
+          console.log("file: edit-profile.component.ts ~ line 113 ~ EditProfileComponent ~ .then ~ this.specialitie[i]", this.specialitie[i])
+          
+        }
+
         this.profileForm.patchValue({
-          ...resData.data,
+          firstName: resData.data.firstName,
+          lastName: resData.data.lastName,
+          mobileNumber: resData.data.mobileNumber,
+          email: resData.data.email,
+          gender: resData.data.gender,
           dob: resData.data.dob ? new Date(resData.data.dob) : null,
           address: resData.data.location.address,
           landmark: resData.data.location.landmark,
@@ -161,7 +159,14 @@ export class EditProfileComponent implements OnInit {
           state: resData.data.location.state,
           city: resData.data.location.city,
           country: resData.data.location.country,
+          specialitie:  this.specialitie,
+          treatment: this.treatment,
+          bloodGroup:  resData.data.bloodGroup,
+          extraPhoneNumber: resData.data.extraPhoneNumber,
+          language: resData.data.language,
+          timeZone: resData.data.timeZone
         });
+        
         this.profileData = resData.data;
         this.avatar = resData.data.avatar;
         this.getState();
@@ -172,59 +177,30 @@ export class EditProfileComponent implements OnInit {
       });
   }
 
-  getTimeZone() {
-    this.mainService
-      .getTimeZone()
-      .then((resData) => {
-        this.timeZone = resData.data;
-      })
-      .catch((error) => {
-        console.log("EditProfileComponent -> getCountry -> error", error);
-      });
-  }
-
   getSpeciality() {
     this.SpecialityService.getSpecialization()
       .then((resData) => {
         this.speciality = resData.data;
-        this.tempData = resData.data;
         console.log(
           "EditProfileComponent -> getSpeciality -> resData.data",
-          resData.data
         );
       })
       .catch((error) => {
         console.log("EditProfileComponent -> getCountry -> error", error);
       });
 
-    // this.mainService.getSpeciality().then(resData => {
-    //   this.speciality = resData.data;
-    // }).catch(error => {
-    //   console.log("EditProfileComponent -> getCountry -> error", error)
-    // })
   }
-
-  getTreatment(id) {
-    console.log("EditProfileComponent -> getTreatment -> id", id.value);
-    var data = {
-      specializations: [],
-    };
-    id.value.forEach((element) => {
-      data.specializations.push(element._id);
-    });
-
-    this.TreatmentsService.getTreatmentUsingSpecializetionsID(data).then(
-      (ResData) => {
-        console.log("EditProfileComponent -> getTreatment -> ResData", ResData);
-        this.treatment = ResData.data;
-        this.tempData1=ResData.data;
-
-      }
-    );
-  }
-
-  getResult(event) {
-    console.log("EditProfileComponent -> getResult -> event", event);
+  
+  treatmentAll(){
+    this.TreatmentsService.getAllTreatment()
+          .then((resdata) => {
+            console.log("file: edit-profile.component.ts ~ line 244 ~ EditProfileComponent ~ .then ~ resdata", resdata)
+            this.treatment1 = resdata.data;
+            console.log("file: edit-profile.component.ts ~ line 447 ~ EditProfileComponent ~ .then ~ this.treatment1", this.treatment1)
+          })
+          .catch((err) => {
+            console.log("EditProfileComponent -> onChange -> err", err);
+          });
   }
 
   getCountry() {
@@ -260,6 +236,90 @@ export class EditProfileComponent implements OnInit {
       });
   }
 
+  getTimeZone() {
+    this.mainService
+      .getTimeZone()
+      .then((resData) => {
+        this.timeZone = resData.data;
+      })
+      .catch((error) => {
+        console.log("EditProfileComponent -> getCountry -> error", error);
+      });
+  }
+
+  onInput(e) {
+
+    this.speciality = this.speciality.filter((ele) =>
+      ele.fullName.toLowerCase().includes(e.target.value.toLowerCase())
+    );
+    if (this.speciality.length === 0) {
+      this.ngOnInit()
+    }
+  }
+
+  onInput1(e){
+      this.treatment1 = this.treatment1.filter((ele) =>
+        ele.fullName.toLowerCase().includes(e.target.value.toLowerCase())
+      );
+      this.treatment1 = []
+      if (this.treatment1.length === 0) {
+        this.ngOnInit()
+      }
+  
+    }
+
+ 
+  onSave() {
+    console.log("+++++++++++++++++", this.profileForm.value.dob);
+    var data = {
+      ...this.profileForm.value,
+      avatar: this.avatar,
+      dob: this.profileForm.value.dob,
+      location: {
+        address: this.profileForm.value.address,
+        landmark: this.profileForm.value.landmark,
+        state: this.profileForm.value.state,
+        city: this.profileForm.value.city,
+        pincode: this.profileForm.value.pincode,
+        country: this.profileForm.value.country,
+      },
+      timeZone: this.profileForm.value.timeZone
+    };
+    this.mainService
+      .updateUserprofile(data)
+      .then((resData) => {
+        console.log("file: edit-profile.component.ts ~ line 292 ~ EditProfileComponent ~ .then ~ resData", resData)
+        this.showToast("success", "Profile", "Profile updated successfully");
+        this.router.navigate(['/Doctor'])
+      })
+      .catch((error) => {
+        console.log("EditProfileComponent -> onSave -> error", error);
+      });
+
+
+    const data1 ={
+      specializationArray: this.profileForm.controls.specialitie.value
+    }
+    console.log("file: edit-profile.component.ts ~ line 318 ~ EditProfileComponent ~ onSave ~ data1", data1)
+      this.SpecialityService.addSpecialization(data1).then(SpecData => {
+      console.log("file: edit-profile.component.ts ~ line 320 ~ EditProfileComponent ~ this.SpecialityService.addSpecialization ~ SpecData", SpecData)
+    }).catch(err => {
+      console.log("file: edit-profile.component.ts ~ line 276 ~ EditProfileComponent ~ this.TreatmentsService.addDoctorTreatment ~ err", err)
+    })
+
+    const data2= {
+      treatmentArray: this.profileForm.controls.treatment.value
+     }
+    console.log("file: edit-profile.component.ts ~ line 328 ~ EditProfileComponent ~ onSave ~ data2", data2)
+      
+      this.TreatmentsService.addDoctorTreatment(data2).then(TreatData => {
+      console.log("file: edit-profile.component.ts ~ line 331 ~ EditProfileComponent ~ this.TreatmentsService.addDoctorTreatment ~ TreatData", TreatData)
+    }).catch(err => {
+      console.log("file: edit-profile.component.ts ~ line 313 ~ EditProfileComponent ~ this.TreatmentsService.addDoctorTreatment ~ err", err)
+    })
+
+  }
+ 
   showToast(type, messageType, message) {
     setTimeout(() => {
       this.messageService.add({
@@ -270,145 +330,7 @@ export class EditProfileComponent implements OnInit {
     });
   }
 
-  add(event: MatChipInputEvent): void {
-    const input = event.input;
-    const value = event.value;
 
-    // Add our fruit
-    if ((value || "").trim()) {
-      this.fruits.push({ shortName: value.trim() });
-    }
-
-    // Reset the input value
-    if (input) {
-      input.value = "";
-    }
-
-    this.fruitCtrl.setValue(null);
-  }
-
-  remove(fruit: string): void {
-    const index = this.fruits.indexOf(fruit);
-
-    if (index >= 0) {
-      this.fruits.splice(index, 1);
-    }
-  }
-
-  selected(event: MatAutocompleteSelectedEvent): void {
-    this.fruits.push({ shortName: event.option.viewValue });
-    this.fruitInput.nativeElement.value = "";
-    this.fruitCtrl.setValue(null);
-  }
-
-  private _filter(value: string): string[] {
-    const filterValue = value.toLowerCase();
-
-    return this.allFruits.filter(
-      (fruit) => fruit.toLowerCase().indexOf(filterValue) === 0
-    );
-  }
-
-  onInput(e) {
-    console.log("EditProfileComponent -> onInput -> e", e)
-    this.addOption = false;
-    this.speciality = this.tempData.filter((ele) =>
-      ele.fullName.toLowerCase().includes(e.target.value.toLowerCase())
-    );
-    if (this.speciality.length === 0) {
-      this.addOption = e.target.value;
-    }
-  }
-
-
-  onInput1(e){
-  console.log("EditProfileComponent -> e", e)
-    console.log("EditProfileComponent -> this.treatment1", this.treatment1)
-    console.log("EditProfileComponent -> tempData1", this.tempData1)
-    this.addOption1 = false;
-    this.treatment1 = this.tempData1.filter((ele) =>
-      ele.fullName.toLowerCase().includes(e.target.value.toLowerCase())
-    );
-    if (this.treatment1.length === 0) {
-      this.addOption1 = e.target.value;
-    }
-
-  }
-
-  onAddNew(value) {
-    console.log("EditProfileComponent -> onAddNew -> value", value);
-
-    this.TreatmentsService.newaddspecialization({ fullName: value })
-      .then((resData) => {
-        console.log("EditProfileComponent -> onAddNew -> resData", resData);
-        this.getSpeciality();
-      })
-      .catch((erre) => {
-        console.log("EditProfileComponent -> onAddNew -> erre", erre);
-      });
-  }
-
-
-  onAddNew1(value) {
-    console.log("EditProfileComponent -> onAddNew -> value", value);
-
-
-  }
-
-
-  onChangeSpec(e) {}
-
-  onChanget(e) {
-    this.element2 = [];
-    for (let i = 0; i < e.value.length; i++) {
-      const data = e.value[i]._id;
-
-      this.element2.push(data);
-    }
-
-
-    const data = { specializations: this.element2 };
-    const data1 = { treatmentArray: this.element2 };
-
-    this.TreatmentsService.addDoctorTreatment(data1)
-      .then((resData) => {
-      console.log("EditProfileComponent -> onChanget -> resData", resData)
-
-      })
-      .catch((error) => {
-        console.log("EditProfileComponent -> onChange -> error", error);
-      });
-
-
-
-  }
-
-  onChange(e) {
-    this.element1 = [];
-    for (let i = 0; i < e.value.length; i++) {
-      const data = e.value[i]._id;
-
-      this.element1.push(data);
-    }
-
-    const data = { specializations: this.element1 };
-    const data1 = { specializationArray: this.element1 };
-
-    this.TreatmentsService.addDoctorspec(data1)
-      .then((resData) => {
-        this.TreatmentsService.getDoctorTreatmentbyid(data)
-          .then((resdata) => {
-            this.treatment1 = resdata.data;
-            this.tempData1=resdata.data
-          })
-          .catch((err) => {
-            console.log("EditProfileComponent -> onChange -> err", err);
-          });
-      })
-      .catch((error) => {
-        console.log("EditProfileComponent -> onChange -> error", error);
-      });
-  }
   isNumber(evt) {
     evt = evt ? evt : window.event;
     var charCode = evt.which ? evt.which : evt.keyCode;

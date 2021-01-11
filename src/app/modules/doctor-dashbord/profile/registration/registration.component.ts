@@ -16,6 +16,11 @@ export class RegistrationComponent implements OnInit {
   profileform: FormGroup;
   avatar: any;
   submitted: boolean =false;
+  isLinear = true;
+
+  firstFormGroup: FormGroup;
+  secondFormGroup: FormGroup;
+  thirdFormGroup: FormGroup;
 
   constructor(public mainService: MainService,
     public messageService: MessageService,
@@ -23,20 +28,22 @@ export class RegistrationComponent implements OnInit {
     private formBuilder: FormBuilder) {
 
 
-    this.profileform = this.formBuilder.group({
+
+    this.profileform = new FormGroup({
       registrationNumber: new FormControl('',[Validators.required]),
       registrationCouncil: new FormControl('',[Validators.required]),
       registrationYear: new FormControl('',[Validators.required])
-    }) ;
-
-    // this.profileform = new FormGroup({
-    //   registrationNumber: new FormControl('',[Validators.required]),
-    //   registrationCouncil: new FormControl('',[Validators.required]),
-    //   registrationYear: new FormControl('',[Validators.required])
-    // })
+    })
     this.items.length = 28;
     this.getProfile();
   }
+
+  ngOnInit(): void {
+  }
+
+
+  
+
   get f() { return this.profileform.controls; }
 
   getProfile() {
@@ -85,6 +92,7 @@ export class RegistrationComponent implements OnInit {
   }
 
 
+  
 
-  ngOnInit(): void { }
+ 
 }

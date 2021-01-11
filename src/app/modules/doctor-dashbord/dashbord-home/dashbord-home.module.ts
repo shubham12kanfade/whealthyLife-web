@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { ChartsModule } from 'ng2-charts';
 
 import { DashbordHomeRoutingModule } from './dashbord-home-routing.module';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { DashbordHomeRoutingModule } from './dashbord-home-routing.module';
   imports: [
     CommonModule,
     DashbordHomeRoutingModule,
-    ChartsModule
+    ChartsModule,
+    MatSlideToggleModule
   ]
 })
 export class DashbordHomeModule { }

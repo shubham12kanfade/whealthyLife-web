@@ -29,6 +29,8 @@ import { SharedModule } from '../../shared/shared.module';
 import { PrivcyPolicyComponent } from './privcy-policy/privcy-policy.component';
 import { ToastModule } from 'primeng/toast';
 import { BookHealthCheckupsComponent } from '../book-health-checkups/book-health-checkups.component';
+import { AngularOtpLibModule } from 'angular-otp-box';
+
 
 
 @NgModule({
@@ -55,13 +57,14 @@ import { BookHealthCheckupsComponent } from '../book-health-checkups/book-health
     WalletsComponent
   ],
   imports: [
-    CommonModule,
+CommonModule,
     PublicRoutingModule,
     CarouselModule,
     FormsModule,
     ReactiveFormsModule,
     SharedModule,
-    ToastModule
+    ToastModule,
+    AngularOtpLibModule,
   ]
 })
 export class PublicModule { }
