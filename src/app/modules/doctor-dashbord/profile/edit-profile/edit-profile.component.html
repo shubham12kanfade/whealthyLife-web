@@ -25,7 +25,7 @@
                                     <div class="row">
 
                                         <div class="col-sm-6 m-auto containerq">
-                                            <img [src]="avatar"
+                                            <img [src]="avatar" 
                                                 onerror="this.src='./../../../../../assets/images/doc.jpg'"
                                                 (click)="image.click()" class="profile-avtar " style="cursor: pointer;">
                                             <input type="file" style="display: none;" #image
@@ -191,14 +191,14 @@
                                     <div class="form-group">
                                         <label for="Specialization">
                                             House No./ Street Name/ Area</label>
-                                        <input type="text" formControlName="address" class="form-control" id="Contact">
+                                        <input type="text" formControlName="address" class="form-control" id="address">
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <label for="Specialization">
                                             Colony / Street / Locality</label>
-                                        <input type="text" formControlName="landmark" class="form-control" id="Contact">
+                                        <input type="text" formControlName="landmark" class="form-control" id="landmark">
                                     </div>
                                 </div>
                             </div>
@@ -248,7 +248,7 @@
                                                 <label for="Specialization">
                                                     Pincode</label>
                                                 <input type="text" maxlength="6" formControlName="pincode"
-                                                    id="onlynumber" class="form-control" id="Contact">
+                                                    id="onlynumber" class="form-control" id="pincode">
                                             </div>
                                         </div>
                                     </div>
@@ -267,7 +267,7 @@
                                 <label for="Specialization">
                                     Extra phone numbers</label>
                                 <input type="text" formControlName="extraPhoneNumber" maxlength="10"
-                                    class="form-control" id="Contact">
+                                    class="form-control" id="extraNo">
                             </div>
                         </div>
                         <div class="col-sm-6">

@@ -1,120 +1,126 @@
 <p-toast class="custom-error" [showTransformOptions]="'translateX(100%)'"></p-toast>
 <section>
-    <mat-horizontal-stepper labelPosition="bottom" Disable linear mode #stepper>
-        <mat-step>
-            <ng-template matStepLabel> Identity Proof</ng-template>
-            <section class="bg-white p-sm-3">
-                <div class="row">
-                    <div class="col-md-5 col-lg-3 offset-md-2">
-                        <div>
-                            <p class="mb-2" style="font-size: 15px;">Dr. {{profileData?.firstName}}
-                                {{profileData?.lastName}}</p>
-                        </div>
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="row" style="border: 1px solid lightgray;">
-                                    <div class="col-6" style="padding: 0px;">
-                                        <img src="{{Twoimgarray[0]}}" class="img-fluid"
-                                            
-                                            style="padding: 0px;width: 100%;height: 150px;background-color: #eadfdf;">
-                                        <input type="file" class="d-none" #file1 (change)="browseFile1($event)">
-                                        <span (click)="file1.click()" class="btn border bg-white  z-index" style="position: absolute;top: 0;left: 0;font-size: 1rem !important;">
-                                            <i class="fa fa-upload" aria-hidden="true" style="margin: 0px;"></i>
-    
-                                        </span>
+    <mat-horizontal-stepper labelPosition="bottom" [linear]="true"  linear mode #stepper>
+        <mat-step [stepControl]="firstFormGroup" disableRipple="true">
+            
+                <ng-template matStepLabel> Identity Proof</ng-template>
+                <section class="bg-white p-sm-3">
+                    <div class="row">
+                            <form [formGroup]="firstFormGroup">
+                                <div class="col-md-5 col-lg-3 offset-md-2">
+                                    <div>
+                                        <p class="mb-2" style="font-size: 15px;">Dr. {{profileData?.firstName}}
+                                            {{profileData?.lastName}}</p>
                                     </div>
-                                    <div class="col-6" style="padding: 0px;">
-                                        <img src="{{Twoimgarray[1]}}" class="img-fluid"
-                                           
-                                            style="padding: 0px;width:100%; height: 150px;background-color: #eadfdf;">
-                                            
-                                    
-                                    <input type="file" class="d-none" #file2 (change)="browseFile2($event)">
-                                    <span (click)="file2.click()" class="btn border bg-white  z-index" style="position: absolute;top: 0;left: 0;font-size: 1rem !important;">
-                                        <i class="fa fa-upload" aria-hidden="true" style="margin: 0px;"></i>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="row" style="border: 1px solid lightgray;">
+                                                <div class="col-6" style="padding: 0px;">
+                                                    <img src="{{Twoimgarray[0]}}" class="img-fluid"
+                                                        
+                                                        style="padding: 0px;width: 100%;height: 150px;background-color: #eadfdf;">
+                                                    <input type="file" class="d-none" #file1 (change)="browseFile1($event)">
+                                                    <span (click)="file1.click()" class="btn border bg-white  z-index" style="position: absolute;top: 0;left: 0;font-size: 1rem !important;">
+                                                        <i class="fa fa-upload" aria-hidden="true" style="margin: 0px;"></i>
+                
+                                                    </span>
+                                                </div>
+                                                <div class="col-6" style="padding: 0px;">
+                                                    <img src="{{Twoimgarray[1]}}" class="img-fluid"
+                                                    
+                                                        style="padding: 0px;width:100%; height: 150px;background-color: #eadfdf;">
+                                                        
+                                                
+                                                <input type="file" class="d-none" #file2 (change)="browseFile2($event)">
+                                                <span (click)="file2.click()" class="btn border bg-white  z-index" style="position: absolute;top: 0;left: 0;font-size: 1rem !important;">
+                                                    <i class="fa fa-upload" aria-hidden="true" style="margin: 0px;"></i>
 
-                                    </span>
-                                </div>
-                                </div>
-                            </div>
-                            <!-- <div style="display: flex;">
-                            <img src="{{identityFile}}" onerror="this.src=''" style=" height: 150px; position: absolute;">
-                            <img src="{{identityFile}}" onerror="this.src=''" style=" height: 150px; position: relative;">
-                        </div> -->
-                            <div class="border m-auto">
+                                                </span>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        <!-- <div style="display: flex;">
+                                        <img src="{{identityFile}}" onerror="this.src=''" style=" height: 150px; position: absolute;">
+                                        <img src="{{identityFile}}" onerror="this.src=''" style=" height: 150px; position: relative;">
+                                    </div> -->
+                                        <div class="border m-auto">
 
-                                <!-- <input type="file" class="d-none" #file (change)="browseFile($event)">
-                                <button type="button" (click)="file.click()"
-                                    class="btn border bg-white px-5 h3 z-index">
-                                    Upload
-                                </button> -->
-                                <div *ngIf="identityFile">One file is Uploaded</div>
-                                <div *ngIf="!identityFile" class="error-block display-block">File Uplopad is required
-                                </div>
+                                            <!-- <input type="file" class="d-none" #file (change)="browseFile($event)">
+                                            <button type="button" (click)="file.click()"
+                                                class="btn border bg-white px-5 h3 z-index">
+                                                Upload
+                                            </button> -->
+                                            <div *ngIf="identityFile">One file is Uploaded</div>
+                                            <div *ngIf="!identityFile" class="error-block display-block">File Uplopad is required
+                                            </div>
 
-                            </div>
-                            <p class="pt-2" style="font-size: 12px;">
-                                Please upload your identity proof to ensure that the ownership
-                                of your profile remains with only you.
-                            </p>
-                            <p>Acceptable documents</p>
-                        </div>
-                        <div class="row">
-                            <ul class="inside1">
-                                <li>Aadhar Card</li>
-                                <li>Driving License</li>
-                                <li>Voter Card</li>
-                                <li>Any other Govt. ID</li>
-                            </ul>
-                        </div>
-                        <hr />
-                        <div class="row">
-                            <p>Extra proofs required to be uploaded:</p>
-                        </div>
-                        <div class="row">
-                            <ul>
-                                <li>1. Medical Registration Proof</li>
-                                <li>2. Establishment Proof</li>
-                            </ul>
-                        </div>
-                        <hr />
-                        <div class="row">
-                            <button mat-raised-button [routerLink]="['/Doctor/Profile']"
-                                routerLinkActive="router-link-active">
-                                <i class="fa fa-caret-left" aria-hidden="true"></i> Back
-                            </button>
-                            <button style="margin-left: 10px;" mat-raised-button (click)="onSave(stepper)" color="warn" class=
-                            "themeColorBtn">
-                              Save and continue
-                              <i class="fa fa-caret-right" aria-hidden="true"></i>
-                            </button>
-                        </div>
+                                        </div>
+                                        <p class="pt-2" style="font-size: 12px;">
+                                            Please upload your identity proof to ensure that the ownership
+                                            of your profile remains with only you.
+                                        </p>
+                                        <p>Acceptable documents</p>
+                                    </div>
+                                    <div class="row">
+                                        <ul class="inside1">
+                                            <li>Aadhar Card</li>
+                                            <li>Driving License</li>
+                                            <li>Voter Card</li>
+                                            <li>Any other Govt. ID</li>
+                                        </ul>
+                                    </div>
+                                    <hr />
+                                    <div class="row">
+                                        <p>Extra proofs required to be uploaded:</p>
+                                    </div>
+                                    <div class="row">
+                                        <ul>
+                                            <li>1. Medical Registration Proof</li>
+                                            <li>2. Establishment Proof</li>
+                                        </ul>
+                                    </div>
+                                    <hr />
+                                    <div class="row">
+                                        <button mat-raised-button [routerLink]="['/Doctor/Profile']"
+                                            routerLinkActive="router-link-active">
+                                            <i class="fa fa-caret-left" aria-hidden="true"></i> Back
+                                        </button>
+                                        <button style="margin-left: 10px;" mat-raised-button (click)="onSave(stepper)" disabled="!firstFormGroup.valid" color="warn" class=
+                                        "themeColorBtn">
+                                        Save and continue
+                                        <i class="fa fa-caret-right" aria-hidden="true"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-lg-5 offset-md-1">
+                                    <div class="d-none d-sm-none d-md-block col-md-12 col-lg-8 mt-5 ml-5 pr-0 pl-0"
+                                        style="border: 1px solid #14aa9b;">
+                                        <div class="bg p-4 textcol">
+                                            <div>
+                                                <i class="fa fa-lightbulb-o fa-lg" aria-hidden="true"></i>
+                                            </div>
+                                            <p class="stext font-weight-bold">
+                                                2.5M patients are looking for a doctor on WhealthyLife. Verify your
+                                                credentials and reach out to them
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                        </form>
                     </div>
-                    <div class="col-md-3 col-lg-5 offset-md-1">
-                        <div class="d-none d-sm-none d-md-block col-md-12 col-lg-8 mt-5 ml-5 pr-0 pl-0"
-                            style="border: 1px solid #14aa9b;">
-                            <div class="bg p-4 textcol">
-                                <div>
-                                    <i class="fa fa-lightbulb-o fa-lg" aria-hidden="true"></i>
-                                </div>
-                                <p class="stext font-weight-bold">
-                                    2.5M patients are looking for a doctor on WhealthyLife. Verify your
-                                    credentials and reach out to them
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+                </section>
         </mat-step>
-        <mat-step>
-            <ng-template matStepLabel>Registration</ng-template>
-            <app-registration-proof [stepper]="stepper"></app-registration-proof>
-            <div></div>
+        <mat-step [stepControl]="secondFormGroup" disableRipple="true">
+            <form [formGroup]="secondFormGroup">
+                <ng-template matStepLabel>Registration</ng-template>
+                <app-registration-proof [stepper]="stepper"></app-registration-proof>
+            </form>
         </mat-step>
-        <mat-step>
-            <ng-template matStepLabel>Establishment Proof</ng-template>
-            <app-clinic-proof [stepper]="stepper"></app-clinic-proof>
+        <mat-step [stepControl]="thirdFormGroup" disableRipple="true">
+            <form [formGroup]="thirdFormGroup">
+                <ng-template matStepLabel>Establishment Proof</ng-template>
+                <app-clinic-proof [stepper]="stepper"></app-clinic-proof>
+            </form>
         </mat-step>
     </mat-horizontal-stepper>
 </section>

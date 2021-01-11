@@ -1,10 +1,10 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { MainService } from 'src/app/services/main.service';
 import { UploadService } from 'src/app/services/upload.service';
 import { MessageService } from 'primeng/api';
 import { MatStepper } from '@angular/material/stepper';
 import { Router } from '@angular/router';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-clinic-location',
@@ -15,17 +15,30 @@ export class ClinicLocationComponent implements OnInit {
   items: any = [];
   profileForm: FormGroup;
   profileData: any;
+  secondFormGroup: FormGroup;
+  thirdFormGroup: FormGroup;
+
+  @ViewChild('stepper') stepper: MatStepper;
 
   constructor(public mainService: MainService,
     public messageService: MessageService,
     public router: Router,
-    public uploadService: UploadService) {
-    this.profileForm = new FormGroup({
-      mobileNumber: new FormControl(''),
-      email: new FormControl(''),
-      landmark: new FormControl(''),
-    })
+    public uploadService: UploadService,
+    public formBuilder:FormBuilder) {
+    
     this.getProfile();
+  }
+
+  ngOnInit() { 
+    this.profileForm =this.formBuilder.group({
+      mobileNumber: ['',Validators.required],
+      email: ['',Validators.required],
+      landmark: ['',Validators.required],
+    })
+
+    this.secondFormGroup = this.formBuilder.group({})
+    this.thirdFormGroup =this.formBuilder.group({})
+
   }
 
   getProfile() {
@@ -68,6 +81,6 @@ export class ClinicLocationComponent implements OnInit {
     });
   }
 
-  ngOnInit() { }
+  
 
 }

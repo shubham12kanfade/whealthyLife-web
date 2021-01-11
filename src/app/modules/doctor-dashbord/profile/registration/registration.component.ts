@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 import { MainService } from 'src/app/services/main.service';
 import { UploadService } from 'src/app/services/upload.service';
@@ -12,11 +12,15 @@ import { MatStepper } from '@angular/material/stepper';
 })
 export class RegistrationComponent implements OnInit {
   items: any = [];
-
+  isLinear = false;
   profileform: FormGroup;
   avatar: any;
   submitted: boolean =false;
-  isLinear = true;
+  hide: boolean=false;
+
+  @ViewChild('stepper') stepper: MatStepper;
+
+
 
   firstFormGroup: FormGroup;
   secondFormGroup: FormGroup;
@@ -29,16 +33,21 @@ export class RegistrationComponent implements OnInit {
 
 
 
-    this.profileform = new FormGroup({
-      registrationNumber: new FormControl('',[Validators.required]),
-      registrationCouncil: new FormControl('',[Validators.required]),
-      registrationYear: new FormControl('',[Validators.required])
-    })
+    
     this.items.length = 28;
     this.getProfile();
   }
 
   ngOnInit(): void {
+
+    this.profileform = this.formBuilder.group({
+      registrationNumber: ['',Validators.required],
+      registrationCouncil: ['',Validators.required],
+      registrationYear: ['',Validators.required]
+    })
+
+    this.secondFormGroup = this.formBuilder.group({})
+    this.thirdFormGroup = this.formBuilder.group({})
   }
 
 
@@ -92,7 +101,12 @@ export class RegistrationComponent implements OnInit {
   }
 
 
-  
+  nextClicked(event) {
+    // complete the current step
+    this.stepper.selected.completed = true;
+    // move to next step
+    this.stepper.next();
+  }
 
  
 }

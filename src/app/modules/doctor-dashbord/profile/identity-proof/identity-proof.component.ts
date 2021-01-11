@@ -1,5 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
 import { MainService } from 'src/app/services/main.service';
 import { UploadService } from 'src/app/services/upload.service';
 import { MessageService } from 'primeng/api';
@@ -18,18 +18,28 @@ export class IdentityProofComponent implements OnInit {
   identityFile2: any;
   identityFile1: any;
   Twoimgarray: any=['',''];
+  firstFormGroup: FormGroup;
+  secondFormGroup: FormGroup;
+  thirdFormGroup: FormGroup;
   
+  @ViewChild('stepper') stepper: MatStepper;
 
   constructor(public mainService: MainService,
     public messageService: MessageService,
-    public uploadService: UploadService) {
+    public uploadService: UploadService,
+    public fb :FormBuilder) {
   
-   
-    
-      
-
     this.getProfile();
   }
+
+  ngOnInit() { 
+    this.firstFormGroup = this.fb.group({})
+    this.secondFormGroup = this.fb.group({})
+    this.thirdFormGroup = this.fb.group({})
+  }
+
+
+
 
   getProfile() {
     this.mainService.getProfile().then(resData => {
@@ -86,6 +96,5 @@ console.log("IdentityProofComponent -> onSave -> data", data)
     });
   }
 
-  ngOnInit() { }
 
 }

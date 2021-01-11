@@ -1,88 +1,89 @@
 <p-toast class="custom-error" [showTransformOptions]="'translateX(100%)'"></p-toast>
-<section>
-    <mat-horizontal-stepper linear #stepper>
-          <mat-step [stepControl]="firstFormGroup" >
+<section >
+    <mat-horizontal-stepper  linear mode #stepper>
+          <mat-step [stepControl]="profileform" disableRipple="true" >
             <ng-template matStepLabel> Medical Registration</ng-template>
             <section class="bg-white p-sm-3">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-md-5 col-lg-3 offset-md-2 paddingonxs" [formGroup]="profileform">
-                            <div class="form-group-sm mb-3">
-                                <label for="RegistrationNumber">Registration Number</label>
-                                <input type="text" class="form-control" id="RegistrationNumber" placeholder="R-898977"
-                                    formControlName="registrationNumber" />
-                                    <div *ngIf="submitted && f.registrationNumber.errors" class="error-block display-block">
-                                        <div *ngIf="f.registrationNumber.errors.required">Registration Number is required</div>
-                                      </div>
-                                      
-                            </div>
-                            <div class="form-group">
-                                <label for="RegistrationCouncil">Registration Council</label>
-                                <input type="text" class="form-control" id="registrationNumber"
-                                    formControlName="registrationCouncil" placeholder="Enter your council" />
+                        <form [formGroup]="profileform">
+                            <div class="col-md-5 col-lg-3 offset-md-2 paddingonxs" >
+                                <div class="form-group-sm mb-3">
+                                    <label for="RegistrationNumber">Registration Number</label>
+                                    <input type="text" class="form-control" id="RegistrationNumber" placeholder="R-898977"
+                                        formControlName="registrationNumber" />
+                                        <div *ngIf="submitted && f.registrationNumber.errors" class="error-block display-block">
+                                            <div *ngIf="f.registrationNumber.errors.required">Registration Number is required</div>
+                                          </div>
+                                          
+                                </div>
+                                <div class="form-group">
+                                    <label for="RegistrationCouncil">Registration Council</label>
+                                    <input type="text" class="form-control" id="registrationNumber"
+                                        formControlName="registrationCouncil" placeholder="Enter your council" />
+                                        <div *ngIf="submitted && f.registrationCouncil.errors" class="error-block display-block">
+                                            <div *ngIf="f.registrationCouncil.errors.required">Registration Number is required</div>
+                                        </div>
+                                            
+                                        </div>
+                                <div class="form-group">
+                                    <label for="RegistrationYear">Registration Year</label>
+                                    <select id="RegistrationYear" class="form-control" formControlName="registrationYear">
+                                        <option *ngFor="let item of items; index as i" [value]="2019 - i + 1">
+                                            {{ 2019 - i + 1 }}
+                                        </option>
+                                    </select>
                                     <div *ngIf="submitted && f.registrationCouncil.errors" class="error-block display-block">
                                         <div *ngIf="f.registrationCouncil.errors.required">Registration Number is required</div>
                                     </div>
-                                        
-                                    </div>
-                            <div class="form-group">
-                                <label for="RegistrationYear">Registration Year</label>
-                                <select id="RegistrationYear" class="form-control" formControlName="registrationYear">
-                                    <option *ngFor="let item of items; index as i" [value]="2019 - i + 1">
-                                        {{ 2019 - i + 1 }}
-                                    </option>
-                                </select>
-                                <div *ngIf="submitted && f.registrationCouncil.errors" class="error-block display-block">
-                                    <div *ngIf="f.registrationCouncil.errors.required">Registration Number is required</div>
+                                       
                                 </div>
-                                   
+                                <hr class="mt-5 mb-3" />
+                                <div class="row">
+                                    <button class="mr-2" mat-raised-button  [routerLink]="['/Doctor/Profile']">
+                                        <i class="fa fa-caret-left" aria-hidden="true"></i>
+                                        Back
+                                    </button>
+                                    <button  class="ml-2 themeColorBtn" mat-raised-button  color="warn" 
+                                    [disabled]="!profileform.valid" (click)="onSave(stepper)">Save and Continue
+                                        <i class="fa fa-caret-right" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+    
                             </div>
-                            <hr class="mt-5 mb-3" />
-                            <div class="row">
-                                <button class="mr-2" mat-raised-button  [routerLink]="['/Doctor/Profile']">
-                                    <i class="fa fa-caret-left" aria-hidden="true"></i>
-                                    Back
-                                </button>
-                                <button  class="ml-2 themeColorBtn" mat-raised-button  color="warn" 
-                                [disabled]="!profileform.valid" (click)="onSave(stepper)">Save and Continue
-                                    <i class="fa fa-caret-right" aria-hidden="true"></i>
-                                </button>
-                                 <!-- <button class="save" mat-stroked-button color="primary" [disabled]="dynamicForm.invalid || filtersFormArray.controls.length < 1" (click)="save()">
-                                Save
-                              </button>  -->
-                            </div>
-
-                        </div>
-                        <div class="col-md-3 col-lg-5 offset-md-1">
-                            <div class="d-none d-sm-none d-md-block col-md-12 col-lg-8 mt-5 ml-5 pr-0 pl-0"
-                                style="border: 1px solid #14aa9b;">
-                                <div class="bg p-4 textcol">
-                                    <div>
-                                        <i class="fa fa-lightbulb-o fa-lg" aria-hidden="true"></i>
+                            <div class="col-md-3 col-lg-5 offset-md-1">
+                                <div class="d-none d-sm-none d-md-block col-md-12 col-lg-8 mt-5 ml-5 pr-0 pl-0"
+                                    style="border: 1px solid #14aa9b;">
+                                    <div class="bg p-4 textcol">
+                                        <div>
+                                            <i class="fa fa-lightbulb-o fa-lg" aria-hidden="true"></i>
+                                        </div>
+                                        <p class="stext font-weight-bold">
+                                            This information helps us perform critical checks to ensure
+                                            that only licensed and genuine medical practitioners are
+                                            listed on WhealthyLife. Your profile will get a “Verified” badge
+                                            on verification. Doctors with verified profiles get 95% more
+                                            patient views on WhealthyLife.
+                                        </p>
                                     </div>
-                                    <p class="stext font-weight-bold">
-                                        This information helps us perform critical checks to ensure
-                                        that only licensed and genuine medical practitioners are
-                                        listed on WhealthyLife. Your profile will get a “Verified” badge
-                                        on verification. Doctors with verified profiles get 95% more
-                                        patient views on WhealthyLife.
-                                    </p>
                                 </div>
                             </div>
-                        </div>
+                        </form>
                     </div>
                 </div>
             </section>
           </mat-step>
-          <mat-step [stepControl]="secondFormGroup">
-            <form>
+          <mat-step  [stepControl]="secondFormGroup" disableRipple="true">
+            <form [formGroup]="secondFormGroup">
               <ng-template matStepLabel>Education Qualification</ng-template>
-                <app-education  [stepper]="stepper"></app-education>
+                <app-education  [stepper]="stepper"  ></app-education>
             </form>
           </mat-step>
-          <mat-step>
-            <ng-template matStepLabel>Connect a practice</ng-template>
+          <mat-step [stepControl]="thirdFormGroup" disableRipple="true">
+              <form [formGroup]="thirdFormGroup"> 
+                <ng-template matStepLabel>Connect a practice</ng-template>
                 <app-connect-clinic [stepper]="stepper"></app-connect-clinic>
+              </form>
           </mat-step>
         </mat-horizontal-stepper>
 </section>
