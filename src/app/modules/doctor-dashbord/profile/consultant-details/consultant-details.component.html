@@ -1,84 +1,46 @@
 <section>
     <div class="container">
         <div class="row" style="margin-top: 20px;">
-            <div class="col-md-5 col-lg-5 offset-md-1">
-                <div class="">
-                    <form [formGroup] = "memberForm">
-                        <ng-container formArrayName="ClinicDetails" *ngFor="let quantity of ClinicDetails().controls; let j=index"  >
-                        <div  [formGroupName]="j" style="border: 2px solid ; border-radius: 5px;padding: 20px;">
-                           
-                            <div class="col-12" style="display: flex;justify-content: flex-end;padding: 0px;">
-                                  <button type="button" class="btn" style="color: red;cursor: pointer;" (click)=" deleteClinicDetails(j)" *ngIf="j > 0"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-dash-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                                    <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
-                                  </svg></button>
-                            </div>
+                <div class="" >
+                    <form [formGroup]="memberForm">
+                        <!-- <div class="" >
+                            <ng-container formArrayName="clinicDetails"  *ngFor="let quantity of ClinicDetails().controls; let j=index"  >
+                            <div  [formGroupName]="j" style="border: 2px solid ; border-radius: 5px;padding: 20px;">
+                            
+                                <div class="col-12" style="display: flex;justify-content: flex-end;padding: 0px;">
+                                    <button type="button" class="btn" style="color: red;cursor: pointer;" (click)=" deleteClinicDetails(j)" *ngIf="j > 0"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-dash-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                        <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+                                    </svg></button>
+                                </div>
 
-                        <!-- <div class="form-group">
-                            <label for="RegistrationNumber">Clinic Name</label>
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <input type="text" class="form-control" formControlName="clinicName"
-                                         placeholder="eg. Ram Clinic" >
+                            <div class="form-group">
+                                <label for="RegistrationNumber">Clinic Name</label>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <input type="text" class="form-control" formControlName="clinicName"
+                                            placeholder="eg. Ram Clinic" >
+                                    </div>
                                 </div>
                             </div>
-                        </div> -->
-                        <div  style="margin: 0px 0px 25px 0px;padding: 0px;">
-                        <label for="RegistrationNumber">Clinic Name</label>
-                        <div class="ng-autocomplete" style="width: 100%;">
-                            <ng-autocomplete 
-                              [data]="data"
-                              [searchKeyword]="keyword"
-                              (selected)='selectEvent($event)'
-                              (inputChanged)='onChangeSearch($event)'
-                              (inputFocused)='onFocused($event)'
-                              [itemTemplate]="itemTemplate"
-                              [notFoundTemplate]="notFoundTemplate">  
-                            </ng-autocomplete>
-                             
-                            <ng-template #itemTemplate let-item>
-                            <a [innerHTML]="item.name"></a>
-                            </ng-template>
-                             
-                            <ng-template #notFoundTemplate let-notFound>
-                            <div [innerHTML]="notFound"></div>
-                            </ng-template>
-                            </div>
-                        </div>
-
-
-
-
-
-                        <!-- <div class="form-group">
-                            <label for="RegistrationNumber">Clinic Address</label>
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <textarea type="text" class="form-control" formControlName="clinicAddress">
-                                </textarea>
-                                </div>
-                            </div>
-                        </div> -->
-
-                        <div  style="margin: 0px 0px 25px 0px;padding: 0px;">
+                            <div  style="margin: 0px 0px 25px 0px;padding: 0px;"  >
                             <label for="RegistrationNumber">Clinic Name</label>
                             <div class="ng-autocomplete" style="width: 100%;">
                                 <ng-autocomplete 
-                                  [data]="data"
-                                  [searchKeyword]="keyword1"
-                                  (selected)='selectEvent1($event)'
-                                  (inputChanged)='onChangeSearch1($event)'
-                                  (inputFocused)='onFocused1($event)'
-                                  [itemTemplate]="itemTemplate"
-                                  [notFoundTemplate]="notFoundTemplate"
-                                  >  
-                                  
+                                [data]="data"
+                                [searchKeyword]="keyword"
+                                (selected)='selectEvent($event)'
+                                (inputChanged)='onChangeSearch($event)'
+                                (inputFocused)='onFocused($event)'
+                                [itemTemplate]="itemTemplate"
+                                [notFoundTemplate]="notFoundTemplate"
+                                formControlName="clinicName">  
                                 </ng-autocomplete>
-                                 
+                                
                                 <ng-template #itemTemplate let-item>
                                 <a [innerHTML]="item.name"></a>
                                 </ng-template>
-                                 
+                                
                                 <ng-template #notFoundTemplate let-notFound>
                                 <div [innerHTML]="notFound"></div>
                                 </ng-template>
@@ -87,63 +49,180 @@
 
 
 
-                        <ng-container formArrayName="times">
-                            <div *ngFor="let quantity of times(j).controls; let k=index" [formGroupName]="k">
 
-                            <div style="border: 2px solid ; border-radius: 5px;padding: 20px;"> 
-                            <div class="col-12" style="display: flex;justify-content: flex-end;padding: 0px;">
-                                  <button type="button" class="btn" style="color: red;cursor: pointer;" (click)="deleteTime(j,k)" *ngIf="k > 0"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-dash-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                                    <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
-                                  </svg></button>
-                            </div>
+
                             <div class="form-group">
-                                <label for="RegistrationNumber">Select Day</label>
-                                <select class="form-control" formControlName="timeday">
-                                    <option value="Monday"> Monday </option>
-                                    <option value="Tuesday"> Tuesday </option>
-                                    <option value="Wednesday"> Wednesday </option>
-                                    <option value="Thursday"> Thursday </option>
-                                    <option value="Friday"> Friday </option>
-                                    <option value="Saturday"> Saturday </option>
-                                    <option value="Sunday"> Sunday </option>
-                                </select>
+                                <label for="RegistrationNumber">Clinic Address</label>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <textarea type="text" class="form-control" formControlName="clinicAddress">
+                                    </textarea>
+                                    </div>
+                                </div>
                             </div>
-                        <div class="form-group" >
-                            <label for="RegistrationNumber">Timming</label>
-                            <div class="row">
-                            <div class="form-group col-md-6">
-                                <label for="startSession"> Start</label>
-                                <select class="form-control" formControlName="session1Start">
-                                    <option *ngFor="let item of TimeSloat" [value]="item?.value">{{item?.value}}</option>
-                                </select>
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label for="startSession"> End</label>
-                                <select class="form-control"  formControlName="session1End">
-                                    <option *ngFor="let item of TimeSloat" [value]="item?.value">{{item?.value}}</option>
-                                </select>
-                            </div>
+
+                            <div  style="margin: 0px 0px 25px 0px;padding: 0px;" >
+                                <label for="RegistrationNumber">Location</label>
+                                <div class="ng-autocomplete" style="width: 100%;">
+                                    <ng-autocomplete 
+                                    [data]="data"
+                                    [searchKeyword]="keyword1"
+                                    (selected)='selectEvent1($event)'
+                                    (inputChanged)='onChangeSearch1($event)'
+                                    (inputFocused)='onFocused1($event)'
+                                    [itemTemplate]="itemTemplate"
+                                    [notFoundTemplate]="notFoundTemplate"
+                                    formControlName="clinicAddress"
+                                    >  
+                                    
+                                    </ng-autocomplete>
+                                    
+                                    <ng-template #itemTemplate let-item>
+                                    <a [innerHTML]="item.name"></a>
+                                    </ng-template>
+                                    
+                                    <ng-template #notFoundTemplate let-notFound>
+                                    <div [innerHTML]="notFound"></div>
+                                    </ng-template>
+                                    </div>
+                                </div>
+
+
+                                
+
+
+
+                            <ng-container formArrayName="times">
+                                <div *ngFor="let quantity of times(j).controls; let k=index" [formGroupName]="k">
+
+                                <div style="border: 2px solid ; border-radius: 5px;padding: 20px;"> 
+                                <div class="col-12" style="display: flex;justify-content: flex-end;padding: 0px;">
+                                    <button type="button" class="btn" style="color: red;cursor: pointer;" (click)="deleteTime(j,k)" *ngIf="k > 0"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-dash-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                        <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+                                    </svg></button>
+                                </div>
+                                <div class="form-group">
+                                    <label for="RegistrationNumber">Select Day</label>
+                                    <select class="form-control" formControlName="timeday">
+                                        <option value="Monday"> Monday </option>
+                                        <option value="Tuesday"> Tuesday </option>
+                                        <option value="Wednesday"> Wednesday </option>
+                                        <option value="Thursday"> Thursday </option>
+                                        <option value="Friday"> Friday </option>
+                                        <option value="Saturday"> Saturday </option>
+                                        <option value="Sunday"> Sunday </option>
+                                    </select>
+                                </div>
+                            <div class="form-group" >
+                                <label for="RegistrationNumber">Timming</label>
+                                <div class="row">
+                                <div class="form-group col-md-6" >
+                                    <label for="startSession"> Start</label>
+                                    <select class="form-control" formControlName="session1Start" >
+                                        <option *ngFor="let item of TimeSloat" [value]="item?.value">{{item?.value}}</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="startSession"> End</label>
+                                    <select class="form-control"  formControlName="session1End" >
+                                        <option *ngFor="let item of TimeSloat" [value]="item?.value">{{item?.value}}</option>
+                                    </select>
+                                </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    </div>
-                    <div style="display: flex;justify-content: flex-end;">
-                        <button type="button" class="btn " style="color: green;cursor: pointer;" (click)="addTime(j)"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-plus-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                            <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
-                          </svg></button>
+                        </div>
+                        <div style="display: flex;justify-content: flex-end;">
+                            <button type="button" class="btn " style="color: green;cursor: pointer;" (click)="addTime(j)"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-plus-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                            </svg></button>
+                            </div>
+
+                            </ng-container>
+                        </div>
+                        </ng-container>
+                        <div style=" display: flex; justify-content: flex-end; ">
+                            <button type="button" class="btn " style="color: green;cursor: pointer;" (click)="addClinicDetails()"  >
+                                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-plus-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                    <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                                </svg>
+                            </button>
+                         </div>
+                        </div>  -->
+                        <div class="">
+                            <div class="col-sm-12 col-md-12 col-lg-12"  *ngIf="!hide">
+                                <div class="row">
+                                    <div class="col-sm-4 col-md-4 col-lg-4" >
+                                        <!-- <mat-form-field appearance="outline" >
+                                            <mat-label>Clinic Name</mat-label>
+                                            <input matInput placeholder="Clinic Name" formControlName="clinicName"  [matAutocomplete]="auto">
+                                            <mat-autocomplete #auto="matAutocomplete">
+                                                <mat-option *ngFor="let clinic of ClinicName" [value]="clinic._id">
+                                                    {{clinic.name}}
+                                                </mat-option><mat-option *ngFor="let clinic of ClinicName" [value]="clinic._id">
+                                                    {{clinic.name}}
+                                                </mat-option>
+                                            </mat-autocomplete>
+                                        </mat-form-field> -->
+                                        <mat-form-field appearance="outline">
+                                            <mat-label>Clinic Name</mat-label>
+                                            <input matInput placeholder="Clinic Name" formControlName="clinicName">
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-sm-4 col-md-4 col-lg-4">
+                                        <mat-form-field appearance="outline" >
+                                            <mat-label>Address</mat-label>
+                                            <input matInput placeholder="Address" formControlName="address">
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-sm-4 col-md-4 col-lg-4">
+                                        <mat-form-field appearance="outline" >
+                                            <mat-label>Landmark</mat-label>
+                                            <input matInput placeholder="Landmark" formControlName="landmark">
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                        <div class="col-sm-4 col-md-4 col-lg-4">
+                                            <mat-form-field appearance="outline" formControlName="country" >
+                                                <mat-label>Country</mat-label>
+                                                <mat-select (selectionChange)="CountryId($event)" >
+                                                    <mat-option *ngFor="let country of countryList" [value]="country.id">{{country?.name}}</mat-option>
+                                                </mat-select>
+                                            </mat-form-field>
+                                        </div>
+                                        <div class="col-sm-4 col-md-4 col-lg-4">
+                                            <mat-form-field appearance="outline"  formControlName="state">
+                                                <mat-label>State</mat-label>
+                                                <mat-select (selectionChange)="State($event)">
+                                                <mat-option *ngFor="let state of stateList" [value]="state?.id">{{state.name}}</mat-option>
+                                                </mat-select>
+                                            </mat-form-field>
+                                        </div>
+                                        <div class="col-sm-4 col-md-4 col-lg-4">
+                                            <mat-form-field appearance="outline"  formControlName="city">
+                                                <mat-label>City</mat-label>
+                                                <mat-select (selectionChange)="City($event)" >
+                                                <mat-option *ngFor="let city of cityList" [value]="city?.id">{{city?.name}}</mat-option>
+                                                </mat-select>
+                                            </mat-form-field>
+                                        </div>
+                                </div>
+                            </div>
                         </div>
 
-                        </ng-container>
-                     </div>
-                    </ng-container>
-                    <div style=" display: flex; justify-content: flex-end; ">
-                    <button type="button" class="btn " style="color: green;cursor: pointer;" (click)="addClinicDetails()"  ><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-plus-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                        <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
-                      </svg></button>
-                    </div>
+                        <mat-form-field appearance="fill" *ngIf="hide" style="width: 100%;" >
+                            <mat-label>Clinic Name</mat-label>
+                            <mat-select formControlName="ClinicName1">
+                            <mat-option>None</mat-option>
+                            <mat-option *ngFor="let clinic of ClinicName" [value]="clinic?._id">{{clinic.name}}</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+
+
                         <div class="form-group ">
                             <label for="startSession"> Fees </label>
                             <input type="number" class="form-control" formControlName="fees"
@@ -163,11 +242,11 @@
                             </mat-radio-group>
                         </div>
                         <div class="row">
-                            <button mat-raised-button matStepperPrevious>
+                            <button mat-raised-button matStepperPrevious style="left: 16px;">
                                 <i class="fa fa-caret-left" aria-hidden="true"></i>
                                 Back
                             </button>
-                            <button style="position: absolute; right: 0;" mat-raised-button color="warn" (click)="onSave()" class=
+                            <button style="position: absolute; right: 600px;" mat-raised-button color="warn" (click)="onSave(stepper)" class=
                             "themeColorBtn">
                               Save and continue
                               <i class="fa fa-caret-right" aria-hidden="true"></i>
@@ -175,20 +254,18 @@
                         </div>
                     </form>
                 </div>
-            </div>
-            <div class="col-md-5 col-lg-4 offset-md-1">
-                <div class="d-none d-sm-none d-md-block col-md-12 col-lg-8 mt-5 ml-5 pr-0 pl-0"
-                style="border: 1px solid #14aa9b;">
-                <div class="bg p-4 textcol">
-                    <div>
-                        <i class="fa fa-lightbulb-o fa-lg" aria-hidden="true"></i>
+                <div class="col-sm-6 col-md-3 col-lg-3 offset-md-1" style="margin-top: 120px;">
+                    <div class="" style="border: 1px solid #14aa9b;">
+                        <div class="bg p-4 textcol">
+                            <div>
+                                <i class="fa fa-lightbulb-o fa-lg" aria-hidden="true"></i>
+                            </div>
+                            <p class="stext font-weight-bold">
+                                Establishments with more doctors get more visibility on whealthylife.in
+                            </p>
+                        </div>
                     </div>
-                    <p class="stext font-weight-bold">
-                        Establishments with more doctors get more visibility on whealthylife.in
-                    </p>
                 </div>
-            </div>
-            </div>
         </div>
     </div>
 </section>
@@ -252,9 +329,7 @@
         </div>
     </div>
 </section> -->
-
-
-
+ 
 <!-- <section>
     <div class="row">
         <div class="col-md-5 col-lg-3 offset-md-2">
@@ -322,12 +397,6 @@
         </div>
     </div>
 </section> -->
-
-
-
-
-
-
 
 <!-- <section class="bg-white p-sm-3">
     <div class="row">

@@ -38,6 +38,17 @@ export class DashbordHomeComponent implements OnInit {
 
     const id= this.UserService.getUserInfo()
 
+    this.getProfile();
+ 
+  }
+
+  
+
+  ngOnInit(): void {
+    this.getDocSlot()
+  }
+
+  getProfile(){
     this.mainService.getProfile().then(resData => {
       this.profile = resData.data
       console.log("file: dashbord-home.component.ts ~ line 37 ~ DashbordHomeComponent ~ this.mainService.getProfile ~ this.profile", this.profile)
@@ -47,13 +58,6 @@ export class DashbordHomeComponent implements OnInit {
     }).catch(err => {
       console.log("file: dashbord-home.component.ts ~ line 37 ~ DashbordHomeComponent ~ this.mainService.getAllProfile ~ err", err)
     })
- 
-  }
-
-  
-
-  ngOnInit(): void {
-    this.getDocSlot()
   }
 
   getDocSlot(){
@@ -74,32 +78,25 @@ export class DashbordHomeComponent implements OnInit {
       console.log("file: dashbord-home.component.ts ~ line 55 ~ DashbordHomeComponent ~ setValue ~ data", data)
       this.mainService.updateUserprofile(data).then(onlineData => {
         console.log("file: dashbord-home.component.ts ~ line 56 ~ DashbordHomeComponent ~ this.mainService.updateUserprofile ~ onlineData", onlineData)  
-        window.location.reload();
+        // window.location.reload();
       }).catch(error => {
         console.log("file: dashbord-home.component.ts ~ line 59 ~ DashbordHomeComponent ~ this.mainService.updateUserprofile ~ error", error)
       })
-      this.mainService.getProfile().then(resData => {
-        this.profile = resData.data
-        console.log("file: dashbord-home.component.ts ~ line 37 ~ DashbordHomeComponent ~ this.mainService.getProfile ~ this.profile", this.profile)
-        this.id =  this.profile?._id
-        console.log("file: dashbord-home.component.ts ~ line 43 ~ DashbordHomeComponent ~ this.mainService.getProfile ~ this.id", this.id)
-       
-      }).catch(err => {
-        console.log("file: dashbord-home.component.ts ~ line 37 ~ DashbordHomeComponent ~ this.mainService.getAllProfile ~ err", err)
-      })
+      this.getProfile()
     }else{
       this.on = false;
       const data = {
         isOnline: this.profile.isOnline = 'false'
       }
       console.log("file: dashbord-home.component.ts ~ line 66 ~ DashbordHomeComponent ~ setValue ~ data", data)
-      window.location.reload();
+      // window.location.reload();
       this.mainService.updateUserprofile(data).then(onlineData => {
         console.log("file: dashbord-home.component.ts ~ line 68 ~ DashbordHomeComponent ~ this.mainService.updateUserprofile ~ onlineData", onlineData)
         
       }).catch(error => {
         console.log("file: dashbord-home.component.ts ~ line 59 ~ DashbordHomeComponent ~ this.mainService.updateUserprofile ~ error", error)
       })
+      this.getProfile()
     }
   }
 

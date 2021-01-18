@@ -5,6 +5,9 @@ import { MessageService } from 'primeng/api';
 import { MatStepper } from '@angular/material/stepper';
 import { Router } from '@angular/router';
 import { FormGroup, FormControl, FormBuilder, FormArray } from '@angular/forms';
+import { UserService } from './../../../../services/user.service';
+import { UserAccountsRoutingModule } from './../../../user-accounts/user-accounts-routing.module';
+import { LocationService } from './../../../../services/location.service';
 
 @Component({
   selector: 'app-consultant-details',
@@ -21,16 +24,39 @@ export class ConsultantDetailsComponent implements OnInit {
   TimeSloat: any[];
   data12: any[];
   data:any[];
+  hide: boolean = true;
+  time1: any;
+  ClinicName: any;
+  profile: any;
+  length: any;
+  val: any;
+  fix: { key: number; value: any; }[];
+  countryList: any;
+  countryId: any;
+  stateList: any;
+  cityList: any;
+  cityId: any;
+  stateId: any;
+  clinicId: any;
+  lat: any;
+  lang: any;
 
+ 
   constructor(public mainService: MainService,
     public messageService: MessageService,
     public router: Router,
-    private fb:FormBuilder) {
+    private fb:FormBuilder,
+    private  location:LocationService
+   ) {
       this.memberForm = this.fb.group({
-        ClinicDetails: this.fb.array([this.createClinicDetails()]),
+        clinicName: [''],
+        address: [''],
+        landmark: [''],
+        country: [''],
+        state: [''],
+        city: [''],
         fees : [''],
         establishmentHour : [''],
-
       })
 
     this.getProfile();
@@ -52,151 +78,146 @@ export class ConsultantDetailsComponent implements OnInit {
     }).catch(error =>{
     console.log("ConsultantDetailsComponent -> error", error);
     })
+
+    this.getClinicName()
+    this.getCountry()
+    this.getLocation()
   }
 
-  ClinicDetails() {
-    return this.memberForm.get("ClinicDetails") as FormArray;
+  ngOnInit() { 
+    this.getTime();
+
+    this.memberForm.controls.ClinicName1.valueChanges.subscribe(resData => {
+      this.clinicId= resData
+      console.log("file: consultant-details.component.ts ~ line 85 ~ ConsultantDetailsComponent ~ ngOnInit ~ this.clinicId", this.clinicId)
+    })
   }
 
-  createClinicDetails(): FormGroup {
-    return this.fb.group({
-      clinicName : [''],
-      clinicAddress : [''],
-      times: this.fb.array([this.createtimes()]),
+  getLocation(){
+    this.location.getPosition().subscribe(res =>{
+      console.log("file: consultant-details.component.ts ~ line 95 ~ ConsultantDetailsComponent ~ this.location.getPosition ~ res", res)
+      this.lat= res.coords.latitude
+      this.lang = res.coords.longitude
+    })
+  }
+
+  getCountry(){
+    this.mainService
+    .getCountry()
+    .then((resData) => {
+      this.countryList = resData.data;
+    })
+    .catch((error) => {
+      console.log("EditProfileComponent -> getCountry -> error", error);
     });
   }
 
-  addClinicDetails() {
-    this.ClinicDetails().push(this.createClinicDetails());
-  }
-
-  deleteClinicDetails(j: number) {
-    this.ClinicDetails().removeAt(j);
-  }
-
-  createtimes(): FormGroup {
-    return this.fb.group({
-      session1Start : [''],
-      session1End : [''],
-      timeday : ['']
+  CountryId(event){
+    this.countryId =  event.value
+    this.mainService
+    .getState(this.countryId)
+    .then((resData) => {
+      this.stateList = resData.data;
+    })
+    .catch((error) => {
+      console.log("EditProfileComponent -> getCountry -> error", error);
     });
   }
 
-  times(index = 0) {
-    var array = this.memberForm.get("ClinicDetails") as FormArray;
-    const resFloors = array.controls[index].get("times") as FormArray;
-    return resFloors;
+  State(event){
+    this.stateId = event.value
+    this.mainService
+      .getCity(event.value)
+      .then((resData) => {
+        this.cityList = resData.data;
+      })
+      .catch((error) => {
+        console.log("EditProfileComponent -> getCountry -> error", error);
+      });
   }
 
-  addTime(index) {
-    this.times(index).push(this.createtimes());
+  City(event){
+    this.cityId = event.value
   }
 
-  deleteTime(index:number,i: number) {
-    this.times(index).removeAt(i);
+  getClinicName(){
+    this.mainService.getAllClinic().then(resData =>{
+      console.log("file: consultant-details.component.ts ~ line 189 ~ ConsultantDetailsComponent ~ this.mainService.getAllClinic ~ resData", resData)
+      this.ClinicName = resData.data
+      console.log("file: consultant-details.component.ts ~ line 192 ~ ConsultantDetailsComponent ~ this.mainService.getAllClinic ~ this.ClinicName", this.ClinicName)
+      
+    })
   }
-
-
-  keyword = 'name';
-
-
-
-
-
-  // data = [
-  //    {
-  //      id: 1,
-  //      name: 'Usa'
-  //    },
-  //    {
-  //      id: 2,
-  //      name: 'England'
-  //    }
-  // ];
- 
- 
-  selectEvent(item) {
-    console.log("ConsultantDetailsComponent -> selectEvent -> item", item)
-    // do something with selected item
-  }
- 
-  onChangeSearch(val: string) {
-    console.log("ConsultantDetailsComponent -> onChangeSearch -> val", val)
-    // fetch remote data from here
-    // And reassign the 'data' which is binded to 'data' property.
-  }
-  
-  onFocused(e){
-    console.log("ConsultantDetailsComponent -> onFocused -> e", e)
-    // do something when input is focused
-  }
-
-
-  keyword1 = 'name';
-
-  // getAddress(){
-  //   this.mainService.getAddressByClinic()
-  // }
-
-
-
-  // data = [
-  //    {
-  //      id: 1,
-  //      name: 'Usa'
-  //    },
-  //    {
-  //      id: 2,
-  //      name: 'England'
-  //    }
-  // ];
- 
- 
-  selectEvent1(item) {
-    // do something with selected item
-  }
- 
-  onChangeSearch1(val: string) {
-    // fetch remote data from here
-    // And reassign the 'data' which is binded to 'data' property.
-  }
-  
-  onFocused1(e){
-    // do something when input is focused
-  }
-
-
-
-
-
-
-
 
   getProfile() {
     this.mainService.getProfile().then(resData => {
+      this.profile = resData.data
       this.memberForm.patchValue(resData.data);
+      if(resData.data.typeOfEstablishment == "OwnEstablishment"){
+        this.hide = false
+      }else{
+        this.hide = true
+      }
     }).catch(error => {
       console.log("EditProfileComponent -> getProfile -> error", error);
     })
   }
 
-  onSave() {
-    this.mainService.updateUserprofile(this.memberForm.value).then(resData => {
-      this.showToast('success', 'Profile', 'Profile updated successfully');
-      this.router.navigate(['/Doctor/Profile']);
-    }).catch(error => {
-      console.log("EditProfileComponent -> onSave -> error", error)
-    })
+  onSave(stepper: MatStepper): void {  
+    
+      const data ={
+        name: this.memberForm.controls.clinicName.value
+      }
+
+      this.mainService.addclinic(data).then(ClinicData =>{
+        console.log("file: consultant-details.component.ts ~ line 156 ~ ConsultantDetailsComponent ~ this.mainService.addclinic ~ ClinicData", ClinicData)
+      }).catch(err =>{
+        console.log("file: consultant-details.component.ts ~ line 163 ~ ConsultantDetailsComponent ~ this.mainService.addclinic ~ err", err)
+      })
+
+      const data1 ={
+        location: {
+          address: this.memberForm.controls.address.value,
+          landmark: this.memberForm.controls.landmark.value,
+          country: this.countryId,
+          state: this.stateId,
+          city: this.cityId,
+          lat: this.lat,
+          lng: this.lang 
+        }
+      }
+
+      this.mainService.addlocation(data1).then(locData =>{
+        console.log("file: consultant-details.component.ts ~ line 175 ~ ConsultantDetailsComponent ~ this.mainService.addlocation ~ locData", locData)
+      }).catch(error =>{
+        console.log("file: consultant-details.component.ts ~ line 182 ~ ConsultantDetailsComponent ~ this.mainService.addlocation ~ error", error)
+      })
+    
+      if(this.memberForm.controls.establishmentHour.value === "sameAsEstablishmentHour"){
+        this.mainService.updateUserprofile(this.memberForm.value).then(resData => {
+          this.showToast('success', 'Profile', 'Profile updated successfully');
+          this.router.navigate(['/Doctor/Profile']);
+        }).catch(error => {
+          console.log("EditProfileComponent -> onSave -> error", error)
+        })
+
+      }else{
+        this.mainService.updateUserprofile(this.memberForm.value).then(resData => {
+          this.showToast('success', 'Profile', 'Profile updated successfully');
+          stepper.next();
+        }).catch(error => {
+          console.log("EditProfileComponent -> onSave -> error", error)
+        })
+      }
+
+
+
   }
 
   showToast(type, messageType, message) {
     setTimeout(() => {
       this.messageService.add({ severity: type, summary: messageType, detail: message });
     });
-  }
-
-  ngOnInit() { 
-    this.getTime();
   }
 
   getTime() {

@@ -12,11 +12,13 @@ import { Router } from '@angular/router';
   styleUrls: ['./connect-clinic.component.scss']
 })
 export class ConnectClinicComponent implements OnInit {
+
   items: any = [];
   profileform: FormGroup;
   avatar: any;
 
   @Input() stepper: MatStepper;
+  hide: boolean = false;
 
   constructor(public mainService: MainService,
     public messageService: MessageService,
@@ -28,6 +30,10 @@ export class ConnectClinicComponent implements OnInit {
     this.items.length = 100;
     this.getProfile();
   }
+
+
+  ngOnInit() { }
+
 
   getProfile() {
     this.mainService.getProfile().then(resData => {
@@ -53,6 +59,7 @@ export class ConnectClinicComponent implements OnInit {
     });
   }
 
-  ngOnInit() { }
+
+  
 
 }

@@ -1,89 +1,236 @@
-<section class="bg-white p-sm-3">
-    <div class="container-fluid">
-        <div class="row">
-        </div>
-        <div class="row">
-            <div class="col-md-5 col-lg-3 offset-md-2 paddingonxs">
+  <table mat-table [dataSource]="dataSource" cdkDropList cdkDropListOrientation="horizontal"
+    (cdkDropListDropped)="drop($event)">
+
+    <ng-container matColumnDef="Day">
+        <th mat-header-cell cdkDrag *matHeaderCellDef> Day </th>
+        <td mat-cell *matCellDef="let element" style="width:8%"> {{element.Day}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="MorningSlot" align="center">
+        <th mat-header-cell cdkDrag *matHeaderCellDef style="text-align: center;background-color: #ececec;"> Morning Slot </th>
+        <!-- <td mat-cell *matCellDef="let element"> {{element.name}} </td> -->
+        <td mat-cell *matCellDef="let element;let i=index" style="width:22.5%;background-color: #ececec;"> 
+            <div class="col-12">
                 <div class="row">
-                    <div style="text-align:center">
-                        <button mat-mini-fab (click)="MO()" class="unselect m-3" [ngClass]="{'selected': dMO}">
-                            MO
-                        </button>
-                        <button mat-mini-fab (click)="TU()" class="unselect m-3" [ngClass]="{'selected': dTU}">
-                            TU
-                        </button>
-                        <button mat-mini-fab (click)="WE()" class="unselect m-3" [ngClass]="{'selected': dWE}">
-                            WE
-                        </button>
-                        <button mat-mini-fab (click)="TH()" class="unselect m-3" [ngClass]="{'selected': dTH}">
-                            TH
-                        </button>
-                        <button mat-mini-fab (click)="FR()" class="unselect m-3" [ngClass]="{'selected': dFR}">
-                            FR
-                        </button>
-                        <button mat-mini-fab (click)="SA()" class="unselect m-3" [ngClass]="{'selected': dSA}">
-                            ST
-                        </button>
-                        <button mat-mini-fab (click)="SU()" class="unselect m-3" [ngClass]="{'selected': dSU}">
-                            SU
-                        </button>
+                    <div class="col-6">
+                        <mat-form-field appearance="outline" style="display: block;">
+                            <mat-label>Sessions Start</mat-label>
+                            <mat-select required formControlName="MorStart{{i}}">
+                                <mat-option> -- None -- </mat-option>
+                                <mat-option value="06:00 am"> 06:00 am </mat-option>
+                                <mat-option value="06:30 am"> 06:30 am </mat-option>
+                                <mat-option value="07:00 am"> 07:00 am </mat-option>
+                                <mat-option value="07:30 am"> 07:30 am </mat-option>
+                                <mat-option value="08:00 am"> 08:00 am </mat-option>
+                                <mat-option value="08:30 am"> 08:30 am </mat-option>
+                                <mat-option value="09:00 am"> 09:00 am </mat-option>
+                                <mat-option value="09:30 am"> 09:30 am </mat-option>
+                                <mat-option value="10:00 am"> 10:00 am </mat-option>
+                                <mat-option value="10:30 am"> 10:30 am </mat-option>
+                                <mat-option value="11:00 am"> 11:00 am </mat-option>
+                                <mat-option value="11:30 am"> 11:30 am </mat-option>
+                                <mat-option value="12:00 am"> 12:00 am </mat-option>
+                            </mat-select>
+                        </mat-form-field>
                     </div>
-                </div>
-                <div>
-                    <div class="row mt-5" [formGroup]="timeSlot">
-                        <div class="form-group col-md-6">
-                            <label for="startSession">Sessions 1 Start</label>
-                            <select class="form-control"  id="session1s" id="startSession"  formControlName="session1Start">
-                                <option *ngFor="let item of TimeSloat" [value]="item?.value">{{item?.value}}</option>
-                            </select>
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="startSession">Sessions 1 End</label>
-                            <select class="form-control"  id="session1e" id="startSession" formControlName="session1End">
-                                <option *ngFor="let item of TimeSloat" [value]="item?.value">{{item?.value}}</option>
-                            </select>
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="startSession">Sessions 2 Start</label>
-                            <select class="form-control"  id="session2s" id="startSession" formControlName="session2Start">
-                                <option *ngFor="let item of TimeSloat2" [value]="item?.value">{{item?.value}}</option>
-                            </select>
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="startSession">Sessions 2 End</label>
-                            <select class="form-control"  id="session2e" id="startSession" formControlName="session2End">
-                                <option *ngFor="let item of TimeSloat2" [value]="item?.value">{{item?.value}}</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                <hr class="mt-5 mb-3" />
-                <div class="row">
-                    <button mat-raised-button matStepperPrevious>
-                        <i class="fa fa-caret-left" aria-hidden="true"></i>
-                        Back
-                    </button>
-                    <button style="position: absolute; right: 0;" mat-raised-button color="warn" (click)="onSave()" class=
-                    "themeColorBtn">
-                      Save and continue
-                      <i class="fa fa-caret-right" aria-hidden="true"></i>
-                    </button>
-                </div>
-            </div>
-            <div class="col-md-3 col-lg-5 offset-md-1">
-                <div class="d-none d-sm-none d-md-block col-md-12 col-lg-8 mt-5 ml-5 pr-0 pl-0"
-                    style="border: 1px solid #14aa9b;">
-                    <div class="bg p-4 textcol">
-                        <div>
-                            <i class="fa fa-lightbulb-o fa-lg" aria-hidden="true"></i>
-                        </div>
-                        <p class="stext font-weight-bold">
-                            Correct operating hours will help patients in booking appointments only during your
-                            availability
-                        </p>
+                    <div class="col-6">
+                        <mat-form-field appearance="outline" style="display: block;">
+                            <mat-label>Sessions Start</mat-label>
+                            <mat-select required formControlName="MorEnd{{i}}">
+                                <mat-option> -- None -- </mat-option>
+                                <mat-option value="06:00 am"> 06:00 am  </mat-option>
+                                <mat-option value="06:30 am"> 06:30 am  </mat-option>
+                                <mat-option value="07:00 am"> 07:00 am  </mat-option>
+                                <mat-option value="07:30 am"> 07:30 am </mat-option>
+                                <mat-option value="08:00 am"> 08:00 am </mat-option>
+                                <mat-option value="08:30 am"> 08:30 am </mat-option>
+                                <mat-option value="09:00 am"> 09:00 am </mat-option>
+                                <mat-option value="09:30 am"> 09:30 am </mat-option>
+                                <mat-option value="10:00 am"> 10:00 am </mat-option>
+                                <mat-option value="10:30 am"> 10:30 am </mat-option>
+                                <mat-option value="11:00 am"> 11:00 am </mat-option>
+                                <mat-option value="11:30 am"> 11:30 am </mat-option>
+                                <mat-option value="12:00 am"> 12:00 am </mat-option>
+                            </mat-select>
+                        </mat-form-field>
                     </div>
                 </div>
             </div>
-        </div>
+        </td>
+    </ng-container>
+
+    <ng-container matColumnDef="AfternoonSlots">
+        <th mat-header-cell *matHeaderCellDef style="text-align: center;"> Afternoon Slots </th>
+        <td mat-cell *matCellDef="let element; let i=index" style="width:22.5%">  
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-6">
+                        <mat-form-field appearance="outline" style="display: block;">
+                            <mat-label>Sessions Start</mat-label>
+                            <mat-select required formControlName="AftStart{{i}}">
+                                <mat-option> -- None -- </mat-option>
+                                <mat-option value="12:00 pm"> 12:00 pm  </mat-option>
+                                <mat-option value="12:30 pm"> 12:30 pm  </mat-option>
+                                <mat-option value="01:00 pm"> 01:00 pm  </mat-option>
+                                <mat-option value="01:30 pm"> 01:30 pm </mat-option>
+                                <mat-option value="02:00 pm"> 02:00 pm </mat-option>
+                                <mat-option value="02:30 pm"> 02:30 pm </mat-option>
+                                <mat-option value="03:00 pm"> 03:00 pm </mat-option>
+                                <mat-option value="03:30 pm"> 03:30 pm </mat-option>
+                                <mat-option value="04:00 pm"> 04:00 pm </mat-option>
+                                <mat-option value="04:30 pm"> 04:30 pm </mat-option>
+                                <mat-option value="05:00 pm"> 05:00 pm </mat-option>
+                                <mat-option value="05:30 pm"> 05:30 pm </mat-option>
+                                <mat-option value="06:00 pm"> 06:00 pm </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-6">
+                        <mat-form-field appearance="outline" style="display: block;">
+                            <mat-label>Sessions End</mat-label>
+                            <mat-select required formControlName="AftEnd{{i}}">
+                                <mat-option> -- None -- </mat-option>
+                                <mat-option value="12:00 pm"> 12:00 pm  </mat-option>
+                                <mat-option value="12:30 pm"> 12:30 pm  </mat-option>
+                                <mat-option value="01:00 pm"> 01:00 pm  </mat-option>
+                                <mat-option value="01:30 pm"> 01:30 pm </mat-option>
+                                <mat-option value="02:00 pm"> 02:00 pm </mat-option>
+                                <mat-option value="02:30 pm"> 02:30 pm </mat-option>
+                                <mat-option value="03:00 pm"> 03:00 pm </mat-option>
+                                <mat-option value="03:30 pm"> 03:30 pm </mat-option>
+                                <mat-option value="04:00 pm"> 04:00 pm </mat-option>
+                                <mat-option value="04:30 pm"> 04:30 pm </mat-option>
+                                <mat-option value="05:00 pm"> 05:00 pm </mat-option>
+                                <mat-option value="05:30 pm"> 05:30 pm </mat-option>
+                                <mat-option value="06:00 pm"> 06:00 pm </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+         </td>
+      </ng-container>
+
+      <ng-container matColumnDef="EveningSlots">
+        <th mat-header-cell *matHeaderCellDef style="text-align: center;background-color: #ececec;"> Evening Slots </th>
+        <td mat-cell *matCellDef="let element;let i = index" style="width:22.5%;background-color: #ececec;">  <div class="col-12">
+          <div class="row">
+              <div class="col-6">
+                        <mat-form-field appearance="outline" style="display: block;">
+                            <mat-label>Sessions Start</mat-label>
+                            <mat-select required formControlName="EveStart{{i}}">
+                                <mat-option> -- None -- </mat-option>
+                                <mat-option value="06:00 pm"> 06:00 pm </mat-option>
+                                <mat-option value="06:30 pm"> 06:30 pm </mat-option>
+                                <mat-option value="07:00 pm"> 07:00 pm </mat-option>
+                                <mat-option value="07:30 pm"> 07:30 pm </mat-option>
+                                <mat-option value="08:00 pm"> 08:00 pm </mat-option>
+                                <mat-option value="08:30 pm"> 08:30 pm </mat-option>
+                                <mat-option value="09:00 pm"> 09:00 pm </mat-option>
+                                <mat-option value="09:30 pm"> 09:30 pm </mat-option>
+                                <mat-option value="10:00 pm"> 10:00 pm </mat-option>
+                                <mat-option value="10:30 pm"> 10:30 pm </mat-option>
+                                <mat-option value="11:00 pm"> 11:00 pm </mat-option>
+                                <mat-option value="11:30 pm"> 11:30 pm </mat-option>
+                                <mat-option value="12:00 pm"> 12:00 pm </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-6">
+                        <mat-form-field appearance="outline" style="display: block;">
+                            <mat-label>Sessions End</mat-label>
+                            <mat-select required formControlName="EveEnd{{i}}">
+                                <mat-option> -- None -- </mat-option>
+                                <mat-option value="06:00 pm"> 06:00 pm </mat-option>
+                                <mat-option value="06:30 pm"> 06:30 pm </mat-option>
+                                <mat-option value="07:00 pm"> 07:00 pm </mat-option>
+                                <mat-option value="07:30 pm"> 07:30 pm </mat-option>
+                                <mat-option value="08:00 pm"> 08:00 pm </mat-option>
+                                <mat-option value="08:30 pm"> 08:30 pm </mat-option>
+                                <mat-option value="09:00 pm"> 09:00 pm </mat-option>
+                                <mat-option value="09:30 pm"> 09:30 pm </mat-option>
+                                <mat-option value="10:00 pm"> 10:00 pm </mat-option>
+                                <mat-option value="10:30 pm"> 10:30 pm </mat-option>
+                                <mat-option value="11:00 pm"> 11:00 pm </mat-option>
+                                <mat-option value="11:30 pm"> 11:30 pm </mat-option>
+                                <mat-option value="12:00 pm"> 12:00 pm </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div> 
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="NightSlots">
+        <th mat-header-cell *matHeaderCellDef style="text-align: center;"> Night Slots </th>
+        <td mat-cell *matCellDef="let element;let i = index" style="width:22.5%">  <div class="col-12">
+            <div class="row">
+                <div class="col-6">
+                    <mat-form-field appearance="outline" style="display: block;">
+                        <mat-label>Sessions Start</mat-label>
+                         <mat-select required formControlName="NigStart{{i}}">
+                            <mat-option> -- None -- </mat-option>
+                            <mat-option value="12:00 am"> 12:00 am </mat-option>
+                            <mat-option value="12:30 am"> 12:30 am </mat-option>
+                            <mat-option value="01:00 am"> 01:00 am </mat-option>
+                            <mat-option value="01:30 am"> 01:30 am </mat-option>
+                            <mat-option value="02:00 am"> 02:00 am </mat-option>
+                            <mat-option value="02:30 am"> 02:30 am </mat-option>
+                            <mat-option value="03:00 am"> 03:00 am </mat-option>
+                            <mat-option value="03:30 am"> 03:30 am </mat-option>
+                            <mat-option value="04:00 am"> 04:00 am </mat-option>
+                            <mat-option value="04:30 am"> 04:30 am </mat-option>
+                            <mat-option value="05:00 am"> 05:00 am </mat-option>
+                            <mat-option value="05:30 am"> 05:30 am </mat-option>
+                            <mat-option value="06:00 am"> 06:00 am </mat-option>
+                         </mat-select>
+                    </mat-form-field>
+                </div>
+                    <div class="col-6">
+                        <mat-form-field appearance="outline" style="display: block;">
+                            <mat-label>Sessions End</mat-label>
+                            <mat-select required formControlName="NigEnd{{i}}" >
+                                <mat-option> -- None -- </mat-option>
+                                <mat-option value="12:00 am"> 12:00 am  </mat-option>
+                                <mat-option value="12:30 am"> 12:30 am  </mat-option>
+                                <mat-option value="01:00 am"> 01:00 am  </mat-option>
+                                <mat-option value="01:30 am"> 01:30 am </mat-option>
+                                <mat-option value="02:00 am"> 02:00 am </mat-option>
+                                <mat-option value="02:30 am"> 02:30 am </mat-option>
+                                <mat-option value="03:00 am"> 03:00 am </mat-option>
+                                <mat-option value="03:30 am"> 03:30 am </mat-option>
+                                <mat-option value="04:00 am"> 04:00 am </mat-option>
+                                <mat-option value="04:30 am"> 04:30 am </mat-option>
+                                <mat-option value="05:00 am"> 05:00 am </mat-option>
+                                <mat-option value="05:30 am"> 05:30 am </mat-option>
+                                <mat-option value="06:00 am"> 06:00 am </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div> 
+        </td>
+      </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="columns"></tr>
+    <tr mat-row *matRowDef="let row; columns: columns;"></tr>
+</table>
+
+
+<div class="container-fluid">
+    <div class="row">
+        <button mat-raised-button matStepperPrevious>
+            <i class="fa fa-caret-left" aria-hidden="true"></i>
+            Back
+        </button>
+        <button style="position: absolute; right: 0;" mat-raised-button color="warn"  class=
+            "themeColorBtn">
+            Save and continue
+            <i class="fa fa-caret-right" aria-hidden="true"></i>
+        </button>
     </div>
-</section>
+</div>
+
+
+

@@ -32,6 +32,10 @@ addDoctorTreatment(data){
   return this.ApiCallService.postData('doctor/treatments/add',data)
 }
 
+getDoctreatment(){
+  return this.ApiCallService.getData('doctor/treatments/all')
+}
+
 getAllTreatment(){
   return this.ApiCallService.getData('treatment/get/all')
 }

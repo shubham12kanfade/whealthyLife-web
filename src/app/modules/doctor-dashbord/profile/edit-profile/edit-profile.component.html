@@ -94,14 +94,11 @@
                                     <div class="form-group">
                                         <label for="Specialisations">Specialisations</label>
                                      
-                                            <mat-select formControlName="specialitie" placeholder="Serach" class="form-control" multiple>
-                                              <mat-option>
-                                                <ngx-mat-select-search  placeholderLabel="Search"   (input)="onInput($event)" ></ngx-mat-select-search>
+                                            <mat-select formControlName="specialitie" placeholder="Serach" class="form-control"   multiple>
+                                              <mat-option >
+                                                <ngx-mat-select-search  placeholderLabel="Search"   (onFilter)="onInput($event)" ></ngx-mat-select-search>
                                               </mat-option>
-                                              <!-- <mat-option *ngIf="addOption" > 
-                                                  {{addOption}}
-                                              </mat-option> -->
-                                              <mat-option *ngFor="let spec of speciality " [value]="spec._id">
+                                              <mat-option *ngFor="let spec of speciality " [value]="spec?._id">
                                                 {{spec.fullName}}
                                               </mat-option>
                                             </mat-select>
@@ -109,13 +106,13 @@
                                         <!-- <p-multiSelect formControlName="specialitie" defaultLabel="Select Specialities"
                                             [options]="speciality" [filter]="true" filterBy="fullName"
                                             [showToggleAll]="false" optionLabel="fullName"
-                                            (onFilter)="getResult($event)" (onChange)="getTreatment($event)">
+                                            (onFilter)="onInput($event)" (onChange)="onOptionsSelected($event)">
                                             <ng-template let-it pTemplate="item">
                                                 <span>{{it.fullName}}</span>
                                             </ng-template>
                                             <ng-template let-sitem pTemplate="selectedItems">
-                                                <span *ngFor="let item of sitem;last as isLast">
-                                                    <span>{{item.fullName}}</span>
+                                                <span *ngFor="let spec of speciality" >
+                                                    <span>{{spec.fullName}}</span>
                                                 </span>
                                             </ng-template>
                                         </p-multiSelect> -->
@@ -205,11 +202,11 @@
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <label for="country">
+                                        <label>
                                             Country<span>
                                                 *
                                             </span></label>
-                                        <select class="form-control" id="country" formControlName="country"
+                                        <select class="form-control" formControlName="country"
                                             (change)="getState()">
                                             <option *ngFor="let country of countryList" [value]="country?.id">
                                                 {{country?.name}}</option>
@@ -220,10 +217,10 @@
                             <div class="row">
                                 <div class="col-sm-6 ">
                                     <div class="form-group">
-                                        <label for="Specialization">
+                                        <label>
                                             State
                                         </label>
-                                        <select class="form-control" id="state" formControlName="state"
+                                        <select class="form-control" formControlName="state"
                                             (change)="getCity()">
                                             <option *ngFor="let state of stateList" [value]="state?.id">
                                                 {{state?.name}}</option>
@@ -232,8 +229,8 @@
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <label for="city">City</label>
-                                        <select class="form-control" id="city" formControlName="city">
+                                        <label>City</label>
+                                        <select class="form-control"  formControlName="city">
                                             <option *ngFor="let city of cityList" [value]="city?.id">
                                                 {{city?.name}}</option>
                                         </select>

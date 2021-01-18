@@ -28,6 +28,7 @@ export class EditProfileComponent implements OnInit {
   avatar: any;
   timeZone: any;
   speciality: any;
+  specialityId: any;
 
   languages = [
     { label: "kanada", value: "kanada" },
@@ -63,7 +64,12 @@ export class EditProfileComponent implements OnInit {
   data1:any;
   data2:any;
   specialityFilter: any[]=[];
-  specialitiesId: any[]=[];
+  specialitiesId: any=[];
+  treatmentId: any;
+  treatmentID: any=[];
+  countryId: any;
+  stateid: any;
+  cityid: any;
 
   constructor(
     public mainService: MainService,
@@ -94,6 +100,7 @@ export class EditProfileComponent implements OnInit {
         extraPhoneNumber: [''],
         language: ['']
       });
+
   }
 
   ngOnInit(): void {
@@ -102,6 +109,30 @@ export class EditProfileComponent implements OnInit {
     this.treatmentAll();
     this.getCountry();
     this.getTimeZone();
+
+
+    this.profileForm.controls.specialitie.valueChanges.subscribe(resData =>{
+      this.specialityId = resData   
+    })
+
+    this.profileForm.controls.treatment.valueChanges.subscribe(resData =>{
+      this.treatmentId = resData   
+    })
+
+    this.profileForm.controls.country.valueChanges.subscribe(resData =>{
+      this.countryId = resData   
+    })
+
+    this.profileForm.controls.state.valueChanges.subscribe(resData =>{
+      this.stateid = resData   
+    })
+
+    this.profileForm.controls.city.valueChanges.subscribe(resData =>{
+        this.cityid = resData   
+    })
+
+
+
   }
 
   browseFile(event) {
@@ -120,55 +151,57 @@ export class EditProfileComponent implements OnInit {
     this.mainService
       .getProfile()
       .then((resData) => {
-        console.log("file: edit-profile.component.ts ~ line 134 ~ EditProfileComponent ~ .then ~ resData", resData)
-        this.getDocspecialization();
+      console.log("file: edit-profile.component.ts ~ line 138 ~ EditProfileComponent ~ .then ~ resData", resData)
+
+      const profileData = resData.data
+      console.log("file: edit-profile.component.ts ~ line 157 ~ EditProfileComponent ~ .then ~ profileData", profileData)
+        
+        this.SpecialityService.getDoctorSpecility().then(specData =>{
+          for(let i = 0; i < specData.data.length; i++){
+            this.specialitiesId[i] = specData.data[i].specializationId._id
+          }
+          this.profileForm.controls.specialitie.patchValue(this.specialitiesId)
+        })
+
+        this.TreatmentsService.getDoctreatment().then(trtData =>{
+          for(let i = 0; i < trtData.data.length; i++ ){
+            this.treatmentID[i] = trtData.data[i].treatmentId._id
+          }
+          this.profileForm.controls.treatment.patchValue(this.treatmentID) 
+        })
+
         this.profileForm.patchValue({
-          firstName: resData.data.firstName,
-          lastName: resData.data.lastName,
-          mobileNumber: resData.data.mobileNumber,
-          email: resData.data.email,
-          gender: resData.data.gender,
-          dob: resData.data.dob ? new Date(resData.data.dob) : null,
-          specialitie: this.specialitiesId,
-          treatment: this.treatment,
-          bloodGroup: resData.data.bloodGroup,
-          timeZone: resData.data.timeZone,
-          address: resData.data.location.address,
-          landmark: resData.data.location.landmark,
-          country: resData.data.location.country,
-          state: resData.data.location.state,
-          city: resData.data.location.city,
-          pincode: resData.data.location.pincode,
-          extraPhoneNumber: resData.data.extraPhoneNumber,
-          language: resData.data.language
+          firstName: profileData.firstName,
+          lastName: profileData.lastName,
+          mobileNumber: profileData.mobileNumber,
+          email: profileData.email,
+          gender: profileData.gender,
+          dob: profileData.dob ? new Date(profileData.dob) : null,
+          bloodGroup: profileData.bloodGroup,
+          timeZone: profileData.timeZone,
+          address: profileData.location.address,
+          landmark: profileData.location.landmark,
+          country:  profileData.location.country,
+          state: profileData.location.state,
+          city: profileData.location.city,
+          pincode: profileData.location.pincode,
+          extraPhoneNumber: profileData.extraPhoneNumber,
+          language: profileData.language
           
         });
+        this.avatar= profileData.avatar
 
-        this.avatar= resData.data.avatar
-        
-       
+
+
+
       })
       .catch((error) => {
         console.log("EditProfileComponent -> getProfile -> error", error);
       });
 
-      console.log("file: edit-profile.component.ts ~ line 142 ~ EditProfileComponent ~ .then ~ this.profileForm", this.profileForm)
 
      
   }
-
-  getDocspecialization(){
-    this.SpecialityService.getDoctorSpecility().then(SpcData => {
-      for(let i = 0; i < SpcData.data.length; i++){
-        this.specialitiesId[i] = SpcData?.data[i]?.specializationId?._id
-        console.log("file: edit-profile.component.ts ~ line 177 ~ EditProfileComponent ~ this.SpecialityService.getDoctorSpecility ~ this.specialitiesId[i]", this.specialitiesId[i])
-      }
-    }).catch(err => {
-      console.log("file: edit-profile.component.ts ~ line 286 ~ EditProfileComponent ~ getDocspecialization ~ err", err)
-  })
-  }
- 
- 
 
   getSpeciality() {
     this.SpecialityService.getSpecialization()
@@ -204,7 +237,7 @@ export class EditProfileComponent implements OnInit {
 
   getState() {
     this.mainService
-      .getState(this.profileForm.value.country)
+      .getState(this.countryId)
       .then((resData) => {
         this.stateList = resData.data;
       })
@@ -215,7 +248,7 @@ export class EditProfileComponent implements OnInit {
 
   getCity() {
     this.mainService
-      .getCity(this.profileForm.value.state)
+      .getCity(this.stateid)
       .then((resData) => {
         this.cityList = resData.data;
       })
@@ -236,7 +269,6 @@ export class EditProfileComponent implements OnInit {
   }
 
   onInput(e) {
-
     this.speciality = this.speciality.filter((ele) =>
       ele.fullName.toLowerCase().includes(e.target.value.toLowerCase())
     );
@@ -254,7 +286,9 @@ export class EditProfileComponent implements OnInit {
         this.ngOnInit()
       }
   
-    }
+  }
+
+  
 
   onSave() {
     var data = {
@@ -264,17 +298,16 @@ export class EditProfileComponent implements OnInit {
       location: {
         address: this.profileForm.value.address,
         landmark: this.profileForm.value.landmark,
-        state: this.profileForm.value.state,
-        city: this.profileForm.value.city,
+        state: this.stateid,
+        city: this.cityid,
         pincode: this.profileForm.value.pincode,
-        country: this.profileForm.value.country,
+        country: this.countryId,
       },
       timeZone: this.profileForm.value.timeZone
     };
     this.mainService
       .updateUserprofile(data)
       .then((resData) => {
-        console.log("file: edit-profile.component.ts ~ line 292 ~ EditProfileComponent ~ .then ~ resData", resData)
         this.showToast("success", "Profile", "Profile updated successfully");
         this.router.navigate(['/Doctor'])
       })
@@ -282,25 +315,20 @@ export class EditProfileComponent implements OnInit {
         console.log("EditProfileComponent -> onSave -> error", error);
       });
 
-
     const data1 ={
-      specializationArray: this.profileForm.controls.specialitie.value
+        specializationArray: this.specialityId
     }
-      console.log("file: edit-profile.component.ts ~ line 309 ~ EditProfileComponent ~ onSave ~ data1", data1)
-    
-      this.SpecialityService.addSpecialization(data1).then(SpecData => {
-      console.log("file: edit-profile.component.ts ~ line 320 ~ EditProfileComponent ~ this.SpecialityService.addSpecialization ~ SpecData", SpecData)
+      
+    this.SpecialityService.addSpecialization(data1).then(SpecData => {
     }).catch(err => {
-      console.log("file: edit-profile.component.ts ~ line 276 ~ EditProfileComponent ~ this.TreatmentsService.addDoctorTreatment ~ err", err)
+        console.log("file: edit-profile.component.ts ~ line 276 ~ EditProfileComponent ~ this.TreatmentsService.addDoctorTreatment ~ err", err)
     })
 
     const data2= {
-      treatmentArray: this.profileForm.controls.treatment.value
-     }
-    console.log("file: edit-profile.component.ts ~ line 313 ~ EditProfileComponent ~ onSave ~ data2", data2)
+      treatmentArray:  this.treatmentId 
+    }
       
-      this.TreatmentsService.addDoctorTreatment(data2).then(TreatData => {
-      console.log("file: edit-profile.component.ts ~ line 331 ~ EditProfileComponent ~ this.TreatmentsService.addDoctorTreatment ~ TreatData", TreatData)
+    this.TreatmentsService.addDoctorTreatment(data2).then(TreatData => {
     }).catch(err => {
       console.log("file: edit-profile.component.ts ~ line 313 ~ EditProfileComponent ~ this.TreatmentsService.addDoctorTreatment ~ err", err)
     })

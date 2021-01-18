@@ -31,10 +31,10 @@ getCity(stateId){
 
 
 
-  public getPosition(): Observable<Position> {
+  public getPosition(): Observable<any> {
     return Observable.create(
       (observer) => {
-        navigator.geolocation.watchPosition((pos: Position) => {
+        navigator.geolocation.watchPosition((pos: any) => {
           observer.next(pos);
         }),
           () => {

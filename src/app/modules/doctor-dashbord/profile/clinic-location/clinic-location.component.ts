@@ -13,8 +13,8 @@ import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms'
 })
 export class ClinicLocationComponent implements OnInit {
   items: any = [];
-  profileForm: FormGroup;
   profileData: any;
+  profileForm: FormGroup;
   secondFormGroup: FormGroup;
   thirdFormGroup: FormGroup;
 
@@ -30,10 +30,10 @@ export class ClinicLocationComponent implements OnInit {
   }
 
   ngOnInit() { 
-    this.profileForm =this.formBuilder.group({
-      mobileNumber: ['',Validators.required],
-      email: ['',Validators.required],
-      landmark: ['',Validators.required],
+    this.profileForm = this.formBuilder.group({
+      mobileNumber: [''],
+      email: [''],
+      landmark: ['']
     })
 
     this.secondFormGroup = this.formBuilder.group({})

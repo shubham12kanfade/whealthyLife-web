@@ -25,6 +25,18 @@ export class MainService {
     return this.api.getData('slot');
   }
 
+  addclinic(data){
+    return this.api.postData('clinic/',data)
+  }
+
+  addlocation(data){
+    return this.api.postData('clinic/location/add/web/location',data)
+  }
+
+  addTime(data){
+    return this.api.postData('clinic/timings/doctors/timing',data)
+  }
+
   getTimeSlotByUserId(id) {
     return this.api.getData('slot/' + id);
   }
