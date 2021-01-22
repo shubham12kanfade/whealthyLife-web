@@ -29,7 +29,7 @@
                   {{ street.degree }}
                 </mat-option>
 
-                <mat-option (click)="AddDegree(box.value)" *ngIf="Degree.length == 0" [value]="box.value">{{box.value +" "}} Click to add Degree </mat-option>
+                <mat-option (click)="AddDegree(box.value)"  [value]="box.value">{{box.value +" "}} Click to add Degree </mat-option>
               </mat-autocomplete>
             </div>
             <div class="form-group">

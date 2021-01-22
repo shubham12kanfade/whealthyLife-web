@@ -33,7 +33,7 @@ import {AutocompleteLibModule} from 'angular-ng-autocomplete';
     ClinicTimingsComponent,
     ConsultantDetailsComponent,
     EditProfileComponent,
-    DynamicAutocompleteComponent
+    DynamicAutocompleteComponent,
   ],
   imports: [
     CommonModule,

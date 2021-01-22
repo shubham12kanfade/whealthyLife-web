@@ -34,7 +34,15 @@ export class MainService {
   }
 
   addTime(data){
-    return this.api.postData('clinic/timings/doctors/timing',data)
+    return this.api.postData('clinic/timings/web/doctors/timing',data)
+  }
+
+  addTimingVisit(data){
+    return this.api.postData('clinic/members/',data)
+  }
+
+  getDOCClinic(id){
+    return this.api.getData('clinic/timings/clinic/details/'+id);
   }
 
   getTimeSlotByUserId(id) {
@@ -130,5 +138,8 @@ getTestById(id){
   return this.api.getData('tests/by/labTest/'+id)
 }
 
+getmembership(){
+  return this.api.getData('membership/get/all')
+}
 
 }

@@ -1,0 +1,110 @@
+<section>
+    <div class="col-12">
+        <div class="row">
+            <div class="col-xl-3 col-md-6 mb-4" *ngFor="let item of memberShip; let i = index">
+                <div class="card border-left-primary shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-uppercase mb-1" align="center" 
+                                style="font-size: 15px;">
+                                    <p>
+                                       {{item.title}}
+                                    </p>
+                                </div>
+                                <div class="row" align="center" style="padding-left: 10px;color: #374957;
+                                    fill: #374957;">
+                                    <div class="col-12">
+                                        <span style="color: #374957;
+                                        fill: #374957;
+                                        font-weight: 700;
+                                        box-sizing: inherit;
+                                        font-size: 25px;
+                                        line-height: 71px;
+                                        text-align: left;">
+                                             {{item.ammount}}
+                                        </span>
+                                        <span style="font-size: 14px;line-height: normal;font-weight: 700;">
+                                        <span>₹</span>
+                                        <span>/month</span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <p class="" style="font-weight: 600;color: #374957;
+                                fill: #374957;display: block;text-align: center;font-size: 1em;
+                                line-height: 1.5;">{{item.type}}</p>
+                                <div class=""  style="margin-bottom: 20px !important;display: flex;
+                                    flex-wrap: wrap;font-size: 1em;line-height: 1.5;background-color: #fff;
+                                    color: #5f7d95;text-align: center;margin-left: 45px;">
+                                    <p class="" style="margin-right: 5px !important;font-size: 14px;
+                                    box-sizing: inherit;text-align: center;line-height: 1.5;
+                                    background-color: #fff;color: #5f7d95;">as one payment of</p>
+                                    <span style="font-weight: 600;box-sizing: inherit;font-size: 14px;background-color: #fff;
+                                    color: #5f7d95;line-height: 1.5;">
+                                        <span>{{item.ammount}}</span>
+                                        <span>₹</span>
+                                    </span>
+                                </div>
+                                <div class="" align="center">
+                                    <a class="btn  btn-outline BuyNow">Buy Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-left-primary shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-uppercase mb-1" align="center" 
+                                style="font-size: 15px;">
+                                    <p>
+                                        MONTHLY PREMIUM
+                                    </p>
+                                </div>
+                                <div class="row" align="center" style="padding-left: 10px;color: #374957;
+                                    fill: #374957;">
+                                    <div class="col-12">
+                                        <span style="color: #374957;
+                                        fill: #374957;
+                                        font-weight: 700;
+                                        box-sizing: inherit;
+                                        font-size: 25px;
+                                        line-height: 71px;
+                                        text-align: left;">
+                                            1500
+                                        </span>
+                                        <span style="font-size: 14px;line-height: normal;font-weight: 700;">
+                                        <span>₹</span>
+                                        <span>/month</span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <p class="" style="font-weight: 600;color: #374957;
+                                fill: #374957;display: block;text-align: center;font-size: 1em;
+                                line-height: 1.5;">Billed monthly</p>
+                                <div class=""  style="margin-bottom: 20px !important;display: flex;
+                                    flex-wrap: wrap;font-size: 1em;line-height: 1.5;background-color: #fff;
+                                    color: #5f7d95;text-align: center;margin-left: 45px;">
+                                    <p class="" style="margin-right: 5px !important;font-size: 14px;
+                                    box-sizing: inherit;text-align: center;line-height: 1.5;
+                                    background-color: #fff;color: #5f7d95;">as one payment of</p>
+                                    <span style="font-weight: 600;box-sizing: inherit;font-size: 14px;background-color: #fff;
+                                    color: #5f7d95;line-height: 1.5;">
+                                        <span>1500</span>
+                                        <span>₹</span>
+                                    </span>
+                                </div>
+                                <div class="" align="center">
+                                    <a class="btn  btn-outline BuyNow">Buy Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+</section>

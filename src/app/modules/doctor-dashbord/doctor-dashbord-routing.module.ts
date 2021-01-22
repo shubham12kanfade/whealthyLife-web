@@ -4,6 +4,7 @@ import { DoctorDashbordComponent } from './doctor-dashbord.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ChartsComponent } from './charts/charts.component';
+import { MemberShipComponent } from './member-ship/member-ship.component';
 const routes: Routes = [
   {
     path: '', component: DoctorDashbordComponent, children: [
@@ -24,11 +25,12 @@ const routes: Routes = [
       { path: 'HealthFeed', loadChildren: () => import('./health-feed/health-feed.module').then(dhm => dhm.HealthFeedModule) },
       { path: 'MyClinic', loadChildren: () => import('./my-clinic/my-clinic.module').then(dhm => dhm.MyClinicModule) },
       { path: 'change_password', component: ChangePasswordComponent },
+      { path: 'member', component: MemberShipComponent}
     ]
   }
 ];
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+exports: [RouterModule]
 })
 export class DoctorDashbordRoutingModule { }

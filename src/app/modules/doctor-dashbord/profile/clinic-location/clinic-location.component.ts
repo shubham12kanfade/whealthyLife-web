@@ -33,7 +33,7 @@ export class ClinicLocationComponent implements OnInit {
     this.profileForm = this.formBuilder.group({
       mobileNumber: [''],
       email: [''],
-      landmark: ['']
+      landmark: [''],
     })
 
     this.secondFormGroup = this.formBuilder.group({})
@@ -53,7 +53,7 @@ export class ClinicLocationComponent implements OnInit {
     })
   }
 
-  onSave(staper) {
+  onSave(staper: MatStepper) {
     var data = {
       ...this.profileForm.value,
       location: {

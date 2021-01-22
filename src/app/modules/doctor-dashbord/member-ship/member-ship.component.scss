@@ -1,0 +1,42 @@
+.example-card {
+    max-width: 327px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(95,125,149,0.3);
+    border-radius: 3px;
+    padding: 48px 24px;
+    height: 100%;
+    position: relative;
+    margin-left: 155px;
+  }
+  
+  .example-header-image {
+    background-size: cover;
+    align-items: baseline
+  }  
+
+  .btn .btn-outline{
+    color: !important;
+    padding: 1em;
+    font-weight: 400;
+    cursor: pointer;
+    vertical-align: middle;
+    white-space: nowrap;
+    display: inline-block;
+    font-size: 1em;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    font: inherit;
+    position: relative;
+    transition: color 0.1s linear;
+    font-family: Camphor, verdana !important;
+    border: 1px solid #FFB229 ;
+  }
+
+  .BuyNow{
+    // background-color:  #FFB229 !important;
+    box-shadow: inset 0px 0px 0px 1px #FFB229;
+  }
+  
+  .BuyNow:hover{
+    background-color: #FFB229;
+  }

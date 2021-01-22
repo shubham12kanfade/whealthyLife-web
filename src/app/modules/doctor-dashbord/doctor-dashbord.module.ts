@@ -8,12 +8,13 @@ import { ChangePasswordComponent } from './change-password/change-password.compo
 import { ChartsComponent } from './charts/charts.component';
 // import { MyClinicComponent } from './my-clinic/my-clinic.component';
 import { NgxChartsModule }from '@swimlane/ngx-charts';
+import { MemberShipComponent } from './member-ship/member-ship.component';
 
 
 
 
 @NgModule({
-  declarations: [DoctorDashbordComponent, ChartsComponent
+  declarations: [DoctorDashbordComponent, ChartsComponent, MemberShipComponent
 
   ],
   imports: [
