@@ -66,6 +66,7 @@ SocialLoginModule,
     AutocompleteLibModule,
     HttpClientModule,
     ToastModule,
+    SharedModule,
     // AngularFireMessagingModule,
     // AngularFireModule,
     AgmCoreModule.forRoot()

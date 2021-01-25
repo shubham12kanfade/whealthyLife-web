@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ViewChild } from '@angular/core';
 import { MainService } from 'src/app/services/main.service';
 import { UploadService } from 'src/app/services/upload.service';
 import { MessageService } from 'primeng/api';
@@ -9,6 +9,9 @@ import { UserService } from './../../../../services/user.service';
 import { UserAccountsRoutingModule } from './../../../user-accounts/user-accounts-routing.module';
 import { LocationService } from './../../../../services/location.service';
 import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
+import { MatTableDataSource } from '@angular/material/table';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-consultant-details',
@@ -69,15 +72,22 @@ export class ConsultantDetailsComponent implements OnInit {
   timeClinicId: any;
   VisiteclinicId: any;
   LocDetail: any;
+  clinicList: any[]=[];
+  displayedColumns = [];
+  dataSource1;
+  displayedRows: [string, unknown][];
+
 
  
   constructor(public mainService: MainService,
     public messageService: MessageService,
     public router: Router,
     private fb:FormBuilder,
+    public dialog: MatDialog,
     private  location:LocationService
    ) {
       this.memberForm = this.fb.group({
+        inputClinic: [''],
         clinicName: [''],
         ClinicName1:[''],
         address: [''],
@@ -147,7 +157,7 @@ export class ConsultantDetailsComponent implements OnInit {
       })
 
     this.getProfile();
-
+    
     this.mainService.getAllClinic().then(AllClinicName =>{
     console.log("ConsultantDetailsComponent -> AllClinicName", AllClinicName);
 
@@ -169,18 +179,29 @@ export class ConsultantDetailsComponent implements OnInit {
     this.getClinicName()
     this.getCountry()
     this.getLocation()
+
+
+    this.displayedColumns = [
+      "Sr_No",
+      "Clinic_Name",
+      "Address",
+      "Action",
+    ];
+   
   }
+
+  @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
 
   ngOnInit() { 
     // this.getTime();
 
-    this.memberForm.controls.ClinicName1.valueChanges.subscribe(resData => {
+    this.memberForm.controls.ClinicName1.valueChanges.subscribe((resData) => {
       this.clinicId= resData
       console.log("file: consultant-details.component.ts ~ line 85 ~ ConsultantDetailsComponent ~ ngOnInit ~ this.clinicId", this.clinicId)
       this.visiteClinic(resData)
     })
 
-    this.memberForm.controls.clinicName.valueChanges.subscribe(resData => {
+    this.memberForm.controls.clinicName.valueChanges.subscribe((resData) => {
       this.VisiteclinicId = resData
       console.log("file: consultant-details.component.ts ~ line 85 ~ ConsultantDetailsComponent ~ ngOnInit ~ this.VisiteclinicId", this.VisiteclinicId)
       this.visiteClinic(this.VisiteclinicId)
@@ -247,6 +268,7 @@ export class ConsultantDetailsComponent implements OnInit {
   getProfile() {
     this.mainService.getProfile().then(resData => {
       this.profile = resData.data
+       this.getDocClinic(this.profile._id);
       this.memberForm.patchValue(resData.data);
       if(resData.data.typeOfEstablishment == "OwnEstablishment"){
         this.hide = false
@@ -256,6 +278,35 @@ export class ConsultantDetailsComponent implements OnInit {
     }).catch(error => {
       console.log("EditProfileComponent -> getProfile -> error", error);
     })
+  }
+
+  getDocClinic(id){
+    if(id != ''){
+      this.mainService.getClinicByDocId(id).then(resDataDoc =>{
+        this.clinicList = [];
+        for (let i = 0; i < resDataDoc.data.length; i++){
+          const element = resDataDoc.data[i];
+          const arr = {
+            Sr_No: "",
+            Clinic_Name: element.clinicId.name,
+            Address: element.locationId.location.address,
+            Action: element._id,
+          };
+          this.clinicList.push(arr);
+        }
+        this.dataSource1 = new MatTableDataSource(
+          this.clinicList ? this.clinicList : null
+        );
+        this.dataSource1.paginator = this.paginator;
+      }).catch(err =>{
+        console.log("ConsultantDetailsComponent -> getDocClinic -> err", err)
+      })
+    }
+  }
+
+  openEdit(id) {
+    const data= id
+    console.log("ConsultantDetailsComponent -> openEdit -> data", data)
   }
 
   SaveSlots(){
@@ -411,7 +462,7 @@ export class ConsultantDetailsComponent implements OnInit {
   onSave(stepper: MatStepper): void {  
       if(this.profile.typeOfEstablishment === "OwnEstablishment"){
         const data ={
-          name: this.memberForm.controls.clinicName.value
+          name: this.memberForm.controls.inputClinic.value
         }
         console.log("ConsultantDetailsComponent -> onSave -> data", data)
 
@@ -503,13 +554,12 @@ export class ConsultantDetailsComponent implements OnInit {
   }
 
   visiteClinic(id){
+    console.log("ConsultantDetailsComponent -> visiteClinic -> event", event)
     this.mainService.getDOCClinic(id).then(DocClinic =>{
       console.log("ConsultantDetailsComponent -> ngOnInit -> DocClinic", DocClinic)
       this.DOCClicnicId = DocClinic.data[0]?.clinicId?._id
       this.locClinicId = DocClinic.data[0]?.locationId?._id
       this.timeClinicId = DocClinic.data[0]?._id
-        this.LocDetail = DocClinic.data[0]?.locationId?.location
-        console.log("ConsultantDetailsComponent -> visiteClinic -> this.LocDetail", this.LocDetail)
     }).catch(err =>{
       console.log("ConsultantDetailsComponent -> visiteClinic -> err", err)
     })

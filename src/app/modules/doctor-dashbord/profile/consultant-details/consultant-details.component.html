@@ -162,36 +162,30 @@
                                                    placeholder="Clinic Name"
                                                    aria-label="Number"
                                                    matInput
-                                                  formControlName="clinicName"
+                                                   formControlName="clinicName"
                                                    [matAutocomplete]="auto">
-                                            <mat-autocomplete #auto="matAutocomplete">
-                                              <mat-option *ngFor="let clinic of ClinicName" [value]="clinic?._id">
-                                               {{clinic?.name}}
-                                              </mat-option>
+                                            <mat-autocomplete #auto="matAutocomplete" >
+                                                <mat-option>None</mat-option>
+                                                <mat-option *ngFor="let clinic of ClinicName" [value]="clinic?._id">{{clinic.name}}</mat-option>
                                             </mat-autocomplete>
-                                          </mat-form-field>
-                                       
-                                        <!-- <mat-form-field appearance="outline">
-                                            <mat-label>Clinic Name</mat-label>
-                                            <input matInput placeholder="Clinic Name" formControlName="clinicName">
-                                        </mat-form-field> -->
+                                        </mat-form-field>
                                     </div>
                                     <div class="col-sm-3 col-md-3 col-lg-3">
                                         <mat-form-field appearance="outline" >
                                             <mat-label>Address</mat-label>
-                                            <input matInput placeholder="Address" formControlName="address">
+                                            <input matInput placeholder="Address" formControlName="address" >
                                         </mat-form-field>
                                     </div>
                                     <div class="col-sm-3 col-md-3 col-lg-3">
-                                        <mat-form-field  >
+                                        <mat-form-field appearance="outline"  >
                                             <mat-label>Landmark</mat-label>
                                             <input matInput placeholder="Landmark" formControlName="landmark">
                                         </mat-form-field>
                                     </div>
                                     <div class="col-sm-3 col-md-3 col-lg-3">
-                                        <mat-form-field appearance="outline" formControlName="country" >
+                                        <mat-form-field appearance="outline"  >
                                             <mat-label>Country</mat-label>
-                                            <mat-select (selectionChange)="CountryId($event)" >
+                                            <mat-select (selectionChange)="CountryId($event)" formControlName="country" >
                                                 <mat-option *ngFor="let country of countryList" [value]="country.id">{{country?.name}}</mat-option>
                                             </mat-select>
                                         </mat-form-field>
@@ -199,20 +193,48 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-3 col-md-3 col-lg-3">
-                                        <mat-form-field appearance="outline"  formControlName="state">
+                                        <mat-form-field appearance="outline"  >
                                             <mat-label>State</mat-label>
-                                            <mat-select (selectionChange)="State($event)">
+                                            <mat-select (selectionChange)="State($event)" formControlName="state">
                                                 <mat-option *ngFor="let state of stateList" [value]="state?.id">{{state.name}}</mat-option>
                                             </mat-select>
                                         </mat-form-field>
                                     </div>
                                     <div class="col-sm-3 col-md-3 col-lg-3">
-                                        <mat-form-field appearance="outline"  formControlName="city">
+                                        <mat-form-field appearance="outline"  >
                                             <mat-label>City</mat-label>
-                                            <mat-select (selectionChange)="City($event)" >
+                                            <mat-select (selectionChange)="City($event)" formControlName="city">
                                                 <mat-option *ngFor="let city of cityList" [value]="city?.id">{{city?.name}}</mat-option>
                                             </mat-select>
                                         </mat-form-field>
+                                    </div>
+                                </div>
+                                <div class="row" style="margin-bottom: 1rem;">
+                                    <div class="col-sm-12" >
+                                        <table mat-table [dataSource]="dataSource1" style="width: 100%;" >
+                                            <ng-container *ngFor="let disCol of displayedColumns; let colIndex = index" matColumnDef="{{disCol}}">
+                                                <mat-header-cell *matHeaderCellDef>{{disCol}}</mat-header-cell>
+                                                <mat-cell *matCellDef="let element; let i =index"> <div *ngIf= "disCol !='Action'">{{element[disCol]}}</div>
+                            
+                                                    <div *ngIf="disCol =='Sr.No'">
+                                                        {{i+1}}
+                                                    </div>
+                            
+                                                    <div *ngIf="disCol =='Action'">
+                                                        <img src="../../../../../assets/img/Swati/create-black-48dp.svg" style="height: 40%;" 
+                                                        (click)="openEdit(element.Action)">
+                                                        <!--   -->
+                                                        <img src="../../../../../assets/img/Swati/delete-black-48dp.svg" style="height: 40%;" >
+                                                        
+                                                            <!--(click)="onDelete(element.Action)"  -->
+                                                    </div>
+                                                </mat-cell>
+                                            </ng-container>
+                            
+                                            <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                                            <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+                                          </table>
+                                          <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
                                     </div>
                                 </div>
                                 <div class="row" style="margin-bottom: 1rem;">

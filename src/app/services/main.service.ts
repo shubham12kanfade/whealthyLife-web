@@ -142,4 +142,8 @@ getmembership(){
   return this.api.getData('membership/get/all')
 }
 
+getClinicByDocId(id){
+  return this.api.getData('clinic/timings/clinic/details/'+id)
+}
+
 }
