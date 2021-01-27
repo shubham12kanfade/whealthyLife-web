@@ -148,23 +148,6 @@ export class EditProfileComponent implements OnInit {
       });
   }
 
-
-  // browser(event) {
-  //   console.log("EditProfileComponent -> browser -> event", event)
-  //   const files = event.target.files;
-  //   console.log("EditProfileComponent -> browser -> file", files)
-  //   this.uploadService.upload(files).then((res) => {
-  //     console.log("EditProfileComponent -> browser -> res", res)
-  //       // this.profileForm.patchValue({
-  //       //   filePath: res.filePath,
-  //       // });
-  //     })
-  //     .catch((error) => {
-  //       console.error("error", error);
-  //     });
-  // }
-
-
   getProfile() {
     this.mainService
       .getProfile()
