@@ -8,8 +8,15 @@ import { environment } from 'src/environments/environment';
 export class UploadService {
 
   constructor(private apiCall: ApiCallService) { }
+  // upload(files: any) {
+  //   const url = environment.apiUrl + this.apiCall.uploadUrl;
+  //   return this.apiCall.upload(files, url);
+  // }
+
+
   upload(file: any) {
     const url = environment.apiUrl + this.apiCall.uploadUrl;
     return this.apiCall.upload(file, url);
   }
+
 }

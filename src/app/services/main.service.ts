@@ -41,8 +41,8 @@ export class MainService {
     return this.api.postData('clinic/members/',data)
   }
 
-  getDOCClinic(id){
-    return this.api.getData('clinic/timings/clinic/details/'+id);
+  getDOCClinic(data){
+    return this.api.postData('clinic/timings/clinic/details/',data);
   }
 
   getTimeSlotByUserId(id) {
@@ -53,12 +53,24 @@ export class MainService {
     return this.api.getData('country');
   }
 
+  getCountryId(countryId){
+    return this.api.getData('country/country/'+countryId)
+  }
+
   getState(countryId) {
     return this.api.getData('country/' + countryId + '/state');
   }
 
+  getStateById(stateId){
+    return this.api.getData('country/state/'+stateId)
+  }
+
   getCity(stateId) {
     return this.api.getData('country/state/' + stateId + '/city');
+  }
+
+  getCityId(cityId){
+    return this.api.getData('country/city/'+cityId)
   }
 
   getTimeZone() {
@@ -99,6 +111,18 @@ export class MainService {
 
   getAllClinic(){
     return this.api.getData('clinic/all');
+  }
+
+  deleteClinicById(id){
+    return this.api.deleteData('clinic/delete/by/'+id)
+  }
+
+  deleteLocationById(id){
+    return this.api.deleteData('clinic/location/delete/by/'+id)
+  }
+
+  deleteTimeById(id){
+    return this.api.deleteData('clinic/timings/delete/by/'+id)
   }
 
   getAddressByClinic(id){
@@ -142,8 +166,6 @@ getmembership(){
   return this.api.getData('membership/get/all')
 }
 
-getClinicByDocId(id){
-  return this.api.getData('clinic/timings/clinic/details/'+id)
-}
+
 
 }

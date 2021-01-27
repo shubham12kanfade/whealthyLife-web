@@ -86,15 +86,80 @@ export class ApiCallService extends ApiConfiguration {
     });
   }
 
+  // public upload(files: any, url: any, token = true): Promise<any> {
+  //   console.log('file , url', files, url);
+
+  //   return new Promise((resolve, reject) => {
+  //     const uploadData = new FormData();
+  //     for(var i = 0; i < files.length; i++) {
+  //       uploadData.append('myfile'+i, files[i], files[i].name);
+  //     }
+  //     this.uploadSub.next(0);
+  //     const request = this.https
+  //       .post(url,
+  //         uploadData,
+  //         token ? { ...this.getHeader(), reportProgress: true, observe: 'events' } : { reportProgress: true, observe: 'events' })
+  //       .subscribe((event) => {
+  //         if (event.type === HttpEventType.UploadProgress) {
+  //           /* // console.log('Upload Progress :', (event['loaded'] / event['total']) * 100 + '%'); */
+  //           // console.log('Event :', event['loaded'], event['total']);
+  //           if (this.uploadSub.value !== null) {
+  //             this.uploadSub.next((event['loaded'] / event['total']) * 100);
+  //           } else {
+  //             // Here Stop Uploading Request Manually
+  //             request.unsubscribe();
+  //           }
+  //         } else if (event.type === HttpEventType.Response) {
+  //           resolve(event.body);
+  //         }
+  //       },
+  //         error => reject(error)
+  //       );
+  //   });
+  // }
+
+  // public upload(file: any, url: any, token = true): Promise<any> {
+  //   // console.log('url', url);
+
+  //   return new Promise((resolve, reject) => {
+  //     const uploadData = new FormData();
+  //     for(var i = 0; i < file.length; i++) {
+  //       uploadData.append('myFile'+i, file[i], file[i].name);
+  //     }
+  //     this.uploadSub.next(0);
+  //     const request = this.https
+  //       .post(url,
+  //         uploadData,
+  //         token ? { ...this.getHeader(), reportProgress: true, observe: 'events' } : { reportProgress: true, observe: 'events' })
+  //       .subscribe((event) => {
+  //         if (event.type === HttpEventType.UploadProgress) {
+  //           /* // console.log('Upload Progress :', (event['loaded'] / event['total']) * 100 + '%'); */
+  //           // console.log('Event :', event['loaded'], event['total']);
+  //           if (this.uploadSub.value !== null) {
+  //             this.uploadSub.next((event['loaded'] / event['total']) * 100);
+  //           } else {
+  //             // Here Stop Uploading Request Manually
+  //             request.unsubscribe();
+  //           }
+  //         } else if (event.type === HttpEventType.Response) {
+  //           resolve(event.body);
+  //         }
+  //       },
+  //         error => reject(error)
+  //       );
+  //   });
+  // }
+
+
   public upload(file: any, url: any, token = true): Promise<any> {
-    // console.log('url', url);
+    console.log('file , url', file, url);
 
     return new Promise((resolve, reject) => {
       const uploadData = new FormData();
       for(var i = 0; i < file.length; i++) {
-        uploadData.append('myfile'+i, file[i], file[i].name);
+        uploadData.append('myFile'+i, file[i], file[i].name);
+        this.uploadSub.next(i);
       }
-      this.uploadSub.next(0);
       const request = this.https
         .post(url,
           uploadData,
@@ -117,4 +182,5 @@ export class ApiCallService extends ApiConfiguration {
         );
     });
   }
+
 }

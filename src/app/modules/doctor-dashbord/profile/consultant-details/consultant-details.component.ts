@@ -76,6 +76,13 @@ export class ConsultantDetailsComponent implements OnInit {
   displayedColumns = [];
   dataSource1;
   displayedRows: [string, unknown][];
+  DocClinic: any;
+  hide1: boolean = true;
+  ClinicDetails: any;
+  IdClinic: any;
+  IdLocation: any;
+  IdTime: any;
+  DoctorId: any;
 
 
  
@@ -86,76 +93,7 @@ export class ConsultantDetailsComponent implements OnInit {
     public dialog: MatDialog,
     private  location:LocationService
    ) {
-      this.memberForm = this.fb.group({
-        inputClinic: [''],
-        clinicName: [''],
-        ClinicName1:[''],
-        address: [''],
-        landmark: [''],
-        country: [''],
-        state: [''],
-        city: [''],
-        fees : [''],
-        establishmentHour : [''],
-        hours : [""],
-        MorStart0:[""],
-        MorStart1:[""],
-        MorStart2:[""],
-        MorStart3:[""],
-        MorStart4:[""],
-        MorStart5:[""],
-        MorStart6:[""],
-        MorEnd0:[""],
-        MorEnd1:[""],
-        MorEnd2:[""],
-        MorEnd3:[""],
-        MorEnd4:[""],
-        MorEnd5:[""],
-        MorEnd6:[""],
-        AftStart0:[""],
-        AftStart1:[""],
-        AftStart2:[""],
-        AftStart3:[""],
-        AftStart4:[""],
-        AftStart5:[""],
-        AftStart6:[""],
-        AftEnd0:[""],
-        AftEnd1:[""],
-        AftEnd2:[""],
-        AftEnd3:[""],
-        AftEnd4:[""],
-        AftEnd5:[""],
-        AftEnd6:[""],
-        EveStart0:[""],
-        EveStart1:[""],
-        EveStart2:[""],
-        EveStart3:[""],
-        EveStart4:[""],
-        EveStart5:[""],
-        EveStart6:[""],
-        EveEnd0:[""],
-        EveEnd1:[""],
-        EveEnd2:[""],
-        EveEnd3:[""],
-        EveEnd4:[""],
-        EveEnd5:[""],
-        EveEnd6:[""],
-        NigStart0:[""],
-        NigStart1:[""],
-        NigStart2:[""],
-        NigStart3:[""],
-        NigStart4:[""],
-        NigStart5:[""],
-        NigStart6:[""],
-        NigEnd0:[""],
-        NigEnd1:[""],
-        NigEnd2:[""],
-        NigEnd3:[""],
-        NigEnd4:[""],
-        NigEnd5:[""],
-        NigEnd6:[""],
-      })
-
+     
     this.getProfile();
     
     this.mainService.getAllClinic().then(AllClinicName =>{
@@ -194,6 +132,76 @@ export class ConsultantDetailsComponent implements OnInit {
 
   ngOnInit() { 
     // this.getTime();
+
+    this.memberForm = this.fb.group({
+      inputClinic: [''],
+      clinicName: [''],
+      ClinicName1:[''],
+      address: [''],
+      landmark: [''],
+      country: [''],
+      state: [''],
+      city: [''],
+      fees : [''],
+      establishmentHour : [''],
+      hours : [""],
+      MorStart0:[""],
+      MorStart1:[""],
+      MorStart2:[""],
+      MorStart3:[""],
+      MorStart4:[""],
+      MorStart5:[""],
+      MorStart6:[""],
+      MorEnd0:[""],
+      MorEnd1:[""],
+      MorEnd2:[""],
+      MorEnd3:[""],
+      MorEnd4:[""],
+      MorEnd5:[""],
+      MorEnd6:[""],
+      AftStart0:[""],
+      AftStart1:[""],
+      AftStart2:[""],
+      AftStart3:[""],
+      AftStart4:[""],
+      AftStart5:[""],
+      AftStart6:[""],
+      AftEnd0:[""],
+      AftEnd1:[""],
+      AftEnd2:[""],
+      AftEnd3:[""],
+      AftEnd4:[""],
+      AftEnd5:[""],
+      AftEnd6:[""],
+      EveStart0:[""],
+      EveStart1:[""],
+      EveStart2:[""],
+      EveStart3:[""],
+      EveStart4:[""],
+      EveStart5:[""],
+      EveStart6:[""],
+      EveEnd0:[""],
+      EveEnd1:[""],
+      EveEnd2:[""],
+      EveEnd3:[""],
+      EveEnd4:[""],
+      EveEnd5:[""],
+      EveEnd6:[""],
+      NigStart0:[""],
+      NigStart1:[""],
+      NigStart2:[""],
+      NigStart3:[""],
+      NigStart4:[""],
+      NigStart5:[""],
+      NigStart6:[""],
+      NigEnd0:[""],
+      NigEnd1:[""],
+      NigEnd2:[""],
+      NigEnd3:[""],
+      NigEnd4:[""],
+      NigEnd5:[""],
+      NigEnd6:[""],
+    })
 
     this.memberForm.controls.ClinicName1.valueChanges.subscribe((resData) => {
       this.clinicId= resData
@@ -243,7 +251,7 @@ export class ConsultantDetailsComponent implements OnInit {
   State(event){
     this.stateId = event.value
     this.mainService
-      .getCity(event.value)
+      .getCity(this.stateId)
       .then((resData) => {
         this.cityList = resData.data;
       })
@@ -268,6 +276,7 @@ export class ConsultantDetailsComponent implements OnInit {
   getProfile() {
     this.mainService.getProfile().then(resData => {
       this.profile = resData.data
+      
        this.getDocClinic(this.profile._id);
       this.memberForm.patchValue(resData.data);
       if(resData.data.typeOfEstablishment == "OwnEstablishment"){
@@ -282,15 +291,22 @@ export class ConsultantDetailsComponent implements OnInit {
 
   getDocClinic(id){
     if(id != ''){
-      this.mainService.getClinicByDocId(id).then(resDataDoc =>{
-        this.clinicList = [];
+      const data ={
+        doctorId:  id
+      }
+      this.mainService.getDOCClinic(data).then(resDataDoc =>{
+      console.log("ConsultantDetailsComponent -> getDocClinic -> resDataDoc", resDataDoc)
+        if(resDataDoc != ''){
+          this.clinicList = [];
         for (let i = 0; i < resDataDoc.data.length; i++){
+          this.DocClinic = resDataDoc.data[i]
+          console.log("ConsultantDetailsComponent -> getDocClinic -> this.DocClinic", this.DocClinic)
           const element = resDataDoc.data[i];
           const arr = {
             Sr_No: "",
             Clinic_Name: element.clinicId.name,
             Address: element.locationId.location.address,
-            Action: element._id,
+            Action: element.clinicId._id,
           };
           this.clinicList.push(arr);
         }
@@ -298,6 +314,9 @@ export class ConsultantDetailsComponent implements OnInit {
           this.clinicList ? this.clinicList : null
         );
         this.dataSource1.paginator = this.paginator;
+        }else{
+          console.log("No Record on this Id");
+        }
       }).catch(err =>{
         console.log("ConsultantDetailsComponent -> getDocClinic -> err", err)
       })
@@ -305,8 +324,156 @@ export class ConsultantDetailsComponent implements OnInit {
   }
 
   openEdit(id) {
-    const data= id
-    console.log("ConsultantDetailsComponent -> openEdit -> data", data)
+  console.log("ConsultantDetailsComponent -> openEdit -> id", id)
+  const data ={
+    clinicId: id
+  }
+    this.mainService.getDOCClinic(data).then(resData =>{
+    console.log("ConsultantDetailsComponent -> openEdit -> resData", resData)
+    this.ClinicDetails = resData.data[0]
+    this.IdClinic = this.ClinicDetails.clinicId._id
+    this.IdLocation = this.ClinicDetails.locationId._id
+    this.IdTime = this.ClinicDetails._id
+    console.log("ConsultantDetailsComponent -> openEdit -> this.IdClinic  +  this.IdLocation + this.IdTime", this.IdClinic ,  this.IdLocation ,  this.IdTime)
+      for (let i = 0; i < resData.data.length; i++){
+        this.memberForm.patchValue({
+          clinicName: resData.data[i].clinicId.name,
+          address: resData.data[i].locationId.location.address,
+          landmark: resData.data[i].locationId.location.landmark,
+          country: resData.data[i].locationId.location.country,
+          state: resData.data[i].locationId.location.state,
+          city: resData.data[i].locationId.location.city,
+         
+        })
+        
+
+        for (let k = 0; k < resData.data[0].timing.length; k++){
+          if(k==0){
+            this.memberForm.patchValue({
+              MorStart0: resData.data[i].timing[k].morningSlot.startTime,
+              MorEnd0: resData.data[i].timing[k].morningSlot.endTime,
+              AftStart0: resData.data[i].timing[k].afternoonSlot.startTime,
+              AftEnd0: resData.data[i].timing[k].afternoonSlot.endTime,
+              EveStart0: resData.data[i].timing[k].eveningSlot.startTime,
+              EveEnd0: resData.data[i].timing[k].eveningSlot.endTime,
+              NigStart0: resData.data[i].timing[k].nightSlot.startTime,
+              NigEnd0: resData.data[i].timing[k].nightSlot.endTime,
+            })
+          }
+          else if(k==1){
+            this.memberForm.patchValue({
+              MorStart1: resData.data[i].timing[k].morningSlot.startTime,
+              MorEnd1: resData.data[i].timing[k].morningSlot.endTime,
+              AftStart1: resData.data[i].timing[k].afternoonSlot.startTime,
+              AftEnd1: resData.data[i].timing[k].afternoonSlot.endTime,
+              EveStart1: resData.data[i].timing[k].eveningSlot.startTime,
+              EveEnd1: resData.data[i].timing[k].eveningSlot.endTime,
+              NigStart1: resData.data[i].timing[k].nightSlot.startTime,
+              NigEnd1: resData.data[i].timing[k].nightSlot.endTime,
+            })
+          }else if(k == 2){
+            this.memberForm.patchValue({
+              MorStart2: resData.data[i].timing[k].morningSlot.startTime,
+              MorEnd2: resData.data[i].timing[k].morningSlot.endTime,
+              AftStart2: resData.data[i].timing[k].afternoonSlot.startTime,
+              AftEnd2: resData.data[i].timing[k].afternoonSlot.endTime,
+              EveStart2: resData.data[i].timing[k].eveningSlot.startTime,
+              EveEnd2: resData.data[i].timing[k].eveningSlot.endTime,
+              NigStart2: resData.data[i].timing[k].nightSlot.startTime,
+              NigEnd2: resData.data[i].timing[k].nightSlot.endTime,
+            })
+          }else if(k == 3){
+            this.memberForm.patchValue({
+              MorStart3: resData.data[i].timing[k].morningSlot.startTime,
+              MorEnd3: resData.data[i].timing[k].morningSlot.endTime,
+              AftStart3: resData.data[i].timing[k].afternoonSlot.startTime,
+              AftEnd3: resData.data[i].timing[k].afternoonSlot.endTime,
+              EveStart3: resData.data[i].timing[k].eveningSlot.startTime,
+              EveEnd3: resData.data[i].timing[k].eveningSlot.endTime,
+              NigStart3: resData.data[i].timing[k].nightSlot.startTime,
+              NigEnd3: resData.data[i].timing[k].nightSlot.endTime,
+            })
+          }else if(k == 4){
+            this.memberForm.patchValue({
+              MorStart4: resData.data[i].timing[k].morningSlot.startTime,
+              MorEnd4: resData.data[i].timing[k].morningSlot.endTime,
+              AftStart4: resData.data[i].timing[k].afternoonSlot.startTime,
+              AftEnd4: resData.data[i].timing[k].afternoonSlot.endTime,
+              EveStart4: resData.data[i].timing[k].eveningSlot.startTime,
+              EveEnd4: resData.data[i].timing[k].eveningSlot.endTime,
+              NigStart4: resData.data[i].timing[k].nightSlot.startTime,
+              NigEnd4: resData.data[i].timing[k].nightSlot.endTime,
+            })
+          }else if(k == 5){
+            this.memberForm.patchValue({
+              MorStart5: resData.data[i].timing[k].morningSlot.startTime,
+              MorEnd5: resData.data[i].timing[k].morningSlot.endTime,
+              AftStart5: resData.data[i].timing[k].afternoonSlot.startTime,
+              AftEnd5: resData.data[i].timing[k].afternoonSlot.endTime,
+              EveStart5: resData.data[i].timing[k].eveningSlot.startTime,
+              EveEnd5: resData.data[i].timing[k].eveningSlot.endTime,
+              NigStart5: resData.data[i].timing[k].nightSlot.startTime,
+              NigEnd5: resData.data[i].timing[k].nightSlot.endTime,
+            })
+          }else if(k == 6){
+            this.memberForm.patchValue({
+              MorStart6: resData.data[i].timing[k].morningSlot.startTime,
+              MorEnd6: resData.data[i].timing[k].morningSlot.endTime,
+              AftStart6: resData.data[i].timing[k].afternoonSlot.startTime,
+              AftEnd6: resData.data[i].timing[k].afternoonSlot.endTime,
+              EveStart6: resData.data[i].timing[k].eveningSlot.startTime,
+              EveEnd6: resData.data[i].timing[k].eveningSlot.endTime,
+              NigStart6: resData.data[i].timing[k].nightSlot.startTime,
+              NigEnd6: resData.data[i].timing[k].nightSlot.endTime,
+            })
+          }else{
+            this.hide1 = true
+          }
+        }
+      }
+      console.log("ConsultantDetailsComponent -> openEdit ->  this.memberForm",  this.memberForm)
+    }).catch(err =>{
+      console.log("ConsultantDetailsComponent -> openEdit -> err", err)
+    })
+  }
+
+  onDelete(id){
+    console.log("ConsultantDetailsComponent -> onDelete -> id", id)
+    const data ={
+      clinicId: id
+    }
+    this.mainService.getDOCClinic(data).then(resDataDel => {
+      console.log("ConsultantDetailsComponent -> onDelete -> resDataDel", resDataDel)
+      this.DoctorId = resDataDel.data[0].doctorId
+      this.IdClinic = resDataDel.data[0].clinicId._id
+      this.IdLocation = resDataDel.data[0].locationId._id
+      this.IdTime = resDataDel.data[0]._id
+      console.log("ConsultantDetailsComponent -> openEdit -> this.IdClinic  +  this.IdLocation + this.IdTime", this.IdClinic ,  this.IdLocation ,  this.IdTime)
+    
+      this.mainService.deleteClinicById(this.IdClinic).then(DeleteCres =>{
+        console.log("ConsultantDetailsComponent -> onDelete -> DeleteCres", DeleteCres)
+      }).catch(err =>{
+       console.log("ConsultantDetailsComponent -> onDelete -> err", err)
+      })
+
+      this.mainService.deleteLocationById(this.IdLocation).then(deleteLRes =>{
+       console.log("ConsultantDetailsComponent -> onDelete -> deleteLRes", deleteLRes)
+      }).catch(error =>{
+        console.log("ConsultantDetailsComponent -> onDelete -> error", error)
+      })
+
+      this.mainService.deleteTimeById(this.IdTime).then(deleteTRes =>{
+        console.log("ConsultantDetailsComponent -> onDelete -> deleteTRes", deleteTRes)
+       }).catch(err =>{
+         console.log("ConsultantDetailsComponent -> onDelete -> err", err)
+       })
+
+       this.ngOnInit();
+       this.getDocClinic(this.DoctorId)
+
+    }).catch(error =>{
+      console.log("ConsultantDetailsComponent -> onDelete -> error", error)
+    })
   }
 
   SaveSlots(){
@@ -556,7 +723,7 @@ export class ConsultantDetailsComponent implements OnInit {
   visiteClinic(id){
     console.log("ConsultantDetailsComponent -> visiteClinic -> event", event)
     this.mainService.getDOCClinic(id).then(DocClinic =>{
-      console.log("ConsultantDetailsComponent -> ngOnInit -> DocClinic", DocClinic)
+    console.log("ConsultantDetailsComponent -> visiteClinic -> DocClinic", DocClinic)
       this.DOCClicnicId = DocClinic.data[0]?.clinicId?._id
       this.locClinicId = DocClinic.data[0]?.locationId?._id
       this.timeClinicId = DocClinic.data[0]?._id
