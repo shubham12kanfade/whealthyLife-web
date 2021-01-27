@@ -134,7 +134,6 @@ export class ConsultantDetailsComponent implements OnInit {
     // this.getTime();
 
     this.memberForm = this.fb.group({
-      inputClinic: [''],
       clinicName: [''],
       ClinicName1:[''],
       address: [''],
@@ -629,7 +628,7 @@ export class ConsultantDetailsComponent implements OnInit {
   onSave(stepper: MatStepper): void {  
       if(this.profile.typeOfEstablishment === "OwnEstablishment"){
         const data ={
-          name: this.memberForm.controls.inputClinic.value
+          name: this.memberForm.controls.clinicName.value
         }
         console.log("ConsultantDetailsComponent -> onSave -> data", data)
 
