@@ -18,6 +18,7 @@ export class LoginComponent implements OnInit {
   });
   singIn: boolean = false;
   Fblogin: any;
+  hide: boolean= true;
   constructor(
     private router: Router,
     public LoginService: LoginService,

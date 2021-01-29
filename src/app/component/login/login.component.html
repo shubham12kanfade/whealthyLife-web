@@ -31,7 +31,7 @@
                                             <div class="padding-bottom-8">
                                                 Mobile Number / Email ID
                                             </div>
-                                            <input autofocus="" class="form-control email-text" id="username" formControlName="email" placeholder="Mobile Number / Email ID" type="text">
+                                            <input autofocus="" class="form-control email-text" style="height: 41px !important;" id="username" formControlName="email" placeholder="Mobile Number / Email ID" type="text">
                                             <span id="usernameErrorBlock" class="errorText textMuted error-block display-block">
                                             </span>
                                         </div>
@@ -41,9 +41,14 @@
                                         <div class="col-md-12">
                                             <div id="passwordContainer" style="pointer-events: auto; opacity: 1;">
                                                 <div class="padding-bottom-8 padding-top-20">Password</div>
-
-                                                <input class="form-control email-text" id="password" formControlName="password" placeholder="Password" type="password">
-
+                                                <div class="" style="display: flex;">
+                                                    <input class="form-control input-otp mt-1" style="height: 41px !important;" id="password" name="password" placeholder="Password" type="password"
+                                                    formControlName="password" value=""  [type]="hide ? 'password' : 'text'" />
+                                                    <span class="material-icons" style="font-size: 17px;margin: -50px;padding: 14px;
+                                                    cursor: pointer;padding-top: 66px;margin-left: -40px;" (click)="hide = !hide">
+                                                        {{hide ? 'visibility_off' : 'visibility'}}
+                                                    </span>
+                                                </div>
                                             </div>
                                             <span id="passwordErrorBlock" class=" errorText textMuted error-block display-block"></span>
                                         </div>

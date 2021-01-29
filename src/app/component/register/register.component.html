@@ -144,8 +144,8 @@
                                                     <input class="form-control email-text" id="password" name="password"
                                                         placeholder="Password" type="password"
                                                         formControlName="password" value="" [type]="hide ? 'password' : 'text'">
-                                                        <span class="material-icons" style="font-size: 17px;border: 1px solid lightgray;
-                                                        padding: 10px;cursor: pointer;border-radius: .25rem;" (click)="hide = !hide">
+                                                        <span class="material-icons" style="font-size: 17px;margin: -50px;
+                                                        margin-top: 1px;padding: 10px;cursor: pointer;padding-left: 20px;" (click)="hide = !hide">
                                                             {{hide ? 'visibility_off' : 'visibility'}}
                                                         </span>
                                                     <div *ngIf="submitted && f.password.errors"
@@ -169,8 +169,8 @@
                                                     <input class="form-control email-text" id="password" name="password"
                                                         placeholder="Confirm Password" type="password"
                                                         formControlName="Conpassword" value=""[type]="hide1 ? 'password' : 'text'">
-                                                        <span class="material-icons" style="font-size: 17px;border: 1px solid lightgray;
-                                                        padding: 10px;cursor: pointer;border-radius: .25rem;" (click)="hide1 = !hide1">
+                                                        <span class="material-icons" style="font-size: 17px;margin: -50px;
+                                                        margin-top: 1px;padding: 10px;cursor: pointer;padding-left: 20px;" (click)="hide1 = !hide1">
                                                             {{hide1 ? 'visibility_off' : 'visibility'}}
                                                         </span>
                                                     <div *ngIf="submitted && f.Conpassword.errors"
