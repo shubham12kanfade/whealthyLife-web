@@ -144,13 +144,14 @@
                                                 <div class="col-md-12">
                                                     <div class="padding-top-8">
                                                         <p class="no-bottom-margin">Create Password</p>
-                                                        <div class="padding-top-8">
+                                                        <div class="padding-top-8" style="display: flex;">
                                                             <input class="form-control email-text" id="password"
                                                                 name="password" placeholder="Password" type="password"
                                                                 formControlName="password" value=""  [type]="hide ? 'password' : 'text'" />
-                                                                <i  Suffix (click)="hide = !hide" class="fa fa-eye-slash">
+                                                                <span class="material-icons" style="font-size: 17px;border: 1px solid lightgray;
+                                                                padding: 10px;cursor: pointer;border-radius: .25rem;" (click)="hide = !hide">
                                                                     {{hide ? 'visibility_off' : 'visibility'}}
-                                                                </i>
+                                                                </span>
                                                             <div *ngIf="submitted && f.password.errors"
                                                                 class="error-block display-block">
                                                                 <div *ngIf="f.password.errors.required">Password is
@@ -169,13 +170,14 @@
                                                 <div class="col-md-12">
                                                     <div class="padding-top-8">
                                                         <p class="no-bottom-margin">Confirm Password</p>
-                                                        <div class="padding-top-8">
+                                                        <div class="padding-top-8" style="display: flex;">
                                                             <input class="form-control email-text" id="password"
                                                                 name="password" placeholder="Password" type="password"
-                                                                formControlName="Conpassword" value="" [type]="hide ? 'password' : 'text'" />
-                                                                <i  Suffix (click)="hide = !hide" class="fa fa-eye-slash">
-                                                                    {{hide ? 'visibility_off' : 'visibility'}}
-                                                                </i>
+                                                                formControlName="Conpassword" value="" [type]="hide1 ? 'password' : 'text'" />
+                                                                <span class="material-icons" style="font-size: 17px;border: 1px solid lightgray;
+                                                                padding: 10px;cursor: pointer;border-radius: .25rem;" (click)="hide1 = !hide1">
+                                                                    {{hide1 ? 'visibility_off' : 'visibility'}}
+                                                                </span>
                                                             <div *ngIf="submitted && f.Conpassword.errors"
                                                                 class="error-block display-block">
                                                                 <div *ngIf="f.Conpassword.errors.required">Confirm

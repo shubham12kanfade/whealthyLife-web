@@ -43,6 +43,7 @@
     "firebase-messaging": "^1.0.6",
     "google-maps": "^4.2.3",
     "jquery": "^3.5.1",
+    "material-design-icons": "^3.0.1",
     "moment": "^1.1.0",
     "ng2-charts": "^2.4.2",
     "ng2-filter-pipe": "^0.1.10",

@@ -123,137 +123,137 @@ export class ClinicTimingsComponent implements OnInit {
             {
           day: "monday" ,
           morningSlot: {
-            from : this.SlotForm.controls['MorStart0'].value ? this.SlotForm.controls['MorStart0'].value : "00" ,
-            to : this.SlotForm.controls['MorEnd0'].value ? this.SlotForm.controls['MorEnd0'].value : "00"
+            from : this.SlotForm.controls['MorStart0'].value ? this.SlotForm.controls['MorStart0'].value : null ,
+            to : this.SlotForm.controls['MorEnd0'].value ? this.SlotForm.controls['MorEnd0'].value : null
           },
           afternoonSlot: {
-            from: this.SlotForm.controls['AftStart0'].value ? this.SlotForm.controls['AftStart0'].value : "00",
-            to: this.SlotForm.controls['AftEnd0'].value ? this.SlotForm.controls['AftEnd0'].value : "00"
+            from: this.SlotForm.controls['AftStart0'].value ? this.SlotForm.controls['AftStart0'].value : null,
+            to: this.SlotForm.controls['AftEnd0'].value ? this.SlotForm.controls['AftEnd0'].value : null
           },
           eveningSlot: {
-            from: this.SlotForm.controls['EveStart0'].value ? this.SlotForm.controls['EveStart0'].value : "00",
+            from: this.SlotForm.controls['EveStart0'].value ? this.SlotForm.controls['EveStart0'].value : null,
             to: this.SlotForm.controls['EveEnd0'].value,
           },
           nightSlot: {
-            from: this.SlotForm.controls['NigStart0'].value ? this.SlotForm.controls['NigStart0'].value : "00",
-            to: this.SlotForm.controls['NigEnd0'].value ? this.SlotForm.controls['NigEnd0'].value : "00",
+            from: this.SlotForm.controls['NigStart0'].value ? this.SlotForm.controls['NigStart0'].value : null,
+            to: this.SlotForm.controls['NigEnd0'].value ? this.SlotForm.controls['NigEnd0'].value : null,
           }
         },
         {
           day: "tuesday" ,
           morningSlot: {
-            from : this.SlotForm.controls['MorStart1'].value ? this.SlotForm.controls['MorStart1'].value : "00",
-            to : this.SlotForm.controls['MorEnd1'].value ? this.SlotForm.controls['MorEnd1'].value : "00"
+            from : this.SlotForm.controls['MorStart1'].value ? this.SlotForm.controls['MorStart1'].value : null,
+            to : this.SlotForm.controls['MorEnd1'].value ? this.SlotForm.controls['MorEnd1'].value : null
           },
           afternoonSlot: {
-            from: this.SlotForm.controls['AftStart1'].value ? this.SlotForm.controls['AftStart1'].value : "00",
-            to: this.SlotForm.controls['AftEnd1'].value ? this.SlotForm.controls['AftEnd1'].value : "00"
+            from: this.SlotForm.controls['AftStart1'].value ? this.SlotForm.controls['AftStart1'].value : null,
+            to: this.SlotForm.controls['AftEnd1'].value ? this.SlotForm.controls['AftEnd1'].value : null
           },
           eveningSlot: {
-            from: this.SlotForm.controls['EveStart1'].value ? this.SlotForm.controls['EveStart1'].value : "00",
-            to: this.SlotForm.controls['EveEnd1'].value ? this.SlotForm.controls['EveEnd1'].value : "00",
+            from: this.SlotForm.controls['EveStart1'].value ? this.SlotForm.controls['EveStart1'].value : null,
+            to: this.SlotForm.controls['EveEnd1'].value ? this.SlotForm.controls['EveEnd1'].value : null,
           },
           nightSlot: {
-            from: this.SlotForm.controls['NigStart1'].value ? this.SlotForm.controls['NigStart1'].value : "00",
-            to: this.SlotForm.controls['NigEnd1'].value ? this.SlotForm.controls['NigEnd1'].value : "00",
+            from: this.SlotForm.controls['NigStart1'].value ? this.SlotForm.controls['NigStart1'].value : null,
+            to: this.SlotForm.controls['NigEnd1'].value ? this.SlotForm.controls['NigEnd1'].value : null,
           }
         },
         {
         day: "wednesday" ,
           morningSlot: {
-            from : this.SlotForm.controls['MorStart2'].value ? this.SlotForm.controls['MorStart2'].value : "00",
-            to : this.SlotForm.controls['MorEnd2'].value ? this.SlotForm.controls['MorEnd2'].value : "00"
+            from : this.SlotForm.controls['MorStart2'].value ? this.SlotForm.controls['MorStart2'].value : null,
+            to : this.SlotForm.controls['MorEnd2'].value ? this.SlotForm.controls['MorEnd2'].value : null
           },
           afternoonSlot: {
-            from: this.SlotForm.controls['AftStart2'].value ? this.SlotForm.controls['AftStart2'].value : "00",
-            to: this.SlotForm.controls['AftEnd2'].value ? this.SlotForm.controls['AftEnd2'].value : "00"
+            from: this.SlotForm.controls['AftStart2'].value ? this.SlotForm.controls['AftStart2'].value : null,
+            to: this.SlotForm.controls['AftEnd2'].value ? this.SlotForm.controls['AftEnd2'].value : null
           },
           eveningSlot: {
-            from: this.SlotForm.controls['EveStart2'].value ? this.SlotForm.controls['EveStart2'].value : "00",
-            to: this.SlotForm.controls['EveEnd2'].value ? this.SlotForm.controls['EveEnd2'].value : "00",
+            from: this.SlotForm.controls['EveStart2'].value ? this.SlotForm.controls['EveStart2'].value : null,
+            to: this.SlotForm.controls['EveEnd2'].value ? this.SlotForm.controls['EveEnd2'].value : null,
           },
           nightSlot: {
-            from: this.SlotForm.controls['NigStart2'].value ? this.SlotForm.controls['NigStart2'].value : "00",
-            to: this.SlotForm.controls['NigEnd2'].value ? this.SlotForm.controls['NigEnd2'].value : "00",
+            from: this.SlotForm.controls['NigStart2'].value ? this.SlotForm.controls['NigStart2'].value : null,
+            to: this.SlotForm.controls['NigEnd2'].value ? this.SlotForm.controls['NigEnd2'].value : null,
           }
         },
         {
           day: "thursday" ,
           morningSlot: {
-            from : this.SlotForm.controls['MorStart3'].value ? this.SlotForm.controls['MorStart3'].value : "00",
-            to : this.SlotForm.controls['MorEnd3'].value ? this.SlotForm.controls['MorEnd3'].value : "00"
+            from : this.SlotForm.controls['MorStart3'].value ? this.SlotForm.controls['MorStart3'].value : null,
+            to : this.SlotForm.controls['MorEnd3'].value ? this.SlotForm.controls['MorEnd3'].value : null
           },
           afternoonSlot: {
-            from: this.SlotForm.controls['AftStart3'].value ? this.SlotForm.controls['AftStart3'].value : "00",
-            to: this.SlotForm.controls['AftEnd3'].value ? this.SlotForm.controls['AftEnd3'].value : "00"
+            from: this.SlotForm.controls['AftStart3'].value ? this.SlotForm.controls['AftStart3'].value : null,
+            to: this.SlotForm.controls['AftEnd3'].value ? this.SlotForm.controls['AftEnd3'].value : null
           },
           eveningSlot: {
-            from: this.SlotForm.controls['EveStart3'].value ? this.SlotForm.controls['EveStart3'].value : "00",
-            to: this.SlotForm.controls['EveEnd3'].value ? this.SlotForm.controls['EveEnd3'].value : "00",
+            from: this.SlotForm.controls['EveStart3'].value ? this.SlotForm.controls['EveStart3'].value : null,
+            to: this.SlotForm.controls['EveEnd3'].value ? this.SlotForm.controls['EveEnd3'].value : null,
           },
           nightSlot: {
-            from: this.SlotForm.controls['NigStart3'].value ? this.SlotForm.controls['NigStart3'].value : "00",
-            to: this.SlotForm.controls['NigEnd3'].value ? this.SlotForm.controls['NigEnd3'].value : "00",
+            from: this.SlotForm.controls['NigStart3'].value ? this.SlotForm.controls['NigStart3'].value : null,
+            to: this.SlotForm.controls['NigEnd3'].value ? this.SlotForm.controls['NigEnd3'].value : null,
           }
         },
         {
           day: "friday" ,
           morningSlot: {
-            from : this.SlotForm.controls['MorStart4'].value ? this.SlotForm.controls['MorStart4'].value : "00",
-            to : this.SlotForm.controls['MorEnd4'].value ? this.SlotForm.controls['MorStart4'].value : "00"
+            from : this.SlotForm.controls['MorStart4'].value ? this.SlotForm.controls['MorStart4'].value : null,
+            to : this.SlotForm.controls['MorEnd4'].value ? this.SlotForm.controls['MorStart4'].value : null
           },
           afternoonSlot: {
-            from: this.SlotForm.controls['AftStart4'].value ? this.SlotForm.controls['AftStart4'].value : "00",
-            to: this.SlotForm.controls['AftEnd4'].value ? this.SlotForm.controls['AftEnd4'].value : "00"
+            from: this.SlotForm.controls['AftStart4'].value ? this.SlotForm.controls['AftStart4'].value : null,
+            to: this.SlotForm.controls['AftEnd4'].value ? this.SlotForm.controls['AftEnd4'].value : null
           },
           eveningSlot: {
-            from: this.SlotForm.controls['EveStart4'].value ? this.SlotForm.controls['EveStart4'].value : "00",
-            to: this.SlotForm.controls['EveEnd4'].value ? this.SlotForm.controls['EveEnd4'].value : "00",
+            from: this.SlotForm.controls['EveStart4'].value ? this.SlotForm.controls['EveStart4'].value : null,
+            to: this.SlotForm.controls['EveEnd4'].value ? this.SlotForm.controls['EveEnd4'].value : null,
           },
           nightSlot: {
-            from: this.SlotForm.controls['NigStart4'].value ? this.SlotForm.controls['NigStart4'].value : "00",
-            to: this.SlotForm.controls['NigEnd4'].value ? this.SlotForm.controls['NigEnd4'].value : "00",
+            from: this.SlotForm.controls['NigStart4'].value ? this.SlotForm.controls['NigStart4'].value : null,
+            to: this.SlotForm.controls['NigEnd4'].value ? this.SlotForm.controls['NigEnd4'].value : null,
           }
           },
         {
           day: "saturday" ,
           morningSlot: {
-            from : this.SlotForm.controls['MorStart5'].value  ? this.SlotForm.controls['MorStart5'].value : "00",
-            to : this.SlotForm.controls['MorEnd5'].value  ? this.SlotForm.controls['MorEnd5'].value : "00"
+            from : this.SlotForm.controls['MorStart5'].value  ? this.SlotForm.controls['MorStart5'].value : null,
+            to : this.SlotForm.controls['MorEnd5'].value  ? this.SlotForm.controls['MorEnd5'].value : null
           },
           afternoonSlot: {
-            from: this.SlotForm.controls['AftStart5'].value  ? this.SlotForm.controls['AftStart5'].value : "00",
-            to: this.SlotForm.controls['AftEnd5'].value  ? this.SlotForm.controls['AftEnd5'].value : "00"
+            from: this.SlotForm.controls['AftStart5'].value  ? this.SlotForm.controls['AftStart5'].value : null,
+            to: this.SlotForm.controls['AftEnd5'].value  ? this.SlotForm.controls['AftEnd5'].value : null
           },
           eveningSlot: {
-            from: this.SlotForm.controls['EveStart5'].value  ? this.SlotForm.controls['EveStart5'].value : "00",
-            to: this.SlotForm.controls['EveEnd5'].value  ? this.SlotForm.controls['EveEnd5'].value : "00"
+            from: this.SlotForm.controls['EveStart5'].value  ? this.SlotForm.controls['EveStart5'].value : null,
+            to: this.SlotForm.controls['EveEnd5'].value  ? this.SlotForm.controls['EveEnd5'].value : null
           },
           nightSlot: {
-            from: this.SlotForm.controls['NigStart5'].value  ? this.SlotForm.controls['NigStart5'].value : "00",
-            to: this.SlotForm.controls['NigEnd5'].value  ? this.SlotForm.controls['NigEnd5'].value : "00"
+            from: this.SlotForm.controls['NigStart5'].value  ? this.SlotForm.controls['NigStart5'].value : null,
+            to: this.SlotForm.controls['NigEnd5'].value  ? this.SlotForm.controls['NigEnd5'].value : null
           }
           },
           {
             day: "sunday" ,
             morningSlot: {
-              from : this.SlotForm.controls['MorStart6'].value ? this.SlotForm.controls['MorStart6'].value : "00",
-              to : this.SlotForm.controls['MorEnd6'].value ? this.SlotForm.controls['MorEnd6'].value : "00"
+              from : this.SlotForm.controls['MorStart6'].value ? this.SlotForm.controls['MorStart6'].value : null,
+              to : this.SlotForm.controls['MorEnd6'].value ? this.SlotForm.controls['MorEnd6'].value : null
             },
             afternoonSlot: {
-              from: this.SlotForm.controls['AftStart6'].value ? this.SlotForm.controls['AftStart6'].value : "00",
-              to: this.SlotForm.controls['AftEnd6'].value ? this.SlotForm.controls['AftEnd6'].value : "00"
+              from: this.SlotForm.controls['AftStart6'].value ? this.SlotForm.controls['AftStart6'].value : null,
+              to: this.SlotForm.controls['AftEnd6'].value ? this.SlotForm.controls['AftEnd6'].value : null
             },
             eveningSlot: {
-              from: this.SlotForm.controls['EveStart6'].value ? this.SlotForm.controls['EveStart6'].value : "00",
-              to: this.SlotForm.controls['EveEnd6'].value ? this.SlotForm.controls['EveEnd6'].value : "00",
+              from: this.SlotForm.controls['EveStart6'].value ? this.SlotForm.controls['EveStart6'].value : null,
+              to: this.SlotForm.controls['EveEnd6'].value ? this.SlotForm.controls['EveEnd6'].value : null,
             },
             nightSlot: {
-              from: this.SlotForm.controls['NigStart6'].value ? this.SlotForm.controls['NigStart6'].value : "00",
-              to: this.SlotForm.controls['NigEnd6'].value ? this.SlotForm.controls['NigEnd6'].value : "00",
+              from: this.SlotForm.controls['NigStart6'].value ? this.SlotForm.controls['NigStart6'].value : null,
+              to: this.SlotForm.controls['NigEnd6'].value ? this.SlotForm.controls['NigEnd6'].value : null,
             }
             },
-        ]
+          ]
         }
 
         this.mainService.addTimeSlot(data).then(resData =>{

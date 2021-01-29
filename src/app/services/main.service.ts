@@ -166,6 +166,21 @@ getmembership(){
   return this.api.getData('membership/get/all')
 }
 
+validateMorSlot(data){
+  return this.api.postData('slots/validate/morningSlot',data)
+}
+
+validateAfterSlot(data){
+  return this.api.postData('slots/validate/afternoonSlot',data)
+}
+
+validateEveSlot(data){
+  return this.api.postData('slots/validate/eveningSlot',data)
+}
+
+validatenightSlot(data){
+  return this.api.postData('slots/validate/nightSlot',data)
+}
 
 
 }

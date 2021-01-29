@@ -21,6 +21,10 @@ import { MatDialog } from '@angular/material/dialog';
 export class ConsultantDetailsComponent implements OnInit {
 
 
+  displayedColumns = [];
+  dataSource1: any;
+  displayedRows: [string, unknown][];
+
   columns: string[] = ['Day', 'MorningSlot', 'AfternoonSlots', 'EveningSlots', 'NightSlots'];
   dataSource = ELEMENT_DATA;
 
@@ -73,9 +77,7 @@ export class ConsultantDetailsComponent implements OnInit {
   VisiteclinicId: any;
   LocDetail: any;
   clinicList: any[]=[];
-  displayedColumns = [];
-  dataSource1;
-  displayedRows: [string, unknown][];
+ 
   DocClinic: any;
   hide1: boolean = true;
   ClinicDetails: any;
@@ -83,6 +85,7 @@ export class ConsultantDetailsComponent implements OnInit {
   IdLocation: any;
   IdTime: any;
   DoctorId: any;
+  DataClinic: boolean = false;
 
 
  
@@ -289,33 +292,33 @@ export class ConsultantDetailsComponent implements OnInit {
   }
 
   getDocClinic(id){
+    this.clinicList = [];
+    this.DataClinic = true;
     if(id != ''){
       const data ={
         doctorId:  id
       }
       this.mainService.getDOCClinic(data).then(resDataDoc =>{
       console.log("ConsultantDetailsComponent -> getDocClinic -> resDataDoc", resDataDoc)
-        if(resDataDoc != ''){
-          this.clinicList = [];
-        for (let i = 0; i < resDataDoc.data.length; i++){
-          this.DocClinic = resDataDoc.data[i]
-          console.log("ConsultantDetailsComponent -> getDocClinic -> this.DocClinic", this.DocClinic)
-          const element = resDataDoc.data[i];
-          const arr = {
-            Sr_No: "",
-            Clinic_Name: element.clinicId.name,
-            Address: element.locationId.location.address,
-            Action: element.clinicId._id,
-          };
-          this.clinicList.push(arr);
-        }
-        this.dataSource1 = new MatTableDataSource(
-          this.clinicList ? this.clinicList : null
-        );
-        this.dataSource1.paginator = this.paginator;
-        }else{
-          console.log("No Record on this Id");
-        }
+          for (let i = 0; i < resDataDoc.data.length; i++){
+            this.DocClinic = resDataDoc.data[i]
+            console.log("ConsultantDetailsComponent -> getDocClinic -> this.DocClinic", this.DocClinic)
+            const element = resDataDoc.data[i];
+            const arr = {
+              Sr_No: "",
+              Clinic_Name: element.clinicId.name,
+              Address: element.locationId.location.address,
+              Action: element.clinicId._id,
+            };
+            this.clinicList.push(arr);
+          }
+          this.dataSource1 = new MatTableDataSource(
+            this.clinicList ? this.clinicList : null
+          );
+          console.log("ConsultantDetailsComponent -> getDocClinic -> this.dataSource1", this.dataSource1)
+          this.dataSource1.paginator = this.paginator;
+          console.log("ConsultantDetailsComponent -> getDocClinic -> this.dataSource1.paginator", this.dataSource1.paginator)
+        
       }).catch(err =>{
         console.log("ConsultantDetailsComponent -> getDocClinic -> err", err)
       })

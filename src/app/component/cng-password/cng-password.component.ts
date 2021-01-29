@@ -24,6 +24,8 @@ export class CngPasswordComponent implements OnInit {
   mobileNumber: any;
   conPass: any;
   submitted = false;
+  hide: boolean = true;
+  hide1: boolean = true;
   constructor(
     public activateRouter: ActivatedRoute,
     public messageService: MessageService,

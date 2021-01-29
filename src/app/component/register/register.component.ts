@@ -17,7 +17,8 @@ export class RegisterComponent implements OnInit {
   submitted = false;
   locatdata: any;
   sending: boolean = false;
-  hide = true;
+  hide: boolean = true;
+  hide1: boolean = true;
 
   constructor(public rs: RegistrationService,
     public LocationService: LocationService,

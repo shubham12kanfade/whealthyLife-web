@@ -200,30 +200,33 @@
                                         </mat-form-field>
                                     </div>
                                 </div>
-                                <div class="row" style="margin-bottom: 1rem;" *ngIf="hide1">
+                                <div class="row" style="margin-bottom: 1rem;" >
                                     <div class="col-sm-12" >
-                                        <table mat-table [dataSource]="dataSource1" style="width: 100%;" >
+                                        <table mat-table [dataSource]="dataSource1?.filteredData" style="width: 100%;">
                                             <ng-container *ngFor="let disCol of displayedColumns; let colIndex = index" matColumnDef="{{disCol}}">
                                                 <mat-header-cell *matHeaderCellDef>{{disCol}}</mat-header-cell>
-                                                <mat-cell *matCellDef="let element; let i =index"> <div *ngIf= "disCol !='Action'">{{element[disCol]}}</div>
-                            
-                                                    <div *ngIf="disCol =='Sr.No'">
-                                                        {{i+1}}
+                                                <mat-cell *matCellDef="let element ; let i =index"> 
+                                                    <div *ngIf= "disCol != 'Action'" >{{element[disCol]}}</div>
+                                                    <div *ngIf="disCol =='Sr_No'">
+                                                        {{ i+1 }}
                                                     </div>
-                            
                                                     <div *ngIf="disCol =='Action'">
-                                                        <img src="../../../../../assets/img/Swati/create-black-48dp.svg" style="height: 20px;" 
-                                                        (click)="openEdit(element.Action)">
-                                                        <img src="../../../../../assets/img/Swati/delete-black-48dp.svg" style="height: 20px;" 
-                                                        (click)="onDelete(element.Action)">
+                                                        <span class="material-icons" style="cursor: pointer;" (click)="openEdit(element.Action)" >
+                                                            create
+                                                        </span>
+                                                        <span class="material-icons"  style="cursor: pointer;"  (click)="onDelete(element.Action)">
+                                                            delete
+                                                            </span>
                                                     </div>
                                                 </mat-cell>
                                             </ng-container>
-                            
+                                
                                             <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
                                             <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-                                          </table>
-                                          <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+                                        </table>
+                                        <mat-paginator
+                                        [pageSizeOptions]="[5, 10, 25]"
+                                    ></mat-paginator>
                                     </div>
                                 </div>
                                 <div class="row" style="margin-bottom: 1rem;">
@@ -407,7 +410,6 @@
                                                                         <mat-form-field appearance="outline" style="display: block;">
                                                                             <mat-label>Sessions Start</mat-label>
                                                                             <mat-select required formControlName="NigStart{{i}}">
-                                                                                <mat-option> -- None -- </mat-option>
                                                                                 <mat-option> -- None -- </mat-option>
                                                                                 <mat-option value="00:00">00:00</mat-option>
                                                                                 <mat-option value="00:30">00:30</mat-option>
