@@ -162,9 +162,6 @@ getTestById(id){
   return this.api.getData('tests/by/labTest/'+id)
 }
 
-getmembership(){
-  return this.api.getData('membership/get/all')
-}
 
 validateMorSlot(data){
   return this.api.postData('slots/validate/morningSlot',data)
