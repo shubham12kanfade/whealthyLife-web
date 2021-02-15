@@ -34,7 +34,7 @@ export class RegistrationComponent implements OnInit {
 
 
     
-    this.items.length = 28;
+    this.items.length = 81;
     this.getProfile();
   }
 
