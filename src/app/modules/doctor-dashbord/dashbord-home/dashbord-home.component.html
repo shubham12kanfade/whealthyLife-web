@@ -111,10 +111,18 @@
                   (change)="setValue($event)"
                 >
                   {{ profile?.isOnline == true ? "Online" : "Offline" }}
+
                   <!-- <label style="margin-top: 6px;" *ngIf="profile?.isOnline == false">Offline</label> -->
                 </mat-slide-toggle>
               </form>
             </div>
+            <div class="col-auto" *ngIf="profile?.isOnline == true">
+              <i class="fas fa-user fa-2x text-gray-300"></i>
+            </div>
+            <div class="col-auto" *ngIf="profile?.isOnline == false">
+              <i class="fas fa-user-slash fa-2x text-gray-300"></i>
+            </div>
+            <!---Second icon-->
           </div>
         </div>
       </div>
