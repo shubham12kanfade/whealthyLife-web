@@ -28,7 +28,6 @@ export class DashbordHomeComponent implements OnInit {
   off: boolean = false;
   color = 'primary';
   id: any;
-  isChecked =true;
   
  
   constructor(public DAS:DashboardAnalyticsService, public UserService:UserService,
@@ -84,7 +83,6 @@ export class DashbordHomeComponent implements OnInit {
         console.log("file: dashbord-home.component.ts ~ line 59 ~ DashbordHomeComponent ~ this.mainService.updateUserprofile ~ error", error)
       })
       this.getProfile()
-      this.isChecked=true;
     }else{
       this.on = false;
       const data = {
@@ -99,7 +97,6 @@ export class DashbordHomeComponent implements OnInit {
         console.log("file: dashbord-home.component.ts ~ line 59 ~ DashbordHomeComponent ~ this.mainService.updateUserprofile ~ error", error)
       })
       this.getProfile()
-      this.isChecked=false;
     }
   }
 
