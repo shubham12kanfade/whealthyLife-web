@@ -10,6 +10,8 @@ import { OrderInformationComponent } from './order-information/order-information
 import { DetailsProductComponent } from './details-product/details-product.component';
 import { AddToCartComponent } from './add-to-cart/add-to-cart.component';
 import { OrderPaymentComponent } from './order-payment/order-payment.component';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
 
 
 @NgModule({
@@ -20,7 +22,10 @@ import { OrderPaymentComponent } from './order-payment/order-payment.component';
     SharedModule,
     CarouselModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatCardModule,
+    MatButtonModule
+    
   ]
 })
 export class OrderModule { }

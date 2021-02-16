@@ -7,7 +7,7 @@
   }
  }
  
- 
+
  
  video {
     opacity: 100;
@@ -120,6 +120,7 @@ body {
 .u-d-inline-block {
   display: inline-block;
 }
+
 .u-t-green {
   color: #00a500;
 }
@@ -137,6 +138,7 @@ body {
 .u-fill-white {
   background-color: #fff;
 }
+
 .u-t-pulse {
     display: inline-block;
     width: 10px;
@@ -1838,8 +1840,9 @@ video {
   }
 }
 .defOption{
-  background-image: linear-gradient(to right bottom, #33f917, #2bd511, #22b10c, #1a9007, #126f04);
-  padding-top: 20px;
-  padding-bottom: 20px;
+  margin-top: 2.2rem;
+  background: linear-gradient(#45a29e, #3daaa4);
+  padding-top: 5px;
+  padding-bottom: 10px;
   margin-right: 0px;
 }

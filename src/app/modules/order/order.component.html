@@ -1,4 +1,4 @@
-<section class="firstsection">
+<!-- <section class="firstsection">
     <div class="container">
         <div class="row">
             <div class="col-sm-6">
@@ -19,93 +19,118 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <section class="advertisement">
+  <div class="row">
+    <div class="col-sm-12">
+      <owl-carousel-o [options]="customOptions" #review>
+        <ng-template carouselSlide>
+          <div class="wrapperimage">
+            <img
+              src="../../../assets/img/full-width-1.webp"
+              alt="img"
+              id="imgwrap1"
+              class="img-fluid"
+            />
+          </div>
+        </ng-template>
+        <ng-template carouselSlide>
+          <div class="wrapperimage">
+            <img
+              src="../../../assets/img/full-width-2.webp"
+              alt="img"
+              id="imgwrap2"
+              class="img-fluid"
+            />
+          </div>
+        </ng-template>
+        <ng-template carouselSlide>
+          <div class="wrapperimage">
+            <img
+              src="../../../assets/img/full-width-3.webp"
+              alt="img"
+              id="imgwrap3"
+              class="img-fluid"
+            />
+          </div>
+        </ng-template>
+        <ng-template carouselSlide>
+          <div class="wrapperimage">
+            <img
+              src="../../../assets/img/full-width-4.webp"
+              alt="img"
+              id="imgwrap4"
+              class="img-fluid"
+            />
+          </div>
+        </ng-template>
+      </owl-carousel-o>
+    </div>
+  </div>
+</section>
+
+<section class="commonsection">
+  <div class="container">
     <div class="row">
-        <div class="col-sm-12">
-            <owl-carousel-o [options]="customOptions" #review>
-                <ng-template carouselSlide>
-                    <div class="wrapperimage">
-                        <img src="../../../assets/img/full-width-1.webp" alt="img" id="imgwrap1" class="img-fluid">
-                    </div>
-                </ng-template>
-                <ng-template carouselSlide>
-                    <div class="wrapperimage">
-                        <img src="../../../assets/img/full-width-2.webp" alt="img" id="imgwrap2" class="img-fluid">
-                    </div>
-                </ng-template>
-                <ng-template carouselSlide>
-                    <div class="wrapperimage">
-                        <img src="../../../assets/img/full-width-3.webp" alt="img" id="imgwrap3" class="img-fluid">
-                    </div>
-                </ng-template>
-                <ng-template carouselSlide>
-                    <div class="wrapperimage">
-                        <img src="../../../assets/img/full-width-4.webp" alt="img" id="imgwrap4" class="img-fluid">
-                    </div>
-                </ng-template>
-            </owl-carousel-o>
-        </div>
+      <div class="col-sm-6">
+        <h1>Browse medicines & health products</h1>
+      </div>
     </div>
+    <div class="row">
+      <div class="col-sm-3">
+        <h4>Health condition</h4>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <!-- <owl-carousel-o [options]="customOptions1" #healthc>
+          <ng-template carouselSlide *ngFor="let item of HelthCondition">
+            <div
+              class="healthcondition"
+              [routerLink]="['/order/Order_information', item._id]"
+            >
+              <img
+                src="../../../assets/order/h-c-5.a8ae14dd.png"
+                onError="this.src='./../../../assets/img/Empty Cart.png'"
+                class="zoom"
+              />
+            </div>
+          </ng-template>
+        </owl-carousel-o> -->
+        <!-- <div class="row prev-next">
+          <div class="catlhs" (click)="healthc.prev()">
+            <i class="fa fa-chevron-circle-left fa-3x" aria-hidden="true"></i>
+          </div>
+          <div class="catrhs" (click)="healthc.next()">
+            <i class="fa fa-chevron-circle-right fa-3x" aria-hidden="true"></i>
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </div>
 </section>
 
 <section class="commonsection">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-6">
-                <h1>
-                    Browse medicines & health products
-                </h1>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-3">
-                <h4>
-                    Health condition
-                </h4>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12">
-                <owl-carousel-o [options]="customOptions1" #healthc>
-                    <ng-template carouselSlide *ngFor="let item of HelthCondition">
-                        <div class="healthcondition" [routerLink]="['/order/Order_information',item._id]">
-                            <img src="{{item.icon}}" onError="this.src='./../../../assets/img/Empty Cart.png'" class="zoom">
-                        </div>
-                    </ng-template>
-                    
-                  
-                </owl-carousel-o>
-                <div class="row prev-next">
-                    <div class="catlhs" (click)="healthc.prev()"> <i class="fa fa-chevron-circle-left fa-3x "
-                            aria-hidden="true"></i></div>
-                    <div class="catrhs" (click)="healthc.next()"> <i class="fa fa-chevron-circle-right fa-3x "
-                            aria-hidden="true"></i></div>
-                </div>
-            </div>
-        </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-3">
+        <h4>Categories</h4>
+      </div>
     </div>
-</section>
-
-<section class="commonsection">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-3">
-                <h4>
-                    Categories
-                </h4>
+    <div class="row">
+      <div class="col-sm-12">
+        <owl-carousel-o [options]="customOptions1" #categ>
+          <ng-template carouselSlide *ngFor="let item of category">
+            <div class="healthcondition">
+              <img
+                [src]="item?.icon[0]"
+                onError="this.src='./../../../assets/img/Empty Cart.png'"
+                class="zoom"
+              />
             </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12">
-                <owl-carousel-o [options]="customOptions1" #categ>
-                    <ng-template carouselSlide  *ngFor="let item of category">
-                        <div class="healthcondition">
-                            <img [src]="item?.icon[0]" onError="this.src='./../../../assets/img/Empty Cart.png'"  class="zoom">
-                        </div>
-                    </ng-template>
-                </owl-carousel-o>
-                    <!-- <ng-template carouselSlide>
+          </ng-template>
+        </owl-carousel-o>
+        <!-- <ng-template carouselSlide>
 
                         <div>
                             <img src="../../../assets/img/cat-6.webp" class="zoom">
@@ -146,43 +171,49 @@
                             <img src="../../../assets/img/cat-5.webp" class="zoom">
                         </div>
                     </ng-template> -->
-               
-                <div class="row prev-next">
-                    <div class="catlhs" (click)="categ.prev()"> <i class="fa fa-chevron-circle-left fa-3x "
-                            aria-hidden="true"></i></div>
-                    <div class="catrhs" (click)="categ.next()"> <i class="fa fa-chevron-circle-right fa-3x "
-                            aria-hidden="true"></i></div>
-                </div>
-            </div>
-        </div>
+
+        <!-- <div class="row prev-next">
+          <div class="catlhs" (click)="categ.prev()">
+            <i class="fa fa-chevron-circle-left fa-3x" aria-hidden="true"></i>
+          </div>
+          <div class="catrhs" (click)="categ.next()">
+            <i class="fa fa-chevron-circle-right fa-3x" aria-hidden="true"></i>
+          </div>
+        </div> -->
+      </div>
     </div>
+  </div>
 </section>
 <section class="commonsection">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-3">
-                <h4>
-                    Popular Products
-                </h4>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-3">
+        <h4>Popular Products</h4>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <owl-carousel-o [options]="medicine" #med>
+          <ng-template carouselSlide *ngFor="let item of productsdetail">
+            <div class="">
+              <div class="card">
+                <img
+                  class="card-img-top"
+                  [src]="item?.additionalProductImage[0]"
+                  onError="this.src='./../../../assets/img/Empty Cart.png'"
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">{{ item.productName }}</h5>
+                  <p class="card-text">
+                    <strong>₹ {{ item.yourPrice }}.00</strong>
+                  </p>
+                </div>
+              </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12">
-                <owl-carousel-o [options]="medicine" #med>
-                    <ng-template carouselSlide *ngFor="let item of productsdetail">
-                        <div class="">
-                            <div class="card">
-                                <img class="card-img-top" [src]="item?.additionalProductImage[0]" onError="this.src='./../../../assets/img/Empty Cart.png'" alt="Card image cap">
-                                <div class="card-body">
-                                    <h5 class="card-title">{{item.productName}}</h5>
-                                    <p class="card-text"><strong>₹ {{item.yourPrice}}.00</strong></p>
-                                </div>
-                            </div>
-
-                        </div>
-                    </ng-template> 
-                </owl-carousel-o>
-                    <!-- <ng-template carouselSlide>
+          </ng-template>
+        </owl-carousel-o>
+        <!-- <ng-template carouselSlide>
                         <div class="">
                             <div class="card">
                                 <img class="card-img-top" src="../../../assets/img/med2.jpeg" alt="Card image cap">
@@ -198,7 +229,7 @@
                             </div>
                         </div>
                     </ng-template> -->
-                    <!-- <ng-template carouselSlide>
+        <!-- <ng-template carouselSlide>
                         <div class="card">
                             <img class="card-img-top" src="../../../assets/img/med4.jpeg" alt="Card image cap">
                             <div class="card-body">
@@ -210,7 +241,7 @@
                             </div>
                         </div>
                     </ng-template> -->
-                    <!-- <ng-template carouselSlide>
+        <!-- <ng-template carouselSlide>
                         <div class="">
                             <div class="card">
                                 <img class="card-img-top" src="../../../assets/img/med4.jpeg" alt="Card image cap">
@@ -224,98 +255,125 @@
                             </div>
                         </div>
                     </ng-template> -->
-                
-                <div class="row prev-next">
-                    <div class="medlhs" (click)="med.prev()"> <i class="fa fa-chevron-circle-left fa-3x "
-                            aria-hidden="true"></i></div>
-                    <div class="medrhs" (click)="med.next()"> <i class="fa fa-chevron-circle-right fa-3x "
-                            aria-hidden="true"></i></div>
-                </div>
-            </div>
-        </div>
+
+        <!-- <div class="row prev-next">
+          <div class="medlhs" (click)="med.prev()">
+            <i class="fa fa-chevron-circle-left fa-3x" aria-hidden="true"></i>
+          </div>
+          <div class="medrhs" (click)="med.next()">
+            <i class="fa fa-chevron-circle-right fa-3x" aria-hidden="true"></i>
+          </div>
+        </div> -->
+      </div>
     </div>
+  </div>
 </section>
-<hr>
+<hr />
 <section class="commonsection">
-    <div class="container-fluid">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-6">
         <div class="row">
-            <div class="col-sm-6">
-                <div class="row">
-                    <div class="col-sm-8">
-                        <a href="">INTRODUCING CONSULTATION DESK</a>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-12">
-                        <h1>
-                            <a href="">Dont self medicate.Talk to an expert. Consult a doctor in less than 2
-                                Minutes.</a>
-                        </h1>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="chatdoctorwrapper">
-                        <img src="../../../assets/img/doctorchat_1.jpg" onError="this.src='./../../../assets/img/Empty Cart.png'" alt="chatdoctor" style="height: 300px;">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6">
-                <div class="row">
-                    <div class="col-sm-8">
-                        <a href="">INTRODUCING FAST DELIVERY</a>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-12">
-                        <h1>
-                            <a href="">Tired of waiting in a queue? Too weak to go down and buy medicines?</a>
-                        </h1>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="chatdoctorwrapper">
-                            <img src="./../../../assets/img/drs-pharma-medicine-home-delivery-600x480px.jpg" onError="this.src='./../../../assets/img/Empty Cart.png'" alt="chatdoctor" style="height: 300px;">
-                        </div>
-                    </div>
-                </div>
-            </div>
+          <div class="col-sm-8">
+            <a href="">INTRODUCING CONSULTATION DESK</a>
+          </div>
         </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <h1>
+              <a href=""
+                >Dont self medicate.Talk to an expert. Consult a doctor in less
+                than 2 Minutes.</a
+              >
+            </h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="chatdoctorwrapper">
+              <img
+                src="../../../assets/img/doctorchat_1.jpg"
+                onError="this.src='./../../../assets/img/Empty Cart.png'"
+                alt="chatdoctor"
+                style="height: 300px"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="row">
+          <div class="col-sm-8">
+            <a href="">INTRODUCING FAST DELIVERY</a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <h1>
+              <a href=""
+                >Tired of waiting in a queue? Too weak to go down and buy
+                medicines?</a
+              >
+            </h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="chatdoctorwrapper">
+              <img
+                src="./../../../assets/img/drs-pharma-medicine-home-delivery-600x480px.jpg"
+                onError="this.src='./../../../assets/img/Empty Cart.png'"
+                alt="chatdoctor"
+                style="height: 300px"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </section>
 <section class="thirdsection">
-    <div class="row">
-        <div class="col-sm-12">
-            <img src="./../../../assets/img/packing-medicine-organizer-pills-1200x627.jpg" style="height: 300px;width:100%;">
-        </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <img
+        src="./../../../assets/img/packing-medicine-organizer-pills-1200x627.jpg"
+        style="height: 300px; width: 100%"
+      />
     </div>
+  </div>
 </section>
 <section class="commonsection">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="center">
-                    <h1> What our users have to say</h1>
-                </div>
-            </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="center">
+          <h1>What our users have to say</h1>
         </div>
-        <div class="row">
-            <div class="col-sm-12">
-                <owl-carousel-o [options]="customOptions" #say>
-                    <ng-template carouselSlide *ngFor="let userss of usersays">
-                        <div class="center-1" >
-                            {{userss.review}}
-                        </div>
-                        <div class="center">
-                            <img src="../../../assets/img/avatar.png" onError="this.src='./../../../assets/img/Empty Cart.png'" alt="avatar" class="avtimg">
-                            <p style="text-transform: capitalize;">{{userss.userId.firstName}} {{userss.userId.lastName}}</p>
-                            <span>{{userss.createdAt}}</span>
-                        </div>
-                    </ng-template>
-                </owl-carousel-o>
-                    <!-- <ng-template carouselSlide>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <owl-carousel-o [options]="customOptions" #say>
+          <ng-template carouselSlide *ngFor="let userss of usersays">
+            <div class="center-1">
+              {{ userss.review }}
+            </div>
+            <div class="center">
+              <img
+                src="../../../assets/img/avatar.png"
+                onError="this.src='./../../../assets/img/Empty Cart.png'"
+                alt="avatar"
+                class="avtimg"
+              />
+              <p style="text-transform: capitalize">
+                {{ userss.userId.firstName }} {{ userss.userId.lastName }}
+              </p>
+              <span>{{ userss.createdAt }}</span>
+            </div>
+          </ng-template>
+        </owl-carousel-o>
+        <!-- <ng-template carouselSlide>
                         <div class="center-1">
 
                             Beutiful application with elegent UI Design. I found this app very useful.Placed order
@@ -347,133 +405,165 @@
                             <span>Oct 5,2020 at 11:33 AM</span>
                         </div>
                     </ng-template> -->
-                
-                <div class="row prev-next">
-                    <div class="catlhs" (click)="say.prev()"> <i class="fa fa-chevron-circle-left fa-3x "
-                            aria-hidden="true"></i></div>
-                    <div class="catrhs" (click)="say.next()"> <i class="fa fa-chevron-circle-right fa-3x "
-                            aria-hidden="true"></i></div>
-                </div>
-            </div>
+
+        <div class="row prev-next">
+          <div class="catlhs" (click)="say.prev()">
+            <i class="fa fa-chevron-circle-left fa-3x" aria-hidden="true"></i>
+          </div>
+          <div class="catrhs" (click)="say.next()">
+            <i class="fa fa-chevron-circle-right fa-3x" aria-hidden="true"></i>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </section>
 
 <section class="secndsection">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-sm-5 WealtyhLifeapp">
-                <img src="../../../assets/img/app-banner@2x.webp" class="bannerimg">
-            </div>
-            <div class="col-sm-7 WealtyhLifeapp">
-                <div class="">
-                    <h1>
-                        Download the WealtyhLife app</h1>
-                    <p>
-                        Your home for health is one tap away.
-                    </p>
-                </div>
-                <div>
-                    <p>Book appointments, Order health products, Chat with a doctor online,
-                        Book health chekups, store health records & read health tips.</p>
-                </div>
-                <div>
-                    <p>Send the link to download the app</p>
-                </div>
-                <div class="row">
-                    <div class="col-sm-6">
-                        <div class="input-group thisanother mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text" id="basic-addon1">+91</span>
-                            </div>
-                            <input type="text" class="form-control" placeholder="Enter Phone Number"
-                                aria-label="Username" aria-describedby="basic-addon1">
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <button type="button" class="btn btn-primary btn-lg">Send app link</button>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-4 imgappstore">
-                            <img src="../../../assets/img/play-store.webp">
-                        </div>
-                        <div class="col-sm-4 imgappstore">
-                            <img src="../../../assets/img/app-store.e30d53a6.png">
-                        </div>
-
-                    </div>
-                </div>
-            </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-5 WealtyhLifeapp">
+        <img src="../../../assets/img/app-banner@2x.webp" class="bannerimg" />
+      </div>
+      <div class="col-sm-7 WealtyhLifeapp">
+        <div class="">
+          <h1>Download the WealtyhLife app</h1>
+          <p>Your home for health is one tap away.</p>
         </div>
+        <div>
+          <p>
+            Book appointments, Order health products, Chat with a doctor online,
+            Book health chekups, store health records & read health tips.
+          </p>
+        </div>
+        <div>
+          <p>Send the link to download the app</p>
+        </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="input-group thisanother mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">+91</span>
+              </div>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Enter Phone Number"
+                aria-label="Username"
+                aria-describedby="basic-addon1"
+              />
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <button type="button" class="btn btn-primary btn-lg">
+              Send app link
+            </button>
+          </div>
+          <div class="row">
+            <div class="col-sm-4 imgappstore">
+              <img src="../../../assets/img/play-store.webp" />
+            </div>
+            <div class="col-sm-4 imgappstore">
+              <img src="../../../assets/img/app-store.e30d53a6.png" />
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </section>
 
 <section class="commonsection">
-    <div class="row">
-        <div class="col-sm-12 readsection">
-            <div class="title">
-                Order Medicines & Health Products Online : India's most reliable Online Medical Store
-            </div>
-            <div class="plain">
-                Find and buy medicines online with WhealthyLife Pharmacy. Browse through prescription medicines, OTC products,
-                health & wellness products on an online pharmacy that provides hassle free service across 100+ cities in
-                India With an extensive catalogue of medicines and healthcare products provided on an extensive and easy
-                to navigate destination for online medicine shopping, WhealthyLife Pharmacy provides added advantages which
-                include:
-                <div class="list">
-                    <ul class="ulcall">
-                        <li>Automated prescription refill: Set up scheduled refills for your online medicine orders and
-                            never worry
-                            about running out of your meds.
-                        </li>
-                        <li>
-                            Doorstep delivery: No more trips to the pharmacy, with on-time delivery of your medicines
-                            right to your
-                            doorstep.
-                        </li>
-                        <li>
-                            Medicine order history: No more scrolling through pages to find what you need. Just check
-                            your medicine
-                            order history and re-order.
-                        </li>
-                        <li>
-                            Exclusive offers and discounts: Enjoy cashbacks, flat discounts and other exclusive offers
-                            on your
-                            medicine orders.
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="accrodian"><a href="#collapseExample" data-toggle="collapse" aria-expanded="false" aria-controls="collapseExample">Read More</a></div>
-            
-            <div class="collapse" id="collapseExample">
-            <div class="title">
-                Get every medicine on time & everytime:
-            </div>
-            <div class="plain">
-                When you purchase medicines on WhealthyLife, you can be assured that you will get the medicines you order. Our trained pharmacists, partner pharmacies and medical stores ensure that your medicines are delivered to you on time, anywhere in India*. WhealthyLife is powered by intelligent systems that remembers all the medicines you ordered online and makes sure they're always available whenever you need them. So, you'll always find your medicines on WealtyhLife's online pharmacy, anywhere in India*.
-            </div>
-            <div class="title">
-                Get every medicine on time & everytime:
-            </div>
-            <div class="plain">
-                When you purchase medicines on WhealthyLife, you can be assured that you will get the medicines you order. Our trained pharmacists, partner pharmacies and medical stores ensure that your medicines are delivered to you on time, anywhere in India*. WhealthyLife is powered by intelligent systems that remembers all the medicines you ordered online and makes sure they're always available whenever you need them. So, you'll always find your medicines on WealtyhLife's online pharmacy, anywhere in India*.
-            </div>
-
-            <div class="title">
-                Buy Fitness and Wellness Products:
-            </div>
-            <div class="plain">
-                When you’re doing your best to stay fit and healthy, you shouldn’t have to worry about having everything you need to do so. With WealtyhLife Pharmacy, you can order everything you need to stay in shape and take care of yourself. From fitness enthusiasts in need of protein supplements or health drinks, to health conscious individuals looking for herbal supplements, health food and vitamin supplement
-            </div>
-
-            <div class="title">
-                Buy Personal Care Products:
-            </div>
-            <div class="plain">
-                Giving your body the care it needs just got a whole lot simple. Choose from an extensive list of personal care products that includes top brands like Pantene, Himalaya, Neutrogena, Brylcreem, Durex and Karmasutra. Find products for skin care, hair care and lip care, as well as products for more intimate purposes like sexual wellness.
-            </div>
+  <div class="row">
+    <div class="col-sm-12 readsection">
+      <div class="title">
+        Order Medicines & Health Products Online : India's most reliable Online
+        Medical Store
+      </div>
+      <div class="plain">
+        Find and buy medicines online with WhealthyLife Pharmacy. Browse through
+        prescription medicines, OTC products, health & wellness products on an
+        online pharmacy that provides hassle free service across 100+ cities in
+        India With an extensive catalogue of medicines and healthcare products
+        provided on an extensive and easy to navigate destination for online
+        medicine shopping, WhealthyLife Pharmacy provides added advantages which
+        include:
+        <div class="list">
+          <ul class="ulcall">
+            <li>
+              Automated prescription refill: Set up scheduled refills for your
+              online medicine orders and never worry about running out of your
+              meds.
+            </li>
+            <li>
+              Doorstep delivery: No more trips to the pharmacy, with on-time
+              delivery of your medicines right to your doorstep.
+            </li>
+            <li>
+              Medicine order history: No more scrolling through pages to find
+              what you need. Just check your medicine order history and
+              re-order.
+            </li>
+            <li>
+              Exclusive offers and discounts: Enjoy cashbacks, flat discounts
+              and other exclusive offers on your medicine orders.
+            </li>
+          </ul>
         </div>
+      </div>
+      <div class="accrodian">
+        <a
+          href="#collapseExample"
+          data-toggle="collapse"
+          aria-expanded="false"
+          aria-controls="collapseExample"
+          >Read More</a
+        >
+      </div>
+
+      <div class="collapse" id="collapseExample">
+        <div class="title">Get every medicine on time & everytime:</div>
+        <div class="plain">
+          When you purchase medicines on WhealthyLife, you can be assured that
+          you will get the medicines you order. Our trained pharmacists, partner
+          pharmacies and medical stores ensure that your medicines are delivered
+          to you on time, anywhere in India*. WhealthyLife is powered by
+          intelligent systems that remembers all the medicines you ordered
+          online and makes sure they're always available whenever you need them.
+          So, you'll always find your medicines on WealtyhLife's online
+          pharmacy, anywhere in India*.
         </div>
+        <div class="title">Get every medicine on time & everytime:</div>
+        <div class="plain">
+          When you purchase medicines on WhealthyLife, you can be assured that
+          you will get the medicines you order. Our trained pharmacists, partner
+          pharmacies and medical stores ensure that your medicines are delivered
+          to you on time, anywhere in India*. WhealthyLife is powered by
+          intelligent systems that remembers all the medicines you ordered
+          online and makes sure they're always available whenever you need them.
+          So, you'll always find your medicines on WealtyhLife's online
+          pharmacy, anywhere in India*.
+        </div>
+
+        <div class="title">Buy Fitness and Wellness Products:</div>
+        <div class="plain">
+          When you’re doing your best to stay fit and healthy, you shouldn’t
+          have to worry about having everything you need to do so. With
+          WealtyhLife Pharmacy, you can order everything you need to stay in
+          shape and take care of yourself. From fitness enthusiasts in need of
+          protein supplements or health drinks, to health conscious individuals
+          looking for herbal supplements, health food and vitamin supplement
+        </div>
+
+        <div class="title">Buy Personal Care Products:</div>
+        <div class="plain">
+          Giving your body the care it needs just got a whole lot simple. Choose
+          from an extensive list of personal care products that includes top
+          brands like Pantene, Himalaya, Neutrogena, Brylcreem, Durex and
+          Karmasutra. Find products for skin care, hair care and lip care, as
+          well as products for more intimate purposes like sexual wellness.
+        </div>
+      </div>
     </div>
+  </div>
 </section>

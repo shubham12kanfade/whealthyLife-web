@@ -1,6 +1,6 @@
 .wrapperimage{
     img{
-        height: 50vh;
+        height: 60vh;
         width: 100%;
     }
 }
@@ -21,6 +21,9 @@
     height: 40%;
     width: 100%;
 }
+}
+.advertisement{
+    margin-top: 4rem;
 }
 h1{
     a{
@@ -174,4 +177,15 @@ h1{
   }
   .ulcall{
     list-style-type: circle;
+  }
+
+
+
+
+
+  .carousel-item {
+    &.active, &.carousel-item-right, &.carousel-item-next {
+      display: flex !important;
+      flex-wrap: wrap
+    }
   }
