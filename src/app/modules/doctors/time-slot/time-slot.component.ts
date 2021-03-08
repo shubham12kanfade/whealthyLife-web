@@ -86,7 +86,10 @@ export class TimeSlotComponent implements OnInit {
     this.latestday();
   }
   else{
-    this.calenderDate =moment(event).add(1,'day') ;
+    let d= new Date(Date.parse(event));
+    
+    this.calenderDate =`${d.getMonth()+1}/${d.getDate()}/${d.getFullYear()}` ;
+    // this.calenderDate =moment(event).add(1,'day') ;
       this.bookingPageService.getDoctorSlotId(this.id, { date: this.calenderDate }).then((resData) => {
         this.slot = resData.data;
       }).catch((err) => {
@@ -94,7 +97,7 @@ export class TimeSlotComponent implements OnInit {
       })
   }
     // this.calenderDate = event;
-    this.dadad=moment();
+    this.dadad=moment().format('MM/DD/YYYY');
     console.log("TimeSlotComponent -> onSelect -> this.dadad", this.dadad)
     }
     
@@ -177,6 +180,7 @@ export class TimeSlotComponent implements OnInit {
         console.log("TimeSlotComponent -> showtime -> error", error);
       });
     console.log("TimeSlotComponent -> showtime -> data", data);
+    console.log("TimeSlotComponent -> myDate -> data", data.date);
     // this.show = doctor._id;
     // console.log("DoctorsComponent -> showtime -> doctor", doctor);
     // var session1Start = doctor.slots[0].session1Start.split(":");
