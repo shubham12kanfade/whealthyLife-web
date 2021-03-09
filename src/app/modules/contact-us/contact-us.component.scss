@@ -1,29 +1,65 @@
-.pe-7s-call_{
-    color:red;
-
+.pe-7s-call_ {
+  color: red;
 }
-.btn_1{
-    font-size: 18px;
-    height: 40px;
-    width: 100px;
-    
+.back {
+  background-color: #ecf0f1;
+}
+.btn_1 {
+  font-size: 18px;
+  height: 40px;
+  width: 100px;
+}
+.button-block {
+  button {
+    size: 14px;
+  }
+  .btn:hover {
+    color: #fff !important;
+    text-decoration: none;
+  }
+  .btn:active {
+    background-color: green !important;
+  }
 }
 #contact_info p {
-    font-size: 16px;
-    line-height: 1.8;
-}
-.phone{
+  font-size: 14px;
+  line-height: 1.8;
+  text-align: justify;
+  i {
+    font: 1rem;
     color: red;
-    margin: 12px !important;
+  }
+  span {
+    font-size: 16px;
+  }
 }
-.container{
-
-    font-weight: 400;
+.phone {
+  color: red;
+  margin: 12px !important;
 }
-.contact{
-    font-size: 21px !important;
-    font-weight: 400;
+.container {
+  font-weight: 400;
+}
+.contact {
+  font-size: 21px !important;
+  font-weight: 400;
 }
 .form-control {
-    font-size: 16px !important;
+  font-size: 16px !important;
+}
+@media only screen and (max-width: 768px) {
+  .button-block {
+    button {
+      width: 46%;
+      margin: 0.5rem 0;
+      font-size: 12px;
+    }
+    .btn:hover {
+      color: #fff !important;
+      text-decoration: none;
+    }
+    .btn:active {
+      background-color: green !important;
+    }
+  }
 }

@@ -1,14 +1,11 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { NgModule } from "@angular/core";
+import { CommonModule } from "@angular/common";
 
-import { AboutRoutingModule } from './about-routing.module';
-
+import { AboutRoutingModule } from "./about-routing.module";
 
 @NgModule({
   declarations: [],
-  imports: [
-    CommonModule,
-    AboutRoutingModule
-  ]
+  imports: [CommonModule, AboutRoutingModule, FormsModule, ReactiveFormsModule],
 })
-export class AboutModule { }
+export class AboutModule {}
