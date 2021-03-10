@@ -39,7 +39,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
     function ChatNowComponent_div_68_Template(rf, ctx) {
       if (rf & 1) {
-        var _r481 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+        var _r484 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 46);
 
@@ -52,11 +52,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "img", 50);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function ChatNowComponent_div_68_Template_img_click_4_listener() {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r481);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r484);
 
-          var ctx_r480 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+          var ctx_r483 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
 
-          return ctx_r480.toggleExitModal(true);
+          return ctx_r483.toggleExitModal(true);
         });
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
@@ -675,19 +675,19 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }
 
       if (rf & 2) {
-        var item_r475 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]().$implicit;
+        var item_r478 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]().$implicit;
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("src", item_r475 == null ? null : item_r475.backImg, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"]);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("src", item_r478 == null ? null : item_r478.backImg, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"]);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](4);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", item_r475 == null ? null : item_r475.title, "");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", item_r478 == null ? null : item_r478.title, "");
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", item_r475 == null ? null : item_r475.buttonText, " ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", item_r478 == null ? null : item_r478.buttonText, " ");
       }
     }
 
@@ -1236,7 +1236,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       consts: [[1, "container"], [1, "row", "margintop"], [1, "col-sm-6", "col-md-6", "col-lg-6", "pink"], [1, "first-fold", "heading", "mt-5"], [1, "first-fold", "heading"], [1, "description"], [1, "instant-doctors-card", "strip"], [1, "doctor-images"], ["src", "../../../assets/img/offer-specialist-v1.png", "width", "10%", "alt", "", 1, "each-image"], ["mat-raised-button", "", "color", "primary", 1, "m-3", 2, "z-index", "1", "padding-left", "6px", "padding-right", "5px"], [1, "row"], [1, "col-sm-4", "col-md-4", "col-lg-4", "m-3"], [1, "media"], ["src", "../../../assets/img/images.png", "alt", "", 1, "mr-3", "width-img", "txt"], [1, "media-body", "txt"], [1, "text-bold"], ["src", "../../../assets/img/download.jpeg", "alt", "", 1, "mr-3", "width-img", "txt"], [1, "text-bold", 2, "margin-right", "10px"], ["src", "../../../assets/img/homepage-hero-image-web-v1.png", "alt", "", 1, "hero-image", "web"], [1, "col-sm-12", "col-md-12", "col-lg-12", "m-3"], [1, "homepage-section-heading", "horizontal-scroll"], [1, "col-sm-12", "col-md-12", "col-lg-12"], [1, "row", 2, "position", "absolute", "width", "100%", "justify-content", "space-between", "top", "100px"], [2, "z-index", "9", 3, "click"], ["aria-hidden", "true", 1, "fa", "fa-chevron-circle-left", "fa-3x"], ["aria-hidden", "true", 1, "fa", "fa-chevron-circle-right", "fa-3x"], [3, "options"], ["review", ""], ["carouselSlide", ""], [2, "margin-top", "30px"], [1, "col-12"], [1, "row", 2, "position", "absolute", "width", "100%", "justify-content", "space-between", "top", "140px"], ["review1", ""], [4, "ngFor", "ngForOf"], [1, "row", 2, "position", "absolute", "width", "100%", "justify-content", "space-between", "top", "70px"], ["review2", ""], [1, "col-sm-12", "col-md-12", "col-lg-12", "cen"], [1, "col-sm-4", "col-md-4", "col-lg-4", "cen"], ["src", "../../../assets/img/Swati/ChatWithDoctor/TalkToDoctor.png", "width", "10%", "alt", ""], ["src", "../../../assets/img/Swati/ChatWithDoctor/MedicineDelivered.png", "width", "10%", "alt", ""], ["src", "../../../assets/img/Swati/ChatWithDoctor/Smiley.png", "width", "10%", "alt", ""], [1, "row", "purple"], [1, "col-sm-4", "col-md-4", "col-lg-4", "cen", "mt-3"], [1, "text-light", "text-bold"], ["review3", ""], [1, "card", "border", 2, "border-radius", "15px !important", "margin", "10px !important", "box-shadow", "0px 3px 5px lightgrey"], ["src", "../../../assets/img/cough-cold-v1.jpg", "alt", "", 1, "card-img-top", 2, "border-radius", "15px 15px 0px 0px"], [1, "card-body"], [1, "card-text"], [1, "card-text", "primary", 2, "color", "rgb(105, 105, 240)", "cursor", "pointer", "font-weight", "600"], ["src", "../../../assets/img/period-problems-v1.jpg", "alt", "", 1, "card-img-top", 2, "border-radius", "15px 15px 0px 0px"], ["src", "../../../assets/img/performance-issues-bed-v1.jpg", "alt", "", 1, "card-img-top", 2, "border-radius", "15px 15px 0px 0px"], ["src", "../../../assets/img/skin-problems-v1.jpg", "alt", "", 1, "card-img-top", 2, "border-radius", "15px 15px 0px 0px"], [2, "margin", "0px 10px"], [1, "card", 2, "border", "1px solid black !important", "box-shadow", "5px 5px 5px grey"], [2, "display", "flex", "justify-content", "center", "align-items", "center"], ["alt", "Generic placeholder image", "onError", "this.src='./../../../assets/img/briefcase.png'", 1, "", 2, "width", "150px", "height", "150px", "border", "2px solid #c5c1c1", "border-radius", "50%", "margin", "10px", 3, "src"], [2, "height", "100px"], [1, "heading"], [1, "card-footer", 2, "display", "flex", "justify-content", "center", "align-items", "flex-end"], ["mat-raised-button", "", "color", "light", 1, "card-title", 2, "width", "100%"], [1, "card", "border", 2, "width", "100%"], ["src", "../../../assets/img/Swati/ChatWithDoctor/Gynecologist.png", "alt", "", 1, "card-img-top", 2, "height", "130px", "width", "145px", "align-self", "center"], [1, "heading", 2, "text-align", "center"], [2, "text-align", "center"], ["src", "../../../assets/img/Swati/ChatWithDoctor/General physician.png", "alt", "", 1, "card-img-top", 2, "height", "130px", "width", "145px", "align-self", "center"], ["src", "../../../assets/img/Swati/ChatWithDoctor/Dermatologist.png", "alt", "", 1, "card-img-top", 2, "height", "130px", "width", "145px", "align-self", "center"], ["src", "../../../assets/img/Swati/ChatWithDoctor/Psychiatrist.png", "alt", "", 1, "card-img-top", 2, "height", "130px", "width", "145px", "align-self", "center"], ["src", "../../../assets/img/Swati/ChatWithDoctor/Stomach and Digestion.png", "alt", "", 1, "card-img-top", 2, "height", "130px", "width", "145px", "align-self", "center"], ["src", "../../../assets/img/Swati/ChatWithDoctor/Pediatrics.png", "alt", "", 1, "card-img-top", 2, "height", "130px", "width", "145px", "align-self", "center"], [1, "card", 2, "border", "1px solid lightgray !important", "box-shadow", "3px 3px 3px lightgrey !important", "margin", "20px"], [1, "card-header", 2, "background-color", "#fff", "border-bottom", "none", "padding", "5px"], [1, "col-3"], ["src", "../../../assets/img/testimonial-abhy-v1.png"], [1, "col-9", 2, "text-align", "left"], [2, "font-weight", "600", "margin", "0px"], [1, "card-body", 2, "padding", "7px"], [2, "margin", "0px"], ["src", "../../../assets/img/testimonial-default-women-v1.png"]],
       template: function ChatWithDoctorComponent_Template(rf, ctx) {
         if (rf & 1) {
-          var _r478 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+          var _r481 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "section");
 
@@ -1363,11 +1363,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](39, "span", 23);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function ChatWithDoctorComponent_Template_span_click_39_listener() {
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r478);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r481);
 
-            var _r457 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](44);
+            var _r460 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](44);
 
-            return _r457.prev();
+            return _r460.prev();
           });
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](40, "i", 24);
@@ -1377,11 +1377,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](41, "span", 23);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function ChatWithDoctorComponent_Template_span_click_41_listener() {
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r478);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r481);
 
-            var _r457 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](44);
+            var _r460 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](44);
 
-            return _r457.next();
+            return _r460.next();
           });
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](42, "i", 25);
@@ -1427,11 +1427,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](55, "span", 23);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function ChatWithDoctorComponent_Template_span_click_55_listener() {
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r478);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r481);
 
-            var _r462 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](60);
+            var _r465 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](60);
 
-            return _r462.prev();
+            return _r465.prev();
           });
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](56, "i", 24);
@@ -1441,11 +1441,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](57, "span", 23);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function ChatWithDoctorComponent_Template_span_click_57_listener() {
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r478);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r481);
 
-            var _r462 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](60);
+            var _r465 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](60);
 
-            return _r462.next();
+            return _r465.next();
           });
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](58, "i", 25);
@@ -1489,11 +1489,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](70, "span", 23);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function ChatWithDoctorComponent_Template_span_click_70_listener() {
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r478);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r481);
 
-            var _r464 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](75);
+            var _r467 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](75);
 
-            return _r464.prev();
+            return _r467.prev();
           });
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](71, "i", 24);
@@ -1503,11 +1503,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](72, "span", 23);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function ChatWithDoctorComponent_Template_span_click_72_listener() {
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r478);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r481);
 
-            var _r464 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](75);
+            var _r467 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](75);
 
-            return _r464.next();
+            return _r467.next();
           });
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](73, "i", 25);
@@ -1687,11 +1687,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](128, "span", 23);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function ChatWithDoctorComponent_Template_span_click_128_listener() {
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r478);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r481);
 
-            var _r471 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](133);
+            var _r474 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](133);
 
-            return _r471.prev();
+            return _r474.prev();
           });
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](129, "i", 24);
@@ -1701,11 +1701,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](130, "span", 23);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function ChatWithDoctorComponent_Template_span_click_130_listener() {
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r478);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r481);
 
-            var _r471 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](133);
+            var _r474 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](133);
 
-            return _r471.next();
+            return _r474.next();
           });
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](131, "i", 25);

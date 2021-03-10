@@ -56,6 +56,22 @@
       <!--/aside -->
       <div class="col-lg-8 col-md-8 ml-auto">
         <div class="box_general">
+          <div
+            *ngIf="alert"
+            class="alert alert-success alert-dismissible fade show"
+            role="alert"
+          >
+            <strong>Success !</strong> Your request has been sent successfully.
+            <button
+              type="button"
+              class="close"
+              data-dismiss="alert"
+              aria-label="Close"
+              (click)="closeAlert()"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
           <h3 class="contact mt-4">Contact us</h3>
           <div class="button-block mb-3">
             <p>Your query is about</p>

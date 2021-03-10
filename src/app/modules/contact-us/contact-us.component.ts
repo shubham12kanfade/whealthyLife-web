@@ -11,7 +11,7 @@ export class ContactUsComponent implements OnInit {
   constructor(private services: ContactformService) {}
 
   ngOnInit(): void {}
-
+  alert: boolean = false;
   contactFrom = new FormGroup({
     name: new FormControl(""),
     email: new FormControl(""),
@@ -22,8 +22,13 @@ export class ContactUsComponent implements OnInit {
 
   onSubmit() {
     this.services.addData(this.contactFrom.value).subscribe((data) => {
+      this.alert = true;
+      this.contactFrom.reset();
       console.log(data);
     });
     // console.log(this.contactFrom.value);
+  }
+  closeAlert() {
+    this.alert = false;
   }
 }
