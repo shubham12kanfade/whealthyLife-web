@@ -50,6 +50,7 @@
     "ng2-charts": "^2.4.2",
     "ng2-filter-pipe": "^0.1.10",
     "ng2-opentok": "^2.0.0",
+    "ngx-captcha": "^6.4.0",
     "ngx-cookie-service": "^3.0.4",
     "ngx-mat-select-search": "^3.0.3",
     "ngx-owl-carousel-o": "^3.0.0",

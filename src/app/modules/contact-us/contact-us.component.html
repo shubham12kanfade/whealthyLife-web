@@ -156,9 +156,19 @@
                       style="height: 100px"
                       placeholder="Your Message"
                     ></textarea>
+                    <!-- <div
+                      class="g-recaptcha"
+                      data-sitekey="6LcmyXoaAAAAAEJ-TaklnPhnqerCIQfAuc7nyapc"
+                    ></div> -->
                   </div>
                 </div>
               </div>
+              <ngx-recaptcha2
+                #captchaElem
+                [siteKey]="siteKey"
+                formControlName="recaptcha"
+              >
+              </ngx-recaptcha2>
               <input
                 type="submit"
                 value="Submit"

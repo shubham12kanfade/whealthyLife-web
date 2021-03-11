@@ -1,6 +1,10 @@
-import { THIS_EXPR } from "@angular/compiler/src/output/output_ast";
 import { Component, OnInit } from "@angular/core";
-import { FormGroup, FormControl } from "@angular/forms";
+import {
+  FormGroup,
+  FormControl,
+  FormBuilder,
+  Validators,
+} from "@angular/forms";
 import { ContactformService } from "src/app/services/contactform.service";
 @Component({
   selector: "app-contact-us",
@@ -8,10 +12,13 @@ import { ContactformService } from "src/app/services/contactform.service";
   styleUrls: ["./contact-us.component.scss"],
 })
 export class ContactUsComponent implements OnInit {
-  constructor(private services: ContactformService) {}
-
-  ngOnInit(): void {}
-  alert: boolean = false;
+  siteKey: string;
+  constructor(
+    private services: ContactformService,
+    private formBuilder: FormBuilder
+  ) {
+    this.siteKey = "6LcmyXoaAAAAAEJ-TaklnPhnqerCIQfAuc7nyapc";
+  }
   contactFrom = new FormGroup({
     name: new FormControl(""),
     email: new FormControl(""),
@@ -19,6 +26,12 @@ export class ContactUsComponent implements OnInit {
     subject: new FormControl(""),
     message: new FormControl(""),
   });
+  ngOnInit(): void {
+    this.contactFrom = this.formBuilder.group({
+      recaptcha: ["", Validators.required],
+    });
+  }
+  alert: boolean = false;
 
   onSubmit() {
     this.services.addData(this.contactFrom.value).subscribe((data) => {

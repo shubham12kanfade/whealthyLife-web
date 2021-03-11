@@ -263,7 +263,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       consts: [[1, "container-fluid"], [1, "card"], [1, "card-header"], [1, "text-center", "why-title"], [1, "card-body", "mt-0", "card-b"], [1, "row", "active-div"], [1, "col-sm-12"], [1, "corosal-opt", "text-center"], [1, "hd-title"], [1, "mt-4", "p-text"], ["mat-raised-button", "", 1, "submit-btn-mat", "mt-5", 3, "click"], [1, "ng-scope"], [1, "row"], [1, "col-sm-12", 2, "padding", "50px"], [1, "row", 2, "padding-right", "25px", "padding-left", "25px", "margin-right", "auto", "margin-left", "auto"], [1, "col-sm-4", "img-article"], ["src", "../../../../assets/img/invite-connect.png", "alt", "Generic placeholder image", "width", "140", "height", "140", 1, "img-circle"], [1, "why-head-main"], ["src", "../../../../assets/img/invite-visibility.png", "alt", "Generic placeholder image", 1, "img-circle"], ["src", "../../../../assets/img/invite-bulb.png", "alt", "Generic placeholder image", 1, "img-circle"], [1, "featurette-divider"], [1, "why-title", "mt-5", "mb-5"], [1, "carousel-caption-custome", "center-block", 2, "padding-left", "20%", "padding-right", "20%"], [1, "carousel-inner", 3, "options"], ["review", ""], ["carouselSlide", ""], [1, "row", "prev-next"], [1, "lhs", 3, "click"], ["aria-hidden", "true", 1, "fa", "fa-chevron-circle-left", "fa-3x"], [1, "rhs", 3, "click"], ["aria-hidden", "true", 1, "fa", "fa-chevron-circle-right", "fa-3x"], [1, "footer-text"], [1, "head-Our"], [1, "col-sm-5", "mt-4", "text-center", "d-flex", "justify-content-center"], [1, "row", "mt-6"], [1, "col-sm-6", "mt-3"], [1, "stats-right"], [1, "stats-spec-right", "mt-3"], [1, "carousel-caption-custome", "carousel-inner"], [1, "ng-binding", "ptext-m"], [1, "mtp"], [1, "doc-name", "text-center"], [1, "spec"], [1, "spec", "text-center"]],
       template: function HealthFeedComponent_Template(rf, ctx) {
         if (rf & 1) {
-          var _r1082 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
+          var _r1066 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 0);
 
@@ -418,11 +418,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](49, "div", 27);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function HealthFeedComponent_Template_div_click_49_listener() {
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r1082);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r1066);
 
-            var _r1079 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵreference"](45);
+            var _r1063 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵreference"](45);
 
-            return _r1079.prev();
+            return _r1063.prev();
           });
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](50, "i", 28);
@@ -432,11 +432,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](51, "div", 29);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function HealthFeedComponent_Template_div_click_51_listener() {
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r1082);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r1066);
 
-            var _r1079 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵreference"](45);
+            var _r1063 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵreference"](45);
 
-            return _r1079.next();
+            return _r1063.next();
           });
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](52, "i", 30);
