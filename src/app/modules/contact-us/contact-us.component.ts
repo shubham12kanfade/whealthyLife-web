@@ -1,3 +1,4 @@
+import { element } from "protractor";
 import { Component, OnInit } from "@angular/core";
 import {
   FormGroup,
@@ -12,13 +13,17 @@ import { ContactformService } from "src/app/services/contactform.service";
   styleUrls: ["./contact-us.component.scss"],
 })
 export class ContactUsComponent implements OnInit {
-  siteKey: string;
+  siteKey: any = "6LcmyXoaAAAAAEJ-TaklnPhnqerCIQfAuc7nyapc";
+  check1: boolean = false;
+  check2: boolean = false;
+  check3: boolean = false;
+  check4: boolean = false;
+  check5: boolean = false;
+  check6: boolean = false;
   constructor(
     private services: ContactformService,
     private formBuilder: FormBuilder
-  ) {
-    this.siteKey = "6LcmyXoaAAAAAEJ-TaklnPhnqerCIQfAuc7nyapc";
-  }
+  ) {}
   contactFrom = new FormGroup({
     name: new FormControl(""),
     email: new FormControl(""),
@@ -43,5 +48,24 @@ export class ContactUsComponent implements OnInit {
   }
   closeAlert() {
     this.alert = false;
+  }
+
+  onClick1() {
+    this.check1 = true;
+  }
+  onClick2() {
+    this.check2 = true;
+  }
+  onClick3() {
+    this.check3 = true;
+  }
+  onClick4() {
+    this.check4 = true;
+  }
+  onClick5() {
+    this.check5 = true;
+  }
+  onClick6() {
+    this.check6 = true;
   }
 }

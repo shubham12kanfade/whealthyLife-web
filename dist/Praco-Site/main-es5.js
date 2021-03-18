@@ -433,10 +433,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var primeng_toast__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(
     /*! primeng/toast */
     "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-toast.js");
+    /* harmony import */
+
+
+    var ngx_captcha__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(
+    /*! ngx-captcha */
+    "./node_modules/ngx-captcha/__ivy_ngcc__/fesm2015/ngx-captcha.js");
 
     var config = new angularx_social_login__WEBPACK_IMPORTED_MODULE_19__["AuthServiceConfig"]([{
       id: angularx_social_login__WEBPACK_IMPORTED_MODULE_19__["FacebookLoginProvider"].PROVIDER_ID,
-      provider: new angularx_social_login__WEBPACK_IMPORTED_MODULE_19__["FacebookLoginProvider"]('268964477481111')
+      provider: new angularx_social_login__WEBPACK_IMPORTED_MODULE_19__["FacebookLoginProvider"]("268964477481111")
     }]);
 
     function provideConfig() {
@@ -459,7 +465,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         provide: angularx_social_login__WEBPACK_IMPORTED_MODULE_19__["AuthServiceConfig"],
         useFactory: provideConfig
       }],
-      imports: [[angularx_social_login__WEBPACK_IMPORTED_MODULE_19__["SocialLoginModule"], _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["BrowserModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_6__["AppRoutingModule"], ngx_owl_carousel_o__WEBPACK_IMPORTED_MODULE_5__["CarouselModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_8__["BrowserAnimationsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["ReactiveFormsModule"], angular_ng_autocomplete__WEBPACK_IMPORTED_MODULE_12__["AutocompleteLibModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_10__["HttpClientModule"], primeng_toast__WEBPACK_IMPORTED_MODULE_20__["ToastModule"], src_app_shared_shared_module__WEBPACK_IMPORTED_MODULE_1__["SharedModule"], // AngularFireMessagingModule,
+      imports: [[angularx_social_login__WEBPACK_IMPORTED_MODULE_19__["SocialLoginModule"], _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["BrowserModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_6__["AppRoutingModule"], ngx_owl_carousel_o__WEBPACK_IMPORTED_MODULE_5__["CarouselModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_8__["BrowserAnimationsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["ReactiveFormsModule"], angular_ng_autocomplete__WEBPACK_IMPORTED_MODULE_12__["AutocompleteLibModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_10__["HttpClientModule"], primeng_toast__WEBPACK_IMPORTED_MODULE_20__["ToastModule"], src_app_shared_shared_module__WEBPACK_IMPORTED_MODULE_1__["SharedModule"], ngx_captcha__WEBPACK_IMPORTED_MODULE_21__["NgxCaptchaModule"], // AngularFireMessagingModule,
       // AngularFireModule,
       _agm_core__WEBPACK_IMPORTED_MODULE_13__["AgmCoreModule"].forRoot()]]
     });
@@ -467,7 +473,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     (function () {
       (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵsetNgModuleScope"](AppModule, {
         declarations: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"], _component_forgot_password_forgot_password_component__WEBPACK_IMPORTED_MODULE_14__["ForgotPasswordComponent"], _component_my_appointments_my_appointments_component__WEBPACK_IMPORTED_MODULE_18__["MyAppointmentsComponent"], _component_design_design_component__WEBPACK_IMPORTED_MODULE_16__["DesignComponent"], _component_notification_popup_notification_popup_component__WEBPACK_IMPORTED_MODULE_17__["NotificationPopupComponent"]],
-        imports: [angularx_social_login__WEBPACK_IMPORTED_MODULE_19__["SocialLoginModule"], _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["BrowserModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_6__["AppRoutingModule"], ngx_owl_carousel_o__WEBPACK_IMPORTED_MODULE_5__["CarouselModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_8__["BrowserAnimationsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["ReactiveFormsModule"], angular_ng_autocomplete__WEBPACK_IMPORTED_MODULE_12__["AutocompleteLibModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_10__["HttpClientModule"], primeng_toast__WEBPACK_IMPORTED_MODULE_20__["ToastModule"], src_app_shared_shared_module__WEBPACK_IMPORTED_MODULE_1__["SharedModule"], _agm_core__WEBPACK_IMPORTED_MODULE_13__["AgmCoreModule"]]
+        imports: [angularx_social_login__WEBPACK_IMPORTED_MODULE_19__["SocialLoginModule"], _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["BrowserModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_6__["AppRoutingModule"], ngx_owl_carousel_o__WEBPACK_IMPORTED_MODULE_5__["CarouselModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_8__["BrowserAnimationsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["ReactiveFormsModule"], angular_ng_autocomplete__WEBPACK_IMPORTED_MODULE_12__["AutocompleteLibModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_10__["HttpClientModule"], primeng_toast__WEBPACK_IMPORTED_MODULE_20__["ToastModule"], src_app_shared_shared_module__WEBPACK_IMPORTED_MODULE_1__["SharedModule"], ngx_captcha__WEBPACK_IMPORTED_MODULE_21__["NgxCaptchaModule"], _agm_core__WEBPACK_IMPORTED_MODULE_13__["AgmCoreModule"]]
       });
     })();
     /*@__PURE__*/
@@ -478,7 +484,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["NgModule"],
         args: [{
           declarations: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"], _component_forgot_password_forgot_password_component__WEBPACK_IMPORTED_MODULE_14__["ForgotPasswordComponent"], _component_my_appointments_my_appointments_component__WEBPACK_IMPORTED_MODULE_18__["MyAppointmentsComponent"], _component_design_design_component__WEBPACK_IMPORTED_MODULE_16__["DesignComponent"], _component_notification_popup_notification_popup_component__WEBPACK_IMPORTED_MODULE_17__["NotificationPopupComponent"]],
-          imports: [angularx_social_login__WEBPACK_IMPORTED_MODULE_19__["SocialLoginModule"], _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["BrowserModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_6__["AppRoutingModule"], ngx_owl_carousel_o__WEBPACK_IMPORTED_MODULE_5__["CarouselModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_8__["BrowserAnimationsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["ReactiveFormsModule"], angular_ng_autocomplete__WEBPACK_IMPORTED_MODULE_12__["AutocompleteLibModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_10__["HttpClientModule"], primeng_toast__WEBPACK_IMPORTED_MODULE_20__["ToastModule"], src_app_shared_shared_module__WEBPACK_IMPORTED_MODULE_1__["SharedModule"], // AngularFireMessagingModule,
+          imports: [angularx_social_login__WEBPACK_IMPORTED_MODULE_19__["SocialLoginModule"], _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["BrowserModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_6__["AppRoutingModule"], ngx_owl_carousel_o__WEBPACK_IMPORTED_MODULE_5__["CarouselModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_8__["BrowserAnimationsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["ReactiveFormsModule"], angular_ng_autocomplete__WEBPACK_IMPORTED_MODULE_12__["AutocompleteLibModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_10__["HttpClientModule"], primeng_toast__WEBPACK_IMPORTED_MODULE_20__["ToastModule"], src_app_shared_shared_module__WEBPACK_IMPORTED_MODULE_1__["SharedModule"], ngx_captcha__WEBPACK_IMPORTED_MODULE_21__["NgxCaptchaModule"], // AngularFireMessagingModule,
           // AngularFireModule,
           _agm_core__WEBPACK_IMPORTED_MODULE_13__["AgmCoreModule"].forRoot()],
           providers: [_services_current_loc_ip_service__WEBPACK_IMPORTED_MODULE_0__["CurrentLocIpService"], _services_api_apicall_service__WEBPACK_IMPORTED_MODULE_9__["ApiCallService"], ngx_cookie_service__WEBPACK_IMPORTED_MODULE_11__["CookieService"], primeng_api__WEBPACK_IMPORTED_MODULE_15__["MessageService"], angularx_social_login__WEBPACK_IMPORTED_MODULE_19__["AuthService"], {

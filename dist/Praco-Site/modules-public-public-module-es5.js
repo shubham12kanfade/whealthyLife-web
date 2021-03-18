@@ -22530,11 +22530,12 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     var ContactUsComponent =
     /*#__PURE__*/
     function () {
-      function ContactUsComponent(services) {
+      function ContactUsComponent(services, formBuilder) {
         _classCallCheck(this, ContactUsComponent);
 
         this.services = services;
-        this.alert = false;
+        this.formBuilder = formBuilder;
+        this.siteKey = "6LcmyXoaAAAAAEJ-TaklnPhnqerCIQfAuc7nyapc";
         this.contactFrom = new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormGroup"]({
           name: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"](""),
           email: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"](""),
@@ -22542,11 +22543,16 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           subject: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"](""),
           message: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"]("")
         });
+        this.alert = false;
       }
 
       _createClass(ContactUsComponent, [{
         key: "ngOnInit",
-        value: function ngOnInit() {}
+        value: function ngOnInit() {
+          this.contactFrom = this.formBuilder.group({
+            recaptcha: ["", _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required]
+          });
+        }
       }, {
         key: "onSubmit",
         value: function onSubmit() {
@@ -22571,7 +22577,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }();
 
     ContactUsComponent.ɵfac = function ContactUsComponent_Factory(t) {
-      return new (t || ContactUsComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_services_contactform_service__WEBPACK_IMPORTED_MODULE_2__["ContactformService"]));
+      return new (t || ContactUsComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_services_contactform_service__WEBPACK_IMPORTED_MODULE_2__["ContactformService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"]));
     };
 
     ContactUsComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
@@ -22877,6 +22883,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }], function () {
         return [{
           type: src_app_services_contactform_service__WEBPACK_IMPORTED_MODULE_2__["ContactformService"]
+        }, {
+          type: _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"]
         }];
       }, null);
     })();

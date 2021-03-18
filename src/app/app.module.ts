@@ -30,6 +30,7 @@ import { ToastModule } from "primeng/toast";
 import { environment } from "./../environments/environment";
 import { CngPasswordComponent } from "./component/cng-password/cng-password.component";
 import { NgxCaptchaModule } from "ngx-captcha";
+import { EprescriptionComponent } from "./modules/doctors/eprescription/eprescription.component";
 
 const config = new AuthServiceConfig([
   {
@@ -49,6 +50,7 @@ export function provideConfig() {
     MyAppointmentsComponent,
     DesignComponent,
     NotificationPopupComponent,
+    EprescriptionComponent,
   ],
   imports: [
     SocialLoginModule,

@@ -102,50 +102,62 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    var _angular_forms__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! @angular/forms */
+    "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
     /*! @angular/core */
     "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
     /* harmony import */
 
 
-    var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
     /*! @angular/common */
     "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
     /* harmony import */
 
 
-    var _contact_us_routing_module__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    var _contact_us_routing_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
     /*! ./contact-us-routing.module */
     "./src/app/modules/contact-us/contact-us-routing.module.ts");
+    /* harmony import */
+
+
+    var ngx_captcha__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! ngx-captcha */
+    "./node_modules/ngx-captcha/__ivy_ngcc__/fesm2015/ngx-captcha.js");
 
     var ContactUsModule = function ContactUsModule() {
       _classCallCheck(this, ContactUsModule);
     };
 
-    ContactUsModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineNgModule"]({
+    ContactUsModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineNgModule"]({
       type: ContactUsModule
     });
-    ContactUsModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjector"]({
+    ContactUsModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector"]({
       factory: function ContactUsModule_Factory(t) {
         return new (t || ContactUsModule)();
       },
-      imports: [[_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _contact_us_routing_module__WEBPACK_IMPORTED_MODULE_2__["ContactUsRoutingModule"]]]
+      imports: [[_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _contact_us_routing_module__WEBPACK_IMPORTED_MODULE_3__["ContactUsRoutingModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_0__["ReactiveFormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_0__["FormsModule"], ngx_captcha__WEBPACK_IMPORTED_MODULE_4__["NgxCaptchaModule"]]]
     });
 
     (function () {
-      (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsetNgModuleScope"](ContactUsModule, {
-        imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _contact_us_routing_module__WEBPACK_IMPORTED_MODULE_2__["ContactUsRoutingModule"]]
+      (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsetNgModuleScope"](ContactUsModule, {
+        imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _contact_us_routing_module__WEBPACK_IMPORTED_MODULE_3__["ContactUsRoutingModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_0__["ReactiveFormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_0__["FormsModule"], ngx_captcha__WEBPACK_IMPORTED_MODULE_4__["NgxCaptchaModule"]]
       });
     })();
     /*@__PURE__*/
 
 
     (function () {
-      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](ContactUsModule, [{
-        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"],
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](ContactUsModule, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"],
         args: [{
           declarations: [],
-          imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _contact_us_routing_module__WEBPACK_IMPORTED_MODULE_2__["ContactUsRoutingModule"]]
+          imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _contact_us_routing_module__WEBPACK_IMPORTED_MODULE_3__["ContactUsRoutingModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_0__["ReactiveFormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_0__["FormsModule"], ngx_captcha__WEBPACK_IMPORTED_MODULE_4__["NgxCaptchaModule"]]
         }]
       }], null, null);
     })();

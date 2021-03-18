@@ -17676,9 +17676,10 @@ function ContactUsComponent_div_41_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } }
 class ContactUsComponent {
-    constructor(services) {
+    constructor(services, formBuilder) {
         this.services = services;
-        this.alert = false;
+        this.formBuilder = formBuilder;
+        this.siteKey = "6LcmyXoaAAAAAEJ-TaklnPhnqerCIQfAuc7nyapc";
         this.contactFrom = new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormGroup"]({
             name: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"](""),
             email: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"](""),
@@ -17686,8 +17687,13 @@ class ContactUsComponent {
             subject: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"](""),
             message: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"](""),
         });
+        this.alert = false;
     }
-    ngOnInit() { }
+    ngOnInit() {
+        this.contactFrom = this.formBuilder.group({
+            recaptcha: ["", _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+        });
+    }
     onSubmit() {
         this.services.addData(this.contactFrom.value).subscribe((data) => {
             this.alert = true;
@@ -17700,7 +17706,7 @@ class ContactUsComponent {
         this.alert = false;
     }
 }
-ContactUsComponent.ɵfac = function ContactUsComponent_Factory(t) { return new (t || ContactUsComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_services_contactform_service__WEBPACK_IMPORTED_MODULE_2__["ContactformService"])); };
+ContactUsComponent.ɵfac = function ContactUsComponent_Factory(t) { return new (t || ContactUsComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_services_contactform_service__WEBPACK_IMPORTED_MODULE_2__["ContactformService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"])); };
 ContactUsComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: ContactUsComponent, selectors: [["app-contact-us"]], decls: 82, vars: 2, consts: [[1, "back"], ["src", "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.742759098362!2d77.60621321413416!3d12.859884420800947!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae6b20af8c141b%3A0x3d4c99009f402006!2sNobel+Residency+Road+%26+2nd+Cross+Road%2C+Nobel+Residency%2C+Phase+2%2C+Tejaswini+Nagar%2C+Bengaluru%2C+Karnataka+560076!5e0!3m2!1sen!2sin!4v1559983349830!5m2!1sen!2sin", "width", "100%", "height", "450", "frameborder", "0", "allowfullscreen", "", 2, "border", "0", "height", "260px"], [1, "container", "margin_60_35"], [1, "row"], [1, "col-lg-3", "col-md-4", "box_general", "ml-auto"], [1, ""], ["id", "contact_info"], [1, "contact"], [1, "col-12"], [1, "pe-7s-mail"], [1, "text-danger", "ml-2"], [1, "pe-7s-credit"], [1, "col-lg-8", "col-md-8", "ml-auto"], [1, "box_general"], ["class", "alert alert-success alert-dismissible fade show", "role", "alert", 4, "ngIf"], [1, "contact", "mt-4"], [1, "button-block", "mb-3"], ["type", "button", 1, "btn", "btn-outline-success", "mr-3"], ["id", "message-contact"], [3, "formGroup", "ngSubmit"], [1, "col-md-12", "col-sm-12"], [1, "form-group"], ["type", "text", "formControlName", "name", "placeholder", "Name", 1, "form-control"], [1, "col-md-6", "col-sm-6"], ["type", "email", "formControlName", "email", "placeholder", "Email", 1, "form-control"], ["type", "text", "formControlName", "phone", "placeholder", "Phone number", 1, "form-control"], ["type", "text", "formControlName", "subject", "placeholder", "Subject", 1, "form-control"], [1, "col-md-12"], ["rows", "5", "formControlName", "message", "placeholder", "Your Message", 1, "form-control", 2, "height", "100px"], ["type", "submit", "value", "Submit", 1, "btn_1", "add_top_20", 2, "background-color", "#1a9007"], ["role", "alert", 1, "alert", "alert-success", "alert-dismissible", "fade", "show"], ["type", "button", "data-dismiss", "alert", "aria-label", "Close", 1, "close", 3, "click"], ["aria-hidden", "true"]], template: function ContactUsComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "iframe", 1);
@@ -17848,7 +17854,7 @@ ContactUsComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefin
                 templateUrl: "./contact-us.component.html",
                 styleUrls: ["./contact-us.component.scss"],
             }]
-    }], function () { return [{ type: src_app_services_contactform_service__WEBPACK_IMPORTED_MODULE_2__["ContactformService"] }]; }, null); })();
+    }], function () { return [{ type: src_app_services_contactform_service__WEBPACK_IMPORTED_MODULE_2__["ContactformService"] }, { type: _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"] }]; }, null); })();
 
 
 /***/ }),

@@ -75,24 +75,56 @@
           <h3 class="contact mt-4">Contact us</h3>
           <div class="button-block mb-3">
             <p>Your query is about</p>
-            <button type="button" class="btn btn-outline-success mr-3">
-              E-Consult
-            </button>
-            <button type="button" class="btn btn-outline-success mr-3">
-              Lab-Test
-            </button>
-            <button type="button" class="btn btn-outline-success mr-3">
-              Medicine
-            </button>
-            <button type="button" class="btn btn-outline-success mr-3">
-              Patnerships
-            </button>
-            <button type="button" class="btn btn-outline-success mr-3">
-              Join Us
-            </button>
-            <button type="button" class="btn btn-outline-success mr-3">
-              Others
-            </button>
+            <div class="mydiv">
+              <button
+                type="button"
+                class="btn btn-outline-success mr-3"
+                [class.changestyle]="check1"
+                (click)="onClick1()"
+              >
+                E-Consult
+              </button>
+              <button
+                type="button"
+                class="btn btn-outline-success mr-3"
+                [class.changestyle]="check2"
+                (click)="onClick2()"
+              >
+                Lab-Test
+              </button>
+              <button
+                type="button"
+                class="btn btn-outline-success mr-3"
+                [class.changestyle]="check3"
+                (click)="onClick3()"
+              >
+                Medicine
+              </button>
+              <button
+                type="button"
+                class="btn btn-outline-success mr-3"
+                [class.changestyle]="check4"
+                (click)="onClick4()"
+              >
+                Patnerships
+              </button>
+              <button
+                type="button"
+                class="btn btn-outline-success mr-3"
+                [class.changestyle]="check5"
+                (click)="onClick5()"
+              >
+                Join Us
+              </button>
+              <button
+                type="button"
+                class="btn btn-outline-success mr-3"
+                [class.changestyle]="check6"
+                (click)="onClick6()"
+              >
+                Others
+              </button>
+            </div>
           </div>
           <div>
             <div id="message-contact"></div>
@@ -165,7 +197,7 @@
               </div>
               <ngx-recaptcha2
                 #captchaElem
-                [siteKey]="siteKey"
+                siteKey="'6LcmyXoaAAAAAEJ-TaklnPhnqerCIQfAuc7nyapc'"
                 formControlName="recaptcha"
               >
               </ngx-recaptcha2>
