@@ -179,5 +179,8 @@ validatenightSlot(data){
   return this.api.postData('slots/validate/nightSlot',data)
 }
 
+  getBookingData(id:any){
+    return this.api.getData(''+id)
+  }
 
 }

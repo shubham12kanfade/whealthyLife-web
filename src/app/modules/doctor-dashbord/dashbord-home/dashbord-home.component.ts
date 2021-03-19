@@ -28,6 +28,7 @@ export class DashbordHomeComponent implements OnInit {
   off: boolean = false;
   color = 'primary';
   id: any;
+  paitentDetail:any;
   
  
   constructor(public DAS:DashboardAnalyticsService, public UserService:UserService,
@@ -100,6 +101,12 @@ export class DashbordHomeComponent implements OnInit {
     }
   }
 
+  getPaitentDetails() {
+    this.mainService.getBookingData(this.id).then(data => {
+      this.paitentDetail = data;
+      console.log(data)
+    })
+  }
  
 
 }
