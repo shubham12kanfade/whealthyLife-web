@@ -1,0 +1,12 @@
+{
+    "emmet.excludeLanguages": [
+
+
+        "markdown"
+    ],
+    "emmet.triggerExpansionOnTab": true,
+    "emmet.extensionsPath": "",
+    "emmet.preferences": {
+    
+    }
+}

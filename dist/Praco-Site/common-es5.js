@@ -49,23 +49,23 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       _createClass(BookingPageService, [{
         key: "PopularSearches",
         value: function PopularSearches() {
-          return this.apiCallService.getData('specialisations/four');
+          return this.apiCallService.getData("specialisations/four");
         }
       }, {
         key: "getCarousel",
         value: function getCarousel(data) {
-          return this.apiCallService.getData('customer/review/get/by/type/' + data);
+          return this.apiCallService.getData("customer/review/get/by/type/" + data);
         }
       }, {
         key: "getDegree",
         value: function getDegree(id) {
-          return this.apiCallService.getData('doctor/qualification/by/' + id);
+          return this.apiCallService.getData("doctor/qualification/by/" + id);
         }
       }, {
         key: "getDoctorSlotId",
         value: function getDoctorSlotId(id, data) {
           console.log("BookingPageService -> getDoctorSlotId -> data", data);
-          return this.apiCallService.postData('slots/by/' + id, data);
+          return this.apiCallService.getData("slots/by/" + id, data);
         }
       }, {
         key: "getDoctorSlotId1",
@@ -73,37 +73,37 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           console.log("BookingPageService -> getDoctorSlotId -> data", data);
           var fdggd = data._i;
           console.log("BookingPageService -> getDoctorSlotId1 -> fdggd ", fdggd);
-          return this.apiCallService.postData('slots/by/' + id, data._i);
+          return this.apiCallService.postData("slots/by/" + id, data._i);
         }
       }, {
         key: "getDroctorAward",
         value: function getDroctorAward(id) {
-          return this.apiCallService.getData('doctor/award/by/' + id);
+          return this.apiCallService.getData("doctor/award/by/" + id);
         }
       }, {
         key: "getDroctorMember",
         value: function getDroctorMember(id) {
-          return this.apiCallService.getData('doctor/membership/by/' + id);
+          return this.apiCallService.getData("doctor/membership/by/" + id);
         }
       }, {
         key: "getQa",
         value: function getQa(id) {
-          return this.apiCallService.getData('QA/by/doctor/' + id);
+          return this.apiCallService.getData("QA/by/doctor/" + id);
         }
       }, {
         key: "getReview",
         value: function getReview(id) {
-          return this.apiCallService.getData('customer/review/get/by/doctor/' + id);
+          return this.apiCallService.getData("customer/review/get/by/doctor/" + id);
         }
       }, {
         key: "getAvgStar",
         value: function getAvgStar(id) {
-          return this.apiCallService.getData('doctor/averageStars/by/' + id);
+          return this.apiCallService.getData("doctor/averageStars/by/" + id);
         }
       }, {
         key: "getHf",
         value: function getHf(id) {
-          return this.apiCallService.getData('HF/HealthFeeds/by/' + id);
+          return this.apiCallService.getData("HF/HealthFeeds/by/" + id);
         }
       }]);
 
@@ -117,7 +117,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     BookingPageService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({
       token: BookingPageService,
       factory: BookingPageService.ɵfac,
-      providedIn: 'root'
+      providedIn: "root"
     });
     /*@__PURE__*/
 
@@ -125,7 +125,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](BookingPageService, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"],
         args: [{
-          providedIn: 'root'
+          providedIn: "root"
         }]
       }], function () {
         return [{
@@ -711,6 +711,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         key: "validatenightSlot",
         value: function validatenightSlot(data) {
           return this.api.postData('slots/validate/nightSlot', data);
+        }
+      }, {
+        key: "getBookingData",
+        value: function getBookingData(id) {
+          return this.api.getData('' + id);
         }
       }]);
 

@@ -20,49 +20,49 @@ class BookingPageService {
         this.apiCallService = apiCallService;
     }
     PopularSearches() {
-        return this.apiCallService.getData('specialisations/four');
+        return this.apiCallService.getData("specialisations/four");
     }
     getCarousel(data) {
-        return this.apiCallService.getData('customer/review/get/by/type/' + data);
+        return this.apiCallService.getData("customer/review/get/by/type/" + data);
     }
     getDegree(id) {
-        return this.apiCallService.getData('doctor/qualification/by/' + id);
+        return this.apiCallService.getData("doctor/qualification/by/" + id);
     }
     getDoctorSlotId(id, data) {
         console.log("BookingPageService -> getDoctorSlotId -> data", data);
-        return this.apiCallService.postData('slots/by/' + id, data);
+        return this.apiCallService.getData("slots/by/" + id, data);
     }
     getDoctorSlotId1(id, data) {
         console.log("BookingPageService -> getDoctorSlotId -> data", data);
         const fdggd = data._i;
         console.log("BookingPageService -> getDoctorSlotId1 -> fdggd ", fdggd);
-        return this.apiCallService.postData('slots/by/' + id, data._i);
+        return this.apiCallService.postData("slots/by/" + id, data._i);
     }
     getDroctorAward(id) {
-        return this.apiCallService.getData('doctor/award/by/' + id);
+        return this.apiCallService.getData("doctor/award/by/" + id);
     }
     getDroctorMember(id) {
-        return this.apiCallService.getData('doctor/membership/by/' + id);
+        return this.apiCallService.getData("doctor/membership/by/" + id);
     }
     getQa(id) {
-        return this.apiCallService.getData('QA/by/doctor/' + id);
+        return this.apiCallService.getData("QA/by/doctor/" + id);
     }
     getReview(id) {
-        return this.apiCallService.getData('customer/review/get/by/doctor/' + id);
+        return this.apiCallService.getData("customer/review/get/by/doctor/" + id);
     }
     getAvgStar(id) {
-        return this.apiCallService.getData('doctor/averageStars/by/' + id);
+        return this.apiCallService.getData("doctor/averageStars/by/" + id);
     }
     getHf(id) {
-        return this.apiCallService.getData('HF/HealthFeeds/by/' + id);
+        return this.apiCallService.getData("HF/HealthFeeds/by/" + id);
     }
 }
 BookingPageService.ɵfac = function BookingPageService_Factory(t) { return new (t || BookingPageService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_api_apicall_service__WEBPACK_IMPORTED_MODULE_1__["ApiCallService"])); };
-BookingPageService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({ token: BookingPageService, factory: BookingPageService.ɵfac, providedIn: 'root' });
+BookingPageService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({ token: BookingPageService, factory: BookingPageService.ɵfac, providedIn: "root" });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](BookingPageService, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"],
         args: [{
-                providedIn: 'root'
+                providedIn: "root",
             }]
     }], function () { return [{ type: _api_apicall_service__WEBPACK_IMPORTED_MODULE_1__["ApiCallService"] }]; }, null); })();
 
@@ -376,6 +376,9 @@ class MainService {
     }
     validatenightSlot(data) {
         return this.api.postData('slots/validate/nightSlot', data);
+    }
+    getBookingData(id) {
+        return this.api.getData('' + id);
     }
 }
 MainService.ɵfac = function MainService_Factory(t) { return new (t || MainService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_api_apicall_service__WEBPACK_IMPORTED_MODULE_1__["ApiCallService"])); };

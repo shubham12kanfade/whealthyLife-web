@@ -126,13 +126,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
 
       if (rf & 2) {
-        var item_r650 = ctx.$implicit;
+        var item_r642 = ctx.$implicit;
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("value", item_r650.value);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("value", item_r642.value);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](item_r650.name);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](item_r642.name);
       }
     }
 
@@ -1291,7 +1291,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       consts: [[1, "container-fluid"], [1, "row"], [1, "h3", "text-gray-800"], [1, "col-sm-12", "col-md-3", "col-lg-2", "pt-2"], ["id", "inputGroupSelect01", 1, "custom-select", 3, "change"], ["mySelect", ""], ["value", "Invoiced Income"], ["value", "Payments"], ["value", "New Patients"], ["value", "Appointments"], ["value", "Communications"], ["value", "Billing Summary"], ["value", "Amount Due"], ["id", "inputGroupSelect02", 1, "custom-select", 3, "disabled", "change"], ["mySelect2", ""], [3, "value", 4, "ngFor", "ngForOf"], [1, "offset-lg-6", "offset-md-3", "col-lg-2", "col-md-3", "text-sm-center", "text-xs-center", "text-md-right", "pt-sm-2", "pt-xs-2"], ["aria-hidden", "true", 1, "fa", "fa-envelope", "p-3", "border", "mx-1", "pointer"], ["aria-hidden", "true", 1, "fa", "fa-print", "p-3", "border", "mx-1", "pointer"], ["aria-hidden", "true", 1, "fa", "fa-filter", "p-3", "border", "mx-1", "pointer", 3, "ngClass", "click"], [1, "card", "mt-3"], ["class", "card-body", 4, "ngIf"], ["class", "card mt-3", 4, "ngIf"], [3, "value"], [1, "card-body"], [1, "form-row"], [1, "form-group", "col-md-3"], ["for", "one"], ["type", "text", "id", "one", "placeholder", "", 1, "form-control"], ["for", "two"], ["type", "text", "id", "two", "placeholder", "", 1, "form-control"], ["for", "three"], ["type", "text", "id", "three", "placeholder", "", 1, "form-control"], ["for", "four"], ["type", "text", "id", "four", "placeholder", "", 1, "form-control"], ["for", "Patient Groups"], ["type", "text", "id", "Patient Groups", "placeholder", "", 1, "form-control"], ["for", "Payment Vendors"], ["type", "text", "id", "Payment Vendors", "placeholder", "", 1, "form-control"], ["for", "Taxes"], ["type", "text", "id", "Taxes", "placeholder", "", 1, "form-control"], ["for", "Cancelled"], ["type", "text", "id", "Cancelled", "placeholder", "", 1, "form-control"], [1, "col-sm-12", "col-md-2", "text-center"], [1, "h4", "text-gray-800"], [1, "font-weight-bold", "h4", "mb-2", "text-gray-800"], [1, "col-sm-12", "col-md-4", "text-center"], [1, "col-sm-6", "col-md-6", "text-center"], [1, "col-sm-12", "col-md-12", "text-center"], [1, "col-sm-4", "col-md-4", "text-center"], [1, "col-sm-4", "col-md-2", "text-center"], [1, "col-sm-6", "col-md-3", "text-center"], [1, "col-sm-6", "col-md-6"]],
       template: function ReportsComponent_Template(rf, ctx) {
         if (rf & 1) {
-          var _r651 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+          var _r643 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "section");
 
@@ -1316,11 +1316,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "select", 4, 5);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("change", function ReportsComponent_Template_select_change_8_listener() {
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r651);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r643);
 
-            var _r628 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](9);
+            var _r620 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](9);
 
-            return ctx.onOptionsSelected(_r628.value);
+            return ctx.onOptionsSelected(_r620.value);
           });
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](10, "option", 6);
@@ -1374,11 +1374,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](25, "select", 13, 14);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("change", function ReportsComponent_Template_select_change_25_listener() {
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r651);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r643);
 
-            var _r629 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](26);
+            var _r621 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](26);
 
-            return ctx.onOptionsSelected2(_r629.value);
+            return ctx.onOptionsSelected2(_r621.value);
           });
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](27, ReportsComponent_option_27_Template, 2, 2, "option", 15);
