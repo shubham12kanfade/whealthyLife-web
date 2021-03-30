@@ -1,18 +1,22 @@
- @media screen and (max-width:500){
-  .textc{
+@media screen and (max-width: 500) {
+  .textc {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
   }
- }
- 
-
- 
- video {
-    opacity: 100;
-    top: 1250px;
-    left: 390px;
+}
+.img-set {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/3/3c/IMG_logo_%282017%29.svg");
+}
+.dix {
+  margin: 0;
+  padding: 0;
+}
+video {
+  opacity: 100;
+  top: 1250px;
+  left: 390px;
 }
 input.ng-untouched.ng-pristine.ng-valid {
   border: 1px solid lightgray;
@@ -140,13 +144,13 @@ body {
 }
 
 .u-t-pulse {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: #0ba114;
-    box-shadow: 0 0 0 rgba(40, 190, 240, 0.4);
-    animation: pulse 1.2s infinite;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #0ba114;
+  box-shadow: 0 0 0 rgba(40, 190, 240, 0.4);
+  animation: pulse 1.2s infinite;
 }
 .c-button__redirect,
 .u-t-pulse {
@@ -172,15 +176,15 @@ body {
   border-radius: 50%;
 }
 .u-t-circle .u-t-triangle:after {
-    content: "";
-    width: 12px;
-    height: 12px;
-    top: 0;
-    background: linear-gradient(-90deg, rgba(197, 230, 243, 0.79), transparent),
-        linear-gradient(180deg, #0ba114 0, rgba(0, 58, 52, 0));
-    transform: rotate(90deg);
-    position: absolute;
-    border-top: 1px solid #0ba114;
+  content: "";
+  width: 12px;
+  height: 12px;
+  top: 0;
+  background: linear-gradient(-90deg, rgba(197, 230, 243, 0.79), transparent),
+    linear-gradient(180deg, #0ba114 0, rgba(0, 58, 52, 0));
+  transform: rotate(90deg);
+  position: absolute;
+  border-top: 1px solid #0ba114;
 }
 .c-article-card__body {
   margin: 10px;
@@ -259,7 +263,7 @@ body {
   text-align: center;
 }
 .c-list-item__icon {
-    color: #0ba114;
+  color: #0ba114;
 }
 
 @media (max-width: 768px) {
@@ -291,18 +295,18 @@ body {
   border: 1px solid #fff;
 }
 .c-button__redirect {
-    line-height: 38px;
-    width: auto;
-    height: 40px;
-    font-size: 16px;
-    color: #fff;
-    background-color: #0ba114;
-    border: 1px solid #0ba114;
-    border-radius: 2px;
-    box-sizing: border-box;
-    text-decoration: none;
-    outline: 0;
-    font-weight: 400;
+  line-height: 38px;
+  width: auto;
+  height: 40px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #0ba114;
+  border: 1px solid #0ba114;
+  border-radius: 2px;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: 0;
+  font-weight: 400;
 }
 // .c-full-width{overflow:hidden;display:table;width:100%;min-height:650px;height:calc(100vh - 102px);}
 // .c-list-item{line-height:1.4;color:#787887;}
@@ -327,11 +331,11 @@ body {
 }
 
 .c-icon-list {
-    overflow: hidden;
-    /* height: 80px; */
-    padding: 20px 0;
-    background-color: #0ba114;
-    text-align: center;
+  overflow: hidden;
+  /* height: 80px; */
+  padding: 20px 0;
+  background-color: #0ba114;
+  text-align: center;
 }
 .c-icon-list__list_wrapper {
   width: auto;
@@ -374,12 +378,25 @@ body {
 .c-jumbo {
   background-color: #28328c;
 }
+.xyz {
+  font-size: 21px;
+  // padding-left: 8rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
 .c-jumbo__banner {
-  background: url(../../../assets/img/homepage.06859593240c3efd483fe48951cfe6ff.png)
-    top no-repeat !important;
-  min-height: 460px;
+  background-color: #28328c;
+  background-image: url(../../../assets/img/homepage.06859593240c3efd483fe48951cfe6ff.bkp.png);
+  // top no-repeat !important;
+  // background-repeat: no-repeat !important;
+  width: 100%;
+  height: 470px;
+  min-height: 490px;
   background-attachment: fixed;
   background-position-y: 60px;
+  .badge {
+    background-color: #45a29e !important;
+    font-size: 70% !important;
+  }
 }
 .c-jumbo__header_container {
   padding-top: 40px;
@@ -1002,392 +1019,515 @@ body {
 }
 /*! CSS Used from: https://www.WhealthyLifestatic.com/nav/8.0.32/consumer/css/WhealthyLifenav.css ; media=all */
 @media all {
-    .WhealthyLife_GlobalNavigation .navbar a,
-    .WhealthyLife_GlobalNavigation .navbar .nav-items.hover-dark a,
-    .WhealthyLife_GlobalNavigation .navbar .navlist,
-    .WhealthyLife_GlobalNavigation .navbar .navlist .navlink .product-block div,
-    .WhealthyLife_GlobalNavigation .navbar .u-d-item,
-    .WhealthyLife_GlobalNavigation .navbar .u-d-item a {
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 20px;
-    }
-    .WhealthyLife_GlobalNavigation {
-        width: 100%;
-        z-index: 2000;
-        top: 0;
-    }
-    .WhealthyLife_GlobalNavigation .navbar .nav-left,
-    .WhealthyLife_GlobalNavigation .navbar .nav-mid,
-    .WhealthyLife_GlobalNavigation .navbar .nav-right {
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-    }
-    .WhealthyLife_GlobalNavigation .text-left {
-        text-align: left;
-    }
-    .WhealthyLife_GlobalNavigation .text-right {
-        text-align: right;
-    }
-    .WhealthyLife_GlobalNavigation .btn-border {
-        display: inline-block;
-        border-radius: 3px;
-        border: 1px solid #414146;
-        background-color: transparent;
-        padding: 5px 20px;
-        cursor: pointer;
-        color: #414146 !important;
-    }
-    .WhealthyLife_GlobalNavigation .btn-border:hover {
-        background-color: transparent;
-        border: 1px solid #0ba114;
-        color: #0ba114 !important;
-    }
-    .WhealthyLife_GlobalNavigation:before {
-        content: " ";
-        display: table;
-    }
-    .WhealthyLife_GlobalNavigation:after {
-        content: " ";
-        display: table;
-        visibility: hidden;
-        display: block;
-        font-size: 0;
-        content: " ";
-        clear: both;
-        height: 0;
-    }
-    .WhealthyLife_GlobalNavigation [class^="icon-"],
-    .WhealthyLife_GlobalNavigation [class*=" icon-"] {
-        font-family: "practicon" !important;
-        speak: none;
-        font-style: normal;
-        font-weight: normal;
-        font-variant: normal;
-        text-transform: none;
-        line-height: 1;
-        width: auto;
-        height: auto;
-        background: none;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-    }
-    .WhealthyLife_GlobalNavigation .navbar {
-        height: 60px;
-        background-color: #fff;
-        font-family: "Camphor", "Open Sans", sans-serif;
-        padding: 12px 0;
-        color: #414146;
-        box-sizing: border-box;
-        border-bottom: 1px solid rgba(216, 216, 216, 0.5);
-        border-radius: 0;
-    }
-    .WhealthyLife_GlobalNavigation .navbar * {
-        box-sizing: border-box;
-    }
-    .WhealthyLife_GlobalNavigation .navbar .wrapper {
-        cursor: auto;
-        display: block;
-        width: 100%;
-        height: 100%;
-        max-width: 1280px;
-        margin: 0 auto;
-        padding: 0 50px;
-    }
-    .WhealthyLife_GlobalNavigation .navbar a {
-        text-decoration: none;
-    }
-    .WhealthyLife_GlobalNavigation .navbar .overlay_layer {
-        position: fixed;
-        height: 100%;
-        width: 100%;
-        top: 0;
-        left: 0;
-        background-color: rgba(0, 0, 0, 0.4);
-        z-index: 100;
-        visibility: hidden;
-        opacity: 0;
-        transition: all 0.3s ease-out;
-        -webkit-transition: all 0.3s ease-out;
-        -moz-transition: all 0.3s ease-out;
-        -o-transition: all 0.3s ease-out;
-        -ms-transition: all 0.3s ease-out;
-    }
-    .WhealthyLife_GlobalNavigation .navbar.mobile {
-        padding: 0;
-        line-height: 60px;
-    }
-    .WhealthyLife_GlobalNavigation .navbar.mobile .overlay {
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        width: 0;
-        top: 60px;
-        z-index: 1000;
-        background: #fff;
-        overflow-x: hidden;
-        overflow-y: auto;
-        transition: 0.1s;
-    }
-    .WhealthyLife_GlobalNavigation .navbar.mobile .overlay .navlist .navlink:first-of-type {
-        margin-top: 5px;
-    }
-    .WhealthyLife_GlobalNavigation .navbar.mobile .nav-login-mobile.btn-border {
-        height: 30px;
-        color: #0ba114 !important;
-        padding: 5px 12px 8px 12px;
-        border-radius: 3px;
-        border: solid 1px #0ba114;
-    }
-    .WhealthyLife_GlobalNavigation {
-        font-family: "Camphor";
-        font-weight: 400;
-        -webkit-tap-highlight-color: transparent;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-    }
-    .WhealthyLife_GlobalNavigation .navbar {
-        margin: 0;
-    }
-    .WhealthyLife_GlobalNavigation .navbar a:focus,
-    .WhealthyLife_GlobalNavigation .navbar i:focus,
-    .WhealthyLife_GlobalNavigation .navbar div:focus,
-    .WhealthyLife_GlobalNavigation .navbar span:focus {
-        outline: none !important;
-    }
-    .WhealthyLife_GlobalNavigation .navbar a::-moz-selection,
-    .WhealthyLife_GlobalNavigation .navbar a::selection,
-    .WhealthyLife_GlobalNavigation .navbar a::-webkit-selection,
-    .WhealthyLife_GlobalNavigation .navbar i::-moz-selection,
-    .WhealthyLife_GlobalNavigation .navbar i::selection,
-    .WhealthyLife_GlobalNavigation .navbar i::-webkit-selection,
-    .WhealthyLife_GlobalNavigation .navbar div::-moz-selection,
-    .WhealthyLife_GlobalNavigation .navbar div::selection,
-    .WhealthyLife_GlobalNavigation .navbar div::-webkit-selection,
-    .WhealthyLife_GlobalNavigation .navbar span::-moz-selection,
-    .WhealthyLife_GlobalNavigation .navbar span::selection,
-    .WhealthyLife_GlobalNavigation .navbar span::-webkit-selection {
-        color: transparent;
-    }
-    .WhealthyLife_GlobalNavigation .navbar .nav-left,
-    .WhealthyLife_GlobalNavigation .navbar .nav-mid,
-    .WhealthyLife_GlobalNavigation .navbar .nav-right {
-        display: inline-block;
-        height: 100%;
-        vertical-align: top;
-    }
-    .WhealthyLife_GlobalNavigation .navbar .nav-left {
-        vertical-align: middle;
-        width: 252px;
-        box-sizing: border-box;
-    }
-    .WhealthyLife_GlobalNavigation .navbar .nav-left .ic::before {
-        line-height: 35px;
-    }
-    .WhealthyLife_GlobalNavigation .navbar .nav-left .WhealthyLife-logo {
-        line-height: 35px;
-    }
-    .WhealthyLife_GlobalNavigation .navbar .nav-mid {
-        width: 48%;
-        position: relative;
-        left: 0;
-    }
-    .WhealthyLife_GlobalNavigation .navbar .nav-right {
-        float: right;
-    }
-    .WhealthyLife_GlobalNavigation .navbar .nav-items {
-        display: inline-block;
-        margin-right: 24px;
-    }
-    .WhealthyLife_GlobalNavigation .navbar .nav-items.hover-dark a {
-        color: #414146;
-        line-height: 35px;
-    }
-    .WhealthyLife_GlobalNavigation .navbar .nav-items:last-child {
-        margin-right: 0px;
-    }
-    .WhealthyLife_GlobalNavigation .navbar .navlist {
-        position: relative;
-        height: 100%;
-        background-color: #fff;
-        display: inline-block;
-        position: absolute;
-        left: 0;
-        min-height: auto;
-        width: 100%;
-    }
-    .WhealthyLife_GlobalNavigation .navbar .navlist a {
-        color: #414146;
-        display: block;
-        padding: 8px 0;
-        clear: both;
-        position: relative;
-        cursor: pointer;
-    }
-    .WhealthyLife_GlobalNavigation .navbar .navlist .navlink {
-        margin: 0;
-        max-width: 100%;
-        box-sizing: border-box;
-        vertical-align: top;
-        display: block;
-        clear: both;
-        padding: 0 0 0 24px;
-    }
-    .WhealthyLife_GlobalNavigation .navbar .navlist .navlink.selected:hover {
-        background: none;
-    }
-    .WhealthyLife_GlobalNavigation .navbar .navlist .navlink .icon-wrap {
-        width: 25px;
-        display: table-cell;
-    }
-    .WhealthyLife_GlobalNavigation .navbar .navlist .navlink .product-block {
-        width: 98%;
-        display: table-cell;
-    }
-    .WhealthyLife_GlobalNavigation .navbar .navlist .navlink .product-block div {
-        color: #414146;
-    }
-    .WhealthyLife_GlobalNavigation .navbar .navlist .navlink a i {
-        margin: 0 15px 0 0;
-    }
-    .WhealthyLife_GlobalNavigation .navbar .navlist .navlink.selected > a {
-        color: #0ba114;
-        font-weight: 400;
-    }
-    .WhealthyLife_GlobalNavigation .navbar .navlist .navlink.selected > a i.ic {
-        color: #0ba114;
-        font-weight: 400;
-    }
-    .WhealthyLife_GlobalNavigation .navbar .navlist .navlink:hover a {
-        color: #0ba114;
-    }
-    .WhealthyLife_GlobalNavigation .navbar .navlist .navlink:hover a .product-block div:first-child,
-    .WhealthyLife_GlobalNavigation .navbar .navlist .navlink:hover a i.ic {
-        color: #0ba114;
-    }
-    .WhealthyLife_GlobalNavigation .navbar .WhealthyLife_logo_new,
-    .WhealthyLife_GlobalNavigation .navbar .ic,
-    .WhealthyLife_GlobalNavigation .navbar .hamburger,
-    .WhealthyLife_GlobalNavigation .navbar .downarrow {
-        vertical-align: middle;
-        display: inline-block;
-    }
-    .WhealthyLife_GlobalNavigation .navbar .WhealthyLife_logo_new {
-        background: url(https://www.WhealthyLifestatic.com/nav/8.0.32/consumer/images/WhealthyLife.svg) no-repeat;
-        height: 23px;
-        width: 100px;
-        margin: -3px 0 0 0;
-    }
-    .WhealthyLife_GlobalNavigation .navbar .ic {
-        font-size: 24px;
-        line-height: 30px;
-        color: #414146;
-    }
-    .WhealthyLife_GlobalNavigation .navbar .ic.icon-ic_done_badge {
-        color: #9f3bff;
-    }
-    .WhealthyLife_GlobalNavigation .navbar .hamburger {
-        margin: 0 !important;
-    }
-    .WhealthyLife_GlobalNavigation .navbar .hamburger:hover {
-        cursor: pointer;
-    }
-    .WhealthyLife_GlobalNavigation .navbar .downarrow {
-        font-size: 15px;
-        line-height: 30px;
-        padding: 0 5px;
-        cursor: pointer;
-    }
-    .WhealthyLife_GlobalNavigation .navbar .download {
-        padding: 18px 0 0 30px;
-    }
-    .WhealthyLife_GlobalNavigation .navbar .download .appdownload-block {
-        margin: auto;
-        display: inline-block;
-        color: #0ba114;
-        border: 1px solid #0ba114;
-        text-align: center;
-        padding: 9px 20px;
-        font-weight: 400;
-        border-radius: 3px;
-    }
-    .WhealthyLife_GlobalNavigation .navbar .download .appdownload-block:hover {
-        color: #fff !important;
-        background: #0ba114 !important;
-    }
-    .WhealthyLife_GlobalNavigation .new {
-        float: right;
-        background: #ff7800;
-        padding: 2px 5px;
-        font-size: 10px;
-        box-sizing: content-box;
-        color: white;
-        vertical-align: middle;
-        display: inline;
-        line-height: 12px;
-        border-radius: 2px;
-        margin-top: 10px;
-        text-transform: uppercase;
-    }
-    .WhealthyLife_GlobalNavigation .navbar .dropdown-toggle {
-        position: relative;
-        cursor: pointer;
-        line-height: 35px;
-    }
-    .WhealthyLife_GlobalNavigation .navbar .nav-dropdown {
-        cursor: auto;
-        overflow: hidden;
-        position: absolute;
-        right: 0;
-        z-index: -1;
-        height: 0;
-        opacity: 0;
-        visibility: hidden;
-        background-color: #fff;
-        color: #414146;
-        padding: 5px 0;
-        margin-top: 4px;
-        width: 223px;
-        border-radius: 2px;
-        border: solid 1px #f0f0f5;
-        -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.11);
-        -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.11);
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.11);
-        -webkit-transition: all 0.1s ease-out;
-        -moz-transition: all 0.1s ease-out;
-        -ms-transition: all 0.1s ease-out;
-        -o-transition: all 0.1s ease-out;
-        transition: all 0.1s ease-out;
-    }
+  .WhealthyLife_GlobalNavigation .navbar a,
+  .WhealthyLife_GlobalNavigation .navbar .nav-items.hover-dark a,
+  .WhealthyLife_GlobalNavigation .navbar .navlist,
+  .WhealthyLife_GlobalNavigation .navbar .navlist .navlink .product-block div,
+  .WhealthyLife_GlobalNavigation .navbar .u-d-item,
+  .WhealthyLife_GlobalNavigation .navbar .u-d-item a {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
   }
-  @media only screen and (min-width: 981px) and (max-width: 1020px) {
-    .WhealthyLife_GlobalNavigation .navbar .nav-left {
-      width: 17%;
-    }
+  .WhealthyLife_GlobalNavigation {
+    width: 100%;
+    z-index: 2000;
+    top: 0;
   }
-  @media only screen and (min-width: 990px) and (max-width: 1070px) {
-    .WhealthyLife_GlobalNavigation .navbar .nav-mid {
-      width: 44%;
-    }
+  .WhealthyLife_GlobalNavigation .navbar .nav-left,
+  .WhealthyLife_GlobalNavigation .navbar .nav-mid,
+  .WhealthyLife_GlobalNavigation .navbar .nav-right {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
   }
-  @media only screen and (max-width: 980px) {
-    .WhealthyLife_GlobalNavigation .navbar .nav-left {
-      width: auto;
-    }
-    .WhealthyLife_GlobalNavigation .navbar .nav-mid {
-      display: none;
-    }
+  .WhealthyLife_GlobalNavigation .text-left {
+    text-align: left;
   }
-  @media only screen and (min-width: 801px) {
-    .WhealthyLife_GlobalNavigation .navbar.mobile {
-      display: none !important;
-    }
-    .WhealthyLife_GlobalNavigation .navbar.desktop {
-      display: block !important;
-    }
+  .WhealthyLife_GlobalNavigation .text-right {
+    text-align: right;
+  }
+  .WhealthyLife_GlobalNavigation .btn-border {
+    display: inline-block;
+    border-radius: 3px;
+    border: 1px solid #414146;
+    background-color: transparent;
+    padding: 5px 20px;
+    cursor: pointer;
+    color: #414146 !important;
+  }
+  .WhealthyLife_GlobalNavigation .btn-border:hover {
+    background-color: transparent;
+    border: 1px solid #0ba114;
+    color: #0ba114 !important;
+  }
+  .WhealthyLife_GlobalNavigation:before {
+    content: " ";
+    display: table;
+  }
+  .WhealthyLife_GlobalNavigation:after {
+    content: " ";
+    display: table;
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+  .WhealthyLife_GlobalNavigation [class^="icon-"],
+  .WhealthyLife_GlobalNavigation [class*=" icon-"] {
+    font-family: "practicon" !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    width: auto;
+    height: auto;
+    background: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .WhealthyLife_GlobalNavigation .navbar {
+    height: 60px;
+    background-color: #fff;
+    font-family: "Camphor", "Open Sans", sans-serif;
+    padding: 12px 0;
+    color: #414146;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(216, 216, 216, 0.5);
+    border-radius: 0;
+  }
+  .WhealthyLife_GlobalNavigation .navbar * {
+    box-sizing: border-box;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .wrapper {
+    cursor: auto;
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 50px;
+  }
+  .WhealthyLife_GlobalNavigation .navbar a {
+    text-decoration: none;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .overlay_layer {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 100;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+  }
+  .WhealthyLife_GlobalNavigation .navbar.mobile {
+    padding: 0;
+    line-height: 60px;
+  }
+  .WhealthyLife_GlobalNavigation .navbar.mobile .overlay {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    top: 60px;
+    z-index: 1000;
+    background: #fff;
+    overflow-x: hidden;
+    overflow-y: auto;
+    transition: 0.1s;
+  }
+  .WhealthyLife_GlobalNavigation
+    .navbar.mobile
+    .overlay
+    .navlist
+    .navlink:first-of-type {
+    margin-top: 5px;
+  }
+  .WhealthyLife_GlobalNavigation .navbar.mobile .nav-login-mobile.btn-border {
+    height: 30px;
+    color: #0ba114 !important;
+    padding: 5px 12px 8px 12px;
+    border-radius: 3px;
+    border: solid 1px #0ba114;
+  }
+  .WhealthyLife_GlobalNavigation {
+    font-family: "Camphor";
+    font-weight: 400;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  .WhealthyLife_GlobalNavigation .navbar {
+    margin: 0;
+  }
+  .WhealthyLife_GlobalNavigation .navbar a:focus,
+  .WhealthyLife_GlobalNavigation .navbar i:focus,
+  .WhealthyLife_GlobalNavigation .navbar div:focus,
+  .WhealthyLife_GlobalNavigation .navbar span:focus {
+    outline: none !important;
+  }
+  .WhealthyLife_GlobalNavigation .navbar a::-moz-selection,
+  .WhealthyLife_GlobalNavigation .navbar a::selection,
+  .WhealthyLife_GlobalNavigation .navbar a::-webkit-selection,
+  .WhealthyLife_GlobalNavigation .navbar i::-moz-selection,
+  .WhealthyLife_GlobalNavigation .navbar i::selection,
+  .WhealthyLife_GlobalNavigation .navbar i::-webkit-selection,
+  .WhealthyLife_GlobalNavigation .navbar div::-moz-selection,
+  .WhealthyLife_GlobalNavigation .navbar div::selection,
+  .WhealthyLife_GlobalNavigation .navbar div::-webkit-selection,
+  .WhealthyLife_GlobalNavigation .navbar span::-moz-selection,
+  .WhealthyLife_GlobalNavigation .navbar span::selection,
+  .WhealthyLife_GlobalNavigation .navbar span::-webkit-selection {
+    color: transparent;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .nav-left,
+  .WhealthyLife_GlobalNavigation .navbar .nav-mid,
+  .WhealthyLife_GlobalNavigation .navbar .nav-right {
+    display: inline-block;
+    height: 100%;
+    vertical-align: top;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .nav-left {
+    vertical-align: middle;
+    width: 252px;
+    box-sizing: border-box;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .nav-left .ic::before {
+    line-height: 35px;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .nav-left .WhealthyLife-logo {
+    line-height: 35px;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .nav-mid {
+    width: 48%;
+    position: relative;
+    left: 0;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .nav-right {
+    float: right;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .nav-items {
+    display: inline-block;
+    margin-right: 24px;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .nav-items.hover-dark a {
+    color: #414146;
+    line-height: 35px;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .nav-items:last-child {
+    margin-right: 0px;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .navlist {
+    position: relative;
+    height: 100%;
+    background-color: #fff;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    min-height: auto;
+    width: 100%;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .navlist a {
+    color: #414146;
+    display: block;
+    padding: 8px 0;
+    clear: both;
+    position: relative;
+    cursor: pointer;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .navlist .navlink {
+    margin: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+    vertical-align: top;
+    display: block;
+    clear: both;
+    padding: 0 0 0 24px;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .navlist .navlink.selected:hover {
+    background: none;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .navlist .navlink .icon-wrap {
+    width: 25px;
+    display: table-cell;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .navlist .navlink .product-block {
+    width: 98%;
+    display: table-cell;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .navlist .navlink .product-block div {
+    color: #414146;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .navlist .navlink a i {
+    margin: 0 15px 0 0;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .navlist .navlink.selected > a {
+    color: #0ba114;
+    font-weight: 400;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .navlist .navlink.selected > a i.ic {
+    color: #0ba114;
+    font-weight: 400;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .navlist .navlink:hover a {
+    color: #0ba114;
+  }
+  .WhealthyLife_GlobalNavigation
+    .navbar
+    .navlist
+    .navlink:hover
+    a
+    .product-block
+    div:first-child,
+  .WhealthyLife_GlobalNavigation .navbar .navlist .navlink:hover a i.ic {
+    color: #0ba114;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .WhealthyLife_logo_new,
+  .WhealthyLife_GlobalNavigation .navbar .ic,
+  .WhealthyLife_GlobalNavigation .navbar .hamburger,
+  .WhealthyLife_GlobalNavigation .navbar .downarrow {
+    vertical-align: middle;
+    display: inline-block;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .WhealthyLife_logo_new {
+    background: url(https://www.WhealthyLifestatic.com/nav/8.0.32/consumer/images/WhealthyLife.svg)
+      no-repeat;
+    height: 23px;
+    width: 100px;
+    margin: -3px 0 0 0;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .ic {
+    font-size: 24px;
+    line-height: 30px;
+    color: #414146;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .ic.icon-ic_done_badge {
+    color: #9f3bff;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .hamburger {
+    margin: 0 !important;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .hamburger:hover {
+    cursor: pointer;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .downarrow {
+    font-size: 15px;
+    line-height: 30px;
+    padding: 0 5px;
+    cursor: pointer;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .download {
+    padding: 18px 0 0 30px;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .download .appdownload-block {
+    margin: auto;
+    display: inline-block;
+    color: #0ba114;
+    border: 1px solid #0ba114;
+    text-align: center;
+    padding: 9px 20px;
+    font-weight: 400;
+    border-radius: 3px;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .download .appdownload-block:hover {
+    color: #fff !important;
+    background: #0ba114 !important;
+  }
+  .WhealthyLife_GlobalNavigation .new {
+    float: right;
+    background: #ff7800;
+    padding: 2px 5px;
+    font-size: 10px;
+    box-sizing: content-box;
+    color: white;
+    vertical-align: middle;
+    display: inline;
+    line-height: 12px;
+    border-radius: 2px;
+    margin-top: 10px;
+    text-transform: uppercase;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .dropdown-toggle {
+    position: relative;
+    cursor: pointer;
+    line-height: 35px;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .nav-dropdown {
+    cursor: auto;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    z-index: -1;
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+    background-color: #fff;
+    color: #414146;
+    padding: 5px 0;
+    margin-top: 4px;
+    width: 223px;
+    border-radius: 2px;
+    border: solid 1px #f0f0f5;
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.11);
+    -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.11);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.11);
+    -webkit-transition: all 0.1s ease-out;
+    -moz-transition: all 0.1s ease-out;
+    -ms-transition: all 0.1s ease-out;
+    -o-transition: all 0.1s ease-out;
+    transition: all 0.1s ease-out;
+  }
+}
+@media only screen and (min-width: 981px) and (max-width: 1020px) {
+  .WhealthyLife_GlobalNavigation .navbar .nav-left {
+    width: 17%;
+  }
+}
+@media only screen and (min-width: 990px) and (max-width: 1070px) {
+  .WhealthyLife_GlobalNavigation .navbar .nav-mid {
+    width: 44%;
+  }
+}
+@media only screen and (max-width: 980px) {
+  .WhealthyLife_GlobalNavigation .navbar .nav-left {
+    width: auto;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .nav-mid {
+    display: none;
+  }
+}
+@media only screen and (min-width: 801px) {
+  .WhealthyLife_GlobalNavigation .navbar.mobile {
+    display: none !important;
+  }
+  .WhealthyLife_GlobalNavigation .navbar.desktop {
+    display: block !important;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .WhealthyLife_GlobalNavigation .navbar {
+    position: relative;
+  }
+  .WhealthyLife_GlobalNavigation .navbar.desktop {
+    display: none !important;
+  }
+  .WhealthyLife_GlobalNavigation .navbar.mobile {
+    background-color: #fafafa;
+    display: block !important;
+  }
+  .WhealthyLife_GlobalNavigation .navbar.mobile .overlay_layer {
+    top: 60px !important;
+    background: transparent;
+    height: 0;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .nav-left {
+    padding: 0;
+    margin: 0;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .nav-left .ic {
+    margin-top: -4px;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .nav-left .hamburger {
+    font-size: 22px;
+    line-height: 24px;
+    margin-top: 0;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .nav-mid {
+    display: inline-block;
+    vertical-align: middle;
+    width: 100px;
+    z-index: 30;
+    margin: auto;
+    margin-left: 10px;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .nav-mid a {
+    display: block;
+    width: 100%;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .nav-mid a .WhealthyLife_logo_new {
+    display: block;
+    margin: 0 auto;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .nav-mid.new_logo_wrap {
+    height: 23px !important;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .nav-right .nav-items.dropdown-toggle {
+    display: inline-block;
+    margin: 0 0 0 15px;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .overlay {
+    top: 0px;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .navlist .navlink {
+    padding: 0 0 0 10px;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .navlist .navlink.selected {
+    color: #14bef0;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .navlist .navlink a {
+    font-size: 14px;
+    line-height: 18px;
+    padding: 11px 0;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .navlist .navlink:focus {
+    background: #f4f4f4;
+    outline: none;
+    border: none;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .navlist .navlink:focus a {
+    background: #f4f4f4;
+    outline: none;
+    border: none;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .navlist .navlink.selected:hover > a {
+    color: #14bef0;
+  }
+  .WhealthyLife_GlobalNavigation
+    .navbar
+    .navlist
+    .navlink.selected:hover
+    > a
+    i.ic {
+    color: #14bef0;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .navlist .navlink:hover a {
+    color: #414146;
+  }
+  .WhealthyLife_GlobalNavigation
+    .navbar
+    .navlist
+    .navlink:hover
+    a
+    .product-block
+    div:first-child,
+  .WhealthyLife_GlobalNavigation .navbar .navlist .navlink:hover a i.ic {
+    color: #414146;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .ic {
+    font-size: 20px;
+    line-height: 25px;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .downarrow {
+    padding: 0;
+  }
+  .WhealthyLife_GlobalNavigation .navbar .download {
+    padding: 18px 16px;
+  }
+  .WhealthyLife_GlobalNavigation .secondary-navigation {
+    display: none;
   }
   @media only screen and (max-width: 800px) {
     .WhealthyLife_GlobalNavigation .navbar {
@@ -1450,7 +1590,7 @@ body {
       padding: 0 0 0 10px;
     }
     .WhealthyLife_GlobalNavigation .navbar .navlist .navlink.selected {
-      color: #14bef0;
+      color: #0ba114;
     }
     .WhealthyLife_GlobalNavigation .navbar .navlist .navlink a {
       font-size: 14px;
@@ -1472,7 +1612,7 @@ body {
       .navlist
       .navlink.selected:hover
       > a {
-      color: #14bef0;
+      color: #0ba114;
     }
     .WhealthyLife_GlobalNavigation
       .navbar
@@ -1480,7 +1620,7 @@ body {
       .navlink.selected:hover
       > a
       i.ic {
-      color: #14bef0;
+      color: #0ba114;
     }
     .WhealthyLife_GlobalNavigation .navbar .navlist .navlink:hover a {
       color: #414146;
@@ -1508,124 +1648,25 @@ body {
     .WhealthyLife_GlobalNavigation .secondary-navigation {
       display: none;
     }
-    @media only screen and (max-width: 800px) {
-        .WhealthyLife_GlobalNavigation .navbar {
-            position: relative;
-        }
-        .WhealthyLife_GlobalNavigation .navbar.desktop {
-            display: none !important;
-        }
-        .WhealthyLife_GlobalNavigation .navbar.mobile {
-            background-color: #fafafa;
-            display: block !important;
-        }
-        .WhealthyLife_GlobalNavigation .navbar.mobile .overlay_layer {
-            top: 60px !important;
-            background: transparent;
-            height: 0;
-        }
-        .WhealthyLife_GlobalNavigation .navbar .nav-left {
-            padding: 0;
-            margin: 0;
-        }
-        .WhealthyLife_GlobalNavigation .navbar .nav-left .ic {
-            margin-top: -4px;
-        }
-        .WhealthyLife_GlobalNavigation .navbar .nav-left .hamburger {
-            font-size: 22px;
-            line-height: 24px;
-            margin-top: 0;
-        }
-        .WhealthyLife_GlobalNavigation .navbar .nav-mid {
-            display: inline-block;
-            vertical-align: middle;
-            width: 100px;
-            z-index: 30;
-            margin: auto;
-            margin-left: 10px;
-        }
-        .WhealthyLife_GlobalNavigation .navbar .nav-mid a {
-            display: block;
-            width: 100%;
-        }
-        .WhealthyLife_GlobalNavigation .navbar .nav-mid a .WhealthyLife_logo_new {
-            display: block;
-            margin: 0 auto;
-        }
-        .WhealthyLife_GlobalNavigation .navbar .nav-mid.new_logo_wrap {
-            height: 23px !important;
-        }
-        .WhealthyLife_GlobalNavigation .navbar .nav-right .nav-items.dropdown-toggle {
-            display: inline-block;
-            margin: 0 0 0 15px;
-        }
-        .WhealthyLife_GlobalNavigation .navbar .overlay {
-            top: 0px;
-        }
-        .WhealthyLife_GlobalNavigation .navbar .navlist .navlink {
-            padding: 0 0 0 10px;
-        }
-        .WhealthyLife_GlobalNavigation .navbar .navlist .navlink.selected {
-            color: #0ba114;
-        }
-        .WhealthyLife_GlobalNavigation .navbar .navlist .navlink a {
-            font-size: 14px;
-            line-height: 18px;
-            padding: 11px 0;
-        }
-        .WhealthyLife_GlobalNavigation .navbar .navlist .navlink:focus {
-            background: #f4f4f4;
-            outline: none;
-            border: none;
-        }
-        .WhealthyLife_GlobalNavigation .navbar .navlist .navlink:focus a {
-            background: #f4f4f4;
-            outline: none;
-            border: none;
-        }
-        .WhealthyLife_GlobalNavigation .navbar .navlist .navlink.selected:hover > a {
-            color: #0ba114;
-        }
-        .WhealthyLife_GlobalNavigation .navbar .navlist .navlink.selected:hover > a i.ic {
-            color: #0ba114;
-        }
-        .WhealthyLife_GlobalNavigation .navbar .navlist .navlink:hover a {
-            color: #414146;
-        }
-        .WhealthyLife_GlobalNavigation .navbar .navlist .navlink:hover a .product-block div:first-child,
-        .WhealthyLife_GlobalNavigation .navbar .navlist .navlink:hover a i.ic {
-            color: #414146;
-        }
-        .WhealthyLife_GlobalNavigation .navbar .ic {
-            font-size: 20px;
-            line-height: 25px;
-        }
-        .WhealthyLife_GlobalNavigation .navbar .downarrow {
-            padding: 0;
-        }
-        .WhealthyLife_GlobalNavigation .navbar .download {
-            padding: 18px 16px;
-        }
-        .WhealthyLife_GlobalNavigation .secondary-navigation {
-            display: none;
-        }
-        .WhealthyLife_GlobalNavigation .secondary-navigation__wrapper__promo-space,
-        .WhealthyLife_GlobalNavigation .secondary-navigation__wrapper__product-links,
-        .WhealthyLife_GlobalNavigation .secondary-navigation__wrapper__helpful-links {
-            display: none;
-        }
+    .WhealthyLife_GlobalNavigation .secondary-navigation__wrapper__promo-space,
+    .WhealthyLife_GlobalNavigation
+      .secondary-navigation__wrapper__product-links,
+    .WhealthyLife_GlobalNavigation
+      .secondary-navigation__wrapper__helpful-links {
+      display: none;
     }
   }
-  @media only screen and (max-width: 500px) {
-    .WhealthyLife_GlobalNavigation .navbar .overlay {
-      width: 85%;
-    }
+}
+@media only screen and (max-width: 500px) {
+  .WhealthyLife_GlobalNavigation .navbar .overlay {
+    width: 85%;
   }
-  @media only screen and (max-width: 320px) {
-    .WhealthyLife_GlobalNavigation .mobile.navbar .nav-right a {
-      margin-right: 6px;
-    }
+}
+@media only screen and (max-width: 320px) {
+  .WhealthyLife_GlobalNavigation .mobile.navbar .nav-right a {
+    margin-right: 6px;
   }
+}
 
 @keyframes pulse {
   0% {
@@ -1839,10 +1880,150 @@ video {
     margin-top: 30px;
   }
 }
-.defOption{
+.defOption {
   margin-top: 2.2rem;
   background: linear-gradient(#45a29e, #3daaa4);
   padding-top: 5px;
   padding-bottom: 10px;
   margin-right: 0px;
+}
+
+// book health causocal
+.slick-list {
+  width: 100%;
+  overflow: auto;
+}
+
+svg.bi.bi-arrow-right-circle-fill {
+  width: 50px;
+  height: 50px;
+}
+svg.bi.bi-arrow-left-circle-fill {
+  width: 50px;
+  height: 50px;
+}
+
+.fever-img {
+  display: block;
+  margin: auto;
+  max-width: 100%;
+}
+.diabetes-img {
+  display: block;
+  margin: auto;
+  max-width: 100%;
+}
+.diabetes-div {
+  outline: none;
+  width: 197px;
+}
+.div {
+  width: 1576px;
+  opacity: 1;
+  transform: translate3d(0px, 0px, 0px);
+  display: flex !important;
+  flex-direction: row !important;
+}
+.dis {
+  display: block;
+}
+.outline {
+  outline: none;
+  width: 197px;
+}
+.dia-div {
+  width: 120px;
+  margin: 0px auto;
+}
+.c-landingpage-card--title,
+.u-padtb--std,
+.u-text--center,
+.u-font-bold {
+  margin: 26px 71px !important;
+}
+
+@media only screen and (max-width: 600px) {
+  div {
+    display: flex;
+    flex-direction: column !important;
+  }
+  .slider-arroy {
+    display: none !important;
+  }
+}
+
+.slider-arroy {
+  color: #ce2224;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  z-index: 999;
+  margin: 0px;
+  width: 97%;
+  top: 25%;
+}
+
+.sliderr {
+  position: absolute;
+  top: 150;
+  display: flex !important;
+  justify-content: center !important;
+}
+.font-change {
+  color: black;
+  font-weight: 600;
+}
+
+.div-title {
+  position: absolute;
+  display: flex;
+  top: 150px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.card-title11 {
+  color: white;
+  font-weight: 600;
+  width: 100%;
+}
+
+.card-style1 {
+  box-shadow: 5px 5px 5px darkgray !important;
+  border-radius: 5px !important;
+  position: relative;
+  height: 200px;
+  // width: 100%;
+  // margin: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightgray;
+  margin: 0px 20px;
+  // margin-right: 50px;
+}
+
+.card-style2 {
+  box-shadow: 5px 5px 5px darkgray !important;
+  border-radius: 5px !important;
+  // position: relative;
+  height: 200px;
+  // width: 100%;
+  // margin: 30px;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  background-color: lightgray;
+  margin: 0px 20px;
+  // margin-right: 50px;
+}
+
+.heading-style {
+  position: absolute;
+  display: flex;
+  top: 150px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
